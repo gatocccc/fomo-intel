@@ -1,0 +1,196 @@
+== 001_inventario 2026-10-23T16:49:55Z ==
+--- python
+Python 3.12.3
+pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)
+--- arbol (sin data)
+./.env
+./.env.example
+./.gitignore
+./README.md
+./fomo_intel/__init__.py
+./fomo_intel/backtest/__init__.py
+./fomo_intel/backtest/entrysim.py
+./fomo_intel/backtest/probability.py
+./fomo_intel/backtest/rules.py
+./fomo_intel/backtest/signals.py
+./fomo_intel/backtest/simulator.py
+./fomo_intel/charts.py
+./fomo_intel/cli.py
+./fomo_intel/config.py
+./fomo_intel/events/__init__.py
+./fomo_intel/events/reconstruct.py
+./fomo_intel/graph/__init__.py
+./fomo_intel/graph/candidates.py
+./fomo_intel/graph/scoring.py
+./fomo_intel/launches.py
+./fomo_intel/live/__init__.py
+./fomo_intel/live/bot.py
+./fomo_intel/live/config.py
+./fomo_intel/live/executor.py
+./fomo_intel/live/portfolio.py
+./fomo_intel/live/signals.py
+./fomo_intel/live/stream.py
+./fomo_intel/live/wallet.py
+./fomo_intel/models.py
+./fomo_intel/sources/__init__.py
+./fomo_intel/sources/helius.py
+./fomo_intel/sources/solanatracker.py
+./fomo_intel/sources/store.py
+./fomo_intel/synth.py
+./logs/LAST.txt
+./logs/sync.err
+./logs/validate_20261023_1217.log
+./logs/validate_20261023_1507.log
+./ops/run_once/001_inventario.sh
+./requirements.txt
+./scripts/CRON.txt
+./scripts/install_server.sh
+./scripts/remote_install.sh
+./scripts/server_sync.sh
+./scripts/validate_cron.sh
+./secrets/wallet.json
+./state/control.json
+./state/creators.json
+./state/live_summary.json
+./state/ops/001_inventario.out
+./state/ops/ran.txt
+./state/wallet_pub.json
+./tests/test_live.py
+--- servicios
+  fomo-live.service                                     loaded    active   running FOMO Intel - bot en vivo
+  nginx.service                                         loaded    active   running A high performance web server and a reverse proxy server
+  simplai.service                                       loaded    active   running SimplAI Gunicorn
+--- nginx
+fomo
+gaucha
+simplai
+## /etc/nginx/sites-enabled/fomo
+server {
+    server_name fomo.nonconformistducks.com;
+
+    root /var/www/fomo;
+    index index.html;
+
+    auth_basic "FOMO Intel";
+    auth_basic_user_file /etc/nginx/.htpasswd_fomo;
+
+    location / {
+        try_files $uri /index.html;
+        add_header Cache-Control "no-store";
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/fomo.nonconformistducks.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/fomo.nonconformistducks.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = fomo.nonconformistducks.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name fomo.nonconformistducks.com;
+    return 404; # managed by Certbot
+
+
+}## /etc/nginx/sites-enabled/gaucha
+server {
+    server_name gauchaba.com www.gauchaba.com;
+    root /home/gaucha-preview;
+    index index.html;
+    location /Q1/ {
+        auth_basic "Gaucha · Reporte interno";
+        auth_basic_user_file /etc/nginx/.htpasswd-q1;
+        try_files $uri $uri/ =404;
+    }
+location / {
+        try_files $uri $uri/ =404;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/gauchaba.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/gauchaba.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    if ($host = gauchaba.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name gauchaba.com www.gauchaba.com;
+    return 404; # managed by Certbot
+
+
+}
+## /etc/nginx/sites-enabled/simplai
+server {
+    listen 80;
+    server_name simplai.academy www.simplai.academy;
+
+    client_max_body_size 10M;
+
+    location / {
+        proxy_pass http://127.0.0.1:3001;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+--- crontab
+0 * * * * python3 /home/simplai/email_cron.py >> /home/simplai/email_cron.log 2>&1
+7 */3 * * * /bin/bash /root/fomo_intel/scripts/validate_cron.sh
+27 */3 * * * cd /root/fomo_intel && /usr/bin/python3 -m fomo_intel.dashboard /var/www/fomo/index.html >> /root/fomo_intel/logs/dashboard.log 2>&1
+* * * * * /bin/bash /root/fomo_intel/scripts/server_sync.sh
+--- puertos
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                                                                        
+LISTEN 0      4096         0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=259925,fd=3),("systemd",pid=1,fd=158))                                     
+LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=260224,fd=15))                                                  
+LISTEN 0      511          0.0.0.0:80         0.0.0.0:*    users:(("nginx",pid=274654,fd=6),("nginx",pid=274653,fd=6),("nginx",pid=259931,fd=6))         
+LISTEN 0      511          0.0.0.0:443        0.0.0.0:*    users:(("nginx",pid=274654,fd=5),("nginx",pid=274653,fd=5),("nginx",pid=259931,fd=5))         
+LISTEN 0      5            0.0.0.0:8899       0.0.0.0:*    users:(("python3",pid=776839,fd=3))                                                           
+LISTEN 0      2048         0.0.0.0:3001       0.0.0.0:*    users:(("gunicorn",pid=260302,fd=3),("gunicorn",pid=260299,fd=3),("gunicorn",pid=260268,fd=3))
+LISTEN 0      4096      127.0.0.54:53         0.0.0.0:*    users:(("systemd-resolve",pid=260224,fd=17))                                                  
+LISTEN 0      4096       127.0.0.1:20241      0.0.0.0:*    users:(("cloudflared",pid=229714,fd=8))                                                       
+LISTEN 0      4096            [::]:22            [::]:*    users:(("sshd",pid=259925,fd=4),("systemd",pid=1,fd=160))                                     
+--- .env (claves ocultas)
+HELIUS_API_KEY=dcd3...
+SOLANATRACKER_API_KEY=58e3...
+FOMO_DATA_DIR=data...
+LIVE_MODE=pape...
+FOMO_STATE_DIR=stat...
+FOMO_WALLET_FILE=secr...
+--- estado
+secrets:
+total 12
+drwx------  2 root root 4096 Oct 23 16:49 .
+drwxr-xr-x 11 root root 4096 Oct 23 16:49 ..
+-rw-------  1 root root  187 Oct 23 16:49 wallet.json
+
+state:
+total 28
+drwxr-xr-x  3 root root 4096 Oct 23 16:49 .
+drwxr-xr-x 11 root root 4096 Oct 23 16:49 ..
+-rw-r--r--  1 root root  589 Oct 23 16:49 control.json
+-rw-r--r--  1 root root    2 Oct 23 16:49 creators.json
+-rw-r--r--  1 root root  657 Oct 23 16:49 live_summary.json
+drwxr-xr-x  2 root root 4096 Oct 23 16:49 ops
+-rw-r--r--  1 root root   58 Oct 23 16:49 wallet_pub.json
+--- bot
+Oct 23 16:49:51 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
+Oct 23 16:49:51 simplai-prod python3[275755]: 2026-10-23 16:49:51,305 INFO live: arranca bot modo=paper tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 23 16:49:51 simplai-prod python3[275755]: 2026-10-23 16:49:51,617 INFO live: latido: stream=False tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$105
+Oct 23 16:49:51 simplai-prod python3[275755]: 2026-10-23 16:49:51,652 INFO live.stream: stream conectado
+--- disco
+/dev/sda1        75G  6.9G   65G  10% /
+               total        used        free      shared  buff/cache   available
+Mem:            3814         671         199           6        3244        3142
+== exit 0 ==
