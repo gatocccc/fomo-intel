@@ -50,3 +50,6 @@ Oct 23 17:33:05 simplai-prod python3[277290]: 2026-10-23 17:33:05,586 INFO live:
 Oct 23 17:38:00 simplai-prod python3[277290]: 2026-10-23 17:38:00,963 INFO live: CANDIDATO ROOM move=6.4x compradores=76 vol=$9713 snipers=17 -> confirma a T3
 Oct 23 17:38:06 simplai-prod python3[277290]: 2026-10-23 17:38:06,326 INFO live: latido: stream=True tokens_vistos=360 seguidos=180 candidatos=1 abiertas=0 cerradas=0 st_requests=5 SOL=$104
 Oct 23 17:39:00 simplai-prod python3[277290]: 2026-10-23 17:39:00,887 INFO live: COMPRA ROOM 0.0958 SOL (US$10) a 2.020e-07 SOL/token slippage=+6.0% lat=0.0s sig=paper-1792777140355
+Oct 23 17:40:40 simplai-prod python3[277290]: 2026-10-23 17:40:40,951 INFO live.portfolio: CERRADA ROOM ret=-89.8% pnl=US$-8.98 salidas=['stop']
+Oct 23 17:40:40 simplai-prod python3[277290]: 2026-10-23 17:40:40,952 INFO live: VENTA ROOM stop 100% a 0.10x slippage=+6.0% -> 0.0097 SOL [CERRADA]
+Oct 23 17:43:06 simplai-prod python3[277290]: 2026-10-23 17:43:06,044 INFO live: latido: stream=True tokens_vistos=478 seguidos=150 candidatos=0 abiertas=0 cerradas=1 st_requests=5 SOL=$104
