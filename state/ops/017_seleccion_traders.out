@@ -1,0 +1,82 @@
+== 017_seleccion_traders 2026-10-23T19:22:02Z ==
+candidatos únicos: 587
+pasan filtros (acierto>=60%, >=25 tokens, >=60 trades, compra media US$20-5000, activo 48h, ROI<2000%): 206
+wallet                                          d  win%  tok   trd    avg$    realiz$    roi%  dias+/-  ult h
+12DEB4G85cbQ3GPA7zC5KQ2bHjLt6JChZv9axQeqrf7a    7   100  161   393     314        752       1      5/2    3.2
+14eB2fxXxBoF3dvh2CGAyKme9dpGweu1Yv1XkFP6Y5R7   30   100  150  1857      82        984       1      5/0    0.1
+14eB2fxXxBoF3dvh2CGAyKme9dpGweu1Yv1XkFP6Y5R7    7   100  149  1851      82        989       1      5/0    0.5
+13mWvbz8wc1JvLFuvBHfpmhuQ29DRtsKkznXbnPuSdUm   30   100   56   135      90        448       7      6/4    0.5
+21F8BiYooa9ezxhJxavdPBcw3mKasqsYBNRafCbvFPx9    7   100   55   180      46         99       3      4/3   13.1
+12Gmw4Kf4TrGyEKyZYNkgZ3ZyupbtCX6Yyrup6JmxFjk   30   100   47   149      45        418      17     11/1   12.7
+12Gmw4Kf4TrGyEKyZYNkgZ3ZyupbtCX6Yyrup6JmxFjk    7   100   47   149      45         58       2      6/1   12.7
+131BDFs64qeT9B17ywMCYRbokY4DsrVpEEh1pigAMas5    7   100   43   187      51        168       4      5/0   12.3
+12foGuY3WxNQrwLGqzWwAWwxmWcf65JsjQvVquAQ5PQp   30   100   37   764      77      1,965       8      4/0    0.3
+12foGuY3WxNQrwLGqzWwAWwxmWcf65JsjQvVquAQ5PQp    7   100   37   751      76      1,949       8      4/0    0.5
+14QscrZm3ZbBWVBAeExhYXJsCQjattcMDKmkZUjoYupY   30   100   36   899      92      1,984       5      4/0    0.8
+14QscrZm3ZbBWVBAeExhYXJsCQjattcMDKmkZUjoYupY    7   100   36   899      92      1,984       5      4/0    0.8
+21gEdEoqCh1YXXb5fviqQRtZRpPaDtGrHGsmDoib9eak    7   100   36   642      82      1,630       7      3/1    0.5
+13fiXsw8ApBq28Qtq7iiqGJx8PoR246Q2B83rYWTo6d4    7   100   29    89     168      2,508      41      2/1   29.5
+13oSKUXKAUvvPaHLN1UQCzoWZkGGMmSPfRVPpSJiGczx    7   100   28    60     293        169       2      3/1   29.8
+1348jo3nssQSnN3M522DzYsDbnR26UteNDrNpbUKqgSV   30   100   27   967      86        775       2      4/2    0.1
+1348jo3nssQSnN3M522DzYsDbnR26UteNDrNpbUKqgSV    7   100   27   961      85      1,840       5      4/0    0.5
+J1LFz2neo2EcoN3qBZgzrMWsXBwM16vihEx7AsHDpfVE    7    94  828933264     445      1,643       0      6/1    0.5
+PNLCQcVCD26aC7ZWgRyr5ptfaR7bBrWdTFgRWwu2tvF    30    932543484649943      82     65,351       0     30/0    0.1
+PNLCQcVCD26aC7ZWgRyr5ptfaR7bBrWdTFgRWwu2tvF     7    932543484649912      82     13,051       0      7/0    0.5
+FtFtF8iamFC3gCv5VYUTBd1G4r1XEc1TbcHyuy6hkJPQ   30    93  443182728     516  2,197,897       5     26/4    0.1
+BiEHvFqAHu1Z7RqE6tXgpLgsZcAEABq7FqKJZuUKpy1r    7    93  369241149     662    671,074       1      7/0    0.5
+E4FPggw9yDp9PNJDuRoLYDr6a5HKCsAterw3fygLpZEA   30    92 3464 28319     582  2,538,511     106     27/1   23.8
+8hjeVX2213Ep2WAihKJjhCUSKCph2oUEFLmeBzqX18X7    7    90  369245359     662    398,370       0      7/0    0.5
+5yM7ZW7hkVcafuiKyWHZUxb3j3bnVfXoAQ26xz4NkYnU    7    89  369241611     664    348,801       0      7/0    0.5
+2AJayhZQpWXFEkBat2LAv5gqkBEFMfXMfsV9zyExJR2J    7    89  369243122     663    221,779       0      7/0    0.5
+grok1r9rhYXqniD79L3eeBB6bBLd8ytGrhDRa6kgRNt     7    88  767  2987     753    231,315      53      7/0    1.6
+CyHxAoTujrw2afv8vzYUptxyko6Nzfo5rqHWZogLwpQw    7    86  563  4346     633    378,570     106      5/0    0.5
+43vXrgojAHoHDaQVhd7nnR8iUKtn1EDse3SCFue1PbjH   30    85  814752597     637     37,411       0      2/1   34.3
+9qZvANPkPE6NHoj5W5BzJ4gb4byaVqvg1V4JCJBfiK2m   30    82  955114183     309  8,677,961      77     25/5    0.1
+6GjUxrxZd2dvCrXuLzaWshscLJCH5DAdQQpBsrux4uax   30    81 1009749987     631    233,789       0      2/0   41.8
+7Q6wQA43x6Lz4ATfv5r8fey8TSQYLEUoDgj9JwXFGhTg   30    81  951750945     630     37,678       0      1/0   41.8
+xxrr85qsW5No1cvn9vk4kzTiz2y1t7jMN8pf3Xo47f7     7    81  618  2876     512    175,423      56      7/0    3.1
+NALUxTJsozrScVNzRWy9LAg2xoC37RXNNZyyem76kmc     7    81  182 94652     238  1,022,668      11      7/0    0.5
+DdwfjfVurXwujbADY6r11s63hAdiD3P1MN3MSZCSB9io   30    80 8528668078     307  5,107,454       6     30/0    0.1
+DdwfjfVurXwujbADY6r11s63hAdiD3P1MN3MSZCSB9io    7    80 8524667997     307    868,443       1      7/0    0.5
+A9PzVmoBvTMLSh8VcaPQfYc3qwH63pmLuMxRmWraqGYk   30    79   69717911     504  3,146,803       2      6/0    0.1
+A9PzVmoBvTMLSh8VcaPQfYc3qwH63pmLuMxRmWraqGYk    7    79   69717753     504  3,128,774       2      6/0    0.5
+G3eWaBWuboTjBARo2otA6o3GEg9LFkd1Pf7N3yw8sSz1    7    78  940  2792     662    320,192      92      7/0    0.6
+3HB71Q5JXnbKBRLkzrEtzp8u9Cbk1J4mp2o26t4Cszs1    7    76 7227266088     210    158,356       1      6/0   34.7
+DQFGAqsfLzx8mEdtcG6gYTJnqms9poJfWNQc3pkqcWs     7    76 6724233865     214    191,801       1      6/0   34.8
+FEanU7XEENVKWup8jnJrq2DRuuUnowCkpncQa4xHVm1Y    7    76 6787243047     215    188,403       1      6/0   34.7
+GrYofXoksYLbgUzWpwwwKDxu2q8cE8uoRmkmwwC7yjMg    7    76 7276266624     211    178,056       1      6/0   34.7
+96JYcf2ufLo4ER9cWMgb8dCYrSiEd7Qs79TJtG3ZFwsf    7    75 7052255215     212    196,315       1      6/0   34.7
+GFhKB9bhhvCSNhFMXa2K4QSpisZSpk9vWWeFrqmU4Cex    7    75 7328267653     212    171,270       1      6/0   34.7
+9geEeDgp2FpbCbfEx2rxFBTjAb9TrUXAfkBH7UoKknLP   30    75 3855310154     155  4,773,252      27     22/8    0.1
+7czCypCpx5bSeS9PPtJAy6hU7MrqjHxYk26coq89kyJJ    7    75 6386201358     204    200,409       1      6/0   34.8
+Ak4U7f4SjnWe6oNN3b2zfuEeFHAcAb3fD7d2LdJHuFcL    7    75 7039255968     214    204,955       1      6/0   34.8
+29CwZXhpU8TFTvkDp7khP7CVBJsSgPcaSSEGNeRh4JYs    7    75 6733233488     214    217,517       1      6/0   34.7
+DBLfpV5Z5UeCSThk2qWiRFZHkmxXzGuyfKPpFfT3CvCc    7    75 7504282689     215    209,527       1      6/0   34.7
+FsDovvWw2FCyXtLFtF529Fgz3zuYPpCNojAv4psvQ2NK   30    75 7491288248     214  1,274,367       4     29/0   34.8
+FsDovvWw2FCyXtLFtF529Fgz3zuYPpCNojAv4psvQ2NK    7    75 7491288248     214    228,291       1      6/0   34.8
+5TgtYxvhAQDWrWzwKwo4HFTRPsyfnSNqibkygH2kbjqa   30    75 7478283584     219  1,286,204       4     29/0   34.8
+5TgtYxvhAQDWrWzwKwo4HFTRPsyfnSNqibkygH2kbjqa    7    75 7478283584     219    274,514       1      6/0   34.8
+7BWqqEvE3R7kKBkTLG4fZPRuECUdQnAPbh2BPsq6hzQ9    7    75 6830241834     218    238,196       1      6/0   34.7
+Bkjhd7QfTtNnqr5kDfmj1qYVSSaE4LPA32neLZLxxCay    7    75 7098257360     213    159,036       1      6/0   34.7
+7acAHPXdaKNpjogBdPDbSR3U3WjE5T19gVC18pXR1BF7    7    75 7125264449     214    161,264       1      6/0   34.7
+FHvjgbUePYmpVoqx4EUqEcgpWzq4bRwNnJnXZwMbgVvE    7    75 7037253274     214    172,969       1      6/0   34.8
+DGxaJih4hzbKmVVvstHzhx1MHN335qJzS9mFATer9o1N    7    75 6845244975     214    214,284       1      6/0   34.7
+HvwbpPzrMucT13TBu1mGqATu5Mn8nxfNLVWhhWegH6MX    7    75 7105254871     213    207,555       1      6/0   34.7
+
+== perfil de últimas 40 operaciones (15 mejores) ==
+{'wallet': '12DEB4G85cbQ3GPA7zC5KQ2bHjLt6JChZv9axQeqrf7a', 'winRate': 100, 'tokens30': 161, 'n_buys': 19, 'pump_share': 1.0, 'hold_med_min': 7.6, 'avg_buy': 314.25}
+{'wallet': '14eB2fxXxBoF3dvh2CGAyKme9dpGweu1Yv1XkFP6Y5R7', 'winRate': 100, 'tokens30': 150, 'n_buys': 19, 'pump_share': 0.0, 'hold_med_min': 0.1, 'avg_buy': 82.35}
+{'wallet': '14eB2fxXxBoF3dvh2CGAyKme9dpGweu1Yv1XkFP6Y5R7', 'winRate': 100, 'tokens30': 149, 'n_buys': 19, 'pump_share': 0.0, 'hold_med_min': 0.1, 'avg_buy': 82.21}
+{'wallet': '13mWvbz8wc1JvLFuvBHfpmhuQ29DRtsKkznXbnPuSdUm', 'winRate': 100, 'tokens30': 56, 'n_buys': 22, 'pump_share': 1.0, 'hold_med_min': 2.8, 'avg_buy': 89.69}
+{'wallet': '21F8BiYooa9ezxhJxavdPBcw3mKasqsYBNRafCbvFPx9', 'winRate': 100, 'tokens30': 55, 'n_buys': 23, 'pump_share': 1.0, 'hold_med_min': 0.2, 'avg_buy': 45.59}
+{'wallet': '12Gmw4Kf4TrGyEKyZYNkgZ3ZyupbtCX6Yyrup6JmxFjk', 'winRate': 100, 'tokens30': 47, 'n_buys': 20, 'pump_share': 1.0, 'hold_med_min': 0.5, 'avg_buy': 44.55}
+{'wallet': '12Gmw4Kf4TrGyEKyZYNkgZ3ZyupbtCX6Yyrup6JmxFjk', 'winRate': 100, 'tokens30': 47, 'n_buys': 20, 'pump_share': 1.0, 'hold_med_min': 0.5, 'avg_buy': 44.55}
+{'wallet': '131BDFs64qeT9B17ywMCYRbokY4DsrVpEEh1pigAMas5', 'winRate': 100, 'tokens30': 43, 'n_buys': 29, 'pump_share': 1.0, 'hold_med_min': 1.7, 'avg_buy': 50.99}
+{'wallet': '12foGuY3WxNQrwLGqzWwAWwxmWcf65JsjQvVquAQ5PQp', 'winRate': 100, 'tokens30': 37, 'n_buys': 19, 'pump_share': 0.0, 'hold_med_min': 0.2, 'avg_buy': 76.88}
+{'wallet': '12foGuY3WxNQrwLGqzWwAWwxmWcf65JsjQvVquAQ5PQp', 'winRate': 100, 'tokens30': 37, 'n_buys': 19, 'pump_share': 0.0, 'hold_med_min': 0.2, 'avg_buy': 76.36}
+{'wallet': '14QscrZm3ZbBWVBAeExhYXJsCQjattcMDKmkZUjoYupY', 'winRate': 100, 'tokens30': 36, 'n_buys': 20, 'pump_share': 0.0, 'hold_med_min': 0.3, 'avg_buy': 91.77}
+{'wallet': '14QscrZm3ZbBWVBAeExhYXJsCQjattcMDKmkZUjoYupY', 'winRate': 100, 'tokens30': 36, 'n_buys': 20, 'pump_share': 0.0, 'hold_med_min': 0.3, 'avg_buy': 91.77}
+{'wallet': '21gEdEoqCh1YXXb5fviqQRtZRpPaDtGrHGsmDoib9eak', 'winRate': 100, 'tokens30': 36, 'n_buys': 21, 'pump_share': 0.0, 'hold_med_min': 0.7, 'avg_buy': 81.72}
+{'wallet': '13fiXsw8ApBq28Qtq7iiqGJx8PoR246Q2B83rYWTo6d4', 'winRate': 100, 'tokens30': 29, 'n_buys': 18, 'pump_share': 0.89, 'hold_med_min': 11.0, 'avg_buy': 167.94}
+{'wallet': '13oSKUXKAUvvPaHLN1UQCzoWZkGGMmSPfRVPpSJiGczx', 'winRate': 100, 'tokens30': 28, 'n_buys': 20, 'pump_share': 0.95, 'hold_med_min': 3.9, 'avg_buy': 292.83}
+== exit 0 ==
