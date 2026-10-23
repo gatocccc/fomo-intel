@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import threading
 import time
 from collections import deque
@@ -220,7 +221,9 @@ class PumpStream(threading.Thread):
         backoff = 2
         while not self._stop.is_set():
             try:
-                self.ws = websocket.create_connection(WS_URL, timeout=30)
+                key = os.getenv("PUMPPORTAL_API_KEY", "").strip()
+                url = f"{WS_URL}?api-key={key}" if key else WS_URL
+                self.ws = websocket.create_connection(url, timeout=30)
                 self.connected = True
                 backoff = 2
                 self._subscribed.clear(); self._pending_sub.clear()
