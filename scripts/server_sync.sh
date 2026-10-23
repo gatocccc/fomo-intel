@@ -24,7 +24,7 @@ if [ -n "$REMOTE" ] && [ "$LOCAL" != "$REMOTE" ]; then
   if echo "$CHANGED" | grep -Eq '^(fomo_intel/live/|fomo_intel/backtest/rules.py|requirements)'; then
     systemctl restart fomo-live && echo "$(date -u +%FT%TZ) fomo-live reiniciado" >> logs/sync.log
   fi
-  if echo "$CHANGED" | grep -Eq '^(dashboard/|fomo_intel/dashboard)'; then systemctl restart fomo-dashboard 2>/dev/null || true; fi
+  if echo "$CHANGED" | grep -q '^fomo_intel/live/control_server.py'; then systemctl restart fomo-control 2>/dev/null || true; fi
 fi
 
 # ---- 2) mantenimiento: scripts de una sola vez ----
@@ -36,6 +36,9 @@ for f in ops/run_once/*.sh; do
   echo "$id" >> state/ops/ran.txt
   { echo "== $id $(date -u +%FT%TZ) =="; timeout 600 bash "$f"; echo "== exit $? =="; } > "state/ops/$id.out" 2>&1
 done
+
+# ---- dashboard (cada minuto, barato: solo lee archivos) ----
+[ -d /var/www/fomo ] && python3 -m fomo_intel.dashboard /var/www/fomo/index.html >> logs/dashboard.log 2>&1 || true
 
 # ---- 3) publicar estado cada 5 min ----
 MIN=$(date +%M); [ "${FORCE_STATE:-0}" = "1" ] || [ $((10#$MIN % 5)) -eq 0 ] || exit 0
