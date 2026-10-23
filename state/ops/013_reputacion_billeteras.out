@@ -1,0 +1,61 @@
+== 013_reputacion_billeteras 2026-10-23T18:55:03Z ==
+tokens con velas y compradores: 524 ; acierto base (entrar min 1, salida v1.2): 24% ; rugs 50%
+train 262 tokens (11/10–22/10), test 262 (22/10–23/10)
+billeteras únicas en train: 10200 ; recurrentes (>=3 tokens): 937
+buenas (>=60% ganados, <=20% rugs): 30 ; tóxicas (>=60% rugs): 584
+
+== PRUEBA en la segunda mitad (nunca vista) ==
+todos                                         n=262 acierto=26% rugs=56% total=-56.6 ret/op=-0.22
+>= 1 billetera(s) buena(s) en los 120 s       n= 52 acierto=40% rugs=46% total=-1.7 ret/op=-0.03
+>= 1 buena(s) y ninguna tóxica                n= 14 acierto=14% rugs=21% total=-3.1 ret/op=-0.22
+>= 2 billetera(s) buena(s) en los 120 s       n= 21 acierto=43% rugs=33% total=+0.3 ret/op=+0.01
+>= 2 buena(s) y ninguna tóxica                n=  6 acierto=17% rugs=0% total=-1.6 ret/op=-0.27
+>= 3 billetera(s) buena(s) en los 120 s       n=  6 acierto=33% rugs=17% total=-0.8 ret/op=-0.14
+>= 3 buena(s) y ninguna tóxica                n=  1 acierto=0% rugs=0% total=-0.3 ret/op=-0.34
+alguna tóxica                                 n=205 acierto=27% rugs=63% total=-47.7 ret/op=-0.23
+ninguna tóxica                                n= 57 acierto=25% rugs=28% total=-8.9 ret/op=-0.16
+
+buenas que reaparecen en test: 23 de 30 ; tóxicas que reaparecen: 391 de 584
+
+== billeteras más recurrentes (>=4 tokens), ordenadas por % ganados ==
+  47du2vFg… n=5 ganados=100% rugs=0%  ST: {}
+  5rZhxm7g… n=4 ganados=100% rugs=0%  ST: {}
+  DxvwmNvY… n=4 ganados=100% rugs=25%  ST: {}
+  AsBqa9yy… n=4 ganados=100% rugs=25%  ST: {}
+  6GaCHTdB… n=4 ganados=100% rugs=50%  ST: {}
+  HL2bua81… n=12 ganados=92% rugs=67%  ST: {}
+  H3j1XRSx… n=11 ganados=91% rugs=73%  ST: {}
+  4KFXXNQk… n=8 ganados=88% rugs=38%  ST: {}
+  8HzpVL7E… n=11 ganados=82% rugs=73%  ST: {}
+  75KVshUE… n=5 ganados=80% rugs=20%  ST: {}
+  BEaRbnUm… n=5 ganados=80% rugs=80%  ST: {}
+  DT81afdP… n=5 ganados=80% rugs=20%  ST: {}
+  Gdc8MyA5… n=5 ganados=80% rugs=40%  ST: {}
+  834xeCog… n=5 ganados=80% rugs=100%  ST: {}
+  FZU56d9i… n=8 ganados=75% rugs=12%  ST: {}
+  7cp6zxvh… n=8 ganados=75% rugs=0%  ST: {}
+  9Co41DEs… n=4 ganados=75% rugs=0%  ST: {}
+  v8rpqVEB… n=4 ganados=75% rugs=50%  ST: {}
+  FBt9YdU7… n=4 ganados=75% rugs=25%  ST: {}
+  H87z4kZ9… n=4 ganados=75% rugs=50%  ST: {}
+  FC1RZf6M… n=4 ganados=75% rugs=25%  ST: {}
+  4RaVQNwA… n=4 ganados=75% rugs=75%  ST: {}
+  7EYcTcDT… n=4 ganados=75% rugs=75%  ST: {}
+  B3VkARWz… n=4 ganados=75% rugs=75%  ST: {}
+  6Kj5ChEZ… n=4 ganados=75% rugs=0%  ST: {}
+  GXmFQjoi… n=4 ganados=75% rugs=0%  ST: {}
+  9JgcamNM… n=4 ganados=75% rugs=25%  ST: {}
+  pBTvKWYi… n=4 ganados=75% rugs=0%  ST: {}
+  DeTroMcp… n=4 ganados=75% rugs=0%  ST: {}
+  6h38Egv8… n=4 ganados=75% rugs=75%  ST: {}
+  2LMywK4k… n=4 ganados=75% rugs=25%  ST: {}
+  4vw54BmA… n=4 ganados=75% rugs=0%  ST: {}
+  8UN881Ks… n=4 ganados=75% rugs=50%  ST: {}
+  AA4HgUBS… n=4 ganados=75% rugs=25%  ST: {}
+  Cv5GgkpX… n=4 ganados=75% rugs=25%  ST: {}
+  GQsrkJbB… n=4 ganados=75% rugs=25%  ST: {}
+  69qbtyGG… n=4 ganados=75% rugs=25%  ST: {}
+  AmN88ff2… n=4 ganados=75% rugs=25%  ST: {}
+  4AZhUGmC… n=4 ganados=75% rugs=25%  ST: {}
+  DGAJjzBG… n=4 ganados=75% rugs=50%  ST: {}
+== exit 0 ==

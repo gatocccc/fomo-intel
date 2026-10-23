@@ -1,5 +1,5 @@
 {
- "ts": 1792781374.255967,
+ "ts": 1792781705.9731152,
  "mode": "paper",
  "open": 0,
  "closed": 1,
@@ -32,29 +32,29 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 103.96087733546652,
+ "sol_usd": 104.00898047910464,
  "stream_connected": true,
- "stream_msgs": 387,
- "tokens_seen": 37,
- "tokens_tracked": 37,
+ "stream_msgs": 2886,
+ "tokens_seen": 189,
+ "tokens_tracked": 189,
  "candidates": [],
- "st_requests": 1,
+ "st_requests": 2,
  "stream_errors": [],
  "stream_counts": {
-  "otros": 22,
-  "create": 38,
-  "buy": 148,
-  "sell": 179
+  "otros": 136,
+  "create": 194,
+  "buy": 1254,
+  "sell": 1302
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 327,
- "stream_cost_sol_est": 0.0003,
+ "stream_trades": 2556,
+ "stream_cost_sol_est": 0.0026,
  "pumpportal_wallet_sol": 0.11,
  "params": {
   "mode": "paper",
