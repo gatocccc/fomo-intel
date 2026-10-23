@@ -214,6 +214,7 @@ class Bot:
                            "tokens_seen": self.stream.creates, "tokens_tracked": len(self.stream.tokens),
                            "candidates": [f.symbol for f in self.candidates.values()],
                            "st_requests": self.st.requests_made, "stream_errors": list(self.stream.errors)[-5:],
+                           "stream_counts": dict(self.stream.counts), "stream_samples": list(self.stream.samples),
                            "params": {k: getattr(self.p, k) for k in ("mode", "size_usd", "max_open", "daily_loss_usd", "total_loss_usd", "max_trades", "max_slippage_pct")}})
         self._save_creators()
 

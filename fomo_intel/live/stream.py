@@ -95,6 +95,10 @@ class PumpStream(threading.Thread):
         self.last_msg_ts = 0.0
         self.creates = 0
         self.errors = deque(maxlen=20)
+        self.counts: dict[str, int] = {}
+        self.samples = deque(maxlen=5)          # últimos mensajes sin mint (acks, errores del servidor)
+        self._pending_sub: list[str] = []
+        self._last_sub = 0.0
         self._subscribed: set[str] = set()
         self._stop = threading.Event()
         self._send_lock = threading.Lock()
@@ -103,7 +107,7 @@ class PumpStream(threading.Thread):
     def pin(self, mint: str) -> None:
         with self.lock:
             self.pinned.add(mint)
-        self._subscribe([mint])
+        self._subscribe([mint], now=True)
 
     def unpin(self, mint: str) -> None:
         with self.lock:
@@ -135,12 +139,14 @@ class PumpStream(threading.Thread):
         except Exception as e:  # noqa: BLE001
             self.errors.append(f"{time.strftime('%H:%M:%S')} send: {e}")
 
-    def _subscribe(self, mints: list[str]) -> None:
-        new = [m for m in mints if m not in self._subscribed]
-        if not new:
-            return
-        self._subscribed.update(new)
-        self._send({"method": "subscribeTokenTrade", "keys": new})
+    def _subscribe(self, mints: list[str], now: bool = False) -> None:
+        new = [m for m in mints if m not in self._subscribed and m not in self._pending_sub]
+        self._pending_sub.extend(new)
+        if self._pending_sub and (now or time.time() - self._last_sub >= 2.0):
+            batch, self._pending_sub = self._pending_sub, []
+            self._subscribed.update(batch)
+            self._last_sub = time.time()
+            self._send({"method": "subscribeTokenTrade", "keys": batch})
 
     def _unsubscribe(self, mints: list[str]) -> None:
         old = [m for m in mints if m in self._subscribed]
@@ -157,7 +163,9 @@ class PumpStream(threading.Thread):
         except json.JSONDecodeError:
             return
         if not isinstance(msg, dict) or "mint" not in msg:
+            self.samples.append(raw[:200]); self.counts["otros"] = self.counts.get("otros", 0) + 1
             return
+        self.counts[str(msg.get("txType"))] = self.counts.get(str(msg.get("txType")), 0) + 1
         now = time.time()
         tx = msg.get("txType")
         mint = msg["mint"]
@@ -215,7 +223,7 @@ class PumpStream(threading.Thread):
                 self.ws = websocket.create_connection(WS_URL, timeout=30)
                 self.connected = True
                 backoff = 2
-                self._subscribed.clear()
+                self._subscribed.clear(); self._pending_sub.clear()
                 self._send({"method": "subscribeNewToken"})
                 with self.lock:
                     pinned = list(self.pinned)
@@ -232,6 +240,8 @@ class PumpStream(threading.Thread):
                         continue
                     if raw:
                         self._on_message(raw)
+                    if self._pending_sub and time.time() - self._last_sub >= 2.0:
+                        self._subscribe([])
                     if time.time() - last_gc > 15:
                         self._gc(); last_gc = time.time()
             except Exception as e:  # noqa: BLE001
