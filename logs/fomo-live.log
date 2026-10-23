@@ -11,3 +11,11 @@ Oct 23 16:54:04 simplai-prod python3[276140]: 2026-10-23 16:54:04,010 INFO live:
 Oct 23 16:54:04 simplai-prod python3[276140]: 2026-10-23 16:54:04,352 INFO live: latido: stream=False tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$105
 Oct 23 16:54:04 simplai-prod python3[276140]: 2026-10-23 16:54:04,358 INFO live.stream: stream conectado
 Oct 23 16:59:04 simplai-prod python3[276140]: 2026-10-23 16:59:04,771 INFO live: latido: stream=True tokens_vistos=109 seguidos=109 candidatos=0 abiertas=0 cerradas=0 st_requests=2 SOL=$105
+Oct 23 17:04:03 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
+Oct 23 17:04:03 simplai-prod python3[276140]: 2026-10-23 17:04:03,021 INFO live: apagando...
+Oct 23 17:04:04 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
+Oct 23 17:04:04 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
+Oct 23 17:04:04 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
+Oct 23 17:04:04 simplai-prod python3[276629]: 2026-10-23 17:04:04,267 INFO live: arranca bot modo=paper tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 23 17:04:04 simplai-prod python3[276629]: 2026-10-23 17:04:04,584 INFO live: latido: stream=False tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$105
+Oct 23 17:04:04 simplai-prod python3[276629]: 2026-10-23 17:04:04,619 INFO live.stream: stream conectado
