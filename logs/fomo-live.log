@@ -250,3 +250,14 @@ Oct 23 23:19:22 simplai-prod python3[284091]: 2026-10-23 23:19:22,475 INFO live:
 Oct 23 23:24:22 simplai-prod python3[284091]: 2026-10-23 23:24:22,991 INFO live: latido: stream=True tokens_vistos=4877 seguidos=93 candidatos=0 abiertas=0 cerradas=1 st_requests=46 SOL=$102
 Oct 23 23:29:23 simplai-prod python3[284091]: 2026-10-23 23:29:23,367 INFO live: latido: stream=True tokens_vistos=4946 seguidos=98 candidatos=0 abiertas=0 cerradas=1 st_requests=47 SOL=$103
 Oct 23 23:34:23 simplai-prod python3[284091]: 2026-10-23 23:34:23,847 INFO live: latido: stream=True tokens_vistos=5025 seguidos=107 candidatos=0 abiertas=0 cerradas=1 st_requests=48 SOL=$103
+Oct 23 23:35:41 simplai-prod python3[284091]: 2026-10-23 23:35:41,401 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
+Oct 23 23:35:48 simplai-prod python3[284091]: 2026-10-23 23:35:48,045 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Fri, 23 Oct 2026 23:35:47 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 23 23:35:48 simplai-prod python3[284091]: <head><title>502 Bad Gateway</title></head>
+Oct 23 23:35:48 simplai-prod python3[284091]: <body>
+Oct 23 23:35:48 simplai-prod python3[284091]: <center><h1>502 Bad Gateway</h1></center>
+Oct 23 23:35:48 simplai-prod python3[284091]: <hr><center>nginx/1.22.1</center>
+Oct 23 23:35:48 simplai-prod python3[284091]: </body>
+Oct 23 23:35:48 simplai-prod python3[284091]: </html>
+Oct 23 23:35:48 simplai-prod python3[284091]: ; reconecto en 4s
+Oct 23 23:35:52 simplai-prod python3[284091]: 2026-10-23 23:35:52,431 INFO live.stream: stream conectado
+Oct 23 23:39:24 simplai-prod python3[284091]: 2026-10-23 23:39:24,208 INFO live: latido: stream=True tokens_vistos=5099 seguidos=94 candidatos=0 abiertas=0 cerradas=1 st_requests=49 SOL=$103
