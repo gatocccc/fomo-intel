@@ -18,7 +18,7 @@ from ..backtest.rules import V1
 from ..charts import ChartFetcher
 from .bot import load_dotenv
 
-MATURE_S = 6.5 * 3600
+MATURE_S = 2.2 * 3600   # 2 h alcanzan para ver el rug y casi todas las salidas de v1.2
 
 
 def main(budget: int = 60) -> None:
@@ -48,7 +48,7 @@ def main(budget: int = 60) -> None:
         for mint, r in list(rows.items())[:budget]:
             created = int(r["created_ts"])
             try:
-                candles = cf.fetch(mint, created, hours=6.0)
+                candles = cf.fetch(mint, created, hours=2.0)
             except Exception as e:  # noqa: BLE001
                 print(f"{r.get('symbol')}: sin velas ({e})"); continue
             sim = simulate(mint, r.get("symbol", ""), created, candles, SimParams(entry_min=3, fill="close", stop_fill="close", **V1["exit"]))
@@ -64,7 +64,7 @@ def main(budget: int = 60) -> None:
                  "peak_mult": round(peak / entry_px, 2) if entry_px else None,
                  "final_mult": round(last / entry_px, 3) if entry_px else None,
                  "rug": bool(entry_px and last < entry_px * 0.15), "n_candles": len(candles),
-                 "last_candle_age_min": round((created + 6 * 3600 - candles[-1]["t"]) / 60) if candles else None}
+                 "last_candle_age_min": round((created + 2 * 3600 - candles[-1]["t"]) / 60) if candles else None}
             out.write(json.dumps(o) + "\n"); n += 1
     print(f"outcomes: {n} tokens evaluados, requests {cf.requests_made}")
 
