@@ -110,6 +110,9 @@ class PumpStream(threading.Thread):
         self._subscribed: set[str] = set()
         self._stop = threading.Event()
         self._send_lock = threading.Lock()
+        self.accounts: set[str] = set()                 # billeteras seguidas (subscribeAccountTrade)
+        self.account_events: deque = deque(maxlen=5000)  # trades de billeteras seguidas, en orden
+        self.account_trades = 0
 
     # ---------- API ----------
     def keep_watching(self, mint: str) -> None:
@@ -121,9 +124,19 @@ class PumpStream(threading.Thread):
         with self.lock:
             self.keep.discard(mint)
 
-    def pin(self, mint: str) -> None:
+    def follow_accounts(self, wallets: list[str]) -> None:
+        new = [w for w in wallets if w not in self.accounts]
+        with self.lock:
+            self.accounts.update(new)
+        if new:
+            self._send({"method": "subscribeAccountTrade", "keys": new})
+
+    def pin(self, mint: str, symbol: str = "", price: float = 0.0) -> None:
         with self.lock:
             self.pinned.add(mint)
+            if mint not in self.tokens:   # token que no vimos nacer (modo seguidor): placeholder para seguir su precio
+                self.tokens[mint] = TokenState(mint=mint, symbol=symbol, name="", creator="", created_ts=time.time() - 3600,
+                                               base_price=price or 1e-9, last_price=price, last_ts=time.time() if price else 0.0)
         self._subscribe([mint], now=True)
 
     def unpin(self, mint: str) -> None:
@@ -214,6 +227,12 @@ class PumpStream(threading.Thread):
             else:
                 st.decided = st.evaluated = True      # no muestreado: no se evalúa
             return
+        if tx in ("buy", "sell") and msg.get("traderPublicKey") in self.accounts:
+            self.account_trades += 1
+            self.account_events.append({"ts": now, "wallet": msg.get("traderPublicKey"), "mint": mint, "side": tx,
+                                        "sol": float(msg.get("solAmount") or 0), "tokens": float(msg.get("tokenAmount") or 0),
+                                        "price": _price(msg), "pool": msg.get("pool"), "new_balance": float(msg.get("newTokenBalance") or 0),
+                                        "mcap_sol": float(msg.get("marketCapSol") or 0), "sig": msg.get("signature")})
         if tx in ("buy", "sell"):
             with self.lock:
                 st = self.tokens.get(mint)
@@ -259,9 +278,11 @@ class PumpStream(threading.Thread):
                 self._subscribed.clear(); self._pending_sub.clear()
                 self._send({"method": "subscribeNewToken"})
                 with self.lock:
-                    pinned = list(self.pinned)
+                    pinned = list(self.pinned); accounts = list(self.accounts)
                 if pinned:
-                    self._subscribe(pinned)
+                    self._subscribe(pinned, now=True)
+                if accounts:
+                    self._send({"method": "subscribeAccountTrade", "keys": accounts})
                 log.info("stream conectado")
                 last_gc = time.time()
                 while not self._stop.is_set():

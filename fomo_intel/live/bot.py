@@ -44,7 +44,16 @@ class Bot:
         self.state = self.env.state_dir
         self.st = STClient(self.env.solanatracker_api_key)
         self.port = Portfolio(self.state, self.p)
-        self.stream = PumpStream(keep_seconds=420.0, watch_seconds=self.p.stream_watch_s, sample=self.p.stream_sample)
+        self.follow: dict[str, dict] = {}            # wallet -> perfil
+        self.follow_buys: dict[str, dict] = {}       # mint -> {wallet: ts} compras de seguidos vistas
+        self.leaders: dict[str, set] = {}            # mint en posición -> billeteras que seguimos en ese token
+        if self.p.strategy == "follow":
+            self._load_follow_list()
+            self._apply_follow_params(self.p)
+        self.stream = PumpStream(keep_seconds=420.0, watch_seconds=self.p.stream_watch_s,
+                                 sample=0.0 if self.p.strategy == "follow" else self.p.stream_sample)
+        if self.follow:
+            self.stream.follow_accounts(list(self.follow))
         self.candidates: dict[str, object] = {}     # mint -> Features esperando T3
         self.creators: dict[str, list[float]] = self._load_creators()
         self.sol_usd = 0.0
@@ -82,11 +91,84 @@ class Bot:
         self.creators = {c: [t for t in ts if t > cut] for c, ts in self.creators.items() if any(t > cut for t in ts)}
         json.dump(self.creators, open(self.state / "creators.json", "w"))
 
+    def _load_follow_list(self) -> None:
+        f = self.state / "follow_list.json"
+        try:
+            d = json.load(open(f))
+            ws = d.get("wallets", d) if isinstance(d, dict) else d
+            self.follow = {w: {} for w in ws}
+        except Exception as e:  # noqa: BLE001
+            log.error("no pude leer %s: %s", f, e)
+
+    def _apply_follow_params(self, p: LiveParams) -> None:
+        p.stop, p.trail, p.tp_mult, p.tp_frac, p.max_hold_min = p.follow_stop, p.follow_trail, p.follow_tp_mult, 1.0, p.follow_max_hold_min
+
+    # ---------- modo seguidor ----------
+    def step_follow(self, now: float) -> None:
+        ev = self.stream.account_events
+        while ev:
+            e = ev.popleft()
+            mint, w, side = e["mint"], e["wallet"], e["side"]
+            if side == "buy":
+                if e["sol"] < self.p.follow_min_sol:
+                    continue
+                self.follow_buys.setdefault(mint, {})[w] = now
+                if mint in self.port.positions:
+                    self.leaders.setdefault(mint, set()).add(w); continue
+                d = {"mint": mint, "symbol": mint[:6], "wallet": w, "sol": e["sol"], "mcap_sol": e["mcap_sol"], "price": e["price"], "pool": e["pool"],
+                     "n_wallets": len(self.follow_buys[mint])}
+                if e["mcap_sol"] and e["mcap_sol"] > self.p.follow_max_mcap_sol:
+                    self.port.log_signal(d, "seguidor: mcap alto"); continue
+                if len(self.follow_buys[mint]) < self.p.follow_min_wallets:
+                    self.port.log_signal(d, "seguidor: esperando más billeteras"); continue
+                why_not = self.port.stop_reason()
+                if why_not:
+                    self.port.log_signal(d, f"freno: {why_not}"); continue
+                if self.sol_usd <= 0:
+                    self.port.log_signal(d, "sin precio SOL"); continue
+                size_sol = self.p.size_usd / self.sol_usd
+                if self.p.mode == "real":
+                    bal = self.exe.sol_balance()
+                    if bal - size_sol < self.p.min_sol_reserve:
+                        self.port.log_signal(d, f"sin saldo: {bal:.4f} SOL"); continue
+                ref = e["price"] or 0
+                if ref <= 0:
+                    self.port.log_signal(d, "sin precio de referencia"); continue
+                fill = self.exe.buy(mint, size_sol, ref)
+                self.port.log_fill(fill, self.p.mode, f"copia {w[:6]}", self.sol_usd)
+                if not fill.ok:
+                    self.port.log_signal(d, f"compra fallida: {fill.error}"); log.warning("copia %s falló: %s", mint[:8], fill.error); continue
+                pos = self.port.open(fill, mint[:6], self.sol_usd)
+                self.leaders[mint] = {w}
+                self.stream.pin(mint, pos.symbol, fill.price)
+                self.port.log_signal(d, "COMPRADO")
+                log.info("COPIA %s siguiendo a %s… %.4f SOL a %.3e (lat %.1fs slip %+.1f%%) mcap=%.0f SOL", mint[:8], w[:6], fill.sol, fill.price, fill.latency_s, fill.slippage_pct, e["mcap_sol"])
+            elif side == "sell" and self.p.follow_exit_on_sell:
+                pos = self.port.positions.get(mint)
+                if not pos or w not in self.leaders.get(mint, set()):
+                    continue
+                if now < self._sell_backoff.get(mint, 0):
+                    continue
+                px = e["price"] or pos.last_price
+                fill = self.exe.sell(mint, pos.tokens, px)
+                self.port.log_fill(fill, self.p.mode, f"seguido vendió {w[:6]}", self.sol_usd)
+                if not fill.ok:
+                    self._sell_backoff[mint] = now + 10; log.warning("venta copia %s falló: %s", mint[:8], fill.error); continue
+                closed = self.port.apply_sell(pos, fill, "seguido vendió")
+                log.info("VENTA copia %s (%s vendió) a %.2fx -> %.4f SOL%s", mint[:8], w[:6], fill.price / pos.entry_price, fill.sol, " [CERRADA]" if closed else "")
+                if closed:
+                    self.stream.unpin(mint); self.leaders.pop(mint, None)
+        # limpiar compras viejas de seguidos (más de 30 min) para no acumular
+        if len(self.follow_buys) > 2000:
+            self.follow_buys = {m: d for m, d in self.follow_buys.items() if max(d.values()) > now - 1800}
+
     def _reload(self) -> None:
         newp = LiveParams.load(self.state)
         if newp.mode != self.p.mode:
             log.warning("cambio de modo %s -> %s: requiere reiniciar el servicio; sigo en %s", self.p.mode, newp.mode, self.p.mode)
             newp.mode = self.p.mode
+        if newp.strategy == "follow":
+            self._apply_follow_params(newp)
         self.p = newp
         self.port.p = newp
         self.exe.p = newp
@@ -228,7 +310,7 @@ class Bot:
             log.info("VENTA %s %s %.0f%% a %.2fx slippage=%+.1f%% -> %.4f SOL%s", pos.symbol, why, fill.tokens / pos.tokens_initial * 100,
                      fill.price / pos.entry_price, fill.slippage_pct, fill.sol, " [CERRADA]" if closed else "")
             if closed:
-                self.stream.unpin(mint)
+                self.stream.unpin(mint); self.leaders.pop(mint, None)
 
     # ---------- 4) resumen ----------
     def step_summary(self, now: float) -> None:
@@ -240,18 +322,20 @@ class Bot:
                            "stream_connected": self.stream.connected, "stream_msgs": self.stream.msgs,
                            "tokens_seen": self.stream.creates, "tokens_tracked": len(self.stream.tokens),
                            "candidates": [f.symbol for f in self.candidates.values()],
+                           "strategy": self.p.strategy, "followed_wallets": len(self.follow), "account_trades": self.stream.account_trades,
+                           "follow_buys_seen": len(self.follow_buys),
                            "st_requests": self.st.requests_made, "stream_errors": list(self.stream.errors)[-5:],
                            "stream_counts": dict(self.stream.counts), "stream_samples": list(self.stream.samples),
                            "stream_trades": self.stream.trades_streamed, "stream_cost_sol_est": round(self.stream.trades_streamed / 10000 * 0.01, 4),
                            "pumpportal_wallet_sol": self._pumpportal_balance(),
-                           "params": {k: getattr(self.p, k) for k in ("mode", "size_usd", "max_open", "daily_loss_usd", "total_loss_usd", "max_trades", "max_slippage_pct")}})
+                           "params": {k: getattr(self.p, k) for k in ("mode", "strategy", "size_usd", "max_open", "daily_loss_usd", "total_loss_usd", "max_trades", "max_slippage_pct", "stop", "trail", "tp_mult", "max_hold_min")}})
         self._save_creators()
         if len(self._kept_checked) > 5000:
             self._kept_checked = set(list(self._kept_checked)[-2000:])
 
     # ---------- loop ----------
     def run(self) -> None:
-        log.info("arranca bot modo=%s tamaño=US$%.0f máx_abiertas=%d billetera=%s", self.p.mode, self.p.size_usd, self.p.max_open, self._wallet_pubkey() or "-")
+        log.info("arranca bot modo=%s estrategia=%s seguidos=%d tamaño=US$%.0f máx_abiertas=%d billetera=%s", self.p.mode, self.p.strategy, len(self.follow), self.p.size_usd, self.p.max_open, self._wallet_pubkey() or "-")
         self.stream.start()
         while self.running:
             now = time.time()
@@ -259,7 +343,9 @@ class Bot:
                 if now - self._last_reload > 30:
                     self._reload(); self._last_reload = now
                     self.sol_usd = self.st.sol_usd() or self.sol_usd
-                if self.sol_usd > 0:
+                if self.sol_usd > 0 and self.p.strategy == "follow":
+                    self.step_follow(now)
+                elif self.sol_usd > 0:
                     self.step_evaluate(now)
                     self.step_enter(now)
                 self.step_positions(now)

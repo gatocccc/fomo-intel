@@ -45,6 +45,16 @@ class LiveParams:
     # --- stream (PumpPortal cobra 0,01 SOL por cada 10.000 trades recibidos) ---
     stream_watch_s: float = 150.0       # segundos que se escuchan los trades de cada token nuevo
     stream_sample: float = 1.0          # fracción de tokens nuevos a escuchar (muestreo para investigación)
+    # --- modo seguidor (copiar a billeteras con historial) ---
+    strategy: str = "rules"             # rules (v1.2) | follow (copiar billeteras de state/follow_list.json)
+    follow_min_sol: float = 0.05        # ignorar compras del seguido menores a esto (pruebas/sondeos)
+    follow_exit_on_sell: bool = True    # vender cuando el seguido vende (cualquier parte)
+    follow_stop: float = 0.35
+    follow_trail: float = 0.40          # trailing amplio: la salida principal es la del seguido
+    follow_tp_mult: float = 3.0         # toma de ganancia de seguridad (todo)
+    follow_max_hold_min: int = 90
+    follow_max_mcap_sol: float = 1500.0 # no copiar compras en tokens ya grandes (en SOL de mcap; ~US$150K)
+    follow_min_wallets: int = 1         # cuántos seguidos tienen que haber comprado el token
     # --- simulado ---
     paper_slippage: float = 0.05
     paper_fee: float = 0.01
