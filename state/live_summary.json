@@ -1,5 +1,5 @@
 {
- "ts": 1792775974.8576162,
+ "ts": 1792776274.585969,
  "mode": "paper",
  "open": 0,
  "closed": 0,
@@ -13,24 +13,26 @@
  "last_closed": [],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 104.5870514804692,
+ "sol_usd": 104.56584283221244,
  "stream_connected": true,
- "stream_msgs": 184,
- "tokens_seen": 118,
- "tokens_tracked": 118,
+ "stream_msgs": 887,
+ "tokens_seen": 48,
+ "tokens_tracked": 48,
  "candidates": [],
- "st_requests": 2,
+ "st_requests": 1,
  "stream_errors": [],
  "stream_counts": {
-  "otros": 65,
-  "create": 119
+  "otros": 33,
+  "create": 49,
+  "buy": 420,
+  "sell": 385
  },
  "stream_samples": [
-  "{\"message\":\"'subscribeTokenTrade' and 'subscribeAccountTrade' methods are only available when connecting with an API key funded with at least 0.02 SOL.\"}",
-  "{\"message\":\"'subscribeTokenTrade' and 'subscribeAccountTrade' methods are only available when connecting with an API key funded with at least 0.02 SOL.\"}",
-  "{\"message\":\"'subscribeTokenTrade' and 'subscribeAccountTrade' methods are only available when connecting with an API key funded with at least 0.02 SOL.\"}",
-  "{\"message\":\"'subscribeTokenTrade' and 'subscribeAccountTrade' methods are only available when connecting with an API key funded with at least 0.02 SOL.\"}",
-  "{\"message\":\"'subscribeTokenTrade' and 'subscribeAccountTrade' methods are only available when connecting with an API key funded with at least 0.02 SOL.\"}"
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
  "params": {
   "mode": "paper",
