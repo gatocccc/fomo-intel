@@ -1,5 +1,5 @@
 {
- "ts": 1792777777.9405906,
+ "ts": 1792778078.4785228,
  "mode": "paper",
  "open": 0,
  "closed": 1,
@@ -32,26 +32,26 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 104.36609196364672,
+ "sol_usd": 104.2993181491332,
  "stream_connected": true,
- "stream_msgs": 31786,
- "tokens_seen": 619,
- "tokens_tracked": 141,
+ "stream_msgs": 37130,
+ "tokens_seen": 736,
+ "tokens_tracked": 146,
  "candidates": [],
- "st_requests": 7,
+ "st_requests": 8,
  "stream_errors": [],
  "stream_counts": {
-  "otros": 509,
-  "create": 650,
-  "buy": 14555,
-  "sell": 16068,
-  "migrate": 4
+  "otros": 599,
+  "create": 771,
+  "buy": 17170,
+  "sell": 18584,
+  "migrate": 6
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
  "params": {
