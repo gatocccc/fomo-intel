@@ -53,3 +53,4 @@ Oct 23 17:39:00 simplai-prod python3[277290]: 2026-10-23 17:39:00,887 INFO live:
 Oct 23 17:40:40 simplai-prod python3[277290]: 2026-10-23 17:40:40,951 INFO live.portfolio: CERRADA ROOM ret=-89.8% pnl=US$-8.98 salidas=['stop']
 Oct 23 17:40:40 simplai-prod python3[277290]: 2026-10-23 17:40:40,952 INFO live: VENTA ROOM stop 100% a 0.10x slippage=+6.0% -> 0.0097 SOL [CERRADA]
 Oct 23 17:43:06 simplai-prod python3[277290]: 2026-10-23 17:43:06,044 INFO live: latido: stream=True tokens_vistos=478 seguidos=150 candidatos=0 abiertas=0 cerradas=1 st_requests=5 SOL=$104
+Oct 23 17:48:06 simplai-prod python3[277290]: 2026-10-23 17:48:06,528 INFO live: latido: stream=True tokens_vistos=596 seguidos=145 candidatos=0 abiertas=0 cerradas=1 st_requests=6 SOL=$104

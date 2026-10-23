@@ -1,0 +1,10 @@
+== 006_backtest_stop_realista 2026-10-23T17:47:03Z ==
+[v1.2] stop_fill=level ops=18 aciertos=56% total(US$1 c/u)=+2.38 peor=-0.34
+    [('WOMB', 1.13, ['tp2x', 'trailing']), ('MCNUGGET', 0.73, ['tp2x', 'trailing']), ('QRCAT', 0.49, ['trailing']), ('goy', 0.4, ['trailing']), ('NTWRK', -0.13, ['trailing']), ('alibi', 0.27, ['tp2x', 'stop']), ('KENZO', 0.28, ['trailing']), ('Octocat', -0.2, ['trailing']), ('SHYFT', -0.05, ['trailing']), ('CI', 0.22, ['trailing']), ('frontrun', 0.17, ['trailing']), ('RICH', -0.34, ['stop']), ('LIL WHEEZY', -0.34, ['stop']), ('cb', 0.36, ['trailing']), ('AI', 0.11, ['trailing']), ('x17z', -0.04, ['trailing']), ('GUST', -0.34, ['stop']), ('Martin', -0.34, ['stop'])]
+[v1.2] stop_fill=close ops=18 aciertos=50% total(US$1 c/u)=+0.72 peor=-0.97
+    [('WOMB', 1.13, ['tp2x', 'trailing']), ('MCNUGGET', 0.73, ['tp2x', 'trailing']), ('QRCAT', 0.49, ['trailing']), ('goy', 0.4, ['trailing']), ('NTWRK', -0.13, ['trailing']), ('alibi', -0.03, ['tp2x', 'stop']), ('KENZO', 0.28, ['trailing']), ('Octocat', -0.2, ['trailing']), ('SHYFT', -0.05, ['trailing']), ('CI', 0.22, ['trailing']), ('frontrun', 0.17, ['trailing']), ('RICH', -0.97, ['stop']), ('LIL WHEEZY', -0.94, ['stop']), ('cb', 0.36, ['trailing']), ('AI', 0.11, ['trailing']), ('x17z', -0.04, ['trailing']), ('GUST', -0.38, ['stop']), ('Martin', -0.44, ['stop'])]
+[v1.1] stop_fill=level ops=27 aciertos=44% total(US$1 c/u)=-0.49 peor=-0.34
+[v1.1] stop_fill=close ops=27 aciertos=44% total(US$1 c/u)=-3.05 peor=-0.97
+[v1] stop_fill=level ops=51 aciertos=35% total(US$1 c/u)=-2.50 peor=-0.34
+[v1] stop_fill=close ops=51 aciertos=35% total(US$1 c/u)=-6.79 peor=-0.97
+== exit 0 ==
