@@ -113,3 +113,24 @@ Oct 23 18:38:11 simplai-prod python3[280542]: 2026-10-23 18:38:11,464 WARNING li
 Oct 23 18:38:13 simplai-prod python3[280542]: 2026-10-23 18:38:13,946 INFO live.stream: stream conectado
 Oct 23 18:39:49 simplai-prod python3[280542]: 2026-10-23 18:39:49,178 WARNING live.stream: stream caído: PumpPortal: key no reconocida como fondeada; reconecto; reconecto en 2s
 Oct 23 18:39:51 simplai-prod python3[280542]: 2026-10-23 18:39:51,658 INFO live.stream: stream conectado
+Oct 23 18:40:05 simplai-prod python3[280542]: 2026-10-23 18:40:05,216 INFO live: latido: stream=True tokens_vistos=125 seguidos=125 candidatos=0 abiertas=0 cerradas=1 st_requests=2 SOL=$104
+Oct 23 18:41:14 simplai-prod python3[280542]: 2026-10-23 18:41:14,756 WARNING live.stream: stream caído: PumpPortal: key no reconocida como fondeada; reconecto; reconecto en 2s
+Oct 23 18:41:17 simplai-prod python3[280542]: 2026-10-23 18:41:17,236 INFO live.stream: stream conectado
+Oct 23 18:42:49 simplai-prod python3[280542]: 2026-10-23 18:42:49,022 WARNING live.stream: stream caído: PumpPortal: key no reconocida como fondeada; reconecto; reconecto en 2s
+Oct 23 18:42:51 simplai-prod python3[280542]: 2026-10-23 18:42:51,499 INFO live.stream: stream conectado
+Oct 23 18:43:02 simplai-prod python3[280542]: 2026-10-23 18:43:02,754 INFO live: apagando...
+Oct 23 18:43:02 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
+Oct 23 18:43:03 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
+Oct 23 18:43:03 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
+Oct 23 18:43:03 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
+Oct 23 18:43:03 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
+Oct 23 18:43:03 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
+Oct 23 18:43:03 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
+Oct 23 18:43:03 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
+Oct 23 18:43:03 simplai-prod python3[281006]: 2026-10-23 18:43:03,644 INFO live: arranca bot modo=paper tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 23 18:43:04 simplai-prod python3[281006]: 2026-10-23 18:43:04,020 INFO live.stream: stream conectado
+Oct 23 18:43:04 simplai-prod python3[281006]: 2026-10-23 18:43:04,208 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$104
+Oct 23 18:43:06 simplai-prod python3[281006]: 2026-10-23 18:43:06,624 WARNING live.stream: stream caído: PumpPortal: key no reconocida como fondeada; reconecto; reconecto en 2s
+Oct 23 18:43:09 simplai-prod python3[281006]: 2026-10-23 18:43:09,104 INFO live.stream: stream conectado
+Oct 23 18:44:45 simplai-prod python3[281006]: 2026-10-23 18:44:45,294 WARNING live.stream: stream caído: PumpPortal: key no reconocida como fondeada; reconecto; reconecto en 2s
+Oct 23 18:44:47 simplai-prod python3[281006]: 2026-10-23 18:44:47,764 INFO live.stream: stream conectado

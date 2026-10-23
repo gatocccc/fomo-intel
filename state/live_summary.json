@@ -1,5 +1,5 @@
 {
- "ts": 1792780774.8819222,
+ "ts": 1792781074.5093052,
  "mode": "paper",
  "open": 0,
  "closed": 1,
@@ -32,22 +32,20 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 104.15957432256485,
+ "sol_usd": 104.09228396731284,
  "stream_connected": true,
- "stream_msgs": 187,
- "tokens_seen": 119,
- "tokens_tracked": 119,
+ "stream_msgs": 59,
+ "tokens_seen": 37,
+ "tokens_tracked": 37,
  "candidates": [],
  "st_requests": 1,
  "stream_errors": [
-  "18:35:07 PumpPortal: key no reconocida como fondeada; reconecto",
-  "18:36:36 PumpPortal: key no reconocida como fondeada; reconecto",
-  "18:38:11 PumpPortal: key no reconocida como fondeada; reconecto"
+  "18:43:06 PumpPortal: key no reconocida como fondeada; reconecto"
  ],
  "stream_counts": {
-  "otros": 67,
-  "create": 120,
-  "sin_fondos": 59
+  "otros": 22,
+  "create": 37,
+  "sin_fondos": 18
  },
  "stream_samples": [
   "{\"message\":\"'subscribeTokenTrade' and 'subscribeAccountTrade' methods are only available when connecting with an API key funded with at least 0.02 SOL.\"}",
@@ -56,6 +54,9 @@
   "{\"message\":\"'subscribeTokenTrade' and 'subscribeAccountTrade' methods are only available when connecting with an API key funded with at least 0.02 SOL.\"}",
   "{\"message\":\"'subscribeTokenTrade' and 'subscribeAccountTrade' methods are only available when connecting with an API key funded with at least 0.02 SOL.\"}"
  ],
+ "stream_trades": 0,
+ "stream_cost_sol_est": 0.0,
+ "pumpportal_wallet_sol": 0.01,
  "params": {
   "mode": "paper",
   "size_usd": 10.0,

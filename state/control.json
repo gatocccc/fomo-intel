@@ -25,6 +25,8 @@
  "trail": 0.2,
  "stop": 0.3,
  "max_hold_min": 360,
+ "stream_watch_s": 150.0,
+ "stream_sample": 1.0,
  "paper_slippage": 0.05,
  "paper_fee": 0.01
 }
