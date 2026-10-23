@@ -1,0 +1,11 @@
+== 002_control_y_dashboard 2026-10-23T16:54:03Z ==
+active
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+dashboard → /var/www/fomo/index.html
+0 * * * * python3 /home/simplai/email_cron.py >> /home/simplai/email_cron.log 2>&1
+7 */3 * * * /bin/bash /root/fomo_intel/scripts/validate_cron.sh
+* * * * * /bin/bash /root/fomo_intel/scripts/server_sync.sh
+{"ts": 1792774444.3520427, "mode": "paper", "open": 0, "closed": 0, "wins": 0, "hit_rate": null, "pnl_usd_total": 0, "pnl_usd_today": 0, "ret_per_usd": 0, "stop_reason": null, "positions": [], "last_closed": [], "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao", "wallet_sol": null, "sol_usd":
+OK
+== exit 0 ==
