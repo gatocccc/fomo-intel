@@ -1,5 +1,5 @@
 {
- "ts": 1792779274.2829542,
+ "ts": 1792779574.9927578,
  "mode": "paper",
  "open": 0,
  "closed": 1,
@@ -32,17 +32,17 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 104.22609483322206,
+ "sol_usd": 104.31368883068285,
  "stream_connected": true,
- "stream_msgs": 67,
- "tokens_seen": 43,
- "tokens_tracked": 43,
+ "stream_msgs": 108,
+ "tokens_seen": 66,
+ "tokens_tracked": 66,
  "candidates": [],
  "st_requests": 1,
  "stream_errors": [],
  "stream_counts": {
-  "otros": 23,
-  "create": 44
+  "otros": 39,
+  "create": 69
  },
  "stream_samples": [
   "{\"message\":\"'subscribeTokenTrade' and 'subscribeAccountTrade' methods are only available when connecting with an API key funded with at least 0.02 SOL.\"}",

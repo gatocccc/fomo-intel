@@ -1,0 +1,247 @@
+== 008_analisis_rugs_historico 2026-10-23T18:16:04Z ==
+tokens que pasaron el primer corte con compradores y velas: 318; rugs (final < 0.15x): 193; acierto v1.2-stop-realista: 82/318
+top1                               >=0.25: n=115 rugs=81 acierto=15% total=-56.72   | resto: n=203 rugs=112 acierto=32% total=-25.26
+top1                               >=0.35: n=103 rugs=75 acierto=13% total=-53.70   | resto: n=215 rugs=118 acierto=32% total=-28.29
+top3                               >=0.5: n=118 rugs=83 acierto=15% total=-58.36   | resto: n=200 rugs=110 acierto=32% total=-23.62
+top3                               >=0.6: n=101 rugs=77 acierto=11% total=-55.79   | resto: n=217 rugs=116 acierto=33% total=-26.19
+dev_share                          >=0.1: n=107 rugs=82 acierto=12% total=-53.37   | resto: n=211 rugs=111 acierto=33% total=-28.61
+dev_share                          >=0.2: n=96 rugs=75 acierto=11% total=-50.54   | resto: n=222 rugs=118 acierto=32% total=-31.44
+sniper_pct                         >=10: n=6 rugs=2 acierto=50% total=+0.21   | resto: n=312 rugs=191 acierto=25% total=-82.19
+sniper_pct                         >=20: n=3 rugs=0 acierto=33% total=-0.84   | resto: n=315 rugs=193 acierto=26% total=-81.14
+insider_pct                        >=10: n=0   | resto: n=318 rugs=193 acierto=26% total=-81.98
+bundlers                           >=3: n=75 rugs=48 acierto=32% total=-11.32   | resto: n=243 rugs=145 acierto=24% total=-70.66
+n_early                            >=40: n=296 rugs=186 acierto=26% total=-74.25   | resto: n=22 rugs=7 acierto=27% total=-7.74
+n_early                            >=60: n=286 rugs=180 acierto=25% total=-71.41   | resto: n=32 rugs=13 acierto=31% total=-10.58
+early_tagged                       >=3: n=303 rugs=184 acierto=26% total=-78.00   | resto: n=15 rugs=9 acierto=20% total=-3.98
+peak                               >=1.3: n=227 rugs=136 acierto=36% total=-20.92   | resto: n=91 rugs=57 acierto=0% total=-61.06
+
+rugs:
+   {'sym': 'KIMCHINU', 'final': 0.01, 'top1': 0.11, 'top3': 0.27, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 5, 'n_early': 100, 'vol_early': 22020}
+   {'sym': 'SHEKEL', 'final': 0.06, 'top1': 0.05, 'top3': 0.12, 'dev_share': 0.03, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 10700}
+   {'sym': 'Benz', 'final': 0.0, 'top1': 0.8, 'top3': 0.87, 'dev_share': 0.8, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 11038}
+   {'sym': 'PUMPERS', 'final': 0.02, 'top1': 0.13, 'top3': 0.23, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 8, 'n_early': 100, 'vol_early': 17601}
+   {'sym': 'dead', 'final': 0.07, 'top1': 0.19, 'top3': 0.31, 'dev_share': 0.01, 'sniper_pct': 0.6783, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 11046}
+   {'sym': 'ROOM', 'final': 0.11, 'top1': 0.22, 'top3': 0.58, 'dev_share': 0.01, 'sniper_pct': 0.0011, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9640}
+   {'sym': 'OS', 'final': 0.1, 'top1': 0.12, 'top3': 0.26, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 10173}
+   {'sym': 'Grok', 'final': 0.05, 'top1': 0.9, 'top3': 0.91, 'dev_share': 0.9, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 52, 'vol_early': 9906}
+   {'sym': 'KIMCHIGUY', 'final': 0.03, 'top1': 0.07, 'top3': 0.2, 'dev_share': 0.05, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 29659}
+   {'sym': 'MrBeast', 'final': 0.0, 'top1': 0.63, 'top3': 0.7, 'dev_share': 0.63, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 14170}
+   {'sym': 'MUSK', 'final': 0.0, 'top1': 0.66, 'top3': 0.98, 'dev_share': 0.32, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 35, 'vol_early': 28003}
+   {'sym': 'FOMO', 'final': 0.0, 'top1': 0.99, 'top3': 0.99, 'dev_share': 0.99, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 8988}
+   {'sym': 'Speed', 'final': 0.0, 'top1': 0.98, 'top3': 0.98, 'dev_share': 0.98, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9127}
+   {'sym': 'ChatGPT', 'final': 0.0, 'top1': 0.67, 'top3': 0.72, 'dev_share': 0.67, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 78, 'n_early': 100, 'vol_early': 13025}
+   {'sym': 'Speed', 'final': 0.0, 'top1': 0.63, 'top3': 0.96, 'dev_share': 0.32, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 41, 'n_early': 100, 'vol_early': 27249}
+   {'sym': 'Gemini', 'final': 0.0, 'top1': 0.9, 'top3': 0.92, 'dev_share': 0.9, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 16, 'n_early': 100, 'vol_early': 9740}
+   {'sym': 'GAINZY', 'final': 0.12, 'top1': 0.11, 'top3': 0.26, 'dev_share': 0.01, 'sniper_pct': 0.1228, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 22081}
+   {'sym': 'Particle', 'final': 0.06, 'top1': 0.46, 'top3': 0.53, 'dev_share': 0.46, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 85, 'vol_early': 12328}
+   {'sym': 'KIMCHINU', 'final': 0.01, 'top1': 0.12, 'top3': 0.3, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 7, 'n_early': 100, 'vol_early': 16655}
+   {'sym': 'Bastion', 'final': 0.12, 'top1': 0.08, 'top3': 0.24, 'dev_share': 0.05, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 7, 'n_early': 100, 'vol_early': 18726}
+   {'sym': 'DS', 'final': 0.05, 'top1': 0.21, 'top3': 0.32, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 23241}
+   {'sym': 'NASA', 'final': 0.0, 'top1': 0.95, 'top3': 0.97, 'dev_share': 0.95, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 47, 'n_early': 100, 'vol_early': 9235}
+   {'sym': 'crocdog', 'final': 0.07, 'top1': 0.15, 'top3': 0.42, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 27318}
+   {'sym': 'XMW', 'final': 0.05, 'top1': 0.05, 'top3': 0.15, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 17330}
+   {'sym': 'Rosalind', 'final': 0.01, 'top1': 0.17, 'top3': 0.43, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 17434}
+   {'sym': 'BLOCK', 'final': 0.08, 'top1': 0.08, 'top3': 0.16, 'dev_share': 0.03, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 13, 'n_early': 100, 'vol_early': 8975}
+   {'sym': 'GTA 6 Coin', 'final': 0.0, 'top1': 0.97, 'top3': 0.98, 'dev_share': 0.97, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9135}
+   {'sym': 'TRUMP', 'final': 0.0, 'top1': 0.53, 'top3': 0.85, 'dev_share': 0.3, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 29614}
+   {'sym': 'CI', 'final': 0.05, 'top1': 0.29, 'top3': 0.58, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 16260}
+   {'sym': 'MrBeast', 'final': 0.0, 'top1': 0.72, 'top3': 0.77, 'dev_share': 0.72, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 12251}
+   {'sym': 'insane', 'final': 0.07, 'top1': 0.05, 'top3': 0.13, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 5492}
+   {'sym': '4CHAN', 'final': 0.01, 'top1': 0.18, 'top3': 0.45, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 16007}
+   {'sym': 'BeastMr', 'final': 0.0, 'top1': 0.6, 'top3': 0.96, 'dev_share': 0.34, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 25768}
+   {'sym': '1', 'final': 0.09, 'top1': 0.08, 'top3': 0.18, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 13, 'n_early': 100, 'vol_early': 12961}
+   {'sym': 'MONELISA', 'final': 0.09, 'top1': 0.06, 'top3': 0.17, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 29, 'n_early': 100, 'vol_early': 16637}
+   {'sym': 'PROPHET', 'final': 0.02, 'top1': 0.19, 'top3': 0.33, 'dev_share': 0.19, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 46358}
+   {'sym': 'KIMVERSE', 'final': 0.04, 'top1': 0.78, 'top3': 0.91, 'dev_share': 0.78, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 47, 'vol_early': 10051}
+   {'sym': 't/acc', 'final': 0.15, 'top1': 0.16, 'top3': 0.44, 'dev_share': 0.03, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 47, 'vol_early': 7483}
+   {'sym': 'Daybreak', 'final': 0.11, 'top1': 0.18, 'top3': 0.47, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 38855}
+   {'sym': 'SpaceX', 'final': 0.0, 'top1': 0.62, 'top3': 0.95, 'dev_share': 0.32, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 28116}
+   {'sym': 'Higgsmon', 'final': 0.05, 'top1': 0.05, 'top3': 0.12, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 17, 'n_early': 100, 'vol_early': 17813}
+   {'sym': 'SHYFT', 'final': 0.06, 'top1': 0.11, 'top3': 0.25, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 11, 'n_early': 75, 'vol_early': 9779}
+   {'sym': 'McRib', 'final': 0.01, 'top1': 0.16, 'top3': 0.44, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 3, 'n_early': 100, 'vol_early': 18644}
+   {'sym': 'Speed', 'final': 0.0, 'top1': 0.98, 'top3': 0.99, 'dev_share': 0.98, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 8984}
+   {'sym': 'WORLDCOIN', 'final': 0.07, 'top1': 0.04, 'top3': 0.11, 'dev_share': 0.02, 'sniper_pct': 4.0688, 'insider_pct': 0.0, 'bundlers': 391, 'n_early': 100, 'vol_early': 4744}
+   {'sym': 'MrBeast', 'final': 0.03, 'top1': 0.63, 'top3': 0.97, 'dev_share': 0.34, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 26193}
+   {'sym': 'Project', 'final': 0.12, 'top1': 0.05, 'top3': 0.13, 'dev_share': 0.05, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 5984}
+   {'sym': 'Fomo Coin', 'final': 0.0, 'top1': 0.65, 'top3': 0.99, 'dev_share': 0.33, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 26595}
+   {'sym': 'OFFLAWDOG', 'final': 0.04, 'top1': 0.08, 'top3': 0.22, 'dev_share': 0.05, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 52539}
+   {'sym': '$KEK', 'final': 0.01, 'top1': 0.93, 'top3': 0.96, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 18, 'vol_early': 13886}
+   {'sym': 'UK', 'final': 0.04, 'top1': 0.26, 'top3': 0.54, 'dev_share': 0.03, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 31, 'vol_early': 5293}
+   {'sym': 'kimchisol', 'final': 0.03, 'top1': 0.21, 'top3': 0.63, 'dev_share': 0.16, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 66, 'vol_early': 76339}
+   {'sym': 'PULP', 'final': 0.03, 'top1': 0.19, 'top3': 0.48, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 12691}
+   {'sym': 'Octocat', 'final': 0.15, 'top1': 0.12, 'top3': 0.26, 'dev_share': 0.0, 'sniper_pct': 2.905, 'insider_pct': 0.0, 'bundlers': 6, 'n_early': 96, 'vol_early': 18581}
+   {'sym': 'GitHub', 'final': 0.0, 'top1': 0.92, 'top3': 0.95, 'dev_share': 0.92, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9673}
+   {'sym': 'Martin', 'final': 0.02, 'top1': 0.07, 'top3': 0.17, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 21565}
+   {'sym': 'CHRM', 'final': 0.06, 'top1': 0.56, 'top3': 0.8, 'dev_share': 0.07, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 27, 'n_early': 100, 'vol_early': 134625}
+   {'sym': 'Grok', 'final': 0.0, 'top1': 0.72, 'top3': 0.77, 'dev_share': 0.72, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 12266}
+   {'sym': 'RICH', 'final': 0.03, 'top1': 0.05, 'top3': 0.13, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 6491}
+   {'sym': 'FOMO', 'final': 0.0, 'top1': 0.56, 'top3': 0.89, 'dev_share': 0.32, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 27587}
+   {'sym': 'ELON', 'final': 0.09, 'top1': 0.11, 'top3': 0.23, 'dev_share': 0.01, 'sniper_pct': 0.0066, 'insider_pct': 0.0, 'bundlers': 52, 'n_early': 100, 'vol_early': 14141}
+   {'sym': 'TRUMP', 'final': 0.04, 'top1': 0.62, 'top3': 0.97, 'dev_share': 0.35, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 25387}
+   {'sym': '4CHAN', 'final': 0.08, 'top1': 0.05, 'top3': 0.14, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 11118}
+   {'sym': 'LIL WHEEZY', 'final': 0.05, 'top1': 0.15, 'top3': 0.4, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 13942}
+   {'sym': 'DNN', 'final': 0.11, 'top1': 0.1, 'top3': 0.25, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 48, 'n_early': 100, 'vol_early': 12533}
+   {'sym': 'STONKMAN', 'final': 0.1, 'top1': 0.08, 'top3': 0.2, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 12, 'n_early': 100, 'vol_early': 11618}
+   {'sym': 'Grok', 'final': 0.03, 'top1': 0.63, 'top3': 0.97, 'dev_share': 0.34, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 26279}
+   {'sym': 'OpenAI', 'final': 0.01, 'top1': 0.66, 'top3': 0.98, 'dev_share': 0.31, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 28739}
+   {'sym': 'KIMCHINU', 'final': 0.02, 'top1': 0.09, 'top3': 0.21, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 2, 'n_early': 100, 'vol_early': 23782}
+   {'sym': 'ELON', 'final': 0.0, 'top1': 0.98, 'top3': 0.99, 'dev_share': 0.98, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9003}
+   {'sym': 'CHAIRMAN', 'final': 0.03, 'top1': 0.08, 'top3': 0.22, 'dev_share': 0.0, 'sniper_pct': 0.0058, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 28511}
+   {'sym': 'fomo', 'final': 0.0, 'top1': 0.59, 'top3': 0.94, 'dev_share': 0.33, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 26961}
+   {'sym': 'McRib', 'final': 0.08, 'top1': 0.13, 'top3': 0.21, 'dev_share': 0.04, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 18, 'n_early': 100, 'vol_early': 17706}
+   {'sym': 'Apple', 'final': 0.0, 'top1': 0.59, 'top3': 0.93, 'dev_share': 0.32, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 29, 'n_early': 100, 'vol_early': 27529}
+   {'sym': 'win', 'final': 0.09, 'top1': 0.07, 'top3': 0.19, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 215, 'n_early': 100, 'vol_early': 6015}
+   {'sym': 'PRB', 'final': 0.02, 'top1': 0.21, 'top3': 0.49, 'dev_share': 0.03, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 46, 'vol_early': 7342}
+   {'sym': 'JEW', 'final': 0.04, 'top1': 0.19, 'top3': 0.32, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 94, 'vol_early': 30373}
+   {'sym': 'Claude AI', 'final': 0.03, 'top1': 0.99, 'top3': 0.99, 'dev_share': 0.99, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9001}
+   {'sym': 'Gatochino', 'final': 0.04, 'top1': 0.08, 'top3': 0.23, 'dev_share': 0.0, 'sniper_pct': 0.0058, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 21865}
+   {'sym': 'DAZE', 'final': 0.03, 'top1': 0.36, 'top3': 0.55, 'dev_share': 0.36, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 30819}
+   {'sym': 'Grok', 'final': 0.0, 'top1': 0.91, 'top3': 0.92, 'dev_share': 0.91, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 10, 'n_early': 100, 'vol_early': 9697}
+   {'sym': 'Speed', 'final': 0.0, 'top1': 0.62, 'top3': 0.95, 'dev_share': 0.32, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 70, 'n_early': 100, 'vol_early': 27722}
+   {'sym': 'SpaceX', 'final': 0.0, 'top1': 0.62, 'top3': 0.96, 'dev_share': 0.33, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 26591}
+   {'sym': 'NVIDIA', 'final': 0.0, 'top1': 0.64, 'top3': 0.73, 'dev_share': 0.64, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 178, 'n_early': 100, 'vol_early': 13669}
+   {'sym': 'NASA', 'final': 0.03, 'top1': 0.96, 'top3': 0.97, 'dev_share': 0.96, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 2, 'n_early': 100, 'vol_early': 9176}
+   {'sym': 'a16z', 'final': 0.06, 'top1': 0.07, 'top3': 0.19, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 500, 'n_early': 100, 'vol_early': 6791}
+   {'sym': 'Melunia', 'final': 0.09, 'top1': 0.1, 'top3': 0.27, 'dev_share': 0.07, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 8830}
+   {'sym': 'KIMCHINU', 'final': 0.01, 'top1': 0.22, 'top3': 0.43, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 2, 'n_early': 100, 'vol_early': 23409}
+   {'sym': 'Rockstar', 'final': 0.0, 'top1': 0.89, 'top3': 0.92, 'dev_share': 0.89, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9927}
+   {'sym': 'Claude AI', 'final': 0.0, 'top1': 0.99, 'top3': 1.0, 'dev_share': 0.99, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 8949}
+   {'sym': 'Coca Cola', 'final': 0.0, 'top1': 0.99, 'top3': 0.99, 'dev_share': 0.99, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 8976}
+   {'sym': 'Doomsday', 'final': 0.07, 'top1': 0.12, 'top3': 0.23, 'dev_share': 0.04, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9653}
+   {'sym': 'ACTIV', 'final': 0.13, 'top1': 0.18, 'top3': 0.35, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 23067}
+   {'sym': 'CHILLKIM', 'final': 0.1, 'top1': 0.11, 'top3': 0.31, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 20057}
+   {'sym': 'CROCTOBER', 'final': 0.1, 'top1': 0.05, 'top3': 0.15, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 12346}
+   {'sym': 'DOGE', 'final': 0.0, 'top1': 0.56, 'top3': 0.85, 'dev_share': 0.26, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 34028}
+   {'sym': 'MrBeast', 'final': 0.01, 'top1': 0.62, 'top3': 0.92, 'dev_share': 0.29, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 30988}
+   {'sym': 'Riot Games', 'final': 0.0, 'top1': 0.89, 'top3': 0.91, 'dev_share': 0.89, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9971}
+   {'sym': 'Gemini', 'final': 0.0, 'top1': 0.9, 'top3': 0.91, 'dev_share': 0.9, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9914}
+   {'sym': 'Kimchi', 'final': 0.02, 'top1': 0.13, 'top3': 0.25, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 23676}
+   {'sym': 'onboard', 'final': 0.03, 'top1': 0.07, 'top3': 0.16, 'dev_share': 0.01, 'sniper_pct': 10.9837, 'insider_pct': 0.0, 'bundlers': 500, 'n_early': 100, 'vol_early': 6896}
+   {'sym': 'Rekees', 'final': 0.05, 'top1': 0.07, 'top3': 0.2, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 34175}
+   {'sym': 'Gatochino', 'final': 0.07, 'top1': 0.09, 'top3': 0.24, 'dev_share': 0.05, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 10589}
+   {'sym': 'KENZO', 'final': 0.06, 'top1': 0.04, 'top3': 0.12, 'dev_share': 0.02, 'sniper_pct': 15.0849, 'insider_pct': 0.0, 'bundlers': 1, 'n_early': 100, 'vol_early': 3672}
+   {'sym': 'omp', 'final': 0.05, 'top1': 0.16, 'top3': 0.27, 'dev_share': 0.16, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9234}
+   {'sym': 'BYD', 'final': 0.02, 'top1': 0.7, 'top3': 1.0, 'dev_share': 0.29, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 30395}
+   {'sym': 'DS', 'final': 0.09, 'top1': 0.1, 'top3': 0.22, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 20147}
+   {'sym': 'Bunnett', 'final': 0.13, 'top1': 0.07, 'top3': 0.19, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 4823}
+   {'sym': 'USDF', 'final': 0.0, 'top1': 0.22, 'top3': 0.43, 'dev_share': 0.16, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 84, 'vol_early': 56774}
+   {'sym': 'SHEKEL', 'final': 0.04, 'top1': 0.2, 'top3': 0.46, 'dev_share': 0.09, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 33, 'vol_early': 6553}
+   {'sym': 'X', 'final': 0.01, 'top1': 0.91, 'top3': 0.95, 'dev_share': 0.91, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9734}
+   {'sym': 'XOGE', 'final': 0.07, 'top1': 0.1, 'top3': 0.2, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 10191}
+   {'sym': 'FAZ', 'final': 0.05, 'top1': 0.04, 'top3': 0.12, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 500, 'n_early': 100, 'vol_early': 7522}
+   {'sym': 'KENZO', 'final': 0.11, 'top1': 0.13, 'top3': 0.22, 'dev_share': 0.03, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 31, 'n_early': 100, 'vol_early': 14682}
+   {'sym': 'WIFGATO', 'final': 0.03, 'top1': 0.13, 'top3': 0.26, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 31344}
+   {'sym': 'Tesla', 'final': 0.0, 'top1': 0.56, 'top3': 0.88, 'dev_share': 0.3, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 29481}
+   {'sym': 'ENN', 'final': 0.06, 'top1': 0.03, 'top3': 0.09, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 373, 'n_early': 100, 'vol_early': 4788}
+   {'sym': 'BORBINO', 'final': 0.03, 'top1': 0.31, 'top3': 0.39, 'dev_share': 0.33, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 72281}
+   {'sym': 'helloworld', 'final': 0.04, 'top1': 0.1, 'top3': 0.23, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 3, 'n_early': 43, 'vol_early': 4604}
+   {'sym': 'Speed', 'final': 0.03, 'top1': 0.64, 'top3': 0.97, 'dev_share': 0.33, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 26, 'n_early': 100, 'vol_early': 27101}
+   {'sym': 'BARRON', 'final': 0.02, 'top1': 0.34, 'top3': 0.42, 'dev_share': 0.34, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 25895}
+   {'sym': 'NP67', 'final': 0.1, 'top1': 0.14, 'top3': 0.4, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 16485}
+   {'sym': 'SpaceX', 'final': 0.04, 'top1': 0.93, 'top3': 0.94, 'dev_share': 0.93, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9501}
+   {'sym': 'SpaceXSI', 'final': 0.0, 'top1': 0.65, 'top3': 1.0, 'dev_share': 0.35, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 44, 'n_early': 11, 'vol_early': 25447}
+   {'sym': 'IOF', 'final': 0.0, 'top1': 0.71, 'top3': 0.99, 'dev_share': 0.71, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 12, 'vol_early': 12548}
+   {'sym': 'ACTX', 'final': 0.03, 'top1': 0.08, 'top3': 0.17, 'dev_share': 0.0, 'sniper_pct': 0.0059, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 239073}
+   {'sym': 'FOMO', 'final': 0.0, 'top1': 0.98, 'top3': 0.99, 'dev_share': 0.98, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 8965}
+   {'sym': 'MITY', 'final': 0.12, 'top1': 0.04, 'top3': 0.09, 'dev_share': 0.04, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 32199}
+   {'sym': 'OpenAI', 'final': 0.0, 'top1': 0.62, 'top3': 0.95, 'dev_share': 0.32, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 27732}
+   {'sym': 'ADCT', 'final': 0.04, 'top1': 0.21, 'top3': 0.49, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 36380}
+   {'sym': 'MEGA', 'final': 0.02, 'top1': 0.13, 'top3': 0.33, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 13063}
+   {'sym': 'LITTLEWAN', 'final': 0.04, 'top1': 0.14, 'top3': 0.24, 'dev_share': 0.0, 'sniper_pct': 0.0217, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 10725}
+   {'sym': 'SKYNET', 'final': 0.13, 'top1': 0.18, 'top3': 0.35, 'dev_share': 0.18, 'sniper_pct': 1.2111, 'insider_pct': 0.0, 'bundlers': 33, 'n_early': 100, 'vol_early': 10242}
+   {'sym': 'cyber', 'final': 0.13, 'top1': 0.08, 'top3': 0.22, 'dev_share': 0.04, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 7614}
+   {'sym': 'Rockstar', 'final': 0.0, 'top1': 0.63, 'top3': 0.95, 'dev_share': 0.32, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 13, 'n_early': 100, 'vol_early': 27303}
+   {'sym': 'SpaceX AI', 'final': 0.02, 'top1': 0.62, 'top3': 0.95, 'dev_share': 0.32, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 27996}
+   {'sym': 'KIMMODE', 'final': 0.04, 'top1': 0.65, 'top3': 0.72, 'dev_share': 0.65, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 60, 'vol_early': 12934}
+   {'sym': 'KIMCHINU', 'final': 0.03, 'top1': 0.14, 'top3': 0.32, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 2, 'n_early': 100, 'vol_early': 15073}
+   {'sym': 'PIMPEPE', 'final': 0.03, 'top1': 0.11, 'top3': 0.26, 'dev_share': 0.13, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 41150}
+   {'sym': 'Gemini', 'final': 0.0, 'top1': 0.75, 'top3': 0.8, 'dev_share': 0.75, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 11885}
+   {'sym': 'WIFLUKE', 'final': 0.1, 'top1': 0.15, 'top3': 0.45, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 98, 'vol_early': 14094}
+   {'sym': 'solrock', 'final': 0.04, 'top1': 0.04, 'top3': 0.11, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 19, 'n_early': 100, 'vol_early': 14446}
+   {'sym': 'BILS', 'final': 0.09, 'top1': 0.06, 'top3': 0.16, 'dev_share': 0.04, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 10864}
+   {'sym': 'MOKA', 'final': 0.08, 'top1': 0.08, 'top3': 0.16, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 6052}
+   {'sym': 'PEPSI', 'final': 0.0, 'top1': 1.0, 'top3': 1.0, 'dev_share': 1.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 8890}
+   {'sym': 'MrBeast', 'final': 0.0, 'top1': 0.61, 'top3': 0.68, 'dev_share': 0.61, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 116, 'n_early': 100, 'vol_early': 14453}
+   {'sym': 'SHELL', 'final': 0.15, 'top1': 0.14, 'top3': 0.27, 'dev_share': 0.03, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 2, 'n_early': 100, 'vol_early': 12719}
+   {'sym': 'GIGACHI', 'final': 0.09, 'top1': 0.08, 'top3': 0.24, 'dev_share': 0.04, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 25628}
+   {'sym': 'DOWEEN', 'final': 0.02, 'top1': 0.31, 'top3': 0.66, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 34896}
+   {'sym': 'SpaceX', 'final': 0.02, 'top1': 0.98, 'top3': 0.98, 'dev_share': 0.98, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9063}
+   {'sym': 'MOKO', 'final': 0.04, 'top1': 0.15, 'top3': 0.32, 'dev_share': 0.04, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 23162}
+   {'sym': 'Gemini', 'final': 0.0, 'top1': 0.61, 'top3': 0.95, 'dev_share': 0.33, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 26925}
+   {'sym': 'crime', 'final': 0.0, 'top1': 0.08, 'top3': 0.15, 'dev_share': 0.08, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 8, 'n_early': 100, 'vol_early': 10783}
+   {'sym': 'TROLLCHI', 'final': 0.03, 'top1': 0.13, 'top3': 0.36, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 17422}
+   {'sym': 'Grok', 'final': 0.0, 'top1': 0.57, 'top3': 0.9, 'dev_share': 0.31, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 28941}
+   {'sym': 'alibi', 'final': 0.05, 'top1': 0.03, 'top3': 0.1, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 42474}
+   {'sym': 'PEPENK', 'final': 0.04, 'top1': 0.14, 'top3': 0.36, 'dev_share': 0.0, 'sniper_pct': 0.0015, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 15071}
+   {'sym': 'DNN', 'final': 0.01, 'top1': 0.09, 'top3': 0.24, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 39, 'n_early': 100, 'vol_early': 32635}
+   {'sym': 'Speed', 'final': 0.03, 'top1': 0.64, 'top3': 0.98, 'dev_share': 0.33, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 12, 'n_early': 100, 'vol_early': 26780}
+   {'sym': 'goy', 'final': 0.07, 'top1': 0.07, 'top3': 0.16, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 33, 'n_early': 100, 'vol_early': 3405}
+   {'sym': 'Aape', 'final': 0.04, 'top1': 0.25, 'top3': 0.46, 'dev_share': 0.08, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 46, 'vol_early': 3534}
+   {'sym': 'PECHI', 'final': 0.06, 'top1': 0.12, 'top3': 0.37, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 13997}
+   {'sym': 'FRONTIER', 'final': 0.06, 'top1': 0.06, 'top3': 0.14, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 111, 'n_early': 100, 'vol_early': 3150}
+   {'sym': 'ELON', 'final': 0.03, 'top1': 0.13, 'top3': 0.3, 'dev_share': 0.13, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 21595}
+   {'sym': "McDonald's", 'final': 0.01, 'top1': 0.96, 'top3': 0.99, 'dev_share': 0.96, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9240}
+   {'sym': 'Speed', 'final': 0.02, 'top1': 0.58, 'top3': 0.89, 'dev_share': 0.3, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 29935}
+   {'sym': 'Mind Lot', 'final': 0.05, 'top1': 0.05, 'top3': 0.14, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 15168}
+   {'sym': 'LARP', 'final': 0.02, 'top1': 0.06, 'top3': 0.13, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 16659}
+   {'sym': 'fomo', 'final': 0.0, 'top1': 0.59, 'top3': 0.67, 'dev_share': 0.59, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 14911}
+   {'sym': 'orbit', 'final': 0.02, 'top1': 0.05, 'top3': 0.14, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 16379}
+   {'sym': 'MOOF', 'final': 0.1, 'top1': 0.22, 'top3': 0.51, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9192}
+   {'sym': 'GTA6 Coin', 'final': 0.0, 'top1': 0.59, 'top3': 0.94, 'dev_share': 0.34, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 26284}
+   {'sym': 'SpaceX', 'final': 0.0, 'top1': 0.79, 'top3': 0.99, 'dev_share': 0.2, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 27, 'vol_early': 44050}
+   {'sym': 'X', 'final': 0.0, 'top1': 0.7, 'top3': 0.75, 'dev_share': 0.7, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 12776}
+   {'sym': 'GOON', 'final': 0.03, 'top1': 0.1, 'top3': 0.3, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 87, 'vol_early': 17620}
+   {'sym': 'Rockstar', 'final': 0.0, 'top1': 0.63, 'top3': 0.95, 'dev_share': 0.32, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 28, 'n_early': 100, 'vol_early': 27438}
+   {'sym': 'massimo', 'final': 0.09, 'top1': 0.06, 'top3': 0.15, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 3566}
+   {'sym': 'MrBeast', 'final': 0.0, 'top1': 0.59, 'top3': 0.93, 'dev_share': 0.34, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 26436}
+   {'sym': 'ogkimchi', 'final': 0.07, 'top1': 0.23, 'top3': 0.68, 'dev_share': 0.0, 'sniper_pct': 0.0667, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 96, 'vol_early': 119343}
+   {'sym': 'mil', 'final': 0.14, 'top1': 0.12, 'top3': 0.31, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 20270}
+   {'sym': 'SCHIZOAPE', 'final': 0.04, 'top1': 0.2, 'top3': 0.46, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 10065}
+   {'sym': 'ヤギ', 'final': 0.0, 'top1': 0.12, 'top3': 0.3, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 25542}
+   {'sym': 'Grok', 'final': 0.03, 'top1': 0.64, 'top3': 0.98, 'dev_share': 0.34, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 25903}
+   {'sym': 'ORANGE', 'final': 0.14, 'top1': 0.16, 'top3': 0.48, 'dev_share': 0.09, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 76, 'vol_early': 13155}
+   {'sym': 'Gemini', 'final': 0.0, 'top1': 0.6, 'top3': 0.67, 'dev_share': 0.6, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 118, 'n_early': 100, 'vol_early': 14751}
+   {'sym': 'Kimchaun', 'final': 0.1, 'top1': 0.21, 'top3': 0.63, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 63, 'vol_early': 10219}
+   {'sym': 'FOXBUSINESS', 'final': 0.06, 'top1': 0.04, 'top3': 0.12, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 500, 'n_early': 100, 'vol_early': 7914}
+   {'sym': 'FOMO', 'final': 0.0, 'top1': 0.99, 'top3': 0.99, 'dev_share': 0.99, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 5, 'n_early': 100, 'vol_early': 8891}
+   {'sym': 'DEMOKIMCHI', 'final': 0.04, 'top1': 0.09, 'top3': 0.21, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 35899}
+   {'sym': 'KIMOPOLY', 'final': 0.1, 'top1': 0.1, 'top3': 0.3, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 20505}
+   {'sym': 'stablecoin', 'final': 0.14, 'top1': 0.14, 'top3': 0.35, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 16365}
+   {'sym': 'EVMVENGERS', 'final': 0.06, 'top1': 0.05, 'top3': 0.13, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 3, 'n_early': 100, 'vol_early': 5323}
+   {'sym': 'Ω\u200e', 'final': 0.11, 'top1': 0.07, 'top3': 0.18, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 10923}
+
+ganadoras (ret>0.3):
+   {'sym': 'BIDEN', 'ret': 0.9514, 'peak': 2.69, 'top1': 0.05, 'top3': 0.14, 'dev_share': 0.04, 'sniper_pct': 14.8419, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 7177}
+   {'sym': 'SHEKEL', 'ret': 1.9893, 'peak': 5.45, 'top1': 0.05, 'top3': 0.12, 'dev_share': 0.03, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 10700}
+   {'sym': 'PayPad', 'ret': 2.1663, 'peak': 6.24, 'top1': 0.16, 'top3': 0.36, 'dev_share': 0.04, 'sniper_pct': 0.017, 'insider_pct': 0.0, 'bundlers': 5, 'n_early': 100, 'vol_early': 9068}
+   {'sym': 'WOMB', 'ret': 1.1268, 'peak': 4.5, 'top1': 0.1, 'top3': 0.23, 'dev_share': 0.05, 'sniper_pct': 2.4138, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 10359}
+   {'sym': 'PROPHET', 'ret': 0.3057, 'peak': 2.55, 'top1': 0.19, 'top3': 0.33, 'dev_share': 0.19, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 46358}
+   {'sym': 'WORLDCOIN', 'ret': 0.8394, 'peak': 3.64, 'top1': 0.04, 'top3': 0.11, 'dev_share': 0.02, 'sniper_pct': 4.0688, 'insider_pct': 0.0, 'bundlers': 391, 'n_early': 100, 'vol_early': 4744}
+   {'sym': 'Project', 'ret': 1.0022, 'peak': 4.34, 'top1': 0.05, 'top3': 0.13, 'dev_share': 0.05, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 5984}
+   {'sym': 'cb', 'ret': 0.3596, 'peak': 3.08, 'top1': 0.11, 'top3': 0.25, 'dev_share': 0.03, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 12167}
+   {'sym': 'SOL', 'ret': 1.0926, 'peak': 3.06, 'top1': 0.2, 'top3': 0.43, 'dev_share': 0.11, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 48, 'vol_early': 4718}
+   {'sym': 'WRHND', 'ret': 0.8186, 'peak': 7.17, 'top1': 0.15, 'top3': 0.36, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 87, 'vol_early': 15989}
+   {'sym': 'DNN', 'ret': 0.4741, 'peak': 5.85, 'top1': 0.1, 'top3': 0.25, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 48, 'n_early': 100, 'vol_early': 12533}
+   {'sym': 'KIMCHINU', 'ret': 0.7548, 'peak': 2.16, 'top1': 0.09, 'top3': 0.21, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 2, 'n_early': 100, 'vol_early': 23782}
+   {'sym': 'win', 'ret': 1.0495, 'peak': 5.06, 'top1': 0.07, 'top3': 0.19, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 215, 'n_early': 100, 'vol_early': 6015}
+   {'sym': 'CHROME', 'ret': 0.454, 'peak': 9.84, 'top1': 0.39, 'top3': 0.52, 'dev_share': 0.0, 'sniper_pct': 2.2158, 'insider_pct': 0.0, 'bundlers': 69, 'n_early': 69, 'vol_early': 19638}
+   {'sym': 'a16z', 'ret': 1.7277, 'peak': 4.75, 'top1': 0.07, 'top3': 0.19, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 500, 'n_early': 100, 'vol_early': 6791}
+   {'sym': 'ANT', 'ret': 0.8338, 'peak': 2.73, 'top1': 0.13, 'top3': 0.38, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 13, 'vol_early': 2808}
+   {'sym': 'TSU', 'ret': 0.8348, 'peak': 3.42, 'top1': 0.07, 'top3': 0.19, 'dev_share': 0.04, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 25663}
+   {'sym': 'Bunnett', 'ret': 1.7833, 'peak': 5.74, 'top1': 0.07, 'top3': 0.19, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 4823}
+   {'sym': 'FAZ', 'ret': 1.0221, 'peak': 3.11, 'top1': 0.04, 'top3': 0.12, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 500, 'n_early': 100, 'vol_early': 7522}
+   {'sym': 'pwn', 'ret': 0.4912, 'peak': 2.46, 'top1': 0.16, 'top3': 0.4, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 56, 'n_early': 100, 'vol_early': 16605}
+   {'sym': 'Speed', 'ret': 0.4304, 'peak': 2.09, 'top1': 0.59, 'top3': 0.9, 'dev_share': 0.3, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 131, 'n_early': 100, 'vol_early': 29377}
+   {'sym': 'ENN', 'ret': 0.726, 'peak': 2.57, 'top1': 0.03, 'top3': 0.09, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 373, 'n_early': 100, 'vol_early': 4788}
+   {'sym': 'SpaceX', 'ret': 1.9586, 'peak': 8.58, 'top1': 0.44, 'top3': 0.51, 'dev_share': 0.44, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 20248}
+   {'sym': 'psyopcat', 'ret': 2.3998, 'peak': 11.17, 'top1': 0.04, 'top3': 0.12, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 10560}
+   {'sym': 'Claude AI', 'ret': 0.6449, 'peak': 3.0, 'top1': 0.98, 'top3': 0.99, 'dev_share': 0.98, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 9017}
+   {'sym': 'MOKA', 'ret': 1.1933, 'peak': 9.34, 'top1': 0.08, 'top3': 0.16, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 6052}
+   {'sym': 'SHELL', 'ret': 0.3481, 'peak': 2.55, 'top1': 0.14, 'top3': 0.27, 'dev_share': 0.03, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 2, 'n_early': 100, 'vol_early': 12719}
+   {'sym': 'QRCAT', 'ret': 0.4949, 'peak': 2.66, 'top1': 0.07, 'top3': 0.19, 'dev_share': 0.03, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 25, 'n_early': 100, 'vol_early': 13003}
+   {'sym': 'PUMP', 'ret': 0.727, 'peak': 19.89, 'top1': 0.1, 'top3': 0.24, 'dev_share': 0.04, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 100, 'vol_early': 17038}
+   {'sym': 'Bitwater', 'ret': 0.4147, 'peak': 3.14, 'top1': 0.19, 'top3': 0.33, 'dev_share': 0.0, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 51, 'n_early': 100, 'vol_early': 18244}
+   {'sym': 'goy', 'ret': 0.4006, 'peak': 1.92, 'top1': 0.07, 'top3': 0.16, 'dev_share': 0.02, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 33, 'n_early': 100, 'vol_early': 3405}
+   {'sym': 'MCNUGGET', 'ret': 0.7251, 'peak': 3.45, 'top1': 0.07, 'top3': 0.21, 'dev_share': 0.01, 'sniper_pct': 0.0, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 95, 'vol_early': 12140}
+   {'sym': 'ogkimchi', 'ret': 0.4529, 'peak': 17.4, 'top1': 0.23, 'top3': 0.68, 'dev_share': 0.0, 'sniper_pct': 0.0667, 'insider_pct': 0.0, 'bundlers': 0, 'n_early': 96, 'vol_early': 119343}
+== exit 0 ==
