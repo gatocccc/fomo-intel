@@ -40,21 +40,49 @@ class Fill:
     raw: dict = field(default_factory=dict)
 
 
+def real_quote(frm: str, to: str, amount, slippage_pct: float, payer: str, priority_fee: float, api_key: str = "") -> dict:
+    params = {"from": frm, "to": to, "fromAmount": amount, "slippage": slippage_pct, "payer": payer,
+              "priorityFee": priority_fee, "txVersion": "v0"}
+    r = requests.get(SWAP_URL, params=params, headers={"x-api-key": api_key} if api_key else {}, timeout=20)
+    if r.status_code >= 400:
+        raise RuntimeError(f"swap api {r.status_code}: {r.text[:300]}")
+    return r.json()
+
+
 class PaperExecutor:
+    """Simula el fill; si tiene una billetera (aunque esté vacía) pide ADEMÁS la cotización real
+    al swap para registrar el impacto de precio que habríamos tenido. No firma ni envía nada."""
     mode = "paper"
 
-    def __init__(self, p: LiveParams):
+    def __init__(self, p: LiveParams, payer: str = "", st_api_key: str = ""):
         self.p = p
+        self.payer = payer
+        self.api_key = st_api_key
+
+    def _try_quote(self, f: Fill, frm: str, to: str, amount) -> None:
+        if not self.payer:
+            return
+        try:
+            q = real_quote(frm, to, amount, self.p.swap_slippage_pct, self.payer, self.p.priority_fee_sol, self.api_key)
+            rate = q.get("rate") or {}
+            f.quote_impact_pct = float(rate.get("priceImpact") or 0)
+            f.raw = {"rate": rate, "type": q.get("type") or q.get("txVersion"), "keys": sorted(q.keys())}
+        except Exception as e:  # noqa: BLE001
+            f.raw = {"quote_error": str(e)[:200]}
 
     def buy(self, mint: str, sol_amount: float, ref_price: float) -> Fill:
         px = ref_price * (1 + self.p.paper_slippage) * (1 + self.p.paper_fee)
-        return Fill(True, "buy", mint, sol=sol_amount, tokens=sol_amount / px, price=px, expected_price=ref_price,
-                    slippage_pct=round((px / ref_price - 1) * 100, 2), sig=f"paper-{int(time.time()*1000)}")
+        f = Fill(True, "buy", mint, sol=sol_amount, tokens=sol_amount / px, price=px, expected_price=ref_price,
+                 slippage_pct=round((px / ref_price - 1) * 100, 2), sig=f"paper-{int(time.time()*1000)}")
+        self._try_quote(f, SOL_MINT, mint, round(sol_amount, 6))
+        return f
 
     def sell(self, mint: str, tokens: float, ref_price: float) -> Fill:
         px = ref_price * (1 - self.p.paper_slippage) * (1 - self.p.paper_fee)
-        return Fill(True, "sell", mint, sol=tokens * px, tokens=tokens, price=px, expected_price=ref_price,
-                    slippage_pct=round((1 - px / ref_price) * 100, 2), sig=f"paper-{int(time.time()*1000)}")
+        f = Fill(True, "sell", mint, sol=tokens * px, tokens=tokens, price=px, expected_price=ref_price,
+                 slippage_pct=round((1 - px / ref_price) * 100, 2), sig=f"paper-{int(time.time()*1000)}")
+        # la cotización de venta real fallaría (no tenemos los tokens); solo se mide en la compra
+        return f
 
     def token_balance(self, mint: str) -> float | None:
         return None   # el portfolio lleva la cuenta
@@ -137,9 +165,14 @@ class RealExecutor:
     def sell(self, mint: str, tokens: float, ref_price: float) -> Fill:
         raw, dec = self.rpc.token_balance(self.pub, mint)
         have = raw / (10 ** dec)
-        amt = "auto" if tokens >= have * 0.98 else round(min(tokens, have), dec)
         if have <= 0:
             return Fill(False, "sell", mint, expected_price=ref_price, error="sin tokens en la billetera")
+        amt = round(min(tokens, have), dec)
+        if tokens >= have * 0.98:
+            f = self._execute("sell", mint, mint, SOL_MINT, "auto", ref_price)   # vende todo lo que haya
+            if f.ok or not f.error.startswith("cotización"):
+                return f
+            amt = round(have, dec)
         return self._execute("sell", mint, mint, SOL_MINT, amt, ref_price)
 
     def token_balance(self, mint: str) -> float | None:

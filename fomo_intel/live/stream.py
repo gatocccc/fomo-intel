@@ -97,6 +97,7 @@ class PumpStream(threading.Thread):
         self.errors = deque(maxlen=20)
         self._subscribed: set[str] = set()
         self._stop = threading.Event()
+        self._send_lock = threading.Lock()
 
     # ---------- API ----------
     def pin(self, mint: str) -> None:
@@ -129,7 +130,8 @@ class PumpStream(threading.Thread):
     def _send(self, payload: dict) -> None:
         try:
             if self.ws and self.connected:
-                self.ws.send(json.dumps(payload))
+                with self._send_lock:
+                    self.ws.send(json.dumps(payload))
         except Exception as e:  # noqa: BLE001
             self.errors.append(f"{time.strftime('%H:%M:%S')} send: {e}")
 

@@ -55,7 +55,7 @@ class Bot:
             self.pub = str(kp.pubkey())
             self.exe = RealExecutor(self.p, kp, Rpc(self.env.rpc_url), self.env.solanatracker_api_key)
         else:
-            self.exe = PaperExecutor(self.p)
+            self.exe = PaperExecutor(self.p, payer=self._wallet_pubkey(), st_api_key=self.env.solanatracker_api_key)
         self._last_reload = self._last_summary = self._last_heartbeat = 0.0
         self._sell_backoff: dict[str, float] = {}
         self._price_poll: dict[str, float] = {}
