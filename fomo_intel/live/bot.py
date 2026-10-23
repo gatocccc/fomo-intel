@@ -111,8 +111,15 @@ class Bot:
             prior = self._note_creator(st.creator, st.created_ts)
             f = features_at_t2(st, self.p, self.sol_usd, prior)
             if not f.passes_proxy:
-                # solo se registran los que al menos se movieron, para no llenar el log con miles de tokens muertos
-                if f.move >= 2.0 or f.n_buyers_120s >= 20:
+                # se registran los que al menos se movieron (muestra para aprender); a los que se movieron 3x
+                # se les guarda también el perfil de riesgo (1 request) para el análisis anti-rug
+                if f.move >= 3.0 and f.n_buyers_120s >= 20:
+                    try:
+                        r = self.st.token_risk(f.mint); f.n_snipers_st, f.rugged_st, f.risk_st = r["n_snipers"], r["rugged"], r.get("risk", {})
+                    except Exception as e:  # noqa: BLE001
+                        log.debug("riesgo %s: %s", f.symbol, e)
+                    self.port.log_signal(f.as_dict(), "descartado_t2")
+                elif f.move >= 2.0 or f.n_buyers_120s >= 20:
                     self.port.log_signal(f.as_dict(), "descartado_t2")
                 st.decided = True
                 continue

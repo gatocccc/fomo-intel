@@ -37,6 +37,9 @@ for f in ops/run_once/*.sh; do
   { echo "== $id $(date -u +%FT%TZ) =="; timeout 600 bash "$f"; echo "== exit $? =="; } > "state/ops/$id.out" 2>&1
 done
 
+# ---- resultados a 6 h de los tokens que pasaron el primer corte (cada 10 min) ----
+MIN=$(date +%M); if [ $((10#$MIN % 10)) -eq 0 ]; then set -a; . ./.env; set +a; timeout 300 python3 -m fomo_intel.live.outcomes 60 >> logs/outcomes.log 2>&1 || true; fi
+
 # ---- dashboard (cada minuto, barato: solo lee archivos) ----
 [ -d /var/www/fomo ] && python3 -m fomo_intel.dashboard /var/www/fomo/index.html >> logs/dashboard.log 2>&1 || true
 
