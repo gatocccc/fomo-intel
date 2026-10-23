@@ -227,3 +227,5 @@ Oct 23 21:24:12 simplai-prod python3[284091]: 2026-10-23 21:24:12,924 INFO live:
 Oct 23 21:29:13 simplai-prod python3[284091]: 2026-10-23 21:29:13,266 INFO live: latido: stream=True tokens_vistos=2587 seguidos=233 candidatos=0 abiertas=0 cerradas=1 st_requests=23 SOL=$104
 Oct 23 21:34:13 simplai-prod python3[284091]: 2026-10-23 21:34:13,541 INFO live: latido: stream=True tokens_vistos=2748 seguidos=228 candidatos=0 abiertas=0 cerradas=1 st_requests=24 SOL=$104
 Oct 23 21:39:13 simplai-prod python3[284091]: 2026-10-23 21:39:13,787 INFO live: latido: stream=True tokens_vistos=2841 seguidos=150 candidatos=0 abiertas=0 cerradas=1 st_requests=25 SOL=$104
+Oct 23 21:44:14 simplai-prod python3[284091]: 2026-10-23 21:44:14,309 INFO live: latido: stream=True tokens_vistos=2977 seguidos=180 candidatos=0 abiertas=0 cerradas=1 st_requests=26 SOL=$104
+Oct 23 21:49:14 simplai-prod python3[284091]: 2026-10-23 21:49:14,721 INFO live: latido: stream=True tokens_vistos=3089 seguidos=180 candidatos=0 abiertas=0 cerradas=1 st_requests=27 SOL=$104
