@@ -58,6 +58,7 @@ class Features:
     creator: str
     creator_prior_24h: int
     rugged_st: bool
+    risk_st: dict
     passes_proxy: bool
     passes: bool
     reasons: list[str]
@@ -91,7 +92,7 @@ def features_at_t2(st: TokenState, p: LiveParams, sol_usd: float, creator_prior_
     return Features(mint=st.mint, symbol=st.symbol, created_ts=t0, t2=t2, t3=t3, base_price=st.base_price, px_t2=px2,
                     move=round(move, 2), n_buyers_60s=len(buys60), n_buyers_120s=nb, vol_sol=round(vol_sol, 3),
                     vol_usd=round(vol_usd, 0), vol_per_buyer=round(vpb, 1), n_snipers_proxy=snipers_proxy,
-                    n_snipers_st=None, creator=st.creator, creator_prior_24h=creator_prior_24h, rugged_st=False,
+                    n_snipers_st=None, creator=st.creator, creator_prior_24h=creator_prior_24h, rugged_st=False, risk_st={},
                     passes_proxy=not reasons, passes=False, reasons=reasons)
 
 
@@ -128,9 +129,17 @@ class STClient:
         risk = d.get("risk") or {}
         pools = d.get("pools") or [{}]
         curve = min(pools, key=lambda x: x.get("createdAt") or 9e18)
+        def pct(k): return float((risk.get(k) or {}).get("totalPercentage") or 0)
         return {"n_snipers": int((risk.get("snipers") or {}).get("count") or len((risk.get("snipers") or {}).get("wallets") or [])),
                 "rugged": bool(risk.get("rugged")), "launchpad": (curve.get("market") or "").replace("-curve", ""),
-                "score": int(risk.get("score") or 0)}
+                "score": int(risk.get("score") or 0),
+                "risk": {"score": int(risk.get("score") or 0), "top10": float(risk.get("top10") or 0),
+                         "dev_pct": float((risk.get("dev") or {}).get("percentage") or 0),
+                         "snipers_pct": pct("snipers"), "insiders_pct": pct("insiders"), "bundlers_pct": pct("bundlers"),
+                         "n_insiders": int((risk.get("insiders") or {}).get("count") or 0), "n_bundlers": int((risk.get("bundlers") or {}).get("count") or 0),
+                         "risks": [r.get("name") if isinstance(r, dict) else str(r) for r in (risk.get("risks") or [])][:8],
+                         "holders": int(d.get("holders") or 0), "mcap_usd": float(((curve.get("marketCap") or {}).get("usd")) or 0),
+                         "liq_usd": float(((curve.get("liquidity") or {}).get("usd")) or 0)}}
 
     def price(self, mint: str) -> float | None:
         try:
@@ -144,7 +153,7 @@ def enrich(f: Features, p: LiveParams, st_client: STClient) -> Features:
     """Completa con Solana Tracker lo que el stream no sabe (snipers) y decide."""
     try:
         r = st_client.token_risk(f.mint)
-        f.n_snipers_st, f.rugged_st = r["n_snipers"], r["rugged"]
+        f.n_snipers_st, f.rugged_st, f.risk_st = r["n_snipers"], r["rugged"], r.get("risk", {})
     except Exception as e:  # noqa: BLE001
         log.warning("%s: sin datos de riesgo (%s); uso proxy", f.symbol, e)
     n_sn = f.n_snipers_st if f.n_snipers_st is not None else f.n_snipers_proxy

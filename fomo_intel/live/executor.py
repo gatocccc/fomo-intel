@@ -40,13 +40,23 @@ class Fill:
     raw: dict = field(default_factory=dict)
 
 
-def real_quote(frm: str, to: str, amount, slippage_pct: float, payer: str, priority_fee: float, api_key: str = "") -> dict:
+def impact_pct(rate: dict) -> float:
+    """La API devuelve priceImpact como fracción (0.035 = 3,5%). Se normaliza a porcentaje."""
+    v = float(rate.get("priceImpact") or 0)
+    return v * 100 if v < 1.5 else v
+
+
+def real_quote(frm: str, to: str, amount, slippage_pct: float, payer: str, priority_fee: float, api_key: str = "", tries: int = 3) -> dict:
     params = {"from": frm, "to": to, "fromAmount": amount, "slippage": slippage_pct, "payer": payer,
               "priorityFee": priority_fee, "txVersion": "v0"}
-    r = requests.get(SWAP_URL, params=params, headers={"x-api-key": api_key} if api_key else {}, timeout=20)
-    if r.status_code >= 400:
-        raise RuntimeError(f"swap api {r.status_code}: {r.text[:300]}")
-    return r.json()
+    last = ""
+    for i in range(tries):
+        r = requests.get(SWAP_URL, params=params, headers={"x-api-key": api_key} if api_key else {}, timeout=20)
+        if r.status_code < 400:
+            return r.json()
+        last = f"swap api {r.status_code}: {r.text[:200]}"
+        time.sleep(0.4 * (i + 1))        # los 500 "Failed to swap" en tokens recién creados son intermitentes
+    raise RuntimeError(last)
 
 
 class PaperExecutor:
@@ -65,8 +75,8 @@ class PaperExecutor:
         try:
             q = real_quote(frm, to, amount, self.p.swap_slippage_pct, self.payer, self.p.priority_fee_sol, self.api_key)
             rate = q.get("rate") or {}
-            f.quote_impact_pct = float(rate.get("priceImpact") or 0)
-            f.raw = {"rate": rate, "type": q.get("type") or q.get("txVersion"), "keys": sorted(q.keys())}
+            f.quote_impact_pct = round(impact_pct(rate), 2)
+            f.raw = {"rate": rate, "type": q.get("type") or q.get("txVersion")}
         except Exception as e:  # noqa: BLE001
             f.raw = {"quote_error": str(e)[:200]}
 
@@ -100,12 +110,7 @@ class RealExecutor:
 
     # ---------- cotización ----------
     def quote(self, frm: str, to: str, amount, slippage_pct: float) -> dict:
-        params = {"from": frm, "to": to, "fromAmount": amount, "slippage": slippage_pct, "payer": self.pub,
-                  "priorityFee": self.p.priority_fee_sol, "txVersion": "v0"}
-        r = requests.get(SWAP_URL, params=params, headers=self.h, timeout=20)
-        if r.status_code >= 400:
-            raise RuntimeError(f"swap api {r.status_code}: {r.text[:300]}")
-        return r.json()
+        return real_quote(frm, to, amount, slippage_pct, self.pub, self.p.priority_fee_sol, self.h.get("x-api-key", ""))
 
     # ---------- firma y envío ----------
     def _sign(self, txn_b64: str, version: str) -> str:
@@ -130,7 +135,7 @@ class RealExecutor:
         except Exception as e:  # noqa: BLE001
             f.error = f"cotización: {e}"; return f
         rate = q.get("rate") or {}
-        f.quote_impact_pct = float(rate.get("priceImpact") or 0)
+        f.quote_impact_pct = round(impact_pct(rate), 2)
         f.raw = {"rate": rate, "type": q.get("type") or q.get("txVersion")}
         if side == "buy" and f.quote_impact_pct > self.p.max_slippage_pct:
             f.error = f"impacto {f.quote_impact_pct:.1f}% > {self.p.max_slippage_pct}%"; return f
