@@ -83,8 +83,15 @@ def _price(msg: dict) -> float:
 class PumpStream(threading.Thread):
     """Hilo que mantiene la conexión, reconecta y alimenta `tokens`."""
 
-    def __init__(self, keep_seconds: float = 300.0, max_tokens: int = 4000):
+    def __init__(self, keep_seconds: float = 300.0, max_tokens: int = 4000, watch_seconds: float = 150.0, sample: float = 1.0):
+        """watch_seconds: cuánto se escuchan los trades de cada token nuevo (PumpPortal cobra 0,01 SOL por cada
+        10.000 trades); después se desuscribe salvo que esté en `keep` (candidato) o `pinned` (posición).
+        sample: fracción de los tokens nuevos a los que se les escuchan trades (1.0 = todos)."""
         super().__init__(daemon=True, name="pumpstream")
+        self.watch_seconds = watch_seconds
+        self.sample = sample
+        self.keep: set[str] = set()            # candidatos: seguir escuchando hasta decidir
+        self.trades_streamed = 0
         self.tokens: dict[str, TokenState] = {}
         self.keep_seconds = keep_seconds
         self.max_tokens = max_tokens
@@ -105,6 +112,15 @@ class PumpStream(threading.Thread):
         self._send_lock = threading.Lock()
 
     # ---------- API ----------
+    def keep_watching(self, mint: str) -> None:
+        with self.lock:
+            self.keep.add(mint)
+        self._subscribe([mint], now=True)
+
+    def release(self, mint: str) -> None:
+        with self.lock:
+            self.keep.discard(mint)
+
     def pin(self, mint: str) -> None:
         with self.lock:
             self.pinned.add(mint)
@@ -193,7 +209,10 @@ class PumpStream(threading.Thread):
             with self.lock:
                 self.tokens[mint] = st
                 self.creates += 1
-            self._subscribe([mint])
+            if self.sample >= 1.0 or (hash(mint) % 1000) < self.sample * 1000:
+                self._subscribe([mint])
+            else:
+                st.decided = st.evaluated = True      # no muestreado: no se evalúa
             return
         if tx in ("buy", "sell"):
             with self.lock:
@@ -203,6 +222,7 @@ class PumpStream(threading.Thread):
             px = _price(msg)
             t = Trade(now, str(msg.get("traderPublicKey") or ""), tx, float(msg.get("solAmount") or 0),
                       float(msg.get("tokenAmount") or 0), px if px > 0 else st.last_price)
+            self.trades_streamed += 1
             with self.lock:
                 st.trades.append(t)
                 st.last_price, st.last_ts = t.price, now
@@ -211,8 +231,13 @@ class PumpStream(threading.Thread):
     def _gc(self) -> None:
         now = time.time()
         with self.lock:
+            # dejar de escuchar trades de los tokens que ya pasaron la ventana de observación (ahorro de cuota)
+            expired = [m for m, t in self.tokens.items()
+                       if m in self._subscribed and m not in self.pinned and m not in self.keep and now - t.created_ts > self.watch_seconds]
             drop = [m for m, t in self.tokens.items()
                     if m not in self.pinned and now - t.created_ts > self.keep_seconds]
+        self._unsubscribe(expired)
+        with self.lock:
             if len(self.tokens) - len(drop) > self.max_tokens:
                 extra = sorted((t.created_ts, m) for m, t in self.tokens.items() if m not in self.pinned and m not in drop)
                 drop += [m for _, m in extra[: len(self.tokens) - len(drop) - self.max_tokens]]

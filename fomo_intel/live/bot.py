@@ -44,7 +44,7 @@ class Bot:
         self.state = self.env.state_dir
         self.st = STClient(self.env.solanatracker_api_key)
         self.port = Portfolio(self.state, self.p)
-        self.stream = PumpStream(keep_seconds=420.0)
+        self.stream = PumpStream(keep_seconds=420.0, watch_seconds=self.p.stream_watch_s, sample=self.p.stream_sample)
         self.candidates: dict[str, object] = {}     # mint -> Features esperando T3
         self.creators: dict[str, list[float]] = self._load_creators()
         self.sol_usd = 0.0
@@ -58,6 +58,7 @@ class Bot:
             self.exe = PaperExecutor(self.p, payer=self._wallet_pubkey(), st_api_key=self.env.solanatracker_api_key)
         self._last_reload = self._last_summary = self._last_heartbeat = 0.0
         self._sell_backoff: dict[str, float] = {}
+        self._kept_checked: set[str] = set()
         self._price_poll: dict[str, float] = {}
         self.running = True
 
@@ -90,6 +91,16 @@ class Bot:
         self.port.p = newp
         self.exe.p = newp
 
+    def _pumpportal_balance(self):
+        w = os.getenv("PUMPPORTAL_WALLET", "").strip()
+        if not w:
+            return None
+        try:
+            from .wallet import Rpc
+            return round(Rpc(self.env.rpc_url).sol_balance(w), 4)
+        except Exception:  # noqa: BLE001
+            return None
+
     def _wallet_pubkey(self) -> str:
         if self.pub:
             return self.pub
@@ -104,10 +115,17 @@ class Bot:
         for st in self.stream.young(60, 420):
             if st.evaluated:
                 continue
+            # a los 120 s: si tiene compradores suficientes para ser candidato, seguir escuchando hasta T3
+            if now - st.created_ts >= 121 and st.mint not in self.stream.keep and st.mint not in self._kept_checked:
+                self._kept_checked.add(st.mint)
+                nb = len({t.wallet for t in st.trades if t.side == "buy" and t.ts <= st.created_ts + 120})
+                if nb >= self.p.min_buyers * 0.75:
+                    self.stream.keep_watching(st.mint)
             from .signals import t2_of
             if now < t2_of(st.created_ts, self.p.eval_min):
                 continue
             st.evaluated = True
+            self.stream.release(st.mint)
             prior = self._note_creator(st.creator, st.created_ts)
             f = features_at_t2(st, self.p, self.sol_usd, prior)
             if not f.passes_proxy:
@@ -129,6 +147,7 @@ class Bot:
                 st.decided = True
                 continue
             self.candidates[st.mint] = f
+            self.stream.keep_watching(st.mint)
             log.info("CANDIDATO %s move=%.1fx compradores=%d vol=$%.0f snipers=%s -> confirma a T3", f.symbol, f.move, f.n_buyers_120s, f.vol_usd, f.n_snipers_st)
 
     # ---------- 2) confirmación y compra al T3 ----------
@@ -137,6 +156,7 @@ class Bot:
             if now < f.t3:
                 continue
             self.candidates.pop(mint)
+            self.stream.release(mint)
             st = self.stream.snapshot(mint)
             if not st:
                 self.port.log_signal(f.as_dict(), "perdido_stream"); continue
@@ -222,8 +242,12 @@ class Bot:
                            "candidates": [f.symbol for f in self.candidates.values()],
                            "st_requests": self.st.requests_made, "stream_errors": list(self.stream.errors)[-5:],
                            "stream_counts": dict(self.stream.counts), "stream_samples": list(self.stream.samples),
+                           "stream_trades": self.stream.trades_streamed, "stream_cost_sol_est": round(self.stream.trades_streamed / 10000 * 0.01, 4),
+                           "pumpportal_wallet_sol": self._pumpportal_balance(),
                            "params": {k: getattr(self.p, k) for k in ("mode", "size_usd", "max_open", "daily_loss_usd", "total_loss_usd", "max_trades", "max_slippage_pct")}})
         self._save_creators()
+        if len(self._kept_checked) > 5000:
+            self._kept_checked = set(list(self._kept_checked)[-2000:])
 
     # ---------- loop ----------
     def run(self) -> None:

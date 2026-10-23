@@ -42,6 +42,9 @@ class LiveParams:
     trail: float = 0.20
     stop: float = 0.30
     max_hold_min: int = 360
+    # --- stream (PumpPortal cobra 0,01 SOL por cada 10.000 trades recibidos) ---
+    stream_watch_s: float = 150.0       # segundos que se escuchan los trades de cada token nuevo
+    stream_sample: float = 1.0          # fracción de tokens nuevos a escuchar (muestreo para investigación)
     # --- simulado ---
     paper_slippage: float = 0.05
     paper_fee: float = 0.01
