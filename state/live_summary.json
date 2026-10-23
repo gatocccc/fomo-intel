@@ -1,5 +1,5 @@
 {
- "ts": 1792783480.7019973,
+ "ts": 1792783782.2788622,
  "mode": "paper",
  "open": 0,
  "closed": 1,
@@ -32,32 +32,32 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 103.61631768228891,
+ "sol_usd": 103.79329191224467,
  "stream_connected": true,
- "stream_msgs": 1825,
- "tokens_seen": 487,
- "tokens_tracked": 130,
+ "stream_msgs": 2959,
+ "tokens_seen": 600,
+ "tokens_tracked": 149,
  "candidates": [],
- "st_requests": 5,
+ "st_requests": 6,
  "stream_errors": [
   "19:13:09 Connection to remote host was lost.",
   "19:13:13 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Fri, 23 Oct 2026 19:13:13 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "stream_counts": {
-  "otros": 157,
-  "create": 491,
-  "buy": 593,
-  "sell": 584
+  "otros": 206,
+  "create": 605,
+  "buy": 1124,
+  "sell": 1024
  },
  "stream_samples": [
+  "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}"
+  "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 1177,
- "stream_cost_sol_est": 0.0012,
+ "stream_trades": 2148,
+ "stream_cost_sol_est": 0.0021,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "paper",
