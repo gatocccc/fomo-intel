@@ -1,0 +1,3 @@
+# Validación FOMO Intel cada 3 horas (a las :07 para no coincidir con otros procesos).
+# Instalar: en Terminal ->  crontab -e  -> pegar la línea de abajo -> guardar (en nano: Ctrl+O, Enter, Ctrl+X)
+7 */3 * * * /bin/bash $HOME/dev/fomo_intel/scripts/validate_cron.sh

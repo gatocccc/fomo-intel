@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/
+logs/
+state/
+secrets/
+*.tgz
+_to_delete/
+.pytest_cache/
+scripts/server_bootstrap.sh
