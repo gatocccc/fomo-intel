@@ -45,3 +45,4 @@ Oct 23 17:23:04 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel 
 Oct 23 17:23:04 simplai-prod python3[277290]: 2026-10-23 17:23:04,221 INFO live: arranca bot modo=paper tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
 Oct 23 17:23:04 simplai-prod python3[277290]: 2026-10-23 17:23:04,558 INFO live: latido: stream=False tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$105
 Oct 23 17:23:04 simplai-prod python3[277290]: 2026-10-23 17:23:04,582 INFO live.stream: stream conectado
+Oct 23 17:28:05 simplai-prod python3[277290]: 2026-10-23 17:28:05,087 INFO live: latido: stream=True tokens_vistos=112 seguidos=106 candidatos=0 abiertas=0 cerradas=0 st_requests=2 SOL=$104

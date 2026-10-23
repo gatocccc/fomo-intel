@@ -1,5 +1,5 @@
 {
- "ts": 1792776274.585969,
+ "ts": 1792776575.131208,
  "mode": "paper",
  "open": 0,
  "closed": 0,
@@ -13,19 +13,19 @@
  "last_closed": [],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 104.56584283221244,
+ "sol_usd": 104.38351348003621,
  "stream_connected": true,
- "stream_msgs": 887,
- "tokens_seen": 48,
- "tokens_tracked": 48,
+ "stream_msgs": 6328,
+ "tokens_seen": 139,
+ "tokens_tracked": 133,
  "candidates": [],
- "st_requests": 1,
+ "st_requests": 2,
  "stream_errors": [],
  "stream_counts": {
-  "otros": 33,
-  "create": 49,
-  "buy": 420,
-  "sell": 385
+  "otros": 106,
+  "create": 146,
+  "buy": 3251,
+  "sell": 2825
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",
