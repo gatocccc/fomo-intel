@@ -181,3 +181,15 @@ Oct 23 19:30:03 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel 
 Oct 23 19:30:03 simplai-prod systemd[1]: fomo-live.service: Consumed 5.356s CPU time.
 Oct 23 19:30:03 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
 Oct 23 19:30:03 simplai-prod python3[283754]: 2026-10-23 19:30:03,582 INFO live: arranca bot modo=paper estrategia=rules seguidos=0 tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 23 19:30:03 simplai-prod python3[283754]: 2026-10-23 19:30:03,970 INFO live: latido: stream=False tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$104
+Oct 23 19:30:03 simplai-prod python3[283754]: 2026-10-23 19:30:03,971 INFO live.stream: stream conectado
+Oct 23 19:34:03 simplai-prod python3[283754]: 2026-10-23 19:34:03,648 INFO live: apagando...
+Oct 23 19:34:03 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
+Oct 23 19:34:03 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
+Oct 23 19:34:03 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
+Oct 23 19:34:03 simplai-prod systemd[1]: fomo-live.service: Consumed 1.271s CPU time.
+Oct 23 19:34:03 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
+Oct 23 19:34:04 simplai-prod python3[284091]: 2026-10-23 19:34:04,036 INFO live: arranca bot modo=paper estrategia=follow seguidos=8 tamaño=US$10 máx_abiertas=5 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 23 19:34:04 simplai-prod python3[284091]: 2026-10-23 19:34:04,389 INFO live.stream: stream conectado
+Oct 23 19:34:04 simplai-prod python3[284091]: 2026-10-23 19:34:04,422 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$104
+Oct 23 19:35:01 simplai-prod python3[284091]: 2026-10-23 19:35:01,487 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s

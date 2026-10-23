@@ -1,0 +1,8 @@
+== 019_activar_seguidor 2026-10-23T19:34:03Z ==
+control: {'strategy': 'follow', 'mode': 'paper', 'size_usd': 10.0, 'max_open': 5}
+active
+Oct 23 19:34:03 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
+Oct 23 19:34:04 simplai-prod python3[284091]: 2026-10-23 19:34:04,036 INFO live: arranca bot modo=paper estrategia=follow seguidos=8 tamaño=US$10 máx_abiertas=5 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 23 19:34:04 simplai-prod python3[284091]: 2026-10-23 19:34:04,389 INFO live.stream: stream conectado
+Oct 23 19:34:04 simplai-prod python3[284091]: 2026-10-23 19:34:04,422 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$104
+== exit 0 ==

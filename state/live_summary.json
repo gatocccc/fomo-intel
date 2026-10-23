@@ -1,5 +1,5 @@
 {
- "ts": 1792783782.2788622,
+ "ts": 1792784074.5103967,
  "mode": "paper",
  "open": 0,
  "closed": 1,
@@ -32,40 +32,41 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 103.79329191224467,
+ "sol_usd": 103.61282180749642,
  "stream_connected": true,
- "stream_msgs": 2959,
- "tokens_seen": 600,
- "tokens_tracked": 149,
+ "stream_msgs": 9,
+ "tokens_seen": 7,
+ "tokens_tracked": 7,
  "candidates": [],
- "st_requests": 6,
- "stream_errors": [
-  "19:13:09 Connection to remote host was lost.",
-  "19:13:13 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Fri, 23 Oct 2026 19:13:13 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
- ],
+ "strategy": "follow",
+ "followed_wallets": 8,
+ "account_trades": 0,
+ "follow_buys_seen": 0,
+ "st_requests": 1,
+ "stream_errors": [],
  "stream_counts": {
-  "otros": 206,
-  "create": 605,
-  "buy": 1124,
-  "sell": 1024
+  "otros": 2,
+  "create": 7
  },
  "stream_samples": [
-  "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}"
+  "{\"message\":\"Successfully subscribed to token creation events.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 2148,
- "stream_cost_sol_est": 0.0021,
+ "stream_trades": 0,
+ "stream_cost_sol_est": 0.0,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "paper",
+  "strategy": "follow",
   "size_usd": 10.0,
-  "max_open": 3,
+  "max_open": 5,
   "daily_loss_usd": 50.0,
   "total_loss_usd": 150.0,
   "max_trades": 30,
-  "max_slippage_pct": 8.0
+  "max_slippage_pct": 8.0,
+  "stop": 0.35,
+  "trail": 0.4,
+  "tp_mult": 3.0,
+  "max_hold_min": 1440
  }
 }
