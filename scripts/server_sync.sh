@@ -53,7 +53,7 @@ if [ ! -d "$STATE_WT/.git" ]; then
 fi
 rm -rf "$STATE_WT"/state "$STATE_WT"/logs; mkdir -p "$STATE_WT/state" "$STATE_WT/logs"
 cp state/*.json "$STATE_WT/state/" 2>/dev/null
-for f in trades closed signals; do [ -f state/$f.jsonl ] && tail -n 400 state/$f.jsonl > "$STATE_WT/state/$f.jsonl"; done
+for f in trades closed signals outcomes; do [ -f state/$f.jsonl ] && tail -n 1500 state/$f.jsonl > "$STATE_WT/state/$f.jsonl"; done
 cp -r state/ops "$STATE_WT/state/" 2>/dev/null
 [ -f state/STOP ] && cp state/STOP "$STATE_WT/state/"
 journalctl -u fomo-live --no-pager -n 300 > "$STATE_WT/logs/fomo-live.log" 2>/dev/null
