@@ -33,6 +33,7 @@ class SimParams:
     dead_haircut: float = 0.5    # si al final no hay vela reciente, el resto se vende con este descuento
     fill: str = "close"          # precio de compra dentro de la vela de entrada: open | close | high
     stop_on: str = "low"         # low: la mecha toca el stop | close: el minuto cierra debajo del stop
+    stop_fill: str = "level"     # level: se vende justo al nivel del stop (optimista) | close: al cierre de esa vela (realista: en un rug el precio salta)
 
 
 @dataclass
@@ -91,7 +92,8 @@ def simulate(mint: str, symbol: str, created_ts: int, candles: list[dict], p: Si
         stop_lvl = entry_px * (1 - p.stop)
         ref = c["l"] if p.stop_on == "low" else c["c"]
         if ref <= stop_lvl:
-            sell(remaining, min(stop_lvl, c["c"]) if p.stop_on == "close" else stop_lvl, c["t"], "stop")
+            px_stop = min(stop_lvl, c["c"]) if (p.stop_on == "close" or p.stop_fill == "close") else stop_lvl
+            sell(remaining, px_stop, c["t"], "stop")
             break
         if peak > entry_px and c["l"] <= peak * (1 - p.trail):
             sell(remaining, peak * (1 - p.trail), c["t"], "trailing")
