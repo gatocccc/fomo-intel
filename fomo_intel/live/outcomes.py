@@ -59,7 +59,7 @@ def main(budget: int = 60) -> None:
                  "passes_proxy": r.get("passes_proxy"), "passes": r.get("passes"), "reasons": r.get("reasons"),
                  "move": r.get("move"), "n_buyers_120s": r.get("n_buyers_120s"), "vol_usd": r.get("vol_usd"), "vol_per_buyer": r.get("vol_per_buyer"),
                  "n_snipers_st": r.get("n_snipers_st"), "n_snipers_proxy": r.get("n_snipers_proxy"), "risk_st": r.get("risk_st"),
-                 "creator_prior_24h": r.get("creator_prior_24h"), "px_t3_vs_t2": r.get("px_t3_vs_t2"),
+                 "creator_prior_24h": r.get("creator_prior_24h"), "creator": r.get("creator"), "early_buyers": r.get("early_buyers"), "px_t3_vs_t2": r.get("px_t3_vs_t2"),
                  "entered": sim.entered, "ret_v12": sim.ret if sim.entered else None, "exits": [e[3] for e in sim.exits],
                  "peak_mult": round(peak / entry_px, 2) if entry_px else None,
                  "final_mult": round(last / entry_px, 3) if entry_px else None,

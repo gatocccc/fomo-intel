@@ -59,12 +59,22 @@ class Features:
     creator_prior_24h: int
     rugged_st: bool
     risk_st: dict
+    early_buyers: list      # [[wallet, sol_comprado, segundos_desde_creacion], ...] compradores de los primeros 120 s (para reputación de billeteras)
     passes_proxy: bool
     passes: bool
     reasons: list[str]
 
     def as_dict(self) -> dict:
         return asdict(self)
+
+
+def _early_buyers(st: TokenState, t0: float, limit_s: float = 120.0) -> list:
+    agg: dict[str, list] = {}
+    for t in st.trades:
+        if t.side == "buy" and t.ts - t0 <= limit_s:
+            a = agg.setdefault(t.wallet, [t.wallet, 0.0, round(t.ts - t0, 1)])
+            a[1] = round(a[1] + t.sol, 4)
+    return sorted(agg.values(), key=lambda x: x[2])[:150]
 
 
 def features_at_t2(st: TokenState, p: LiveParams, sol_usd: float, creator_prior_24h: int) -> Features:
@@ -93,6 +103,7 @@ def features_at_t2(st: TokenState, p: LiveParams, sol_usd: float, creator_prior_
                     move=round(move, 2), n_buyers_60s=len(buys60), n_buyers_120s=nb, vol_sol=round(vol_sol, 3),
                     vol_usd=round(vol_usd, 0), vol_per_buyer=round(vpb, 1), n_snipers_proxy=snipers_proxy,
                     n_snipers_st=None, creator=st.creator, creator_prior_24h=creator_prior_24h, rugged_st=False, risk_st={},
+                    early_buyers=_early_buyers(st, t0),
                     passes_proxy=not reasons, passes=False, reasons=reasons)
 
 
