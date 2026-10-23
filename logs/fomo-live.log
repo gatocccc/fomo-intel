@@ -203,3 +203,4 @@ Oct 23 19:35:03 simplai-prod python3[284091]: </html>
 Oct 23 19:35:03 simplai-prod python3[284091]: ; reconecto en 4s
 Oct 23 19:35:08 simplai-prod python3[284091]: 2026-10-23 19:35:08,385 INFO live.stream: stream conectado
 Oct 23 19:39:04 simplai-prod python3[284091]: 2026-10-23 19:39:04,336 INFO live: latido: stream=True tokens_vistos=95 seguidos=95 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$104
+Oct 23 19:44:04 simplai-prod python3[284091]: 2026-10-23 19:44:04,804 INFO live: latido: stream=True tokens_vistos=197 seguidos=145 candidatos=0 abiertas=0 cerradas=1 st_requests=2 SOL=$104
