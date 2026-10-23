@@ -265,3 +265,4 @@ Oct 23 23:44:24 simplai-prod python3[284091]: 2026-10-23 23:44:24,652 INFO live:
 Oct 23 23:48:02 simplai-prod python3[284091]: 2026-10-23 23:48:02,745 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
 Oct 23 23:48:06 simplai-prod python3[284091]: 2026-10-23 23:48:06,888 INFO live.stream: stream conectado
 Oct 23 23:49:25 simplai-prod python3[284091]: 2026-10-23 23:49:25,169 INFO live: latido: stream=True tokens_vistos=5258 seguidos=96 candidatos=0 abiertas=0 cerradas=1 st_requests=51 SOL=$102
+Oct 23 23:54:25 simplai-prod python3[284091]: 2026-10-23 23:54:25,453 INFO live: latido: stream=True tokens_vistos=5300 seguidos=63 candidatos=0 abiertas=0 cerradas=1 st_requests=52 SOL=$103
