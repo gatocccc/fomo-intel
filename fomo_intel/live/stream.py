@@ -165,6 +165,11 @@ class PumpStream(threading.Thread):
             return
         if not isinstance(msg, dict) or "mint" not in msg:
             self.samples.append(raw[:200]); self.counts["otros"] = self.counts.get("otros", 0) + 1
+            if "funded with at least" in raw:
+                # PumpPortal no reconoció la API key fondeada en esta conexión: reconectar (su chequeo es por conexión)
+                self.counts["sin_fondos"] = self.counts.get("sin_fondos", 0) + 1
+                if self.counts["sin_fondos"] % 20 == 1:
+                    raise RuntimeError("PumpPortal: key no reconocida como fondeada; reconecto")
             return
         self.counts[str(msg.get("txType"))] = self.counts.get(str(msg.get("txType")), 0) + 1
         now = time.time()
