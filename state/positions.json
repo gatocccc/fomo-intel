@@ -1,1 +1,19 @@
-{}
+{
+ "3LMEfeuqRycWFX1q9qQ68TdqUcg4iHc8xz4JMsAcpump": {
+  "mint": "3LMEfeuqRycWFX1q9qQ68TdqUcg4iHc8xz4JMsAcpump",
+  "symbol": "ROOM",
+  "opened_ts": 1792777140.8869,
+  "entry_price": 2.0203070632997363e-07,
+  "tokens": 474364.0991965731,
+  "tokens_initial": 474364.0991965731,
+  "sol_in": 0.09583611401826533,
+  "sol_out": 0.0,
+  "peak_price": 2.0203070632997363e-07,
+  "tp_done": false,
+  "sol_usd_at_open": 104.34479843469141,
+  "exits": [],
+  "last_price": 2.0203070632997363e-07,
+  "last_ts": 1792777140.886901,
+  "pending_sell": false
+ }
+}

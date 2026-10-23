@@ -1,7 +1,7 @@
 {
- "ts": 1792776875.6386883,
+ "ts": 1792777176.9086833,
  "mode": "paper",
- "open": 0,
+ "open": 1,
  "closed": 0,
  "wins": 0,
  "hit_rate": null,
@@ -9,29 +9,39 @@
  "pnl_usd_today": 0,
  "ret_per_usd": 0,
  "stop_reason": null,
- "positions": [],
+ "positions": [
+  {
+   "symbol": "ROOM",
+   "mint": "3LMEfeuqRycWFX1q9qQ68TdqUcg4iHc8xz4JMsAcpump",
+   "age_min": 0.6,
+   "mult": 0.93,
+   "peak_mult": 1.0,
+   "size_usd": 10.0,
+   "tp_done": false
+  }
+ ],
  "last_closed": [],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 104.43395835630031,
+ "sol_usd": 104.34479843469141,
  "stream_connected": true,
- "stream_msgs": 12326,
- "tokens_seen": 287,
- "tokens_tracked": 165,
+ "stream_msgs": 16801,
+ "tokens_seen": 394,
+ "tokens_tracked": 142,
  "candidates": [],
- "st_requests": 3,
+ "st_requests": 5,
  "stream_errors": [],
  "stream_counts": {
-  "otros": 209,
-  "create": 306,
-  "buy": 6056,
-  "sell": 5754,
-  "migrate": 1
+  "otros": 310,
+  "create": 419,
+  "buy": 8279,
+  "sell": 7789,
+  "migrate": 4
  },
  "stream_samples": [
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
