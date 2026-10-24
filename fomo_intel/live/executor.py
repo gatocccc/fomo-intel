@@ -41,7 +41,15 @@ class Fill:
 
 
 def impact_pct(rate: dict) -> float:
-    """La API devuelve priceImpact como fracción (0.035 = 3,5%). Se normaliza a porcentaje."""
+    """Impacto REAL de la cotización: cuánto peor es el precio efectivo (amountIn/amountOut) que el precio
+    actual que informa la propia API (currentPrice, en tokens por SOL). El campo priceImpact de la API no es
+    confiable (mide otra cosa: dio 10-30% en compras de US$10 cuyo precio efectivo estaba a ±3% del mercado)."""
+    try:
+        ai = float(rate.get("amountIn") or 0); ao = float(rate.get("amountOut") or 0); cur = float(rate.get("currentPrice") or 0)
+        if ai > 0 and ao > 0 and cur > 0:
+            return max(0.0, (1 - ao / (cur * ai)) * 100)
+    except (TypeError, ValueError):
+        pass
     v = float(rate.get("priceImpact") or 0)
     return v * 100 if v < 1.5 else v
 
