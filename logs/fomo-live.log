@@ -1,7 +1,3 @@
-Oct 24 15:35:05 simplai-prod python3[366020]: <body>
-Oct 24 15:35:05 simplai-prod python3[366020]: <center><h1>502 Bad Gateway</h1></center>
-Oct 24 15:35:05 simplai-prod python3[366020]: <hr><center>nginx/1.22.1</center>
-Oct 24 15:35:05 simplai-prod python3[366020]: </body>
 Oct 24 15:35:05 simplai-prod python3[366020]: </html>
 Oct 24 15:35:05 simplai-prod python3[366020]: ; reconecto en 4s
 Oct 24 15:35:10 simplai-prod python3[366020]: 2026-10-24 15:35:10,765 INFO live.stream: stream conectado
@@ -298,3 +294,7 @@ Oct 24 19:51:23 simplai-prod python3[393883]: 2026-10-24 19:51:23,673 INFO live.
 Oct 24 19:52:09 simplai-prod python3[393883]: 2026-10-24 19:52:09,025 INFO live: COMPRA v1.2 Ethan 0.1015 SOL (US$10) a 2.123e-07 slippage=+4.2% impacto=1.6% lat=2.6s
 Oct 24 19:53:13 simplai-prod python3[393883]: 2026-10-24 19:53:13,885 INFO live: latido: stream=True tokens_vistos=1015 seguidos=266 candidatos=0 abiertas=1 cerradas=15 st_requests=27 SOL=$101
 Oct 24 19:54:27 simplai-prod python3[393883]: 2026-10-24 19:54:27,848 INFO live.rules_st: CANDIDATO v1.2 XDD move=5.7x compradores=47 vol=$4539 snipers=9 -> confirma a T3
+Oct 24 19:55:09 simplai-prod python3[393883]: 2026-10-24 19:55:09,802 INFO live: COMPRA v1.2 XDD 0.1015 SOL (US$10) a 1.853e-07 slippage=+3.8% impacto=1.4% lat=4.3s
+Oct 24 19:55:27 simplai-prod python3[393883]: 2026-10-24 19:55:27,386 INFO live.portfolio: CERRADA Ethan ret=-10.4% pnl=US$-1.06 salidas=['trailing']
+Oct 24 19:55:27 simplai-prod python3[393883]: 2026-10-24 19:55:27,386 INFO live: VENTA Ethan trailing 100% a 0.90x slippage=+11.5% -> 0.0910 SOL [CERRADA]
+Oct 24 19:58:14 simplai-prod python3[393883]: 2026-10-24 19:58:14,303 INFO live: latido: stream=True tokens_vistos=1067 seguidos=259 candidatos=0 abiertas=1 cerradas=16 st_requests=39 SOL=$101
