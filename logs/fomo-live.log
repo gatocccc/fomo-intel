@@ -1,4 +1,3 @@
-Oct 24 04:35:12 simplai-prod python3[321245]: 2026-10-24 04:35:12,275 INFO live.stream: stream conectado
 Oct 24 04:36:08 simplai-prod python3[321245]: 2026-10-24 04:36:08,882 INFO live: latido: stream=True tokens_vistos=487 seguidos=81 candidatos=0 abiertas=2 cerradas=3 st_requests=133 SOL=$103
 Oct 24 04:36:17 simplai-prod python3[321245]: 2026-10-24 04:36:17,891 INFO live.helius: HELIUS 14Rb84 sell 6UTCd5hr 0.2329 SOL @ 5.645e-08 (lat 0.1s)
 Oct 24 04:38:52 simplai-prod python3[321245]: 2026-10-24 04:38:52,240 INFO live.helius: HELIUS 14Rb84 sell AfZVeNW9 0.9626 SOL @ 3.256e-08 (lat 0.1s)
@@ -298,3 +297,4 @@ Oct 24 14:41:11 simplai-prod python3[366020]: 2026-10-24 14:41:11,705 INFO live:
 Oct 24 14:46:11 simplai-prod python3[366020]: 2026-10-24 14:46:11,758 INFO live: latido: stream=True tokens_vistos=1348 seguidos=316 candidatos=0 abiertas=0 cerradas=22 st_requests=19 SOL=$100
 Oct 24 14:48:08 simplai-prod python3[366020]: 2026-10-24 14:48:08,166 INFO live.rules_st: CANDIDATO v1.2 SWORD move=8.0x compradores=100 vol=$14399 snipers=35 -> confirma a T3
 Oct 24 14:49:06 simplai-prod python3[366020]: 2026-10-24 14:49:06,083 WARNING live: compra SWORD falló: impacto 11.6% > 8.0%
+Oct 24 14:51:12 simplai-prod python3[366020]: 2026-10-24 14:51:12,059 INFO live: latido: stream=True tokens_vistos=1417 seguidos=287 candidatos=0 abiertas=0 cerradas=22 st_requests=20 SOL=$100
