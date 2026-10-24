@@ -1,5 +1,3 @@
-Oct 23 18:43:03 simplai-prod python3[281006]: 2026-10-23 18:43:03,644 INFO live: arranca bot modo=paper tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
-Oct 23 18:43:04 simplai-prod python3[281006]: 2026-10-23 18:43:04,020 INFO live.stream: stream conectado
 Oct 23 18:43:04 simplai-prod python3[281006]: 2026-10-23 18:43:04,208 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$104
 Oct 23 18:43:06 simplai-prod python3[281006]: 2026-10-23 18:43:06,624 WARNING live.stream: stream caído: PumpPortal: key no reconocida como fondeada; reconecto; reconecto en 2s
 Oct 23 18:43:09 simplai-prod python3[281006]: 2026-10-23 18:43:09,104 INFO live.stream: stream conectado
@@ -298,3 +296,5 @@ Oct 24 06:12:06 simplai-prod python3[321245]: 2026-10-24 06:12:06,447 INFO live.
 Oct 24 06:12:06 simplai-prod python3[321245]: 2026-10-24 06:12:06,448 INFO live: VENTA B7cX5w stop 100% a 0.60x slippage=+6.0% -> 0.0590 SOL [CERRADA]
 Oct 24 06:14:00 simplai-prod python3[321245]: 2026-10-24 06:14:00,343 INFO live.portfolio: CERRADA G8S6vU ret=-39.5% pnl=US$-3.95 salidas=['stop']
 Oct 24 06:14:00 simplai-prod python3[321245]: 2026-10-24 06:14:00,344 INFO live: VENTA G8S6vU stop 100% a 0.61x slippage=+6.0% -> 0.0593 SOL [CERRADA]
+Oct 24 06:16:16 simplai-prod python3[321245]: 2026-10-24 06:16:16,154 INFO live.helius: HELIUS 14Rb84 sell G8S6vUDo 0.3931 SOL @ 1.034e-07 (lat 0.2s)
+Oct 24 06:16:18 simplai-prod python3[321245]: 2026-10-24 06:16:18,045 INFO live: latido: stream=True tokens_vistos=1729 seguidos=82 candidatos=0 abiertas=3 cerradas=13 st_requests=751 SOL=$102
