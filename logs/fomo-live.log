@@ -1,6 +1,3 @@
-Oct 24 06:10:27 simplai-prod python3[321245]: 2026-10-24 06:10:27,960 INFO live: COPIA B7cX5wW3 siguiendo a 14Rb84… 0.0980 SOL a 1.178e-06 (lat 0.0s slip +6.0%) mcap=977 SOL
-Oct 24 06:11:17 simplai-prod python3[321245]: 2026-10-24 06:11:17,813 INFO live: latido: stream=True tokens_vistos=1666 seguidos=62 candidatos=0 abiertas=4 cerradas=11 st_requests=714 SOL=$102
-Oct 24 06:11:30 simplai-prod python3[321245]: 2026-10-24 06:11:30,071 INFO live.helius: HELIUS 14Rb84 buy G8S6vUDo 0.1025 SOL @ 1.423e-07 (lat 0.1s)
 Oct 24 06:11:34 simplai-prod python3[321245]: 2026-10-24 06:11:34,779 INFO live: COPIA G8S6vUDo siguiendo a 14Rb84… 0.0980 SOL a 1.510e-07 (lat 0.0s slip +6.0%) mcap=142 SOL
 Oct 24 06:12:06 simplai-prod python3[321245]: 2026-10-24 06:12:06,447 INFO live.portfolio: CERRADA B7cX5w ret=-39.7% pnl=US$-3.97 salidas=['stop']
 Oct 24 06:12:06 simplai-prod python3[321245]: 2026-10-24 06:12:06,448 INFO live: VENTA B7cX5w stop 100% a 0.60x slippage=+6.0% -> 0.0590 SOL [CERRADA]
@@ -298,3 +295,6 @@ Oct 24 16:01:03 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel 
 Oct 24 16:01:03 simplai-prod python3[378627]: 2026-10-24 16:01:03,870 INFO live: arranca bot modo=paper estrategia=rules_st seguidos=0 tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
 Oct 24 16:01:04 simplai-prod python3[378627]: 2026-10-24 16:01:04,234 INFO live.stream: stream conectado
 Oct 24 16:01:04 simplai-prod python3[378627]: 2026-10-24 16:01:04,262 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=24 st_requests=1 SOL=$100
+Oct 24 16:05:36 simplai-prod python3[378627]: 2026-10-24 16:05:36,112 INFO live.rules_st: CANDIDATO v1.2 DBB move=5.5x compradores=99 vol=$7354 snipers=78 -> confirma a T3
+Oct 24 16:06:04 simplai-prod python3[378627]: 2026-10-24 16:06:04,266 INFO live: latido: stream=True tokens_vistos=164 seguidos=164 candidatos=0 abiertas=0 cerradas=24 st_requests=1 SOL=$100
+Oct 24 16:06:06 simplai-prod python3[378627]: 2026-10-24 16:06:06,542 INFO live: COMPRA v1.2 DBB 0.1004 SOL (US$10) a 1.734e-07 slippage=+6.0% impacto=0.0% lat=0.0s

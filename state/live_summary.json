@@ -1,7 +1,7 @@
 {
- "ts": 1792857875.0205472,
+ "ts": 1792858177.4748275,
  "mode": "paper",
- "open": 0,
+ "open": 1,
  "closed": 24,
  "wins": 7,
  "hit_rate": 0.292,
@@ -9,7 +9,17 @@
  "pnl_usd_today": -1.56,
  "ret_per_usd": -1.054,
  "stop_reason": null,
- "positions": [],
+ "positions": [
+  {
+   "symbol": "DBB",
+   "mint": "2uqvCvZEMb8YWCGfDTZR92iURoE5Uj6TzmG2uKUxpump",
+   "age_min": 3.5,
+   "mult": 0.8,
+   "peak_mult": 1.0,
+   "size_usd": 10.0,
+   "tp_done": false
+  }
+ ],
  "last_closed": [
   {
    "ts": 1792857487.7834828,
@@ -194,37 +204,40 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 99.6923615286767,
+ "sol_usd": 99.55308229391366,
  "stream_connected": true,
- "stream_msgs": 139,
- "tokens_seen": 138,
- "tokens_tracked": 138,
+ "stream_msgs": 320,
+ "tokens_seen": 230,
+ "tokens_tracked": 230,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 1,
+ "st_requests": 12,
  "stream_errors": [],
  "rules_st": {
-  "multi_calls": 0,
-  "prefilter_pass": 0,
-  "full_eval": 0,
-  "candidates": 0,
-  "bought": 0,
+  "multi_calls": 5,
+  "prefilter_pass": 1,
+  "full_eval": 1,
+  "candidates": 1,
+  "bought": 1,
   "pending_t3": 0,
-  "evaluated": 0
+  "evaluated": 164
  },
  "stream_counts": {
-  "otros": 1,
-  "create": 138
+  "otros": 2,
+  "create": 231,
+  "sell": 38,
+  "buy": 49
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to token creation events.\"}"
+  "{\"message\":\"Successfully subscribed to token creation events.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 0,
- "stream_cost_sol_est": 0.0,
+ "stream_trades": 87,
+ "stream_cost_sol_est": 0.0001,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "paper",

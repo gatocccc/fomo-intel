@@ -1,1 +1,19 @@
-{}
+{
+ "2uqvCvZEMb8YWCGfDTZR92iURoE5Uj6TzmG2uKUxpump": {
+  "mint": "2uqvCvZEMb8YWCGfDTZR92iURoE5Uj6TzmG2uKUxpump",
+  "symbol": "DBB",
+  "opened_ts": 1792857966.5408978,
+  "entry_price": 1.7343346016925636e-07,
+  "tokens": 579178.4580035505,
+  "tokens_initial": 579178.4580035505,
+  "sol_in": 0.10044892402705011,
+  "sol_out": 0.0,
+  "peak_price": 1.7343346016925636e-07,
+  "tp_done": false,
+  "sol_usd_at_open": 99.55308229391366,
+  "exits": [],
+  "last_price": 1.7343346016925636e-07,
+  "last_ts": 1792857966.5408995,
+  "pending_sell": false
+ }
+}
