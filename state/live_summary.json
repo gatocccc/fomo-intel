@@ -1,16 +1,34 @@
 {
- "ts": 1792862996.1081288,
+ "ts": 1792863298.7770278,
  "mode": "real",
  "open": 0,
- "closed": 3,
+ "closed": 4,
  "wins": 2,
- "hit_rate": 0.667,
- "pnl_usd_total": 0.74,
- "pnl_usd_today": 0.74,
- "ret_per_usd": 0.079,
+ "hit_rate": 0.5,
+ "pnl_usd_total": -0.83,
+ "pnl_usd_today": -0.83,
+ "ret_per_usd": -0.074,
  "stop_reason": null,
  "positions": [],
  "last_closed": [
+  {
+   "ts": 1792863267.214432,
+   "day": "2026-10-24",
+   "mint": "12vsGLjtgv9FB5s4qPrnekGMWMHfGYqF9RbmNbSNpump",
+   "symbol": "DIALUP",
+   "opened_ts": 1792863086.7547624,
+   "hold_min": 3.0,
+   "sol_in": 0.102297739,
+   "sol_out": 0.086617569,
+   "pnl_sol": -0.01568,
+   "pnl_usd": -1.57,
+   "ret": -0.1533,
+   "peak_mult": 1.23,
+   "exits": [
+    "trailing"
+   ],
+   "leftover_tokens": 0.0
+  },
   {
    "ts": 1792862263.2778049,
    "day": "2026-10-24",
@@ -68,34 +86,34 @@
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.6071,
- "sol_usd": 100.35371885414953,
+ "wallet_sol": 1.5914,
+ "sol_usd": 100.2208024595348,
  "stream_connected": true,
- "stream_msgs": 2101,
- "tokens_seen": 1697,
- "tokens_tracked": 418,
+ "stream_msgs": 2400,
+ "tokens_seen": 1874,
+ "tokens_tracked": 480,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 180,
+ "st_requests": 200,
  "stream_errors": [],
  "rules_st": {
-  "multi_calls": 65,
-  "prefilter_pass": 30,
-  "full_eval": 30,
-  "candidates": 9,
-  "bought": 3,
-  "pending_t3": 1,
-  "evaluated": 1571
+  "multi_calls": 69,
+  "prefilter_pass": 34,
+  "full_eval": 34,
+  "candidates": 10,
+  "bought": 4,
+  "pending_t3": 0,
+  "evaluated": 1759
  },
  "stream_counts": {
-  "otros": 7,
-  "create": 1704,
-  "sell": 196,
-  "buy": 194
+  "otros": 9,
+  "create": 1881,
+  "sell": 259,
+  "buy": 251
  },
  "stream_samples": [
   "{\"message\":\"Unsubscribed.\"}",
@@ -104,8 +122,8 @@
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 390,
- "stream_cost_sol_est": 0.0004,
+ "stream_trades": 510,
+ "stream_cost_sol_est": 0.0005,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "real",
