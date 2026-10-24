@@ -1,6 +1,3 @@
-Oct 24 07:38:08 simplai-prod python3[335643]: 2026-10-24 07:38:08,024 INFO live: latido: stream=True tokens_vistos=215 seguidos=46 candidatos=0 abiertas=3 cerradas=16 st_requests=412 SOL=$102
-Oct 24 07:41:45 simplai-prod python3[335643]: 2026-10-24 07:41:45,986 INFO live.helius: HELIUS 14Rb84 buy BSBsxXFG 0.3598 SOL @ 1.302e-07 (lat 0.1s)
-Oct 24 07:43:08 simplai-prod python3[335643]: 2026-10-24 07:43:08,376 INFO live: latido: stream=True tokens_vistos=244 seguidos=47 candidatos=0 abiertas=3 cerradas=16 st_requests=470 SOL=$102
 Oct 24 07:48:08 simplai-prod python3[335643]: 2026-10-24 07:48:08,655 INFO live: latido: stream=True tokens_vistos=282 seguidos=51 candidatos=0 abiertas=3 cerradas=16 st_requests=531 SOL=$102
 Oct 24 07:53:09 simplai-prod python3[335643]: 2026-10-24 07:53:09,254 INFO live: latido: stream=True tokens_vistos=339 seguidos=78 candidatos=0 abiertas=3 cerradas=16 st_requests=589 SOL=$102
 Oct 24 07:58:10 simplai-prod python3[335643]: 2026-10-24 07:58:10,230 INFO live: latido: stream=True tokens_vistos=392 seguidos=91 candidatos=0 abiertas=3 cerradas=16 st_requests=647 SOL=$102
@@ -298,3 +295,6 @@ Oct 24 17:17:43 simplai-prod python3[380576]: 2026-10-24 17:17:43,278 INFO live:
 Oct 24 17:19:10 simplai-prod python3[380576]: 2026-10-24 17:19:10,174 INFO live: latido: stream=True tokens_vistos=1476 seguidos=363 candidatos=0 abiertas=0 cerradas=3 st_requests=15 SOL=$100
 Oct 24 17:24:00 simplai-prod python3[380576]: 2026-10-24 17:24:00,955 INFO live.rules_st: CANDIDATO v1.2 CANARY move=4.3x compradores=100 vol=$7406 snipers=41 -> confirma a T3
 Oct 24 17:24:11 simplai-prod python3[380576]: 2026-10-24 17:24:11,158 INFO live: latido: stream=True tokens_vistos=1555 seguidos=358 candidatos=0 abiertas=0 cerradas=3 st_requests=16 SOL=$100
+Oct 24 17:26:22 simplai-prod python3[380576]: 2026-10-24 17:26:22,891 WARNING live: compra CANARY falló: sin confirmación en 75 s
+Oct 24 17:29:11 simplai-prod python3[380576]: 2026-10-24 17:29:11,927 INFO live: latido: stream=True tokens_vistos=1658 seguidos=393 candidatos=0 abiertas=0 cerradas=3 st_requests=17 SOL=$100
+Oct 24 17:29:26 simplai-prod python3[380576]: 2026-10-24 17:29:26,760 INFO live.rules_st: CANDIDATO v1.2 Tobiiiiia move=4.7x compradores=80 vol=$5006 snipers=11 -> confirma a T3
