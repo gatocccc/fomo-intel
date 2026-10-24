@@ -1,12 +1,3 @@
-Oct 24 08:18:12 simplai-prod python3[335643]: 2026-10-24 08:18:12,137 INFO live: latido: stream=True tokens_vistos=646 seguidos=108 candidatos=0 abiertas=2 cerradas=17 st_requests=839 SOL=$102
-Oct 24 08:19:51 simplai-prod python3[335643]: 2026-10-24 08:19:51,827 INFO live.helius: HELIUS 14Rb84 sell BSBsxXFG 0.5095 SOL @ 9.830e-07 (lat 0.2s)
-Oct 24 08:23:13 simplai-prod python3[335643]: 2026-10-24 08:23:13,048 INFO live: latido: stream=True tokens_vistos=720 seguidos=111 candidatos=0 abiertas=2 cerradas=17 st_requests=880 SOL=$102
-Oct 24 08:28:13 simplai-prod python3[335643]: 2026-10-24 08:28:13,598 INFO live: latido: stream=True tokens_vistos=760 seguidos=72 candidatos=0 abiertas=2 cerradas=17 st_requests=919 SOL=$102
-Oct 24 08:29:25 simplai-prod python3[335643]: 2026-10-24 08:29:25,970 INFO live.helius: HELIUS 14Rb84 sell BSBsxXFG 0.1314 SOL @ 7.605e-07 (lat 0.1s)
-Oct 24 08:33:13 simplai-prod python3[335643]: 2026-10-24 08:33:13,862 INFO live: latido: stream=True tokens_vistos=796 seguidos=56 candidatos=0 abiertas=2 cerradas=17 st_requests=960 SOL=$102
-Oct 24 08:33:37 simplai-prod python3[335643]: 2026-10-24 08:33:37,044 INFO live.helius: HELIUS 14Rb84 buy B4DknzfZ 1.0145 SOL @ 9.091e-08 (lat 0.1s)
-Oct 24 08:38:14 simplai-prod python3[335643]: 2026-10-24 08:38:14,716 INFO live: latido: stream=True tokens_vistos=850 seguidos=72 candidatos=0 abiertas=2 cerradas=17 st_requests=999 SOL=$102
-Oct 24 08:40:30 simplai-prod python3[335643]: 2026-10-24 08:40:30,696 INFO live.helius: HELIUS 14Rb84 sell B4DknzfZ 0.8162 SOL @ 7.314e-08 (lat 0.1s)
 Oct 24 08:40:47 simplai-prod python3[335643]: 2026-10-24 08:40:47,526 INFO live.helius: HELIUS 14Rb84 buy 6SMfgZkr 0.2571 SOL @ 1.160e-07 (lat 0.1s)
 Oct 24 08:41:44 simplai-prod python3[335643]: 2026-10-24 08:41:44,918 INFO live.helius: HELIUS 14Rb84 buy 7wYXEuBT 1.0354 SOL @ 1.374e-07 (lat 0.1s)
 Oct 24 08:43:15 simplai-prod python3[335643]: 2026-10-24 08:43:15,060 INFO live: latido: stream=True tokens_vistos=885 seguidos=60 candidatos=0 abiertas=2 cerradas=17 st_requests=1040 SOL=$102
@@ -298,3 +289,12 @@ Oct 24 17:34:27 simplai-prod python3[380576]: 2026-10-24 17:34:27,215 INFO live:
 Oct 24 17:38:16 simplai-prod python3[380576]: 2026-10-24 17:38:16,181 INFO live.rules_st: CANDIDATO v1.2 COW move=3.9x compradores=100 vol=$11191 snipers=4 -> confirma a T3
 Oct 24 17:39:08 simplai-prod python3[380576]: 2026-10-24 17:39:08,515 INFO live: COMPRA v1.2 COW 0.1025 SOL (US$10) a 1.291e-07 slippage=+3.2% impacto=0.0% lat=2.4s
 Oct 24 17:39:12 simplai-prod python3[380576]: 2026-10-24 17:39:12,672 INFO live: latido: stream=True tokens_vistos=1960 seguidos=484 candidatos=0 abiertas=1 cerradas=4 st_requests=21 SOL=$100
+Oct 24 17:41:28 simplai-prod python3[380576]: 2026-10-24 17:41:28,331 WARNING live: venta COW (trailing) falló: sin confirmación en 75 s
+Oct 24 17:41:30 simplai-prod python3[380576]: 2026-10-24 17:41:30,385 INFO live.rules_st: CANDIDATO v1.2 JEET move=4.8x compradores=100 vol=$12365 snipers=1 -> confirma a T3
+Oct 24 17:41:32 simplai-prod python3[380576]: 2026-10-24 17:41:32,865 INFO live.rules_st: CANDIDATO v1.2 HODLER move=3.9x compradores=100 vol=$14671 snipers=88 -> confirma a T3
+Oct 24 17:41:36 simplai-prod python3[380576]: 2026-10-24 17:41:36,779 INFO live: COMPRA v1.2 JEET 0.1025 SOL (US$10) a 2.346e-07 slippage=+63.6% impacto=0.0% lat=3.7s
+Oct 24 17:41:41 simplai-prod python3[380576]: 2026-10-24 17:41:41,459 INFO live.portfolio: CERRADA COW ret=-15.8% pnl=US$-1.62 salidas=['trailing']
+Oct 24 17:41:41 simplai-prod python3[380576]: 2026-10-24 17:41:41,460 INFO live: VENTA COW trailing 100% a 0.84x slippage=+2.5% -> 0.0863 SOL [CERRADA]
+Oct 24 17:43:15 simplai-prod python3[380576]: 2026-10-24 17:43:15,047 INFO live.portfolio: CERRADA JEET ret=+46.4% pnl=US$+4.76 salidas=['trailing']
+Oct 24 17:43:15 simplai-prod python3[380576]: 2026-10-24 17:43:15,047 INFO live: VENTA JEET trailing 100% a 1.46x slippage=-1.9% -> 0.1500 SOL [CERRADA]
+Oct 24 17:44:13 simplai-prod python3[380576]: 2026-10-24 17:44:13,363 INFO live: latido: stream=True tokens_vistos=2046 seguidos=491 candidatos=0 abiertas=0 cerradas=6 st_requests=22 SOL=$100
