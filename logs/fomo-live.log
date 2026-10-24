@@ -1,6 +1,3 @@
-Oct 24 17:14:09 simplai-prod python3[380576]: 2026-10-24 17:14:09,002 INFO live.rules_st: CANDIDATO v1.2 CARPNIK move=18.3x compradores=95 vol=$14196 snipers=25 -> confirma a T3
-Oct 24 17:14:10 simplai-prod python3[380576]: 2026-10-24 17:14:10,002 INFO live: latido: stream=True tokens_vistos=1377 seguidos=359 candidatos=0 abiertas=1 cerradas=2 st_requests=14 SOL=$100
-Oct 24 17:17:43 simplai-prod python3[380576]: 2026-10-24 17:17:43,278 INFO live.portfolio: CERRADA Nuannuan ret=+42.3% pnl=US$+4.34 salidas=['trailing']
 Oct 24 17:17:43 simplai-prod python3[380576]: 2026-10-24 17:17:43,278 INFO live: VENTA Nuannuan trailing 100% a 1.42x slippage=-2.8% -> 0.1456 SOL [CERRADA]
 Oct 24 17:19:10 simplai-prod python3[380576]: 2026-10-24 17:19:10,174 INFO live: latido: stream=True tokens_vistos=1476 seguidos=363 candidatos=0 abiertas=0 cerradas=3 st_requests=15 SOL=$100
 Oct 24 17:24:00 simplai-prod python3[380576]: 2026-10-24 17:24:00,955 INFO live.rules_st: CANDIDATO v1.2 CANARY move=4.3x compradores=100 vol=$7406 snipers=41 -> confirma a T3
@@ -298,3 +295,6 @@ Oct 24 23:08:05 simplai-prod python3[393883]: 2026-10-24 23:08:05,897 INFO live:
 Oct 24 23:08:37 simplai-prod python3[393883]: 2026-10-24 23:08:37,142 INFO live: latido: stream=True tokens_vistos=4188 seguidos=254 candidatos=0 abiertas=0 cerradas=18 st_requests=293 SOL=$101
 Oct 24 23:13:37 simplai-prod python3[393883]: 2026-10-24 23:13:37,773 INFO live: latido: stream=True tokens_vistos=4285 seguidos=291 candidatos=0 abiertas=0 cerradas=18 st_requests=294 SOL=$101
 Oct 24 23:18:37 simplai-prod python3[393883]: 2026-10-24 23:18:37,820 INFO live: latido: stream=True tokens_vistos=4377 seguidos=322 candidatos=0 abiertas=0 cerradas=18 st_requests=295 SOL=$101
+Oct 24 23:22:20 simplai-prod python3[393883]: 2026-10-24 23:22:20,958 INFO live.rules_st: CANDIDATO v1.2 swordog move=3.3x compradores=66 vol=$2950 snipers=35 -> confirma a T3
+Oct 24 23:23:05 simplai-prod python3[393883]: 2026-10-24 23:23:05,964 INFO live: señal swordog no operada: STOP manual
+Oct 24 23:23:38 simplai-prod python3[393883]: 2026-10-24 23:23:38,134 INFO live: latido: stream=True tokens_vistos=4446 seguidos=333 candidatos=0 abiertas=0 cerradas=18 st_requests=296 SOL=$101
