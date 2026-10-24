@@ -1,9 +1,3 @@
-Oct 24 09:08:17 simplai-prod python3[335643]: 2026-10-24 09:08:17,074 INFO live: latido: stream=True tokens_vistos=1140 seguidos=58 candidatos=0 abiertas=2 cerradas=17 st_requests=1239 SOL=$102
-Oct 24 09:13:17 simplai-prod python3[335643]: 2026-10-24 09:13:17,894 INFO live: latido: stream=True tokens_vistos=1165 seguidos=38 candidatos=0 abiertas=2 cerradas=17 st_requests=1278 SOL=$102
-Oct 24 09:18:18 simplai-prod python3[335643]: 2026-10-24 09:18:18,321 INFO live: latido: stream=True tokens_vistos=1196 seguidos=45 candidatos=0 abiertas=2 cerradas=17 st_requests=1319 SOL=$102
-Oct 24 09:23:19 simplai-prod python3[335643]: 2026-10-24 09:23:19,200 INFO live: latido: stream=True tokens_vistos=1229 seguidos=43 candidatos=0 abiertas=2 cerradas=17 st_requests=1358 SOL=$101
-Oct 24 09:28:20 simplai-prod python3[335643]: 2026-10-24 09:28:20,574 INFO live: latido: stream=True tokens_vistos=1261 seguidos=45 candidatos=0 abiertas=2 cerradas=17 st_requests=1399 SOL=$101
-Oct 24 09:33:20 simplai-prod python3[335643]: 2026-10-24 09:33:20,696 INFO live: latido: stream=True tokens_vistos=1298 seguidos=55 candidatos=0 abiertas=2 cerradas=17 st_requests=1438 SOL=$101
 Oct 24 09:37:40 simplai-prod python3[335643]: 2026-10-24 09:37:40,086 INFO live.helius: HELIUS 14Rb84 sell 3kjm7G34 0.4345 SOL @ 3.648e-08 (lat 0.1s)
 Oct 24 09:38:21 simplai-prod python3[335643]: 2026-10-24 09:38:21,490 INFO live: latido: stream=True tokens_vistos=1328 seguidos=41 candidatos=0 abiertas=2 cerradas=17 st_requests=1477 SOL=$101
 Oct 24 09:43:21 simplai-prod python3[335643]: 2026-10-24 09:43:21,765 INFO live: latido: stream=True tokens_vistos=1384 seguidos=68 candidatos=0 abiertas=2 cerradas=17 st_requests=1518 SOL=$101
@@ -298,3 +292,9 @@ Oct 24 17:54:14 simplai-prod python3[380576]: 2026-10-24 17:54:14,775 INFO live:
 Oct 24 17:59:15 simplai-prod python3[380576]: 2026-10-24 17:59:15,648 INFO live: latido: stream=True tokens_vistos=2319 seguidos=358 candidatos=0 abiertas=0 cerradas=7 st_requests=26 SOL=$100
 Oct 24 18:04:16 simplai-prod python3[380576]: 2026-10-24 18:04:16,037 INFO live: latido: stream=True tokens_vistos=2419 seguidos=375 candidatos=0 abiertas=0 cerradas=7 st_requests=27 SOL=$100
 Oct 24 18:09:15 simplai-prod python3[380576]: 2026-10-24 18:09:15,957 INFO live: latido: stream=True tokens_vistos=2497 seguidos=368 candidatos=0 abiertas=0 cerradas=7 st_requests=28 SOL=$101
+Oct 24 18:12:37 simplai-prod python3[380576]: 2026-10-24 18:12:37,875 INFO live.rules_st: CANDIDATO v1.2 ACTIV move=3.9x compradores=100 vol=$13944 snipers=16 -> confirma a T3
+Oct 24 18:13:10 simplai-prod python3[380576]: 2026-10-24 18:13:10,998 INFO live: COMPRA v1.2 ACTIV 0.1018 SOL (US$10) a 1.691e-07 slippage=+20.8% impacto=0.0% lat=5.7s
+Oct 24 18:13:52 simplai-prod python3[380576]: 2026-10-24 18:13:52,225 INFO live.portfolio: CERRADA ACTIV ret=-33.9% pnl=US$-3.48 salidas=['stop']
+Oct 24 18:13:52 simplai-prod python3[380576]: 2026-10-24 18:13:52,225 INFO live: VENTA ACTIV stop 100% a 0.66x slippage=+1.6% -> 0.0673 SOL [CERRADA]
+Oct 24 18:14:08 simplai-prod python3[380576]: 2026-10-24 18:14:08,197 INFO live.rules_st: CANDIDATO v1.2 ACTX move=4.2x compradores=100 vol=$13969 snipers=26 -> confirma a T3
+Oct 24 18:14:16 simplai-prod python3[380576]: 2026-10-24 18:14:16,199 INFO live: latido: stream=True tokens_vistos=2589 seguidos=382 candidatos=0 abiertas=0 cerradas=8 st_requests=30 SOL=$101
