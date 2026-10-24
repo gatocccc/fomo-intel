@@ -1,0 +1,9 @@
+== 025_activar_rules_st 2026-10-24T13:21:04Z ==
+{'strategy': 'rules_st', 'mode': 'paper', 'max_open': 3}
+active
+Oct 24 13:21:05 simplai-prod python3[366020]: 2026-10-24 13:21:05,263 INFO live.portfolio: CERRADA Fpd8Mo ret=-21.3% pnl=US$-2.13 salidas=['trailing']
+Oct 24 13:21:05 simplai-prod python3[366020]: 2026-10-24 13:21:05,263 INFO live: VENTA Fpd8Mo trailing 100% a 0.79x slippage=+6.0% -> 0.0769 SOL [CERRADA]
+Oct 24 13:21:05 simplai-prod python3[366020]: 2026-10-24 13:21:05,515 INFO live.portfolio: CERRADA EiXWTc ret=+27.3% pnl=US$+2.73 salidas=['trailing']
+Oct 24 13:21:05 simplai-prod python3[366020]: 2026-10-24 13:21:05,516 INFO live: VENTA EiXWTc trailing 100% a 1.27x slippage=+6.0% -> 0.1245 SOL [CERRADA]
+Oct 24 13:21:05 simplai-prod python3[366020]: 2026-10-24 13:21:05,687 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=22 st_requests=3 SOL=$101
+== exit 0 ==
