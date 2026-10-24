@@ -1,6 +1,3 @@
-Oct 24 16:54:07 simplai-prod python3[380576]: 2026-10-24 16:54:07,199 INFO live: latido: stream=True tokens_vistos=1018 seguidos=399 candidatos=0 abiertas=0 cerradas=2 st_requests=9 SOL=$100
-Oct 24 16:59:08 simplai-prod python3[380576]: 2026-10-24 16:59:08,146 INFO live: latido: stream=True tokens_vistos=1116 seguidos=401 candidatos=0 abiertas=0 cerradas=2 st_requests=10 SOL=$100
-Oct 24 17:04:08 simplai-prod python3[380576]: 2026-10-24 17:04:08,208 INFO live: latido: stream=True tokens_vistos=1197 seguidos=374 candidatos=0 abiertas=0 cerradas=2 st_requests=11 SOL=$100
 Oct 24 17:09:08 simplai-prod python3[380576]: 2026-10-24 17:09:08,913 INFO live: latido: stream=True tokens_vistos=1266 seguidos=350 candidatos=0 abiertas=0 cerradas=2 st_requests=12 SOL=$100
 Oct 24 17:11:25 simplai-prod python3[380576]: 2026-10-24 17:11:25,291 INFO live.rules_st: CANDIDATO v1.2 CLIP move=3.9x compradores=100 vol=$15175 snipers=19 -> confirma a T3
 Oct 24 17:13:21 simplai-prod python3[380576]: 2026-10-24 17:13:21,563 WARNING live: compra CLIP falló: sin confirmación en 75 s
@@ -298,3 +295,6 @@ Oct 24 22:49:44 simplai-prod python3[393883]: 2026-10-24 22:49:44,538 INFO live.
 Oct 24 22:50:05 simplai-prod python3[393883]: 2026-10-24 22:50:05,902 INFO live: señal DRUG no operada: STOP manual
 Oct 24 22:53:35 simplai-prod python3[393883]: 2026-10-24 22:53:35,185 INFO live: latido: stream=True tokens_vistos=3996 seguidos=334 candidatos=0 abiertas=0 cerradas=18 st_requests=290 SOL=$102
 Oct 24 22:58:35 simplai-prod python3[393883]: 2026-10-24 22:58:35,479 INFO live: latido: stream=True tokens_vistos=4057 seguidos=322 candidatos=0 abiertas=0 cerradas=18 st_requests=291 SOL=$102
+Oct 24 23:02:37 simplai-prod python3[393883]: 2026-10-24 23:02:37,541 INFO live.rules_st: CANDIDATO v1.2 Europa move=7.8x compradores=92 vol=$15817 snipers=24 -> confirma a T3
+Oct 24 23:03:05 simplai-prod python3[393883]: 2026-10-24 23:03:05,500 INFO live: señal Europa no operada: STOP manual
+Oct 24 23:03:36 simplai-prod python3[393883]: 2026-10-24 23:03:36,450 INFO live: latido: stream=True tokens_vistos=4113 seguidos=259 candidatos=0 abiertas=0 cerradas=18 st_requests=292 SOL=$101
