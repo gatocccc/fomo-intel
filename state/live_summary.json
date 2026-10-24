@@ -1,28 +1,28 @@
 {
- "ts": 1792822201.992976,
+ "ts": 1792822478.1239727,
  "mode": "paper",
  "open": 3,
- "closed": 11,
+ "closed": 13,
  "wins": 2,
- "hit_rate": 0.182,
- "pnl_usd_total": -28.45,
- "pnl_usd_today": -19.47,
- "ret_per_usd": -2.845,
+ "hit_rate": 0.154,
+ "pnl_usd_total": -36.37,
+ "pnl_usd_today": -27.39,
+ "ret_per_usd": -3.637,
  "stop_reason": null,
  "positions": [
   {
    "symbol": "GZYL4J",
    "mint": "GZYL4JVHikj6H71a7mTdWay1q7DwsWdJFEhkQCsYz4WT",
-   "age_min": 132.8,
-   "mult": 2.6,
-   "peak_mult": 2.64,
+   "age_min": 137.4,
+   "mult": 2.82,
+   "peak_mult": 2.96,
    "size_usd": 10.0,
    "tp_done": false
   },
   {
    "symbol": "Fpd8Mo",
    "mint": "Fpd8MowfCEWXAtAfgJucruJFiKPwxyJMZhx2TTVgpump",
-   "age_min": 59.7,
+   "age_min": 64.3,
    "mult": 0.91,
    "peak_mult": 1.0,
    "size_usd": 10.0,
@@ -31,14 +31,50 @@
   {
    "symbol": "6SMfgZ",
    "mint": "6SMfgZkr9QRseAyNAJwvYEe7Nk3PDJTFj1srYXLMFCk4",
-   "age_min": 3.5,
-   "mult": 0.98,
-   "peak_mult": 1.06,
+   "age_min": 8.1,
+   "mult": 1.02,
+   "peak_mult": 1.07,
    "size_usd": 10.0,
    "tp_done": false
   }
  ],
  "last_closed": [
+  {
+   "ts": 1792822440.3433683,
+   "day": "2026-10-24",
+   "mint": "G8S6vUDoZNTVTvvQ1oGKtjvfcMxg7RyF6i8ntaanpump",
+   "symbol": "G8S6vU",
+   "opened_ts": 1792822294.777987,
+   "hold_min": 2.4,
+   "sol_in": 0.0979686018117855,
+   "sol_out": 0.05927263491803795,
+   "pnl_sol": -0.038696,
+   "pnl_usd": -3.95,
+   "ret": -0.395,
+   "peak_mult": 1.0,
+   "exits": [
+    "stop"
+   ],
+   "leftover_tokens": 0.0
+  },
+  {
+   "ts": 1792822326.4478347,
+   "day": "2026-10-24",
+   "mint": "B7cX5wW3wxHhRzSYTpM56YgMo8pesJjJk6ehz8aXpump",
+   "symbol": "B7cX5w",
+   "opened_ts": 1792822227.9593995,
+   "hold_min": 1.6,
+   "sol_in": 0.0979686018117855,
+   "sol_out": 0.05904177803705518,
+   "pnl_sol": -0.038927,
+   "pnl_usd": -3.97,
+   "ret": -0.3973,
+   "peak_mult": 1.0,
+   "exits": [
+    "stop"
+   ],
+   "leftover_tokens": 0.0
+  },
   {
    "ts": 1792822116.582005,
    "day": "2026-10-24",
@@ -182,84 +218,48 @@
     "seguido vendi\u00f3"
    ],
    "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792816359.147625,
-   "day": "2026-10-24",
-   "mint": "6UTCd5hrSe9BFg4iQyxgXTwaK9tWx441pUP2zg4Spump",
-   "symbol": "6UTCd5",
-   "opened_ts": 1792816317.9966638,
-   "hold_min": 0.7,
-   "sol_in": 0.0975133457590109,
-   "sol_out": 0.05283563750901818,
-   "pnl_sol": -0.044678,
-   "pnl_usd": -4.58,
-   "ret": -0.4582,
-   "peak_mult": 1.0,
-   "exits": [
-    "stop"
-   ],
-   "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792816109.3281133,
-   "day": "2026-10-24",
-   "mint": "qqQsyFeFevqRFPtcsVb4HHJPD8FViXubhAzEpi9PaAx",
-   "symbol": "qqQsyF",
-   "opened_ts": 1792815766.2279239,
-   "hold_min": 5.7,
-   "sol_in": 0.09755829884909399,
-   "sol_out": 0.05851999013412257,
-   "pnl_sol": -0.039038,
-   "pnl_usd": -4.0,
-   "ret": -0.4002,
-   "peak_mult": 1.0,
-   "exits": [
-    "stop"
-   ],
-   "leftover_tokens": 0.0
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 102.07351962837764,
+ "sol_usd": 102.2144270602541,
  "stream_connected": true,
- "stream_msgs": 4040,
- "tokens_seen": 1656,
- "tokens_tracked": 60,
+ "stream_msgs": 4305,
+ "tokens_seen": 1714,
+ "tokens_tracked": 81,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 5,
- "account_trades": 22,
+ "account_trades": 23,
  "helius": {
   "connected": true,
-  "notifications": 50,
-  "parsed": 24,
+  "notifications": 54,
+  "parsed": 26,
   "subs": 5,
   "errors": []
  },
- "follow_buys_seen": 10,
- "st_requests": 709,
+ "follow_buys_seen": 11,
+ "st_requests": 743,
  "stream_errors": [
   "04:35:04 Connection to remote host was lost.",
   "04:35:06 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 04:35:06 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "stream_counts": {
-  "otros": 28,
-  "create": 1682,
-  "buy": 1330,
-  "sell": 999,
+  "otros": 32,
+  "create": 1740,
+  "buy": 1454,
+  "sell": 1078,
   "migrate": 1
  },
  "stream_samples": [
+  "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 2311,
- "stream_cost_sol_est": 0.0023,
+ "stream_trades": 2513,
+ "stream_cost_sol_est": 0.0025,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "paper",
