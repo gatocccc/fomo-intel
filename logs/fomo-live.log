@@ -1,14 +1,3 @@
-Oct 24 17:31:23 simplai-prod python3[380576]: 2026-10-24 17:31:23,431 INFO live.rules_st: CANDIDATO v1.2 DIALUP move=4.0x compradores=96 vol=$17194 snipers=37 -> confirma a T3
-Oct 24 17:31:26 simplai-prod python3[380576]: 2026-10-24 17:31:26,755 INFO live: COMPRA v1.2 DIALUP 0.1023 SOL (US$10) a 1.484e-07 slippage=+37.9% impacto=0.0% lat=2.5s
-Oct 24 17:34:12 simplai-prod python3[380576]: 2026-10-24 17:34:12,656 INFO live: latido: stream=True tokens_vistos=1850 seguidos=476 candidatos=0 abiertas=1 cerradas=3 st_requests=19 SOL=$100
-Oct 24 17:34:27 simplai-prod python3[380576]: 2026-10-24 17:34:27,214 INFO live.portfolio: CERRADA DIALUP ret=-15.3% pnl=US$-1.57 salidas=['trailing']
-Oct 24 17:34:27 simplai-prod python3[380576]: 2026-10-24 17:34:27,215 INFO live: VENTA DIALUP trailing 100% a 0.85x slippage=+10.3% -> 0.0866 SOL [CERRADA]
-Oct 24 17:38:16 simplai-prod python3[380576]: 2026-10-24 17:38:16,181 INFO live.rules_st: CANDIDATO v1.2 COW move=3.9x compradores=100 vol=$11191 snipers=4 -> confirma a T3
-Oct 24 17:39:08 simplai-prod python3[380576]: 2026-10-24 17:39:08,515 INFO live: COMPRA v1.2 COW 0.1025 SOL (US$10) a 1.291e-07 slippage=+3.2% impacto=0.0% lat=2.4s
-Oct 24 17:39:12 simplai-prod python3[380576]: 2026-10-24 17:39:12,672 INFO live: latido: stream=True tokens_vistos=1960 seguidos=484 candidatos=0 abiertas=1 cerradas=4 st_requests=21 SOL=$100
-Oct 24 17:41:28 simplai-prod python3[380576]: 2026-10-24 17:41:28,331 WARNING live: venta COW (trailing) falló: sin confirmación en 75 s
-Oct 24 17:41:30 simplai-prod python3[380576]: 2026-10-24 17:41:30,385 INFO live.rules_st: CANDIDATO v1.2 JEET move=4.8x compradores=100 vol=$12365 snipers=1 -> confirma a T3
-Oct 24 17:41:32 simplai-prod python3[380576]: 2026-10-24 17:41:32,865 INFO live.rules_st: CANDIDATO v1.2 HODLER move=3.9x compradores=100 vol=$14671 snipers=88 -> confirma a T3
 Oct 24 17:41:36 simplai-prod python3[380576]: 2026-10-24 17:41:36,779 INFO live: COMPRA v1.2 JEET 0.1025 SOL (US$10) a 2.346e-07 slippage=+63.6% impacto=0.0% lat=3.7s
 Oct 24 17:41:41 simplai-prod python3[380576]: 2026-10-24 17:41:41,459 INFO live.portfolio: CERRADA COW ret=-15.8% pnl=US$-1.62 salidas=['trailing']
 Oct 24 17:41:41 simplai-prod python3[380576]: 2026-10-24 17:41:41,460 INFO live: VENTA COW trailing 100% a 0.84x slippage=+2.5% -> 0.0863 SOL [CERRADA]
@@ -298,3 +287,14 @@ Oct 24 23:33:43 simplai-prod python3[393883]: 2026-10-24 23:33:43,469 INFO live.
 Oct 24 23:34:05 simplai-prod python3[393883]: 2026-10-24 23:34:05,633 INFO live: señal TIRA no operada: STOP manual
 Oct 24 23:38:39 simplai-prod python3[393883]: 2026-10-24 23:38:39,687 INFO live: latido: stream=True tokens_vistos=4642 seguidos=267 candidatos=0 abiertas=0 cerradas=18 st_requests=299 SOL=$102
 Oct 24 23:43:40 simplai-prod python3[393883]: 2026-10-24 23:43:40,320 INFO live: latido: stream=True tokens_vistos=4782 seguidos=335 candidatos=0 abiertas=0 cerradas=18 st_requests=300 SOL=$102
+Oct 24 23:48:05 simplai-prod python3[393883]: 2026-10-24 23:48:05,687 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
+Oct 24 23:48:08 simplai-prod python3[393883]: 2026-10-24 23:48:08,045 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 23:48:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 24 23:48:08 simplai-prod python3[393883]: <head><title>502 Bad Gateway</title></head>
+Oct 24 23:48:08 simplai-prod python3[393883]: <body>
+Oct 24 23:48:08 simplai-prod python3[393883]: <center><h1>502 Bad Gateway</h1></center>
+Oct 24 23:48:08 simplai-prod python3[393883]: <hr><center>nginx/1.22.1</center>
+Oct 24 23:48:08 simplai-prod python3[393883]: </body>
+Oct 24 23:48:08 simplai-prod python3[393883]: </html>
+Oct 24 23:48:08 simplai-prod python3[393883]: ; reconecto en 4s
+Oct 24 23:48:12 simplai-prod python3[393883]: 2026-10-24 23:48:12,650 INFO live.stream: stream conectado
+Oct 24 23:48:40 simplai-prod python3[393883]: 2026-10-24 23:48:40,840 INFO live: latido: stream=True tokens_vistos=4844 seguidos=326 candidatos=0 abiertas=0 cerradas=18 st_requests=301 SOL=$102
