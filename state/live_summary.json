@@ -1,5 +1,5 @@
 {
- "ts": 1792881293.172794,
+ "ts": 1792881595.8286235,
  "mode": "real",
  "open": 0,
  "closed": 18,
@@ -194,34 +194,34 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.2689,
- "sol_usd": 101.43549859791727,
+ "sol_usd": 101.59459606352353,
  "stream_connected": true,
- "stream_msgs": 4600,
- "tokens_seen": 3689,
- "tokens_tracked": 352,
+ "stream_msgs": 4670,
+ "tokens_seen": 3757,
+ "tokens_tracked": 337,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 801,
+ "st_requests": 810,
  "stream_errors": [
   "19:35:02 Connection to remote host was lost.",
   "19:35:04 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 19:35:04 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "rules_st": {
-  "multi_calls": 216,
-  "prefilter_pass": 91,
-  "full_eval": 91,
+  "multi_calls": 221,
+  "prefilter_pass": 92,
+  "full_eval": 92,
   "candidates": 27,
   "bought": 7,
   "pending_t3": 0,
-  "evaluated": 3609
+  "evaluated": 3700
  },
  "stream_counts": {
   "otros": 16,
-  "create": 3716,
+  "create": 3786,
   "buy": 505,
   "sell": 363
  },
