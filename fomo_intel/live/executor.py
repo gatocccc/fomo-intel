@@ -21,6 +21,7 @@ from .config import SOL_MINT, LiveParams
 
 log = logging.getLogger("live.exec")
 SWAP_URL = "https://swap-v2.solanatracker.io/swap"
+PUMPPORTAL_LOCAL = "https://pumpportal.fun/api/trade-local"   # segunda vía: transacción directa contra pump.fun/PumpSwap (0,5% fee)
 
 
 @dataclass
@@ -148,20 +149,38 @@ class RealExecutor:
         tx.sign([self.kp], tx.message.recent_blockhash)
         return base64.b64encode(bytes(tx)).decode()
 
+    def _pumpportal_tx(self, side: str, mint: str, amount, slippage_pct: float) -> str:
+        """Pide a PumpPortal la transacción ya armada (sin firmar). amount: SOL si compra; tokens o "100%" si venta."""
+        body = {"publicKey": self.pub, "action": side, "mint": mint, "amount": amount,
+                "denominatedInSol": "true" if side == "buy" else "false", "slippage": int(slippage_pct),
+                "priorityFee": self.p.priority_fee_sol, "pool": "auto"}
+        r = requests.post(PUMPPORTAL_LOCAL, json=body, timeout=20)
+        if r.status_code != 200 or not r.content:
+            raise RuntimeError(f"pumpportal {r.status_code}: {r.text[:200]}")
+        return base64.b64encode(r.content).decode()
+
     def _execute(self, side: str, mint: str, frm: str, to: str, amount, ref_price: float) -> Fill:
         t0 = time.time()
         f = Fill(False, side, mint, expected_price=ref_price)
+        txn_b64, version, via = None, "v0", "solanatracker"
         try:
             q = self.quote(frm, to, amount, self.p.swap_slippage_pct)
+            rate = q.get("rate") or {}
+            f.quote_impact_pct = round(impact_pct(rate), 2)
+            f.raw = {"rate": rate, "type": q.get("type") or q.get("txVersion"), "via": via}
+            if side == "buy" and f.quote_impact_pct > self.p.max_slippage_pct:
+                f.error = f"impacto {f.quote_impact_pct:.1f}% > {self.p.max_slippage_pct}%"; return f
+            txn_b64, version = q["txn"], (q.get("type") or q.get("txVersion") or "v0")
         except Exception as e:  # noqa: BLE001
-            f.error = f"cotización: {e}"; return f
-        rate = q.get("rate") or {}
-        f.quote_impact_pct = round(impact_pct(rate), 2)
-        f.raw = {"rate": rate, "type": q.get("type") or q.get("txVersion")}
-        if side == "buy" and f.quote_impact_pct > self.p.max_slippage_pct:
-            f.error = f"impacto {f.quote_impact_pct:.1f}% > {self.p.max_slippage_pct}%"; return f
+            # segunda vía: PumpPortal arma la transacción directo contra la curva / PumpSwap
+            try:
+                pp_amount = amount if side == "buy" else ("100%" if amount == "auto" else amount)
+                txn_b64 = self._pumpportal_tx(side, mint, pp_amount, max(self.p.swap_slippage_pct, 15))
+                via = "pumpportal"; f.raw = {"via": via, "st_error": str(e)[:160]}
+            except Exception as e2:  # noqa: BLE001
+                f.error = f"cotización: {str(e)[:120]} | pumpportal: {str(e2)[:120]}"; return f
         try:
-            signed = self._sign(q["txn"], q.get("type") or q.get("txVersion") or "v0")
+            signed = self._sign(txn_b64, version)
             sig = self.rpc.send_raw(signed)
             f.sig = sig
             st = self.rpc.wait_confirmed(sig, timeout=75)
