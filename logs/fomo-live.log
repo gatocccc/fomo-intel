@@ -1,7 +1,3 @@
-Oct 24 04:35:06 simplai-prod python3[321245]: 2026-10-24 04:35:06,886 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 04:35:06 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
-Oct 24 04:35:06 simplai-prod python3[321245]: <head><title>502 Bad Gateway</title></head>
-Oct 24 04:35:06 simplai-prod python3[321245]: <body>
-Oct 24 04:35:06 simplai-prod python3[321245]: <center><h1>502 Bad Gateway</h1></center>
 Oct 24 04:35:06 simplai-prod python3[321245]: <hr><center>nginx/1.22.1</center>
 Oct 24 04:35:06 simplai-prod python3[321245]: </body>
 Oct 24 04:35:06 simplai-prod python3[321245]: </html>
@@ -298,3 +294,7 @@ Oct 24 14:16:09 simplai-prod python3[366020]: 2026-10-24 14:16:09,316 INFO live:
 Oct 24 14:21:09 simplai-prod python3[366020]: 2026-10-24 14:21:09,969 INFO live: latido: stream=True tokens_vistos=950 seguidos=295 candidatos=0 abiertas=0 cerradas=22 st_requests=14 SOL=$100
 Oct 24 14:26:10 simplai-prod python3[366020]: 2026-10-24 14:26:10,580 INFO live: latido: stream=True tokens_vistos=1032 seguidos=323 candidatos=0 abiertas=0 cerradas=22 st_requests=15 SOL=$101
 Oct 24 14:31:11 simplai-prod python3[366020]: 2026-10-24 14:31:11,303 INFO live: latido: stream=True tokens_vistos=1133 seguidos=348 candidatos=0 abiertas=0 cerradas=22 st_requests=16 SOL=$100
+Oct 24 14:36:11 simplai-prod python3[366020]: 2026-10-24 14:36:11,398 INFO live: latido: stream=True tokens_vistos=1204 seguidos=343 candidatos=0 abiertas=0 cerradas=22 st_requests=17 SOL=$101
+Oct 24 14:38:17 simplai-prod python3[366020]: 2026-10-24 14:38:17,281 INFO live.rules_st: CANDIDATO v1.2 WAGMI move=6.1x compradores=100 vol=$12401 snipers=31 -> confirma a T3
+Oct 24 14:39:02 simplai-prod python3[366020]: 2026-10-24 14:39:02,333 INFO live.rules_st: CANDIDATO v1.2 decision move=6.5x compradores=100 vol=$10589 snipers=8 -> confirma a T3
+Oct 24 14:39:08 simplai-prod python3[366020]: 2026-10-24 14:39:08,785 WARNING live: compra WAGMI falló: impacto 14.5% > 8.0%
