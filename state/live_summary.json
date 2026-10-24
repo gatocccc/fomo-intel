@@ -1,5 +1,5 @@
 {
- "ts": 1792841374.98994,
+ "ts": 1792841677.9930604,
  "mode": "paper",
  "open": 3,
  "closed": 18,
@@ -13,7 +13,7 @@
   {
    "symbol": "Fpd8Mo",
    "mint": "Fpd8MowfCEWXAtAfgJucruJFiKPwxyJMZhx2TTVgpump",
-   "age_min": 379.3,
+   "age_min": 384.3,
    "mult": 0.84,
    "peak_mult": 1.34,
    "size_usd": 10.0,
@@ -22,7 +22,7 @@
   {
    "symbol": "EiXWTc",
    "mint": "EiXWTceqxknhGx2N9Kjwtdw2YPv8cPeAY3pw3TMapump",
-   "age_min": 300.5,
+   "age_min": 305.5,
    "mult": 1.41,
    "peak_mult": 1.81,
    "size_usd": 10.0,
@@ -31,9 +31,9 @@
   {
    "symbol": "Cggjah",
    "mint": "Cggjah6mVhhh6uwCbjGUfPLnapsBbzUL2aAZokHo3iYT",
-   "age_min": 2.2,
-   "mult": 0.92,
-   "peak_mult": 1.0,
+   "age_min": 7.3,
+   "mult": 0.96,
+   "peak_mult": 1.16,
    "size_usd": 10.0,
    "tp_done": false
   }
@@ -222,11 +222,11 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 101.41913503016907,
+ "sol_usd": 101.32148010816846,
  "stream_connected": true,
- "stream_msgs": 2577,
- "tokens_seen": 2528,
- "tokens_tracked": 70,
+ "stream_msgs": 2647,
+ "tokens_seen": 2598,
+ "tokens_tracked": 84,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 5,
@@ -241,14 +241,14 @@
   ]
  },
  "follow_buys_seen": 12,
- "st_requests": 2473,
+ "st_requests": 2533,
  "stream_errors": [
   "10:43:50 Connection to remote host was lost.",
   "10:43:53 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 10:43:53 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "stream_counts": {
   "otros": 7,
-  "create": 2547,
+  "create": 2617,
   "buy": 13,
   "sell": 10
  },
