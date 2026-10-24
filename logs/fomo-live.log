@@ -1,8 +1,3 @@
-Oct 24 02:34:38 simplai-prod python3[284091]: 2026-10-24 02:34:38,797 INFO live: latido: stream=True tokens_vistos=7687 seguidos=129 candidatos=0 abiertas=0 cerradas=1 st_requests=85 SOL=$102
-Oct 24 02:39:39 simplai-prod python3[284091]: 2026-10-24 02:39:39,170 INFO live: latido: stream=True tokens_vistos=7775 seguidos=121 candidatos=0 abiertas=0 cerradas=1 st_requests=86 SOL=$102
-Oct 24 02:44:39 simplai-prod python3[284091]: 2026-10-24 02:44:39,542 INFO live: latido: stream=True tokens_vistos=7838 seguidos=100 candidatos=0 abiertas=0 cerradas=1 st_requests=87 SOL=$102
-Oct 24 02:49:39 simplai-prod python3[284091]: 2026-10-24 02:49:39,950 INFO live: latido: stream=True tokens_vistos=7924 seguidos=121 candidatos=0 abiertas=0 cerradas=1 st_requests=88 SOL=$102
-Oct 24 02:54:40 simplai-prod python3[284091]: 2026-10-24 02:54:40,351 INFO live: latido: stream=True tokens_vistos=8013 seguidos=130 candidatos=0 abiertas=0 cerradas=1 st_requests=89 SOL=$103
 Oct 24 02:59:40 simplai-prod python3[284091]: 2026-10-24 02:59:40,896 INFO live: latido: stream=True tokens_vistos=8072 seguidos=102 candidatos=0 abiertas=0 cerradas=1 st_requests=90 SOL=$103
 Oct 24 03:04:41 simplai-prod python3[284091]: 2026-10-24 03:04:41,502 INFO live: latido: stream=True tokens_vistos=8156 seguidos=115 candidatos=0 abiertas=0 cerradas=1 st_requests=91 SOL=$103
 Oct 24 03:09:41 simplai-prod python3[284091]: 2026-10-24 03:09:41,972 INFO live: latido: stream=True tokens_vistos=8237 seguidos=111 candidatos=0 abiertas=0 cerradas=1 st_requests=92 SOL=$103
@@ -298,3 +293,8 @@ Oct 24 12:43:40 simplai-prod python3[335643]: 2026-10-24 12:43:40,906 INFO live:
 Oct 24 12:43:48 simplai-prod python3[335643]: 2026-10-24 12:43:48,587 INFO live.helius: HELIUS 14Rb84 buy 9f2geiAh 0.1734 SOL @ 3.473e-07 (lat 0.1s)
 Oct 24 12:43:52 simplai-prod python3[335643]: 2026-10-24 12:43:52,998 INFO live: COPIA 9f2geiAh siguiendo a 14Rb84… 0.0986 SOL a 3.683e-07 (lat 0.0s slip +6.0%) mcap=347 SOL
 Oct 24 12:48:40 simplai-prod python3[335643]: 2026-10-24 12:48:40,953 INFO live: latido: stream=True tokens_vistos=3533 seguidos=131 candidatos=0 abiertas=3 cerradas=19 st_requests=3193 SOL=$102
+Oct 24 12:51:13 simplai-prod python3[335643]: 2026-10-24 12:51:13,213 INFO live.helius: HELIUS 14Rb84 sell 9f2geiAh 0.1746 SOL @ 3.496e-07 (lat 0.2s)
+Oct 24 12:51:13 simplai-prod python3[335643]: 2026-10-24 12:51:13,773 INFO live.portfolio: CERRADA 9f2gei ret=-10.7% pnl=US$-1.07 salidas=['seguido vendió']
+Oct 24 12:51:13 simplai-prod python3[335643]: 2026-10-24 12:51:13,774 INFO live: VENTA copia 9f2geiAh (14Rb84 vendió) a 0.89x -> 0.0880 SOL [CERRADA]
+Oct 24 12:51:51 simplai-prod python3[335643]: 2026-10-24 12:51:51,066 INFO live.helius: HELIUS 14Rb84 buy FxXuYvHC 0.1768 SOL @ 8.663e-08 (lat 0.1s)
+Oct 24 12:53:40 simplai-prod python3[335643]: 2026-10-24 12:53:40,998 INFO live: latido: stream=True tokens_vistos=3598 seguidos=98 candidatos=0 abiertas=2 cerradas=20 st_requests=3241 SOL=$102
