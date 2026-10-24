@@ -1,19 +1,19 @@
 {
- "ts": 1792841101.6272514,
+ "ts": 1792841374.98994,
  "mode": "paper",
  "open": 3,
- "closed": 17,
- "wins": 4,
- "hit_rate": 0.235,
- "pnl_usd_total": -21.28,
- "pnl_usd_today": -12.3,
- "ret_per_usd": -2.129,
+ "closed": 18,
+ "wins": 5,
+ "hit_rate": 0.278,
+ "pnl_usd_total": -2.37,
+ "pnl_usd_today": 6.61,
+ "ret_per_usd": -0.238,
  "stop_reason": null,
  "positions": [
   {
    "symbol": "Fpd8Mo",
    "mint": "Fpd8MowfCEWXAtAfgJucruJFiKPwxyJMZhx2TTVgpump",
-   "age_min": 374.7,
+   "age_min": 379.3,
    "mult": 0.84,
    "peak_mult": 1.34,
    "size_usd": 10.0,
@@ -22,7 +22,7 @@
   {
    "symbol": "EiXWTc",
    "mint": "EiXWTceqxknhGx2N9Kjwtdw2YPv8cPeAY3pw3TMapump",
-   "age_min": 295.9,
+   "age_min": 300.5,
    "mult": 1.41,
    "peak_mult": 1.81,
    "size_usd": 10.0,
@@ -31,14 +31,32 @@
   {
    "symbol": "Cggjah",
    "mint": "Cggjah6mVhhh6uwCbjGUfPLnapsBbzUL2aAZokHo3iYT",
-   "age_min": 26.7,
-   "mult": 2.24,
-   "peak_mult": 2.32,
+   "age_min": 2.2,
+   "mult": 0.92,
+   "peak_mult": 1.0,
    "size_usd": 10.0,
    "tp_done": false
   }
  ],
  "last_closed": [
+  {
+   "ts": 1792841176.4215236,
+   "day": "2026-10-24",
+   "mint": "Cggjah6mVhhh6uwCbjGUfPLnapsBbzUL2aAZokHo3iYT",
+   "symbol": "Cggjah",
+   "opened_ts": 1792839498.5958078,
+   "hold_min": 28.0,
+   "sol_in": 0.09852770136537234,
+   "sol_out": 0.28488870479805034,
+   "pnl_sol": 0.186361,
+   "pnl_usd": 18.91,
+   "ret": 1.8915,
+   "peak_mult": 3.07,
+   "exits": [
+    "tp3x"
+   ],
+   "leftover_tokens": 0.0
+  },
   {
    "ts": 1792829212.678291,
    "day": "2026-10-24",
@@ -200,63 +218,45 @@
     "trailing"
    ],
    "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792820461.7864206,
-   "day": "2026-10-24",
-   "mint": "6SMfgZkr9QRseAyNAJwvYEe7Nk3PDJTFj1srYXLMFCk4",
-   "symbol": "6SMfgZ",
-   "opened_ts": 1792820136.3291912,
-   "hold_min": 5.4,
-   "sol_in": 0.09788171163237082,
-   "sol_out": 0.06526998364661926,
-   "pnl_sol": -0.032612,
-   "pnl_usd": -3.33,
-   "ret": -0.3332,
-   "peak_mult": 1.36,
-   "exits": [
-    "trailing"
-   ],
-   "leftover_tokens": 0.0
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 101.48614075624201,
+ "sol_usd": 101.41913503016907,
  "stream_connected": true,
- "stream_msgs": 2542,
- "tokens_seen": 2497,
- "tokens_tracked": 109,
+ "stream_msgs": 2577,
+ "tokens_seen": 2528,
+ "tokens_tracked": 70,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 5,
- "account_trades": 21,
+ "account_trades": 23,
  "helius": {
   "connected": true,
-  "notifications": 63,
-  "parsed": 28,
+  "notifications": 67,
+  "parsed": 31,
   "subs": 5,
   "errors": [
    "10:46:56 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 11,
- "st_requests": 2425,
+ "follow_buys_seen": 12,
+ "st_requests": 2473,
  "stream_errors": [
   "10:43:50 Connection to remote host was lost.",
   "10:43:53 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 10:43:53 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "stream_counts": {
-  "otros": 5,
-  "create": 2516,
-  "buy": 12,
-  "sell": 9
+  "otros": 7,
+  "create": 2547,
+  "buy": 13,
+  "sell": 10
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
  "stream_trades": 0,

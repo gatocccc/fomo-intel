@@ -1,10 +1,3 @@
-Oct 23 23:35:52 simplai-prod python3[284091]: 2026-10-23 23:35:52,431 INFO live.stream: stream conectado
-Oct 23 23:39:24 simplai-prod python3[284091]: 2026-10-23 23:39:24,208 INFO live: latido: stream=True tokens_vistos=5099 seguidos=94 candidatos=0 abiertas=0 cerradas=1 st_requests=49 SOL=$103
-Oct 23 23:44:24 simplai-prod python3[284091]: 2026-10-23 23:44:24,652 INFO live: latido: stream=True tokens_vistos=5209 seguidos=149 candidatos=0 abiertas=0 cerradas=1 st_requests=50 SOL=$102
-Oct 23 23:48:02 simplai-prod python3[284091]: 2026-10-23 23:48:02,745 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
-Oct 23 23:48:06 simplai-prod python3[284091]: 2026-10-23 23:48:06,888 INFO live.stream: stream conectado
-Oct 23 23:49:25 simplai-prod python3[284091]: 2026-10-23 23:49:25,169 INFO live: latido: stream=True tokens_vistos=5258 seguidos=96 candidatos=0 abiertas=0 cerradas=1 st_requests=51 SOL=$102
-Oct 23 23:54:25 simplai-prod python3[284091]: 2026-10-23 23:54:25,453 INFO live: latido: stream=True tokens_vistos=5300 seguidos=63 candidatos=0 abiertas=0 cerradas=1 st_requests=52 SOL=$103
 Oct 23 23:59:25 simplai-prod python3[284091]: 2026-10-23 23:59:25,740 INFO live: latido: stream=True tokens_vistos=5382 seguidos=95 candidatos=0 abiertas=0 cerradas=1 st_requests=53 SOL=$103
 Oct 24 00:00:24 simplai-prod python3[284091]: 2026-10-24 00:00:24,008 WARNING live.signals: precio SOL: 503 Server Error: Service Unavailable for url: https://data.solanatracker.io/price?token=So11111111111111111111111111111111111111112
 Oct 24 00:04:26 simplai-prod python3[284091]: 2026-10-24 00:04:26,219 INFO live: latido: stream=True tokens_vistos=5471 seguidos=126 candidatos=0 abiertas=0 cerradas=1 st_requests=55 SOL=$103
@@ -298,3 +291,10 @@ Oct 24 11:08:30 simplai-prod python3[335643]: 2026-10-24 11:08:30,047 INFO live:
 Oct 24 11:13:30 simplai-prod python3[335643]: 2026-10-24 11:13:30,065 INFO live: latido: stream=True tokens_vistos=2332 seguidos=82 candidatos=0 abiertas=3 cerradas=17 st_requests=2291 SOL=$102
 Oct 24 11:18:30 simplai-prod python3[335643]: 2026-10-24 11:18:30,273 INFO live: latido: stream=True tokens_vistos=2401 seguidos=93 candidatos=0 abiertas=3 cerradas=17 st_requests=2349 SOL=$102
 Oct 24 11:23:30 simplai-prod python3[335643]: 2026-10-24 11:23:30,903 INFO live: latido: stream=True tokens_vistos=2478 seguidos=108 candidatos=0 abiertas=3 cerradas=17 st_requests=2407 SOL=$101
+Oct 24 11:26:16 simplai-prod python3[335643]: 2026-10-24 11:26:16,421 INFO live.portfolio: CERRADA Cggjah ret=+189.2% pnl=US$+18.91 salidas=['tp3x']
+Oct 24 11:26:16 simplai-prod python3[335643]: 2026-10-24 11:26:16,422 INFO live: VENTA Cggjah tp3x 100% a 2.89x slippage=+6.0% -> 0.2849 SOL [CERRADA]
+Oct 24 11:26:36 simplai-prod python3[335643]: 2026-10-24 11:26:36,734 INFO live.helius: HELIUS 14Rb84 sell 7wYXEuBT 0.7322 SOL @ 5.992e-08 (lat 0.1s)
+Oct 24 11:27:04 simplai-prod python3[335643]: 2026-10-24 11:27:04,530 INFO live.helius: HELIUS 14Rb84 buy 96KRBho9 0.4120 SOL @ 1.092e-07 (lat 0.2s)
+Oct 24 11:27:20 simplai-prod python3[335643]: 2026-10-24 11:27:20,929 INFO live.helius: HELIUS 14Rb84 buy Cggjah6m 0.2574 SOL @ 1.791e-06 (lat 0.1s)
+Oct 24 11:27:21 simplai-prod python3[335643]: 2026-10-24 11:27:21,662 INFO live: COPIA Cggjah6m siguiendo a 14Rb84… 0.0986 SOL a 1.774e-06 (lat 0.0s slip -0.9%) mcap=1791 SOL
+Oct 24 11:28:31 simplai-prod python3[335643]: 2026-10-24 11:28:31,188 INFO live: latido: stream=True tokens_vistos=2517 seguidos=66 candidatos=0 abiertas=3 cerradas=18 st_requests=2461 SOL=$101
