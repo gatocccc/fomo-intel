@@ -1,8 +1,3 @@
-Oct 24 15:36:07 simplai-prod python3[366020]: 2026-10-24 15:36:07,362 WARNING live: compra Kiryusha falló: impacto 16.7% > 8.0%
-Oct 24 15:36:14 simplai-prod python3[366020]: 2026-10-24 15:36:14,364 INFO live: latido: stream=True tokens_vistos=2218 seguidos=350 candidatos=0 abiertas=0 cerradas=23 st_requests=30 SOL=$99
-Oct 24 15:36:31 simplai-prod python3[366020]: 2026-10-24 15:36:31,238 INFO live.rules_st: CANDIDATO v1.2 BLEP move=8.1x compradores=71 vol=$4820 snipers=18 -> confirma a T3
-Oct 24 15:37:06 simplai-prod python3[366020]: 2026-10-24 15:37:06,009 WARNING live: compra BLEP falló: impacto 32.2% > 8.0%
-Oct 24 15:41:15 simplai-prod python3[366020]: 2026-10-24 15:41:15,330 INFO live: latido: stream=True tokens_vistos=2293 seguidos=333 candidatos=0 abiertas=0 cerradas=23 st_requests=31 SOL=$99
 Oct 24 15:45:37 simplai-prod python3[366020]: 2026-10-24 15:45:37,567 INFO live.rules_st: CANDIDATO v1.2 BERE move=3.3x compradores=99 vol=$12762 snipers=24 -> confirma a T3
 Oct 24 15:46:06 simplai-prod python3[366020]: 2026-10-24 15:46:06,410 WARNING live: compra BERE falló: impacto 12.9% > 8.0%
 Oct 24 15:46:15 simplai-prod python3[366020]: 2026-10-24 15:46:15,413 INFO live: latido: stream=True tokens_vistos=2386 seguidos=322 candidatos=0 abiertas=0 cerradas=23 st_requests=32 SOL=$99
@@ -298,3 +293,8 @@ Oct 24 20:04:08 simplai-prod python3[393883]: 2026-10-24 20:04:08,302 INFO live:
 Oct 24 20:08:15 simplai-prod python3[393883]: 2026-10-24 20:08:15,000 INFO live: latido: stream=True tokens_vistos=1237 seguidos=294 candidatos=0 abiertas=2 cerradas=16 st_requests=76 SOL=$101
 Oct 24 20:09:17 simplai-prod python3[393883]: 2026-10-24 20:09:17,518 INFO live.portfolio: CERRADA HNITE ret=+16.0% pnl=US$+1.64 salidas=['trailing']
 Oct 24 20:09:17 simplai-prod python3[393883]: 2026-10-24 20:09:17,519 INFO live: VENTA HNITE trailing 100% a 1.16x slippage=+2.8% -> 0.1177 SOL [CERRADA]
+Oct 24 20:12:43 simplai-prod python3[393883]: 2026-10-24 20:12:43,433 INFO live.rules_st: CANDIDATO v1.2 DUGGO move=4.8x compradores=100 vol=$16189 snipers=18 -> confirma a T3
+Oct 24 20:12:44 simplai-prod python3[393883]: 2026-10-24 20:12:44,032 INFO live.rules_st: CANDIDATO v1.2 BIBI move=7.2x compradores=100 vol=$14852 snipers=10 -> confirma a T3
+Oct 24 20:12:44 simplai-prod python3[393883]: 2026-10-24 20:12:44,278 INFO live: señal DUGGO no operada: STOP manual
+Oct 24 20:13:05 simplai-prod python3[393883]: 2026-10-24 20:13:05,961 INFO live: señal BIBI no operada: STOP manual
+Oct 24 20:13:15 simplai-prod python3[393883]: 2026-10-24 20:13:15,964 INFO live: latido: stream=True tokens_vistos=1288 seguidos=274 candidatos=0 abiertas=1 cerradas=17 st_requests=92 SOL=$101
