@@ -1,7 +1,7 @@
 {
- "ts": 1792871401.6028166,
+ "ts": 1792871696.0041077,
  "mode": "real",
- "open": 0,
+ "open": 1,
  "closed": 15,
  "wins": 4,
  "hit_rate": 0.267,
@@ -9,7 +9,17 @@
  "pnl_usd_today": -36.45,
  "ret_per_usd": -3.555,
  "stop_reason": null,
- "positions": [],
+ "positions": [
+  {
+   "symbol": "Ethan",
+   "mint": "GMBHjdLsSCnZd2ttZm4MmRG9cVvYz4xqmWRmXhEcpump",
+   "age_min": 2.8,
+   "mult": 1.08,
+   "peak_mult": 1.29,
+   "size_usd": 10.25,
+   "tp_done": false
+  }
+ ],
  "last_closed": [
   {
    "ts": 1792871104.6647193,
@@ -193,11 +203,11 @@
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.2383,
- "sol_usd": 100.9873434137839,
+ "wallet_sol": 1.1368,
+ "sol_usd": 101.01891910734535,
  "stream_connected": true,
- "stream_msgs": 1378,
- "tokens_seen": 973,
+ "stream_msgs": 1527,
+ "tokens_seen": 1035,
  "tokens_tracked": 264,
  "candidates": [],
  "strategy": "rules_st",
@@ -205,35 +215,35 @@
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 147,
+ "st_requests": 163,
  "stream_errors": [
   "19:35:02 Connection to remote host was lost.",
   "19:35:04 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 19:35:04 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "rules_st": {
-  "multi_calls": 52,
-  "prefilter_pass": 21,
-  "full_eval": 21,
-  "candidates": 9,
-  "bought": 4,
+  "multi_calls": 56,
+  "prefilter_pass": 23,
+  "full_eval": 23,
+  "candidates": 11,
+  "bought": 5,
   "pending_t3": 1,
-  "evaluated": 903
+  "evaluated": 988
  },
  "stream_counts": {
-  "otros": 10,
-  "create": 986,
-  "buy": 227,
-  "sell": 155
+  "otros": 11,
+  "create": 1048,
+  "buy": 275,
+  "sell": 193
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}"
+  "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 382,
- "stream_cost_sol_est": 0.0004,
+ "stream_trades": 468,
+ "stream_cost_sol_est": 0.0005,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "real",
