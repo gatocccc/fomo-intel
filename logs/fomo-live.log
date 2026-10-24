@@ -1,4 +1,3 @@
-Oct 24 05:45:34 simplai-prod python3[321245]: 2026-10-24 05:45:34,619 INFO live: VENTA B7cX5w trailing 100% a 1.54x slippage=+6.0% -> 0.1509 SOL [CERRADA]
 Oct 24 05:46:15 simplai-prod python3[321245]: 2026-10-24 05:46:15,830 INFO live: latido: stream=True tokens_vistos=1416 seguidos=143 candidatos=0 abiertas=2 cerradas=9 st_requests=476 SOL=$102
 Oct 24 05:47:52 simplai-prod python3[321245]: 2026-10-24 05:47:52,071 INFO live.helius: HELIUS 14Rb84 buy DF35EFJB 0.3565 SOL @ 8.948e-08 (lat 0.1s)
 Oct 24 05:47:56 simplai-prod python3[321245]: 2026-10-24 05:47:56,589 INFO live: COPIA DF35EFJB siguiendo a 14Rb84… 0.0978 SOL a 9.489e-08 (lat 0.0s slip +6.0%) mcap=89 SOL
@@ -298,3 +297,4 @@ Oct 24 15:36:07 simplai-prod python3[366020]: 2026-10-24 15:36:07,362 WARNING li
 Oct 24 15:36:14 simplai-prod python3[366020]: 2026-10-24 15:36:14,364 INFO live: latido: stream=True tokens_vistos=2218 seguidos=350 candidatos=0 abiertas=0 cerradas=23 st_requests=30 SOL=$99
 Oct 24 15:36:31 simplai-prod python3[366020]: 2026-10-24 15:36:31,238 INFO live.rules_st: CANDIDATO v1.2 BLEP move=8.1x compradores=71 vol=$4820 snipers=18 -> confirma a T3
 Oct 24 15:37:06 simplai-prod python3[366020]: 2026-10-24 15:37:06,009 WARNING live: compra BLEP falló: impacto 32.2% > 8.0%
+Oct 24 15:41:15 simplai-prod python3[366020]: 2026-10-24 15:41:15,330 INFO live: latido: stream=True tokens_vistos=2293 seguidos=333 candidatos=0 abiertas=0 cerradas=23 st_requests=31 SOL=$99
