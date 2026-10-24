@@ -1,5 +1,5 @@
 {
- "ts": 1792824887.7472005,
+ "ts": 1792825189.5389652,
  "mode": "paper",
  "open": 3,
  "closed": 16,
@@ -13,7 +13,7 @@
   {
    "symbol": "Fpd8Mo",
    "mint": "Fpd8MowfCEWXAtAfgJucruJFiKPwxyJMZhx2TTVgpump",
-   "age_min": 104.5,
+   "age_min": 109.5,
    "mult": 0.97,
    "peak_mult": 1.34,
    "size_usd": 10.0,
@@ -22,8 +22,8 @@
   {
    "symbol": "6SMfgZ",
    "mint": "6SMfgZkr9QRseAyNAJwvYEe7Nk3PDJTFj1srYXLMFCk4",
-   "age_min": 30.9,
-   "mult": 1.41,
+   "age_min": 35.9,
+   "mult": 1.23,
    "peak_mult": 1.58,
    "size_usd": 10.0,
    "tp_done": false
@@ -31,7 +31,7 @@
   {
    "symbol": "EiXWTc",
    "mint": "EiXWTceqxknhGx2N9Kjwtdw2YPv8cPeAY3pw3TMapump",
-   "age_min": 25.7,
+   "age_min": 30.7,
    "mult": 1.76,
    "peak_mult": 1.81,
    "size_usd": 10.0,
@@ -222,18 +222,18 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 101.96275579368938,
+ "sol_usd": 102.00575089912387,
  "stream_connected": true,
- "stream_msgs": 5009,
- "tokens_seen": 2078,
- "tokens_tracked": 72,
+ "stream_msgs": 5075,
+ "tokens_seen": 2125,
+ "tokens_tracked": 69,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 5,
  "account_trades": 29,
  "helius": {
   "connected": true,
-  "notifications": 68,
+  "notifications": 69,
   "parsed": 32,
   "subs": 5,
   "errors": [
@@ -241,16 +241,16 @@
   ]
  },
  "follow_buys_seen": 13,
- "st_requests": 1094,
+ "st_requests": 1148,
  "stream_errors": [
   "04:35:04 Connection to remote host was lost.",
   "04:35:06 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 04:35:06 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "stream_counts": {
   "otros": 38,
-  "create": 2107,
-  "buy": 1645,
-  "sell": 1218,
+  "create": 2154,
+  "buy": 1655,
+  "sell": 1227,
   "migrate": 1
  },
  "stream_samples": [
@@ -260,8 +260,8 @@
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 2839,
- "stream_cost_sol_est": 0.0028,
+ "stream_trades": 2858,
+ "stream_cost_sol_est": 0.0029,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "paper",
