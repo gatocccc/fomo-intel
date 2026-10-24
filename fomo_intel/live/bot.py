@@ -141,6 +141,8 @@ class Bot:
                      "n_wallets": len(self.follow_buys[mint])}
                 if e["mcap_sol"] and e["mcap_sol"] > self.p.follow_max_mcap_sol:
                     self.port.log_signal(d, "seguidor: mcap alto"); continue
+                if e["mcap_sol"] and e["mcap_sol"] < self.p.follow_min_mcap_sol:
+                    self.port.log_signal(d, "seguidor: mcap muy chico"); continue
                 if len(self.follow_buys[mint]) < self.p.follow_min_wallets:
                     self.port.log_signal(d, "seguidor: esperando más billeteras"); continue
                 why_not = self.port.stop_reason()

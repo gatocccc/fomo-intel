@@ -54,6 +54,7 @@ class LiveParams:
     follow_tp_mult: float = 3.0         # toma de ganancia de seguridad (todo)
     follow_max_hold_min: int = 90
     follow_max_mcap_sol: float = 1500.0 # no copiar compras en tokens ya grandes (en SOL de mcap; ~US$150K)
+    follow_min_mcap_sol: float = 200.0  # ni en tokens tan chicos que US$10 mueven el precio >10%
     follow_min_wallets: int = 1         # cuántos seguidos tienen que haber comprado el token
     # --- simulado ---
     paper_slippage: float = 0.05

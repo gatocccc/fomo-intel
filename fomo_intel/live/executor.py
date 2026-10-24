@@ -85,6 +85,19 @@ class PaperExecutor:
         f = Fill(True, "buy", mint, sol=sol_amount, tokens=sol_amount / px, price=px, expected_price=ref_price,
                  slippage_pct=round((px / ref_price - 1) * 100, 2), sig=f"paper-{int(time.time()*1000)}")
         self._try_quote(f, SOL_MINT, mint, round(sol_amount, 6))
+        # mismo guardia que en real: si el impacto cotizado supera el máximo, en vivo NO habríamos comprado
+        if f.quote_impact_pct and f.quote_impact_pct > self.p.max_slippage_pct:
+            f.ok = False; f.error = f"impacto {f.quote_impact_pct:.1f}% > {self.p.max_slippage_pct}%"
+        elif f.quote_impact_pct:
+            # fill simulado al precio de ejecución cotizado (más realista que slippage fijo)
+            rate = f.raw.get("rate") or {}
+            try:
+                tokens_out = float(rate.get("amountOut") or 0)
+                if tokens_out > 0:
+                    f.tokens = tokens_out; f.price = sol_amount / tokens_out
+                    f.slippage_pct = round((f.price / ref_price - 1) * 100, 2) if ref_price else 0.0
+            except (TypeError, ValueError):
+                pass
         return f
 
     def sell(self, mint: str, tokens: float, ref_price: float) -> Fill:
