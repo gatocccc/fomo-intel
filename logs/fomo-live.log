@@ -1,4 +1,3 @@
-Oct 23 23:35:48 simplai-prod python3[284091]: <hr><center>nginx/1.22.1</center>
 Oct 23 23:35:48 simplai-prod python3[284091]: </body>
 Oct 23 23:35:48 simplai-prod python3[284091]: </html>
 Oct 23 23:35:48 simplai-prod python3[284091]: ; reconecto en 4s
@@ -298,3 +297,4 @@ Oct 24 10:58:14 simplai-prod python3[335643]: 2026-10-24 10:58:14,200 INFO live.
 Oct 24 10:58:18 simplai-prod python3[335643]: 2026-10-24 10:58:18,596 INFO live: COPIA Cggjah6m siguiendo a 14Rb84… 0.0985 SOL a 6.349e-07 (lat 0.0s slip +6.0%) mcap=599 SOL
 Oct 24 10:58:29 simplai-prod python3[335643]: 2026-10-24 10:58:29,154 INFO live: latido: stream=True tokens_vistos=2153 seguidos=114 candidatos=0 abiertas=3 cerradas=17 st_requests=2114 SOL=$101
 Oct 24 11:03:29 simplai-prod python3[335643]: 2026-10-24 11:03:29,861 INFO live: latido: stream=True tokens_vistos=2220 seguidos=89 candidatos=0 abiertas=3 cerradas=17 st_requests=2172 SOL=$102
+Oct 24 11:08:30 simplai-prod python3[335643]: 2026-10-24 11:08:30,047 INFO live: latido: stream=True tokens_vistos=2272 seguidos=93 candidatos=0 abiertas=3 cerradas=17 st_requests=2232 SOL=$102
