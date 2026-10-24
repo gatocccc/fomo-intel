@@ -1,34 +1,3 @@
-Oct 24 11:45:05 simplai-prod python3[335643]: 2026-10-24 11:45:05,655 INFO live.stream: stream conectado
-Oct 24 11:48:33 simplai-prod python3[335643]: 2026-10-24 11:48:33,388 INFO live: latido: stream=True tokens_vistos=2729 seguidos=79 candidatos=0 abiertas=3 cerradas=18 st_requests=2683 SOL=$101
-Oct 24 11:53:33 simplai-prod python3[335643]: 2026-10-24 11:53:33,790 INFO live: latido: stream=True tokens_vistos=2771 seguidos=67 candidatos=0 abiertas=3 cerradas=18 st_requests=2733 SOL=$101
-Oct 24 11:54:17 simplai-prod python3[335643]: 2026-10-24 11:54:17,309 INFO live.portfolio: CERRADA Cggjah ret=-32.7% pnl=US$-3.27 salidas=['trailing']
-Oct 24 11:54:17 simplai-prod python3[335643]: 2026-10-24 11:54:17,310 INFO live: VENTA Cggjah trailing 100% a 0.67x slippage=+6.0% -> 0.0663 SOL [CERRADA]
-Oct 24 11:58:34 simplai-prod python3[335643]: 2026-10-24 11:58:34,223 INFO live: latido: stream=True tokens_vistos=2823 seguidos=72 candidatos=0 abiertas=2 cerradas=19 st_requests=2775 SOL=$101
-Oct 24 12:02:07 simplai-prod python3[335643]: 2026-10-24 12:02:07,863 INFO live.helius: HELIUS 14Rb84 sell 6Jzjzn9S 0.3620 SOL @ 1.405e-07 (lat 0.2s)
-Oct 24 12:03:35 simplai-prod python3[335643]: 2026-10-24 12:03:35,236 INFO live: latido: stream=True tokens_vistos=2859 seguidos=52 candidatos=0 abiertas=2 cerradas=19 st_requests=2816 SOL=$101
-Oct 24 12:08:35 simplai-prod python3[335643]: 2026-10-24 12:08:35,243 INFO live: latido: stream=True tokens_vistos=2918 seguidos=77 candidatos=0 abiertas=2 cerradas=19 st_requests=2855 SOL=$101
-Oct 24 12:10:08 simplai-prod python3[335643]: 2026-10-24 12:10:08,609 INFO live.helius: HELIUS 14Rb84 buy HRTvReAx 0.4120 SOL @ 6.293e-08 (lat 0.1s)
-Oct 24 12:11:22 simplai-prod python3[335643]: 2026-10-24 12:11:22,018 INFO live.helius: HELIUS 14Rb84 buy HRTvReAx 0.0220 SOL @ 6.193e-08 (lat 0.1s)
-Oct 24 12:13:35 simplai-prod python3[335643]: 2026-10-24 12:13:35,905 INFO live: latido: stream=True tokens_vistos=3014 seguidos=121 candidatos=0 abiertas=2 cerradas=19 st_requests=2894 SOL=$101
-Oct 24 12:18:36 simplai-prod python3[335643]: 2026-10-24 12:18:36,767 INFO live: latido: stream=True tokens_vistos=3086 seguidos=110 candidatos=0 abiertas=2 cerradas=19 st_requests=2935 SOL=$101
-Oct 24 12:19:18 simplai-prod python3[335643]: 2026-10-24 12:19:18,301 INFO live.helius: HELIUS 14Rb84 sell HRTvReAx 0.2961 SOL @ 4.291e-08 (lat 0.1s)
-Oct 24 12:23:37 simplai-prod python3[335643]: 2026-10-24 12:23:37,659 INFO live: latido: stream=True tokens_vistos=3155 seguidos=108 candidatos=0 abiertas=2 cerradas=19 st_requests=2974 SOL=$102
-Oct 24 12:26:43 simplai-prod python3[335643]: 2026-10-24 12:26:43,243 INFO live.helius: HELIUS 14Rb84 buy 6CmHjTFS 0.3039 SOL @ 8.589e-08 (lat 0.1s)
-Oct 24 12:28:38 simplai-prod python3[335643]: 2026-10-24 12:28:38,534 INFO live: latido: stream=True tokens_vistos=3235 seguidos=107 candidatos=0 abiertas=2 cerradas=19 st_requests=3015 SOL=$102
-Oct 24 12:33:39 simplai-prod python3[335643]: 2026-10-24 12:33:39,049 INFO live: latido: stream=True tokens_vistos=3294 seguidos=100 candidatos=0 abiertas=2 cerradas=19 st_requests=3054 SOL=$102
-Oct 24 12:37:10 simplai-prod python3[335643]: 2026-10-24 12:37:10,325 INFO live.helius: HELIUS 14Rb84 sell 6CmHjTFS 0.1898 SOL @ 5.364e-08 (lat 0.1s)
-Oct 24 12:38:40 simplai-prod python3[335643]: 2026-10-24 12:38:40,027 INFO live: latido: stream=True tokens_vistos=3358 seguidos=93 candidatos=0 abiertas=2 cerradas=19 st_requests=3095 SOL=$102
-Oct 24 12:43:40 simplai-prod python3[335643]: 2026-10-24 12:43:40,906 INFO live: latido: stream=True tokens_vistos=3462 seguidos=137 candidatos=0 abiertas=2 cerradas=19 st_requests=3134 SOL=$101
-Oct 24 12:43:48 simplai-prod python3[335643]: 2026-10-24 12:43:48,587 INFO live.helius: HELIUS 14Rb84 buy 9f2geiAh 0.1734 SOL @ 3.473e-07 (lat 0.1s)
-Oct 24 12:43:52 simplai-prod python3[335643]: 2026-10-24 12:43:52,998 INFO live: COPIA 9f2geiAh siguiendo a 14Rb84… 0.0986 SOL a 3.683e-07 (lat 0.0s slip +6.0%) mcap=347 SOL
-Oct 24 12:48:40 simplai-prod python3[335643]: 2026-10-24 12:48:40,953 INFO live: latido: stream=True tokens_vistos=3533 seguidos=131 candidatos=0 abiertas=3 cerradas=19 st_requests=3193 SOL=$102
-Oct 24 12:51:13 simplai-prod python3[335643]: 2026-10-24 12:51:13,213 INFO live.helius: HELIUS 14Rb84 sell 9f2geiAh 0.1746 SOL @ 3.496e-07 (lat 0.2s)
-Oct 24 12:51:13 simplai-prod python3[335643]: 2026-10-24 12:51:13,773 INFO live.portfolio: CERRADA 9f2gei ret=-10.7% pnl=US$-1.07 salidas=['seguido vendió']
-Oct 24 12:51:13 simplai-prod python3[335643]: 2026-10-24 12:51:13,774 INFO live: VENTA copia 9f2geiAh (14Rb84 vendió) a 0.89x -> 0.0880 SOL [CERRADA]
-Oct 24 12:51:51 simplai-prod python3[335643]: 2026-10-24 12:51:51,066 INFO live.helius: HELIUS 14Rb84 buy FxXuYvHC 0.1768 SOL @ 8.663e-08 (lat 0.1s)
-Oct 24 12:53:40 simplai-prod python3[335643]: 2026-10-24 12:53:40,998 INFO live: latido: stream=True tokens_vistos=3598 seguidos=98 candidatos=0 abiertas=2 cerradas=20 st_requests=3241 SOL=$102
-Oct 24 12:58:42 simplai-prod python3[335643]: 2026-10-24 12:58:42,110 INFO live: latido: stream=True tokens_vistos=3667 seguidos=87 candidatos=0 abiertas=2 cerradas=20 st_requests=3282 SOL=$102
-Oct 24 13:03:42 simplai-prod python3[335643]: 2026-10-24 13:03:42,896 INFO live: latido: stream=True tokens_vistos=3773 seguidos=141 candidatos=0 abiertas=2 cerradas=20 st_requests=3321 SOL=$102
 Oct 24 13:04:30 simplai-prod python3[335643]: 2026-10-24 13:04:30,202 INFO live.helius: HELIUS 14Rb84 sell FxXuYvHC 0.1760 SOL @ 8.622e-08 (lat 0.1s)
 Oct 24 13:08:43 simplai-prod python3[335643]: 2026-10-24 13:08:43,199 INFO live: latido: stream=True tokens_vistos=3900 seguidos=171 candidatos=0 abiertas=2 cerradas=20 st_requests=3362 SOL=$102
 Oct 24 13:13:18 simplai-prod python3[335643]: 2026-10-24 13:13:18,095 INFO live.helius: HELIUS 14Rb84 buy 5FKowS9H 0.1762 SOL @ 1.371e-07 (lat 0.1s)
@@ -298,3 +267,34 @@ Oct 24 18:39:33 simplai-prod python3[380576]: 2026-10-24 18:39:33,921 WARNING li
 Oct 24 18:39:35 simplai-prod python3[380576]: 2026-10-24 18:39:35,399 INFO live: latido: stream=True tokens_vistos=3051 seguidos=408 candidatos=0 abiertas=2 cerradas=9 st_requests=42 SOL=$101
 Oct 24 18:39:44 simplai-prod python3[380576]: 2026-10-24 18:39:44,729 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:39:55 simplai-prod python3[380576]: 2026-10-24 18:39:55,352 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:40:05 simplai-prod python3[380576]: 2026-10-24 18:40:05,715 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:40:16 simplai-prod python3[380576]: 2026-10-24 18:40:16,751 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:40:20 simplai-prod python3[380576]: 2026-10-24 18:40:20,864 INFO live.portfolio: CERRADA AVATARS ret=+3.9% pnl=US$+0.40 salidas=['trailing']
+Oct 24 18:40:20 simplai-prod python3[380576]: 2026-10-24 18:40:20,864 INFO live: VENTA AVATARS trailing 100% a 1.04x slippage=-4.5% -> 0.1055 SOL [CERRADA]
+Oct 24 18:40:29 simplai-prod python3[380576]: 2026-10-24 18:40:29,675 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:40:40 simplai-prod python3[380576]: 2026-10-24 18:40:40,115 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:40:51 simplai-prod python3[380576]: 2026-10-24 18:40:51,677 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:41:01 simplai-prod python3[380576]: 2026-10-24 18:41:01,237 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:41:11 simplai-prod python3[380576]: 2026-10-24 18:41:11,735 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:41:22 simplai-prod python3[380576]: 2026-10-24 18:41:22,798 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:41:33 simplai-prod python3[380576]: 2026-10-24 18:41:33,745 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:41:44 simplai-prod python3[380576]: 2026-10-24 18:41:44,181 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:41:54 simplai-prod python3[380576]: 2026-10-24 18:41:54,424 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:42:04 simplai-prod python3[380576]: 2026-10-24 18:42:04,733 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:42:15 simplai-prod python3[380576]: 2026-10-24 18:42:15,567 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:42:26 simplai-prod python3[380576]: 2026-10-24 18:42:26,273 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:42:36 simplai-prod python3[380576]: 2026-10-24 18:42:36,932 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:42:47 simplai-prod python3[380576]: 2026-10-24 18:42:47,286 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:42:57 simplai-prod python3[380576]: 2026-10-24 18:42:57,864 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:43:08 simplai-prod python3[380576]: 2026-10-24 18:43:08,206 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:43:18 simplai-prod python3[380576]: 2026-10-24 18:43:18,687 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:43:29 simplai-prod python3[380576]: 2026-10-24 18:43:29,434 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:43:39 simplai-prod python3[380576]: 2026-10-24 18:43:39,678 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:43:49 simplai-prod python3[380576]: 2026-10-24 18:43:49,951 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:44:00 simplai-prod python3[380576]: 2026-10-24 18:44:00,314 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:44:10 simplai-prod python3[380576]: 2026-10-24 18:44:10,849 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:44:21 simplai-prod python3[380576]: 2026-10-24 18:44:21,495 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:44:31 simplai-prod python3[380576]: 2026-10-24 18:44:31,963 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:44:42 simplai-prod python3[380576]: 2026-10-24 18:44:42,386 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:44:42 simplai-prod python3[380576]: 2026-10-24 18:44:42,386 INFO live: latido: stream=True tokens_vistos=3128 seguidos=364 candidatos=0 abiertas=1 cerradas=10 st_requests=45 SOL=$101
+Oct 24 18:44:52 simplai-prod python3[380576]: 2026-10-24 18:44:52,860 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
