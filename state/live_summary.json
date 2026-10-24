@@ -1,7 +1,7 @@
 {
- "ts": 1792858476.6527815,
+ "ts": 1792858805.0512347,
  "mode": "real",
- "open": 1,
+ "open": 0,
  "closed": 0,
  "wins": 0,
  "hit_rate": null,
@@ -9,32 +9,22 @@
  "pnl_usd_today": 0,
  "ret_per_usd": 0,
  "stop_reason": null,
- "positions": [
-  {
-   "symbol": "DBB",
-   "mint": "2uqvCvZEMb8YWCGfDTZR92iURoE5Uj6TzmG2uKUxpump",
-   "age_min": 8.5,
-   "mult": 0.88,
-   "peak_mult": 1.0,
-   "size_usd": 10.0,
-   "tp_done": false
-  }
- ],
+ "positions": [],
  "last_closed": [],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.6,
- "sol_usd": 100.05150484609858,
+ "sol_usd": 99.93707339054517,
  "stream_connected": true,
- "stream_msgs": 29,
- "tokens_seen": 28,
- "tokens_tracked": 28,
+ "stream_msgs": 42,
+ "tokens_seen": 41,
+ "tokens_tracked": 41,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 8,
+ "st_requests": 1,
  "stream_errors": [],
  "rules_st": {
   "multi_calls": 0,
@@ -47,7 +37,7 @@
  },
  "stream_counts": {
   "otros": 1,
-  "create": 28
+  "create": 41
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}"

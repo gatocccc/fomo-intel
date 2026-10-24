@@ -1,0 +1,7 @@
+== 028_limpiar_posicion_paper 2026-10-24T16:19:03Z ==
+posiciones encontradas: ['2uqvCvZEMb8YWCGfDTZR92iURoE5Uj6TzmG2uKUxpump']
+active
+Oct 24 16:19:04 simplai-prod python3[380576]: 2026-10-24 16:19:04,103 INFO live: arranca bot modo=real estrategia=rules_st seguidos=0 tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 24 16:19:04 simplai-prod python3[380576]: 2026-10-24 16:19:04,443 INFO live.stream: stream conectado
+Oct 24 16:19:04 simplai-prod python3[380576]: 2026-10-24 16:19:04,683 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$100
+== exit 0 ==
