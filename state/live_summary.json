@@ -1,5 +1,5 @@
 {
- "ts": 1792837178.4421973,
+ "ts": 1792837485.777147,
  "mode": "paper",
  "open": 2,
  "closed": 17,
@@ -13,7 +13,7 @@
   {
    "symbol": "Fpd8Mo",
    "mint": "Fpd8MowfCEWXAtAfgJucruJFiKPwxyJMZhx2TTVgpump",
-   "age_min": 309.4,
+   "age_min": 314.5,
    "mult": 0.98,
    "peak_mult": 1.34,
    "size_usd": 10.0,
@@ -22,8 +22,8 @@
   {
    "symbol": "EiXWTc",
    "mint": "EiXWTceqxknhGx2N9Kjwtdw2YPv8cPeAY3pw3TMapump",
-   "age_min": 230.6,
-   "mult": 1.46,
+   "age_min": 235.7,
+   "mult": 1.47,
    "peak_mult": 1.81,
    "size_usd": 10.0,
    "tp_done": false
@@ -213,30 +213,30 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 101.36837543546388,
+ "sol_usd": 101.37369344623843,
  "stream_connected": true,
- "stream_msgs": 1753,
- "tokens_seen": 1723,
- "tokens_tracked": 64,
+ "stream_msgs": 1803,
+ "tokens_seen": 1770,
+ "tokens_tracked": 66,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 5,
- "account_trades": 15,
+ "account_trades": 17,
  "helius": {
   "connected": true,
-  "notifications": 46,
-  "parsed": 20,
+  "notifications": 49,
+  "parsed": 22,
   "subs": 5,
   "errors": []
  },
- "follow_buys_seen": 8,
- "st_requests": 1807,
+ "follow_buys_seen": 9,
+ "st_requests": 1846,
  "stream_errors": [],
  "stream_counts": {
   "otros": 2,
-  "create": 1736,
-  "buy": 9,
-  "sell": 6
+  "create": 1784,
+  "buy": 10,
+  "sell": 7
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
