@@ -1,12 +1,3 @@
-Oct 24 06:04:27 simplai-prod python3[321245]: 2026-10-24 06:04:27,737 INFO live.portfolio: CERRADA B7cX5w ret=-41.7% pnl=US$-4.17 salidas=['stop']
-Oct 24 06:04:27 simplai-prod python3[321245]: 2026-10-24 06:04:27,738 INFO live: VENTA B7cX5w stop 100% a 0.58x slippage=+6.0% -> 0.0570 SOL [CERRADA]
-Oct 24 06:06:17 simplai-prod python3[321245]: 2026-10-24 06:06:17,210 INFO live: latido: stream=True tokens_vistos=1625 seguidos=55 candidatos=0 abiertas=3 cerradas=10 st_requests=674 SOL=$102
-Oct 24 06:06:32 simplai-prod python3[321245]: 2026-10-24 06:06:32,851 INFO live.helius: HELIUS 14Rb84 buy 6SMfgZkr 0.4105 SOL @ 1.677e-07 (lat 0.1s)
-Oct 24 06:06:33 simplai-prod python3[321245]: 2026-10-24 06:06:33,440 INFO live: COPIA 6SMfgZkr siguiendo a 14Rb84… 0.0979 SOL a 1.742e-07 (lat 0.0s slip +6.0%) mcap=164 SOL
-Oct 24 06:08:35 simplai-prod python3[321245]: 2026-10-24 06:08:35,888 INFO live.helius: HELIUS 14Rb84 sell DF35EFJB 0.2428 SOL @ 6.095e-08 (lat 0.1s)
-Oct 24 06:08:36 simplai-prod python3[321245]: 2026-10-24 06:08:36,582 INFO live.portfolio: CERRADA DF35EF ret=-39.6% pnl=US$-3.96 salidas=['seguido vendió']
-Oct 24 06:08:36 simplai-prod python3[321245]: 2026-10-24 06:08:36,582 INFO live: VENTA copia DF35EFJB (14Rb84 vendió) a 0.60x -> 0.0591 SOL [CERRADA]
-Oct 24 06:10:24 simplai-prod python3[321245]: 2026-10-24 06:10:24,415 INFO live.helius: HELIUS 14Rb84 buy G8S6vUDo 0.6075 SOL @ 1.971e-07 (lat 0.2s)
 Oct 24 06:10:27 simplai-prod python3[321245]: 2026-10-24 06:10:27,960 INFO live: COPIA B7cX5wW3 siguiendo a 14Rb84… 0.0980 SOL a 1.178e-06 (lat 0.0s slip +6.0%) mcap=977 SOL
 Oct 24 06:11:17 simplai-prod python3[321245]: 2026-10-24 06:11:17,813 INFO live: latido: stream=True tokens_vistos=1666 seguidos=62 candidatos=0 abiertas=4 cerradas=11 st_requests=714 SOL=$102
 Oct 24 06:11:30 simplai-prod python3[321245]: 2026-10-24 06:11:30,071 INFO live.helius: HELIUS 14Rb84 buy G8S6vUDo 0.1025 SOL @ 1.423e-07 (lat 0.1s)
@@ -298,3 +289,12 @@ Oct 24 15:56:16 simplai-prod python3[366020]: 2026-10-24 15:56:16,871 INFO live:
 Oct 24 15:57:09 simplai-prod python3[366020]: 2026-10-24 15:57:09,902 INFO live: COMPRA v1.2 PLATE 0.1006 SOL (US$10) a 4.277e-07 slippage=+6.0% impacto=0.0% lat=0.0s
 Oct 24 15:58:07 simplai-prod python3[366020]: 2026-10-24 15:58:07,783 INFO live.portfolio: CERRADA PLATE ret=-76.1% pnl=US$-7.61 salidas=['stop']
 Oct 24 15:58:07 simplai-prod python3[366020]: 2026-10-24 15:58:07,784 INFO live: VENTA PLATE stop 100% a 0.24x slippage=+6.0% -> 0.0241 SOL [CERRADA]
+Oct 24 16:01:02 simplai-prod python3[366020]: 2026-10-24 16:01:02,651 INFO live: apagando...
+Oct 24 16:01:02 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
+Oct 24 16:01:03 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
+Oct 24 16:01:03 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
+Oct 24 16:01:03 simplai-prod systemd[1]: fomo-live.service: Consumed 41.417s CPU time.
+Oct 24 16:01:03 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
+Oct 24 16:01:03 simplai-prod python3[378627]: 2026-10-24 16:01:03,870 INFO live: arranca bot modo=paper estrategia=rules_st seguidos=0 tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 24 16:01:04 simplai-prod python3[378627]: 2026-10-24 16:01:04,234 INFO live.stream: stream conectado
+Oct 24 16:01:04 simplai-prod python3[378627]: 2026-10-24 16:01:04,262 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=24 st_requests=1 SOL=$100

@@ -1,5 +1,5 @@
 {
- "ts": 1792857583.4204524,
+ "ts": 1792857875.0205472,
  "mode": "paper",
  "open": 0,
  "closed": 24,
@@ -194,46 +194,37 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 99.6557565752609,
+ "sol_usd": 99.6923615286767,
  "stream_connected": true,
- "stream_msgs": 3116,
- "tokens_seen": 2656,
- "tokens_tracked": 393,
+ "stream_msgs": 139,
+ "tokens_seen": 138,
+ "tokens_tracked": 138,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 427,
- "stream_errors": [
-  "15:35:02 Connection to remote host was lost.",
-  "15:35:05 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 15:35:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
- ],
+ "st_requests": 1,
+ "stream_errors": [],
  "rules_st": {
-  "multi_calls": 155,
-  "prefilter_pass": 71,
-  "full_eval": 71,
-  "candidates": 23,
-  "bought": 2,
+  "multi_calls": 0,
+  "prefilter_pass": 0,
+  "full_eval": 0,
+  "candidates": 0,
+  "bought": 0,
   "pending_t3": 0,
-  "evaluated": 2570
+  "evaluated": 0
  },
  "stream_counts": {
-  "otros": 7,
-  "create": 2674,
-  "buy": 231,
-  "sell": 204
+  "otros": 1,
+  "create": 138
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to token creation events.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}"
+  "{\"message\":\"Successfully subscribed to token creation events.\"}"
  ],
- "stream_trades": 435,
- "stream_cost_sol_est": 0.0004,
+ "stream_trades": 0,
+ "stream_cost_sol_est": 0.0,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "paper",
