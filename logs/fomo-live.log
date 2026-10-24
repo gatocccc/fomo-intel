@@ -1,4 +1,3 @@
-Oct 24 04:32:39 simplai-prod python3[321245]: 2026-10-24 04:32:39,148 INFO live: VENTA 6UTCd5 stop 100% a 0.54x slippage=+6.0% -> 0.0528 SOL [CERRADA]
 Oct 24 04:35:04 simplai-prod python3[321245]: 2026-10-24 04:35:04,423 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
 Oct 24 04:35:06 simplai-prod python3[321245]: 2026-10-24 04:35:06,886 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 04:35:06 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
 Oct 24 04:35:06 simplai-prod python3[321245]: <head><title>502 Bad Gateway</title></head>
@@ -298,3 +297,4 @@ Oct 24 14:06:08 simplai-prod python3[366020]: 2026-10-24 14:06:08,174 INFO live:
 Oct 24 14:11:08 simplai-prod python3[366020]: 2026-10-24 14:11:08,581 INFO live: latido: stream=True tokens_vistos=784 seguidos=313 candidatos=0 abiertas=0 cerradas=22 st_requests=12 SOL=$101
 Oct 24 14:16:09 simplai-prod python3[366020]: 2026-10-24 14:16:09,316 INFO live: latido: stream=True tokens_vistos=861 seguidos=268 candidatos=0 abiertas=0 cerradas=22 st_requests=13 SOL=$101
 Oct 24 14:21:09 simplai-prod python3[366020]: 2026-10-24 14:21:09,969 INFO live: latido: stream=True tokens_vistos=950 seguidos=295 candidatos=0 abiertas=0 cerradas=22 st_requests=14 SOL=$100
+Oct 24 14:26:10 simplai-prod python3[366020]: 2026-10-24 14:26:10,580 INFO live: latido: stream=True tokens_vistos=1032 seguidos=323 candidatos=0 abiertas=0 cerradas=22 st_requests=15 SOL=$101
