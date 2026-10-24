@@ -1,16 +1,34 @@
 {
- "ts": 1792857279.638896,
+ "ts": 1792857583.4204524,
  "mode": "paper",
  "open": 0,
- "closed": 23,
+ "closed": 24,
  "wins": 7,
- "hit_rate": 0.304,
- "pnl_usd_total": -2.93,
- "pnl_usd_today": 6.05,
- "ret_per_usd": -0.294,
+ "hit_rate": 0.292,
+ "pnl_usd_total": -10.54,
+ "pnl_usd_today": -1.56,
+ "ret_per_usd": -1.054,
  "stop_reason": null,
  "positions": [],
  "last_closed": [
+  {
+   "ts": 1792857487.7834828,
+   "day": "2026-10-24",
+   "mint": "EJq8YLRZ7jNYb8WyJveELP9rUXr1saNpyhmJ4nJepump",
+   "symbol": "PLATE",
+   "opened_ts": 1792857429.9015014,
+   "hold_min": 1.0,
+   "sol_in": 0.10062305730665987,
+   "sol_out": 0.024091886981780372,
+   "pnl_sol": -0.076531,
+   "pnl_usd": -7.61,
+   "ret": -0.7606,
+   "peak_mult": 1.05,
+   "exits": [
+    "stop"
+   ],
+   "leftover_tokens": 0.0
+  },
   {
    "ts": 1792856152.6487136,
    "day": "2026-10-24",
@@ -172,68 +190,50 @@
     "tp3x"
    ],
    "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792822899.4862928,
-   "day": "2026-10-24",
-   "mint": "6SMfgZkr9QRseAyNAJwvYEe7Nk3PDJTFj1srYXLMFCk4",
-   "symbol": "6SMfgZ",
-   "opened_ts": 1792821993.4399433,
-   "hold_min": 15.1,
-   "sol_in": 0.09789440305898468,
-   "sol_out": 0.05843641287789963,
-   "pnl_sol": -0.039458,
-   "pnl_usd": -4.03,
-   "ret": -0.4031,
-   "peak_mult": 1.08,
-   "exits": [
-    "stop"
-   ],
-   "leftover_tokens": 0.0
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 99.38080066007035,
+ "sol_usd": 99.6557565752609,
  "stream_connected": true,
- "stream_msgs": 2767,
- "tokens_seen": 2547,
- "tokens_tracked": 351,
+ "stream_msgs": 3116,
+ "tokens_seen": 2656,
+ "tokens_tracked": 393,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 409,
+ "st_requests": 427,
  "stream_errors": [
   "15:35:02 Connection to remote host was lost.",
   "15:35:05 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 15:35:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "rules_st": {
-  "multi_calls": 149,
-  "prefilter_pass": 68,
-  "full_eval": 68,
-  "candidates": 22,
-  "bought": 1,
+  "multi_calls": 155,
+  "prefilter_pass": 71,
+  "full_eval": 71,
+  "candidates": 23,
+  "bought": 2,
   "pending_t3": 0,
-  "evaluated": 2436
+  "evaluated": 2570
  },
  "stream_counts": {
-  "otros": 5,
-  "create": 2565,
-  "buy": 117,
-  "sell": 80
+  "otros": 7,
+  "create": 2674,
+  "buy": 231,
+  "sell": 204
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to token creation events.\"}",
+  "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 197,
- "stream_cost_sol_est": 0.0002,
+ "stream_trades": 435,
+ "stream_cost_sol_est": 0.0004,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "paper",
