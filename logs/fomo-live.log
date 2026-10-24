@@ -1,7 +1,3 @@
-Oct 24 06:31:19 simplai-prod python3[321245]: 2026-10-24 06:31:19,571 INFO live: latido: stream=True tokens_vistos=1857 seguidos=67 candidatos=0 abiertas=3 cerradas=16 st_requests=862 SOL=$102
-Oct 24 06:36:19 simplai-prod python3[321245]: 2026-10-24 06:36:19,951 INFO live: latido: stream=True tokens_vistos=1908 seguidos=78 candidatos=0 abiertas=3 cerradas=16 st_requests=907 SOL=$102
-Oct 24 06:41:20 simplai-prod python3[321245]: 2026-10-24 06:41:20,830 INFO live: latido: stream=True tokens_vistos=1966 seguidos=77 candidatos=0 abiertas=3 cerradas=16 st_requests=963 SOL=$102
-Oct 24 06:45:03 simplai-prod python3[321245]: 2026-10-24 06:45:03,675 WARNING live.helius: helius caído: Connection to remote host was lost.; reconecto en 2s
 Oct 24 06:45:05 simplai-prod python3[321245]: 2026-10-24 06:45:05,811 INFO live.helius: helius conectado; suscribiendo 5 billeteras
 Oct 24 06:46:21 simplai-prod python3[321245]: 2026-10-24 06:46:21,356 INFO live: latido: stream=True tokens_vistos=2008 seguidos=75 candidatos=0 abiertas=3 cerradas=16 st_requests=1015 SOL=$102
 Oct 24 06:51:21 simplai-prod python3[321245]: 2026-10-24 06:51:21,738 INFO live: latido: stream=True tokens_vistos=2041 seguidos=56 candidatos=0 abiertas=3 cerradas=16 st_requests=1062 SOL=$102
@@ -298,3 +294,7 @@ Oct 24 16:19:04 simplai-prod python3[380576]: 2026-10-24 16:19:04,443 INFO live.
 Oct 24 16:19:04 simplai-prod python3[380576]: 2026-10-24 16:19:04,683 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$100
 Oct 24 16:24:04 simplai-prod python3[380576]: 2026-10-24 16:24:04,756 INFO live: latido: stream=True tokens_vistos=241 seguidos=240 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$100
 Oct 24 16:24:23 simplai-prod python3[380576]: 2026-10-24 16:24:23,122 INFO live.rules_st: CANDIDATO v1.2 An move=3.3x compradores=100 vol=$16190 snipers=123 -> confirma a T3
+Oct 24 16:25:08 simplai-prod python3[380576]: 2026-10-24 16:25:08,881 INFO live: COMPRA v1.2 An 0.1044 SOL (US$10) a 9.768e-08 slippage=+4.1% impacto=0.0% lat=3.3s
+Oct 24 16:26:05 simplai-prod python3[380576]: 2026-10-24 16:26:05,220 INFO live.portfolio: CERRADA An ret=-54.2% pnl=US$-5.63 salidas=['stop']
+Oct 24 16:26:05 simplai-prod python3[380576]: 2026-10-24 16:26:05,221 INFO live: VENTA An stop 100% a 0.46x slippage=+21.4% -> 0.0478 SOL [CERRADA]
+Oct 24 16:29:04 simplai-prod python3[380576]: 2026-10-24 16:29:04,944 INFO live: latido: stream=True tokens_vistos=408 seguidos=407 candidatos=0 abiertas=0 cerradas=1 st_requests=3 SOL=$99
