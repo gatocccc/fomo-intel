@@ -1,35 +1,53 @@
 {
- "ts": 1792815895.6449752,
+ "ts": 1792816200.8781598,
  "mode": "paper",
  "open": 2,
- "closed": 1,
+ "closed": 2,
  "wins": 0,
  "hit_rate": 0.0,
- "pnl_usd_total": -8.98,
- "pnl_usd_today": 0,
- "ret_per_usd": -0.898,
+ "pnl_usd_total": -12.98,
+ "pnl_usd_today": -4.0,
+ "ret_per_usd": -1.299,
  "stop_reason": null,
  "positions": [
   {
    "symbol": "GZYL4J",
    "mint": "GZYL4JVHikj6H71a7mTdWay1q7DwsWdJFEhkQCsYz4WT",
-   "age_min": 27.7,
-   "mult": 1.07,
+   "age_min": 32.8,
+   "mult": 0.91,
    "peak_mult": 1.21,
    "size_usd": 10.0,
    "tp_done": false
   },
   {
-   "symbol": "qqQsyF",
-   "mint": "qqQsyFeFevqRFPtcsVb4HHJPD8FViXubhAzEpi9PaAx",
-   "age_min": 2.2,
-   "mult": 0.8,
+   "symbol": "AfZVeN",
+   "mint": "AfZVeNW9ToUPxWQTHMvhZfKctEhqxbUkVRhD8oaBpump",
+   "age_min": 3.3,
+   "mult": 0.94,
    "peak_mult": 1.0,
    "size_usd": 10.0,
    "tp_done": false
   }
  ],
  "last_closed": [
+  {
+   "ts": 1792816109.3281133,
+   "day": "2026-10-24",
+   "mint": "qqQsyFeFevqRFPtcsVb4HHJPD8FViXubhAzEpi9PaAx",
+   "symbol": "qqQsyF",
+   "opened_ts": 1792815766.2279239,
+   "hold_min": 5.7,
+   "sol_in": 0.09755829884909399,
+   "sol_out": 0.05851999013412257,
+   "pnl_sol": -0.039038,
+   "pnl_usd": -4.0,
+   "ret": -0.4002,
+   "peak_mult": 1.0,
+   "exits": [
+    "stop"
+   ],
+   "leftover_tokens": 0.0
+  },
   {
    "ts": 1792777240.951233,
    "day": "2026-10-23",
@@ -51,39 +69,40 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 102.50281234883246,
+ "sol_usd": 102.51395582661988,
  "stream_connected": true,
- "stream_msgs": 571,
- "tokens_seen": 343,
- "tokens_tracked": 69,
+ "stream_msgs": 700,
+ "tokens_seen": 418,
+ "tokens_tracked": 102,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 5,
- "account_trades": 2,
+ "account_trades": 3,
  "helius": {
   "connected": true,
-  "notifications": 6,
-  "parsed": 3,
+  "notifications": 9,
+  "parsed": 4,
   "subs": 5,
   "errors": []
  },
- "follow_buys_seen": 2,
- "st_requests": 68,
+ "follow_buys_seen": 3,
+ "st_requests": 96,
  "stream_errors": [],
  "stream_counts": {
-  "otros": 4,
-  "create": 347,
-  "buy": 139,
-  "sell": 81
+  "otros": 6,
+  "create": 423,
+  "buy": 161,
+  "sell": 110
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}"
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 218,
- "stream_cost_sol_est": 0.0002,
+ "stream_trades": 268,
+ "stream_cost_sol_est": 0.0003,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "paper",
