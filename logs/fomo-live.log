@@ -1,6 +1,3 @@
-Oct 24 07:25:59 simplai-prod python3[335643]: 2026-10-24 07:25:59,137 INFO live.helius: HELIUS 14Rb84 sell WXMRyRZh 0.0220 SOL @ 5.324e+00 (lat 0.2s)
-Oct 24 07:28:07 simplai-prod python3[335643]: 2026-10-24 07:28:07,161 INFO live: latido: stream=True tokens_vistos=157 seguidos=52 candidatos=0 abiertas=3 cerradas=16 st_requests=296 SOL=$102
-Oct 24 07:33:07 simplai-prod python3[335643]: 2026-10-24 07:33:07,517 INFO live: latido: stream=True tokens_vistos=187 seguidos=46 candidatos=0 abiertas=3 cerradas=16 st_requests=354 SOL=$102
 Oct 24 07:37:15 simplai-prod python3[335643]: 2026-10-24 07:37:15,900 INFO live.helius: HELIUS 14Rb84 sell Fpd8Mowf 0.4132 SOL @ 5.304e-08 (lat 0.1s)
 Oct 24 07:37:39 simplai-prod python3[335643]: 2026-10-24 07:37:39,805 INFO live.helius: HELIUS 14Rb84 buy 6SMfgZkr 0.1038 SOL @ 2.364e-07 (lat 0.1s)
 Oct 24 07:38:08 simplai-prod python3[335643]: 2026-10-24 07:38:08,024 INFO live: latido: stream=True tokens_vistos=215 seguidos=46 candidatos=0 abiertas=3 cerradas=16 st_requests=412 SOL=$102
@@ -298,3 +295,6 @@ Oct 24 17:13:23 simplai-prod python3[380576]: 2026-10-24 17:13:23,283 INFO live.
 Oct 24 17:13:25 simplai-prod python3[380576]: 2026-10-24 17:13:25,954 INFO live: COMPRA v1.2 Nuannuan 0.1023 SOL (US$10) a 1.466e-07 slippage=+12.6% impacto=0.0% lat=2.4s
 Oct 24 17:14:09 simplai-prod python3[380576]: 2026-10-24 17:14:09,002 INFO live.rules_st: CANDIDATO v1.2 CARPNIK move=18.3x compradores=95 vol=$14196 snipers=25 -> confirma a T3
 Oct 24 17:14:10 simplai-prod python3[380576]: 2026-10-24 17:14:10,002 INFO live: latido: stream=True tokens_vistos=1377 seguidos=359 candidatos=0 abiertas=1 cerradas=2 st_requests=14 SOL=$100
+Oct 24 17:17:43 simplai-prod python3[380576]: 2026-10-24 17:17:43,278 INFO live.portfolio: CERRADA Nuannuan ret=+42.3% pnl=US$+4.34 salidas=['trailing']
+Oct 24 17:17:43 simplai-prod python3[380576]: 2026-10-24 17:17:43,278 INFO live: VENTA Nuannuan trailing 100% a 1.42x slippage=-2.8% -> 0.1456 SOL [CERRADA]
+Oct 24 17:19:10 simplai-prod python3[380576]: 2026-10-24 17:19:10,174 INFO live: latido: stream=True tokens_vistos=1476 seguidos=363 candidatos=0 abiertas=0 cerradas=3 st_requests=15 SOL=$100

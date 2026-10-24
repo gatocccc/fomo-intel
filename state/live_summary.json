@@ -1,26 +1,34 @@
 {
- "ts": 1792862094.6963527,
+ "ts": 1792862399.970487,
  "mode": "real",
- "open": 1,
- "closed": 2,
- "wins": 1,
- "hit_rate": 0.5,
- "pnl_usd_total": -3.6,
- "pnl_usd_today": -3.6,
- "ret_per_usd": -0.344,
+ "open": 0,
+ "closed": 3,
+ "wins": 2,
+ "hit_rate": 0.667,
+ "pnl_usd_total": 0.74,
+ "pnl_usd_today": 0.74,
+ "ret_per_usd": 0.079,
  "stop_reason": null,
- "positions": [
-  {
-   "symbol": "Nuannuan",
-   "mint": "DAoC8MwJx5o6XYz97ACJqQPDCXKtKEW4G7su2KLypump",
-   "age_min": 1.5,
-   "mult": 1.12,
-   "peak_mult": 1.12,
-   "size_usd": 10.25,
-   "tp_done": false
-  }
- ],
+ "positions": [],
  "last_closed": [
+  {
+   "ts": 1792862263.2778049,
+   "day": "2026-10-24",
+   "mint": "DAoC8MwJx5o6XYz97ACJqQPDCXKtKEW4G7su2KLypump",
+   "symbol": "Nuannuan",
+   "opened_ts": 1792862005.9534762,
+   "hold_min": 4.3,
+   "sol_in": 0.102271609,
+   "sol_out": 0.145577216,
+   "pnl_sol": 0.043306,
+   "pnl_usd": 4.34,
+   "ret": 0.4234,
+   "peak_mult": 1.73,
+   "exits": [
+    "trailing"
+   ],
+   "leftover_tokens": 0.0
+  },
   {
    "ts": 1792859594.4417171,
    "day": "2026-10-24",
@@ -60,44 +68,44 @@
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.4615,
- "sol_usd": 100.2938266023557,
+ "wallet_sol": 1.6071,
+ "sol_usd": 100.28445926049731,
  "stream_connected": true,
- "stream_msgs": 1668,
- "tokens_seen": 1394,
- "tokens_tracked": 360,
+ "stream_msgs": 1889,
+ "tokens_seen": 1487,
+ "tokens_tracked": 365,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 138,
+ "st_requests": 151,
  "stream_errors": [],
  "rules_st": {
-  "multi_calls": 51,
-  "prefilter_pass": 22,
-  "full_eval": 22,
+  "multi_calls": 56,
+  "prefilter_pass": 24,
+  "full_eval": 24,
   "candidates": 7,
   "bought": 3,
-  "pending_t3": 1,
-  "evaluated": 1301
+  "pending_t3": 0,
+  "evaluated": 1405
  },
  "stream_counts": {
-  "otros": 6,
-  "create": 1398,
-  "sell": 138,
-  "buy": 126
+  "otros": 7,
+  "create": 1492,
+  "sell": 196,
+  "buy": 194
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}"
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 264,
- "stream_cost_sol_est": 0.0003,
+ "stream_trades": 390,
+ "stream_cost_sol_est": 0.0004,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "real",
