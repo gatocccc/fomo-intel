@@ -1,10 +1,3 @@
-Oct 24 06:45:05 simplai-prod python3[321245]: 2026-10-24 06:45:05,811 INFO live.helius: helius conectado; suscribiendo 5 billeteras
-Oct 24 06:46:21 simplai-prod python3[321245]: 2026-10-24 06:46:21,356 INFO live: latido: stream=True tokens_vistos=2008 seguidos=75 candidatos=0 abiertas=3 cerradas=16 st_requests=1015 SOL=$102
-Oct 24 06:51:21 simplai-prod python3[321245]: 2026-10-24 06:51:21,738 INFO live: latido: stream=True tokens_vistos=2041 seguidos=56 candidatos=0 abiertas=3 cerradas=16 st_requests=1062 SOL=$102
-Oct 24 06:56:22 simplai-prod python3[321245]: 2026-10-24 06:56:22,461 INFO live: latido: stream=True tokens_vistos=2103 seguidos=88 candidatos=0 abiertas=3 cerradas=16 st_requests=1111 SOL=$102
-Oct 24 07:01:23 simplai-prod python3[321245]: 2026-10-24 07:01:23,371 INFO live: latido: stream=True tokens_vistos=2137 seguidos=65 candidatos=0 abiertas=3 cerradas=16 st_requests=1160 SOL=$102
-Oct 24 07:03:03 simplai-prod python3[321245]: 2026-10-24 07:03:03,271 INFO live: apagando...
-Oct 24 07:03:03 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
 Oct 24 07:03:04 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
 Oct 24 07:03:04 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
 Oct 24 07:03:04 simplai-prod systemd[1]: fomo-live.service: Consumed 1min 19.849s CPU time.
@@ -298,3 +291,10 @@ Oct 24 16:25:08 simplai-prod python3[380576]: 2026-10-24 16:25:08,881 INFO live:
 Oct 24 16:26:05 simplai-prod python3[380576]: 2026-10-24 16:26:05,220 INFO live.portfolio: CERRADA An ret=-54.2% pnl=US$-5.63 salidas=['stop']
 Oct 24 16:26:05 simplai-prod python3[380576]: 2026-10-24 16:26:05,221 INFO live: VENTA An stop 100% a 0.46x slippage=+21.4% -> 0.0478 SOL [CERRADA]
 Oct 24 16:29:04 simplai-prod python3[380576]: 2026-10-24 16:29:04,944 INFO live: latido: stream=True tokens_vistos=408 seguidos=407 candidatos=0 abiertas=0 cerradas=1 st_requests=3 SOL=$99
+Oct 24 16:30:29 simplai-prod python3[380576]: 2026-10-24 16:30:29,663 INFO live.rules_st: CANDIDATO v1.2 NULL move=3.7x compradores=100 vol=$2466 snipers=35 -> confirma a T3
+Oct 24 16:31:08 simplai-prod python3[380576]: 2026-10-24 16:31:08,721 INFO live: COMPRA v1.2 NULL 0.1031 SOL (US$10) a 1.443e-07 slippage=+25.6% impacto=0.0% lat=2.5s
+Oct 24 16:32:13 simplai-prod python3[380576]: 2026-10-24 16:32:13,002 INFO live: VENTA NULL tp2x 50% a 2.21x slippage=-3.5% -> 0.1137 SOL
+Oct 24 16:33:14 simplai-prod python3[380576]: 2026-10-24 16:33:14,441 INFO live.portfolio: CERRADA NULL ret=+19.8% pnl=US$+2.03 salidas=['tp2x', 'stop']
+Oct 24 16:33:14 simplai-prod python3[380576]: 2026-10-24 16:33:14,442 INFO live: VENTA NULL stop 50% a 0.19x slippage=+47.8% -> 0.0097 SOL [CERRADA]
+Oct 24 16:34:04 simplai-prod python3[380576]: 2026-10-24 16:34:04,974 INFO live: latido: stream=True tokens_vistos=617 seguidos=616 candidatos=0 abiertas=0 cerradas=2 st_requests=5 SOL=$99
+Oct 24 16:34:16 simplai-prod python3[380576]: 2026-10-24 16:34:16,870 INFO live.rules_st: CANDIDATO v1.2 SLEEP move=10.8x compradores=49 vol=$9179 snipers=13 -> confirma a T3
