@@ -1,5 +1,3 @@
-Oct 24 07:37:15 simplai-prod python3[335643]: 2026-10-24 07:37:15,900 INFO live.helius: HELIUS 14Rb84 sell Fpd8Mowf 0.4132 SOL @ 5.304e-08 (lat 0.1s)
-Oct 24 07:37:39 simplai-prod python3[335643]: 2026-10-24 07:37:39,805 INFO live.helius: HELIUS 14Rb84 buy 6SMfgZkr 0.1038 SOL @ 2.364e-07 (lat 0.1s)
 Oct 24 07:38:08 simplai-prod python3[335643]: 2026-10-24 07:38:08,024 INFO live: latido: stream=True tokens_vistos=215 seguidos=46 candidatos=0 abiertas=3 cerradas=16 st_requests=412 SOL=$102
 Oct 24 07:41:45 simplai-prod python3[335643]: 2026-10-24 07:41:45,986 INFO live.helius: HELIUS 14Rb84 buy BSBsxXFG 0.3598 SOL @ 1.302e-07 (lat 0.1s)
 Oct 24 07:43:08 simplai-prod python3[335643]: 2026-10-24 07:43:08,376 INFO live: latido: stream=True tokens_vistos=244 seguidos=47 candidatos=0 abiertas=3 cerradas=16 st_requests=470 SOL=$102
@@ -298,3 +296,5 @@ Oct 24 17:14:10 simplai-prod python3[380576]: 2026-10-24 17:14:10,002 INFO live:
 Oct 24 17:17:43 simplai-prod python3[380576]: 2026-10-24 17:17:43,278 INFO live.portfolio: CERRADA Nuannuan ret=+42.3% pnl=US$+4.34 salidas=['trailing']
 Oct 24 17:17:43 simplai-prod python3[380576]: 2026-10-24 17:17:43,278 INFO live: VENTA Nuannuan trailing 100% a 1.42x slippage=-2.8% -> 0.1456 SOL [CERRADA]
 Oct 24 17:19:10 simplai-prod python3[380576]: 2026-10-24 17:19:10,174 INFO live: latido: stream=True tokens_vistos=1476 seguidos=363 candidatos=0 abiertas=0 cerradas=3 st_requests=15 SOL=$100
+Oct 24 17:24:00 simplai-prod python3[380576]: 2026-10-24 17:24:00,955 INFO live.rules_st: CANDIDATO v1.2 CANARY move=4.3x compradores=100 vol=$7406 snipers=41 -> confirma a T3
+Oct 24 17:24:11 simplai-prod python3[380576]: 2026-10-24 17:24:11,158 INFO live: latido: stream=True tokens_vistos=1555 seguidos=358 candidatos=0 abiertas=0 cerradas=3 st_requests=16 SOL=$100
