@@ -12,8 +12,8 @@
   "tp_done": false,
   "sol_usd_at_open": 102.398534877326,
   "exits": [],
-  "last_price": 5.410646592151032e-08,
-  "last_ts": 1792829212.1431406,
+  "last_price": 4.666364550800567e-08,
+  "last_ts": 1792839493.8133845,
   "pending_sell": false
  },
  "EiXWTceqxknhGx2N9Kjwtdw2YPv8cPeAY3pw3TMapump": {
@@ -29,8 +29,25 @@
   "tp_done": false,
   "sol_usd_at_open": 102.22423573739091,
   "exits": [],
-  "last_price": 1.0237872735380387e-07,
-  "last_ts": 1792829211.1429474,
+  "last_price": 9.325453651340885e-08,
+  "last_ts": 1792839493.8133845,
+  "pending_sell": false
+ },
+ "Cggjah6mVhhh6uwCbjGUfPLnapsBbzUL2aAZokHo3iYT": {
+  "mint": "Cggjah6mVhhh6uwCbjGUfPLnapsBbzUL2aAZokHo3iYT",
+  "symbol": "Cggjah",
+  "opened_ts": 1792839498.5958078,
+  "entry_price": 6.349225350527136e-07,
+  "tokens": 155180.6652400394,
+  "tokens_initial": 155180.6652400394,
+  "sol_in": 0.09852770136537234,
+  "sol_out": 0.0,
+  "peak_price": 6.349225350527136e-07,
+  "tp_done": false,
+  "sol_usd_at_open": 101.49429918106777,
+  "exits": [],
+  "last_price": 6.349225350527136e-07,
+  "last_ts": 1792839498.595809,
   "pending_sell": false
  }
 }
