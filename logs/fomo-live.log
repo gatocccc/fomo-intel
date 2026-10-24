@@ -1,7 +1,3 @@
-Oct 23 23:09:21 simplai-prod python3[284091]: 2026-10-23 23:09:21,719 INFO live: latido: stream=True tokens_vistos=4659 seguidos=113 candidatos=0 abiertas=0 cerradas=1 st_requests=43 SOL=$102
-Oct 23 23:14:22 simplai-prod python3[284091]: 2026-10-23 23:14:22,140 INFO live: latido: stream=True tokens_vistos=4741 seguidos=101 candidatos=0 abiertas=0 cerradas=1 st_requests=44 SOL=$102
-Oct 23 23:19:22 simplai-prod python3[284091]: 2026-10-23 23:19:22,475 INFO live: latido: stream=True tokens_vistos=4803 seguidos=92 candidatos=0 abiertas=0 cerradas=1 st_requests=45 SOL=$102
-Oct 23 23:24:22 simplai-prod python3[284091]: 2026-10-23 23:24:22,991 INFO live: latido: stream=True tokens_vistos=4877 seguidos=93 candidatos=0 abiertas=0 cerradas=1 st_requests=46 SOL=$102
 Oct 23 23:29:23 simplai-prod python3[284091]: 2026-10-23 23:29:23,367 INFO live: latido: stream=True tokens_vistos=4946 seguidos=98 candidatos=0 abiertas=0 cerradas=1 st_requests=47 SOL=$103
 Oct 23 23:34:23 simplai-prod python3[284091]: 2026-10-23 23:34:23,847 INFO live: latido: stream=True tokens_vistos=5025 seguidos=107 candidatos=0 abiertas=0 cerradas=1 st_requests=48 SOL=$103
 Oct 23 23:35:41 simplai-prod python3[284091]: 2026-10-23 23:35:41,401 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
@@ -298,3 +294,7 @@ Oct 24 10:43:53 simplai-prod python3[335643]: </body>
 Oct 24 10:43:53 simplai-prod python3[335643]: </html>
 Oct 24 10:43:53 simplai-prod python3[335643]: ; reconecto en 4s
 Oct 24 10:43:58 simplai-prod python3[335643]: 2026-10-24 10:43:58,492 INFO live.stream: stream conectado
+Oct 24 10:46:56 simplai-prod python3[335643]: 2026-10-24 10:46:56,605 WARNING live.helius: helius caído: Connection to remote host was lost.; reconecto en 2s
+Oct 24 10:46:58 simplai-prod python3[335643]: 2026-10-24 10:46:58,731 INFO live.helius: helius conectado; suscribiendo 5 billeteras
+Oct 24 10:48:28 simplai-prod python3[335643]: 2026-10-24 10:48:28,189 INFO live: latido: stream=True tokens_vistos=2002 seguidos=82 candidatos=0 abiertas=2 cerradas=17 st_requests=2034 SOL=$102
+Oct 24 10:48:59 simplai-prod python3[335643]: 2026-10-24 10:48:59,924 INFO live.helius: HELIUS 14Rb84 buy 7wYXEuBT 0.1038 SOL @ 7.679e-08 (lat 0.2s)
