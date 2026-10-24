@@ -1,7 +1,7 @@
 {
- "ts": 1792855791.4697578,
+ "ts": 1792856094.773272,
  "mode": "paper",
- "open": 0,
+ "open": 1,
  "closed": 22,
  "wins": 6,
  "hit_rate": 0.273,
@@ -9,7 +9,17 @@
  "pnl_usd_today": 2.87,
  "ret_per_usd": -0.612,
  "stop_reason": null,
- "positions": [],
+ "positions": [
+  {
+   "symbol": "KnightDog",
+   "mint": "13Mknv4zuXSco5kABrg3ZauQHCYHSKKgqMtiTcVnpump",
+   "age_min": 0.7,
+   "mult": 1.43,
+   "peak_mult": 1.61,
+   "size_usd": 10.0,
+   "tp_done": false
+  }
+ ],
  "last_closed": [
   {
    "ts": 1792848065.515526,
@@ -194,37 +204,40 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 98.86375502374776,
+ "sol_usd": 99.05728684523326,
  "stream_connected": true,
- "stream_msgs": 2124,
- "tokens_seen": 2110,
- "tokens_tracked": 386,
+ "stream_msgs": 2316,
+ "tokens_seen": 2197,
+ "tokens_tracked": 353,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 328,
+ "st_requests": 354,
  "stream_errors": [],
  "rules_st": {
-  "multi_calls": 125,
-  "prefilter_pass": 54,
-  "full_eval": 54,
-  "candidates": 13,
-  "bought": 0,
+  "multi_calls": 130,
+  "prefilter_pass": 59,
+  "full_eval": 59,
+  "candidates": 17,
+  "bought": 1,
   "pending_t3": 0,
-  "evaluated": 2058
+  "evaluated": 2130
  },
  "stream_counts": {
-  "otros": 1,
-  "create": 2123
+  "otros": 2,
+  "create": 2211,
+  "buy": 64,
+  "sell": 39
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to token creation events.\"}"
+  "{\"message\":\"Successfully subscribed to token creation events.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 0,
- "stream_cost_sol_est": 0.0,
+ "stream_trades": 103,
+ "stream_cost_sol_est": 0.0001,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "paper",
