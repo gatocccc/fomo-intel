@@ -1,0 +1,12 @@
+== 023_traders_ampliado 2026-10-24T03:54:03Z ==
+candidatos: 853
+prefiltro (acierto>=60, >=40 ops, compra media 15-3000): 192
+activos en 12 h: 166 ; copiables (tenencia med >=3 min y p25 >=1, >=50% pump, mcap med <=300K, compra med >=0.05 SOL, <=8 compras/h): 5
+wallet                                                     src win%      n   avg$  hold   p25     mcap   sol  c/h ult h
+14Rb845Uobd3qgBHFFVoXJUPw6kASNd2peTTWsxvDEjS  lb1-win_percentage  100    946     36  48.2  12.1    10947  0.25 0.38   0.1
+12DEB4G85cbQ3GPA7zC5KQ2bHjLt6JChZv9axQeqrf7a  lb7-win_percentage  100    393    314   7.3   4.6    47882 2.422 0.28  11.7
+46UB3PbUoVGj2i8q52AyjdwHE5gaDyMv5Je54ZdyNSSy      lb1-realized  100     86   2155   3.2   1.2    11426 6.873 0.01   1.6
+21KaaSGcJ9qMKvLTtDEiMrQcWTccYQhT53xXMAMCSnBA  lb1-win_percentage  100     42    592   3.3   2.3   256987 4.741 0.03   1.4
+4T5bHrK5UwxrmB7ogaEx7LqysfvCw7WjE9vBW2qN5FAH      lb1-realized   98  31637     32   6.3   3.8    34804 1.975 0.02   3.6
+follow_list actualizada: 5
+== exit 0 ==
