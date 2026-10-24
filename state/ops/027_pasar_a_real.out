@@ -1,0 +1,9 @@
+== 027_pasar_a_real 2026-10-24T16:13:02Z ==
+saldo bot: 1.600001 SOL
+control: {'mode': 'real', 'strategy': 'rules_st', 'size_usd': 10.0, 'max_open': 3, 'daily_loss_usd': 50.0, 'total_loss_usd': 150.0, 'max_trades': 30}
+active
+Oct 24 16:13:03 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
+Oct 24 16:13:04 simplai-prod python3[380069]: 2026-10-24 16:13:04,382 INFO live: arranca bot modo=real estrategia=rules_st seguidos=0 tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 24 16:13:04 simplai-prod python3[380069]: 2026-10-24 16:13:04,746 INFO live.stream: stream conectado
+Oct 24 16:13:05 simplai-prod python3[380069]: 2026-10-24 16:13:05,046 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=1 cerradas=0 st_requests=2 SOL=$100
+== exit 0 ==
