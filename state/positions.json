@@ -12,8 +12,8 @@
   "tp_done": false,
   "sol_usd_at_open": 102.49335816327158,
   "exits": [],
-  "last_price": 1.7334015569723376e-06,
-  "last_ts": 1792819992.8619645,
+  "last_price": 1.6842705078493754e-06,
+  "last_ts": 1792820134.7578287,
   "pending_sell": false
  },
  "Fpd8MowfCEWXAtAfgJucruJFiKPwxyJMZhx2TTVgpump": {
@@ -29,25 +29,8 @@
   "tp_done": false,
   "sol_usd_at_open": 102.398534877326,
   "exits": [],
-  "last_price": 4.919794544314009e-08,
-  "last_ts": 1792819992.8619645,
-  "pending_sell": false
- },
- "4vcbzEi7nqDpUUd2zWdHHw61YccQasc4BQ4H3uEpump": {
-  "mint": "4vcbzEi7nqDpUUd2zWdHHw61YccQasc4BQ4H3uEpump",
-  "symbol": "4vcbzE",
-  "opened_ts": 1792819543.5471258,
-  "entry_price": 2.5378346407617336e-08,
-  "tokens": 3853401.029006562,
-  "tokens_initial": 3853401.029006562,
-  "sol_in": 0.09779294616159763,
-  "sol_out": 0.0,
-  "peak_price": 2.5378346407617336e-08,
-  "tp_done": false,
-  "sol_usd_at_open": 102.25686404288847,
-  "exits": [],
-  "last_price": 2.42747921029238e-08,
-  "last_ts": 1792819992.8619645,
+  "last_price": 5.307922196785472e-08,
+  "last_ts": 1792820134.7578287,
   "pending_sell": false
  },
  "B7cX5wW3wxHhRzSYTpM56YgMo8pesJjJk6ehz8aXpump": {
@@ -59,12 +42,29 @@
   "tokens_initial": 420498.1833924252,
   "sol_in": 0.09788171163237082,
   "sol_out": 0.0,
-  "peak_price": 2.3277558738232127e-07,
+  "peak_price": 3.3963389408208064e-07,
   "tp_done": false,
   "sol_usd_at_open": 102.16413090076026,
   "exits": [],
-  "last_price": 2.3277558738232127e-07,
-  "last_ts": 1792819997.7637136,
+  "last_price": 2.874276746979274e-07,
+  "last_ts": 1792820134.7578287,
+  "pending_sell": false
+ },
+ "6SMfgZkr9QRseAyNAJwvYEe7Nk3PDJTFj1srYXLMFCk4": {
+  "mint": "6SMfgZkr9QRseAyNAJwvYEe7Nk3PDJTFj1srYXLMFCk4",
+  "symbol": "6SMfgZ",
+  "opened_ts": 1792820136.3291912,
+  "entry_price": 2.0850812629875925e-07,
+  "tokens": 469438.35412976553,
+  "tokens_initial": 469438.35412976553,
+  "sol_in": 0.09788171163237082,
+  "sol_out": 0.0,
+  "peak_price": 2.0850812629875925e-07,
+  "tp_done": false,
+  "sol_usd_at_open": 102.16413090076026,
+  "exits": [],
+  "last_price": 2.0850812629875925e-07,
+  "last_ts": 1792820136.3291924,
   "pending_sell": false
  }
 }
