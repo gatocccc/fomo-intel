@@ -1,4 +1,3 @@
-Oct 23 19:44:04 simplai-prod python3[284091]: 2026-10-23 19:44:04,804 INFO live: latido: stream=True tokens_vistos=197 seguidos=145 candidatos=0 abiertas=0 cerradas=1 st_requests=2 SOL=$104
 Oct 23 19:49:05 simplai-prod python3[284091]: 2026-10-23 19:49:05,220 INFO live: latido: stream=True tokens_vistos=282 seguidos=136 candidatos=0 abiertas=0 cerradas=1 st_requests=3 SOL=$104
 Oct 23 19:54:05 simplai-prod python3[284091]: 2026-10-23 19:54:05,780 INFO live: latido: stream=True tokens_vistos=389 seguidos=147 candidatos=0 abiertas=0 cerradas=1 st_requests=4 SOL=$104
 Oct 23 19:59:06 simplai-prod python3[284091]: 2026-10-23 19:59:06,238 INFO live: latido: stream=True tokens_vistos=475 seguidos=149 candidatos=0 abiertas=0 cerradas=1 st_requests=5 SOL=$104
@@ -298,3 +297,4 @@ Oct 24 08:43:15 simplai-prod python3[335643]: 2026-10-24 08:43:15,060 INFO live:
 Oct 24 08:48:15 simplai-prod python3[335643]: 2026-10-24 08:48:15,063 INFO live: latido: stream=True tokens_vistos=944 seguidos=71 candidatos=0 abiertas=2 cerradas=17 st_requests=1079 SOL=$102
 Oct 24 08:49:50 simplai-prod python3[335643]: 2026-10-24 08:49:50,557 INFO live.helius: HELIUS 14Rb84 buy 7wYXEuBT 0.2571 SOL @ 7.720e-08 (lat 0.1s)
 Oct 24 08:53:16 simplai-prod python3[335643]: 2026-10-24 08:53:16,275 INFO live: latido: stream=True tokens_vistos=1003 seguidos=84 candidatos=0 abiertas=2 cerradas=17 st_requests=1120 SOL=$102
+Oct 24 08:58:16 simplai-prod python3[335643]: 2026-10-24 08:58:16,106 INFO live: latido: stream=True tokens_vistos=1055 seguidos=79 candidatos=0 abiertas=2 cerradas=17 st_requests=1159 SOL=$102
