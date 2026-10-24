@@ -1,5 +1,3 @@
-Oct 24 17:17:43 simplai-prod python3[380576]: 2026-10-24 17:17:43,278 INFO live: VENTA Nuannuan trailing 100% a 1.42x slippage=-2.8% -> 0.1456 SOL [CERRADA]
-Oct 24 17:19:10 simplai-prod python3[380576]: 2026-10-24 17:19:10,174 INFO live: latido: stream=True tokens_vistos=1476 seguidos=363 candidatos=0 abiertas=0 cerradas=3 st_requests=15 SOL=$100
 Oct 24 17:24:00 simplai-prod python3[380576]: 2026-10-24 17:24:00,955 INFO live.rules_st: CANDIDATO v1.2 CANARY move=4.3x compradores=100 vol=$7406 snipers=41 -> confirma a T3
 Oct 24 17:24:11 simplai-prod python3[380576]: 2026-10-24 17:24:11,158 INFO live: latido: stream=True tokens_vistos=1555 seguidos=358 candidatos=0 abiertas=0 cerradas=3 st_requests=16 SOL=$100
 Oct 24 17:26:22 simplai-prod python3[380576]: 2026-10-24 17:26:22,891 WARNING live: compra CANARY falló: sin confirmación en 75 s
@@ -298,3 +296,5 @@ Oct 24 23:18:37 simplai-prod python3[393883]: 2026-10-24 23:18:37,820 INFO live:
 Oct 24 23:22:20 simplai-prod python3[393883]: 2026-10-24 23:22:20,958 INFO live.rules_st: CANDIDATO v1.2 swordog move=3.3x compradores=66 vol=$2950 snipers=35 -> confirma a T3
 Oct 24 23:23:05 simplai-prod python3[393883]: 2026-10-24 23:23:05,964 INFO live: señal swordog no operada: STOP manual
 Oct 24 23:23:38 simplai-prod python3[393883]: 2026-10-24 23:23:38,134 INFO live: latido: stream=True tokens_vistos=4446 seguidos=333 candidatos=0 abiertas=0 cerradas=18 st_requests=296 SOL=$101
+Oct 24 23:28:38 simplai-prod python3[393883]: 2026-10-24 23:28:38,624 INFO live: latido: stream=True tokens_vistos=4519 seguidos=331 candidatos=0 abiertas=0 cerradas=18 st_requests=297 SOL=$102
+Oct 24 23:29:10 simplai-prod python3[393883]: 2026-10-24 23:29:10,721 INFO live.rules_st: CANDIDATO v1.2 NI move=3.7x compradores=80 vol=$2377 snipers=26 -> confirma a T3
