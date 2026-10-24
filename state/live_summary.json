@@ -1,7 +1,7 @@
 {
- "ts": 1792863298.7770278,
+ "ts": 1792863602.001293,
  "mode": "real",
- "open": 0,
+ "open": 1,
  "closed": 4,
  "wins": 2,
  "hit_rate": 0.5,
@@ -9,7 +9,17 @@
  "pnl_usd_today": -0.83,
  "ret_per_usd": -0.074,
  "stop_reason": null,
- "positions": [],
+ "positions": [
+  {
+   "symbol": "COW",
+   "mint": "DEv7iF1f9tsbvhC49E1Ygd4mi2fatxAB76PUUnCdpump",
+   "age_min": 0.9,
+   "mult": 1.08,
+   "peak_mult": 1.12,
+   "size_usd": 10.25,
+   "tp_done": false
+  }
+ ],
  "last_closed": [
   {
    "ts": 1792863267.214432,
@@ -86,43 +96,43 @@
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.5914,
- "sol_usd": 100.2208024595348,
+ "wallet_sol": 1.489,
+ "sol_usd": 100.0594175075431,
  "stream_connected": true,
- "stream_msgs": 2400,
- "tokens_seen": 1874,
- "tokens_tracked": 480,
+ "stream_msgs": 2518,
+ "tokens_seen": 1977,
+ "tokens_tracked": 491,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 200,
+ "st_requests": 214,
  "stream_errors": [],
  "rules_st": {
-  "multi_calls": 69,
-  "prefilter_pass": 34,
-  "full_eval": 34,
-  "candidates": 10,
-  "bought": 4,
+  "multi_calls": 74,
+  "prefilter_pass": 36,
+  "full_eval": 36,
+  "candidates": 11,
+  "bought": 5,
   "pending_t3": 0,
-  "evaluated": 1759
+  "evaluated": 1886
  },
  "stream_counts": {
-  "otros": 9,
-  "create": 1881,
-  "sell": 259,
-  "buy": 251
+  "otros": 10,
+  "create": 1985,
+  "sell": 266,
+  "buy": 257
  },
  "stream_samples": [
-  "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}"
+  "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 510,
+ "stream_trades": 523,
  "stream_cost_sol_est": 0.0005,
  "pumpportal_wallet_sol": 0.0999,
  "params": {

@@ -1,6 +1,3 @@
-Oct 24 08:06:52 simplai-prod python3[335643]: 2026-10-24 08:06:52,679 INFO live: VENTA 6SMfgZ trailing 100% a 1.31x slippage=+6.0% -> 0.1283 SOL [CERRADA]
-Oct 24 08:08:11 simplai-prod python3[335643]: 2026-10-24 08:08:11,239 INFO live: latido: stream=True tokens_vistos=516 seguidos=61 candidatos=0 abiertas=2 cerradas=17 st_requests=761 SOL=$102
-Oct 24 08:13:12 simplai-prod python3[335643]: 2026-10-24 08:13:12,066 INFO live: latido: stream=True tokens_vistos=572 seguidos=77 candidatos=0 abiertas=2 cerradas=17 st_requests=800 SOL=$102
 Oct 24 08:18:12 simplai-prod python3[335643]: 2026-10-24 08:18:12,137 INFO live: latido: stream=True tokens_vistos=646 seguidos=108 candidatos=0 abiertas=2 cerradas=17 st_requests=839 SOL=$102
 Oct 24 08:19:51 simplai-prod python3[335643]: 2026-10-24 08:19:51,827 INFO live.helius: HELIUS 14Rb84 sell BSBsxXFG 0.5095 SOL @ 9.830e-07 (lat 0.2s)
 Oct 24 08:23:13 simplai-prod python3[335643]: 2026-10-24 08:23:13,048 INFO live: latido: stream=True tokens_vistos=720 seguidos=111 candidatos=0 abiertas=2 cerradas=17 st_requests=880 SOL=$102
@@ -298,3 +295,6 @@ Oct 24 17:31:26 simplai-prod python3[380576]: 2026-10-24 17:31:26,755 INFO live:
 Oct 24 17:34:12 simplai-prod python3[380576]: 2026-10-24 17:34:12,656 INFO live: latido: stream=True tokens_vistos=1850 seguidos=476 candidatos=0 abiertas=1 cerradas=3 st_requests=19 SOL=$100
 Oct 24 17:34:27 simplai-prod python3[380576]: 2026-10-24 17:34:27,214 INFO live.portfolio: CERRADA DIALUP ret=-15.3% pnl=US$-1.57 salidas=['trailing']
 Oct 24 17:34:27 simplai-prod python3[380576]: 2026-10-24 17:34:27,215 INFO live: VENTA DIALUP trailing 100% a 0.85x slippage=+10.3% -> 0.0866 SOL [CERRADA]
+Oct 24 17:38:16 simplai-prod python3[380576]: 2026-10-24 17:38:16,181 INFO live.rules_st: CANDIDATO v1.2 COW move=3.9x compradores=100 vol=$11191 snipers=4 -> confirma a T3
+Oct 24 17:39:08 simplai-prod python3[380576]: 2026-10-24 17:39:08,515 INFO live: COMPRA v1.2 COW 0.1025 SOL (US$10) a 1.291e-07 slippage=+3.2% impacto=0.0% lat=2.4s
+Oct 24 17:39:12 simplai-prod python3[380576]: 2026-10-24 17:39:12,672 INFO live: latido: stream=True tokens_vistos=1960 seguidos=484 candidatos=0 abiertas=1 cerradas=4 st_requests=21 SOL=$100
