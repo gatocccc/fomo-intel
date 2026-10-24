@@ -1,9 +1,3 @@
-Oct 23 18:13:03 simplai-prod systemd[1]: fomo-live.service: Consumed 1.324s CPU time.
-Oct 23 18:13:03 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
-Oct 23 18:13:03 simplai-prod python3[279483]: 2026-10-23 18:13:03,948 INFO live: arranca bot modo=paper tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
-Oct 23 18:13:04 simplai-prod python3[279483]: 2026-10-23 18:13:04,249 INFO live: latido: stream=False tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$104
-Oct 23 18:13:04 simplai-prod python3[279483]: 2026-10-23 18:13:04,333 INFO live.stream: stream conectado
-Oct 23 18:16:03 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
 Oct 23 18:16:03 simplai-prod python3[279483]: 2026-10-23 18:16:03,473 INFO live: apagando...
 Oct 23 18:16:04 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
 Oct 23 18:16:04 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
@@ -298,3 +292,9 @@ Oct 24 05:10:17 simplai-prod python3[321245]: 2026-10-24 05:10:17,286 INFO live:
 Oct 24 05:11:12 simplai-prod python3[321245]: 2026-10-24 05:11:12,243 INFO live: latido: stream=True tokens_vistos=922 seguidos=68 candidatos=0 abiertas=2 cerradas=4 st_requests=204 SOL=$102
 Oct 24 05:13:24 simplai-prod python3[321245]: 2026-10-24 05:13:24,196 INFO live.helius: HELIUS 14Rb84 buy E2Q4AdiS 0.4120 SOL @ 4.382e-08 (lat 0.1s)
 Oct 24 05:13:28 simplai-prod python3[321245]: 2026-10-24 05:13:28,635 INFO live: COPIA E2Q4AdiS siguiendo a 14Rb84… 0.0977 SOL a 4.560e-08 (lat 0.0s slip +6.0%) mcap=43 SOL
+Oct 24 05:15:36 simplai-prod python3[321245]: 2026-10-24 05:15:36,338 INFO live.portfolio: CERRADA E2Q4Ad ret=-30.7% pnl=US$-3.07 salidas=['seguido vendió']
+Oct 24 05:15:36 simplai-prod python3[321245]: 2026-10-24 05:15:36,338 INFO live: VENTA copia E2Q4AdiS (14Rb84 vendió) a 0.69x -> 0.0677 SOL [CERRADA]
+Oct 24 05:15:36 simplai-prod python3[321245]: 2026-10-24 05:15:36,672 INFO live.helius: HELIUS 14Rb84 sell E2Q4AdiS 0.3103 SOL @ 3.300e-08 (lat 0.1s)
+Oct 24 05:16:13 simplai-prod python3[321245]: 2026-10-24 05:16:13,125 INFO live: latido: stream=True tokens_vistos=993 seguidos=102 candidatos=0 abiertas=2 cerradas=5 st_requests=235 SOL=$102
+Oct 24 05:17:29 simplai-prod python3[321245]: 2026-10-24 05:17:29,324 INFO live.helius: HELIUS 14Rb84 buy B7cX5wW3 0.4123 SOL @ 2.382e-07 (lat 0.1s)
+Oct 24 05:17:30 simplai-prod python3[321245]: 2026-10-24 05:17:30,373 INFO live: COPIA B7cX5wW3 siguiendo a 14Rb84… 0.0976 SOL a 2.464e-07 (lat 0.0s slip +6.0%) mcap=232 SOL
