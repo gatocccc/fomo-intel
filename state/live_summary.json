@@ -1,29 +1,20 @@
 {
- "ts": 1792823088.9180715,
+ "ts": 1792823395.3451507,
  "mode": "paper",
  "open": 3,
- "closed": 15,
+ "closed": 16,
  "wins": 3,
- "hit_rate": 0.2,
- "pnl_usd_total": -22.16,
- "pnl_usd_today": -13.18,
- "ret_per_usd": -2.216,
+ "hit_rate": 0.188,
+ "pnl_usd_total": -24.39,
+ "pnl_usd_today": -15.41,
+ "ret_per_usd": -2.44,
  "stop_reason": null,
  "positions": [
   {
    "symbol": "Fpd8Mo",
    "mint": "Fpd8MowfCEWXAtAfgJucruJFiKPwxyJMZhx2TTVgpump",
-   "age_min": 74.5,
+   "age_min": 79.6,
    "mult": 0.89,
-   "peak_mult": 1.0,
-   "size_usd": 10.0,
-   "tp_done": false
-  },
-  {
-   "symbol": "A73Gt7",
-   "mint": "A73Gt7KsdGsB77y5e11yumjj1ripKsevb7yYZ82fpPBJ",
-   "age_min": 1.2,
-   "mult": 0.93,
    "peak_mult": 1.0,
    "size_usd": 10.0,
    "tp_done": false
@@ -31,14 +22,41 @@
   {
    "symbol": "6SMfgZ",
    "mint": "6SMfgZkr9QRseAyNAJwvYEe7Nk3PDJTFj1srYXLMFCk4",
-   "age_min": 0.9,
-   "mult": 1.0,
-   "peak_mult": 1.03,
+   "age_min": 6.0,
+   "mult": 1.26,
+   "peak_mult": 1.26,
+   "size_usd": 10.0,
+   "tp_done": false
+  },
+  {
+   "symbol": "EiXWTc",
+   "mint": "EiXWTceqxknhGx2N9Kjwtdw2YPv8cPeAY3pw3TMapump",
+   "age_min": 0.8,
+   "mult": 1.6,
+   "peak_mult": 1.6,
    "size_usd": 10.0,
    "tp_done": false
   }
  ],
  "last_closed": [
+  {
+   "ts": 1792823354.996755,
+   "day": "2026-10-24",
+   "mint": "A73Gt7KsdGsB77y5e11yumjj1ripKsevb7yYZ82fpPBJ",
+   "symbol": "A73Gt7",
+   "opened_ts": 1792823016.6296875,
+   "hold_min": 5.6,
+   "sol_in": 0.09787135680531535,
+   "sol_out": 0.07600371842523954,
+   "pnl_sol": -0.021868,
+   "pnl_usd": -2.23,
+   "ret": -0.2234,
+   "peak_mult": 1.0,
+   "exits": [
+    "seguido vendi\u00f3"
+   ],
+   "leftover_tokens": 0.0
+  },
   {
    "ts": 1792823084.632479,
    "day": "2026-10-24",
@@ -200,65 +218,47 @@
     "seguido vendi\u00f3"
    ],
    "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792819882.4455295,
-   "day": "2026-10-24",
-   "mint": "B7cX5wW3wxHhRzSYTpM56YgMo8pesJjJk6ehz8aXpump",
-   "symbol": "B7cX5w",
-   "opened_ts": 1792819050.3724775,
-   "hold_min": 13.9,
-   "sol_in": 0.09761035079022619,
-   "sol_out": 0.10867708887224456,
-   "pnl_sol": 0.011067,
-   "pnl_usd": 1.13,
-   "ret": 0.1134,
-   "peak_mult": 2.09,
-   "exits": [
-    "trailing"
-   ],
-   "leftover_tokens": 0.0
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 102.17493990496007,
+ "sol_usd": 102.22423573739091,
  "stream_connected": true,
- "stream_msgs": 4572,
- "tokens_seen": 1798,
- "tokens_tracked": 56,
+ "stream_msgs": 4652,
+ "tokens_seen": 1842,
+ "tokens_tracked": 64,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 5,
- "account_trades": 25,
+ "account_trades": 29,
  "helius": {
   "connected": true,
-  "notifications": 59,
-  "parsed": 29,
+  "notifications": 64,
+  "parsed": 32,
   "subs": 5,
   "errors": []
  },
- "follow_buys_seen": 12,
- "st_requests": 800,
+ "follow_buys_seen": 13,
+ "st_requests": 847,
  "stream_errors": [
   "04:35:04 Connection to remote host was lost.",
   "04:35:06 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 04:35:06 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "stream_counts": {
-  "otros": 35,
-  "create": 1826,
-  "buy": 1559,
-  "sell": 1151,
+  "otros": 38,
+  "create": 1870,
+  "buy": 1574,
+  "sell": 1169,
   "migrate": 1
  },
  "stream_samples": [
-  "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}"
+  "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 2688,
+ "stream_trades": 2719,
  "stream_cost_sol_est": 0.0027,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
