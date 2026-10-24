@@ -1,19 +1,3 @@
-Oct 24 05:31:13 simplai-prod python3[321245]: 2026-10-24 05:31:13,979 INFO live: latido: stream=True tokens_vistos=1193 seguidos=105 candidatos=0 abiertas=4 cerradas=5 st_requests=345 SOL=$102
-Oct 24 05:31:22 simplai-prod python3[321245]: 2026-10-24 05:31:22,445 INFO live.portfolio: CERRADA B7cX5w ret=+11.3% pnl=US$+1.13 salidas=['trailing']
-Oct 24 05:31:22 simplai-prod python3[321245]: 2026-10-24 05:31:22,446 INFO live: VENTA B7cX5w trailing 100% a 1.11x slippage=+6.0% -> 0.1087 SOL [CERRADA]
-Oct 24 05:31:56 simplai-prod python3[321245]: 2026-10-24 05:31:56,396 INFO live.helius: HELIUS 14Rb84 sell B7cX5wW3 0.3396 SOL @ 1.962e-07 (lat 0.2s)
-Oct 24 05:33:14 simplai-prod python3[321245]: 2026-10-24 05:33:14,070 INFO live.helius: HELIUS 14Rb84 buy B7cX5wW3 0.3621 SOL @ 2.253e-07 (lat 0.1s)
-Oct 24 05:33:17 simplai-prod python3[321245]: 2026-10-24 05:33:17,764 INFO live: COPIA B7cX5wW3 siguiendo a 14Rb84… 0.0979 SOL a 2.328e-07 (lat 0.0s slip +6.0%) mcap=168 SOL
-Oct 24 05:35:25 simplai-prod python3[321245]: 2026-10-24 05:35:25,877 INFO live.helius: HELIUS 14Rb84 sell 4vcbzEi7 0.2918 SOL @ 2.327e-08 (lat 0.1s)
-Oct 24 05:35:26 simplai-prod python3[321245]: 2026-10-24 05:35:26,567 INFO live.portfolio: CERRADA 4vcbzE ret=-11.3% pnl=US$-1.14 salidas=['seguido vendió']
-Oct 24 05:35:26 simplai-prod python3[321245]: 2026-10-24 05:35:26,568 INFO live: VENTA copia 4vcbzEi7 (14Rb84 vendió) a 0.89x -> 0.0867 SOL [CERRADA]
-Oct 24 05:35:35 simplai-prod python3[321245]: 2026-10-24 05:35:35,894 INFO live.helius: HELIUS 14Rb84 buy 6SMfgZkr 0.3098 SOL @ 2.022e-07 (lat 0.1s)
-Oct 24 05:35:36 simplai-prod python3[321245]: 2026-10-24 05:35:36,330 INFO live: COPIA 6SMfgZkr siguiendo a 14Rb84… 0.0979 SOL a 2.085e-07 (lat 0.0s slip +6.0%) mcap=197 SOL
-Oct 24 05:36:14 simplai-prod python3[321245]: 2026-10-24 05:36:14,392 INFO live: latido: stream=True tokens_vistos=1240 seguidos=85 candidatos=0 abiertas=4 cerradas=7 st_requests=395 SOL=$102
-Oct 24 05:41:01 simplai-prod python3[321245]: 2026-10-24 05:41:01,786 INFO live.portfolio: CERRADA 6SMfgZ ret=-33.3% pnl=US$-3.33 salidas=['trailing']
-Oct 24 05:41:01 simplai-prod python3[321245]: 2026-10-24 05:41:01,786 INFO live: VENTA 6SMfgZ trailing 100% a 0.67x slippage=+6.0% -> 0.0653 SOL [CERRADA]
-Oct 24 05:41:15 simplai-prod python3[321245]: 2026-10-24 05:41:15,160 INFO live: latido: stream=True tokens_vistos=1305 seguidos=95 candidatos=0 abiertas=3 cerradas=8 st_requests=438 SOL=$102
-Oct 24 05:45:34 simplai-prod python3[321245]: 2026-10-24 05:45:34,618 INFO live.portfolio: CERRADA B7cX5w ret=+54.2% pnl=US$+5.42 salidas=['trailing']
 Oct 24 05:45:34 simplai-prod python3[321245]: 2026-10-24 05:45:34,619 INFO live: VENTA B7cX5w trailing 100% a 1.54x slippage=+6.0% -> 0.1509 SOL [CERRADA]
 Oct 24 05:46:15 simplai-prod python3[321245]: 2026-10-24 05:46:15,830 INFO live: latido: stream=True tokens_vistos=1416 seguidos=143 candidatos=0 abiertas=2 cerradas=9 st_requests=476 SOL=$102
 Oct 24 05:47:52 simplai-prod python3[321245]: 2026-10-24 05:47:52,071 INFO live.helius: HELIUS 14Rb84 buy DF35EFJB 0.3565 SOL @ 8.948e-08 (lat 0.1s)
@@ -298,3 +282,19 @@ Oct 24 15:33:06 simplai-prod python3[366020]: 2026-10-24 15:33:06,529 WARNING li
 Oct 24 15:33:29 simplai-prod python3[366020]: 2026-10-24 15:33:29,413 INFO live.rules_st: CANDIDATO v1.2 KnightDog move=6.8x compradores=92 vol=$13256 snipers=2 -> confirma a T3
 Oct 24 15:34:10 simplai-prod python3[366020]: 2026-10-24 15:34:10,206 INFO live: COMPRA v1.2 KnightDog 0.1010 SOL (US$10) a 3.268e-07 slippage=+6.0% impacto=0.0% lat=0.0s
 Oct 24 15:35:02 simplai-prod python3[366020]: 2026-10-24 15:35:02,560 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
+Oct 24 15:35:05 simplai-prod python3[366020]: 2026-10-24 15:35:05,140 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 15:35:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 24 15:35:05 simplai-prod python3[366020]: <head><title>502 Bad Gateway</title></head>
+Oct 24 15:35:05 simplai-prod python3[366020]: <body>
+Oct 24 15:35:05 simplai-prod python3[366020]: <center><h1>502 Bad Gateway</h1></center>
+Oct 24 15:35:05 simplai-prod python3[366020]: <hr><center>nginx/1.22.1</center>
+Oct 24 15:35:05 simplai-prod python3[366020]: </body>
+Oct 24 15:35:05 simplai-prod python3[366020]: </html>
+Oct 24 15:35:05 simplai-prod python3[366020]: ; reconecto en 4s
+Oct 24 15:35:10 simplai-prod python3[366020]: 2026-10-24 15:35:10,765 INFO live.stream: stream conectado
+Oct 24 15:35:45 simplai-prod python3[366020]: 2026-10-24 15:35:45,646 INFO live.rules_st: CANDIDATO v1.2 Kiryusha move=3.9x compradores=100 vol=$9407 snipers=52 -> confirma a T3
+Oct 24 15:35:52 simplai-prod python3[366020]: 2026-10-24 15:35:52,648 INFO live.portfolio: CERRADA KnightDog ret=+31.8% pnl=US$+3.18 salidas=['trailing']
+Oct 24 15:35:52 simplai-prod python3[366020]: 2026-10-24 15:35:52,649 INFO live: VENTA KnightDog trailing 100% a 1.32x slippage=+6.0% -> 0.1330 SOL [CERRADA]
+Oct 24 15:36:07 simplai-prod python3[366020]: 2026-10-24 15:36:07,362 WARNING live: compra Kiryusha falló: impacto 16.7% > 8.0%
+Oct 24 15:36:14 simplai-prod python3[366020]: 2026-10-24 15:36:14,364 INFO live: latido: stream=True tokens_vistos=2218 seguidos=350 candidatos=0 abiertas=0 cerradas=23 st_requests=30 SOL=$99
+Oct 24 15:36:31 simplai-prod python3[366020]: 2026-10-24 15:36:31,238 INFO live.rules_st: CANDIDATO v1.2 BLEP move=8.1x compradores=71 vol=$4820 snipers=18 -> confirma a T3
+Oct 24 15:37:06 simplai-prod python3[366020]: 2026-10-24 15:37:06,009 WARNING live: compra BLEP falló: impacto 32.2% > 8.0%
