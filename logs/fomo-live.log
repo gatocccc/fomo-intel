@@ -1,4 +1,3 @@
-Oct 24 17:13:23 simplai-prod python3[380576]: 2026-10-24 17:13:23,283 INFO live.rules_st: CANDIDATO v1.2 Nuannuan move=5.0x compradores=100 vol=$17861 snipers=34 -> confirma a T3
 Oct 24 17:13:25 simplai-prod python3[380576]: 2026-10-24 17:13:25,954 INFO live: COMPRA v1.2 Nuannuan 0.1023 SOL (US$10) a 1.466e-07 slippage=+12.6% impacto=0.0% lat=2.4s
 Oct 24 17:14:09 simplai-prod python3[380576]: 2026-10-24 17:14:09,002 INFO live.rules_st: CANDIDATO v1.2 CARPNIK move=18.3x compradores=95 vol=$14196 snipers=25 -> confirma a T3
 Oct 24 17:14:10 simplai-prod python3[380576]: 2026-10-24 17:14:10,002 INFO live: latido: stream=True tokens_vistos=1377 seguidos=359 candidatos=0 abiertas=1 cerradas=2 st_requests=14 SOL=$100
@@ -298,3 +297,4 @@ Oct 24 23:03:36 simplai-prod python3[393883]: 2026-10-24 23:03:36,450 INFO live:
 Oct 24 23:07:11 simplai-prod python3[393883]: 2026-10-24 23:07:11,127 INFO live.rules_st: CANDIDATO v1.2 CrawlHive move=5.4x compradores=99 vol=$14244 snipers=7 -> confirma a T3
 Oct 24 23:08:05 simplai-prod python3[393883]: 2026-10-24 23:08:05,897 INFO live: señal CrawlHive no operada: STOP manual
 Oct 24 23:08:37 simplai-prod python3[393883]: 2026-10-24 23:08:37,142 INFO live: latido: stream=True tokens_vistos=4188 seguidos=254 candidatos=0 abiertas=0 cerradas=18 st_requests=293 SOL=$101
+Oct 24 23:13:37 simplai-prod python3[393883]: 2026-10-24 23:13:37,773 INFO live: latido: stream=True tokens_vistos=4285 seguidos=291 candidatos=0 abiertas=0 cerradas=18 st_requests=294 SOL=$101
