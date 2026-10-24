@@ -1,4 +1,3 @@
-Oct 24 04:35:06 simplai-prod python3[321245]: <hr><center>nginx/1.22.1</center>
 Oct 24 04:35:06 simplai-prod python3[321245]: </body>
 Oct 24 04:35:06 simplai-prod python3[321245]: </html>
 Oct 24 04:35:06 simplai-prod python3[321245]: ; reconecto en 4s
@@ -298,3 +297,4 @@ Oct 24 14:36:11 simplai-prod python3[366020]: 2026-10-24 14:36:11,398 INFO live:
 Oct 24 14:38:17 simplai-prod python3[366020]: 2026-10-24 14:38:17,281 INFO live.rules_st: CANDIDATO v1.2 WAGMI move=6.1x compradores=100 vol=$12401 snipers=31 -> confirma a T3
 Oct 24 14:39:02 simplai-prod python3[366020]: 2026-10-24 14:39:02,333 INFO live.rules_st: CANDIDATO v1.2 decision move=6.5x compradores=100 vol=$10589 snipers=8 -> confirma a T3
 Oct 24 14:39:08 simplai-prod python3[366020]: 2026-10-24 14:39:08,785 WARNING live: compra WAGMI falló: impacto 14.5% > 8.0%
+Oct 24 14:41:11 simplai-prod python3[366020]: 2026-10-24 14:41:11,705 INFO live: latido: stream=True tokens_vistos=1284 seguidos=335 candidatos=0 abiertas=0 cerradas=22 st_requests=18 SOL=$101
