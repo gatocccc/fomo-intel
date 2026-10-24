@@ -168,8 +168,16 @@ class RealExecutor:
             rate = q.get("rate") or {}
             f.quote_impact_pct = round(impact_pct(rate), 2)
             f.raw = {"rate": rate, "type": q.get("type") or q.get("txVersion"), "via": via}
+            # guardia real: precio efectivo de la cotización contra el precio de referencia fresco
+            try:
+                ai = float(rate.get("amountIn") or 0); ao = float(rate.get("amountOut") or 0)
+                if side == "buy" and ai > 0 and ao > 0 and ref_price > 0:
+                    eff = ai / ao
+                    f.quote_impact_pct = round((eff / ref_price - 1) * 100, 2)
+            except (TypeError, ValueError):
+                pass
             if side == "buy" and f.quote_impact_pct > self.p.max_slippage_pct:
-                f.error = f"impacto {f.quote_impact_pct:.1f}% > {self.p.max_slippage_pct}%"; return f
+                f.error = f"precio cotizado {f.quote_impact_pct:+.1f}% vs referencia (máx {self.p.max_slippage_pct}%)"; return f
             txn_b64, version = q["txn"], (q.get("type") or q.get("txVersion") or "v0")
         except Exception as e:  # noqa: BLE001
             # segunda vía: PumpPortal arma la transacción directo contra la curva / PumpSwap

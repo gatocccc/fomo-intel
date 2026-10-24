@@ -203,6 +203,10 @@ class Bot:
             if bal - size_sol < self.p.min_sol_reserve:
                 self.port.log_signal(d, f"sin saldo: {bal:.4f} SOL"); return
         ref = px_usd / self.sol_usd
+        fresh = self.st.price(mint)                 # precio al instante (la vela puede atrasar 30-60 s)
+        if fresh:
+            d["px_ref_chart"] = px_usd; d["px_ref_fresh"] = fresh
+            ref = fresh / self.sol_usd
         fill = self.exe.buy(mint, size_sol, ref)
         self.port.log_fill(fill, self.p.mode, "entrada v1.2", self.sol_usd)
         if not fill.ok:
