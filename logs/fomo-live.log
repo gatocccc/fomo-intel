@@ -1,4 +1,3 @@
-Oct 23 18:35:04 simplai-prod python3[280542]: 2026-10-23 18:35:04,746 INFO live: latido: stream=False tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$104
 Oct 23 18:35:04 simplai-prod python3[280542]: 2026-10-23 18:35:04,766 INFO live.stream: stream conectado
 Oct 23 18:35:07 simplai-prod python3[280542]: 2026-10-23 18:35:07,432 WARNING live.stream: stream caído: PumpPortal: key no reconocida como fondeada; reconecto; reconecto en 2s
 Oct 23 18:35:10 simplai-prod python3[280542]: 2026-10-23 18:35:10,415 INFO live.stream: stream conectado
@@ -298,3 +297,4 @@ Oct 24 05:46:15 simplai-prod python3[321245]: 2026-10-24 05:46:15,830 INFO live:
 Oct 24 05:47:52 simplai-prod python3[321245]: 2026-10-24 05:47:52,071 INFO live.helius: HELIUS 14Rb84 buy DF35EFJB 0.3565 SOL @ 8.948e-08 (lat 0.1s)
 Oct 24 05:47:56 simplai-prod python3[321245]: 2026-10-24 05:47:56,589 INFO live: COPIA DF35EFJB siguiendo a 14Rb84… 0.0978 SOL a 9.489e-08 (lat 0.0s slip +6.0%) mcap=89 SOL
 Oct 24 05:48:34 simplai-prod python3[321245]: 2026-10-24 05:48:34,633 INFO live.helius: HELIUS 14Rb84 sell 6SMfgZkr 0.1255 SOL @ 8.196e-08 (lat 0.1s)
+Oct 24 05:51:15 simplai-prod python3[321245]: 2026-10-24 05:51:15,856 INFO live: latido: stream=True tokens_vistos=1480 seguidos=133 candidatos=0 abiertas=3 cerradas=9 st_requests=523 SOL=$102
