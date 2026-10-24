@@ -1,5 +1,3 @@
-Oct 24 14:57:05 simplai-prod python3[366020]: 2026-10-24 14:57:05,808 WARNING live: compra TALKCAT falló: impacto 10.3% > 8.0%
-Oct 24 14:58:43 simplai-prod python3[366020]: 2026-10-24 14:58:43,586 INFO live.rules_st: CANDIDATO v1.2 MITCH move=3.1x compradores=100 vol=$16547 snipers=4 -> confirma a T3
 Oct 24 14:59:06 simplai-prod python3[366020]: 2026-10-24 14:59:06,448 WARNING live: compra MITCH falló: impacto 17.2% > 8.0%
 Oct 24 15:01:12 simplai-prod python3[366020]: 2026-10-24 15:01:12,234 INFO live: latido: stream=True tokens_vistos=1572 seguidos=289 candidatos=0 abiertas=0 cerradas=22 st_requests=22 SOL=$100
 Oct 24 15:06:12 simplai-prod python3[366020]: 2026-10-24 15:06:12,807 INFO live: latido: stream=True tokens_vistos=1665 seguidos=319 candidatos=0 abiertas=0 cerradas=22 st_requests=23 SOL=$100
@@ -298,3 +296,5 @@ Oct 24 19:27:08 simplai-prod python3[393883]: 2026-10-24 19:27:08,639 INFO live:
 Oct 24 19:28:10 simplai-prod python3[393883]: 2026-10-24 19:28:10,938 INFO live.portfolio: CERRADA CAPITAL ret=-80.7% pnl=US$-8.27 salidas=['stop']
 Oct 24 19:28:10 simplai-prod python3[393883]: 2026-10-24 19:28:10,939 INFO live: VENTA CAPITAL stop 100% a 0.19x slippage=+29.1% -> 0.0196 SOL [CERRADA]
 Oct 24 19:28:11 simplai-prod python3[393883]: 2026-10-24 19:28:11,939 INFO live: latido: stream=True tokens_vistos=682 seguidos=362 candidatos=0 abiertas=0 cerradas=14 st_requests=15 SOL=$101
+Oct 24 19:33:12 simplai-prod python3[393883]: 2026-10-24 19:33:12,835 INFO live: latido: stream=True tokens_vistos=753 seguidos=345 candidatos=0 abiertas=0 cerradas=14 st_requests=16 SOL=$101
+Oct 24 19:35:02 simplai-prod python3[393883]: 2026-10-24 19:35:02,103 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
