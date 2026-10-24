@@ -1,16 +1,34 @@
 {
- "ts": 1792869003.531087,
+ "ts": 1792869276.554222,
  "mode": "real",
  "open": 0,
- "closed": 11,
+ "closed": 12,
  "wins": 4,
- "hit_rate": 0.364,
- "pnl_usd_total": -14.83,
- "pnl_usd_today": -14.83,
- "ret_per_usd": -1.44,
+ "hit_rate": 0.333,
+ "pnl_usd_total": -18.48,
+ "pnl_usd_today": -18.48,
+ "ret_per_usd": -1.796,
  "stop_reason": null,
  "positions": [],
  "last_closed": [
+  {
+   "ts": 1792869236.0272162,
+   "day": "2026-10-24",
+   "mint": "7EjzspJYNVZ9G1BqPcdTDu5fwz83sXPrte6P3m6pump",
+   "symbol": "HENRY",
+   "opened_ts": 1792869189.1792316,
+   "hold_min": 0.8,
+   "sol_in": 0.10145756,
+   "sol_out": 0.065297607,
+   "pnl_sol": -0.03616,
+   "pnl_usd": -3.65,
+   "ret": -0.3564,
+   "peak_mult": 1.02,
+   "exits": [
+    "stop"
+   ],
+   "leftover_tokens": 0.0
+  },
   {
    "ts": 1792867575.7965696,
    "day": "2026-10-24",
@@ -172,60 +190,45 @@
     "trailing"
    ],
    "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792859594.4417171,
-   "day": "2026-10-24",
-   "mint": "FNXarshrweP6gMmGk1b1Bior1vk7vQqq7gpe339cfpWR",
-   "symbol": "NULL",
-   "opened_ts": 1792859468.7202697,
-   "hold_min": 2.1,
-   "sol_in": 0.10308767,
-   "sol_out": 0.123455193,
-   "pnl_sol": 0.020368,
-   "pnl_usd": 2.03,
-   "ret": 0.1976,
-   "peak_mult": 2.45,
-   "exits": [
-    "tp2x",
-    "stop"
-   ],
-   "leftover_tokens": 0.0
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.4527,
- "sol_usd": 101.06730563113199,
+ "wallet_sol": 1.4166,
+ "sol_usd": 101.06388213871702,
  "stream_connected": true,
- "stream_msgs": 355,
- "tokens_seen": 348,
- "tokens_tracked": 348,
+ "stream_msgs": 578,
+ "tokens_seen": 430,
+ "tokens_tracked": 408,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 34,
+ "st_requests": 49,
  "stream_errors": [],
  "rules_st": {
-  "multi_calls": 12,
-  "prefilter_pass": 5,
-  "full_eval": 5,
-  "candidates": 2,
-  "bought": 0,
+  "multi_calls": 17,
+  "prefilter_pass": 7,
+  "full_eval": 7,
+  "candidates": 3,
+  "bought": 1,
   "pending_t3": 0,
-  "evaluated": 274
+  "evaluated": 354
  },
  "stream_counts": {
-  "otros": 1,
-  "create": 354
+  "otros": 3,
+  "create": 437,
+  "buy": 80,
+  "sell": 58
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to token creation events.\"}"
+  "{\"message\":\"Successfully subscribed to token creation events.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 0,
- "stream_cost_sol_est": 0.0,
+ "stream_trades": 138,
+ "stream_cost_sol_est": 0.0001,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "real",
