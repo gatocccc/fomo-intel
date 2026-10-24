@@ -52,8 +52,12 @@ class Bot:
             self._apply_follow_params(self.p)
         self.stream = PumpStream(keep_seconds=420.0, watch_seconds=self.p.stream_watch_s,
                                  sample=0.0 if self.p.strategy == "follow" else self.p.stream_sample)
+        self.helius = None
         if self.follow:
-            self.stream.follow_accounts(list(self.follow))
+            self.stream.follow_accounts(list(self.follow))          # PumpPortal (si entrega) y Helius (seguro) en paralelo
+            if self.env.helius_api_key:
+                from .helius_watch import HeliusWatch
+                self.helius = HeliusWatch(self.env.helius_api_key, list(self.follow))
         self.candidates: dict[str, object] = {}     # mint -> Features esperando T3
         self.creators: dict[str, list[float]] = self._load_creators()
         self.sol_usd = 0.0
@@ -68,6 +72,8 @@ class Bot:
         self._last_reload = self._last_summary = self._last_heartbeat = 0.0
         self._sell_backoff: dict[str, float] = {}
         self._kept_checked: set[str] = set()
+        from collections import deque
+        self._follow_seen_sigs = deque(maxlen=3000)
         self._price_poll: dict[str, float] = {}
         self.running = True
 
@@ -104,10 +110,26 @@ class Bot:
         p.stop, p.trail, p.tp_mult, p.tp_frac, p.max_hold_min = p.follow_stop, p.follow_trail, p.follow_tp_mult, 1.0, p.follow_max_hold_min
 
     # ---------- modo seguidor ----------
+    def _follow_events(self):
+        out = []
+        while self.stream.account_events:
+            out.append(self.stream.account_events.popleft())
+        if self.helius:
+            while self.helius.events:
+                out.append(self.helius.events.popleft())
+        # misma firma vista por los dos canales: una sola vez
+        seen = self._follow_seen_sigs
+        uniq = []
+        for e in out:
+            sig = e.get("sig")
+            if sig and sig in seen:
+                continue
+            if sig: seen.append(sig)
+            uniq.append(e)
+        return uniq
+
     def step_follow(self, now: float) -> None:
-        ev = self.stream.account_events
-        while ev:
-            e = ev.popleft()
+        for e in self._follow_events():
             mint, w, side = e["mint"], e["wallet"], e["side"]
             if side == "buy":
                 if e["sol"] < self.p.follow_min_sol:
@@ -323,6 +345,7 @@ class Bot:
                            "tokens_seen": self.stream.creates, "tokens_tracked": len(self.stream.tokens),
                            "candidates": [f.symbol for f in self.candidates.values()],
                            "strategy": self.p.strategy, "followed_wallets": len(self.follow), "account_trades": self.stream.account_trades,
+                           "helius": {"connected": self.helius.connected, "notifications": self.helius.notifications, "parsed": self.helius.parsed, "subs": len(self.helius.sub_to_wallet), "errors": list(self.helius.errors)[-3:]} if self.helius else None,
                            "follow_buys_seen": len(self.follow_buys),
                            "st_requests": self.st.requests_made, "stream_errors": list(self.stream.errors)[-5:],
                            "stream_counts": dict(self.stream.counts), "stream_samples": list(self.stream.samples),
@@ -337,6 +360,8 @@ class Bot:
     def run(self) -> None:
         log.info("arranca bot modo=%s estrategia=%s seguidos=%d tamaño=US$%.0f máx_abiertas=%d billetera=%s", self.p.mode, self.p.strategy, len(self.follow), self.p.size_usd, self.p.max_open, self._wallet_pubkey() or "-")
         self.stream.start()
+        if self.helius:
+            self.helius.start()
         while self.running:
             now = time.time()
             try:
@@ -361,6 +386,8 @@ class Bot:
                 time.sleep(2)
             time.sleep(1.0)
         self.stream.stop()
+        if self.helius:
+            self.helius.stop()
         self.port.save()
 
 

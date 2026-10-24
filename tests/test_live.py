@@ -78,3 +78,18 @@ def test_t2_t3_alignment():
     c = 1_700_000_010.0
     assert t2_of(c, 2) == 1_700_000_160 + 60  # vela que empieza en el minuto de reloj >= c+120, cierra 60 s después
     assert t3_of(c, 3) == 1_700_000_220 + 60 - 0 or True
+
+
+def test_parse_swap_buy_and_sell():
+    from fomo_intel.live.helius_watch import parse_swap
+    W = "WALLET"; M = "MINTpump"
+    tx = {"meta": {"err": None, "fee": 5000, "preBalances": [1_000_000_000, 0], "postBalances": [899_995_000, 0],
+                   "preTokenBalances": [], "postTokenBalances": [{"owner": W, "mint": M, "uiTokenAmount": {"uiAmount": 1000.0}}]},
+          "transaction": {"message": {"accountKeys": [{"pubkey": W}, {"pubkey": "X"}]}}}
+    e = parse_swap(tx, W)
+    assert e["side"] == "buy" and abs(e["sol"] - 0.1) < 1e-9 and e["tokens"] == 1000.0
+    tx2 = {"meta": {"err": None, "fee": 5000, "preBalances": [1_000_000_000], "postBalances": [1_049_995_000],
+                    "preTokenBalances": [{"owner": W, "mint": M, "uiTokenAmount": {"uiAmount": 1000.0}}], "postTokenBalances": [{"owner": W, "mint": M, "uiTokenAmount": {"uiAmount": 0.0}}]},
+           "transaction": {"message": {"accountKeys": [W]}}}
+    e2 = parse_swap(tx2, W)
+    assert e2["side"] == "sell" and abs(e2["sol"] - 0.05) < 1e-9
