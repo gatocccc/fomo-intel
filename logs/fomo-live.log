@@ -1,4 +1,3 @@
-Oct 23 17:55:04 simplai-prod python3[278727]: 2026-10-23 17:55:04,261 INFO live: latido: stream=False tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$104
 Oct 23 17:55:04 simplai-prod python3[278727]: 2026-10-23 17:55:04,460 INFO live.stream: stream conectado
 Oct 23 18:00:04 simplai-prod python3[278727]: 2026-10-23 18:00:04,757 INFO live: latido: stream=True tokens_vistos=145 seguidos=143 candidatos=0 abiertas=0 cerradas=1 st_requests=2 SOL=$104
 Oct 23 18:05:06 simplai-prod python3[278727]: 2026-10-23 18:05:06,035 INFO live: latido: stream=True tokens_vistos=243 seguidos=168 candidatos=0 abiertas=0 cerradas=1 st_requests=3 SOL=$104
@@ -298,3 +297,4 @@ Oct 24 04:38:52 simplai-prod python3[321245]: 2026-10-24 04:38:52,645 INFO live.
 Oct 24 04:38:52 simplai-prod python3[321245]: 2026-10-24 04:38:52,646 INFO live: VENTA copia AfZVeNW9 (14Rb84 vendió) a 0.82x -> 0.0803 SOL [CERRADA]
 Oct 24 04:41:09 simplai-prod python3[321245]: 2026-10-24 04:41:09,178 INFO live: latido: stream=True tokens_vistos=561 seguidos=93 candidatos=0 abiertas=1 cerradas=4 st_requests=155 SOL=$103
 Oct 24 04:46:10 simplai-prod python3[321245]: 2026-10-24 04:46:10,046 INFO live: latido: stream=True tokens_vistos=643 seguidos=129 candidatos=0 abiertas=1 cerradas=4 st_requests=163 SOL=$103
+Oct 24 04:51:10 simplai-prod python3[321245]: 2026-10-24 04:51:10,367 INFO live: latido: stream=True tokens_vistos=711 seguidos=99 candidatos=0 abiertas=1 cerradas=4 st_requests=179 SOL=$103
