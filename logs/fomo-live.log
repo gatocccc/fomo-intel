@@ -1,14 +1,3 @@
-Oct 24 14:59:06 simplai-prod python3[366020]: 2026-10-24 14:59:06,448 WARNING live: compra MITCH falló: impacto 17.2% > 8.0%
-Oct 24 15:01:12 simplai-prod python3[366020]: 2026-10-24 15:01:12,234 INFO live: latido: stream=True tokens_vistos=1572 seguidos=289 candidatos=0 abiertas=0 cerradas=22 st_requests=22 SOL=$100
-Oct 24 15:06:12 simplai-prod python3[366020]: 2026-10-24 15:06:12,807 INFO live: latido: stream=True tokens_vistos=1665 seguidos=319 candidatos=0 abiertas=0 cerradas=22 st_requests=23 SOL=$100
-Oct 24 15:06:16 simplai-prod python3[366020]: 2026-10-24 15:06:16,574 INFO live.rules_st: CANDIDATO v1.2 MERGE move=3.5x compradores=58 vol=$2214 snipers=2 -> confirma a T3
-Oct 24 15:07:06 simplai-prod python3[366020]: 2026-10-24 15:07:06,558 WARNING live: compra MERGE falló: impacto 16.5% > 8.0%
-Oct 24 15:09:18 simplai-prod python3[366020]: 2026-10-24 15:09:18,271 INFO live.rules_st: CANDIDATO v1.2 ZAIO move=3.6x compradores=100 vol=$19131 snipers=46 -> confirma a T3
-Oct 24 15:10:05 simplai-prod python3[366020]: 2026-10-24 15:10:05,835 WARNING live: compra ZAIO falló: impacto 13.0% > 8.0%
-Oct 24 15:11:13 simplai-prod python3[366020]: 2026-10-24 15:11:13,115 INFO live: latido: stream=True tokens_vistos=1766 seguidos=351 candidatos=0 abiertas=0 cerradas=22 st_requests=24 SOL=$100
-Oct 24 15:16:13 simplai-prod python3[366020]: 2026-10-24 15:16:13,297 INFO live: latido: stream=True tokens_vistos=1873 seguidos=379 candidatos=0 abiertas=0 cerradas=22 st_requests=25 SOL=$100
-Oct 24 15:18:23 simplai-prod python3[366020]: 2026-10-24 15:18:23,598 INFO live.rules_st: CANDIDATO v1.2 PumpkinBot move=10.8x compradores=95 vol=$12599 snipers=9 -> confirma a T3
-Oct 24 15:19:08 simplai-prod python3[366020]: 2026-10-24 15:19:08,652 INFO live.rules_st: CANDIDATO v1.2 COGE move=3.1x compradores=100 vol=$14170 snipers=55 -> confirma a T3
 Oct 24 15:20:07 simplai-prod python3[366020]: 2026-10-24 15:20:07,813 WARNING live: compra COGE falló: impacto 18.5% > 8.0%
 Oct 24 15:21:13 simplai-prod python3[366020]: 2026-10-24 15:21:13,211 INFO live: latido: stream=True tokens_vistos=1967 seguidos=397 candidatos=0 abiertas=0 cerradas=22 st_requests=26 SOL=$99
 Oct 24 15:26:13 simplai-prod python3[366020]: 2026-10-24 15:26:13,258 INFO live: latido: stream=True tokens_vistos=2065 seguidos=401 candidatos=0 abiertas=0 cerradas=22 st_requests=27 SOL=$99
@@ -298,3 +287,14 @@ Oct 24 19:28:10 simplai-prod python3[393883]: 2026-10-24 19:28:10,939 INFO live:
 Oct 24 19:28:11 simplai-prod python3[393883]: 2026-10-24 19:28:11,939 INFO live: latido: stream=True tokens_vistos=682 seguidos=362 candidatos=0 abiertas=0 cerradas=14 st_requests=15 SOL=$101
 Oct 24 19:33:12 simplai-prod python3[393883]: 2026-10-24 19:33:12,835 INFO live: latido: stream=True tokens_vistos=753 seguidos=345 candidatos=0 abiertas=0 cerradas=14 st_requests=16 SOL=$101
 Oct 24 19:35:02 simplai-prod python3[393883]: 2026-10-24 19:35:02,103 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
+Oct 24 19:35:04 simplai-prod python3[393883]: 2026-10-24 19:35:04,709 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 19:35:04 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 24 19:35:04 simplai-prod python3[393883]: <head><title>502 Bad Gateway</title></head>
+Oct 24 19:35:04 simplai-prod python3[393883]: <body>
+Oct 24 19:35:04 simplai-prod python3[393883]: <center><h1>502 Bad Gateway</h1></center>
+Oct 24 19:35:04 simplai-prod python3[393883]: <hr><center>nginx/1.22.1</center>
+Oct 24 19:35:04 simplai-prod python3[393883]: </body>
+Oct 24 19:35:04 simplai-prod python3[393883]: </html>
+Oct 24 19:35:04 simplai-prod python3[393883]: ; reconecto en 4s
+Oct 24 19:35:10 simplai-prod python3[393883]: 2026-10-24 19:35:10,364 INFO live.stream: stream conectado
+Oct 24 19:38:12 simplai-prod python3[393883]: 2026-10-24 19:38:12,882 INFO live: latido: stream=True tokens_vistos=808 seguidos=320 candidatos=0 abiertas=0 cerradas=14 st_requests=17 SOL=$101
+Oct 24 19:39:08 simplai-prod python3[393883]: 2026-10-24 19:39:08,520 INFO live.rules_st: CANDIDATO v1.2 GYAT move=4.2x compradores=97 vol=$15475 snipers=5 -> confirma a T3
