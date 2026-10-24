@@ -1,5 +1,5 @@
 {
- "ts": 1792875277.990174,
+ "ts": 1792875583.604057,
  "mode": "real",
  "open": 1,
  "closed": 17,
@@ -13,9 +13,9 @@
   {
    "symbol": "XDD",
    "mint": "4NJGurVP7NYgJzhgNoW19Q9x5UNhvGaFiE8WBRxzpump",
-   "age_min": 59.5,
-   "mult": 0.91,
-   "peak_mult": 1.0,
+   "age_min": 64.6,
+   "mult": 1.15,
+   "peak_mult": 1.15,
    "size_usd": 10.25,
    "tp_done": false
   }
@@ -204,36 +204,36 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.1425,
- "sol_usd": 101.43678859676567,
+ "sol_usd": 101.44386323316063,
  "stream_connected": true,
- "stream_msgs": 2880,
- "tokens_seen": 2045,
- "tokens_tracked": 320,
+ "stream_msgs": 2973,
+ "tokens_seen": 2122,
+ "tokens_tracked": 304,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 514,
+ "st_requests": 540,
  "stream_errors": [
   "19:35:02 Connection to remote host was lost.",
   "19:35:04 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 19:35:04 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "rules_st": {
-  "multi_calls": 116,
-  "prefilter_pass": 50,
-  "full_eval": 50,
-  "candidates": 17,
+  "multi_calls": 121,
+  "prefilter_pass": 51,
+  "full_eval": 51,
+  "candidates": 18,
   "bought": 7,
   "pending_t3": 0,
-  "evaluated": 1985
+  "evaluated": 2061
  },
  "stream_counts": {
   "otros": 15,
-  "create": 2064,
-  "buy": 474,
-  "sell": 327
+  "create": 2142,
+  "buy": 483,
+  "sell": 333
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",
@@ -242,7 +242,7 @@
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 801,
+ "stream_trades": 816,
  "stream_cost_sol_est": 0.0008,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
