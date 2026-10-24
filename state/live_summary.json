@@ -1,5 +1,5 @@
 {
- "ts": 1792814679.9908502,
+ "ts": 1792814983.0897691,
  "mode": "paper",
  "open": 1,
  "closed": 1,
@@ -13,8 +13,8 @@
   {
    "symbol": "GZYL4J",
    "mint": "GZYL4JVHikj6H71a7mTdWay1q7DwsWdJFEhkQCsYz4WT",
-   "age_min": 7.4,
-   "mult": 0.7,
+   "age_min": 12.5,
+   "mult": 0.71,
    "peak_mult": 1.0,
    "size_usd": 10.0,
    "tp_done": false
@@ -42,11 +42,11 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 102.61333484247332,
+ "sol_usd": 102.67213973112754,
  "stream_connected": true,
- "stream_msgs": 193,
- "tokens_seen": 129,
- "tokens_tracked": 112,
+ "stream_msgs": 285,
+ "tokens_seen": 187,
+ "tokens_tracked": 89,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 5,
@@ -59,20 +59,20 @@
   "errors": []
  },
  "follow_buys_seen": 1,
- "st_requests": 14,
+ "st_requests": 25,
  "stream_errors": [],
  "stream_counts": {
   "otros": 3,
-  "create": 131,
-  "buy": 42,
-  "sell": 17
+  "create": 189,
+  "buy": 71,
+  "sell": 22
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 58,
+ "stream_trades": 92,
  "stream_cost_sol_est": 0.0001,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
