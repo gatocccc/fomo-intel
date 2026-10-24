@@ -1,9 +1,3 @@
-Oct 24 07:13:00 simplai-prod python3[335643]: 2026-10-24 07:13:00,091 INFO live.helius: HELIUS 14Rb84 buy HTi6Jahm 0.2612 SOL @ 1.280e-07 (lat 0.1s)
-Oct 24 07:13:05 simplai-prod python3[335643]: 2026-10-24 07:13:05,630 INFO live: latido: stream=True tokens_vistos=51 seguidos=28 candidatos=0 abiertas=3 cerradas=16 st_requests=119 SOL=$102
-Oct 24 07:17:26 simplai-prod python3[335643]: 2026-10-24 07:17:26,488 INFO live.helius: HELIUS 14Rb84 sell HTi6Jahm 0.1217 SOL @ 5.961e-08 (lat 0.1s)
-Oct 24 07:18:05 simplai-prod python3[335643]: 2026-10-24 07:18:05,991 INFO live: latido: stream=True tokens_vistos=80 seguidos=37 candidatos=0 abiertas=3 cerradas=16 st_requests=177 SOL=$102
-Oct 24 07:23:06 simplai-prod python3[335643]: 2026-10-24 07:23:06,181 INFO live: latido: stream=True tokens_vistos=121 seguidos=52 candidatos=0 abiertas=3 cerradas=16 st_requests=235 SOL=$102
-Oct 24 07:25:01 simplai-prod python3[335643]: 2026-10-24 07:25:01,152 INFO live.helius: HELIUS 14Rb84 buy 6SMfgZkr 0.2571 SOL @ 2.384e-07 (lat 0.1s)
 Oct 24 07:25:59 simplai-prod python3[335643]: 2026-10-24 07:25:59,137 INFO live.helius: HELIUS 14Rb84 sell WXMRyRZh 0.0220 SOL @ 5.324e+00 (lat 0.2s)
 Oct 24 07:28:07 simplai-prod python3[335643]: 2026-10-24 07:28:07,161 INFO live: latido: stream=True tokens_vistos=157 seguidos=52 candidatos=0 abiertas=3 cerradas=16 st_requests=296 SOL=$102
 Oct 24 07:33:07 simplai-prod python3[335643]: 2026-10-24 07:33:07,517 INFO live: latido: stream=True tokens_vistos=187 seguidos=46 candidatos=0 abiertas=3 cerradas=16 st_requests=354 SOL=$102
@@ -298,3 +292,9 @@ Oct 24 16:54:07 simplai-prod python3[380576]: 2026-10-24 16:54:07,199 INFO live:
 Oct 24 16:59:08 simplai-prod python3[380576]: 2026-10-24 16:59:08,146 INFO live: latido: stream=True tokens_vistos=1116 seguidos=401 candidatos=0 abiertas=0 cerradas=2 st_requests=10 SOL=$100
 Oct 24 17:04:08 simplai-prod python3[380576]: 2026-10-24 17:04:08,208 INFO live: latido: stream=True tokens_vistos=1197 seguidos=374 candidatos=0 abiertas=0 cerradas=2 st_requests=11 SOL=$100
 Oct 24 17:09:08 simplai-prod python3[380576]: 2026-10-24 17:09:08,913 INFO live: latido: stream=True tokens_vistos=1266 seguidos=350 candidatos=0 abiertas=0 cerradas=2 st_requests=12 SOL=$100
+Oct 24 17:11:25 simplai-prod python3[380576]: 2026-10-24 17:11:25,291 INFO live.rules_st: CANDIDATO v1.2 CLIP move=3.9x compradores=100 vol=$15175 snipers=19 -> confirma a T3
+Oct 24 17:13:21 simplai-prod python3[380576]: 2026-10-24 17:13:21,563 WARNING live: compra CLIP falló: sin confirmación en 75 s
+Oct 24 17:13:23 simplai-prod python3[380576]: 2026-10-24 17:13:23,283 INFO live.rules_st: CANDIDATO v1.2 Nuannuan move=5.0x compradores=100 vol=$17861 snipers=34 -> confirma a T3
+Oct 24 17:13:25 simplai-prod python3[380576]: 2026-10-24 17:13:25,954 INFO live: COMPRA v1.2 Nuannuan 0.1023 SOL (US$10) a 1.466e-07 slippage=+12.6% impacto=0.0% lat=2.4s
+Oct 24 17:14:09 simplai-prod python3[380576]: 2026-10-24 17:14:09,002 INFO live.rules_st: CANDIDATO v1.2 CARPNIK move=18.3x compradores=95 vol=$14196 snipers=25 -> confirma a T3
+Oct 24 17:14:10 simplai-prod python3[380576]: 2026-10-24 17:14:10,002 INFO live: latido: stream=True tokens_vistos=1377 seguidos=359 candidatos=0 abiertas=1 cerradas=2 st_requests=14 SOL=$100

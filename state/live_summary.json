@@ -1,7 +1,7 @@
 {
- "ts": 1792861781.5911193,
+ "ts": 1792862094.6963527,
  "mode": "real",
- "open": 0,
+ "open": 1,
  "closed": 2,
  "wins": 1,
  "hit_rate": 0.5,
@@ -9,7 +9,17 @@
  "pnl_usd_today": -3.6,
  "ret_per_usd": -0.344,
  "stop_reason": null,
- "positions": [],
+ "positions": [
+  {
+   "symbol": "Nuannuan",
+   "mint": "DAoC8MwJx5o6XYz97ACJqQPDCXKtKEW4G7su2KLypump",
+   "age_min": 1.5,
+   "mult": 1.12,
+   "peak_mult": 1.12,
+   "size_usd": 10.25,
+   "tp_done": false
+  }
+ ],
  "last_closed": [
   {
    "ts": 1792859594.4417171,
@@ -50,44 +60,44 @@
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.5638,
- "sol_usd": 100.2462264390683,
+ "wallet_sol": 1.4615,
+ "sol_usd": 100.2938266023557,
  "stream_connected": true,
- "stream_msgs": 1503,
- "tokens_seen": 1275,
- "tokens_tracked": 349,
+ "stream_msgs": 1668,
+ "tokens_seen": 1394,
+ "tokens_tracked": 360,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 118,
+ "st_requests": 138,
  "stream_errors": [],
  "rules_st": {
-  "multi_calls": 47,
-  "prefilter_pass": 18,
-  "full_eval": 18,
-  "candidates": 4,
-  "bought": 2,
-  "pending_t3": 0,
-  "evaluated": 1218
+  "multi_calls": 51,
+  "prefilter_pass": 22,
+  "full_eval": 22,
+  "candidates": 7,
+  "bought": 3,
+  "pending_t3": 1,
+  "evaluated": 1301
  },
  "stream_counts": {
-  "otros": 5,
-  "create": 1279,
-  "sell": 124,
-  "buy": 95
+  "otros": 6,
+  "create": 1398,
+  "sell": 138,
+  "buy": 126
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}"
+  "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 219,
- "stream_cost_sol_est": 0.0002,
+ "stream_trades": 264,
+ "stream_cost_sol_est": 0.0003,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "real",
