@@ -12,8 +12,25 @@
   "tp_done": false,
   "sol_usd_at_open": 100.93297130326305,
   "exits": [],
-  "last_price": 3.759615719189897e-07,
-  "last_ts": 1792866858.1350229,
+  "last_price": 3.8789909808973487e-07,
+  "last_ts": 1792866904.575834,
+  "pending_sell": false
+ },
+ "rfzih6V5SPaWCmcphqBpWkU2WQAJpHtpw5fFAD5pump": {
+  "mint": "rfzih6V5SPaWCmcphqBpWkU2WQAJpHtpw5fFAD5pump",
+  "symbol": "AVATARS",
+  "opened_ts": 1792866908.3078332,
+  "entry_price": 1.3037419150317455e-07,
+  "tokens": 778634.473814,
+  "tokens_initial": 778634.473814,
+  "sol_in": 0.10151384,
+  "sol_out": 0.0,
+  "peak_price": 1.3037419150317455e-07,
+  "tp_done": false,
+  "sol_usd_at_open": 101.00969612521519,
+  "exits": [],
+  "last_price": 1.3037419150317455e-07,
+  "last_ts": 1792866908.3078346,
   "pending_sell": false
  }
 }
