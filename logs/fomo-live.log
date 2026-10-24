@@ -267,3 +267,5 @@ Oct 23 23:48:06 simplai-prod python3[284091]: 2026-10-23 23:48:06,888 INFO live.
 Oct 23 23:49:25 simplai-prod python3[284091]: 2026-10-23 23:49:25,169 INFO live: latido: stream=True tokens_vistos=5258 seguidos=96 candidatos=0 abiertas=0 cerradas=1 st_requests=51 SOL=$102
 Oct 23 23:54:25 simplai-prod python3[284091]: 2026-10-23 23:54:25,453 INFO live: latido: stream=True tokens_vistos=5300 seguidos=63 candidatos=0 abiertas=0 cerradas=1 st_requests=52 SOL=$103
 Oct 23 23:59:25 simplai-prod python3[284091]: 2026-10-23 23:59:25,740 INFO live: latido: stream=True tokens_vistos=5382 seguidos=95 candidatos=0 abiertas=0 cerradas=1 st_requests=53 SOL=$103
+Oct 24 00:00:24 simplai-prod python3[284091]: 2026-10-24 00:00:24,008 WARNING live.signals: precio SOL: 503 Server Error: Service Unavailable for url: https://data.solanatracker.io/price?token=So11111111111111111111111111111111111111112
+Oct 24 00:04:26 simplai-prod python3[284091]: 2026-10-24 00:04:26,219 INFO live: latido: stream=True tokens_vistos=5471 seguidos=126 candidatos=0 abiertas=0 cerradas=1 st_requests=55 SOL=$103
