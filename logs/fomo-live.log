@@ -1,7 +1,3 @@
-Oct 24 15:20:07 simplai-prod python3[366020]: 2026-10-24 15:20:07,813 WARNING live: compra COGE falló: impacto 18.5% > 8.0%
-Oct 24 15:21:13 simplai-prod python3[366020]: 2026-10-24 15:21:13,211 INFO live: latido: stream=True tokens_vistos=1967 seguidos=397 candidatos=0 abiertas=0 cerradas=22 st_requests=26 SOL=$99
-Oct 24 15:26:13 simplai-prod python3[366020]: 2026-10-24 15:26:13,258 INFO live: latido: stream=True tokens_vistos=2065 seguidos=401 candidatos=0 abiertas=0 cerradas=22 st_requests=27 SOL=$99
-Oct 24 15:30:27 simplai-prod python3[366020]: 2026-10-24 15:30:27,934 INFO live.rules_st: CANDIDATO v1.2 SOL move=5.7x compradores=100 vol=$17122 snipers=34 -> confirma a T3
 Oct 24 15:31:13 simplai-prod python3[366020]: 2026-10-24 15:31:13,108 INFO live.rules_st: CANDIDATO v1.2 PUPPLE move=16.1x compradores=100 vol=$14219 snipers=16 -> confirma a T3
 Oct 24 15:31:14 simplai-prod python3[366020]: 2026-10-24 15:31:14,109 INFO live: latido: stream=True tokens_vistos=2135 seguidos=372 candidatos=0 abiertas=0 cerradas=22 st_requests=28 SOL=$99
 Oct 24 15:32:43 simplai-prod python3[366020]: 2026-10-24 15:32:43,726 INFO live.rules_st: CANDIDATO v1.2 ber move=6.2x compradores=100 vol=$15321 snipers=14 -> confirma a T3
@@ -298,3 +294,7 @@ Oct 24 19:35:04 simplai-prod python3[393883]: ; reconecto en 4s
 Oct 24 19:35:10 simplai-prod python3[393883]: 2026-10-24 19:35:10,364 INFO live.stream: stream conectado
 Oct 24 19:38:12 simplai-prod python3[393883]: 2026-10-24 19:38:12,882 INFO live: latido: stream=True tokens_vistos=808 seguidos=320 candidatos=0 abiertas=0 cerradas=14 st_requests=17 SOL=$101
 Oct 24 19:39:08 simplai-prod python3[393883]: 2026-10-24 19:39:08,520 INFO live.rules_st: CANDIDATO v1.2 GYAT move=4.2x compradores=97 vol=$15475 snipers=5 -> confirma a T3
+Oct 24 19:42:10 simplai-prod python3[393883]: 2026-10-24 19:42:10,038 INFO live.rules_st: CANDIDATO v1.2 CRIMINU move=3.1x compradores=71 vol=$5407 snipers=21 -> confirma a T3
+Oct 24 19:43:08 simplai-prod python3[393883]: 2026-10-24 19:43:08,429 INFO live: COMPRA v1.2 CRIMINU 0.1015 SOL (US$10) a 8.578e-08 slippage=+3.8% impacto=1.2% lat=2.6s
+Oct 24 19:43:13 simplai-prod python3[393883]: 2026-10-24 19:43:13,596 INFO live: latido: stream=True tokens_vistos=880 seguidos=301 candidatos=0 abiertas=1 cerradas=14 st_requests=20 SOL=$101
+Oct 24 19:44:49 simplai-prod python3[393883]: 2026-10-24 19:44:49,522 WARNING live: venta CRIMINU (stop) falló: tx falló en cadena: {'InstructionError': [3, {'Custom': 6001}]}
