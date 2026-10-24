@@ -50,8 +50,12 @@ class Bot:
         if self.p.strategy == "follow":
             self._load_follow_list()
             self._apply_follow_params(self.p)
-        self.stream = PumpStream(keep_seconds=420.0, watch_seconds=self.p.stream_watch_s,
-                                 sample=0.0 if self.p.strategy == "follow" else self.p.stream_sample)
+        self.stream = PumpStream(keep_seconds=1200.0 if self.p.strategy == "rules_st" else 420.0, watch_seconds=self.p.stream_watch_s,
+                                 sample=0.0 if self.p.strategy in ("follow", "rules_st") else self.p.stream_sample)
+        self.rules_st = None
+        if self.p.strategy == "rules_st":
+            from .rules_st import RulesST
+            self.rules_st = RulesST(self)
         self.helius = None
         if self.follow:
             self.stream.follow_accounts(list(self.follow))          # PumpPortal (si entrega) y Helius (seguro) en paralelo
@@ -185,6 +189,29 @@ class Bot:
         # limpiar compras viejas de seguidos (más de 30 min) para no acumular
         if len(self.follow_buys) > 2000:
             self.follow_buys = {m: d for m, d in self.follow_buys.items() if max(d.values()) > now - 1800}
+
+    def enter_from_rules(self, mint: str, d: dict, px_usd: float) -> None:
+        """Entrada decidida por la estrategia de reglas (precio de referencia en US$ -> SOL)."""
+        why_not = self.port.stop_reason()
+        if why_not:
+            self.port.log_signal(d, f"freno: {why_not}"); log.info("señal %s no operada: %s", d.get("symbol"), why_not); return
+        if mint in self.port.positions or self.sol_usd <= 0 or px_usd <= 0:
+            self.port.log_signal(d, "sin precio"); return
+        size_sol = self.p.size_usd / self.sol_usd
+        if self.p.mode == "real":
+            bal = self.exe.sol_balance()
+            if bal - size_sol < self.p.min_sol_reserve:
+                self.port.log_signal(d, f"sin saldo: {bal:.4f} SOL"); return
+        ref = px_usd / self.sol_usd
+        fill = self.exe.buy(mint, size_sol, ref)
+        self.port.log_fill(fill, self.p.mode, "entrada v1.2", self.sol_usd)
+        if not fill.ok:
+            self.port.log_signal(d, f"compra fallida: {fill.error}"); log.warning("compra %s falló: %s", d.get("symbol"), fill.error); return
+        pos = self.port.open(fill, d.get("symbol") or mint[:6], self.sol_usd)
+        self.stream.pin(mint, pos.symbol, fill.price)
+        self.port.log_signal(d, "COMPRADO")
+        if self.rules_st: self.rules_st.stats["bought"] += 1
+        log.info("COMPRA v1.2 %s %.4f SOL (US$%.0f) a %.3e slippage=%+.1f%% impacto=%.1f%% lat=%.1fs", pos.symbol, fill.sol, fill.sol * self.sol_usd, fill.price, fill.slippage_pct, fill.quote_impact_pct, fill.latency_s)
 
     def _reload(self) -> None:
         newp = LiveParams.load(self.state)
@@ -349,7 +376,8 @@ class Bot:
                            "strategy": self.p.strategy, "followed_wallets": len(self.follow), "account_trades": self.stream.account_trades,
                            "helius": {"connected": self.helius.connected, "notifications": self.helius.notifications, "parsed": self.helius.parsed, "subs": len(self.helius.sub_to_wallet), "errors": list(self.helius.errors)[-3:]} if self.helius else None,
                            "follow_buys_seen": len(self.follow_buys),
-                           "st_requests": self.st.requests_made, "stream_errors": list(self.stream.errors)[-5:],
+                           "st_requests": self.st.requests_made + (self.rules_st.requests_made() if self.rules_st else 0), "stream_errors": list(self.stream.errors)[-5:],
+                           "rules_st": ({**self.rules_st.stats, "pending_t3": len(self.rules_st.pending_t3), "evaluated": len(self.rules_st.evaluated)} if self.rules_st else None),
                            "stream_counts": dict(self.stream.counts), "stream_samples": list(self.stream.samples),
                            "stream_trades": self.stream.trades_streamed, "stream_cost_sol_est": round(self.stream.trades_streamed / 10000 * 0.01, 4),
                            "pumpportal_wallet_sol": self._pumpportal_balance(),
@@ -372,6 +400,9 @@ class Bot:
                     self.sol_usd = self.st.sol_usd() or self.sol_usd
                 if self.sol_usd > 0 and self.p.strategy == "follow":
                     self.step_follow(now)
+                elif self.sol_usd > 0 and self.p.strategy == "rules_st":
+                    self.rules_st.p = self.p
+                    self.rules_st.step(now)
                 elif self.sol_usd > 0:
                     self.step_evaluate(now)
                     self.step_enter(now)

@@ -48,7 +48,7 @@ def main(budget: int = 60) -> None:
         for mint, r in list(rows.items())[:budget]:
             created = int(r["created_ts"])
             try:
-                candles = cf.fetch(mint, created, hours=2.0)
+                candles = cf.fetch(mint, created, hours=2.0, force=True)
             except Exception as e:  # noqa: BLE001
                 print(f"{r.get('symbol')}: sin velas ({e})"); continue
             sim = simulate(mint, r.get("symbol", ""), created, candles, SimParams(entry_min=3, fill="close", stop_fill="close", **V1["exit"]))
