@@ -1,5 +1,3 @@
-Oct 24 05:51:15 simplai-prod python3[321245]: 2026-10-24 05:51:15,856 INFO live: latido: stream=True tokens_vistos=1480 seguidos=133 candidatos=0 abiertas=3 cerradas=9 st_requests=523 SOL=$102
-Oct 24 05:56:16 simplai-prod python3[321245]: 2026-10-24 05:56:16,281 INFO live: latido: stream=True tokens_vistos=1547 seguidos=94 candidatos=0 abiertas=3 cerradas=9 st_requests=571 SOL=$102
 Oct 24 05:59:23 simplai-prod python3[321245]: 2026-10-24 05:59:23,920 INFO live.helius: HELIUS 14Rb84 sell B7cX5wW3 1.1431 SOL @ 9.483e-07 (lat 0.1s)
 Oct 24 06:01:16 simplai-prod python3[321245]: 2026-10-24 06:01:16,632 INFO live: latido: stream=True tokens_vistos=1587 seguidos=61 candidatos=0 abiertas=3 cerradas=9 st_requests=623 SOL=$102
 Oct 24 06:01:26 simplai-prod python3[321245]: 2026-10-24 06:01:26,034 INFO live.helius: HELIUS 14Rb84 buy G8S6vUDo 1.0130 SOL @ 1.527e-07 (lat 0.1s)
@@ -298,3 +296,5 @@ Oct 24 15:45:37 simplai-prod python3[366020]: 2026-10-24 15:45:37,567 INFO live.
 Oct 24 15:46:06 simplai-prod python3[366020]: 2026-10-24 15:46:06,410 WARNING live: compra BERE falló: impacto 12.9% > 8.0%
 Oct 24 15:46:15 simplai-prod python3[366020]: 2026-10-24 15:46:15,413 INFO live: latido: stream=True tokens_vistos=2386 seguidos=322 candidatos=0 abiertas=0 cerradas=23 st_requests=32 SOL=$99
 Oct 24 15:46:23 simplai-prod python3[366020]: 2026-10-24 15:46:23,841 INFO live.rules_st: CANDIDATO v1.2 $SOSL move=7.9x compradores=89 vol=$4910 snipers=4 -> confirma a T3
+Oct 24 15:51:16 simplai-prod python3[366020]: 2026-10-24 15:51:16,108 INFO live: latido: stream=True tokens_vistos=2464 seguidos=329 candidatos=0 abiertas=0 cerradas=23 st_requests=33 SOL=$99
+Oct 24 15:52:26 simplai-prod python3[366020]: 2026-10-24 15:52:26,349 INFO live.rules_st: CANDIDATO v1.2 Makayla move=4.0x compradores=95 vol=$13888 snipers=30 -> confirma a T3
