@@ -1,4 +1,3 @@
-Oct 24 08:40:47 simplai-prod python3[335643]: 2026-10-24 08:40:47,526 INFO live.helius: HELIUS 14Rb84 buy 6SMfgZkr 0.2571 SOL @ 1.160e-07 (lat 0.1s)
 Oct 24 08:41:44 simplai-prod python3[335643]: 2026-10-24 08:41:44,918 INFO live.helius: HELIUS 14Rb84 buy 7wYXEuBT 1.0354 SOL @ 1.374e-07 (lat 0.1s)
 Oct 24 08:43:15 simplai-prod python3[335643]: 2026-10-24 08:43:15,060 INFO live: latido: stream=True tokens_vistos=885 seguidos=60 candidatos=0 abiertas=2 cerradas=17 st_requests=1040 SOL=$102
 Oct 24 08:48:15 simplai-prod python3[335643]: 2026-10-24 08:48:15,063 INFO live: latido: stream=True tokens_vistos=944 seguidos=71 candidatos=0 abiertas=2 cerradas=17 st_requests=1079 SOL=$102
@@ -298,3 +297,4 @@ Oct 24 17:41:41 simplai-prod python3[380576]: 2026-10-24 17:41:41,460 INFO live:
 Oct 24 17:43:15 simplai-prod python3[380576]: 2026-10-24 17:43:15,047 INFO live.portfolio: CERRADA JEET ret=+46.4% pnl=US$+4.76 salidas=['trailing']
 Oct 24 17:43:15 simplai-prod python3[380576]: 2026-10-24 17:43:15,047 INFO live: VENTA JEET trailing 100% a 1.46x slippage=-1.9% -> 0.1500 SOL [CERRADA]
 Oct 24 17:44:13 simplai-prod python3[380576]: 2026-10-24 17:44:13,363 INFO live: latido: stream=True tokens_vistos=2046 seguidos=491 candidatos=0 abiertas=0 cerradas=6 st_requests=22 SOL=$100
+Oct 24 17:49:13 simplai-prod python3[380576]: 2026-10-24 17:49:13,971 INFO live: latido: stream=True tokens_vistos=2130 seguidos=491 candidatos=0 abiertas=0 cerradas=6 st_requests=23 SOL=$100
