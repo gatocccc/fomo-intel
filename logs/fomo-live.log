@@ -1,21 +1,3 @@
-Oct 24 13:04:30 simplai-prod python3[335643]: 2026-10-24 13:04:30,202 INFO live.helius: HELIUS 14Rb84 sell FxXuYvHC 0.1760 SOL @ 8.622e-08 (lat 0.1s)
-Oct 24 13:08:43 simplai-prod python3[335643]: 2026-10-24 13:08:43,199 INFO live: latido: stream=True tokens_vistos=3900 seguidos=171 candidatos=0 abiertas=2 cerradas=20 st_requests=3362 SOL=$102
-Oct 24 13:13:18 simplai-prod python3[335643]: 2026-10-24 13:13:18,095 INFO live.helius: HELIUS 14Rb84 buy 5FKowS9H 0.1762 SOL @ 1.371e-07 (lat 0.1s)
-Oct 24 13:13:43 simplai-prod python3[335643]: 2026-10-24 13:13:43,312 INFO live: latido: stream=True tokens_vistos=4024 seguidos=162 candidatos=0 abiertas=2 cerradas=20 st_requests=3401 SOL=$101
-Oct 24 13:18:44 simplai-prod python3[335643]: 2026-10-24 13:18:44,435 INFO live: latido: stream=True tokens_vistos=4120 seguidos=167 candidatos=0 abiertas=2 cerradas=20 st_requests=3442 SOL=$101
-Oct 24 13:21:03 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
-Oct 24 13:21:03 simplai-prod python3[335643]: 2026-10-24 13:21:03,032 INFO live: apagando...
-Oct 24 13:21:04 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
-Oct 24 13:21:04 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
-Oct 24 13:21:04 simplai-prod systemd[1]: fomo-live.service: Consumed 3min 18.185s CPU time.
-Oct 24 13:21:04 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
-Oct 24 13:21:04 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
-Oct 24 13:21:04 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
-Oct 24 13:21:04 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
-Oct 24 13:21:04 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
-Oct 24 13:21:04 simplai-prod python3[366020]: 2026-10-24 13:21:04,745 INFO live: arranca bot modo=paper estrategia=rules_st seguidos=0 tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
-Oct 24 13:21:05 simplai-prod python3[366020]: 2026-10-24 13:21:05,092 INFO live.stream: stream conectado
-Oct 24 13:21:05 simplai-prod python3[366020]: 2026-10-24 13:21:05,263 INFO live.portfolio: CERRADA Fpd8Mo ret=-21.3% pnl=US$-2.13 salidas=['trailing']
 Oct 24 13:21:05 simplai-prod python3[366020]: 2026-10-24 13:21:05,263 INFO live: VENTA Fpd8Mo trailing 100% a 0.79x slippage=+6.0% -> 0.0769 SOL [CERRADA]
 Oct 24 13:21:05 simplai-prod python3[366020]: 2026-10-24 13:21:05,515 INFO live.portfolio: CERRADA EiXWTc ret=+27.3% pnl=US$+2.73 salidas=['trailing']
 Oct 24 13:21:05 simplai-prod python3[366020]: 2026-10-24 13:21:05,516 INFO live: VENTA EiXWTc trailing 100% a 1.27x slippage=+6.0% -> 0.1245 SOL [CERRADA]
@@ -298,3 +280,21 @@ Oct 24 18:44:31 simplai-prod python3[380576]: 2026-10-24 18:44:31,963 WARNING li
 Oct 24 18:44:42 simplai-prod python3[380576]: 2026-10-24 18:44:42,386 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:44:42 simplai-prod python3[380576]: 2026-10-24 18:44:42,386 INFO live: latido: stream=True tokens_vistos=3128 seguidos=364 candidatos=0 abiertas=1 cerradas=10 st_requests=45 SOL=$101
 Oct 24 18:44:52 simplai-prod python3[380576]: 2026-10-24 18:44:52,860 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:45:03 simplai-prod python3[380576]: 2026-10-24 18:45:03,570 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:45:14 simplai-prod python3[380576]: 2026-10-24 18:45:14,846 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:45:24 simplai-prod python3[380576]: 2026-10-24 18:45:24,508 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:45:34 simplai-prod python3[380576]: 2026-10-24 18:45:34,814 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:45:45 simplai-prod python3[380576]: 2026-10-24 18:45:45,578 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:45:56 simplai-prod python3[380576]: 2026-10-24 18:45:56,179 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:46:03 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
+Oct 24 18:46:03 simplai-prod python3[380576]: 2026-10-24 18:46:03,081 INFO live: apagando...
+Oct 24 18:46:06 simplai-prod python3[380576]: 2026-10-24 18:46:06,974 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
+Oct 24 18:46:08 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
+Oct 24 18:46:08 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
+Oct 24 18:46:08 simplai-prod systemd[1]: fomo-live.service: Consumed 1min 27.952s CPU time.
+Oct 24 18:46:08 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
+Oct 24 18:46:08 simplai-prod python3[393282]: 2026-10-24 18:46:08,814 INFO live: arranca bot modo=real estrategia=rules_st seguidos=0 tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 24 18:46:09 simplai-prod python3[393282]: 2026-10-24 18:46:09,241 INFO live.stream: stream conectado
+Oct 24 18:46:15 simplai-prod python3[393282]: 2026-10-24 18:46:15,796 INFO live.portfolio: CERRADA CONTRAIL ret=-81.0% pnl=US$-8.30 salidas=['stop']
+Oct 24 18:46:15 simplai-prod python3[393282]: 2026-10-24 18:46:15,797 INFO live: VENTA CONTRAIL stop 100% a 0.19x slippage=+4.2% -> 0.0193 SOL [CERRADA]
+Oct 24 18:46:15 simplai-prod python3[393282]: 2026-10-24 18:46:15,962 INFO live: latido: stream=True tokens_vistos=4 seguidos=4 candidatos=0 abiertas=0 cerradas=11 st_requests=2 SOL=$101
