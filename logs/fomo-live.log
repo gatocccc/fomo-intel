@@ -1,7 +1,3 @@
-Oct 24 04:46:10 simplai-prod python3[321245]: 2026-10-24 04:46:10,046 INFO live: latido: stream=True tokens_vistos=643 seguidos=129 candidatos=0 abiertas=1 cerradas=4 st_requests=163 SOL=$103
-Oct 24 04:51:10 simplai-prod python3[321245]: 2026-10-24 04:51:10,367 INFO live: latido: stream=True tokens_vistos=711 seguidos=99 candidatos=0 abiertas=1 cerradas=4 st_requests=179 SOL=$103
-Oct 24 04:56:11 simplai-prod python3[321245]: 2026-10-24 04:56:11,231 INFO live: latido: stream=True tokens_vistos=770 seguidos=92 candidatos=0 abiertas=1 cerradas=4 st_requests=187 SOL=$103
-Oct 24 05:01:12 simplai-prod python3[321245]: 2026-10-24 05:01:12,012 INFO live: latido: stream=True tokens_vistos=833 seguidos=83 candidatos=0 abiertas=1 cerradas=4 st_requests=190 SOL=$103
 Oct 24 05:06:12 simplai-prod python3[321245]: 2026-10-24 05:06:12,164 INFO live: latido: stream=True tokens_vistos=869 seguidos=54 candidatos=0 abiertas=1 cerradas=4 st_requests=195 SOL=$103
 Oct 24 05:10:13 simplai-prod python3[321245]: 2026-10-24 05:10:13,007 INFO live.helius: HELIUS 14Rb84 buy Fpd8Mowf 0.4086 SOL @ 5.245e-08 (lat 0.1s)
 Oct 24 05:10:17 simplai-prod python3[321245]: 2026-10-24 05:10:17,286 INFO live: COPIA Fpd8Mowf siguiendo a 14Rb84… 0.0977 SOL a 5.562e-08 (lat 0.0s slip +6.0%) mcap=52 SOL
@@ -298,3 +294,7 @@ Oct 24 14:57:05 simplai-prod python3[366020]: 2026-10-24 14:57:05,808 WARNING li
 Oct 24 14:58:43 simplai-prod python3[366020]: 2026-10-24 14:58:43,586 INFO live.rules_st: CANDIDATO v1.2 MITCH move=3.1x compradores=100 vol=$16547 snipers=4 -> confirma a T3
 Oct 24 14:59:06 simplai-prod python3[366020]: 2026-10-24 14:59:06,448 WARNING live: compra MITCH falló: impacto 17.2% > 8.0%
 Oct 24 15:01:12 simplai-prod python3[366020]: 2026-10-24 15:01:12,234 INFO live: latido: stream=True tokens_vistos=1572 seguidos=289 candidatos=0 abiertas=0 cerradas=22 st_requests=22 SOL=$100
+Oct 24 15:06:12 simplai-prod python3[366020]: 2026-10-24 15:06:12,807 INFO live: latido: stream=True tokens_vistos=1665 seguidos=319 candidatos=0 abiertas=0 cerradas=22 st_requests=23 SOL=$100
+Oct 24 15:06:16 simplai-prod python3[366020]: 2026-10-24 15:06:16,574 INFO live.rules_st: CANDIDATO v1.2 MERGE move=3.5x compradores=58 vol=$2214 snipers=2 -> confirma a T3
+Oct 24 15:07:06 simplai-prod python3[366020]: 2026-10-24 15:07:06,558 WARNING live: compra MERGE falló: impacto 16.5% > 8.0%
+Oct 24 15:09:18 simplai-prod python3[366020]: 2026-10-24 15:09:18,271 INFO live.rules_st: CANDIDATO v1.2 ZAIO move=3.6x compradores=100 vol=$19131 snipers=46 -> confirma a T3
