@@ -1,16 +1,52 @@
 {
- "ts": 1792869884.4700053,
+ "ts": 1792870189.2500687,
  "mode": "real",
  "open": 0,
- "closed": 12,
+ "closed": 14,
  "wins": 4,
- "hit_rate": 0.333,
- "pnl_usd_total": -18.48,
- "pnl_usd_today": -18.48,
- "ret_per_usd": -1.796,
+ "hit_rate": 0.286,
+ "pnl_usd_total": -30.21,
+ "pnl_usd_today": -30.21,
+ "ret_per_usd": -2.946,
  "stop_reason": null,
  "positions": [],
  "last_closed": [
+  {
+   "ts": 1792870090.9382627,
+   "day": "2026-10-24",
+   "mint": "ZRFG4GJiLJLGARE88Cr84vkhWq3a4LbiuZjgpDopump",
+   "symbol": "CAPITAL",
+   "opened_ts": 1792870028.6384437,
+   "hold_min": 1.0,
+   "sol_in": 0.101442485,
+   "sol_out": 0.0196148,
+   "pnl_sol": -0.081828,
+   "pnl_usd": -8.27,
+   "ret": -0.8066,
+   "peak_mult": 1.31,
+   "exits": [
+    "stop"
+   ],
+   "leftover_tokens": 0.0
+  },
+  {
+   "ts": 1792869990.0264363,
+   "day": "2026-10-24",
+   "mint": "EfnpNx4cJbgKVqxcsTud7SjaqSs152H2xcixZ3Vapump",
+   "symbol": "tgcat",
+   "opened_ts": 1792869973.9834964,
+   "hold_min": 0.3,
+   "sol_in": 0.099572385,
+   "sol_out": 0.065375864,
+   "pnl_sol": -0.034197,
+   "pnl_usd": -3.46,
+   "ret": -0.3434,
+   "peak_mult": 1.0,
+   "exits": [
+    "stop"
+   ],
+   "leftover_tokens": 0.0
+  },
   {
    "ts": 1792869236.0272162,
    "day": "2026-10-24",
@@ -154,81 +190,47 @@
     "trailing"
    ],
    "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792863267.214432,
-   "day": "2026-10-24",
-   "mint": "12vsGLjtgv9FB5s4qPrnekGMWMHfGYqF9RbmNbSNpump",
-   "symbol": "DIALUP",
-   "opened_ts": 1792863086.7547624,
-   "hold_min": 3.0,
-   "sol_in": 0.102297739,
-   "sol_out": 0.086617569,
-   "pnl_sol": -0.01568,
-   "pnl_usd": -1.57,
-   "ret": -0.1533,
-   "peak_mult": 1.23,
-   "exits": [
-    "trailing"
-   ],
-   "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792862263.2778049,
-   "day": "2026-10-24",
-   "mint": "DAoC8MwJx5o6XYz97ACJqQPDCXKtKEW4G7su2KLypump",
-   "symbol": "Nuannuan",
-   "opened_ts": 1792862005.9534762,
-   "hold_min": 4.3,
-   "sol_in": 0.102271609,
-   "sol_out": 0.145577216,
-   "pnl_sol": 0.043306,
-   "pnl_usd": 4.34,
-   "ret": 0.4234,
-   "peak_mult": 1.73,
-   "exits": [
-    "trailing"
-   ],
-   "leftover_tokens": 0.0
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.4166,
- "sol_usd": 101.08296708399016,
+ "wallet_sol": 1.3006,
+ "sol_usd": 101.09364104025714,
  "stream_connected": true,
- "stream_msgs": 767,
- "tokens_seen": 616,
- "tokens_tracked": 359,
+ "stream_msgs": 1071,
+ "tokens_seen": 702,
+ "tokens_tracked": 355,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 74,
+ "st_requests": 96,
  "stream_errors": [],
  "rules_st": {
-  "multi_calls": 27,
-  "prefilter_pass": 11,
-  "full_eval": 11,
-  "candidates": 4,
-  "bought": 1,
+  "multi_calls": 32,
+  "prefilter_pass": 14,
+  "full_eval": 14,
+  "candidates": 6,
+  "bought": 3,
   "pending_t3": 0,
-  "evaluated": 515
+  "evaluated": 644
  },
  "stream_counts": {
-  "otros": 3,
-  "create": 626,
-  "buy": 80,
-  "sell": 58
+  "otros": 7,
+  "create": 712,
+  "buy": 219,
+  "sell": 133
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to token creation events.\"}",
+  "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 138,
- "stream_cost_sol_est": 0.0001,
+ "stream_trades": 352,
+ "stream_cost_sol_est": 0.0004,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "real",
