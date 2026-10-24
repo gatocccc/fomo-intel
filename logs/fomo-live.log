@@ -1,14 +1,3 @@
-Oct 23 22:14:16 simplai-prod python3[284091]: 2026-10-23 22:14:16,803 INFO live: latido: stream=True tokens_vistos=3720 seguidos=173 candidatos=0 abiertas=0 cerradas=1 st_requests=32 SOL=$104
-Oct 23 22:19:17 simplai-prod python3[284091]: 2026-10-23 22:19:17,278 INFO live: latido: stream=True tokens_vistos=3840 seguidos=171 candidatos=0 abiertas=0 cerradas=1 st_requests=33 SOL=$104
-Oct 23 22:24:17 simplai-prod python3[284091]: 2026-10-23 22:24:17,739 INFO live: latido: stream=True tokens_vistos=3959 seguidos=152 candidatos=0 abiertas=0 cerradas=1 st_requests=34 SOL=$104
-Oct 23 22:29:18 simplai-prod python3[284091]: 2026-10-23 22:29:18,204 INFO live: latido: stream=True tokens_vistos=4025 seguidos=133 candidatos=0 abiertas=0 cerradas=1 st_requests=35 SOL=$104
-Oct 23 22:34:18 simplai-prod python3[284091]: 2026-10-23 22:34:18,665 INFO live: latido: stream=True tokens_vistos=4098 seguidos=104 candidatos=0 abiertas=0 cerradas=1 st_requests=36 SOL=$103
-Oct 23 22:39:18 simplai-prod python3[284091]: 2026-10-23 22:39:18,999 INFO live: latido: stream=True tokens_vistos=4170 seguidos=98 candidatos=0 abiertas=0 cerradas=1 st_requests=37 SOL=$103
-Oct 23 22:44:19 simplai-prod python3[284091]: 2026-10-23 22:44:19,353 INFO live: latido: stream=True tokens_vistos=4255 seguidos=116 candidatos=0 abiertas=0 cerradas=1 st_requests=38 SOL=$103
-Oct 23 22:49:19 simplai-prod python3[284091]: 2026-10-23 22:49:19,723 INFO live: latido: stream=True tokens_vistos=4324 seguidos=94 candidatos=0 abiertas=0 cerradas=1 st_requests=39 SOL=$103
-Oct 23 22:54:20 simplai-prod python3[284091]: 2026-10-23 22:54:20,121 INFO live: latido: stream=True tokens_vistos=4402 seguidos=111 candidatos=0 abiertas=0 cerradas=1 st_requests=40 SOL=$102
-Oct 23 22:59:20 simplai-prod python3[284091]: 2026-10-23 22:59:20,638 INFO live: latido: stream=True tokens_vistos=4507 seguidos=134 candidatos=0 abiertas=0 cerradas=1 st_requests=41 SOL=$102
-Oct 23 23:04:21 simplai-prod python3[284091]: 2026-10-23 23:04:21,187 INFO live: latido: stream=True tokens_vistos=4571 seguidos=109 candidatos=0 abiertas=0 cerradas=1 st_requests=42 SOL=$102
 Oct 23 23:09:21 simplai-prod python3[284091]: 2026-10-23 23:09:21,719 INFO live: latido: stream=True tokens_vistos=4659 seguidos=113 candidatos=0 abiertas=0 cerradas=1 st_requests=43 SOL=$102
 Oct 23 23:14:22 simplai-prod python3[284091]: 2026-10-23 23:14:22,140 INFO live: latido: stream=True tokens_vistos=4741 seguidos=101 candidatos=0 abiertas=0 cerradas=1 st_requests=44 SOL=$102
 Oct 23 23:19:22 simplai-prod python3[284091]: 2026-10-23 23:19:22,475 INFO live: latido: stream=True tokens_vistos=4803 seguidos=92 candidatos=0 abiertas=0 cerradas=1 st_requests=45 SOL=$102
@@ -298,3 +287,14 @@ Oct 24 10:28:26 simplai-prod python3[335643]: 2026-10-24 10:28:26,400 INFO live:
 Oct 24 10:33:26 simplai-prod python3[335643]: 2026-10-24 10:33:26,996 INFO live: latido: stream=True tokens_vistos=1856 seguidos=74 candidatos=0 abiertas=2 cerradas=17 st_requests=1915 SOL=$101
 Oct 24 10:35:45 simplai-prod python3[335643]: 2026-10-24 10:35:45,534 INFO live.helius: HELIUS 14Rb84 sell 74yegVb7 0.2225 SOL @ 1.094e-07 (lat 0.2s)
 Oct 24 10:38:27 simplai-prod python3[335643]: 2026-10-24 10:38:27,192 INFO live: latido: stream=True tokens_vistos=1891 seguidos=58 candidatos=0 abiertas=2 cerradas=17 st_requests=1956 SOL=$102
+Oct 24 10:43:27 simplai-prod python3[335643]: 2026-10-24 10:43:27,204 INFO live: latido: stream=True tokens_vistos=1945 seguidos=71 candidatos=0 abiertas=2 cerradas=17 st_requests=1995 SOL=$102
+Oct 24 10:43:50 simplai-prod python3[335643]: 2026-10-24 10:43:50,531 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
+Oct 24 10:43:53 simplai-prod python3[335643]: 2026-10-24 10:43:53,760 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 10:43:53 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 24 10:43:53 simplai-prod python3[335643]: <head><title>502 Bad Gateway</title></head>
+Oct 24 10:43:53 simplai-prod python3[335643]: <body>
+Oct 24 10:43:53 simplai-prod python3[335643]: <center><h1>502 Bad Gateway</h1></center>
+Oct 24 10:43:53 simplai-prod python3[335643]: <hr><center>nginx/1.22.1</center>
+Oct 24 10:43:53 simplai-prod python3[335643]: </body>
+Oct 24 10:43:53 simplai-prod python3[335643]: </html>
+Oct 24 10:43:53 simplai-prod python3[335643]: ; reconecto en 4s
+Oct 24 10:43:58 simplai-prod python3[335643]: 2026-10-24 10:43:58,492 INFO live.stream: stream conectado

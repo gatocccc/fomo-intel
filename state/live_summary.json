@@ -1,5 +1,5 @@
 {
- "ts": 1792838380.357822,
+ "ts": 1792838687.753945,
  "mode": "paper",
  "open": 2,
  "closed": 17,
@@ -13,7 +13,7 @@
   {
    "symbol": "Fpd8Mo",
    "mint": "Fpd8MowfCEWXAtAfgJucruJFiKPwxyJMZhx2TTVgpump",
-   "age_min": 329.4,
+   "age_min": 334.5,
    "mult": 0.97,
    "peak_mult": 1.34,
    "size_usd": 10.0,
@@ -22,8 +22,8 @@
   {
    "symbol": "EiXWTc",
    "mint": "EiXWTceqxknhGx2N9Kjwtdw2YPv8cPeAY3pw3TMapump",
-   "age_min": 250.6,
-   "mult": 1.45,
+   "age_min": 255.7,
+   "mult": 1.41,
    "peak_mult": 1.81,
    "size_usd": 10.0,
    "tp_done": false
@@ -213,32 +213,37 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 101.66595119003236,
+ "sol_usd": 101.6250259886459,
  "stream_connected": true,
- "stream_msgs": 1939,
- "tokens_seen": 1904,
- "tokens_tracked": 59,
+ "stream_msgs": 1995,
+ "tokens_seen": 1956,
+ "tokens_tracked": 76,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 5,
  "account_trades": 18,
  "helius": {
   "connected": true,
-  "notifications": 55,
+  "notifications": 56,
   "parsed": 24,
   "subs": 5,
   "errors": []
  },
  "follow_buys_seen": 9,
- "st_requests": 1965,
- "stream_errors": [],
+ "st_requests": 2006,
+ "stream_errors": [
+  "10:43:50 Connection to remote host was lost.",
+  "10:43:53 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 10:43:53 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
+ ],
  "stream_counts": {
-  "otros": 2,
-  "create": 1919,
+  "otros": 4,
+  "create": 1973,
   "buy": 10,
   "sell": 8
  },
  "stream_samples": [
+  "{\"message\":\"Successfully subscribed to token creation events.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
