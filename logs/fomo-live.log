@@ -1,7 +1,3 @@
-Oct 24 05:46:15 simplai-prod python3[321245]: 2026-10-24 05:46:15,830 INFO live: latido: stream=True tokens_vistos=1416 seguidos=143 candidatos=0 abiertas=2 cerradas=9 st_requests=476 SOL=$102
-Oct 24 05:47:52 simplai-prod python3[321245]: 2026-10-24 05:47:52,071 INFO live.helius: HELIUS 14Rb84 buy DF35EFJB 0.3565 SOL @ 8.948e-08 (lat 0.1s)
-Oct 24 05:47:56 simplai-prod python3[321245]: 2026-10-24 05:47:56,589 INFO live: COPIA DF35EFJB siguiendo a 14Rb84… 0.0978 SOL a 9.489e-08 (lat 0.0s slip +6.0%) mcap=89 SOL
-Oct 24 05:48:34 simplai-prod python3[321245]: 2026-10-24 05:48:34,633 INFO live.helius: HELIUS 14Rb84 sell 6SMfgZkr 0.1255 SOL @ 8.196e-08 (lat 0.1s)
 Oct 24 05:51:15 simplai-prod python3[321245]: 2026-10-24 05:51:15,856 INFO live: latido: stream=True tokens_vistos=1480 seguidos=133 candidatos=0 abiertas=3 cerradas=9 st_requests=523 SOL=$102
 Oct 24 05:56:16 simplai-prod python3[321245]: 2026-10-24 05:56:16,281 INFO live: latido: stream=True tokens_vistos=1547 seguidos=94 candidatos=0 abiertas=3 cerradas=9 st_requests=571 SOL=$102
 Oct 24 05:59:23 simplai-prod python3[321245]: 2026-10-24 05:59:23,920 INFO live.helius: HELIUS 14Rb84 sell B7cX5wW3 1.1431 SOL @ 9.483e-07 (lat 0.1s)
@@ -298,3 +294,7 @@ Oct 24 15:36:14 simplai-prod python3[366020]: 2026-10-24 15:36:14,364 INFO live:
 Oct 24 15:36:31 simplai-prod python3[366020]: 2026-10-24 15:36:31,238 INFO live.rules_st: CANDIDATO v1.2 BLEP move=8.1x compradores=71 vol=$4820 snipers=18 -> confirma a T3
 Oct 24 15:37:06 simplai-prod python3[366020]: 2026-10-24 15:37:06,009 WARNING live: compra BLEP falló: impacto 32.2% > 8.0%
 Oct 24 15:41:15 simplai-prod python3[366020]: 2026-10-24 15:41:15,330 INFO live: latido: stream=True tokens_vistos=2293 seguidos=333 candidatos=0 abiertas=0 cerradas=23 st_requests=31 SOL=$99
+Oct 24 15:45:37 simplai-prod python3[366020]: 2026-10-24 15:45:37,567 INFO live.rules_st: CANDIDATO v1.2 BERE move=3.3x compradores=99 vol=$12762 snipers=24 -> confirma a T3
+Oct 24 15:46:06 simplai-prod python3[366020]: 2026-10-24 15:46:06,410 WARNING live: compra BERE falló: impacto 12.9% > 8.0%
+Oct 24 15:46:15 simplai-prod python3[366020]: 2026-10-24 15:46:15,413 INFO live: latido: stream=True tokens_vistos=2386 seguidos=322 candidatos=0 abiertas=0 cerradas=23 st_requests=32 SOL=$99
+Oct 24 15:46:23 simplai-prod python3[366020]: 2026-10-24 15:46:23,841 INFO live.rules_st: CANDIDATO v1.2 $SOSL move=7.9x compradores=89 vol=$4910 snipers=4 -> confirma a T3
