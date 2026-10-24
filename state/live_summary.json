@@ -1,7 +1,7 @@
 {
- "ts": 1792819487.018635,
+ "ts": 1792819791.0760481,
  "mode": "paper",
- "open": 3,
+ "open": 4,
  "closed": 5,
  "wins": 0,
  "hit_rate": 0.0,
@@ -13,8 +13,8 @@
   {
    "symbol": "GZYL4J",
    "mint": "GZYL4JVHikj6H71a7mTdWay1q7DwsWdJFEhkQCsYz4WT",
-   "age_min": 87.5,
-   "mult": 1.73,
+   "age_min": 92.6,
+   "mult": 1.56,
    "peak_mult": 2.11,
    "size_usd": 10.0,
    "tp_done": false
@@ -22,8 +22,8 @@
   {
    "symbol": "Fpd8Mo",
    "mint": "Fpd8MowfCEWXAtAfgJucruJFiKPwxyJMZhx2TTVgpump",
-   "age_min": 14.5,
-   "mult": 0.91,
+   "age_min": 19.6,
+   "mult": 0.92,
    "peak_mult": 1.0,
    "size_usd": 10.0,
    "tp_done": false
@@ -31,9 +31,18 @@
   {
    "symbol": "B7cX5w",
    "mint": "B7cX5wW3wxHhRzSYTpM56YgMo8pesJjJk6ehz8aXpump",
-   "age_min": 7.3,
-   "mult": 1.5,
-   "peak_mult": 1.5,
+   "age_min": 12.3,
+   "mult": 1.73,
+   "peak_mult": 2.09,
+   "size_usd": 10.0,
+   "tp_done": false
+  },
+  {
+   "symbol": "4vcbzE",
+   "mint": "4vcbzEi7nqDpUUd2zWdHHw61YccQasc4BQ4H3uEpump",
+   "age_min": 4.1,
+   "mult": 0.96,
+   "peak_mult": 1.0,
    "size_usd": 10.0,
    "tp_done": false
   }
@@ -132,43 +141,44 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 102.25686404288847,
+ "sol_usd": 102.15966818650826,
  "stream_connected": true,
- "stream_msgs": 2013,
- "tokens_seen": 1107,
- "tokens_tracked": 104,
+ "stream_msgs": 2431,
+ "tokens_seen": 1171,
+ "tokens_tracked": 99,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 5,
- "account_trades": 12,
+ "account_trades": 13,
  "helius": {
   "connected": true,
-  "notifications": 26,
-  "parsed": 12,
+  "notifications": 27,
+  "parsed": 13,
   "subs": 5,
   "errors": []
  },
- "follow_buys_seen": 7,
- "st_requests": 288,
+ "follow_buys_seen": 8,
+ "st_requests": 331,
  "stream_errors": [
   "04:35:04 Connection to remote host was lost.",
   "04:35:06 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 04:35:06 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "stream_counts": {
-  "otros": 16,
-  "create": 1125,
-  "buy": 452,
-  "sell": 420
+  "otros": 17,
+  "create": 1189,
+  "buy": 658,
+  "sell": 566,
+  "migrate": 1
  },
  "stream_samples": [
-  "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 864,
- "stream_cost_sol_est": 0.0009,
+ "stream_trades": 1215,
+ "stream_cost_sol_est": 0.0012,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "paper",
