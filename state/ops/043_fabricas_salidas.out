@@ -1,0 +1,25 @@
+== 043_fabricas_salidas 2026-10-25T18:07:02Z ==
+tokens de fábricas con velas 6 h: 399 | graduados: 68 (17%)
+entrada estimada vs precio base de la curva: mediana 115.76x  -> graduar ≈ 0.1x desde nuestra entrada
+
+plan                                            n  acierto   ret/op  mediana     peor
+TP 1.5x todo (actual), 3 min                  399      51%    +0.15    +0.00    -0.87
+TP 2x todo, 10 min                            399      41%    +0.24    -0.10    -0.87
+TP 3x todo, 30 min                            399      30%    +0.38    -0.11    -0.87
+aguantar a graduación (todo), 6 h             399       9%    +0.13    -0.11    -1.00
+aguantar a graduación sin stop, 6 h           399       9%    +0.11    -0.11    -1.00
+50% a 1.5x + 50% a graduación                 399      41%    +0.13    -0.09    -0.87
+50% a 2x + 50% a graduación                   399      37%    +0.18    -0.10    -0.87
+70% a 1.5x + 30% a graduación                 399      49%    +0.12    -0.08    -0.87
+1/3 a 1.5x, 1/3 a 3x, 1/3 a graduación        399      44%    +0.20    -0.10    -0.87
+
+por fábrica (acierto / ret por op):
+  JDQKDr n= 80 grad=14% | TP 1.5x todo (: 34% +0.08 | aguantar a gra: 0% -0.16 | 50% a 1.5x + 5: 29% -0.04 | 1/3 a 1.5x, 1/: 34% +0.04 |
+  4Lm2uq n= 79 grad=11% | TP 1.5x todo (: 38% +0.10 | aguantar a gra: 6% +0.36 | 50% a 1.5x + 5: 37% +0.24 | 1/3 a 1.5x, 1/: 35% +0.29 |
+  gVDXho n= 80 grad=32% | TP 1.5x todo (: 79% +0.27 | aguantar a gra: 24% +0.53 | 50% a 1.5x + 5: 61% +0.38 | 1/3 a 1.5x, 1/: 62% +0.45 |
+  9CV42q n= 80 grad=12% | TP 1.5x todo (: 46% +0.10 | aguantar a gra: 11% +0.08 | 50% a 1.5x + 5: 35% +0.07 | 1/3 a 1.5x, 1/: 41% +0.13 |
+  B32Qbb n= 80 grad=15% | TP 1.5x todo (: 56% +0.19 | aguantar a gra: 4% -0.18 | 50% a 1.5x + 5: 45% -0.01 | 1/3 a 1.5x, 1/: 46% +0.10 |
+
+graduados que tocan el precio de graduación en las velas: 8/68 ; minutos mediana 3.5 ; peor caída previa mediana 0.91x
+requests: 360
+== exit 0 ==
