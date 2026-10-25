@@ -171,7 +171,14 @@ class Bot:
                 else:
                     continue
             else:
-                ref = st.last_price or st.base_price
+                # real: precio actual (tras la compra inicial del creador). Si el token llegó solo por Helius y todavía
+                # no hay precio del stream, esperar hasta 3 s a que aparezca un trade; si no, no entrar a ciegas.
+                if st.last_price > 0:
+                    ref = st.last_price
+                elif age < 3:
+                    continue
+                else:
+                    self.factory_pending.pop(mint); self.stream.release(mint); self.port.log_signal(d, "fábrica: sin precio de referencia"); continue
             self.factory_pending.pop(mint)
             why_not = self.port.stop_reason()
             if why_not:
