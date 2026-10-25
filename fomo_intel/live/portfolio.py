@@ -154,7 +154,8 @@ class Portfolio:
             return "trailing", 1.0
         if not pos.tp_done and px >= pos.entry_price * self.p.tp_mult:
             return f"tp{self.p.tp_mult:g}x", self.p.tp_frac
-        if now - pos.opened_ts >= self.p.max_hold_min * 60:
+        hold_s = self.p.factory_max_hold_s if self.p.strategy == "factory" else self.p.max_hold_min * 60
+        if now - pos.opened_ts >= hold_s:
             return "tiempo", 1.0
         return None, 0.0
 

@@ -81,7 +81,7 @@ def seccion_live():
         f"<td>{x.get('vol_usd',0):,.0f}</td><td>{x.get('n_snipers_st') if x.get('n_snipers_st') is not None else x.get('n_snipers_proxy')}</td>"
         f"<td>{html.escape(str(x.get('decision')))}</td></tr>" for x in reversed(sig_pasan[-25:]))
     sig_tbl = ("<table><tr><th>Hora</th><th>Token</th><th>Mov.</th><th>Compr.</th><th>Vol US$</th><th>Snip.</th><th>Decisión</th></tr>" + ult_sig + "</table>") if ult_sig else "<p class='muted'>Ninguna señal pasó el primer corte todavía.</p>"
-    if s.get("strategy") == "follow":
+    if s.get("strategy") in ("follow", "factory"):
         fs = [x for x in sig if x.get("wallet")]
         sig_pasan = fs
         ult = "".join(
@@ -101,7 +101,7 @@ function api(a){{fetch('/api/'+a,{{method:'POST'}}).then(r=>r.json()).then(j=>{{
 </script>"""
     return f"""
 <h2>Operación en vivo — fase 2</h2>
-<div class="sem {modo_cls}">{modo_txt} · estrategia <b>{'SEGUIDOR de ' + str(s.get('followed_wallets',0)) + ' billeteras' if s.get('strategy')=='follow' else 'reglas v1.2'}</b> · bot {estado_bot} · último latido <span class="{vivo}">{hora(s.get('ts',0))}</span>
+<div class="sem {modo_cls}">{modo_txt} · estrategia <b>{'SEGUIDOR de ' + str(s.get('followed_wallets',0)) + ' billeteras' if s.get('strategy')=='follow' else ('SNIPER de ' + str(s.get('factories',0)) + ' fábricas' if s.get('strategy')=='factory' else 'reglas v1.2')}</b> · bot {estado_bot} · último latido <span class="{vivo}">{hora(s.get('ts',0))}</span>
 <div style="font-size:12px;font-weight:400;margin-top:6px">Billetera <a href="https://solscan.io/account/{html.escape(wallet)}" target="_blank">{html.escape(wallet)}</a> · saldo {saldo} · SOL US${solusd:,.0f} ·
 stream {'conectado' if s.get('stream_connected') else '<span class=loss>CAÍDO</span>'} · tokens vistos {s.get('tokens_seen',0)} · requests Solana Tracker {s.get('st_requests',0)}</div></div>
 {botones}
@@ -115,7 +115,7 @@ stream {'conectado' if s.get('stream_connected') else '<span class=loss>CAÍDO</
 </div>
 <h3 style="color:#9ca3af;font-size:14px">Posiciones abiertas ({s.get('open',0)} de {s.get('params',{}).get('max_open','?')})</h3>{pos_tbl}
 <h3 style="color:#9ca3af;font-size:14px">Operaciones cerradas</h3>{cerr_tbl}
-<h3 style="color:#9ca3af;font-size:14px">{'Compras de las billeteras seguidas' if s.get('strategy')=='follow' else 'Últimas señales que pasaron el primer corte'}</h3>{sig_tbl}
+<h3 style="color:#9ca3af;font-size:14px">{'Compras de las billeteras seguidas' if s.get('strategy')=='follow' else ('Lanzamientos de las fábricas seguidas' if s.get('strategy')=='factory' else 'Últimas señales que pasaron el primer corte')}</h3>{sig_tbl}
 <p class="muted">Frenos: US${s.get('params',{}).get('size_usd',0):.0f} por operación · máx {s.get('params',{}).get('max_open','?')} abiertas · pérdida diaria máx US${s.get('params',{}).get('daily_loss_usd',0):.0f} · corte a {s.get('params',{}).get('max_trades','?')} operaciones o −US${s.get('params',{}).get('total_loss_usd',0):.0f} · no compra si el impacto cotizado supera {s.get('params',{}).get('max_slippage_pct',0):.0f}%.</p>
 <hr style="border:0;border-top:1px solid #262a33;margin:28px 0">
 <h2>Validación histórica (backtest sobre lanzamientos nuevos)</h2>"""

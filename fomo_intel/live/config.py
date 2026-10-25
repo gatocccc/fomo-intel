@@ -56,6 +56,11 @@ class LiveParams:
     follow_max_mcap_sol: float = 1500.0 # no copiar compras en tokens ya grandes (en SOL de mcap; ~US$150K)
     follow_min_mcap_sol: float = 200.0  # ni en tokens tan chicos que US$10 mueven el precio >10%
     follow_min_wallets: int = 1         # cuántos seguidos tienen que haber comprado el token
+    # --- estrategia fábricas (sniper selectivo por creador) ---
+    factory_tp: float = 1.5             # vende todo al alcanzar este múltiplo
+    factory_max_hold_s: int = 180       # si no llegó, vende al cumplirse este tiempo
+    factory_stop: float = 0.5
+    factory_paper_wait_s: float = 2.0   # paper: precio del primer trade visto >= este retraso desde la creación
     # --- simulado ---
     paper_slippage: float = 0.05
     paper_fee: float = 0.01

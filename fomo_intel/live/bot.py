@@ -51,7 +51,12 @@ class Bot:
             self._load_follow_list()
             self._apply_follow_params(self.p)
         self.stream = PumpStream(keep_seconds=1200.0 if self.p.strategy == "rules_st" else 420.0, watch_seconds=self.p.stream_watch_s,
-                                 sample=0.0 if self.p.strategy in ("follow", "rules_st") else self.p.stream_sample)
+                                 sample=0.0 if self.p.strategy in ("follow", "rules_st", "factory") else self.p.stream_sample)
+        self.factories: dict[str, dict] = {}
+        self.factory_pending: dict[str, dict] = {}   # mint -> {created, creator, symbol}
+        if self.p.strategy == "factory":
+            self._load_factories()
+            self.p.stop, self.p.trail, self.p.tp_mult, self.p.tp_frac, self.p.max_hold_min = self.p.factory_stop, 0.99, self.p.factory_tp, 1.0, max(1, self.p.factory_max_hold_s // 60)
         self.rules_st = None
         if self.p.strategy == "rules_st":
             from .rules_st import RulesST
@@ -100,6 +105,64 @@ class Bot:
         cut = time.time() - 86400
         self.creators = {c: [t for t in ts if t > cut] for c, ts in self.creators.items() if any(t > cut for t in ts)}
         json.dump(self.creators, open(self.state / "creators.json", "w"))
+
+    def _load_factories(self) -> None:
+        f = self.state / "factories.json"
+        try:
+            d = json.load(open(f)); ws = d.get("wallets", d) if isinstance(d, dict) else d
+            self.factories = {w: {} for w in ws}
+        except Exception as e:  # noqa: BLE001
+            log.error("no pude leer %s: %s", f, e)
+
+    # ---------- estrategia fábricas ----------
+    def step_factory(self, now: float) -> None:
+        # 1) detectar creaciones de las fábricas (llegan por PumpPortal create, ~1 s) y escuchar sus trades
+        for st in self.stream.young(0, 30):
+            if st.mint in self.factory_pending or st.mint in self.port.positions or st.decided:
+                continue
+            if st.creator in self.factories:
+                self.factory_pending[st.mint] = {"created": st.created_ts, "creator": st.creator, "symbol": st.symbol, "seen": now}
+                self.stream.keep_watching(st.mint)
+                log.info("FABRICA %s… creó %s (%s) -> entrando", st.creator[:6], st.symbol, st.mint[:8])
+            st.decided = True if st.creator not in self.factories else st.decided
+        # 2) entrar: real = inmediato (PumpPortal arma la tx); paper = al primer trade observado >= factory_paper_wait_s
+        for mint, info in list(self.factory_pending.items()):
+            st = self.stream.snapshot(mint)
+            if not st:
+                self.factory_pending.pop(mint); continue
+            age = now - info["created"]
+            d = {"mint": mint, "symbol": info["symbol"], "created_ts": info["created"], "strategy": "factory", "creator": info["creator"], "wallet": info["creator"],
+                 "sol": 0, "mcap_sol": st.mcap_sol, "n_wallets": 1, "move": round(st.last_price / st.base_price, 2) if st.base_price else None, "n_buyers_120s": len({t.wallet for t in st.trades if t.side == "buy"}), "vol_usd": 0}
+            if age > 25:
+                self.factory_pending.pop(mint); self.stream.release(mint); self.port.log_signal(d, "fábrica: sin precio en 25 s"); continue
+            if self.p.mode == "paper":
+                trades = [t for t in st.trades if t.ts >= info["created"] + self.p.factory_paper_wait_s and t.wallet != info["creator"]]
+                if not trades:
+                    continue
+                ref = trades[0].price
+            else:
+                ref = st.last_price or st.base_price
+            self.factory_pending.pop(mint)
+            why_not = self.port.stop_reason()
+            if why_not:
+                self.port.log_signal(d, f"freno: {why_not}"); self.stream.release(mint); continue
+            if self.sol_usd <= 0 or ref <= 0:
+                self.port.log_signal(d, "sin precio"); self.stream.release(mint); continue
+            size_sol = self.p.size_usd / self.sol_usd
+            if self.p.mode == "real":
+                bal = self.exe.sol_balance()
+                if bal - size_sol < self.p.min_sol_reserve:
+                    self.port.log_signal(d, f"sin saldo: {bal:.4f} SOL"); self.stream.release(mint); continue
+            fill = self.exe.buy(mint, size_sol, ref)
+            self.port.log_fill(fill, self.p.mode, f"fábrica {info['creator'][:6]}", self.sol_usd)
+            if not fill.ok:
+                self.port.log_signal(d, f"compra fallida: {fill.error}"); self.stream.release(mint); continue
+            pos = self.port.open(fill, info["symbol"] or mint[:6], self.sol_usd)
+            pos.peak_price = fill.price
+            self.stream.pin(mint, pos.symbol, fill.price)
+            d["entry_vs_base"] = round(fill.price / st.base_price, 2) if st.base_price else None
+            self.port.log_signal(d, "COMPRADO")
+            log.info("COMPRA fábrica %s a %.3e (%.2fx de la base) %.1f s tras la creación, slippage %+.1f%%", pos.symbol, fill.price, d["entry_vs_base"] or 0, age, fill.slippage_pct)
 
     def _load_follow_list(self) -> None:
         f = self.state / "follow_list.json"
@@ -224,6 +287,8 @@ class Bot:
             newp.mode = self.p.mode
         if newp.strategy == "follow":
             self._apply_follow_params(newp)
+        if newp.strategy == "factory":
+            newp.stop, newp.trail, newp.tp_mult, newp.tp_frac, newp.max_hold_min = newp.factory_stop, 0.99, newp.factory_tp, 1.0, max(1, newp.factory_max_hold_s // 60)
         self.p = newp
         self.port.p = newp
         self.exe.p = newp
@@ -377,7 +442,7 @@ class Bot:
                            "stream_connected": self.stream.connected, "stream_msgs": self.stream.msgs,
                            "tokens_seen": self.stream.creates, "tokens_tracked": len(self.stream.tokens),
                            "candidates": [f.symbol for f in self.candidates.values()],
-                           "strategy": self.p.strategy, "followed_wallets": len(self.follow), "account_trades": self.stream.account_trades,
+                           "strategy": self.p.strategy, "followed_wallets": len(self.follow), "factories": len(self.factories), "factory_pending": len(self.factory_pending), "account_trades": self.stream.account_trades,
                            "helius": {"connected": self.helius.connected, "notifications": self.helius.notifications, "parsed": self.helius.parsed, "subs": len(self.helius.sub_to_wallet), "errors": list(self.helius.errors)[-3:]} if self.helius else None,
                            "follow_buys_seen": len(self.follow_buys),
                            "st_requests": self.st.requests_made + (self.rules_st.requests_made() if self.rules_st else 0), "stream_errors": list(self.stream.errors)[-5:],
@@ -404,6 +469,8 @@ class Bot:
                     self.sol_usd = self.st.sol_usd() or self.sol_usd
                 if self.sol_usd > 0 and self.p.strategy == "follow":
                     self.step_follow(now)
+                elif self.sol_usd > 0 and self.p.strategy == "factory":
+                    self.step_factory(now)
                 elif self.sol_usd > 0 and self.p.strategy == "rules_st":
                     self.rules_st.p = self.p
                     self.rules_st.step(now)
