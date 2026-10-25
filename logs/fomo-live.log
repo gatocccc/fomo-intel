@@ -1,4 +1,3 @@
-Oct 25 15:29:31 simplai-prod python3[517288]: <head><title>502 Bad Gateway</title></head>
 Oct 25 15:29:31 simplai-prod python3[517288]: <body>
 Oct 25 15:29:31 simplai-prod python3[517288]: <center><h1>502 Bad Gateway</h1></center>
 Oct 25 15:29:31 simplai-prod python3[517288]: <hr><center>nginx/1.22.1</center>
@@ -298,3 +297,4 @@ Oct 25 20:49:23 simplai-prod python3[562885]: 2026-10-25 20:49:23,502 INFO live.
 Oct 25 20:49:24 simplai-prod python3[562885]: 2026-10-25 20:49:24,887 INFO live.helius: HELIUS gVDXho sell DEMHihXy 3.3180 SOL @ 4.892e-08 (lat 0.1s)
 Oct 25 20:53:07 simplai-prod python3[562885]: 2026-10-25 20:53:07,301 INFO live: latido: stream=True tokens_vistos=292 seguidos=117 candidatos=0 abiertas=0 cerradas=1 st_requests=3 SOL=$102
 Oct 25 20:58:07 simplai-prod python3[562885]: 2026-10-25 20:58:07,686 INFO live: latido: stream=True tokens_vistos=395 seguidos=117 candidatos=0 abiertas=0 cerradas=1 st_requests=4 SOL=$101
+Oct 25 21:03:08 simplai-prod python3[562885]: 2026-10-25 21:03:08,289 INFO live: latido: stream=True tokens_vistos=445 seguidos=86 candidatos=0 abiertas=0 cerradas=1 st_requests=5 SOL=$102
