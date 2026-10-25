@@ -1,4 +1,3 @@
-Oct 24 18:46:15 simplai-prod python3[393282]: 2026-10-24 18:46:15,962 INFO live: latido: stream=True tokens_vistos=4 seguidos=4 candidatos=0 abiertas=0 cerradas=11 st_requests=2 SOL=$101
 Oct 24 18:51:08 simplai-prod python3[393282]: 2026-10-24 18:51:08,885 INFO live: latido: stream=True tokens_vistos=109 seguidos=109 candidatos=0 abiertas=0 cerradas=11 st_requests=2 SOL=$101
 Oct 24 18:52:12 simplai-prod python3[393282]: 2026-10-24 18:52:12,592 INFO live.rules_st: CANDIDATO v1.2 BLINK move=3.2x compradores=93 vol=$4261 snipers=39 -> confirma a T3
 Oct 24 18:53:03 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
@@ -298,3 +297,4 @@ Oct 25 05:39:09 simplai-prod python3[449801]: 2026-10-25 05:39:09,661 INFO live:
 Oct 25 05:44:09 simplai-prod python3[449801]: 2026-10-25 05:44:09,933 INFO live: latido: stream=True tokens_vistos=886 seguidos=71 candidatos=0 abiertas=0 cerradas=0 st_requests=17 SOL=$102
 Oct 25 05:49:10 simplai-prod python3[449801]: 2026-10-25 05:49:10,305 INFO live: latido: stream=True tokens_vistos=938 seguidos=75 candidatos=0 abiertas=0 cerradas=0 st_requests=18 SOL=$102
 Oct 25 05:54:10 simplai-prod python3[449801]: 2026-10-25 05:54:10,706 INFO live: latido: stream=True tokens_vistos=1001 seguidos=81 candidatos=0 abiertas=0 cerradas=0 st_requests=19 SOL=$102
+Oct 25 05:59:11 simplai-prod python3[449801]: 2026-10-25 05:59:11,129 INFO live: latido: stream=True tokens_vistos=1049 seguidos=70 candidatos=0 abiertas=0 cerradas=0 st_requests=20 SOL=$102
