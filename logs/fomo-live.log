@@ -1,8 +1,3 @@
-Oct 24 18:39:55 simplai-prod python3[380576]: 2026-10-24 18:39:55,352 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
-Oct 24 18:40:05 simplai-prod python3[380576]: 2026-10-24 18:40:05,715 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
-Oct 24 18:40:16 simplai-prod python3[380576]: 2026-10-24 18:40:16,751 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
-Oct 24 18:40:20 simplai-prod python3[380576]: 2026-10-24 18:40:20,864 INFO live.portfolio: CERRADA AVATARS ret=+3.9% pnl=US$+0.40 salidas=['trailing']
-Oct 24 18:40:20 simplai-prod python3[380576]: 2026-10-24 18:40:20,864 INFO live: VENTA AVATARS trailing 100% a 1.04x slippage=-4.5% -> 0.1055 SOL [CERRADA]
 Oct 24 18:40:29 simplai-prod python3[380576]: 2026-10-24 18:40:29,675 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:40:40 simplai-prod python3[380576]: 2026-10-24 18:40:40,115 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:40:51 simplai-prod python3[380576]: 2026-10-24 18:40:51,677 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
@@ -298,3 +293,8 @@ Oct 25 04:04:09 simplai-prod python3[393883]: 2026-10-25 04:04:09,718 INFO live:
 Oct 25 04:04:14 simplai-prod python3[393883]: 2026-10-25 04:04:14,640 INFO live.rules_st: CANDIDATO v1.2 Particle move=10.9x compradores=71 vol=$4567 snipers=6 -> confirma a T3
 Oct 25 04:05:05 simplai-prod python3[393883]: 2026-10-25 04:05:05,991 INFO live: señal Particle no operada: STOP manual
 Oct 25 04:09:10 simplai-prod python3[393883]: 2026-10-25 04:09:10,323 INFO live: latido: stream=True tokens_vistos=8206 seguidos=181 candidatos=0 abiertas=0 cerradas=18 st_requests=353 SOL=$102
+Oct 25 04:10:18 simplai-prod python3[393883]: 2026-10-25 04:10:18,712 INFO live.rules_st: CANDIDATO v1.2 Grex move=7.2x compradores=48 vol=$3495 snipers=2 -> confirma a T3
+Oct 25 04:12:35 simplai-prod python3[393883]: 2026-10-25 04:12:35,785 INFO live.rules_st: CANDIDATO v1.2 GLM move=4.5x compradores=100 vol=$8927 snipers=42 -> confirma a T3
+Oct 25 04:12:36 simplai-prod python3[393883]: 2026-10-25 04:12:36,345 INFO live.rules_st: CANDIDATO v1.2 CHIKO move=14.7x compradores=46 vol=$4252 snipers=10 -> confirma a T3
+Oct 25 04:13:05 simplai-prod python3[393883]: 2026-10-25 04:13:05,320 INFO live: señal GLM no operada: STOP manual
+Oct 25 04:14:10 simplai-prod python3[393883]: 2026-10-25 04:14:10,950 INFO live: latido: stream=True tokens_vistos=8251 seguidos=190 candidatos=0 abiertas=0 cerradas=18 st_requests=354 SOL=$102
