@@ -89,7 +89,7 @@ class PaperExecutor:
         except Exception as e:  # noqa: BLE001
             f.raw = {"quote_error": str(e)[:200]}
 
-    def buy(self, mint: str, sol_amount: float, ref_price: float) -> Fill:
+    def buy(self, mint: str, sol_amount: float, ref_price: float, fast: bool = False) -> Fill:
         px = ref_price * (1 + self.p.paper_slippage) * (1 + self.p.paper_fee)
         f = Fill(True, "buy", mint, sol=sol_amount, tokens=sol_amount / px, price=px, expected_price=ref_price,
                  slippage_pct=round((px / ref_price - 1) * 100, 2), sig=f"paper-{int(time.time()*1000)}")
@@ -109,7 +109,7 @@ class PaperExecutor:
                 pass
         return f
 
-    def sell(self, mint: str, tokens: float, ref_price: float) -> Fill:
+    def sell(self, mint: str, tokens: float, ref_price: float, fast: bool = False) -> Fill:
         px = ref_price * (1 - self.p.paper_slippage) * (1 - self.p.paper_fee)
         f = Fill(True, "sell", mint, sol=tokens * px, tokens=tokens, price=px, expected_price=ref_price,
                  slippage_pct=round((1 - px / ref_price) * 100, 2), sig=f"paper-{int(time.time()*1000)}")
@@ -159,11 +159,13 @@ class RealExecutor:
             raise RuntimeError(f"pumpportal {r.status_code}: {r.text[:200]}")
         return base64.b64encode(r.content).decode()
 
-    def _execute(self, side: str, mint: str, frm: str, to: str, amount, ref_price: float) -> Fill:
+    def _execute(self, side: str, mint: str, frm: str, to: str, amount, ref_price: float, fast: bool = False) -> Fill:
         t0 = time.time()
         f = Fill(False, side, mint, expected_price=ref_price)
         txn_b64, version, via = None, "v0", "solanatracker"
         try:
+            if fast:
+                raise RuntimeError("modo rápido: directo a PumpPortal")
             q = self.quote(frm, to, amount, self.p.swap_slippage_pct)
             rate = q.get("rate") or {}
             f.quote_impact_pct = round(impact_pct(rate), 2)
@@ -212,21 +214,21 @@ class RealExecutor:
         f.ok = True
         return f
 
-    def buy(self, mint: str, sol_amount: float, ref_price: float) -> Fill:
-        return self._execute("buy", mint, SOL_MINT, mint, round(sol_amount, 6), ref_price)
+    def buy(self, mint: str, sol_amount: float, ref_price: float, fast: bool = False) -> Fill:
+        return self._execute("buy", mint, SOL_MINT, mint, round(sol_amount, 6), ref_price, fast=fast)
 
-    def sell(self, mint: str, tokens: float, ref_price: float) -> Fill:
+    def sell(self, mint: str, tokens: float, ref_price: float, fast: bool = False) -> Fill:
         raw, dec = self.rpc.token_balance(self.pub, mint)
         have = raw / (10 ** dec)
         if have <= 0:
             return Fill(False, "sell", mint, expected_price=ref_price, error="sin tokens en la billetera")
         amt = round(min(tokens, have), dec)
         if tokens >= have * 0.98:
-            f = self._execute("sell", mint, mint, SOL_MINT, "auto", ref_price)   # vende todo lo que haya
+            f = self._execute("sell", mint, mint, SOL_MINT, "auto", ref_price, fast=fast)   # vende todo lo que haya
             if f.ok or not f.error.startswith("cotización"):
                 return f
             amt = round(have, dec)
-        return self._execute("sell", mint, mint, SOL_MINT, amt, ref_price)
+        return self._execute("sell", mint, mint, SOL_MINT, amt, ref_price, fast=fast)
 
     def token_balance(self, mint: str) -> float | None:
         try:

@@ -55,6 +55,7 @@ class Bot:
         self.factories: dict[str, dict] = {}
         self.factory_pending: dict[str, dict] = {}   # mint -> {created, creator, symbol}
         self._factory_seen: set[str] = set()
+        self._factory_sold: dict[str, float] = {}
         if self.p.strategy == "factory":
             self._load_factories()
             self.p.stop, self.p.trail, self.p.tp_mult, self.p.tp_frac, self.p.max_hold_min = self.p.factory_stop, 0.99, self.p.factory_tp, 1.0, max(1, self.p.factory_max_hold_s // 60)
@@ -120,6 +121,28 @@ class Bot:
 
     # ---------- estrategia fábricas ----------
     def step_factory(self, now: float) -> None:
+        # -1) swaps de las fábricas vistos por Helius: si una fábrica vende un token que tenemos (o que estamos por comprar), reaccionar
+        if self.helius:
+            while self.helius.events:
+                e = self.helius.events.popleft()
+                if e.get("side") != "sell":
+                    continue
+                m = e["mint"]
+                self._factory_sold.setdefault(m, 0.0)
+                self._factory_sold[m] += float(e.get("sol") or 0)
+                pos = self.port.positions.get(m)
+                if pos and now >= self._sell_backoff.get(m, 0):
+                    px = e.get("price") or pos.last_price
+                    fill = self.exe.sell(m, pos.tokens, px, fast=True)
+                    self.port.log_fill(fill, self.p.mode, "fábrica vendió", self.sol_usd)
+                    if fill.ok:
+                        closed = self.port.apply_sell(pos, fill, "fábrica vendió")
+                        log.info("VENTA %s: la fábrica vendió (%.2f SOL) -> salimos a %.2fx%s", pos.symbol, e.get("sol", 0), fill.price / pos.entry_price, " [CERRADA]" if closed else "")
+                        if closed: self.stream.unpin(m)
+                    else:
+                        self._sell_backoff[m] = now + 5; log.warning("venta por fábrica %s falló: %s", pos.symbol, fill.error)
+        if len(self._factory_sold) > 5000:
+            self._factory_sold = dict(list(self._factory_sold.items())[-2000:])
         # 0) creaciones vistas por Helius (respaldo cuando PumpPortal falla): registrar el token en el stream
         if self.helius:
             while self.helius.creates:
@@ -184,6 +207,10 @@ class Bot:
                 else:
                     self.factory_pending.pop(mint); self.stream.release(mint); self.port.log_signal(d, "fábrica: sin precio de referencia"); continue
             self.factory_pending.pop(mint)
+            if self._factory_sold.get(mint, 0.0) > 0:
+                d["factory_sold_sol"] = round(self._factory_sold[mint], 3)
+                self.port.log_signal(d, "fábrica: ya vendió antes de entrar"); self.stream.release(mint)
+                log.info("%s: la fábrica ya vendió %.2f SOL; no entramos", info["symbol"], self._factory_sold[mint]); continue
             why_not = self.port.stop_reason()
             if why_not:
                 self.port.log_signal(d, f"freno: {why_not}"); self.stream.release(mint); continue
@@ -194,7 +221,7 @@ class Bot:
                 bal = self.exe.sol_balance()
                 if bal - size_sol < self.p.min_sol_reserve:
                     self.port.log_signal(d, f"sin saldo: {bal:.4f} SOL"); self.stream.release(mint); continue
-            fill = self.exe.buy(mint, size_sol, ref)
+            fill = self.exe.buy(mint, size_sol, ref, fast=True)
             self.port.log_fill(fill, self.p.mode, f"fábrica {info['creator'][:6]}", self.sol_usd)
             if not fill.ok:
                 self.port.log_signal(d, f"compra fallida: {fill.error}"); self.stream.release(mint); continue
