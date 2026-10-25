@@ -1,44 +1,3 @@
-Oct 25 00:48:47 simplai-prod python3[393883]: 2026-10-25 00:48:47,261 INFO live: latido: stream=True tokens_vistos=5637 seguidos=229 candidatos=0 abiertas=0 cerradas=18 st_requests=313 SOL=$102
-Oct 25 00:53:18 simplai-prod python3[393883]: 2026-10-25 00:53:18,374 INFO live.rules_st: CANDIDATO v1.2 yap move=3.1x compradores=81 vol=$4209 snipers=31 -> confirma a T3
-Oct 25 00:53:47 simplai-prod python3[393883]: 2026-10-25 00:53:47,550 INFO live: latido: stream=True tokens_vistos=5693 seguidos=212 candidatos=0 abiertas=0 cerradas=18 st_requests=314 SOL=$102
-Oct 25 00:58:48 simplai-prod python3[393883]: 2026-10-25 00:58:48,329 INFO live: latido: stream=True tokens_vistos=5746 seguidos=215 candidatos=0 abiertas=0 cerradas=18 st_requests=315 SOL=$102
-Oct 25 01:03:49 simplai-prod python3[393883]: 2026-10-25 01:03:49,267 INFO live: latido: stream=True tokens_vistos=5790 seguidos=202 candidatos=0 abiertas=0 cerradas=18 st_requests=316 SOL=$102
-Oct 25 01:08:49 simplai-prod python3[393883]: 2026-10-25 01:08:49,476 INFO live: latido: stream=True tokens_vistos=5851 seguidos=214 candidatos=0 abiertas=0 cerradas=18 st_requests=317 SOL=$102
-Oct 25 01:13:49 simplai-prod python3[393883]: 2026-10-25 01:13:49,714 INFO live: latido: stream=True tokens_vistos=5952 seguidos=260 candidatos=0 abiertas=0 cerradas=18 st_requests=318 SOL=$102
-Oct 25 01:18:50 simplai-prod python3[393883]: 2026-10-25 01:18:50,466 INFO live: latido: stream=True tokens_vistos=6021 seguidos=277 candidatos=0 abiertas=0 cerradas=18 st_requests=319 SOL=$102
-Oct 25 01:23:51 simplai-prod python3[393883]: 2026-10-25 01:23:51,312 INFO live: latido: stream=True tokens_vistos=6112 seguidos=324 candidatos=0 abiertas=0 cerradas=18 st_requests=320 SOL=$102
-Oct 25 01:28:52 simplai-prod python3[393883]: 2026-10-25 01:28:52,094 INFO live: latido: stream=True tokens_vistos=6240 seguidos=389 candidatos=0 abiertas=0 cerradas=18 st_requests=321 SOL=$102
-Oct 25 01:32:42 simplai-prod python3[393883]: 2026-10-25 01:32:42,205 INFO live.rules_st: CANDIDATO v1.2 ELON move=4.8x compradores=100 vol=$6312 snipers=5 -> confirma a T3
-Oct 25 01:33:05 simplai-prod python3[393883]: 2026-10-25 01:33:05,219 INFO live: señal ELON no operada: STOP manual
-Oct 25 01:33:52 simplai-prod python3[393883]: 2026-10-25 01:33:52,692 INFO live: latido: stream=True tokens_vistos=6327 seguidos=378 candidatos=0 abiertas=0 cerradas=18 st_requests=322 SOL=$102
-Oct 25 01:38:01 simplai-prod python3[393883]: 2026-10-25 01:38:01,223 INFO live.rules_st: CANDIDATO v1.2 Movember move=4.0x compradores=61 vol=$4687 snipers=19 -> confirma a T3
-Oct 25 01:38:53 simplai-prod python3[393883]: 2026-10-25 01:38:53,568 INFO live: latido: stream=True tokens_vistos=6451 seguidos=435 candidatos=0 abiertas=0 cerradas=18 st_requests=323 SOL=$102
-Oct 25 01:39:05 simplai-prod python3[393883]: 2026-10-25 01:39:05,986 INFO live: señal Movember no operada: STOP manual
-Oct 25 01:43:54 simplai-prod python3[393883]: 2026-10-25 01:43:54,502 INFO live: latido: stream=True tokens_vistos=6535 seguidos=424 candidatos=0 abiertas=0 cerradas=18 st_requests=324 SOL=$102
-Oct 25 01:46:20 simplai-prod python3[393883]: 2026-10-25 01:46:20,707 INFO live.rules_st: CANDIDATO v1.2 MIKA move=7.1x compradores=81 vol=$5990 snipers=6 -> confirma a T3
-Oct 25 01:47:06 simplai-prod python3[393883]: 2026-10-25 01:47:06,226 INFO live: señal MIKA no operada: STOP manual
-Oct 25 01:48:55 simplai-prod python3[393883]: 2026-10-25 01:48:55,114 INFO live: latido: stream=True tokens_vistos=6588 seguidos=348 candidatos=0 abiertas=0 cerradas=18 st_requests=325 SOL=$102
-Oct 25 01:53:55 simplai-prod python3[393883]: 2026-10-25 01:53:55,801 INFO live: latido: stream=True tokens_vistos=6632 seguidos=314 candidatos=0 abiertas=0 cerradas=18 st_requests=326 SOL=$102
-Oct 25 01:58:56 simplai-prod python3[393883]: 2026-10-25 01:58:56,460 INFO live: latido: stream=True tokens_vistos=6684 seguidos=238 candidatos=0 abiertas=0 cerradas=18 st_requests=327 SOL=$102
-Oct 25 02:03:56 simplai-prod python3[393883]: 2026-10-25 02:03:56,699 INFO live: latido: stream=True tokens_vistos=6742 seguidos=211 candidatos=0 abiertas=0 cerradas=18 st_requests=328 SOL=$102
-Oct 25 02:08:19 simplai-prod python3[393883]: 2026-10-25 02:08:19,221 INFO live.rules_st: CANDIDATO v1.2 MARVIN move=3.2x compradores=64 vol=$3879 snipers=16 -> confirma a T3
-Oct 25 02:08:57 simplai-prod python3[393883]: 2026-10-25 02:08:57,527 INFO live: latido: stream=True tokens_vistos=6820 seguidos=238 candidatos=0 abiertas=0 cerradas=18 st_requests=329 SOL=$102
-Oct 25 02:09:05 simplai-prod python3[393883]: 2026-10-25 02:09:05,455 INFO live: señal MARVIN no operada: STOP manual
-Oct 25 02:13:58 simplai-prod python3[393883]: 2026-10-25 02:13:58,079 INFO live: latido: stream=True tokens_vistos=6908 seguidos=276 candidatos=0 abiertas=0 cerradas=18 st_requests=330 SOL=$102
-Oct 25 02:18:58 simplai-prod python3[393883]: 2026-10-25 02:18:58,912 INFO live: latido: stream=True tokens_vistos=6989 seguidos=306 candidatos=0 abiertas=0 cerradas=18 st_requests=331 SOL=$102
-Oct 25 02:23:59 simplai-prod python3[393883]: 2026-10-25 02:23:59,405 INFO live: latido: stream=True tokens_vistos=7063 seguidos=321 candidatos=0 abiertas=0 cerradas=18 st_requests=332 SOL=$102
-Oct 25 02:28:59 simplai-prod python3[393883]: 2026-10-25 02:28:59,842 INFO live: latido: stream=True tokens_vistos=7117 seguidos=297 candidatos=0 abiertas=0 cerradas=18 st_requests=333 SOL=$102
-Oct 25 02:30:17 simplai-prod python3[393883]: 2026-10-25 02:30:17,408 INFO live.rules_st: CANDIDATO v1.2 OOMF move=11.1x compradores=95 vol=$15628 snipers=52 -> confirma a T3
-Oct 25 02:31:05 simplai-prod python3[393883]: 2026-10-25 02:31:05,872 INFO live: señal OOMF no operada: STOP manual
-Oct 25 02:34:00 simplai-prod python3[393883]: 2026-10-25 02:34:00,807 INFO live: latido: stream=True tokens_vistos=7183 seguidos=279 candidatos=0 abiertas=0 cerradas=18 st_requests=334 SOL=$102
-Oct 25 02:34:04 simplai-prod python3[393883]: 2026-10-25 02:34:04,616 INFO live.rules_st: CANDIDATO v1.2 OOMF move=3.6x compradores=80 vol=$6184 snipers=7 -> confirma a T3
-Oct 25 02:34:05 simplai-prod python3[393883]: 2026-10-25 02:34:05,249 INFO live.rules_st: CANDIDATO v1.2 MONEY move=3.9x compradores=44 vol=$4463 snipers=10 -> confirma a T3
-Oct 25 02:35:05 simplai-prod python3[393883]: 2026-10-25 02:35:05,968 INFO live: señal MONEY no operada: STOP manual
-Oct 25 02:39:00 simplai-prod python3[393883]: 2026-10-25 02:39:00,968 INFO live: latido: stream=True tokens_vistos=7228 seguidos=242 candidatos=0 abiertas=0 cerradas=18 st_requests=335 SOL=$102
-Oct 25 02:44:01 simplai-prod python3[393883]: 2026-10-25 02:44:01,241 INFO live: latido: stream=True tokens_vistos=7306 seguidos=243 candidatos=0 abiertas=0 cerradas=18 st_requests=336 SOL=$102
-Oct 25 02:49:02 simplai-prod python3[393883]: 2026-10-25 02:49:02,077 INFO live: latido: stream=True tokens_vistos=7356 seguidos=239 candidatos=0 abiertas=0 cerradas=18 st_requests=337 SOL=$102
-Oct 25 02:54:02 simplai-prod python3[393883]: 2026-10-25 02:54:02,198 INFO live: latido: stream=True tokens_vistos=7423 seguidos=244 candidatos=0 abiertas=0 cerradas=18 st_requests=338 SOL=$102
-Oct 25 02:59:03 simplai-prod python3[393883]: 2026-10-25 02:59:03,177 INFO live: latido: stream=True tokens_vistos=7470 seguidos=242 candidatos=0 abiertas=0 cerradas=18 st_requests=339 SOL=$102
 Oct 25 03:04:03 simplai-prod python3[393883]: 2026-10-25 03:04:03,438 INFO live: latido: stream=True tokens_vistos=7540 seguidos=235 candidatos=0 abiertas=0 cerradas=18 st_requests=340 SOL=$102
 Oct 25 03:05:07 simplai-prod python3[393883]: 2026-10-25 03:05:07,771 INFO live.rules_st: CANDIDATO v1.2 Marvin move=4.3x compradores=100 vol=$11259 snipers=13 -> confirma a T3
 Oct 25 03:06:06 simplai-prod python3[393883]: 2026-10-25 03:06:06,129 INFO live: señal Marvin no operada: STOP manual
@@ -298,3 +257,44 @@ Oct 25 11:54:13 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
 Oct 25 11:54:13 simplai-prod python3[498545]: </body>
 Oct 25 11:54:13 simplai-prod python3[498545]: </html>
 Oct 25 11:54:13 simplai-prod python3[498545]: ; reconecto en 60s
+Oct 25 11:55:13 simplai-prod python3[498545]: 2026-10-25 11:55:13,400 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 11:55:13 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 25 11:55:13 simplai-prod python3[498545]: <head><title>502 Bad Gateway</title></head>
+Oct 25 11:55:13 simplai-prod python3[498545]: <body>
+Oct 25 11:55:13 simplai-prod python3[498545]: <center><h1>502 Bad Gateway</h1></center>
+Oct 25 11:55:13 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
+Oct 25 11:55:13 simplai-prod python3[498545]: </body>
+Oct 25 11:55:13 simplai-prod python3[498545]: </html>
+Oct 25 11:55:13 simplai-prod python3[498545]: ; reconecto en 60s
+Oct 25 11:56:13 simplai-prod python3[498545]: 2026-10-25 11:56:13,749 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 11:56:13 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 25 11:56:13 simplai-prod python3[498545]: <head><title>502 Bad Gateway</title></head>
+Oct 25 11:56:13 simplai-prod python3[498545]: <body>
+Oct 25 11:56:13 simplai-prod python3[498545]: <center><h1>502 Bad Gateway</h1></center>
+Oct 25 11:56:13 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
+Oct 25 11:56:13 simplai-prod python3[498545]: </body>
+Oct 25 11:56:13 simplai-prod python3[498545]: </html>
+Oct 25 11:56:13 simplai-prod python3[498545]: ; reconecto en 60s
+Oct 25 11:57:05 simplai-prod python3[498545]: 2026-10-25 11:57:05,135 INFO live: latido: stream=False tokens_vistos=87 seguidos=50 candidatos=0 abiertas=0 cerradas=0 st_requests=5 SOL=$101
+Oct 25 11:57:14 simplai-prod python3[498545]: 2026-10-25 11:57:14,097 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 11:57:14 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 25 11:57:14 simplai-prod python3[498545]: <head><title>502 Bad Gateway</title></head>
+Oct 25 11:57:14 simplai-prod python3[498545]: <body>
+Oct 25 11:57:14 simplai-prod python3[498545]: <center><h1>502 Bad Gateway</h1></center>
+Oct 25 11:57:14 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
+Oct 25 11:57:14 simplai-prod python3[498545]: </body>
+Oct 25 11:57:14 simplai-prod python3[498545]: </html>
+Oct 25 11:57:14 simplai-prod python3[498545]: ; reconecto en 60s
+Oct 25 11:58:14 simplai-prod python3[498545]: 2026-10-25 11:58:14,443 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 11:58:14 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 25 11:58:14 simplai-prod python3[498545]: <head><title>502 Bad Gateway</title></head>
+Oct 25 11:58:14 simplai-prod python3[498545]: <body>
+Oct 25 11:58:14 simplai-prod python3[498545]: <center><h1>502 Bad Gateway</h1></center>
+Oct 25 11:58:14 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
+Oct 25 11:58:14 simplai-prod python3[498545]: </body>
+Oct 25 11:58:14 simplai-prod python3[498545]: </html>
+Oct 25 11:58:14 simplai-prod python3[498545]: ; reconecto en 60s
+Oct 25 11:59:14 simplai-prod python3[498545]: 2026-10-25 11:59:14,783 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 11:59:14 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 25 11:59:14 simplai-prod python3[498545]: <head><title>502 Bad Gateway</title></head>
+Oct 25 11:59:14 simplai-prod python3[498545]: <body>
+Oct 25 11:59:14 simplai-prod python3[498545]: <center><h1>502 Bad Gateway</h1></center>
+Oct 25 11:59:14 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
+Oct 25 11:59:14 simplai-prod python3[498545]: </body>
+Oct 25 11:59:14 simplai-prod python3[498545]: </html>
+Oct 25 11:59:14 simplai-prod python3[498545]: ; reconecto en 60s
