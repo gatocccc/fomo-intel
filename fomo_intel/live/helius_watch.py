@@ -56,6 +56,28 @@ def _b58(b: bytes) -> str:
     return str(Pubkey.from_bytes(bytes(b)))
 
 
+def decode_trades_from_logs(logs: list[str]) -> list[dict]:
+    """TradeEvents de pump.fun en los logs: [{mint, sol, tokens, is_buy, price}] (layout estándar)."""
+    import base64, struct
+    out = []
+    for l in logs or []:
+        if not l.startswith("Program data: "):
+            continue
+        try:
+            b = base64.b64decode(l[len("Program data: "):])
+            if len(b) < 113:
+                continue
+            sol_amt, tok_amt = struct.unpack_from("<QQ", b, 40); flag = b[56]
+            if flag not in (0, 1) or tok_amt == 0:
+                continue
+            vsol, vtok = struct.unpack_from("<QQ", b, 97)
+            out.append({"mint": _b58(b[8:40]), "sol": sol_amt / 1e9, "tokens": tok_amt / 1e6, "is_buy": flag == 1,
+                        "price": (vsol / 1e9) / (vtok / 1e6) if vsol and vtok else (sol_amt / 1e9) / (tok_amt / 1e6)})
+        except Exception:  # noqa: BLE001
+            continue
+    return out
+
+
 def decode_create_from_logs(logs: list[str], wallet: str) -> dict | None:
     """Camino rápido: decodifica el CreateEvent y el TradeEvent (compra inicial) de pump.fun directamente de los
     logs ("Program data: <base64>") de la notificación, sin pedir la transacción. Devuelve
@@ -245,6 +267,14 @@ class HeliusWatch(threading.Thread):
                                 continue
                         # solo bajar la tx si los logs muestran creación o swap (las fábricas mandan cientos de transferencias:
                         # bajarlas todas agota la cuota de Helius y devuelve errores)
+                        # camino rápido para VENTAS de la billetera seguida (para salir con la fábrica sin esperar confirmación)
+                        if sig and wallet and not val.get("err") and "Instruction: Sell" in logs and sig not in self.seen:
+                            for tr in decode_trades_from_logs(val.get("logs") or []):
+                                if not tr["is_buy"]:
+                                    self.events.append({"ts": time.time(), "seen_ts": time.time(), "block_time": None, "wallet": wallet, "sig": sig, "side": "sell",
+                                                        "mint": tr["mint"], "sol": tr["sol"], "tokens": tr["tokens"], "price": tr["price"], "fast": True,
+                                                        "mcap_sol": tr["price"] * 1e9, "pool": "helius", "new_balance": None})
+                                    log.info("HELIUS venta RÁPIDA %s… %s %.3f SOL", wallet[:6], tr["mint"][:8], tr["sol"])
                         relevant = any(k in logs for k in ("Instruction: Create", "Instruction: Buy", "Instruction: Sell", "Swap", "swap"))
                         if sig and wallet and not val.get("err") and relevant and sig not in self.seen:
                             self.seen.append(sig)
