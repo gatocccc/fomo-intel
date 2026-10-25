@@ -120,6 +120,8 @@ class Bot:
         for st in self.stream.young(0, 30):
             if st.mint in self.factory_pending or st.mint in self.port.positions or st.decided:
                 continue
+            if not st.decided and st.creator:
+                self._note_creator(st.creator, st.created_ts)
             if st.creator in self.factories:
                 self.factory_pending[st.mint] = {"created": st.created_ts, "creator": st.creator, "symbol": st.symbol, "seen": now}
                 self.stream.keep_watching(st.mint)
