@@ -1,0 +1,7 @@
+== 045_ajuste_fabricas 2026-10-25T18:24:02Z ==
+fábricas: ['gVDXhoGbePACvSqN7CZBtQXFW9eyJwsgudPEwSydAkx', '9CV42qBfFa5gKjoj8KxZozNGUU2EC18EHgN7iKShZWzV', 'B32QbbdDAyhvUQzjcaM5j6ZVKwjCxAwGH5Xgvb9SJqnC']
+{'mode': 'real', 'strategy': 'factory', 'factory_tp': 3.0, 'factory_max_hold_s': 180, 'factory_stop': 0.7, 'size_usd': 10.0, 'max_open': 3}
+active
+Oct 25 18:24:04 simplai-prod python3[545651]: 2026-10-25 18:24:04,579 INFO live.stream: stream conectado
+Oct 25 18:24:04 simplai-prod python3[545651]: 2026-10-25 18:24:04,714 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$102
+== exit 0 ==

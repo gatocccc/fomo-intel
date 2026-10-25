@@ -37,9 +37,9 @@
  "follow_max_mcap_sol": 3000,
  "follow_min_mcap_sol": 200.0,
  "follow_min_wallets": 1,
- "factory_tp": 1.5,
+ "factory_tp": 3.0,
  "factory_max_hold_s": 180,
- "factory_stop": 0.5,
+ "factory_stop": 0.7,
  "factory_paper_wait_s": 2.0,
  "paper_slippage": 0.05,
  "paper_fee": 0.01
