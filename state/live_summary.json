@@ -1,23 +1,42 @@
 {
- "ts": 1792958101.1915708,
+ "ts": 1792958401.3578784,
  "mode": "real",
  "open": 0,
- "closed": 0,
- "wins": 0,
- "hit_rate": null,
- "pnl_usd_total": 0,
- "pnl_usd_today": 0,
- "ret_per_usd": 0,
+ "closed": 1,
+ "wins": 1,
+ "hit_rate": 1.0,
+ "pnl_usd_total": 5.16,
+ "pnl_usd_today": 5.16,
+ "ret_per_usd": 0.501,
  "stop_reason": null,
  "positions": [],
- "last_closed": [],
+ "last_closed": [
+  {
+   "ts": 1792958383.6827867,
+   "day": "2026-10-25",
+   "mint": "9jAU3J6h742y7YiRpYX9Fe1AKw7QqqDevHc7NCPRpump",
+   "symbol": "9jAU3J",
+   "opened_ts": 1792958196.6572306,
+   "hold_min": 3.1,
+   "sol_in": 0.10135858,
+   "sol_out": 0.152128998,
+   "pnl_sol": 0.05077,
+   "pnl_usd": 5.16,
+   "ret": 0.5009,
+   "peak_mult": 1.53,
+   "exits": [
+    "tiempo"
+   ],
+   "leftover_tokens": 0.0
+  }
+ ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.2689,
- "sol_usd": 101.68009986936825,
+ "wallet_sol": 1.3197,
+ "sol_usd": 101.6484959767802,
  "stream_connected": true,
- "stream_msgs": 12,
- "tokens_seen": 11,
- "tokens_tracked": 11,
+ "stream_msgs": 4,
+ "tokens_seen": 3,
+ "tokens_tracked": 3,
  "candidates": [],
  "strategy": "factory",
  "followed_wallets": 0,
@@ -26,19 +45,19 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 1346,
+  "notifications": 501,
   "parsed": 0,
-  "skipped": 1346,
+  "skipped": 501,
   "subs": 3,
   "errors": []
  },
  "follow_buys_seen": 0,
- "st_requests": 1,
+ "st_requests": 4,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 1,
-  "create": 11
+  "create": 3
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}"
