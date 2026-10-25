@@ -1,0 +1,16 @@
+== 055_backtest_midcaps 2026-10-25T22:18:03Z ==
+  DOPE: 346 velas (descartado)
+  DacityCoin: 250 velas (descartado)
+tokens con >=30 días de velas 1h: 27 ['AI16Z', 'ANSEM', 'BIRB', 'BOME', 'BONK', 'CATE', 'CHILLGUY', 'FARTCOIN', 'GIGA', 'GOAT', 'JEANPHIL', 'LMAO!', 'MEW', 'MICHI', 'MOODENG', 'MUSK', 'PAID', 'PNUT', 'PONKE', 'POPCAT', 'RETARDIO', 'SI', 'STONK', 'USELESS', 'Verse', 'WIF', 'baton']
+
+estrategia                                   | 1ª mitad (diseño)                  | 2ª mitad (prueba)                 
+ruptura 48h + trailing 15%                   | n= 182 acierto  30% prom +18.202 med -0.058 | n= 142 acierto  26% prom -0.049 med -0.073
+ruptura 48h + TP10/SL10                      | n= 258 acierto  41% prom -0.022 med -0.056 | n= 211 acierto  32% prom -0.034 med -0.066
+caída 20% en 24h, rebote TP8/SL15            | n= 317 acierto  72% prom +0.006 med +0.069 | n= 100 acierto  60% prom -0.021 med +0.069
+caída 20% en 24h sobre MA 30d, TP8/SL15      | n= 277 acierto  68% prom -0.002 med +0.069 | n=  88 acierto  59% prom -0.023 med +0.069
+tendencia MA20>MA50 (cruce), sale al cruce   | n= 268 acierto  27% prom +442.299 med -0.028 | n= 281 acierto  24% prom -0.029 med -0.037
+volumen 3x + vela verde, TP10/SL8 24h        | n= 236 acierto  33% prom -0.025 med -0.089 | n= 177 acierto  33% prom -0.027 med -0.059
+AZAR (control) TP8/SL15                      | n= 172 acierto  51% prom -0.011 med +0.007 | n= 169 acierto  44% prom -0.020 med -0.016
+
+comprar y mantener la 2ª mitad: mediana -0.12, promedio -0.10 (contexto del mercado en el período de prueba)
+== exit 0 ==
