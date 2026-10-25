@@ -1,0 +1,29 @@
+== 036_fabricas_sniper 2026-10-25T04:01:03Z ==
+fábricas con tasa >=12% (últimos 500) y actividad: [('8ZN71XTd', 0.15, 18463), ('JDQKDrc1', 0.16, 7321), ('4Lm2uqHg', 0.242, 10068), ('gVDXhoGb', 0.252, 1080), ('9CV42qBf', 0.191, 141), ('CMipoWEj', 0.122, 729), ('B32QbbdD', 0.29, 2320), ('4zyH4wYr', 0.132, 755)]
+
+8ZN71XTdVo… tasa API 0.15 total 18463 | muestra con velas: 40 | graduados en muestra: 9
+    r1: acierto 68% mediana +0.04 prom +0.09 | r2: acierto 42% mediana -0.02 prom +0.01 | r5: acierto 10% mediana -0.05 prom -0.04
+    max en 3 min >=1.5x: 95%  >=2x: 88%
+
+JDQKDrc1TQ… tasa API 0.16 total 7321 | muestra con velas: 40 | graduados en muestra: 4
+    r1: acierto 88% mediana +0.09 prom +0.59 | r2: acierto 70% mediana +0.05 prom +0.53 | r5: acierto 32% mediana -0.05 prom +0.44
+    max en 3 min >=1.5x: 95%  >=2x: 82%
+
+4Lm2uqHgau… tasa API 0.242 total 10068 | muestra con velas: 40 | graduados en muestra: 6
+    r1: acierto 52% mediana +0.02 prom +0.33 | r2: acierto 44% mediana -0.02 prom +0.02 | r5: acierto 22% mediana -0.05 prom +0.01
+    max en 3 min >=1.5x: 92%  >=2x: 85%
+
+gVDXhoGbeP… tasa API 0.252 total 1080 | muestra con velas: 40 | graduados en muestra: 14
+    r1: acierto 88% mediana +0.57 prom +1.13 | r2: acierto 80% mediana +0.72 prom +1.07 | r5: acierto 75% mediana +0.28 prom +1.07
+    max en 3 min >=1.5x: 92%  >=2x: 85%
+
+9CV42qBfFa… tasa API 0.191 total 141 | muestra con velas: 40 | graduados en muestra: 10
+    r1: acierto 78% mediana +0.25 prom +0.58 | r2: acierto 60% mediana +0.18 prom +0.58 | r5: acierto 55% mediana +0.01 prom +0.78
+    max en 3 min >=1.5x: 75%  >=2x: 50%
+
+CMipoWEjjm… tasa API 0.122 total 729 | muestra con velas: 40 | graduados en muestra: 2
+    r1: acierto 38% mediana -0.03 prom +0.01 | r2: acierto 28% mediana -0.05 prom -0.01 | r5: acierto 18% mediana -0.05 prom -0.02
+    max en 3 min >=1.5x: 22%  >=2x: 10%
+
+requests usados: 240
+== exit 0 ==
