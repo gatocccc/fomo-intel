@@ -1,0 +1,9 @@
+== 058_prueba_velocidad 2026-10-25T22:48:04Z ==
+4NWSwmboxz -> {'mint': '4NWSwmboxz1uhdYsRwtJtedALfRpzYvqUasSt6AEpump', 'price_after': 3.805529667598632e-08, 'vsol': 35000000000, 'vtok': 919714285714286, 'initial_sol': 5.0, 'initial_tokens': 153285714.285714}
+rjALAN7kNC -> {'mint': 'rjALAN7kNCRyWNg51sHgEfhn4raev8kEcnP2kEkpump', 'price_after': 2.7958993476234855e-08, 'vsol': 0, 'vtok': 0, 'initial_sol': 0.0, 'initial_tokens': 0.0}
+DECODIFICADOR FALLA
+active
+Oct 25 22:48:06 simplai-prod python3[583092]: 2026-10-25 22:48:06,153 INFO live.helius: helius conectado; suscribiendo 2 billeteras
+Oct 25 22:48:06 simplai-prod python3[583092]: 2026-10-25 22:48:06,419 INFO live.stream: stream conectado
+Oct 25 22:48:06 simplai-prod python3[583092]: 2026-10-25 22:48:06,604 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$102
+== exit 0 ==
