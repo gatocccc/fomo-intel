@@ -1,6 +1,3 @@
-Oct 24 18:32:06 simplai-prod python3[380576]: 2026-10-24 18:32:06,320 WARNING live: venta CONTRAIL (tp2x) falló: cotización: swap api 500: {"error":"Failed to swap"}
-Oct 24 18:32:17 simplai-prod python3[380576]: 2026-10-24 18:32:17,047 WARNING live: venta CONTRAIL (tp2x) falló: cotización: swap api 500: {"error":"Failed to swap"}
-Oct 24 18:32:27 simplai-prod python3[380576]: 2026-10-24 18:32:27,503 WARNING live: venta CONTRAIL (tp2x) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:32:38 simplai-prod python3[380576]: 2026-10-24 18:32:38,169 WARNING live: venta CONTRAIL (tp2x) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:32:48 simplai-prod python3[380576]: 2026-10-24 18:32:48,813 WARNING live: venta CONTRAIL (tp2x) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:32:59 simplai-prod python3[380576]: 2026-10-24 18:32:59,272 WARNING live: venta CONTRAIL (tp2x) falló: cotización: swap api 500: {"error":"Failed to swap"}
@@ -298,3 +295,6 @@ Oct 25 01:48:55 simplai-prod python3[393883]: 2026-10-25 01:48:55,114 INFO live:
 Oct 25 01:53:55 simplai-prod python3[393883]: 2026-10-25 01:53:55,801 INFO live: latido: stream=True tokens_vistos=6632 seguidos=314 candidatos=0 abiertas=0 cerradas=18 st_requests=326 SOL=$102
 Oct 25 01:58:56 simplai-prod python3[393883]: 2026-10-25 01:58:56,460 INFO live: latido: stream=True tokens_vistos=6684 seguidos=238 candidatos=0 abiertas=0 cerradas=18 st_requests=327 SOL=$102
 Oct 25 02:03:56 simplai-prod python3[393883]: 2026-10-25 02:03:56,699 INFO live: latido: stream=True tokens_vistos=6742 seguidos=211 candidatos=0 abiertas=0 cerradas=18 st_requests=328 SOL=$102
+Oct 25 02:08:19 simplai-prod python3[393883]: 2026-10-25 02:08:19,221 INFO live.rules_st: CANDIDATO v1.2 MARVIN move=3.2x compradores=64 vol=$3879 snipers=16 -> confirma a T3
+Oct 25 02:08:57 simplai-prod python3[393883]: 2026-10-25 02:08:57,527 INFO live: latido: stream=True tokens_vistos=6820 seguidos=238 candidatos=0 abiertas=0 cerradas=18 st_requests=329 SOL=$102
+Oct 25 02:09:05 simplai-prod python3[393883]: 2026-10-25 02:09:05,455 INFO live: señal MARVIN no operada: STOP manual
