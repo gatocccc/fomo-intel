@@ -1,4 +1,3 @@
-Oct 24 19:12:33 simplai-prod python3[393883]: 2026-10-24 19:12:33,496 INFO live.rules_st: CANDIDATO v1.2 HENRY move=5.1x compradores=100 vol=$15547 snipers=41 -> confirma a T3
 Oct 24 19:13:09 simplai-prod python3[393883]: 2026-10-24 19:13:09,180 INFO live: COMPRA v1.2 HENRY 0.1015 SOL (US$10) a 2.353e-07 slippage=+5.4% impacto=1.9% lat=3.5s
 Oct 24 19:13:10 simplai-prod python3[393883]: 2026-10-24 19:13:10,581 INFO live: latido: stream=True tokens_vistos=408 seguidos=407 candidatos=0 abiertas=1 cerradas=11 st_requests=7 SOL=$101
 Oct 24 19:13:56 simplai-prod python3[393883]: 2026-10-24 19:13:56,027 INFO live.portfolio: CERRADA HENRY ret=-35.6% pnl=US$-3.65 salidas=['stop']
@@ -298,3 +297,4 @@ Oct 25 07:14:15 simplai-prod python3[449801]: 2026-10-25 07:14:15,424 INFO live:
 Oct 25 07:19:15 simplai-prod python3[449801]: 2026-10-25 07:19:15,884 INFO live: latido: stream=True tokens_vistos=1848 seguidos=62 candidatos=0 abiertas=0 cerradas=0 st_requests=36 SOL=$102
 Oct 25 07:24:16 simplai-prod python3[449801]: 2026-10-25 07:24:16,143 INFO live: latido: stream=True tokens_vistos=1886 seguidos=53 candidatos=0 abiertas=0 cerradas=0 st_requests=37 SOL=$102
 Oct 25 07:29:16 simplai-prod python3[449801]: 2026-10-25 07:29:16,492 INFO live: latido: stream=True tokens_vistos=1938 seguidos=72 candidatos=0 abiertas=0 cerradas=0 st_requests=38 SOL=$102
+Oct 25 07:34:16 simplai-prod python3[449801]: 2026-10-25 07:34:16,743 INFO live: latido: stream=True tokens_vistos=1992 seguidos=81 candidatos=0 abiertas=0 cerradas=0 st_requests=39 SOL=$102
