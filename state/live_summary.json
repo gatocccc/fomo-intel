@@ -1,5 +1,5 @@
 {
- "ts": 1792937385.5098977,
+ "ts": 1792937686.7842965,
  "mode": "paper",
  "open": 0,
  "closed": 0,
@@ -13,7 +13,7 @@
  "last_closed": [],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 100.61230803786768,
+ "sol_usd": 100.61831123605823,
  "stream_connected": false,
  "stream_msgs": 89,
  "tokens_seen": 87,
@@ -26,13 +26,13 @@
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 32,
+ "st_requests": 33,
  "stream_errors": [
-  "14:04:58 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:04:58 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
-  "14:05:59 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:05:59 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
-  "14:06:59 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:06:59 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
-  "14:07:59 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:07:59 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
-  "14:09:00 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:09:00 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
+  "14:10:00 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:10:00 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
+  "14:11:00 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:11:00 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
+  "14:12:01 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:12:01 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
+  "14:13:01 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:13:01 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
+  "14:14:01 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:14:01 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "rules_st": null,
  "stream_counts": {
