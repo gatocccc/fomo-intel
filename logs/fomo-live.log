@@ -1,4 +1,3 @@
-Oct 24 18:13:10 simplai-prod python3[380576]: 2026-10-24 18:13:10,998 INFO live: COMPRA v1.2 ACTIV 0.1018 SOL (US$10) a 1.691e-07 slippage=+20.8% impacto=0.0% lat=5.7s
 Oct 24 18:13:52 simplai-prod python3[380576]: 2026-10-24 18:13:52,225 INFO live.portfolio: CERRADA ACTIV ret=-33.9% pnl=US$-3.48 salidas=['stop']
 Oct 24 18:13:52 simplai-prod python3[380576]: 2026-10-24 18:13:52,225 INFO live: VENTA ACTIV stop 100% a 0.66x slippage=+1.6% -> 0.0673 SOL [CERRADA]
 Oct 24 18:14:08 simplai-prod python3[380576]: 2026-10-24 18:14:08,197 INFO live.rules_st: CANDIDATO v1.2 ACTX move=4.2x compradores=100 vol=$13969 snipers=26 -> confirma a T3
@@ -298,3 +297,4 @@ Oct 25 00:37:24 simplai-prod python3[393883]: 2026-10-25 00:37:24,190 INFO live.
 Oct 25 00:38:05 simplai-prod python3[393883]: 2026-10-25 00:38:05,680 INFO live: señal Morgano no operada: STOP manual
 Oct 25 00:38:46 simplai-prod python3[393883]: 2026-10-25 00:38:46,292 INFO live: latido: stream=True tokens_vistos=5531 seguidos=228 candidatos=0 abiertas=0 cerradas=18 st_requests=311 SOL=$102
 Oct 25 00:43:47 simplai-prod python3[393883]: 2026-10-25 00:43:47,171 INFO live: latido: stream=True tokens_vistos=5588 seguidos=232 candidatos=0 abiertas=0 cerradas=18 st_requests=312 SOL=$102
+Oct 25 00:48:47 simplai-prod python3[393883]: 2026-10-25 00:48:47,261 INFO live: latido: stream=True tokens_vistos=5637 seguidos=229 candidatos=0 abiertas=0 cerradas=18 st_requests=313 SOL=$102
