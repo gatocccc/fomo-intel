@@ -1,5 +1,5 @@
 {
- "ts": 1792892980.6857877,
+ "ts": 1792893284.278554,
  "mode": "real",
  "open": 0,
  "closed": 18,
@@ -194,18 +194,18 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.2689,
- "sol_usd": 102.32540057371389,
+ "sol_usd": 102.36671544687078,
  "stream_connected": true,
- "stream_msgs": 7581,
- "tokens_seen": 6594,
- "tokens_tracked": 342,
+ "stream_msgs": 7623,
+ "tokens_seen": 6636,
+ "tokens_tracked": 296,
  "candidates": [],
  "strategy": "rules_st",
  "followed_wallets": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 1258,
+ "st_requests": 1267,
  "stream_errors": [
   "19:35:02 Connection to remote host was lost.",
   "19:35:04 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 19:35:04 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
@@ -213,17 +213,17 @@
   "23:48:08 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 23:48:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "rules_st": {
-  "multi_calls": 411,
-  "prefilter_pass": 161,
-  "full_eval": 161,
+  "multi_calls": 416,
+  "prefilter_pass": 162,
+  "full_eval": 162,
   "candidates": 40,
   "bought": 7,
   "pending_t3": 0,
-  "evaluated": 6547
+  "evaluated": 6594
  },
  "stream_counts": {
   "otros": 17,
-  "create": 6696,
+  "create": 6738,
   "buy": 505,
   "sell": 363
  },
