@@ -1,5 +1,5 @@
 {
- "ts": 1792946982.8751893,
+ "ts": 1792947284.3260055,
  "mode": "paper",
  "open": 0,
  "closed": 0,
@@ -13,11 +13,11 @@
  "last_closed": [],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": null,
- "sol_usd": 101.31699481870079,
+ "sol_usd": 101.36251666636427,
  "stream_connected": true,
- "stream_msgs": 1193,
- "tokens_seen": 1181,
- "tokens_tracked": 112,
+ "stream_msgs": 1267,
+ "tokens_seen": 1255,
+ "tokens_tracked": 106,
  "candidates": [],
  "strategy": "factory",
  "followed_wallets": 0,
@@ -32,7 +32,7 @@
   "errors": []
  },
  "follow_buys_seen": 0,
- "st_requests": 30,
+ "st_requests": 31,
  "stream_errors": [
   "15:30:31 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 15:30:31 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
   "15:31:31 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 15:31:31 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
@@ -43,7 +43,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 1,
-  "create": 1192
+  "create": 1266
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}"

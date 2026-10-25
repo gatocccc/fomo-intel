@@ -1,0 +1,42 @@
+== 041_diag_helius_creates 2026-10-25T16:52:02Z ==
+
+JDQKDrc1 lanzamientos últimas 3 h (ST): 0 | vistos en vivo (creators.json): 0
+    fchYwMpoEE sin tx
+    3tDNm4zkL8 sin tx
+    5QxB5wKQ4P sin tx
+    4ZbQrd26HX sin tx
+    3FuZ9ZNwdK hace 651 min | ['Instruction: Create'] | progs ['6EF8rr', 'Comput', 'pfeeUx'] | create: {'mint': 'JDQKDrc1TQgBRvdFh56tkta5sYcDj1SoP52Eiu64rSrT', 'initial_tokens': 0.0, 'initial_sol': 0.00585216} | swap: False
+    3h1TtkNYLS hace 651 min | [] | progs ['111111', 'Comput'] | create: None | swap: False
+
+4Lm2uqHg lanzamientos últimas 3 h (ST): 5 | vistos en vivo (creators.json): 0
+    5cr6CKs3tz hace 17 min | [] | progs ['111111', 'Comput'] | create: None | swap: False
+    2bdKjL9mUU sin tx
+    4xSKoEVw3S sin tx
+    5SMcj8Pm5P sin tx
+    4vWGrXgnLT sin tx
+    3ZddycFpe1 sin tx
+
+gVDXhoGb lanzamientos últimas 3 h (ST): 0 | vistos en vivo (creators.json): 0
+    5h6PnA8F4h hace 782 min | [] | progs ['Comput', 'ENicYB', 'MemoSq'] | create: None | swap: False
+    4PRP8eUDhF hace 786 min | [] | progs ['111111', 'Comput'] | create: None | swap: False
+    2bBP4baMUo hace 786 min | [] | progs ['AToken', 'Comput', 'Tokenk'] | create: None | swap: False
+    cM4373XC1L hace 786 min | [] | progs ['4rhk8V', 'Comput'] | create: None | swap: False
+    5RfTLe4h7x hace 786 min | [] | progs ['4rhk8V', 'Comput'] | create: None | swap: False
+    54pzBSScJQ hace 786 min | [] | progs ['4rhk8V', 'Comput'] | create: None | swap: False
+
+9CV42qBf lanzamientos últimas 3 h (ST): 0 | vistos en vivo (creators.json): 0
+    3tFj88VRRR hace 1084 min | ['Instruction: Sell', 'Transfer'] | progs ['111111', '6Vo324', 'AToken', 'Comput'] | create: None | swap: True
+    4RJbhStX2o hace 1085 min | ['Instruction: Create', 'Instruction: CreateV2', 'Instruction: Buy', 'InitializeMint'] | progs ['6EF8rr', 'AToken', 'Comput'] | create: {'mint': '6zS5QLrt33KLBsrjGdDowrRFFZvvRfQPqchHkZnZpump', 'initial_tokens': 183172560.912929, 'initial_sol': 0.01258316} | swap: True
+    3GcJs2kCXc hace 1085 min | ['Transfer'] | progs ['111111', 'AToken', 'Comput', 'JUP6Lk', 'Tokenk'] | create: None | swap: True
+    3GgnuBMB4g hace 1091 min | ['Instruction: Sell', 'Transfer'] | progs ['111111', '6Vo324', 'AToken', 'Comput'] | create: None | swap: True
+    4iFp8tn85J hace 1091 min | ['Instruction: Sell', 'Transfer'] | progs ['111111', '6Vo324', 'AToken', 'Comput'] | create: None | swap: True
+    2JcEMygC3p hace 1091 min | ['Instruction: Create', 'Instruction: CreateV2', 'Instruction: Buy', 'Transfer', 'InitializeMint'] | progs ['111111', '6EF8rr', 'AToken', 'Comput'] | create: {'mint': 'HpixuauNZRVBUf2tESa6uiVZPwNdK6RutzZ5YQjYpump', 'initial_tokens': 281482078.46096, 'initial_sol': 10.859497449} | swap: True
+
+B32QbbdD lanzamientos últimas 3 h (ST): 0 | vistos en vivo (creators.json): 0
+    2ToDFHk5Vu hace 87 min | ['Transfer'] | progs ['AToken', 'Comput', 'Tokenz'] | create: None | swap: False
+    mcrFYjWFzU hace 161 min | ['Transfer'] | progs ['AToken', 'Comput', 'Tokenz'] | create: None | swap: False
+    5rKBjqu81d hace 161 min | ['Transfer'] | progs ['AToken', 'Comput', 'Tokenz'] | create: None | swap: False
+    vUB7dBZhC4 hace 174 min | ['Transfer'] | progs ['AToken', 'Comput', 'Tokenz'] | create: None | swap: False
+    4325ZMBznN hace 189 min | ['Transfer'] | progs ['AToken', 'Comput', 'Tokenz'] | create: None | swap: False
+    3CDs42rQyx hace 199 min | ['Transfer'] | progs ['AToken', 'Comput', 'Tokenz'] | create: None | swap: False
+== exit 0 ==
