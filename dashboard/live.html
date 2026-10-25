@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>FOMO en vivo</title>
+<style>
+:root{--bg:#0b0d12;--card:#141821;--line:#232837;--txt:#e7e9ee;--mut:#8a91a3;--ok:#3ddc84;--bad:#ff5c6c;--warn:#ffb648;--acc:#7aa2ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:max(14px,env(safe-area-inset-top)) 14px 40px}
+.wrap{max-width:720px;margin:0 auto}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.badge{font-weight:700;font-size:12px;letter-spacing:.06em;padding:5px 9px;border-radius:999px}
+.real{background:#3a0d14;color:#ff8b97;border:1px solid #6b1a26}.paper{background:#2b230e;color:#ffd27a;border:1px solid #5a4614}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.state{font-size:13px;color:var(--mut)}
+.hero{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px}
+.hero .k{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.hero .big{font-size:38px;font-weight:700;letter-spacing:-.02em;margin:2px 0}
+.hero .sub{color:var(--mut);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.grid div{background:#0f1219;border:1px solid var(--line);border-radius:12px;padding:9px}
+.grid b{display:block;font-size:19px}.grid span{font-size:11px;color:var(--mut)}
+h2{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;margin:18px 2px 8px}
+.pos{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;margin-bottom:8px}
+.pos .row{display:flex;justify-content:space-between;align-items:baseline}
+.pos .mult{font-size:30px;font-weight:700}
+.bar{height:6px;background:#0f1219;border-radius:4px;margin-top:9px;overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.empty{color:var(--mut);background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:16px;text-align:center}
+.feed div{display:flex;gap:10px;padding:8px 2px;border-bottom:1px solid var(--line);font-size:14px}
+.feed time{color:var(--mut);min-width:44px;font-variant-numeric:tabular-nums}
+.tag{font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;white-space:nowrap}
+.t-lanz{background:#1a2133;color:#9db7ff}.t-compra{background:#10301f;color:var(--ok)}.t-venta{background:#2a2410;color:var(--warn)}.t-error{background:#3a0d14;color:var(--bad)}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.mut{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:14px}td{padding:8px 4px;border-bottom:1px solid var(--line)}td:last-child{text-align:right}
+a{color:var(--acc);text-decoration:none}
+.btns{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+button{flex:1;min-width:140px;border:0;border-radius:12px;padding:13px;font-weight:700;font-size:14px;color:#fff;cursor:pointer}
+.b-stop{background:#5c1621}.b-go{background:#14532d}.b-panic{background:#4c1d95}
+.foot{margin-top:18px;font-size:12px;color:var(--mut);text-align:center}
+.foot a{margin:0 6px}
+#msg{text-align:center;color:var(--mut);font-size:13px;margin-top:8px;min-height:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span id="mode" class="badge">…</span>
+    <span class="state" id="state">conectando…</span>
+  </div>
+
+  <div class="hero">
+    <div class="k">Resultado de esta sesión</div>
+    <div class="big" id="pnl">—</div>
+    <div class="sub" id="pnlsub">—</div>
+    <div class="grid">
+      <div><b id="ops">0</b><span>operaciones cerradas</span></div>
+      <div><b id="hit">—</b><span>acierto</span></div>
+      <div><b id="slip">—</b><span>sobreprecio promedio al comprar</span></div>
+    </div>
+  </div>
+
+  <h2>Ahora — posiciones abiertas</h2>
+  <div id="positions"></div>
+
+  <h2>Actividad en vivo</h2>
+  <div class="feed" id="feed"></div>
+
+  <h2>Operaciones cerradas</h2>
+  <div id="closed"></div>
+
+  <div class="btns">
+    <button class="b-stop" onclick="api('stop')">⛔ Frenar compras</button>
+    <button class="b-go" onclick="api('resume')">▶ Rearmar</button>
+    <button class="b-panic" onclick="if(confirm('Vende TODAS las posiciones ahora. ¿Seguro?'))api('panic')">🚨 Vender todo</button>
+  </div>
+  <div id="msg"></div>
+  <div class="foot" id="rules"></div>
+  <div class="foot"><a href="/historico.html">histórico y validación</a></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const hm=t=>new Date(t*1000).toLocaleTimeString('es-AR',{hour:'2-digit',minute:'2-digit'});
+const usd=v=>(v>=0?'+':'−')+'US$'+Math.abs(v).toFixed(2);
+function api(a){fetch('/api/'+a,{method:'POST'}).then(r=>r.json()).then(j=>{$('msg').textContent=j.msg||'';load()}).catch(e=>$('msg').textContent='error: '+e)}
+function load(){
+ fetch('/api/live',{cache:'no-store'}).then(r=>r.json()).then(d=>{
+  const real=d.mode==='real';
+  $('mode').className='badge '+(real?'real':'paper');
+  $('mode').textContent=real?'DINERO REAL':'SIMULADO';
+  const age=d.now-(d.bot_ts||0), alive=age<30;
+  let st, col;
+  if(!alive){st='bot sin señal hace '+Math.round(age)+' s';col='var(--bad)'}
+  else if(d.panic){st='PÁNICO: vendiendo todo';col='var(--bad)'}
+  else if(d.stop_reason){st='frenado: '+d.stop_reason;col='var(--warn)'}
+  else{st='operando · escuchando '+(d.factories||0)+' fábricas';col='var(--ok)'}
+  const feeds=(d.stream_ok?'':' · PumpPortal caído')+(d.helius_ok===false?' · Helius caído':'');
+  $('state').innerHTML='<span class="dot" style="background:'+col+'"></span>'+st+'<span class="mut">'+feeds+'</span>';
+  // resultado: por saldo real de la billetera (incluye todo) y por operaciones cerradas
+  const su=d.sol_usd||0;
+  if(real && d.start_sol!=null && d.wallet_sol!=null){
+    const openVal=(d.positions||[]).reduce((a,p)=>a+(p.value_sol||0),0);
+    const delta=(d.wallet_sol+openVal-d.start_sol)*su;
+    $('pnl').textContent=usd(delta);$('pnl').className='big '+(delta>=0?'ok':'bad');
+    $('pnlsub').textContent='Billetera: '+d.wallet_sol.toFixed(3)+' SOL (≈US$'+(d.wallet_sol*su).toFixed(0)+') · al empezar '+d.start_sol.toFixed(3)+' SOL · desde '+hm(d.session_start);
+  }else{
+    $('pnl').textContent=usd(d.pnl_usd||0);$('pnl').className='big '+((d.pnl_usd||0)>=0?'ok':'bad');
+    $('pnlsub').textContent='Suma de operaciones cerradas desde '+(d.session_start?hm(d.session_start):'—');
+  }
+  $('ops').textContent=d.n_closed;
+  $('hit').textContent=d.n_closed?Math.round(100*d.n_wins/d.n_closed)+'%':'—';
+  $('slip').textContent=d.avg_slip==null?'—':(d.avg_slip>0?'+':'')+d.avg_slip+'%';
+  // posiciones
+  const r=d.rules||{}, tp=r.factory_tp||3, hold=r.factory_max_hold_s||180;
+  const ps=d.positions||[];
+  $('positions').innerHTML=ps.length?ps.map(p=>{
+    const left=Math.max(0,hold-p.age_s), pct=Math.min(100,100*p.age_s/hold);
+    const c=p.mult>=1?'ok':'bad';
+    return `<div class="pos"><div class="row"><a href="https://solscan.io/token/${p.mint}" target="_blank"><b>${p.symbol}</b></a><span class="mut">US$${p.size_usd.toFixed(0)} · pico ${p.peak_mult.toFixed(2)}x</span></div>
+      <div class="row"><span class="mult ${c}">${p.mult.toFixed(2)}x</span><span class="mut">objetivo ${tp}x · vende en ${left}s</span></div>
+      <div class="bar"><i style="width:${pct}%"></i></div></div>`}).join('')
+    :'<div class="empty">Sin posiciones. Esperando que una fábrica lance un token.</div>';
+  // feed
+  const lab={lanzamiento:['t-lanz','LANZÓ'],compra_ok:['t-compra','COMPRA'],venta:['t-venta','VENTA'],error:['t-error','ERROR']};
+  $('feed').innerHTML=(d.feed||[]).length?(d.feed.map(e=>{const l=lab[e.tipo]||['t-lanz',e.tipo];
+    const det=e.tipo==='lanzamiento'?('fábrica '+(e.fabrica||'')+' · '+(e.detalle||'')):(e.detalle||'');
+    return `<div><time>${hm(e.ts)}</time><span class="tag ${l[0]}">${l[1]}</span><span><a href="https://solscan.io/token/${e.mint}" target="_blank">${e.token}</a> <span class="mut">${det}</span></span></div>`}).join(''))
+    :'<div class="empty">Todavía no hubo movimiento en esta sesión.</div>';
+  // cerradas
+  const cl=d.closed||[];
+  $('closed').innerHTML=cl.length?'<table>'+cl.map(c=>`<tr><td class="mut">${hm(c.ts)}</td><td><a href="https://solscan.io/token/${c.mint}" target="_blank">${c.symbol}</a></td><td class="mut">${(c.exits||[]).join(', ')} · ${Math.round(c.hold_min*60)}s</td><td class="${c.pnl_usd>=0?'ok':'bad'}">${usd(c.pnl_usd)}</td></tr>`).join('')+'</table>'
+    :'<div class="empty">Ninguna todavía.</div>';
+  $('rules').textContent=`US$${r.size_usd} por operación · máx ${r.max_open} abiertas · objetivo ${tp}x o venta a los ${hold}s · stop −${Math.round((r.factory_stop||0)*100)}% · freno diario −US$${r.daily_loss_usd}`;
+ }).catch(e=>{$('state').innerHTML='<span class="dot" style="background:var(--bad)"></span>sin conexión con el servidor'});
+}
+load();setInterval(load,3000);
+</script>
+</body>
+</html>

@@ -194,7 +194,8 @@ class Portfolio:
              "pnl_usd_today": round(self.realized_usd(ba_day()), 2),
              "ret_per_usd": round(sum(r["ret"] for r in closed), 3),
              "stop_reason": self.stop_reason(),
-             "positions": [{"symbol": x.symbol, "mint": x.mint, "age_min": round((time.time() - x.opened_ts) / 60, 1),
+             "positions": [{"symbol": x.symbol, "mint": x.mint, "age_min": round((time.time() - x.opened_ts) / 60, 1), "age_s": int(time.time() - x.opened_ts),
+                            "sol_in": round(x.sol_in, 4), "value_sol": round(x.tokens * (x.last_price or 0) + x.sol_out, 4), "last_ts": x.last_ts,
                             "mult": round(x.mult(x.last_price), 2), "peak_mult": round(x.mult(x.peak_price), 2),
                             "size_usd": round(x.size_usd, 2), "tp_done": x.tp_done} for x in self.positions.values()],
              "last_closed": closed[-10:][::-1], **extra}

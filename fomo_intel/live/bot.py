@@ -471,9 +471,10 @@ class Bot:
 
     # ---------- 4) resumen ----------
     def step_summary(self, now: float) -> None:
-        wallet_sol = None
-        if self.p.mode == "real":
-            try: wallet_sol = round(self.exe.sol_balance(), 4)
+        wallet_sol = getattr(self, "_wallet_sol_cache", None)
+        if self.p.mode == "real" and now - getattr(self, "_wallet_sol_ts", 0) > 20:
+            try:
+                wallet_sol = round(self.exe.sol_balance(), 4); self._wallet_sol_cache, self._wallet_sol_ts = wallet_sol, now
             except Exception: pass  # noqa: BLE001
         self.port.summary({"wallet": self._wallet_pubkey(), "wallet_sol": wallet_sol, "sol_usd": self.sol_usd,
                            "stream_connected": self.stream.connected, "stream_msgs": self.stream.msgs,
@@ -488,7 +489,8 @@ class Bot:
                            "stream_trades": self.stream.trades_streamed, "stream_cost_sol_est": round(self.stream.trades_streamed / 10000 * 0.01, 4),
                            "pumpportal_wallet_sol": self._pumpportal_balance(),
                            "params": {k: getattr(self.p, k) for k in ("mode", "strategy", "size_usd", "max_open", "daily_loss_usd", "total_loss_usd", "max_trades", "max_slippage_pct", "stop", "trail", "tp_mult", "max_hold_min")}})
-        self._save_creators()
+        if now - getattr(self, "_last_creators_save", 0) > 60:
+            self._save_creators(); self._last_creators_save = now
         if len(self._kept_checked) > 5000:
             self._kept_checked = set(list(self._kept_checked)[-2000:])
 
@@ -515,7 +517,7 @@ class Bot:
                     self.step_evaluate(now)
                     self.step_enter(now)
                 self.step_positions(now)
-                if now - self._last_summary > 30:
+                if now - self._last_summary > 4:
                     self.step_summary(now); self._last_summary = now
                 if now - self._last_heartbeat > 300:
                     log.info("latido: stream=%s tokens_vistos=%d seguidos=%d candidatos=%d abiertas=%d cerradas=%d st_requests=%d SOL=$%.0f",

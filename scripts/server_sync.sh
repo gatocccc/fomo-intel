@@ -41,7 +41,8 @@ done
 MIN=$(date +%M); if [ $((10#$MIN % 10)) -eq 0 ]; then set -a; . ./.env; set +a; timeout 300 python3 -m fomo_intel.live.outcomes 60 >> logs/outcomes.log 2>&1 || true; fi
 
 # ---- dashboard (cada minuto, barato: solo lee archivos) ----
-[ -d /var/www/fomo ] && python3 -m fomo_intel.dashboard /var/www/fomo/index.html >> logs/dashboard.log 2>&1 || true
+[ -d /var/www/fomo ] && python3 -m fomo_intel.dashboard /var/www/fomo/historico.html >> logs/dashboard.log 2>&1 || true
+[ -d /var/www/fomo ] && cmp -s dashboard/live.html /var/www/fomo/index.html || cp dashboard/live.html /var/www/fomo/index.html 2>/dev/null || true
 
 # ---- 3) publicar estado cada 5 min ----
 MIN=$(date +%M); [ "${FORCE_STATE:-0}" = "1" ] || [ $((10#$MIN % 5)) -eq 0 ] || exit 0
