@@ -1,44 +1,3 @@
-Oct 25 13:57:56 simplai-prod python3[498545]: <body>
-Oct 25 13:57:56 simplai-prod python3[498545]: <center><h1>502 Bad Gateway</h1></center>
-Oct 25 13:57:56 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
-Oct 25 13:57:56 simplai-prod python3[498545]: </body>
-Oct 25 13:57:56 simplai-prod python3[498545]: </html>
-Oct 25 13:57:56 simplai-prod python3[498545]: ; reconecto en 60s
-Oct 25 13:58:56 simplai-prod python3[498545]: 2026-10-25 13:58:56,563 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 13:58:56 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
-Oct 25 13:58:56 simplai-prod python3[498545]: <head><title>502 Bad Gateway</title></head>
-Oct 25 13:58:56 simplai-prod python3[498545]: <body>
-Oct 25 13:58:56 simplai-prod python3[498545]: <center><h1>502 Bad Gateway</h1></center>
-Oct 25 13:58:56 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
-Oct 25 13:58:56 simplai-prod python3[498545]: </body>
-Oct 25 13:58:56 simplai-prod python3[498545]: </html>
-Oct 25 13:58:56 simplai-prod python3[498545]: ; reconecto en 60s
-Oct 25 13:59:56 simplai-prod python3[498545]: 2026-10-25 13:59:56,925 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 13:59:56 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
-Oct 25 13:59:56 simplai-prod python3[498545]: <head><title>502 Bad Gateway</title></head>
-Oct 25 13:59:56 simplai-prod python3[498545]: <body>
-Oct 25 13:59:56 simplai-prod python3[498545]: <center><h1>502 Bad Gateway</h1></center>
-Oct 25 13:59:56 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
-Oct 25 13:59:56 simplai-prod python3[498545]: </body>
-Oct 25 13:59:56 simplai-prod python3[498545]: </html>
-Oct 25 13:59:56 simplai-prod python3[498545]: ; reconecto en 60s
-Oct 25 14:00:57 simplai-prod python3[498545]: 2026-10-25 14:00:57,283 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:00:57 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
-Oct 25 14:00:57 simplai-prod python3[498545]: <head><title>502 Bad Gateway</title></head>
-Oct 25 14:00:57 simplai-prod python3[498545]: <body>
-Oct 25 14:00:57 simplai-prod python3[498545]: <center><h1>502 Bad Gateway</h1></center>
-Oct 25 14:00:57 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
-Oct 25 14:00:57 simplai-prod python3[498545]: </body>
-Oct 25 14:00:57 simplai-prod python3[498545]: </html>
-Oct 25 14:00:57 simplai-prod python3[498545]: ; reconecto en 60s
-Oct 25 14:01:57 simplai-prod python3[498545]: 2026-10-25 14:01:57,638 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:01:57 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
-Oct 25 14:01:57 simplai-prod python3[498545]: <head><title>502 Bad Gateway</title></head>
-Oct 25 14:01:57 simplai-prod python3[498545]: <body>
-Oct 25 14:01:57 simplai-prod python3[498545]: <center><h1>502 Bad Gateway</h1></center>
-Oct 25 14:01:57 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
-Oct 25 14:01:57 simplai-prod python3[498545]: </body>
-Oct 25 14:01:57 simplai-prod python3[498545]: </html>
-Oct 25 14:01:57 simplai-prod python3[498545]: ; reconecto en 60s
-Oct 25 14:02:13 simplai-prod python3[498545]: 2026-10-25 14:02:13,343 INFO live: latido: stream=False tokens_vistos=87 seguidos=50 candidatos=0 abiertas=0 cerradas=0 st_requests=30 SOL=$101
-Oct 25 14:02:57 simplai-prod python3[498545]: 2026-10-25 14:02:57,999 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:02:57 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
-Oct 25 14:02:57 simplai-prod python3[498545]: <head><title>502 Bad Gateway</title></head>
 Oct 25 14:02:57 simplai-prod python3[498545]: <body>
 Oct 25 14:02:57 simplai-prod python3[498545]: <center><h1>502 Bad Gateway</h1></center>
 Oct 25 14:02:57 simplai-prod python3[498545]: <hr><center>nginx/1.22.1</center>
@@ -298,3 +257,44 @@ Oct 25 14:29:10 simplai-prod python3[517288]: <hr><center>nginx/1.22.1</center>
 Oct 25 14:29:10 simplai-prod python3[517288]: </body>
 Oct 25 14:29:10 simplai-prod python3[517288]: </html>
 Oct 25 14:29:10 simplai-prod python3[517288]: ; reconecto en 60s
+Oct 25 14:30:10 simplai-prod python3[517288]: 2026-10-25 14:30:10,513 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:30:10 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 25 14:30:10 simplai-prod python3[517288]: <head><title>502 Bad Gateway</title></head>
+Oct 25 14:30:10 simplai-prod python3[517288]: <body>
+Oct 25 14:30:10 simplai-prod python3[517288]: <center><h1>502 Bad Gateway</h1></center>
+Oct 25 14:30:10 simplai-prod python3[517288]: <hr><center>nginx/1.22.1</center>
+Oct 25 14:30:10 simplai-prod python3[517288]: </body>
+Oct 25 14:30:10 simplai-prod python3[517288]: </html>
+Oct 25 14:30:10 simplai-prod python3[517288]: ; reconecto en 60s
+Oct 25 14:31:04 simplai-prod python3[517288]: 2026-10-25 14:31:04,224 INFO live: latido: stream=False tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=2 SOL=$101
+Oct 25 14:31:10 simplai-prod python3[517288]: 2026-10-25 14:31:10,868 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:31:10 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 25 14:31:10 simplai-prod python3[517288]: <head><title>502 Bad Gateway</title></head>
+Oct 25 14:31:10 simplai-prod python3[517288]: <body>
+Oct 25 14:31:10 simplai-prod python3[517288]: <center><h1>502 Bad Gateway</h1></center>
+Oct 25 14:31:10 simplai-prod python3[517288]: <hr><center>nginx/1.22.1</center>
+Oct 25 14:31:10 simplai-prod python3[517288]: </body>
+Oct 25 14:31:10 simplai-prod python3[517288]: </html>
+Oct 25 14:31:10 simplai-prod python3[517288]: ; reconecto en 60s
+Oct 25 14:32:11 simplai-prod python3[517288]: 2026-10-25 14:32:11,222 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:32:11 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 25 14:32:11 simplai-prod python3[517288]: <head><title>502 Bad Gateway</title></head>
+Oct 25 14:32:11 simplai-prod python3[517288]: <body>
+Oct 25 14:32:11 simplai-prod python3[517288]: <center><h1>502 Bad Gateway</h1></center>
+Oct 25 14:32:11 simplai-prod python3[517288]: <hr><center>nginx/1.22.1</center>
+Oct 25 14:32:11 simplai-prod python3[517288]: </body>
+Oct 25 14:32:11 simplai-prod python3[517288]: </html>
+Oct 25 14:32:11 simplai-prod python3[517288]: ; reconecto en 60s
+Oct 25 14:33:11 simplai-prod python3[517288]: 2026-10-25 14:33:11,577 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:33:11 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 25 14:33:11 simplai-prod python3[517288]: <head><title>502 Bad Gateway</title></head>
+Oct 25 14:33:11 simplai-prod python3[517288]: <body>
+Oct 25 14:33:11 simplai-prod python3[517288]: <center><h1>502 Bad Gateway</h1></center>
+Oct 25 14:33:11 simplai-prod python3[517288]: <hr><center>nginx/1.22.1</center>
+Oct 25 14:33:11 simplai-prod python3[517288]: </body>
+Oct 25 14:33:11 simplai-prod python3[517288]: </html>
+Oct 25 14:33:11 simplai-prod python3[517288]: ; reconecto en 60s
+Oct 25 14:34:11 simplai-prod python3[517288]: 2026-10-25 14:34:11,935 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:34:11 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 25 14:34:11 simplai-prod python3[517288]: <head><title>502 Bad Gateway</title></head>
+Oct 25 14:34:11 simplai-prod python3[517288]: <body>
+Oct 25 14:34:11 simplai-prod python3[517288]: <center><h1>502 Bad Gateway</h1></center>
+Oct 25 14:34:11 simplai-prod python3[517288]: <hr><center>nginx/1.22.1</center>
+Oct 25 14:34:11 simplai-prod python3[517288]: </body>
+Oct 25 14:34:11 simplai-prod python3[517288]: </html>
+Oct 25 14:34:11 simplai-prod python3[517288]: ; reconecto en 60s
