@@ -1,0 +1,8 @@
+== 038_activar_fabricas_paper 2026-10-25T04:19:04Z ==
+fábricas: ['JDQKDrc1TQgBRvdFh56tkta5sYcDj1SoP52Eiu64rSrT', '4Lm2uqHgauVS1gzzNCd1F4FeGNwzUp6dXp5uqHxmrnDX', 'gVDXhoGbePACvSqN7CZBtQXFW9eyJwsgudPEwSydAkx', '9CV42qBfFa5gKjoj8KxZozNGUU2EC18EHgN7iKShZWzV', 'B32QbbdDAyhvUQzjcaM5j6ZVKwjCxAwGH5Xgvb9SJqnC']
+control: {'mode': 'paper', 'strategy': 'factory', 'size_usd': 10.0, 'max_open': 5}
+active
+Oct 25 04:19:04 simplai-prod python3[449801]: 2026-10-25 04:19:04,173 INFO live: arranca bot modo=paper estrategia=factory seguidos=0 tamaño=US$10 máx_abiertas=5 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 25 04:19:04 simplai-prod python3[449801]: 2026-10-25 04:19:04,537 INFO live.stream: stream conectado
+Oct 25 04:19:04 simplai-prod python3[449801]: 2026-10-25 04:19:04,639 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$102
+== exit 0 ==

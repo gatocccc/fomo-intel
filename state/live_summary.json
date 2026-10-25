@@ -1,254 +1,56 @@
 {
- "ts": 1792901690.3514154,
- "mode": "real",
+ "ts": 1792902004.820936,
+ "mode": "paper",
  "open": 0,
- "closed": 18,
- "wins": 6,
- "hit_rate": 0.333,
- "pnl_usd_total": -33.35,
+ "closed": 0,
+ "wins": 0,
+ "hit_rate": null,
+ "pnl_usd_total": 0,
  "pnl_usd_today": 0,
- "ret_per_usd": -3.254,
- "stop_reason": "STOP manual",
+ "ret_per_usd": 0,
+ "stop_reason": null,
  "positions": [],
- "last_closed": [
-  {
-   "ts": 1792876163.1946151,
-   "day": "2026-10-24",
-   "mint": "4NJGurVP7NYgJzhgNoW19Q9x5UNhvGaFiE8WBRxzpump",
-   "symbol": "XDD",
-   "opened_ts": 1792871709.8018377,
-   "hold_min": 74.2,
-   "sol_in": 0.101504794,
-   "sol_out": 0.126408524,
-   "pnl_sol": 0.024904,
-   "pnl_usd": 2.52,
-   "ret": 0.2453,
-   "peak_mult": 1.84,
-   "exits": [
-    "trailing"
-   ],
-   "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792872557.518199,
-   "day": "2026-10-24",
-   "mint": "GA7aZSwim7VXWhqcj27W5T6V9B7vq2rg2PGvZBnrpump",
-   "symbol": "HNITE",
-   "opened_ts": 1792872248.3013945,
-   "hold_min": 5.2,
-   "sol_in": 0.101463589,
-   "sol_out": 0.117696568,
-   "pnl_sol": 0.016233,
-   "pnl_usd": 1.64,
-   "ret": 0.16,
-   "peak_mult": 1.57,
-   "exits": [
-    "trailing"
-   ],
-   "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792871727.3858032,
-   "day": "2026-10-24",
-   "mint": "GMBHjdLsSCnZd2ttZm4MmRG9cVvYz4xqmWRmXhEcpump",
-   "symbol": "Ethan",
-   "opened_ts": 1792871529.024023,
-   "hold_min": 3.3,
-   "sol_in": 0.10153595,
-   "sol_out": 0.09099091,
-   "pnl_sol": -0.010545,
-   "pnl_usd": -1.06,
-   "ret": -0.1039,
-   "peak_mult": 1.29,
-   "exits": [
-    "trailing"
-   ],
-   "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792871104.6647193,
-   "day": "2026-10-24",
-   "mint": "3D1i58wDEtoft9r8bdi3yQBPgMLnEB6gsAUWMxdFpump",
-   "symbol": "CRIMINU",
-   "opened_ts": 1792870988.4284847,
-   "hold_min": 1.9,
-   "sol_in": 0.101458565,
-   "sol_out": 0.039702565,
-   "pnl_sol": -0.061756,
-   "pnl_usd": -6.24,
-   "ret": -0.6087,
-   "peak_mult": 1.0,
-   "exits": [
-    "stop"
-   ],
-   "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792870090.9382627,
-   "day": "2026-10-24",
-   "mint": "ZRFG4GJiLJLGARE88Cr84vkhWq3a4LbiuZjgpDopump",
-   "symbol": "CAPITAL",
-   "opened_ts": 1792870028.6384437,
-   "hold_min": 1.0,
-   "sol_in": 0.101442485,
-   "sol_out": 0.0196148,
-   "pnl_sol": -0.081828,
-   "pnl_usd": -8.27,
-   "ret": -0.8066,
-   "peak_mult": 1.31,
-   "exits": [
-    "stop"
-   ],
-   "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792869990.0264363,
-   "day": "2026-10-24",
-   "mint": "EfnpNx4cJbgKVqxcsTud7SjaqSs152H2xcixZ3Vapump",
-   "symbol": "tgcat",
-   "opened_ts": 1792869973.9834964,
-   "hold_min": 0.3,
-   "sol_in": 0.099572385,
-   "sol_out": 0.065375864,
-   "pnl_sol": -0.034197,
-   "pnl_usd": -3.46,
-   "ret": -0.3434,
-   "peak_mult": 1.0,
-   "exits": [
-    "stop"
-   ],
-   "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792869236.0272162,
-   "day": "2026-10-24",
-   "mint": "7EjzspJYNVZ9G1BqPcdTDu5fwz83sXPrte6P3m6pump",
-   "symbol": "HENRY",
-   "opened_ts": 1792869189.1792316,
-   "hold_min": 0.8,
-   "sol_in": 0.10145756,
-   "sol_out": 0.065297607,
-   "pnl_sol": -0.03616,
-   "pnl_usd": -3.65,
-   "ret": -0.3564,
-   "peak_mult": 1.02,
-   "exits": [
-    "stop"
-   ],
-   "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792867575.7965696,
-   "day": "2026-10-24",
-   "mint": "7tbv65vYhZHUbiG2iwAstrr59uqYjrXXg38xmqPpump",
-   "symbol": "CONTRAIL",
-   "opened_ts": 1792866490.4408677,
-   "hold_min": 18.1,
-   "sol_in": 0.10159022,
-   "sol_out": 0.019320202,
-   "pnl_sol": -0.08227,
-   "pnl_usd": -8.3,
-   "ret": -0.8098,
-   "peak_mult": 2.42,
-   "exits": [
-    "stop"
-   ],
-   "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792867220.8643894,
-   "day": "2026-10-24",
-   "mint": "rfzih6V5SPaWCmcphqBpWkU2WQAJpHtpw5fFAD5pump",
-   "symbol": "AVATARS",
-   "opened_ts": 1792866908.3078332,
-   "hold_min": 5.2,
-   "sol_in": 0.10151384,
-   "sol_out": 0.105500074,
-   "pnl_sol": 0.003986,
-   "pnl_usd": 0.4,
-   "ret": 0.0393,
-   "peak_mult": 1.29,
-   "exits": [
-    "trailing"
-   ],
-   "leftover_tokens": 0.0
-  },
-  {
-   "ts": 1792866871.3521314,
-   "day": "2026-10-24",
-   "mint": "9rqfbrRbC4UxWYF67imQ85QVyL6sNMLRTSRKcihpump",
-   "symbol": "HUMANITY",
-   "opened_ts": 1792866610.72888,
-   "hold_min": 4.3,
-   "sol_in": 0.10159022,
-   "sol_out": 0.069790582,
-   "pnl_sol": -0.0318,
-   "pnl_usd": -3.21,
-   "ret": -0.313,
-   "peak_mult": 1.51,
-   "exits": [
-    "stop"
-   ],
-   "leftover_tokens": 0.0
-  }
- ],
+ "last_closed": [],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.2689,
- "sol_usd": 102.41775592583298,
+ "wallet_sol": null,
+ "sol_usd": 102.42770139115304,
  "stream_connected": true,
- "stream_msgs": 9281,
- "tokens_seen": 8258,
- "tokens_tracked": 194,
+ "stream_msgs": 7,
+ "tokens_seen": 6,
+ "tokens_tracked": 6,
  "candidates": [],
- "strategy": "rules_st",
+ "strategy": "factory",
  "followed_wallets": 0,
+ "factories": 5,
+ "factory_pending": 0,
  "account_trades": 0,
  "helius": null,
  "follow_buys_seen": 0,
- "st_requests": 1613,
- "stream_errors": [
-  "19:35:02 Connection to remote host was lost.",
-  "19:35:04 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 19:35:04 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
-  "23:48:05 Connection to remote host was lost.",
-  "23:48:08 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 24 Oct 2026 23:48:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
- ],
- "rules_st": {
-  "multi_calls": 556,
-  "prefilter_pass": 217,
-  "full_eval": 217,
-  "candidates": 53,
-  "bought": 7,
-  "pending_t3": 0,
-  "evaluated": 8223
- },
+ "st_requests": 1,
+ "stream_errors": [],
+ "rules_st": null,
  "stream_counts": {
-  "otros": 17,
-  "create": 8396,
-  "buy": 505,
-  "sell": 363
+  "otros": 1,
+  "create": 6
  },
  "stream_samples": [
-  "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to token creation events.\"}"
  ],
- "stream_trades": 868,
- "stream_cost_sol_est": 0.0009,
+ "stream_trades": 0,
+ "stream_cost_sol_est": 0.0,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
-  "mode": "real",
-  "strategy": "rules_st",
+  "mode": "paper",
+  "strategy": "factory",
   "size_usd": 10.0,
-  "max_open": 3,
+  "max_open": 5,
   "daily_loss_usd": 50.0,
   "total_loss_usd": 150.0,
-  "max_trades": 30,
-  "max_slippage_pct": 8.0,
-  "stop": 0.3,
-  "trail": 0.2,
-  "tp_mult": 2.0,
-  "max_hold_min": 360
+  "max_trades": 1000,
+  "max_slippage_pct": 15.0,
+  "stop": 0.5,
+  "trail": 0.99,
+  "tp_mult": 1.5,
+  "max_hold_min": 3
  }
 }
