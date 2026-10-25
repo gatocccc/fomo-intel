@@ -1,4 +1,3 @@
-Oct 24 18:26:23 simplai-prod python3[380576]: 2026-10-24 18:26:23,532 WARNING live: compra HUMANITY falló: sin confirmación en 75 s
 Oct 24 18:27:11 simplai-prod python3[380576]: 2026-10-24 18:27:11,527 INFO live.rules_st: CANDIDATO v1.2 CONTRAIL move=5.7x compradores=100 vol=$12577 snipers=25 -> confirma a T3
 Oct 24 18:28:10 simplai-prod python3[380576]: 2026-10-24 18:28:10,442 INFO live: COMPRA v1.2 CONTRAIL 0.1016 SOL (US$10) a 1.995e-07 slippage=+23.6% impacto=0.0% lat=4.9s
 Oct 24 18:29:18 simplai-prod python3[380576]: 2026-10-24 18:29:18,225 INFO live: latido: stream=True tokens_vistos=2833 seguidos=332 candidatos=0 abiertas=1 cerradas=8 st_requests=34 SOL=$101
@@ -298,3 +297,4 @@ Oct 25 01:03:49 simplai-prod python3[393883]: 2026-10-25 01:03:49,267 INFO live:
 Oct 25 01:08:49 simplai-prod python3[393883]: 2026-10-25 01:08:49,476 INFO live: latido: stream=True tokens_vistos=5851 seguidos=214 candidatos=0 abiertas=0 cerradas=18 st_requests=317 SOL=$102
 Oct 25 01:13:49 simplai-prod python3[393883]: 2026-10-25 01:13:49,714 INFO live: latido: stream=True tokens_vistos=5952 seguidos=260 candidatos=0 abiertas=0 cerradas=18 st_requests=318 SOL=$102
 Oct 25 01:18:50 simplai-prod python3[393883]: 2026-10-25 01:18:50,466 INFO live: latido: stream=True tokens_vistos=6021 seguidos=277 candidatos=0 abiertas=0 cerradas=18 st_requests=319 SOL=$102
+Oct 25 01:23:51 simplai-prod python3[393883]: 2026-10-25 01:23:51,312 INFO live: latido: stream=True tokens_vistos=6112 seguidos=324 candidatos=0 abiertas=0 cerradas=18 st_requests=320 SOL=$102
