@@ -56,6 +56,7 @@ class Bot:
         self.factory_pending: dict[str, dict] = {}   # mint -> {created, creator, symbol}
         self._factory_seen: set[str] = set()
         self._factory_sold: dict[str, float] = {}
+        self._create_slots: dict[str, int] = {}
         if self.p.strategy == "factory":
             self._load_factories()
             self.p.stop, self.p.trail, self.p.tp_mult, self.p.tp_frac, self.p.max_hold_min = self.p.factory_stop, 0.99, self.p.factory_tp, 1.0, max(1, self.p.factory_max_hold_s // 60)
@@ -156,7 +157,10 @@ class Bot:
                     created = float(c.get("block_time") or c["seen_ts"])
                     # precio en la curva DESPUÉS de la compra inicial de la fábrica (reservas virtuales 30 SOL / 1.073e9 tokens)
                     isol, itok = float(c.get("initial_sol") or 0), float(c.get("initial_tokens") or 0)
-                    px = (30.0 + isol) / (1_073_000_000.0 - itok) if 0 < itok < 1_000_000_000 else 0.0
+                    px = c.get("price_after") or ((30.0 + isol) / (1_073_000_000.0 - itok) if 0 < itok < 1_000_000_000 else 0.0)
+                    if c.get("fast"):
+                        created = c["seen_ts"]
+                    self._create_slots[c["mint"]] = c.get("slot")
                     with self.stream.lock:
                         self.stream.tokens[c["mint"]] = TokenState(mint=c["mint"], symbol=c["mint"][:6], name="", creator=c["creator"], created_ts=created,
                                                                    base_price=base, last_price=px, last_ts=time.time() if px else 0.0)
@@ -229,6 +233,10 @@ class Bot:
             pos.peak_price = fill.price
             self.stream.pin(mint, pos.symbol, fill.price)
             d["entry_vs_base"] = round(fill.price / st.base_price, 2) if st.base_price else None
+            cs, ls = self._create_slots.get(mint), (fill.raw.get("fill") or {}).get("slot")
+            d["create_slot"], d["land_slot"] = cs, ls
+            d["slot_delta"] = (ls - cs) if (cs and ls) else None
+            d["entry_vs_ref"] = round(fill.price / ref, 3) if ref else None
             self.port.log_signal(d, "COMPRADO")
             log.info("COMPRA fábrica %s a %.3e (%.2fx de la base) %.1f s tras la creación, slippage %+.1f%%", pos.symbol, fill.price, d["entry_vs_base"] or 0, age, fill.slippage_pct)
 
@@ -512,7 +520,7 @@ class Bot:
                            "tokens_seen": self.stream.creates, "tokens_tracked": len(self.stream.tokens),
                            "candidates": [f.symbol for f in self.candidates.values()],
                            "strategy": self.p.strategy, "followed_wallets": len(self.follow), "factories": len(self.factories), "factory_pending": len(self.factory_pending), "account_trades": self.stream.account_trades,
-                           "helius": {"connected": self.helius.connected, "notifications": self.helius.notifications, "parsed": self.helius.parsed, "skipped": self.helius.skipped, "subs": len(self.helius.sub_to_wallet), "errors": list(self.helius.errors)[-3:]} if self.helius else None,
+                           "helius": {"connected": self.helius.connected, "notifications": self.helius.notifications, "parsed": self.helius.parsed, "skipped": self.helius.skipped, "fast_creates": self.helius.fast_creates, "subs": len(self.helius.sub_to_wallet), "errors": list(self.helius.errors)[-3:]} if self.helius else None,
                            "follow_buys_seen": len(self.follow_buys),
                            "st_requests": self.st.requests_made + (self.rules_st.requests_made() if self.rules_st else 0), "stream_errors": list(self.stream.errors)[-5:],
                            "rules_st": ({**self.rules_st.stats, "pending_t3": len(self.rules_st.pending_t3), "evaluated": len(self.rules_st.evaluated)} if self.rules_st else None),

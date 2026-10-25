@@ -191,6 +191,13 @@ class RealExecutor:
                 f.error = f"cotización: {str(e)[:120]} | pumpportal: {str(e2)[:120]}"; return f
         try:
             signed = self._sign(txn_b64, version)
+            # además del RPC, mandar la misma transacción firmada al block engine de Jito (en paralelo, sin esperar)
+            try:
+                import threading
+                threading.Thread(target=lambda: requests.post("https://mainnet.block-engine.jito.wtf/api/v1/transactions",
+                                 json={"jsonrpc": "2.0", "id": 1, "method": "sendTransaction", "params": [signed, {"encoding": "base64"}]}, timeout=5), daemon=True).start()
+            except Exception:  # noqa: BLE001
+                pass
             sig = self.rpc.send_raw(signed)
             f.sig = sig
             st = self.rpc.wait_confirmed(sig, timeout=75)

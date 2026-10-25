@@ -51,6 +51,52 @@ def parse_create(tx: dict, wallet: str) -> dict | None:
 WSOL_OWNERS_IGNORE = set()
 
 
+def _b58(b: bytes) -> str:
+    from solders.pubkey import Pubkey
+    return str(Pubkey.from_bytes(bytes(b)))
+
+
+def decode_create_from_logs(logs: list[str], wallet: str) -> dict | None:
+    """Camino rápido: decodifica el CreateEvent y el TradeEvent (compra inicial) de pump.fun directamente de los
+    logs ("Program data: <base64>") de la notificación, sin pedir la transacción. Devuelve
+    {mint, price_after (SOL/token), vsol, vtok, initial_sol, initial_tokens} o None."""
+    import base64, struct
+    blobs = []
+    for l in logs or []:
+        if l.startswith("Program data: "):
+            try: blobs.append(base64.b64decode(l[len("Program data: "):]))
+            except Exception: pass  # noqa: BLE001
+    mint_b = None
+    for b in blobs:
+        try:
+            o = 8; strs = []
+            for _ in range(3):
+                n = struct.unpack_from("<I", b, o)[0]; o += 4
+                if n > 400: raise ValueError("no es CreateEvent")
+                strs.append(b[o:o+n]); o += n
+            m = b[o:o+32]; o += 32
+            if len(m) == 32 and _b58(m).endswith("pump"):
+                mint_b = m; break
+        except Exception:  # noqa: BLE001
+            continue
+    if not mint_b:
+        return None
+    out = {"mint": _b58(mint_b), "price_after": 0.0, "vsol": 0, "vtok": 0, "initial_sol": 0.0, "initial_tokens": 0.0}
+    for b in blobs:
+        if len(b) >= 113 and b[8:40] == mint_b:
+            try:
+                sol_amt, tok_amt = struct.unpack_from("<QQ", b, 40); is_buy = b[56] == 1
+                vsol, vtok = struct.unpack_from("<QQ", b, 97)
+                if is_buy and vsol > 0 and vtok > 0:
+                    out.update({"vsol": vsol, "vtok": vtok, "price_after": (vsol / 1e9) / (vtok / 1e6),
+                                "initial_sol": sol_amt / 1e9, "initial_tokens": tok_amt / 1e6})
+            except Exception:  # noqa: BLE001
+                pass
+    if out["price_after"] <= 0:
+        out["price_after"] = 30.0 / 1_073_000_000.0
+    return out
+
+
 def parse_swap(tx: dict, wallet: str) -> dict | None:
     """Devuelve {side, mint, sol, tokens, price} si la tx es un swap SOL<->token de `wallet`."""
     meta = tx.get("meta") or {}
@@ -87,7 +133,7 @@ def parse_swap(tx: dict, wallet: str) -> dict | None:
 
 
 class HeliusWatch(threading.Thread):
-    def __init__(self, api_key: str, wallets: list[str]):
+    def __init__(self, api_key: str, wallets: list[str], commitment: str = "processed"):
         super().__init__(daemon=True, name="heliuswatch")
         self.key = api_key
         self.ws_url = f"wss://mainnet.helius-rpc.com/?api-key={api_key}"
@@ -105,6 +151,8 @@ class HeliusWatch(threading.Thread):
         self._stop = threading.Event()
         self.ws = None
         self.seen: deque = deque(maxlen=5000)
+        self.commitment = commitment
+        self.fast_creates = 0
 
     def stop(self) -> None:
         self._stop.set()
@@ -161,7 +209,7 @@ class HeliusWatch(threading.Thread):
                 self.sub_to_wallet.clear(); pending = {}
                 for i, w in enumerate(self.wallets):
                     rid = 1000 + i
-                    self.ws.send(json.dumps({"jsonrpc": "2.0", "id": rid, "method": "logsSubscribe", "params": [{"mentions": [w]}, {"commitment": "confirmed"}]}))
+                    self.ws.send(json.dumps({"jsonrpc": "2.0", "id": rid, "method": "logsSubscribe", "params": [{"mentions": [w]}, {"commitment": self.commitment}]}))
                     pending[rid] = w
                 log.info("helius conectado; suscribiendo %d billeteras", len(self.wallets))
                 last_ping = time.time()
@@ -186,6 +234,15 @@ class HeliusWatch(threading.Thread):
                         p = m["params"]; sub = p.get("subscription"); val = (p.get("result") or {}).get("value") or {}
                         sig = val.get("signature"); wallet = self.sub_to_wallet.get(sub)
                         logs = " ".join(val.get("logs") or [])
+                        # camino rápido para creaciones: decodificar de los logs, sin esperar ni pedir la tx
+                        if sig and wallet and not val.get("err") and "Instruction: Create" in logs and sig not in self.seen:
+                            fc = decode_create_from_logs(val.get("logs") or [], wallet)
+                            if fc:
+                                self.seen.append(sig); self.fast_creates += 1
+                                slot = ((p.get("result") or {}).get("context") or {}).get("slot")
+                                self.creates.append({"ts": time.time(), "seen_ts": time.time(), "block_time": None, "creator": wallet, "sig": sig, "slot": slot, "fast": True, **fc})
+                                log.info("HELIUS create RÁPIDO %s… -> %s slot %s precio %.3e", wallet[:6], fc["mint"][:8], slot, fc["price_after"])
+                                continue
                         # solo bajar la tx si los logs muestran creación o swap (las fábricas mandan cientos de transferencias:
                         # bajarlas todas agota la cuota de Helius y devuelve errores)
                         relevant = any(k in logs for k in ("Instruction: Create", "Instruction: Buy", "Instruction: Sell", "Swap", "swap"))
