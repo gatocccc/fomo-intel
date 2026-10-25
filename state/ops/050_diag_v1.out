@@ -1,0 +1,10 @@
+== 050_diag_v1 2026-10-25T19:54:03Z ==
+versión: 1 | firmantes: ['B32QbbdD', '4NWSwmbo'] | fábrica firma: True
+   instrucciones: ['Program log: Instruction: CreateV2', 'Program log: MetadataPointerInstruction::Initialize', 'Program log: Instruction: InitializeMint2', 'Program log: Instruction: GetAccountDataSize', 'Program log: Instruction: InitializeImmutableOwner', 'Program log: Instruction: InitializeAccount3']
+   parse_create: {'mint': '4NWSwmboxz1uhdYsRwtJtedALfRpzYvqUasSt6AEpump', 'initial_tokens': 153285714.285714, 'initial_sol': 5.072208519999999}
+versión: 1 | firmantes: ['gVDXhoGb', 'rjALAN7k'] | fábrica firma: True
+   instrucciones: ['Program log: Instruction: CreateV2', 'Program log: MetadataPointerInstruction::Initialize', 'Program log: Instruction: InitializeMint2', 'Program log: Instruction: GetAccountDataSize', 'Program log: Instruction: InitializeImmutableOwner', 'Program log: Instruction: InitializeAccount3']
+   parse_create: {'mint': 'rjALAN7kNCRyWNg51sHgEfhn4raev8kEcnP2kEkpump', 'initial_tokens': 377589586.720861, 'initial_sol': 18.18837336}
+solders 0.29.0
+VersionedTransaction ok; atributos de mensaje: ['Message', 'MessageAddressTableLookup', 'MessageHeader', 'MessageV0', 'MessageV1', 'VersionedMessage']
+== exit 0 ==
