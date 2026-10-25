@@ -1,13 +1,3 @@
-Oct 25 15:08:23 simplai-prod python3[517288]: </html>
-Oct 25 15:08:23 simplai-prod python3[517288]: ; reconecto en 60s
-Oct 25 15:09:24 simplai-prod python3[517288]: 2026-10-25 15:09:24,268 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 15:09:24 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
-Oct 25 15:09:24 simplai-prod python3[517288]: <head><title>502 Bad Gateway</title></head>
-Oct 25 15:09:24 simplai-prod python3[517288]: <body>
-Oct 25 15:09:24 simplai-prod python3[517288]: <center><h1>502 Bad Gateway</h1></center>
-Oct 25 15:09:24 simplai-prod python3[517288]: <hr><center>nginx/1.22.1</center>
-Oct 25 15:09:24 simplai-prod python3[517288]: </body>
-Oct 25 15:09:24 simplai-prod python3[517288]: </html>
-Oct 25 15:09:24 simplai-prod python3[517288]: ; reconecto en 60s
 Oct 25 15:10:24 simplai-prod python3[517288]: 2026-10-25 15:10:24,624 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 15:10:24 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
 Oct 25 15:10:24 simplai-prod python3[517288]: <head><title>502 Bad Gateway</title></head>
 Oct 25 15:10:24 simplai-prod python3[517288]: <body>
@@ -298,3 +288,13 @@ Oct 25 18:24:04 simplai-prod python3[545651]: 2026-10-25 18:24:04,714 INFO live:
 Oct 25 18:29:04 simplai-prod python3[545651]: 2026-10-25 18:29:04,330 INFO live: latido: stream=True tokens_vistos=52 seguidos=52 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$102
 Oct 25 18:34:04 simplai-prod python3[545651]: 2026-10-25 18:34:04,478 INFO live: latido: stream=True tokens_vistos=114 seguidos=82 candidatos=0 abiertas=0 cerradas=0 st_requests=2 SOL=$102
 Oct 25 18:39:04 simplai-prod python3[545651]: 2026-10-25 18:39:04,755 INFO live: latido: stream=True tokens_vistos=179 seguidos=94 candidatos=0 abiertas=0 cerradas=0 st_requests=3 SOL=$102
+Oct 25 18:43:03 simplai-prod systemd[1]: Stopping fomo-live.service - FOMO Intel - bot en vivo...
+Oct 25 18:43:03 simplai-prod python3[545651]: 2026-10-25 18:43:03,478 INFO live: apagando...
+Oct 25 18:43:04 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
+Oct 25 18:43:04 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
+Oct 25 18:43:04 simplai-prod systemd[1]: fomo-live.service: Consumed 23.371s CPU time.
+Oct 25 18:43:04 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
+Oct 25 18:43:04 simplai-prod python3[547851]: 2026-10-25 18:43:04,276 INFO live: arranca bot modo=real estrategia=factory seguidos=0 tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 25 18:43:04 simplai-prod python3[547851]: 2026-10-25 18:43:04,364 INFO live.helius: helius conectado; suscribiendo 3 billeteras
+Oct 25 18:43:04 simplai-prod python3[547851]: 2026-10-25 18:43:04,680 INFO live.stream: stream conectado
+Oct 25 18:43:04 simplai-prod python3[547851]: 2026-10-25 18:43:04,770 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$102

@@ -1,0 +1,5 @@
+== 046_sesion_real 2026-10-25T18:43:04Z ==
+dashboard → /var/www/fomo/historico.html
+active
+{"now": 1792953786.4610856, "bot_ts": 1792953784.7642515, "mode": "real", "strategy": "factory", "session_start": 1792951145.0, "start_sol": 1.2689, "wallet_sol": 1.2689, "sol_usd": 101.88752028045405, "stop_reason": null, "stop_file": false, "panic": false, "stream_ok": true, "helius_ok": true, "factories": 3, "positions": [], "closed": [], "n_closed": 0, "n_wins": 0, "pnl_usd": 0, "n_buys": 0, "avg_slip": null, "launches_seen": 0, "feed": [], "rules": {"size_usd": 10.0, "max_open": 3, "daily_loss_usd": 50.0, "total_loss_usd": 120.0, "factory_tp": 3.0, "factory_max_hold_s": 180, "factory_stop
+== exit 0 ==
