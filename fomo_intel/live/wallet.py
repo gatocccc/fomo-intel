@@ -71,7 +71,7 @@ class Rpc:
 
     def fill_details(self, sig: str, owner: str, mint: str) -> dict:
         """SOL y tokens que realmente entraron/salieron de la billetera en esa tx."""
-        tx = self.call("getTransaction", [sig, {"encoding": "jsonParsed", "maxSupportedTransactionVersion": 0, "commitment": "confirmed"}])
+        tx = self.call("getTransaction", [sig, {"encoding": "jsonParsed", "maxSupportedTransactionVersion": 1, "commitment": "confirmed"}])
         if not tx:
             return {}
         meta = tx["meta"]; keys = tx["transaction"]["message"]["accountKeys"]

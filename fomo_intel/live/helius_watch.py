@@ -118,7 +118,7 @@ class HeliusWatch(threading.Thread):
         for i in range(6):
             try:
                 r = requests.post(self.rpc_url, json={"jsonrpc": "2.0", "id": 1, "method": "getTransaction",
-                                                      "params": [sig, {"encoding": "jsonParsed", "maxSupportedTransactionVersion": 0, "commitment": "confirmed"}]}, timeout=15)
+                                                      "params": [sig, {"encoding": "jsonParsed", "maxSupportedTransactionVersion": 1, "commitment": "confirmed"}]}, timeout=15)
                 res = r.json().get("result")
                 if res:
                     return res
