@@ -1,16 +1,34 @@
 {
- "ts": 1792970101.8293974,
+ "ts": 1792970400.8654385,
  "mode": "real",
  "open": 0,
- "closed": 1,
+ "closed": 2,
  "wins": 1,
- "hit_rate": 1.0,
- "pnl_usd_total": 5.16,
- "pnl_usd_today": 5.16,
- "ret_per_usd": 0.501,
+ "hit_rate": 0.5,
+ "pnl_usd_total": 4.75,
+ "pnl_usd_today": 4.75,
+ "ret_per_usd": 0.207,
  "stop_reason": null,
  "positions": [],
  "last_closed": [
+  {
+   "ts": 1792970321.4194324,
+   "day": "2026-10-25",
+   "mint": "45m4ZFox2Cp8duDbQLecGWunN4GwDSo8jogR64RDpump",
+   "symbol": "45m4ZF",
+   "opened_ts": 1792970314.9770272,
+   "hold_min": 0.1,
+   "sol_in": 0.013610705,
+   "sol_out": 0.009612453,
+   "pnl_sol": -0.003998,
+   "pnl_usd": -0.41,
+   "ret": -0.2938,
+   "peak_mult": 1.0,
+   "exits": [
+    "f\u00e1brica vendi\u00f3"
+   ],
+   "leftover_tokens": 0.0
+  },
   {
    "ts": 1792958383.6827867,
    "day": "2026-10-25",
@@ -31,12 +49,12 @@
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.3136,
- "sol_usd": 101.49264889929664,
+ "wallet_sol": 1.3096,
+ "sol_usd": 101.49536034894497,
  "stream_connected": true,
- "stream_msgs": 183,
- "tokens_seen": 111,
- "tokens_tracked": 66,
+ "stream_msgs": 523,
+ "tokens_seen": 163,
+ "tokens_tracked": 77,
  "candidates": [],
  "strategy": "factory",
  "followed_wallets": 0,
@@ -45,31 +63,32 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 5466,
-  "parsed": 17,
-  "skipped": 5446,
-  "fast_creates": 1,
+  "notifications": 10917,
+  "parsed": 38,
+  "skipped": 10875,
+  "fast_creates": 2,
   "subs": 2,
   "errors": []
  },
  "follow_buys_seen": 0,
- "st_requests": 3,
+ "st_requests": 4,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
-  "otros": 4,
-  "create": 119,
-  "sell": 23,
-  "buy": 37
+  "otros": 5,
+  "create": 175,
+  "sell": 162,
+  "buy": 181
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}"
+  "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 60,
- "stream_cost_sol_est": 0.0001,
+ "stream_trades": 343,
+ "stream_cost_sol_est": 0.0003,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "real",
