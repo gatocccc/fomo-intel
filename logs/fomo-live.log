@@ -1,4 +1,3 @@
-Oct 24 19:38:12 simplai-prod python3[393883]: 2026-10-24 19:38:12,882 INFO live: latido: stream=True tokens_vistos=808 seguidos=320 candidatos=0 abiertas=0 cerradas=14 st_requests=17 SOL=$101
 Oct 24 19:39:08 simplai-prod python3[393883]: 2026-10-24 19:39:08,520 INFO live.rules_st: CANDIDATO v1.2 GYAT move=4.2x compradores=97 vol=$15475 snipers=5 -> confirma a T3
 Oct 24 19:42:10 simplai-prod python3[393883]: 2026-10-24 19:42:10,038 INFO live.rules_st: CANDIDATO v1.2 CRIMINU move=3.1x compradores=71 vol=$5407 snipers=21 -> confirma a T3
 Oct 24 19:43:08 simplai-prod python3[393883]: 2026-10-24 19:43:08,429 INFO live: COMPRA v1.2 CRIMINU 0.1015 SOL (US$10) a 8.578e-08 slippage=+3.8% impacto=1.2% lat=2.6s
@@ -298,3 +297,4 @@ Oct 25 09:34:24 simplai-prod python3[449801]: 2026-10-25 09:34:24,742 INFO live:
 Oct 25 09:39:25 simplai-prod python3[449801]: 2026-10-25 09:39:25,018 INFO live: latido: stream=True tokens_vistos=2878 seguidos=53 candidatos=0 abiertas=0 cerradas=0 st_requests=64 SOL=$100
 Oct 25 09:44:25 simplai-prod python3[449801]: 2026-10-25 09:44:25,554 INFO live: latido: stream=True tokens_vistos=2918 seguidos=56 candidatos=0 abiertas=0 cerradas=0 st_requests=65 SOL=$100
 Oct 25 09:49:25 simplai-prod python3[449801]: 2026-10-25 09:49:25,780 INFO live: latido: stream=True tokens_vistos=2973 seguidos=80 candidatos=0 abiertas=0 cerradas=0 st_requests=66 SOL=$101
+Oct 25 09:54:26 simplai-prod python3[449801]: 2026-10-25 09:54:26,376 INFO live: latido: stream=True tokens_vistos=3006 seguidos=56 candidatos=0 abiertas=0 cerradas=0 st_requests=67 SOL=$101
