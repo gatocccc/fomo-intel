@@ -1,16 +1,3 @@
-Oct 25 15:20:28 simplai-prod python3[517288]: <head><title>502 Bad Gateway</title></head>
-Oct 25 15:20:28 simplai-prod python3[517288]: <body>
-Oct 25 15:20:28 simplai-prod python3[517288]: <center><h1>502 Bad Gateway</h1></center>
-Oct 25 15:20:28 simplai-prod python3[517288]: <hr><center>nginx/1.22.1</center>
-Oct 25 15:20:28 simplai-prod python3[517288]: </body>
-Oct 25 15:20:28 simplai-prod python3[517288]: </html>
-Oct 25 15:20:28 simplai-prod python3[517288]: ; reconecto en 60s
-Oct 25 15:21:07 simplai-prod python3[517288]: 2026-10-25 15:21:07,225 INFO live: latido: stream=False tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=12 SOL=$101
-Oct 25 15:21:28 simplai-prod python3[517288]: 2026-10-25 15:21:28,479 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 15:21:28 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
-Oct 25 15:21:28 simplai-prod python3[517288]: <head><title>502 Bad Gateway</title></head>
-Oct 25 15:21:28 simplai-prod python3[517288]: <body>
-Oct 25 15:21:28 simplai-prod python3[517288]: <center><h1>502 Bad Gateway</h1></center>
-Oct 25 15:21:28 simplai-prod python3[517288]: <hr><center>nginx/1.22.1</center>
 Oct 25 15:21:28 simplai-prod python3[517288]: </body>
 Oct 25 15:21:28 simplai-prod python3[517288]: </html>
 Oct 25 15:21:28 simplai-prod python3[517288]: ; reconecto en 60s
@@ -298,3 +285,16 @@ Oct 25 20:19:05 simplai-prod python3[557562]: 2026-10-25 20:19:05,511 INFO live:
 Oct 25 20:22:20 simplai-prod python3[557562]: 2026-10-25 20:22:20,859 INFO live.helius: HELIUS B32Qbb buy 9nxpmY1s 0.2600 SOL @ 8.257e-08 (lat 0.1s)
 Oct 25 20:23:16 simplai-prod python3[557562]: 2026-10-25 20:23:16,823 INFO live.helius: HELIUS B32Qbb sell 9nxpmY1s 1.2837 SOL @ 6.563e-08 (lat 0.1s)
 Oct 25 20:24:06 simplai-prod python3[557562]: 2026-10-25 20:24:06,209 INFO live: latido: stream=True tokens_vistos=301 seguidos=94 candidatos=0 abiertas=0 cerradas=1 st_requests=8 SOL=$102
+Oct 25 20:28:43 simplai-prod python3[557562]: 2026-10-25 20:28:43,636 INFO live.helius: HELIUS B32Qbb buy Xs8S1uUs 5.0025 SOL @ 4.167e+00 (lat 0.1s)
+Oct 25 20:28:43 simplai-prod python3[557562]: 2026-10-25 20:28:43,724 INFO live.helius: HELIUS create B32Qbb… -> 59cBtfvM (lat 0.2s)
+Oct 25 20:28:44 simplai-prod python3[557562]: 2026-10-25 20:28:44,114 INFO live.helius: HELIUS create B32Qbb… -> Xs8S1uUs (lat 0.1s)
+Oct 25 20:28:44 simplai-prod python3[557562]: 2026-10-25 20:28:44,287 INFO live: FABRICA (Helius) B32Qbb… creó 59cBtfvM
+Oct 25 20:28:44 simplai-prod python3[557562]: 2026-10-25 20:28:44,287 INFO live: FABRICA (Helius) B32Qbb… creó Xs8S1uUs
+Oct 25 20:28:44 simplai-prod python3[557562]: 2026-10-25 20:28:44,288 INFO live: FABRICA B32Qbb… creó 59cBtf (59cBtfvM) -> entrando
+Oct 25 20:28:44 simplai-prod python3[557562]: 2026-10-25 20:28:44,288 INFO live: FABRICA B32Qbb… creó Xs8S1u (Xs8S1uUs) -> entrando
+Oct 25 20:28:45 simplai-prod python3[557562]: 2026-10-25 20:28:45,425 INFO live.helius: HELIUS B32Qbb sell 59cBtfvM 1.5524 SOL @ 4.446e-08 (lat 0.1s)
+Oct 25 20:28:47 simplai-prod python3[557562]: 2026-10-25 20:28:47,821 INFO live.helius: HELIUS B32Qbb sell 59cBtfvM 1.0776 SOL @ 4.115e-08 (lat 0.1s)
+Oct 25 20:28:50 simplai-prod python3[557562]: 2026-10-25 20:28:50,968 INFO live.helius: HELIUS B32Qbb sell 59cBtfvM 2.9026 SOL @ 3.695e-08 (lat 0.1s)
+Oct 25 20:29:06 simplai-prod python3[557562]: 2026-10-25 20:29:06,842 INFO live: latido: stream=True tokens_vistos=388 seguidos=105 candidatos=0 abiertas=0 cerradas=1 st_requests=9 SOL=$102
+Oct 25 20:29:16 simplai-prod python3[557562]: 2026-10-25 20:29:16,448 INFO live.helius: HELIUS B32Qbb buy ChndBvFH 1.4075 SOL @ 2.304e-07 (lat 0.1s)
+Oct 25 20:29:34 simplai-prod python3[557562]: 2026-10-25 20:29:34,809 INFO live.helius: HELIUS B32Qbb sell ChndBvFH 1.0781 SOL @ 1.765e-07 (lat 0.1s)
