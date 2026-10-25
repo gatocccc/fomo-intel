@@ -1,0 +1,69 @@
+== 059_debug_decoder 2026-10-25T22:53:03Z ==
+   Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [1]
+   Program log: Instruction: CreateV2
+   Program 11111111111111111111111111111111 invoke [2]
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: MetadataPointerInstruction::Initialize
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: Instruction: InitializeMint2
+   Program 11111111111111111111111111111111 invoke [2]
+   Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]
+   Program log: Instruction: GetAccountDataSize
+   Program 11111111111111111111111111111111 invoke [3]
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]
+   Program log: Instruction: InitializeImmutableOwner
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]
+   Program log: Instruction: InitializeAccount3
+   Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [2]
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]
+   Program log: Instruction: GetAccountDataSize
+   Program 11111111111111111111111111111111 invoke [3]
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]
+   Program log: Instruction: InitializeImmutableOwner
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [3]
+   Program log: Instruction: InitializeAccount3
+   Program 11111111111111111111111111111111 invoke [2]
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: TokenMetadataInstruction: Initialize
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: TokenMetadataInstruction: UpdateAuthority
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: Instruction: MintTo
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: Instruction: SetAuthority
+blob len 364 disc 1b72a94ddeeb6376 b[8:40] 2pQ1TPRGZYrw
+   Program 6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P invoke [2]
+   Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: Instruction: GetAccountDataSize
+   Program 11111111111111111111111111111111 invoke [2]
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: Instruction: InitializeImmutableOwner
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: Instruction: InitializeAccount3
+   Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: Instruction: GetAccountDataSize
+   Program 11111111111111111111111111111111 invoke [2]
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: Instruction: InitializeImmutableOwner
+   Program TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb invoke [2]
+   Program log: Instruction: InitializeAccount3
+   Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]
+   Program J7pourVwqP1VtRNBiFNqbdGxwkx7ta2LHAURURRRJqmd invoke [1]
+   Program log: Instruction: Trade
+   Program 11111111111111111111111111111111 invoke [2]
+   Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]
+   Program 11111111111111111111111111111111 invoke [2]
+   Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]
+   Program CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK invoke [2]
+   Program log: Instruction: SwapV2
+blob len 221 disc 40c6cde8260871e2 b[8:40] 3ucNos4NbumP
+   Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]
+   Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [3]
+   Program whirLbMiicVdio4qvUfM5KAg6Ct8VwpYzGff3uctyCc invoke [2]
+   Program log: Instruction: SwapV2
+   Program log: Instruction: TransferChecked
+cantidad de logs: 151 | truncado: True
+== exit 0 ==
