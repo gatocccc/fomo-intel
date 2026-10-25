@@ -1,4 +1,3 @@
-Oct 24 19:18:11 simplai-prod python3[393883]: 2026-10-24 19:18:11,209 INFO live: latido: stream=True tokens_vistos=490 seguidos=410 candidatos=0 abiertas=0 cerradas=12 st_requests=8 SOL=$101
 Oct 24 19:21:38 simplai-prod python3[393883]: 2026-10-24 19:21:38,477 INFO live.rules_st: CANDIDATO v1.2 Nest move=8.2x compradores=99 vol=$9027 snipers=26 -> confirma a T3
 Oct 24 19:23:11 simplai-prod python3[393883]: 2026-10-24 19:23:11,278 INFO live: latido: stream=True tokens_vistos=580 seguidos=361 candidatos=0 abiertas=0 cerradas=12 st_requests=9 SOL=$101
 Oct 24 19:25:25 simplai-prod python3[393883]: 2026-10-24 19:25:25,546 INFO live.rules_st: CANDIDATO v1.2 tgcat move=3.8x compradores=94 vol=$17609 snipers=67 -> confirma a T3
@@ -298,3 +297,4 @@ Oct 25 07:39:17 simplai-prod python3[449801]: 2026-10-25 07:39:17,048 INFO live:
 Oct 25 07:44:17 simplai-prod python3[449801]: 2026-10-25 07:44:17,373 INFO live: latido: stream=True tokens_vistos=2051 seguidos=33 candidatos=0 abiertas=0 cerradas=0 st_requests=41 SOL=$102
 Oct 25 07:49:17 simplai-prod python3[449801]: 2026-10-25 07:49:17,761 INFO live: latido: stream=True tokens_vistos=2082 seguidos=52 candidatos=0 abiertas=0 cerradas=0 st_requests=42 SOL=$102
 Oct 25 07:54:18 simplai-prod python3[449801]: 2026-10-25 07:54:18,232 INFO live: latido: stream=True tokens_vistos=2096 seguidos=25 candidatos=0 abiertas=0 cerradas=0 st_requests=43 SOL=$102
+Oct 25 07:59:18 simplai-prod python3[449801]: 2026-10-25 07:59:18,527 INFO live: latido: stream=True tokens_vistos=2111 seguidos=21 candidatos=0 abiertas=0 cerradas=0 st_requests=44 SOL=$102
