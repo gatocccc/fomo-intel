@@ -1,4 +1,3 @@
-Oct 24 19:28:10 simplai-prod python3[393883]: 2026-10-24 19:28:10,938 INFO live.portfolio: CERRADA CAPITAL ret=-80.7% pnl=US$-8.27 salidas=['stop']
 Oct 24 19:28:10 simplai-prod python3[393883]: 2026-10-24 19:28:10,939 INFO live: VENTA CAPITAL stop 100% a 0.19x slippage=+29.1% -> 0.0196 SOL [CERRADA]
 Oct 24 19:28:11 simplai-prod python3[393883]: 2026-10-24 19:28:11,939 INFO live: latido: stream=True tokens_vistos=682 seguidos=362 candidatos=0 abiertas=0 cerradas=14 st_requests=15 SOL=$101
 Oct 24 19:33:12 simplai-prod python3[393883]: 2026-10-24 19:33:12,835 INFO live: latido: stream=True tokens_vistos=753 seguidos=345 candidatos=0 abiertas=0 cerradas=14 st_requests=16 SOL=$101
@@ -298,3 +297,4 @@ Oct 25 08:24:20 simplai-prod python3[449801]: 2026-10-25 08:24:20,315 INFO live:
 Oct 25 08:29:20 simplai-prod python3[449801]: 2026-10-25 08:29:20,681 INFO live: latido: stream=True tokens_vistos=2304 seguidos=67 candidatos=0 abiertas=0 cerradas=0 st_requests=50 SOL=$101
 Oct 25 08:34:21 simplai-prod python3[449801]: 2026-10-25 08:34:21,105 INFO live: latido: stream=True tokens_vistos=2356 seguidos=78 candidatos=0 abiertas=0 cerradas=0 st_requests=51 SOL=$101
 Oct 25 08:39:21 simplai-prod python3[449801]: 2026-10-25 08:39:21,309 INFO live: latido: stream=True tokens_vistos=2389 seguidos=71 candidatos=0 abiertas=0 cerradas=0 st_requests=52 SOL=$101
+Oct 25 08:44:21 simplai-prod python3[449801]: 2026-10-25 08:44:21,530 INFO live: latido: stream=True tokens_vistos=2420 seguidos=53 candidatos=0 abiertas=0 cerradas=0 st_requests=53 SOL=$101
