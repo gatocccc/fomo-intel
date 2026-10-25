@@ -1,4 +1,3 @@
-Oct 24 18:53:03 simplai-prod python3[393282]: 2026-10-24 18:53:03,407 INFO live: apagando...
 Oct 24 18:53:04 simplai-prod python3[393282]: 2026-10-24 18:53:04,027 WARNING live.stream: stream caído: TLS/SSL connection has been closed (EOF) (_ssl.c:2417); reconecto en 2s
 Oct 24 18:53:04 simplai-prod systemd[1]: fomo-live.service: Deactivated successfully.
 Oct 24 18:53:04 simplai-prod systemd[1]: Stopped fomo-live.service - FOMO Intel - bot en vivo.
@@ -298,3 +297,4 @@ Oct 25 05:59:11 simplai-prod python3[449801]: 2026-10-25 05:59:11,129 INFO live:
 Oct 25 06:04:11 simplai-prod python3[449801]: 2026-10-25 06:04:11,335 INFO live: latido: stream=True tokens_vistos=1128 seguidos=107 candidatos=0 abiertas=0 cerradas=0 st_requests=21 SOL=$102
 Oct 25 06:09:11 simplai-prod python3[449801]: 2026-10-25 06:09:11,642 INFO live: latido: stream=True tokens_vistos=1183 seguidos=74 candidatos=0 abiertas=0 cerradas=0 st_requests=22 SOL=$102
 Oct 25 06:14:12 simplai-prod python3[449801]: 2026-10-25 06:14:12,011 INFO live: latido: stream=True tokens_vistos=1225 seguidos=61 candidatos=0 abiertas=0 cerradas=0 st_requests=23 SOL=$102
+Oct 25 06:19:12 simplai-prod python3[449801]: 2026-10-25 06:19:12,312 INFO live: latido: stream=True tokens_vistos=1268 seguidos=64 candidatos=0 abiertas=0 cerradas=0 st_requests=24 SOL=$102
