@@ -1,4 +1,3 @@
-Oct 25 15:56:09 simplai-prod python3[517288]: 2026-10-25 15:56:09,729 INFO live: latido: stream=True tokens_vistos=300 seguidos=98 candidatos=0 abiertas=0 cerradas=0 st_requests=19 SOL=$102
 Oct 25 16:01:10 simplai-prod python3[517288]: 2026-10-25 16:01:10,023 INFO live: latido: stream=True tokens_vistos=359 seguidos=84 candidatos=0 abiertas=0 cerradas=0 st_requests=20 SOL=$102
 Oct 25 16:06:10 simplai-prod python3[517288]: 2026-10-25 16:06:10,347 INFO live: latido: stream=True tokens_vistos=414 seguidos=80 candidatos=0 abiertas=0 cerradas=0 st_requests=21 SOL=$101
 Oct 25 16:11:10 simplai-prod python3[517288]: 2026-10-25 16:11:10,662 INFO live: latido: stream=True tokens_vistos=494 seguidos=111 candidatos=0 abiertas=0 cerradas=0 st_requests=22 SOL=$101
@@ -298,3 +297,4 @@ Oct 25 21:54:10 simplai-prod python3[562885]: 2026-10-25 21:54:10,302 INFO live.
 Oct 25 21:58:13 simplai-prod python3[562885]: 2026-10-25 21:58:13,234 INFO live: latido: stream=True tokens_vistos=1284 seguidos=80 candidatos=0 abiertas=0 cerradas=1 st_requests=16 SOL=$101
 Oct 25 22:03:13 simplai-prod python3[562885]: 2026-10-25 22:03:13,910 INFO live: latido: stream=True tokens_vistos=1339 seguidos=70 candidatos=0 abiertas=0 cerradas=1 st_requests=17 SOL=$101
 Oct 25 22:08:14 simplai-prod python3[562885]: 2026-10-25 22:08:14,378 INFO live: latido: stream=True tokens_vistos=1383 seguidos=75 candidatos=0 abiertas=0 cerradas=1 st_requests=18 SOL=$102
+Oct 25 22:13:14 simplai-prod python3[562885]: 2026-10-25 22:13:14,667 INFO live: latido: stream=True tokens_vistos=1435 seguidos=75 candidatos=0 abiertas=0 cerradas=1 st_requests=19 SOL=$102

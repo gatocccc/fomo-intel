@@ -1,0 +1,38 @@
+== 054_universo_midcaps 2026-10-25T22:14:03Z ==
+/tokens/trending/24h 200 filas: 52
+/tokens/trending 200 filas: 81
+/tokens/volume/24h 200 filas: 100
+/tokens/volume 200 filas: 100
+/top-performers/24h 200 filas: 40
+/tokens/graduated 400 filas: 0
+/tokens/multi/graduated 200 filas: 100
+
+tokens únicos vistos: 279 | con liquidez >= US$100K, mcap 1M-500M y > 10 días: 27
+  cbBTC        liq US$   8,513,329  mcap US$   235,163,730  edad   717 d  /tokens/volume
+  ETH          liq US$   7,123,484  mcap US$   107,223,177  edad  1428 d  /tokens/volume
+  USELESS      liq US$   4,197,816  mcap US$   170,357,532  edad   533 d  /tokens/volume/24h
+  ZEC          liq US$   4,115,331  mcap US$   125,290,230  edad   373 d  /tokens/volume
+  HYPE         liq US$   4,053,930  mcap US$    53,894,312  edad   380 d  /tokens/volume
+  NVDAx        liq US$   3,102,173  mcap US$    68,546,946  edad   473 d  /tokens/volume
+  CATE         liq US$   2,552,647  mcap US$    52,190,358  edad    91 d  /tokens/volume
+  STONK        liq US$   2,396,382  mcap US$   104,583,170  edad    84 d  /tokens/volume
+  NEAR         liq US$   2,124,392  mcap US$    14,347,084  edad   607 d  /tokens/volume
+  KMNO         liq US$   2,075,892  mcap US$   432,075,786  edad   745 d  /tokens/volume
+  WBTC         liq US$   1,901,654  mcap US$   197,059,300  edad  1077 d  /tokens/volume
+  ANSEM        liq US$   1,609,306  mcap US$   472,439,519  edad   131 d  /tokens/volume
+  BIRB         liq US$   1,445,000  mcap US$    76,122,619  edad   271 d  /tokens/volume
+  ORE          liq US$     680,308  mcap US$    86,450,352  edad   814 d  /tokens/volume
+  Verse        liq US$     543,090  mcap US$    19,265,572  edad   503 d  /tokens/trending/24h
+  baton        liq US$     451,220  mcap US$     5,863,362  edad    46 d  /tokens/volume/24h
+  PAID         liq US$     409,649  mcap US$     3,136,895  edad    40 d  /tokens/volume
+  XMR          liq US$     402,493  mcap US$     1,818,901  edad   260 d  /tokens/volume
+  EURC         liq US$     398,953  mcap US$   140,385,468  edad   719 d  /tokens/volume
+  SI           liq US$     394,225  mcap US$    10,257,978  edad    34 d  /tokens/volume/24h
+  GEOD         liq US$     355,497  mcap US$    74,191,494  edad   741 d  /tokens/volume/24h
+  LMAO!        liq US$     290,561  mcap US$     2,433,909  edad   373 d  /tokens/volume/24h
+  JEANPHIL     liq US$     289,849  mcap US$     3,280,166  edad    36 d  /tokens/volume/24h
+  DOPE         liq US$     207,510  mcap US$     2,448,669  edad    14 d  /tokens/volume
+  MUSK         liq US$     134,162  mcap US$   328,610,257  edad   302 d  /tokens/volume
+  DacityCoin   liq US$     132,999  mcap US$     1,240,176  edad    10 d  /tokens/volume
+  ENA          liq US$     107,334  mcap US$     1,007,299  edad   104 d  /tokens/volume
+== exit 0 ==
