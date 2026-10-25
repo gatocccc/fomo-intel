@@ -9,12 +9,12 @@ STATE_WT=/root/fomo_state
 LOCK=/tmp/fomo_sync.lock
 exec 9>"$LOCK"; flock -n 9 || exit 0
 cd "$REPO" || exit 1
-export GIT_SSH_COMMAND="ssh -i /root/.ssh/fomo_deploy -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
+export GIT_SSH_COMMAND="ssh -i /root/.ssh/fomo_deploy -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new -o ConnectTimeout=15 -o ServerAliveInterval=15 -o ServerAliveCountMax=2"
 export PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
 mkdir -p state/ops logs
 
 # ---- 1) código ----
-git fetch -q origin main 2>>logs/sync.err || true
+timeout 60 git fetch -q origin main 2>>logs/sync.err || true
 LOCAL=$(git rev-parse HEAD 2>/dev/null); REMOTE=$(git rev-parse origin/main 2>/dev/null)
 if [ -n "$REMOTE" ] && [ "$LOCAL" != "$REMOTE" ]; then
   CHANGED=$(git diff --name-only "$LOCAL" "$REMOTE" 2>/dev/null)
@@ -62,4 +62,4 @@ tail -n 100 logs/sync.log > "$STATE_WT/logs/sync.log" 2>/dev/null; tail -n 50 lo
 cp logs/LAST.txt "$STATE_WT/logs/" 2>/dev/null; cp data/validation_summary.json "$STATE_WT/state/" 2>/dev/null
 systemctl is-active fomo-live > "$STATE_WT/state/service.txt" 2>&1; date -u +%FT%TZ >> "$STATE_WT/state/service.txt"
 cd "$STATE_WT" && git add -A && git commit -q -m "estado $(date -u +%FT%TZ)" >/dev/null 2>&1
-git push -q -f origin server-state >> "$REPO/logs/sync.err" 2>&1 || true
+timeout 90 git push -q -f origin server-state >> "$REPO/logs/sync.err" 2>&1 || true
