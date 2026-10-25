@@ -1,5 +1,3 @@
-Oct 24 18:39:35 simplai-prod python3[380576]: 2026-10-24 18:39:35,399 INFO live: latido: stream=True tokens_vistos=3051 seguidos=408 candidatos=0 abiertas=2 cerradas=9 st_requests=42 SOL=$101
-Oct 24 18:39:44 simplai-prod python3[380576]: 2026-10-24 18:39:44,729 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:39:55 simplai-prod python3[380576]: 2026-10-24 18:39:55,352 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:40:05 simplai-prod python3[380576]: 2026-10-24 18:40:05,715 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:40:16 simplai-prod python3[380576]: 2026-10-24 18:40:16,751 WARNING live: venta CONTRAIL (stop) falló: cotización: swap api 500: {"error":"Failed to swap"}
@@ -298,3 +296,5 @@ Oct 25 03:59:09 simplai-prod python3[393883]: 2026-10-25 03:59:09,521 INFO live:
 Oct 25 04:02:43 simplai-prod python3[393883]: 2026-10-25 04:02:43,966 INFO live.rules_st: CANDIDATO v1.2 EXPERIENTIAL move=4.0x compradores=100 vol=$18816 snipers=32 -> confirma a T3
 Oct 25 04:04:09 simplai-prod python3[393883]: 2026-10-25 04:04:09,718 INFO live: latido: stream=True tokens_vistos=8148 seguidos=167 candidatos=0 abiertas=0 cerradas=18 st_requests=352 SOL=$102
 Oct 25 04:04:14 simplai-prod python3[393883]: 2026-10-25 04:04:14,640 INFO live.rules_st: CANDIDATO v1.2 Particle move=10.9x compradores=71 vol=$4567 snipers=6 -> confirma a T3
+Oct 25 04:05:05 simplai-prod python3[393883]: 2026-10-25 04:05:05,991 INFO live: señal Particle no operada: STOP manual
+Oct 25 04:09:10 simplai-prod python3[393883]: 2026-10-25 04:09:10,323 INFO live: latido: stream=True tokens_vistos=8206 seguidos=181 candidatos=0 abiertas=0 cerradas=18 st_requests=353 SOL=$102
