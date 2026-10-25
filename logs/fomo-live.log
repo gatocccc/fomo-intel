@@ -1,4 +1,3 @@
-Oct 25 14:58:20 simplai-prod python3[517288]: ; reconecto en 60s
 Oct 25 14:59:20 simplai-prod python3[517288]: 2026-10-25 14:59:20,797 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 14:59:20 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
 Oct 25 14:59:20 simplai-prod python3[517288]: <head><title>502 Bad Gateway</title></head>
 Oct 25 14:59:20 simplai-prod python3[517288]: <body>
@@ -298,3 +297,4 @@ Oct 25 15:35:33 simplai-prod python3[517288]: 2026-10-25 15:35:33,290 INFO live.
 Oct 25 15:36:08 simplai-prod python3[517288]: 2026-10-25 15:36:08,309 INFO live: latido: stream=True tokens_vistos=3 seguidos=3 candidatos=0 abiertas=0 cerradas=0 st_requests=15 SOL=$101
 Oct 25 15:41:08 simplai-prod python3[517288]: 2026-10-25 15:41:08,618 INFO live: latido: stream=True tokens_vistos=48 seguidos=48 candidatos=0 abiertas=0 cerradas=0 st_requests=16 SOL=$102
 Oct 25 15:46:08 simplai-prod python3[517288]: 2026-10-25 15:46:08,993 INFO live: latido: stream=True tokens_vistos=144 seguidos=115 candidatos=0 abiertas=0 cerradas=0 st_requests=17 SOL=$102
+Oct 25 15:51:09 simplai-prod python3[517288]: 2026-10-25 15:51:09,406 INFO live: latido: stream=True tokens_vistos=246 seguidos=141 candidatos=0 abiertas=0 cerradas=0 st_requests=18 SOL=$102
