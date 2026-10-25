@@ -1,4 +1,3 @@
-Oct 24 19:35:04 simplai-prod python3[393883]: </body>
 Oct 24 19:35:04 simplai-prod python3[393883]: </html>
 Oct 24 19:35:04 simplai-prod python3[393883]: ; reconecto en 4s
 Oct 24 19:35:10 simplai-prod python3[393883]: 2026-10-24 19:35:10,364 INFO live.stream: stream conectado
@@ -298,3 +297,4 @@ Oct 25 09:14:23 simplai-prod python3[449801]: 2026-10-25 09:14:23,639 INFO live:
 Oct 25 09:19:23 simplai-prod python3[449801]: 2026-10-25 09:19:23,978 INFO live: latido: stream=True tokens_vistos=2729 seguidos=81 candidatos=0 abiertas=0 cerradas=0 st_requests=60 SOL=$100
 Oct 25 09:24:24 simplai-prod python3[449801]: 2026-10-25 09:24:24,096 INFO live: latido: stream=True tokens_vistos=2776 seguidos=74 candidatos=0 abiertas=0 cerradas=0 st_requests=61 SOL=$100
 Oct 25 09:29:24 simplai-prod python3[449801]: 2026-10-25 09:29:24,412 INFO live: latido: stream=True tokens_vistos=2809 seguidos=46 candidatos=0 abiertas=0 cerradas=0 st_requests=62 SOL=$101
+Oct 25 09:34:24 simplai-prod python3[449801]: 2026-10-25 09:34:24,742 INFO live: latido: stream=True tokens_vistos=2844 seguidos=54 candidatos=0 abiertas=0 cerradas=0 st_requests=63 SOL=$101
