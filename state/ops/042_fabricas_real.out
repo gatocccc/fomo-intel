@@ -1,0 +1,9 @@
+== 042_fabricas_real 2026-10-25T17:59:03Z ==
+saldo bot: 1.268884667 SOL
+control: {'mode': 'real', 'strategy': 'factory', 'size_usd': 10.0, 'max_open': 3, 'daily_loss_usd': 50.0, 'total_loss_usd': 120.0, 'factory_tp': 1.5, 'factory_max_hold_s': 180}
+active
+Oct 25 17:59:05 simplai-prod python3[542815]: 2026-10-25 17:59:05,532 INFO live: arranca bot modo=real estrategia=factory seguidos=0 tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 25 17:59:05 simplai-prod python3[542815]: 2026-10-25 17:59:05,646 INFO live.helius: helius conectado; suscribiendo 5 billeteras
+Oct 25 17:59:05 simplai-prod python3[542815]: 2026-10-25 17:59:05,881 INFO live.stream: stream conectado
+Oct 25 17:59:06 simplai-prod python3[542815]: 2026-10-25 17:59:06,165 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$102
+== exit 0 ==
