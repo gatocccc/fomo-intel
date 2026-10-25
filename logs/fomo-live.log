@@ -1,4 +1,3 @@
-Oct 24 19:13:10 simplai-prod python3[393883]: 2026-10-24 19:13:10,581 INFO live: latido: stream=True tokens_vistos=408 seguidos=407 candidatos=0 abiertas=1 cerradas=11 st_requests=7 SOL=$101
 Oct 24 19:13:56 simplai-prod python3[393883]: 2026-10-24 19:13:56,027 INFO live.portfolio: CERRADA HENRY ret=-35.6% pnl=US$-3.65 salidas=['stop']
 Oct 24 19:13:56 simplai-prod python3[393883]: 2026-10-24 19:13:56,028 INFO live: VENTA HENRY stop 100% a 0.64x slippage=+3.5% -> 0.0653 SOL [CERRADA]
 Oct 24 19:18:11 simplai-prod python3[393883]: 2026-10-24 19:18:11,209 INFO live: latido: stream=True tokens_vistos=490 seguidos=410 candidatos=0 abiertas=0 cerradas=12 st_requests=8 SOL=$101
@@ -298,3 +297,4 @@ Oct 25 07:24:16 simplai-prod python3[449801]: 2026-10-25 07:24:16,143 INFO live:
 Oct 25 07:29:16 simplai-prod python3[449801]: 2026-10-25 07:29:16,492 INFO live: latido: stream=True tokens_vistos=1938 seguidos=72 candidatos=0 abiertas=0 cerradas=0 st_requests=38 SOL=$102
 Oct 25 07:34:16 simplai-prod python3[449801]: 2026-10-25 07:34:16,743 INFO live: latido: stream=True tokens_vistos=1992 seguidos=81 candidatos=0 abiertas=0 cerradas=0 st_requests=39 SOL=$102
 Oct 25 07:39:17 simplai-prod python3[449801]: 2026-10-25 07:39:17,048 INFO live: latido: stream=True tokens_vistos=2024 seguidos=43 candidatos=0 abiertas=0 cerradas=0 st_requests=40 SOL=$102
+Oct 25 07:44:17 simplai-prod python3[449801]: 2026-10-25 07:44:17,373 INFO live: latido: stream=True tokens_vistos=2051 seguidos=33 candidatos=0 abiertas=0 cerradas=0 st_requests=41 SOL=$102
