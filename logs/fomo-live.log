@@ -1,4 +1,3 @@
-Oct 24 18:34:17 simplai-prod python3[380576]: 2026-10-24 18:34:17,134 WARNING live: venta HUMANITY (trailing) falló: sin confirmación en 75 s
 Oct 24 18:34:19 simplai-prod python3[380576]: 2026-10-24 18:34:19,238 INFO live.rules_st: CANDIDATO v1.2 AVATARS move=4.4x compradores=81 vol=$9946 snipers=71 -> confirma a T3
 Oct 24 18:34:27 simplai-prod python3[380576]: 2026-10-24 18:34:27,170 WARNING live: venta CONTRAIL (trailing) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:34:31 simplai-prod python3[380576]: 2026-10-24 18:34:31,352 INFO live.portfolio: CERRADA HUMANITY ret=-31.3% pnl=US$-3.21 salidas=['stop']
@@ -298,3 +297,4 @@ Oct 25 02:09:05 simplai-prod python3[393883]: 2026-10-25 02:09:05,455 INFO live:
 Oct 25 02:13:58 simplai-prod python3[393883]: 2026-10-25 02:13:58,079 INFO live: latido: stream=True tokens_vistos=6908 seguidos=276 candidatos=0 abiertas=0 cerradas=18 st_requests=330 SOL=$102
 Oct 25 02:18:58 simplai-prod python3[393883]: 2026-10-25 02:18:58,912 INFO live: latido: stream=True tokens_vistos=6989 seguidos=306 candidatos=0 abiertas=0 cerradas=18 st_requests=331 SOL=$102
 Oct 25 02:23:59 simplai-prod python3[393883]: 2026-10-25 02:23:59,405 INFO live: latido: stream=True tokens_vistos=7063 seguidos=321 candidatos=0 abiertas=0 cerradas=18 st_requests=332 SOL=$102
+Oct 25 02:28:59 simplai-prod python3[393883]: 2026-10-25 02:28:59,842 INFO live: latido: stream=True tokens_vistos=7117 seguidos=297 candidatos=0 abiertas=0 cerradas=18 st_requests=333 SOL=$102
