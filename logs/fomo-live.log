@@ -1,4 +1,3 @@
-Oct 24 19:43:08 simplai-prod python3[393883]: 2026-10-24 19:43:08,429 INFO live: COMPRA v1.2 CRIMINU 0.1015 SOL (US$10) a 8.578e-08 slippage=+3.8% impacto=1.2% lat=2.6s
 Oct 24 19:43:13 simplai-prod python3[393883]: 2026-10-24 19:43:13,596 INFO live: latido: stream=True tokens_vistos=880 seguidos=301 candidatos=0 abiertas=1 cerradas=14 st_requests=20 SOL=$101
 Oct 24 19:44:49 simplai-prod python3[393883]: 2026-10-24 19:44:49,522 WARNING live: venta CRIMINU (stop) falló: tx falló en cadena: {'InstructionError': [3, {'Custom': 6001}]}
 Oct 24 19:45:04 simplai-prod python3[393883]: 2026-10-24 19:45:04,664 INFO live.portfolio: CERRADA CRIMINU ret=-60.9% pnl=US$-6.24 salidas=['stop']
@@ -298,3 +297,4 @@ Oct 25 09:49:25 simplai-prod python3[449801]: 2026-10-25 09:49:25,780 INFO live:
 Oct 25 09:54:26 simplai-prod python3[449801]: 2026-10-25 09:54:26,376 INFO live: latido: stream=True tokens_vistos=3006 seguidos=56 candidatos=0 abiertas=0 cerradas=0 st_requests=67 SOL=$101
 Oct 25 09:59:26 simplai-prod python3[449801]: 2026-10-25 09:59:26,659 INFO live: latido: stream=True tokens_vistos=3058 seguidos=66 candidatos=0 abiertas=0 cerradas=0 st_requests=68 SOL=$101
 Oct 25 10:04:27 simplai-prod python3[449801]: 2026-10-25 10:04:27,021 INFO live: latido: stream=True tokens_vistos=3108 seguidos=64 candidatos=0 abiertas=0 cerradas=0 st_requests=69 SOL=$101
+Oct 25 10:09:27 simplai-prod python3[449801]: 2026-10-25 10:09:27,285 INFO live: latido: stream=True tokens_vistos=3163 seguidos=82 candidatos=0 abiertas=0 cerradas=0 st_requests=70 SOL=$101
