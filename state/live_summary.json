@@ -1,5 +1,5 @@
 {
- "ts": 1792969202.3658273,
+ "ts": 1792969503.0890539,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -8,7 +8,7 @@
  "pnl_usd_total": 5.16,
  "pnl_usd_today": 5.16,
  "ret_per_usd": 0.501,
- "stop_reason": "STOP manual",
+ "stop_reason": null,
  "positions": [],
  "last_closed": [
   {
@@ -32,11 +32,11 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.3156,
- "sol_usd": 101.54964878397391,
+ "sol_usd": 101.45709434703411,
  "stream_connected": true,
- "stream_msgs": 236,
- "tokens_seen": 226,
- "tokens_tracked": 116,
+ "stream_msgs": 21,
+ "tokens_seen": 20,
+ "tokens_tracked": 20,
  "candidates": [],
  "strategy": "factory",
  "followed_wallets": 0,
@@ -45,20 +45,20 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 0,
+  "notifications": 1252,
   "parsed": 0,
-  "skipped": 0,
+  "skipped": 1252,
   "fast_creates": 0,
   "subs": 2,
   "errors": []
  },
  "follow_buys_seen": 0,
- "st_requests": 3,
+ "st_requests": 1,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 1,
-  "create": 235
+  "create": 20
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}"
@@ -69,15 +69,15 @@
  "params": {
   "mode": "real",
   "strategy": "factory",
-  "size_usd": 10.0,
+  "size_usd": 1.0,
   "max_open": 3,
-  "daily_loss_usd": 50.0,
+  "daily_loss_usd": 30.0,
   "total_loss_usd": 120.0,
   "max_trades": 1000,
-  "max_slippage_pct": 20.0,
-  "stop": 0.7,
+  "max_slippage_pct": 40.0,
+  "stop": 0.5,
   "trail": 0.99,
-  "tp_mult": 3.0,
-  "max_hold_min": 3
+  "tp_mult": 1.5,
+  "max_hold_min": 1
  }
 }

@@ -1,0 +1,8 @@
+== 060_velocidad_on 2026-10-25T23:02:04Z ==
+{'mode': 'real', 'size_usd': 1.0, 'priority_fee_sol': 0.002, 'factory_tp': 1.5, 'factory_max_hold_s': 20, 'factory_stop': 0.5}
+saldo inicial prueba: 1.315635085
+active
+Oct 25 23:02:06 simplai-prod python3[585537]: 2026-10-25 23:02:06,044 INFO live.helius: helius conectado; suscribiendo 2 billeteras
+Oct 25 23:02:06 simplai-prod python3[585537]: 2026-10-25 23:02:06,324 INFO live.stream: stream conectado
+Oct 25 23:02:06 simplai-prod python3[585537]: 2026-10-25 23:02:06,482 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$101
+== exit 0 ==
