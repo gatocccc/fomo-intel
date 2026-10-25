@@ -29,16 +29,14 @@ def parse_create(tx: dict, wallet: str) -> dict | None:
     if "Instruction: Create" not in logs:
         return None
     msg = tx["transaction"]["message"]
-    mint = None
-    for ix in msg.get("instructions", []):
-        if ix.get("programId") == PUMP_PROGRAM and ix.get("accounts"):
-            mint = ix["accounts"][0]; break
+    keys_full = msg["accountKeys"]
+    # el mint es una cuenta nueva que FIRMA la creación junto con el creador
+    signers = [k.get("pubkey") for k in keys_full if isinstance(k, dict) and k.get("signer")]
+    cands = [k for k in signers if k != wallet]
+    mint = next((k for k in cands if k.endswith("pump")), cands[0] if cands else None)
     if not mint:
-        for ix in msg.get("instructions", []):
-            for inner in (meta.get("innerInstructions") or []):
-                for jx in inner.get("instructions", []):
-                    if jx.get("programId") == PUMP_PROGRAM and jx.get("accounts"):
-                        mint = jx["accounts"][0]; break
+        mints = [b.get("mint") for b in (meta.get("postTokenBalances") or []) if b.get("mint") != SOL_MINT]
+        mint = next((m for m in mints if m.endswith("pump")), mints[0] if mints else None)
     if not mint:
         return None
     # compra inicial del creador (si hubo)

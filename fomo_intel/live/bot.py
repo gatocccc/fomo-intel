@@ -54,6 +54,7 @@ class Bot:
                                  sample=0.0 if self.p.strategy in ("follow", "rules_st", "factory") else self.p.stream_sample)
         self.factories: dict[str, dict] = {}
         self.factory_pending: dict[str, dict] = {}   # mint -> {created, creator, symbol}
+        self._factory_seen: set[str] = set()
         if self.p.strategy == "factory":
             self._load_factories()
             self.p.stop, self.p.trail, self.p.tp_mult, self.p.tp_frac, self.p.max_hold_min = self.p.factory_stop, 0.99, self.p.factory_tp, 1.0, max(1, self.p.factory_max_hold_s // 60)
@@ -135,16 +136,19 @@ class Bot:
                     self._note_creator(c["creator"], created)
                     log.info("FABRICA (Helius) %s… creó %s", c["creator"][:6], c["mint"][:8])
         # 1) detectar creaciones de las fábricas (llegan por PumpPortal create, ~1 s) y escuchar sus trades
+        # (bug corregido 25/10: con sample=0 el stream marca todo token como "decided" al crearse, y acá se salteaban TODOS)
         for st in self.stream.young(0, 30):
-            if st.mint in self.factory_pending or st.mint in self.port.positions or st.decided:
+            if st.mint in self._factory_seen:
                 continue
-            if not st.decided and st.creator:
+            self._factory_seen.add(st.mint)
+            if st.creator:
                 self._note_creator(st.creator, st.created_ts)
-            if st.creator in self.factories:
+            if st.creator in self.factories and st.mint not in self.port.positions:
                 self.factory_pending[st.mint] = {"created": st.created_ts, "creator": st.creator, "symbol": st.symbol, "seen": now}
                 self.stream.keep_watching(st.mint)
                 log.info("FABRICA %s… creó %s (%s) -> entrando", st.creator[:6], st.symbol, st.mint[:8])
-            st.decided = True if st.creator not in self.factories else st.decided
+        if len(self._factory_seen) > 20000:
+            self._factory_seen = set(list(self._factory_seen)[-5000:])
         # 2) entrar: real = inmediato (PumpPortal arma la tx); paper = al primer trade observado >= factory_paper_wait_s
         for mint, info in list(self.factory_pending.items()):
             st = self.stream.snapshot(mint)

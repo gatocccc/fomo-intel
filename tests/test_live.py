@@ -93,3 +93,12 @@ def test_parse_swap_buy_and_sell():
            "transaction": {"message": {"accountKeys": [W]}}}
     e2 = parse_swap(tx2, W)
     assert e2["side"] == "sell" and abs(e2["sol"] - 0.05) < 1e-9
+
+
+def test_parse_create_uses_mint_signer():
+    from fomo_intel.live.helius_watch import parse_create
+    W = "FACTORY"; M = "NEWMINTpump"
+    tx = {"meta": {"err": None, "fee": 5000, "logMessages": ["Program log: Instruction: Create"], "preBalances": [100, 0], "postBalances": [90, 0],
+                   "postTokenBalances": []},
+          "transaction": {"message": {"accountKeys": [{"pubkey": W, "signer": True}, {"pubkey": M, "signer": True}], "instructions": [{"programId": "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P", "accounts": [W]}]}}}
+    assert parse_create(tx, W)["mint"] == M
