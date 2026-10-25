@@ -1,5 +1,5 @@
 {
- "ts": 1792965000.648872,
+ "ts": 1792965300.9347143,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,11 +32,11 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.3156,
- "sol_usd": 101.15120078891692,
+ "sol_usd": 101.25073947631907,
  "stream_connected": true,
- "stream_msgs": 1683,
- "tokens_seen": 1192,
- "tokens_tracked": 103,
+ "stream_msgs": 2055,
+ "tokens_seen": 1254,
+ "tokens_tracked": 107,
  "candidates": [],
  "strategy": "factory",
  "followed_wallets": 0,
@@ -45,31 +45,31 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 34,
-  "parsed": 25,
-  "skipped": 6,
+  "notifications": 52,
+  "parsed": 39,
+  "skipped": 9,
   "subs": 2,
   "errors": []
  },
  "follow_buys_seen": 0,
- "st_requests": 15,
+ "st_requests": 16,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
-  "otros": 5,
-  "create": 1207,
-  "buy": 253,
-  "sell": 218
+  "otros": 6,
+  "create": 1270,
+  "buy": 422,
+  "sell": 357
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}"
+  "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 471,
- "stream_cost_sol_est": 0.0005,
+ "stream_trades": 779,
+ "stream_cost_sol_est": 0.0008,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "real",
