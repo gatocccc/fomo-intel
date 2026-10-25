@@ -1,6 +1,3 @@
-Oct 24 18:30:06 simplai-prod python3[380576]: 2026-10-24 18:30:06,377 WARNING live: venta CONTRAIL (tp2x) falló: cotización: swap api 500: {"error":"Failed to swap"}
-Oct 24 18:30:10 simplai-prod python3[380576]: 2026-10-24 18:30:10,730 INFO live: COMPRA v1.2 HUMANITY 0.1016 SOL (US$10) a 1.438e-07 slippage=+9.0% impacto=0.0% lat=3.1s
-Oct 24 18:30:12 simplai-prod python3[380576]: 2026-10-24 18:30:12,917 INFO live.rules_st: CANDIDATO v1.2 WHE move=6.4x compradores=94 vol=$11930 snipers=2 -> confirma a T3
 Oct 24 18:30:22 simplai-prod python3[380576]: 2026-10-24 18:30:22,350 WARNING live: venta CONTRAIL (trailing) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:30:33 simplai-prod python3[380576]: 2026-10-24 18:30:33,039 WARNING live: venta CONTRAIL (trailing) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:30:43 simplai-prod python3[380576]: 2026-10-24 18:30:43,529 WARNING live: venta CONTRAIL (trailing) falló: cotización: swap api 500: {"error":"Failed to swap"}
@@ -298,3 +295,6 @@ Oct 25 01:28:52 simplai-prod python3[393883]: 2026-10-25 01:28:52,094 INFO live:
 Oct 25 01:32:42 simplai-prod python3[393883]: 2026-10-25 01:32:42,205 INFO live.rules_st: CANDIDATO v1.2 ELON move=4.8x compradores=100 vol=$6312 snipers=5 -> confirma a T3
 Oct 25 01:33:05 simplai-prod python3[393883]: 2026-10-25 01:33:05,219 INFO live: señal ELON no operada: STOP manual
 Oct 25 01:33:52 simplai-prod python3[393883]: 2026-10-25 01:33:52,692 INFO live: latido: stream=True tokens_vistos=6327 seguidos=378 candidatos=0 abiertas=0 cerradas=18 st_requests=322 SOL=$102
+Oct 25 01:38:01 simplai-prod python3[393883]: 2026-10-25 01:38:01,223 INFO live.rules_st: CANDIDATO v1.2 Movember move=4.0x compradores=61 vol=$4687 snipers=19 -> confirma a T3
+Oct 25 01:38:53 simplai-prod python3[393883]: 2026-10-25 01:38:53,568 INFO live: latido: stream=True tokens_vistos=6451 seguidos=435 candidatos=0 abiertas=0 cerradas=18 st_requests=323 SOL=$102
+Oct 25 01:39:05 simplai-prod python3[393883]: 2026-10-25 01:39:05,986 INFO live: señal Movember no operada: STOP manual
