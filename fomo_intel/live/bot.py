@@ -62,6 +62,9 @@ class Bot:
             from .rules_st import RulesST
             self.rules_st = RulesST(self)
         self.helius = None
+        if self.p.strategy == "factory" and self.factories and self.env.helius_api_key:
+            from .helius_watch import HeliusWatch
+            self.helius = HeliusWatch(self.env.helius_api_key, list(self.factories))
         if self.follow:
             self.stream.follow_accounts(list(self.follow))          # PumpPortal (si entrega) y Helius (seguro) en paralelo
             if self.env.helius_api_key:
@@ -116,6 +119,21 @@ class Bot:
 
     # ---------- estrategia fábricas ----------
     def step_factory(self, now: float) -> None:
+        # 0) creaciones vistas por Helius (respaldo cuando PumpPortal falla): registrar el token en el stream
+        if self.helius:
+            while self.helius.creates:
+                c = self.helius.creates.popleft()
+                if c["mint"] in self.factory_pending or c["mint"] in self.port.positions:
+                    continue
+                snap = self.stream.snapshot(c["mint"])
+                if not snap:
+                    from .stream import TokenState
+                    base = 30.0 / 1_073_000_000.0
+                    created = float(c.get("block_time") or c["seen_ts"])
+                    with self.stream.lock:
+                        self.stream.tokens[c["mint"]] = TokenState(mint=c["mint"], symbol=c["mint"][:6], name="", creator=c["creator"], created_ts=created, base_price=base)
+                    self._note_creator(c["creator"], created)
+                    log.info("FABRICA (Helius) %s… creó %s", c["creator"][:6], c["mint"][:8])
         # 1) detectar creaciones de las fábricas (llegan por PumpPortal create, ~1 s) y escuchar sus trades
         for st in self.stream.young(0, 30):
             if st.mint in self.factory_pending or st.mint in self.port.positions or st.decided:
@@ -139,9 +157,15 @@ class Bot:
                 self.factory_pending.pop(mint); self.stream.release(mint); self.port.log_signal(d, "fábrica: sin precio en 25 s"); continue
             if self.p.mode == "paper":
                 trades = [t for t in st.trades if t.ts >= info["created"] + self.p.factory_paper_wait_s and t.wallet != info["creator"]]
-                if not trades:
+                if trades:
+                    ref = trades[0].price
+                elif age >= self.p.factory_paper_wait_s + 3 and not self.stream.connected:
+                    usd = self.st.price(mint)          # sin stream: precio de Solana Tracker (algo más tarde)
+                    if not usd:
+                        continue
+                    ref = usd / self.sol_usd
+                else:
                     continue
-                ref = trades[0].price
             else:
                 ref = st.last_price or st.base_price
             self.factory_pending.pop(mint)

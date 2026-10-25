@@ -17,6 +17,39 @@ import requests
 
 log = logging.getLogger("live.helius")
 SOL_MINT = "So11111111111111111111111111111111111111112"
+PUMP_PROGRAM = "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"
+
+
+def parse_create(tx: dict, wallet: str) -> dict | None:
+    """Si la tx es un 'create' de pump.fun firmado por `wallet`, devuelve {mint, initial_sol, initial_tokens}."""
+    meta = tx.get("meta") or {}
+    if meta.get("err"):
+        return None
+    logs = " ".join(meta.get("logMessages") or [])
+    if "Instruction: Create" not in logs:
+        return None
+    msg = tx["transaction"]["message"]
+    mint = None
+    for ix in msg.get("instructions", []):
+        if ix.get("programId") == PUMP_PROGRAM and ix.get("accounts"):
+            mint = ix["accounts"][0]; break
+    if not mint:
+        for ix in msg.get("instructions", []):
+            for inner in (meta.get("innerInstructions") or []):
+                for jx in inner.get("instructions", []):
+                    if jx.get("programId") == PUMP_PROGRAM and jx.get("accounts"):
+                        mint = jx["accounts"][0]; break
+    if not mint:
+        return None
+    # compra inicial del creador (si hubo)
+    tok = 0.0
+    for b in meta.get("postTokenBalances") or []:
+        if b.get("owner") == wallet and b.get("mint") == mint:
+            tok += float(b["uiTokenAmount"].get("uiAmount") or 0)
+    keys = [k.get("pubkey") if isinstance(k, dict) else k for k in msg["accountKeys"]]
+    idx = keys.index(wallet) if wallet in keys else 0
+    sol = (meta["preBalances"][idx] - meta["postBalances"][idx]) / 1e9 - meta.get("fee", 0) / 1e9
+    return {"mint": mint, "initial_tokens": tok, "initial_sol": max(0.0, sol)}
 WSOL_OWNERS_IGNORE = set()
 
 
@@ -64,6 +97,7 @@ class HeliusWatch(threading.Thread):
         self.wallets = list(dict.fromkeys(wallets))
         self.sub_to_wallet: dict[int, str] = {}
         self.events: deque = deque(maxlen=5000)
+        self.creates: deque = deque(maxlen=2000)     # creaciones de tokens por billeteras seguidas (fábricas)
         self.sigs: queue.Queue = queue.Queue()
         self.connected = False
         self.notifications = 0
@@ -102,6 +136,11 @@ class HeliusWatch(threading.Thread):
                 continue
             tx = self._get_tx(sig)
             if not tx:
+                continue
+            cr = parse_create(tx, wallet)
+            if cr:
+                self.creates.append({"ts": time.time(), "seen_ts": t_seen, "block_time": tx.get("blockTime"), "creator": wallet, "sig": sig, **cr})
+                log.info("HELIUS create %s… -> %s (lat %.1fs)", wallet[:6], cr["mint"][:8], time.time() - t_seen)
                 continue
             ev = parse_swap(tx, wallet)
             if not ev:
