@@ -1,4 +1,3 @@
-Oct 24 19:55:09 simplai-prod python3[393883]: 2026-10-24 19:55:09,802 INFO live: COMPRA v1.2 XDD 0.1015 SOL (US$10) a 1.853e-07 slippage=+3.8% impacto=1.4% lat=4.3s
 Oct 24 19:55:27 simplai-prod python3[393883]: 2026-10-24 19:55:27,386 INFO live.portfolio: CERRADA Ethan ret=-10.4% pnl=US$-1.06 salidas=['trailing']
 Oct 24 19:55:27 simplai-prod python3[393883]: 2026-10-24 19:55:27,386 INFO live: VENTA Ethan trailing 100% a 0.90x slippage=+11.5% -> 0.0910 SOL [CERRADA]
 Oct 24 19:58:14 simplai-prod python3[393883]: 2026-10-24 19:58:14,303 INFO live: latido: stream=True tokens_vistos=1067 seguidos=259 candidatos=0 abiertas=1 cerradas=16 st_requests=39 SOL=$101
@@ -298,3 +297,4 @@ Oct 25 10:49:29 simplai-prod python3[449801]: 2026-10-25 10:49:29,921 INFO live:
 Oct 25 10:54:30 simplai-prod python3[449801]: 2026-10-25 10:54:30,236 INFO live: latido: stream=True tokens_vistos=3677 seguidos=82 candidatos=0 abiertas=0 cerradas=0 st_requests=79 SOL=$101
 Oct 25 10:59:30 simplai-prod python3[449801]: 2026-10-25 10:59:30,540 INFO live: latido: stream=True tokens_vistos=3716 seguidos=62 candidatos=0 abiertas=0 cerradas=0 st_requests=80 SOL=$101
 Oct 25 11:04:30 simplai-prod python3[449801]: 2026-10-25 11:04:30,778 INFO live: latido: stream=True tokens_vistos=3772 seguidos=76 candidatos=0 abiertas=0 cerradas=0 st_requests=81 SOL=$101
+Oct 25 11:09:31 simplai-prod python3[449801]: 2026-10-25 11:09:31,029 INFO live: latido: stream=True tokens_vistos=3812 seguidos=59 candidatos=0 abiertas=0 cerradas=0 st_requests=82 SOL=$101
