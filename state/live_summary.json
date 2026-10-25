@@ -1,5 +1,5 @@
 {
- "ts": 1792915202.9829843,
+ "ts": 1792915474.085403,
  "mode": "paper",
  "open": 0,
  "closed": 0,
@@ -15,9 +15,9 @@
  "wallet_sol": null,
  "sol_usd": 101.5467775572498,
  "stream_connected": true,
- "stream_msgs": 2235,
- "tokens_seen": 2117,
- "tokens_tracked": 23,
+ "stream_msgs": 2255,
+ "tokens_seen": 2136,
+ "tokens_tracked": 32,
  "candidates": [],
  "strategy": "factory",
  "followed_wallets": 0,
@@ -34,7 +34,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 2,
-  "create": 2233
+  "create": 2253
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
