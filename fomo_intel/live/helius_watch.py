@@ -100,6 +100,7 @@ class HeliusWatch(threading.Thread):
         self.connected = False
         self.notifications = 0
         self.parsed = 0
+        self.skipped = 0
         self.errors: deque = deque(maxlen=20)
         self._stop = threading.Event()
         self.ws = None
@@ -184,9 +185,15 @@ class HeliusWatch(threading.Thread):
                         self.notifications += 1
                         p = m["params"]; sub = p.get("subscription"); val = (p.get("result") or {}).get("value") or {}
                         sig = val.get("signature"); wallet = self.sub_to_wallet.get(sub)
-                        if sig and wallet and not val.get("err") and sig not in self.seen:
+                        logs = " ".join(val.get("logs") or [])
+                        # solo bajar la tx si los logs muestran creación o swap (las fábricas mandan cientos de transferencias:
+                        # bajarlas todas agota la cuota de Helius y devuelve errores)
+                        relevant = any(k in logs for k in ("Instruction: Create", "Instruction: Buy", "Instruction: Sell", "Swap", "swap"))
+                        if sig and wallet and not val.get("err") and relevant and sig not in self.seen:
                             self.seen.append(sig)
                             self.sigs.put((sig, wallet, time.time()))
+                        elif not relevant:
+                            self.skipped += 1
             except Exception as e:  # noqa: BLE001
                 self.connected = False
                 self.errors.append(f"{time.strftime('%H:%M:%S')} {str(e)[:150]}")

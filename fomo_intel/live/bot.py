@@ -473,7 +473,7 @@ class Bot:
                            "tokens_seen": self.stream.creates, "tokens_tracked": len(self.stream.tokens),
                            "candidates": [f.symbol for f in self.candidates.values()],
                            "strategy": self.p.strategy, "followed_wallets": len(self.follow), "factories": len(self.factories), "factory_pending": len(self.factory_pending), "account_trades": self.stream.account_trades,
-                           "helius": {"connected": self.helius.connected, "notifications": self.helius.notifications, "parsed": self.helius.parsed, "subs": len(self.helius.sub_to_wallet), "errors": list(self.helius.errors)[-3:]} if self.helius else None,
+                           "helius": {"connected": self.helius.connected, "notifications": self.helius.notifications, "parsed": self.helius.parsed, "skipped": self.helius.skipped, "subs": len(self.helius.sub_to_wallet), "errors": list(self.helius.errors)[-3:]} if self.helius else None,
                            "follow_buys_seen": len(self.follow_buys),
                            "st_requests": self.st.requests_made + (self.rules_st.requests_made() if self.rules_st else 0), "stream_errors": list(self.stream.errors)[-5:],
                            "rules_st": ({**self.rules_st.stats, "pending_t3": len(self.rules_st.pending_t3), "evaluated": len(self.rules_st.evaluated)} if self.rules_st else None),
