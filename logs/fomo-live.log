@@ -1,4 +1,3 @@
-Oct 25 15:12:25 simplai-prod python3[517288]: <hr><center>nginx/1.22.1</center>
 Oct 25 15:12:25 simplai-prod python3[517288]: </body>
 Oct 25 15:12:25 simplai-prod python3[517288]: </html>
 Oct 25 15:12:25 simplai-prod python3[517288]: ; reconecto en 60s
@@ -298,3 +297,4 @@ Oct 25 19:35:07 simplai-prod python3[547851]: </html>
 Oct 25 19:35:07 simplai-prod python3[547851]: ; reconecto en 4s
 Oct 25 19:35:12 simplai-prod python3[547851]: 2026-10-25 19:35:12,059 INFO live.stream: stream conectado
 Oct 25 19:38:08 simplai-prod python3[547851]: 2026-10-25 19:38:08,815 INFO live: latido: stream=True tokens_vistos=885 seguidos=145 candidatos=0 abiertas=0 cerradas=0 st_requests=11 SOL=$102
+Oct 25 19:43:09 simplai-prod python3[547851]: 2026-10-25 19:43:09,588 INFO live: latido: stream=True tokens_vistos=965 seguidos=122 candidatos=0 abiertas=0 cerradas=0 st_requests=12 SOL=$102
