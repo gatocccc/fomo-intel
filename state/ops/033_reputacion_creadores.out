@@ -1,0 +1,46 @@
+== 033_reputacion_creadores 2026-10-25T03:38:03Z ==
+lanzamientos con creador: 3289 ; graduados: 1801
+creadores: 2359 ; con >=2 lanzamientos en la muestra: 323 ; con >=3: 174
+top creadores por tasa de graduación (tasa, n, wallet):
+   1.0 15 C1HwWieem5
+   1.0 7 52oaGANogH
+   1.0 6 7suxEP6z2B
+   1.0 6 7Fty8KHsdY
+   1.0 5 JDQKDrc1TQ
+   1.0 5 Eu6e8HH714
+   1.0 5 CLA1V3GNhU
+   1.0 5 6NuQFWkNgF
+   1.0 4 BLbAr8VL6a
+   1.0 4 2Bonf26MDn
+   1.0 3 uTjYQMxWFL
+   1.0 3 F85HvoJC8X
+   1.0 3 EZkoC1KqQN
+   1.0 3 D6AS33syTT
+   1.0 3 CN3JTA8GZ4
+
+lanzamientos con velas desde el minuto 0: 2856
+todos                                      r1: n=2489 acierto=67% ret/op=+953233813041.85 mediana=+0.39
+todos                                      r2: n=2489 acierto=65% ret/op=+965357557493.32 mediana=+0.41
+todos                                    r_tp: n=2489 acierto=42% ret/op=-0.04 mediana=-0.11
+creador sin historia previa                r1: n=1842 acierto=69% ret/op=+1288055896113.18 mediana=+0.55
+creador sin historia previa                r2: n=1842 acierto=67% ret/op=+1304438089348.45 mediana=+0.61
+creador sin historia previa              r_tp: n=1842 acierto=45% ret/op=-0.01 mediana=-0.07
+creador con >=1 lanz. previo               r1: n= 647 acierto=61% ret/op=+31.98 mediana=+0.16
+creador con >=1 lanz. previo               r2: n= 647 acierto=58% ret/op=+32.50 mediana=+0.15
+creador con >=1 lanz. previo             r_tp: n= 647 acierto=32% ret/op=-0.14 mediana=-0.20
+creador con >=1 graduado previo            r1: n= 353 acierto=74% ret/op=+57.71 mediana=+0.55
+creador con >=1 graduado previo            r2: n= 353 acierto=70% ret/op=+58.29 mediana=+0.68
+creador con >=1 graduado previo          r_tp: n= 353 acierto=39% ret/op=-0.09 mediana=-0.19
+creador con >=2 graduados previos          r1: n= 166 acierto=76% ret/op=+8.62 mediana=+0.69
+creador con >=2 graduados previos          r2: n= 166 acierto=72% ret/op=+8.87 mediana=+0.84
+creador con >=2 graduados previos        r_tp: n= 166 acierto=38% ret/op=-0.11 mediana=-0.23
+creador con >=2 previos y 0 graduados      r1: n= 174 acierto=44% ret/op=+1.29 mediana=-0.05
+creador con >=2 previos y 0 graduados      r2: n= 174 acierto=43% ret/op=+1.96 mediana=-0.05
+creador con >=2 previos y 0 graduados    r_tp: n= 174 acierto=25% ret/op=-0.20 mediana=-0.23
+graduación de este token | sin historia          : 69% (n=2144)
+graduación de este token | >=1 grad previo       : 55% (n=375)
+graduación de este token | >=2 grad previos      : 56% (n=181)
+graduación de este token | >=2 previos sin grad  : 11% (n=199)
+
+OJO: la muestra viene en gran parte de listas de graduados (sesgo); sirve para comparar grupos, no para la tasa absoluta.
+== exit 0 ==
