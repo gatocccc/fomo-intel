@@ -131,8 +131,12 @@ class Bot:
                     from .stream import TokenState
                     base = 30.0 / 1_073_000_000.0
                     created = float(c.get("block_time") or c["seen_ts"])
+                    # precio en la curva DESPUÉS de la compra inicial de la fábrica (reservas virtuales 30 SOL / 1.073e9 tokens)
+                    isol, itok = float(c.get("initial_sol") or 0), float(c.get("initial_tokens") or 0)
+                    px = (30.0 + isol) / (1_073_000_000.0 - itok) if 0 < itok < 1_000_000_000 else 0.0
                     with self.stream.lock:
-                        self.stream.tokens[c["mint"]] = TokenState(mint=c["mint"], symbol=c["mint"][:6], name="", creator=c["creator"], created_ts=created, base_price=base)
+                        self.stream.tokens[c["mint"]] = TokenState(mint=c["mint"], symbol=c["mint"][:6], name="", creator=c["creator"], created_ts=created,
+                                                                   base_price=base, last_price=px, last_ts=time.time() if px else 0.0)
                     self._note_creator(c["creator"], created)
                     log.info("FABRICA (Helius) %s… creó %s", c["creator"][:6], c["mint"][:8])
         # 1) detectar creaciones de las fábricas (llegan por PumpPortal create, ~1 s) y escuchar sus trades
