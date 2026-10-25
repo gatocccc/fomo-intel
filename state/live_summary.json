@@ -1,5 +1,5 @@
 {
- "ts": 1792961699.6572287,
+ "ts": 1792962000.107111,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -8,7 +8,7 @@
  "pnl_usd_total": 5.16,
  "pnl_usd_today": 5.16,
  "ret_per_usd": 0.501,
- "stop_reason": null,
+ "stop_reason": "STOP manual",
  "positions": [],
  "last_closed": [
   {
@@ -32,11 +32,11 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.3156,
- "sol_usd": 101.43734559263324,
+ "sol_usd": 101.52420148419114,
  "stream_connected": true,
- "stream_msgs": 340,
- "tokens_seen": 335,
- "tokens_tracked": 114,
+ "stream_msgs": 412,
+ "tokens_seen": 406,
+ "tokens_tracked": 102,
  "candidates": [],
  "strategy": "factory",
  "followed_wallets": 0,
@@ -52,12 +52,12 @@
   "errors": []
  },
  "follow_buys_seen": 0,
- "st_requests": 4,
+ "st_requests": 5,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 3,
-  "create": 335,
+  "create": 407,
   "buy": 2
  },
  "stream_samples": [
