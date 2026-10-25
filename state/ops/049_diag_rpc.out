@@ -1,0 +1,6 @@
+== 049_diag_rpc 2026-10-25T19:48:03Z ==
+helius 200 {"jsonrpc":"2.0","id":1,"error":{"code":-32015,"message":"Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: \"maxSupportedTransactionVersion\": 1"}}
+publico 200 {"jsonrpc":"2.0","error":{"code":-32015,"message":"Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: \"maxSupportedTransactionVersion\": 1"},"id":1}
+
+helius getBalance: 200 {"jsonrpc":"2.0","result":{"context":{"slot":461381535,"apiVersion":"4.3.0-alpha.2"},"value":33598050364},"id":1}
+== exit 0 ==
