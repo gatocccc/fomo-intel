@@ -1,4 +1,3 @@
-Oct 24 18:30:22 simplai-prod python3[380576]: 2026-10-24 18:30:22,350 WARNING live: venta CONTRAIL (trailing) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:30:33 simplai-prod python3[380576]: 2026-10-24 18:30:33,039 WARNING live: venta CONTRAIL (trailing) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:30:43 simplai-prod python3[380576]: 2026-10-24 18:30:43,529 WARNING live: venta CONTRAIL (trailing) falló: cotización: swap api 500: {"error":"Failed to swap"}
 Oct 24 18:30:53 simplai-prod python3[380576]: 2026-10-24 18:30:53,967 WARNING live: venta CONTRAIL (trailing) falló: cotización: swap api 500: {"error":"Failed to swap"}
@@ -298,3 +297,4 @@ Oct 25 01:33:52 simplai-prod python3[393883]: 2026-10-25 01:33:52,692 INFO live:
 Oct 25 01:38:01 simplai-prod python3[393883]: 2026-10-25 01:38:01,223 INFO live.rules_st: CANDIDATO v1.2 Movember move=4.0x compradores=61 vol=$4687 snipers=19 -> confirma a T3
 Oct 25 01:38:53 simplai-prod python3[393883]: 2026-10-25 01:38:53,568 INFO live: latido: stream=True tokens_vistos=6451 seguidos=435 candidatos=0 abiertas=0 cerradas=18 st_requests=323 SOL=$102
 Oct 25 01:39:05 simplai-prod python3[393883]: 2026-10-25 01:39:05,986 INFO live: señal Movember no operada: STOP manual
+Oct 25 01:43:54 simplai-prod python3[393883]: 2026-10-25 01:43:54,502 INFO live: latido: stream=True tokens_vistos=6535 seguidos=424 candidatos=0 abiertas=0 cerradas=18 st_requests=324 SOL=$102
