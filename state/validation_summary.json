@@ -1,25 +1,25 @@
 {
- "ts": 1792951623,
- "nunca_vistos": 3496,
+ "ts": 1792962423,
+ "nunca_vistos": 3662,
  "quota_out": false,
  "rules": {
   "v1": {
-   "finales": 361,
-   "aciertos": 0.385,
-   "total": 15.7,
-   "provisorias": 21
+   "finales": 365,
+   "aciertos": 0.381,
+   "total": 14.56,
+   "provisorias": 30
   },
   "v1.1": {
-   "finales": 184,
-   "aciertos": 0.5,
-   "total": 28.17,
+   "finales": 188,
+   "aciertos": 0.489,
+   "total": 27.03,
    "provisorias": 13
   },
   "v1.2": {
-   "finales": 143,
-   "aciertos": 0.538,
-   "total": 24.32,
-   "provisorias": 9
+   "finales": 147,
+   "aciertos": 0.531,
+   "total": 23.57,
+   "provisorias": 8
   }
  }
 }
