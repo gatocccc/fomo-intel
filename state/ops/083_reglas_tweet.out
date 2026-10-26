@@ -1,0 +1,37 @@
+== 083_reglas_tweet 2026-10-26T20:46:03Z ==
+sombra desde 12:41 ART: 14213 creados, 6169 de tweet (43%)
+compras grandes de decu: 60 | vistas por la sombra: 55 (92%) | de tweet: 50
+
+COMPRADOS por decu: n=50
+  tweet->creación s: mediana 7.0
+  herramienta: [('metadata.j7tracker.io', 27), ('meta.uxento.io', 8), ('md.sdfgsdfsdf.uk', 5), ('pump.mypinata.cloud', 3), ('m.rapidlaunch.io', 2)]
+  autores: [('himothyjamesjr_', 3), ('meggarwicky', 3), ('essencepnl', 2), ('early404', 2), ('guibibeau', 1), ('forestmansol555', 1), ('0xbl33q', 1), ('444dev444', 1), ('lalosalamx', 1), ('mystiquexbt', 1)]
+  mint sin 'pump': 9 | con web: 33
+
+tweet NO comprados: n=6119
+  tweet->creación s: mediana 36.1
+  herramienta: [('metadata.j7tracker.io', 3170), ('pump.mypinata.cloud', 890), ('meta.uxento.io', 520), ('m.rapidlaunch.io', 279), ('md.sdfgsdfsdf.uk', 224)]
+  autores: [('elonmusk', 388), ('i', 152), ('toly', 131), ('petais0l', 115), ('meggarwicky', 109), ('floorwatch_', 98), ('warriors_based', 82), ('essencepnl', 76), ('devvvooooor', 75), ('ddddddd8a', 67)]
+  mint sin 'pump': 1757 | con web: 3137
+decu: segundos desde la creación hasta su compra: [3.1, 3.6, 4.0, 4.6, 4.7, 5.0, 5.4, 5.7, 5.8, 5.8, 6.2, 6.7, 6.7, 6.9, 7.2, 7.3, 7.3, 7.4, 7.4, 7.4, 7.4, 8.1, 8.2, 8.3, 8.4, 8.5, 8.5, 8.7, 9.1, 9.7, 10.1, 11.7, 12.2, 12.4, 12.4, 12.4, 13.9, 15.8, 20.9, 38.8]
+compras de decu en tokens de tweet vistos: 50
+rango de lo que compra decu: Counter({1: 35, 6: 6, 3: 6, 2: 2, 5: 1})
+tweet->creación de lo que compra decu: [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 4, 4, 5, 5, 6, 6, 7, 8, 8, 12, 13, 13, 14, 16, 29, 30, 33, 35, 39, 43, 51, 53, 53, 58, 67, 70, 133, 187, 247, 262, 69928]
+
+R1 rank1 & tw<=10s: 1054 tokens (207/h) | decu compró 27 (3% precisión) | captura 27/50 de sus compras
+   SIM seg 2 (muestra 69): acierto 10% mediana -0.37 media -0.195 | sin los que compró decu: media -0.195
+
+R2 rank1 & tw<=20s: 1261 tokens (248/h) | decu compró 31 (2% precisión) | captura 31/50 de sus compras
+   SIM seg 2 (muestra 65): acierto 11% mediana -0.37 media -0.202 | sin los que compró decu: media -0.217
+
+R3 rank1 & tw<=10s & j7: 649 tokens (128/h) | decu compró 17 (3% precisión) | captura 17/50 de sus compras
+   SIM seg 2 (muestra 69): acierto 10% mediana -0.33 media -0.177 | sin los que compró decu: media -0.212
+
+R4 rank<=2 & tw<=15s: 1655 tokens (326/h) | decu compró 30 (2% precisión) | captura 30/50 de sus compras
+   SIM seg 2 (muestra 54): acierto 9% mediana -0.37 media -0.170 | sin los que compró decu: media -0.214
+
+R5 rank1 & 0<tw<=8s & web: 557 tokens (110/h) | decu compró 14 (3% precisión) | captura 14/50 de sus compras
+   SIM seg 2 (muestra 70): acierto 17% mediana -0.37 media -0.119 | sin los que compró decu: media -0.135
+
+latencia metadatos tokens de tweet: p50 0.34 p75 0.53 | <=1s: 82%
+== exit 0 ==
