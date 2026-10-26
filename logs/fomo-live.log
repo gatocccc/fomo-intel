@@ -1,4 +1,3 @@
-Oct 26 02:00:21 simplai-prod python3[585537]: 2026-10-26 02:00:21,471 INFO live.helius: HELIUS B32Qbb buy A61oMquK 4.0228 SOL @ 9.307e-08 (lat 0.9s)
 Oct 26 02:00:35 simplai-prod python3[585537]: 2026-10-26 02:00:35,615 INFO live.helius: HELIUS B32Qbb buy A61oMquK 0.2597 SOL @ 1.500e-07 (lat 0.9s)
 Oct 26 02:00:37 simplai-prod python3[585537]: 2026-10-26 02:00:37,367 INFO live.helius: HELIUS B32Qbb buy A61oMquK 0.2597 SOL @ 1.499e-07 (lat 0.9s)
 Oct 26 02:00:40 simplai-prod python3[585537]: 2026-10-26 02:00:40,675 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… A61oMquK 0.000 SOL
@@ -298,3 +297,4 @@ Oct 26 09:47:57 simplai-prod python3[585537]: 2026-10-26 09:47:57,332 INFO live:
 Oct 26 09:52:57 simplai-prod python3[585537]: 2026-10-26 09:52:57,875 INFO live: latido: stream=True tokens_vistos=5689 seguidos=138 candidatos=0 abiertas=0 cerradas=2 st_requests=128 SOL=$102
 Oct 26 09:57:58 simplai-prod python3[585537]: 2026-10-26 09:57:58,106 INFO live: latido: stream=True tokens_vistos=5769 seguidos=118 candidatos=0 abiertas=0 cerradas=2 st_requests=128 SOL=$102
 Oct 26 10:02:58 simplai-prod python3[585537]: 2026-10-26 10:02:58,428 INFO live: latido: stream=True tokens_vistos=5851 seguidos=102 candidatos=0 abiertas=0 cerradas=2 st_requests=129 SOL=$102
+Oct 26 10:07:58 simplai-prod python3[585537]: 2026-10-26 10:07:58,955 INFO live: latido: stream=True tokens_vistos=5893 seguidos=70 candidatos=0 abiertas=0 cerradas=2 st_requests=130 SOL=$101
