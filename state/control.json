@@ -1,6 +1,6 @@
 {
  "mode": "real",
- "trading_enabled": true,
+ "trading_enabled": false,
  "panic": false,
  "size_usd": 10.0,
  "max_open": 3,
