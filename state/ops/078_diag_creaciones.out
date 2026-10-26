@@ -1,0 +1,19 @@
+== 078_diag_creaciones 2026-10-26T15:26:03Z ==
+8oNMjTvkDU no visto | fin=KRki | tx v0 | pump=True | prog1=['ComputeBudge', 'ComputeBudge', '6EF8rrecthR5'] | inst=['CreateV2', 'InitializeMint2', 'GetAccountDataSize', 'InitializeImmutableOwner', 'InitializeAccount3', 'Initialize'] | firmas>=2153 | decu 2.01 SOL
+9oZ96M1eKm no visto | fin=Cwje | tx v1 | pump=False | prog1=['L2TExMFKdjpN'] | inst=[] | firmas>=5000 | decu 3.01 SOL
+4qwHaobYN4 VISTO | fin=PJM9 | tx v0 | pump=False | prog1=['ComputeBudge', 'ComputeBudge', 'ComputeBudge'] | inst=['SellV2'] | firmas>=5000 | decu 3.01 SOL
+9wWbxwZ3Eh no visto | fin=pump | tx v1 | pump=True | prog1=['6EF8rrecthR5', 'J7pourVwqP1V', 'ATokenGPvbdG'] | inst=['CreateV2', 'InitializeMint2', 'GetAccountDataSize', 'InitializeImmutableOwner', 'InitializeAccount3', 'GetAccountDataSize'] | firmas>=4583 | decu 2.51 SOL
+3cnYu3hFYn no visto | fin=LH9c | tx v1 | pump=True | prog1=['111111111111', 'ATokenGPvbdG', '111111111111'] | inst=['SwapV2', 'TransferChecked', 'CreateV2', 'InitializeMint2', 'GetAccountDataSize', 'InitializeImmutableOwner'] | firmas>=1675 | decu 2.01 SOL
+9wccGbB9aZ no visto | fin=pump | tx v1 | pump=False | prog1=['6boYuqKaxxj7'] | inst=[] | firmas>=5000 | decu 2.01 SOL
+CKUbsKpEyy no visto | fin=pump | tx v1 | pump=False | prog1=['dtQPecSsGzsT'] | inst=[] | firmas>=5000 | decu 3.01 SOL
+7TpPN7Vu4r no visto | fin=pump | tx v1 | pump=True | prog1=['term9YPb9mzA', 'term9YPb9mzA', '111111111111'] | inst=['ValidateNonce', 'Route', 'InitializeAccount3', 'SellV3', 'TransferChecked', 'TransferChecked'] | firmas>=5000 | decu 3.01 SOL
+9hupbUrdRa no visto | fin=pump | tx v1 | pump=False | prog1=['ComputeBudge', 'BevFQ2LKT3ri'] | inst=[] | firmas>=5000 | decu 2.01 SOL
+EkT6PE1CBa no visto | fin=pump | tx v1 | pump=False | prog1=['L2TExMFKdjpN'] | inst=[] | firmas>=5000 | decu 2.51 SOL
+H51PshnsEM VISTO | fin=pump | tx v0 | pump=True | prog1=['111111111111', '6EF8rrecthR5', '6EF8rrecthR5'] | inst=['CreateV2', 'InitializeMint2', 'GetAccountDataSize', 'InitializeImmutableOwner', 'InitializeAccount3', 'GetAccountDataSize'] | firmas>=4748 | decu 2.01 SOL
+F5kyCivfh5 no visto | fin=pump | tx v0 | pump=False | prog1=['9YTw7dfEhXYq'] | inst=[] | firmas>=5000 | decu 2.01 SOL
+8qLXVJWBDW no visto | fin=pump | tx vlegacy | pump=False | prog1=['ComputeBudge', 'ComputeBudge', 'ATokenGPvbdG'] | inst=['GetAccountDataSize', 'InitializeImmutableOwner', 'InitializeAccount3', 'BuyExactQuoteInV3'] | firmas>=5000 | decu 2.01 SOL
+ATUS6eYZqo no visto | fin=pump | tx v0 | pump=False | prog1=['ComputeBudge', 'ComputeBudge', 'ComputeBudge'] | inst=[] | firmas>=5000 | decu 2.51 SOL
+5hbCTx53hn no visto | fin=e1HZ | tx v1 | pump=False | prog1=['L2TExMFKdjpN'] | inst=[] | firmas>=5000 | decu 3.01 SOL
+2qbaRGyVhF no visto | fin=pump | tx v1 | pump=False | prog1=['3z1z548tXG1s'] | inst=[] | firmas>=5000 | decu 2.01 SOL
+versión/pump: Counter({(1, False): 7, (0, False): 3, (1, True): 3, (0, True): 2, ('legacy', False): 1})
+== exit 0 ==
