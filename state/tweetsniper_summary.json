@@ -1,7 +1,7 @@
 {
- "ts": 1793057698.0978355,
+ "ts": 1793058000.7474837,
  "lag_slots": 1,
- "tokens_tracked": 1762,
+ "tokens_tracked": 1954,
  "ctrl": {
   "enabled": true,
   "mode": "paper",
@@ -17,19 +17,47 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "tweet": 1653,
-  "no_tweet": 2051,
-  "meta_fail": 954,
-  "sin_meta_a_tiempo": 825,
-  "entra": 1
+  "tweet": 1718,
+  "no_tweet": 2148,
+  "meta_fail": 990,
+  "sin_meta_a_tiempo": 855,
+  "entra": 3
  },
  "open": [],
- "sol_usd": 100.67908230989036,
- "closed": 1,
- "wins": 1,
- "pnl_usd": 0.66,
- "ret_sum": 0.132,
+ "sol_usd": 100.81225315586201,
+ "closed": 3,
+ "wins": 2,
+ "pnl_usd": -0.29,
+ "ret_sum": -0.06,
  "last": [
+  {
+   "ts": 1793057993.4242995,
+   "day": "2026-10-26",
+   "mint": "3z41cWgyxbYreLWjgcdmE2UsKxy6VWD7sXjJRL1zpump",
+   "symbol": "JAYTRADING",
+   "mode": "paper",
+   "why": "tiempo",
+   "ret": -0.235,
+   "pnl_usd": -1.17,
+   "peak_mult": 1.0,
+   "hold_s": 80,
+   "entry_age_s": 2.5,
+   "score": 0.2847
+  },
+  {
+   "ts": 1793057862.0697691,
+   "day": "2026-10-26",
+   "mint": "DVTrDNyw7SeNCN3TfgFZ1ptoCtPonMjXJAgHGwxWpump",
+   "symbol": "MAGNOLIA",
+   "mode": "paper",
+   "why": "tiempo",
+   "ret": 0.043,
+   "pnl_usd": 0.22,
+   "peak_mult": 1.13,
+   "hold_s": 80,
+   "entry_age_s": 2.2,
+   "score": 0.2776
+  },
   {
    "ts": 1793051963.5510356,
    "day": "2026-10-26",
