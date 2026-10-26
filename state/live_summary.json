@@ -1,5 +1,5 @@
 {
- "ts": 1792977900.1689167,
+ "ts": 1792978200.749058,
  "mode": "real",
  "open": 0,
  "closed": 2,
@@ -50,11 +50,11 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.3076,
- "sol_usd": 101.03577257966295,
+ "sol_usd": 101.45694759746975,
  "stream_connected": true,
- "stream_msgs": 1974,
- "tokens_seen": 1504,
- "tokens_tracked": 60,
+ "stream_msgs": 2271,
+ "tokens_seen": 1550,
+ "tokens_tracked": 61,
  "candidates": [],
  "strategy": "factory",
  "followed_wallets": 0,
@@ -63,35 +63,35 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 106390,
-  "parsed": 74,
-  "skipped": 106302,
-  "fast_creates": 3,
+  "notifications": 111000,
+  "parsed": 92,
+  "skipped": 110892,
+  "fast_creates": 4,
   "subs": 2,
   "errors": []
  },
  "follow_buys_seen": 0,
- "st_requests": 28,
+ "st_requests": 29,
  "stream_errors": [
   "23:48:02 Connection to remote host was lost.",
   "23:48:07 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 23:48:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "rules_st": null,
  "stream_counts": {
-  "otros": 9,
-  "create": 1538,
-  "sell": 208,
-  "buy": 219
+  "otros": 10,
+  "create": 1584,
+  "sell": 326,
+  "buy": 351
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}"
+  "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 427,
- "stream_cost_sol_est": 0.0004,
+ "stream_trades": 677,
+ "stream_cost_sol_est": 0.0007,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "real",
