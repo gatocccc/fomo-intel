@@ -1,5 +1,5 @@
 {
- "ts": 1793024702.7427917,
+ "ts": 1793025003.4944553,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-26",
-  "seen": 65,
+  "seen": 66,
   "bought": 1,
   "by_reason": {
-   "freno": 44,
+   "freno": 45,
    "en_banco": 12,
    "precio_corrido": 4,
    "compra_fallida": 4,
@@ -45,11 +45,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.2454,
- "sol_usd": 101.47407462146717,
+ "sol_usd": 101.30261169649337,
  "stream_connected": true,
- "stream_msgs": 1900,
- "tokens_seen": 1674,
- "tokens_tracked": 136,
+ "stream_msgs": 2030,
+ "tokens_seen": 1801,
+ "tokens_tracked": 158,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -58,24 +58,25 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 785297,
-  "parsed": 125,
-  "skipped": 784749,
+  "notifications": 856525,
+  "parsed": 128,
+  "skipped": 855954,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
-   "14:04:07 getTransaction: Expecting value: line 1 column 1 (char 0)",
    "14:04:12 getTransaction: Expecting value: line 1 column 1 (char 0)",
-   "14:04:18 getTransaction: Expecting value: line 1 column 1 (char 0)"
+   "14:04:18 getTransaction: Expecting value: line 1 column 1 (char 0)",
+   "14:26:03 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 27,
+ "follow_buys_seen": 28,
  "guard": {
   "alerts": [
    "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
    "13:39:39 buy 5mAbrm3s fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
    "13:45:29 buy 9PNK23MB fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
-   "13:47:11 buy 78vqoxGG fall\u00f3: cotizaci\u00f3n: swap api 500: {\"error\":\"Failed to swap\"} | pumpportal: pumpportal 400: Bad Req"
+   "13:47:11 buy 78vqoxGG fall\u00f3: cotizaci\u00f3n: swap api 500: {\"error\":\"Failed to swap\"} | pumpportal: pumpportal 400: Bad Req",
+   "14:26:06 fuente de se\u00f1ales recuperada tras 2 s"
   ],
   "bench": 4,
   "bench_by_reason": {
@@ -85,12 +86,12 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 20,
+ "st_requests": 21,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 4,
-  "create": 1722,
+  "create": 1852,
   "sell": 102,
   "buy": 72
  },
