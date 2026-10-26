@@ -1,5 +1,5 @@
 {
- "ts": 1792978200.749058,
+ "ts": 1792978501.0420244,
  "mode": "real",
  "open": 0,
  "closed": 2,
@@ -50,11 +50,11 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.3076,
- "sol_usd": 101.45694759746975,
+ "sol_usd": 101.02510394641261,
  "stream_connected": true,
- "stream_msgs": 2271,
- "tokens_seen": 1550,
- "tokens_tracked": 61,
+ "stream_msgs": 2512,
+ "tokens_seen": 1583,
+ "tokens_tracked": 64,
  "candidates": [],
  "strategy": "factory",
  "followed_wallets": 0,
@@ -63,35 +63,35 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 111000,
+  "notifications": 116280,
   "parsed": 92,
-  "skipped": 110892,
+  "skipped": 116171,
   "fast_creates": 4,
   "subs": 2,
   "errors": []
  },
  "follow_buys_seen": 0,
- "st_requests": 29,
+ "st_requests": 30,
  "stream_errors": [
   "23:48:02 Connection to remote host was lost.",
   "23:48:07 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 23:48:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "rules_st": null,
  "stream_counts": {
-  "otros": 10,
-  "create": 1584,
-  "sell": 326,
-  "buy": 351
+  "otros": 11,
+  "create": 1619,
+  "sell": 425,
+  "buy": 457
  },
  "stream_samples": [
-  "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}"
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 677,
- "stream_cost_sol_est": 0.0007,
+ "stream_trades": 882,
+ "stream_cost_sol_est": 0.0009,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "real",

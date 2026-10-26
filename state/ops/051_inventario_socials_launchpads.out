@@ -1,0 +1,25 @@
+== 051_inventario_socials_launchpads 2026-10-26T01:33:02Z ==
+launches_raw: 3530 | launches: 4389 | charts: 4888
+campos top: ['buys', 'events', 'holders', 'pools', 'risk', 'sells', 'token', 'txns']
+campos token: ['attributes', 'banner', 'coin_community', 'collection', 'createdOn', 'createdOnName', 'created_on', 'creation', 'creator', 'creators', 'decimals', 'description', 'extensions', 'external_url', 'hasFileMetaData', 'image', 'image_type', 'isMutable', 'mind', 'mint', 'name', 'onepad', 'properties', 'sellerFeeBasisPoints', 'seller_fee_basis_points', 'showName', 'show_name', 'strictSocials', 'symbol', 'tags', 'telegram', 'twitter', 'uri', 'uses', 'video', 'website']
+ejemplo con socials: {'name': 'ChatGPT', 'symbol': 'ChatGPT', 'twitter': 'https://x.com/ChatGPT', 'telegram': '', 'website': 'https://t.co/4Om8Pmvm85', 'createdOn': None, 'showName': None, 'description': 'ChatGPT is for the people.'}
+launchpads: [('pumpfun', 3041), ('meteora', 339), ('raydium-launchpad', 83), ('meteora-dyn-v2', 35), ('pumpfun-amm', 27), ('raydium-cpmm', 2), ('raydium-clmm', 2), ('raydium', 1)]
+socials (tw/tg/web) -> n, graduados, tasa:
+   tw-web     n= 1354 grad= 919 67.9%
+   ---        n= 1074 grad= 474 44.1%
+   tw--       n=  763 grad= 338 44.3%
+   twtgweb    n=  185 grad= 157 84.9%
+   --web      n=  139 grad=  87 62.6%
+   -tg-       n=    8 grad=   4 50.0%
+   twtg-      n=    4 grad=   2 50.0%
+   -tgweb     n=    3 grad=   2 66.7%
+dev vendió vs graduación: {'dev_vendio': (837, 566, 0.676), 'dev_no_vendio': (615, 511, 0.831)}
+mercados en /tokens/latest: [('pumpfun', 52), ('meteora-curve', 14), ('pumpfun-amm', 7), ('meteora-dyn-v2', 7), ('raydium-launchpad', 1)]
+search {'market': 'bags', 'limit': 50} -> 200 n= 0 | ej: 
+search {'market': 'bags-curve', 'limit': 50} -> 200 n= 0 | ej: 
+search {'query': '', 'market': 'bags', 'sortBy': 'createdAt', 'limit': 50} -> 200 n= 0 | ej: 
+bags https://public-api-v2.bags.fm/api/v1/token-launch/leaderboard -> 404 <!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <title>Error</title> </head> <body> <pre>Cannot GET /api/v1/token-launch/leaderboard</pre> <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.inne
+bags https://api2.bags.fm/api/v1/token-launch/leaderboard -> 200 {"success":true,"response":[{"tokenAddress":"Gj4TowizfdkRJNsTgBEkj2WpBZZmGE7o9nN8q6RhBAGS","price":0.001364437996131808,"name":"Upward Spiral","symbol":"LORIA","image":"https://ipfs.io/ipfs/QmTYaMfxooYRKpULveZKcfywrRHzDc9BWd85D4iahL6Q5U"},{"tokenAddress":"4UeLCRqARmfb6e6KQijtiktqqXUxbfk6jZng7DhuBAGS
+bags https://bags.fm/api/v1/token-launch/leaderboard -> 404 <!DOCTYPE html><html class="__variable_09f25f __variable_457bab __variable_f40fba dark" lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/_next/static/media/61fddeaa45855a5d-s.p.otf" as="font" crossorigin="" type="f
+BAGS_API_KEY en .env: False
+== exit 0 ==
