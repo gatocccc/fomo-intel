@@ -22,27 +22,35 @@ import requests
 import websocket
 
 OUT = Path("state/tweetshadow"); OUT.mkdir(parents=True, exist_ok=True)
-GATEWAYS = ["https://ipfs.io/ipfs/", "https://cf-ipfs.com/ipfs/", "https://gateway.pinata.cloud/ipfs/"]
 q: queue.Queue = queue.Queue()
 stats = Counter()
 lock = threading.Lock()
 
 
+GATEWAYS = ["https://pump.mypinata.cloud/ipfs/", "https://gateway.pinata.cloud/ipfs/", "https://dweb.link/ipfs/", "https://ipfs.io/ipfs/",
+            "https://w3s.link/ipfs/", "https://nftstorage.link/ipfs/"]
+
+
 def fetch_meta(uri: str) -> tuple[dict, float, str]:
+    """Hasta 3 rondas (0 s, +4 s, +15 s); en IPFS rota gateways. Devuelve (meta, latencia del intento bueno, host o fail)."""
+    import random
     t0 = time.time()
-    urls = [uri]
-    if "/ipfs/" in uri:
-        cid = uri.split("/ipfs/", 1)[1]
-        urls += [g + cid for g in GATEWAYS if not uri.startswith(g)]
     last = ""
-    for u in urls:
-        try:
-            r = requests.get(u, timeout=4)
-            if r.ok:
-                return r.json(), time.time() - t0, u.split("/")[2]
-            last = f"{r.status_code}"
-        except Exception as e:  # noqa: BLE001
-            last = str(e)[:60]
+    for wait in (0, 4, 15):
+        time.sleep(wait)
+        urls = [uri]
+        if "/ipfs/" in uri:
+            cid = uri.split("/ipfs/", 1)[1]
+            gs = GATEWAYS[:]; random.shuffle(gs)
+            urls = [g + cid for g in gs[:3]] + [uri]
+        for u in urls:
+            try:
+                r = requests.get(u, timeout=4)
+                if r.ok:
+                    return r.json(), time.time() - t0, u.split("/")[2]
+                last = f"{r.status_code}"
+            except Exception as e:  # noqa: BLE001
+                last = str(e)[:60]
     return {}, time.time() - t0, "fail:" + last
 
 
@@ -142,7 +150,7 @@ def run_helius(t_end: float):
 def main():
     dur = float(sys.argv[1]) if len(sys.argv) > 1 else 36000
     if len(sys.argv) > 2 and sys.argv[2] == "helius":
-        pool = ThreadPoolExecutor(16)
+        pool = ThreadPoolExecutor(48)
         threading.Thread(target=worker, args=(pool,), daemon=True).start()
         run_helius(time.time() + dur); print("fin", dict(stats), flush=True); return
     t_end = time.time() + dur
