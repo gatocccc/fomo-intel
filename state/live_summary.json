@@ -1,5 +1,5 @@
 {
- "ts": 1793026802.320501,
+ "ts": 1793027102.7907813,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-26",
-  "seen": 72,
+  "seen": 76,
   "bought": 1,
   "by_reason": {
-   "freno": 51,
+   "freno": 55,
    "en_banco": 12,
    "precio_corrido": 4,
    "compra_fallida": 4,
@@ -45,11 +45,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.2454,
- "sol_usd": 101.76736913442274,
+ "sol_usd": 101.94560775102762,
  "stream_connected": true,
- "stream_msgs": 2496,
- "tokens_seen": 2259,
- "tokens_tracked": 130,
+ "stream_msgs": 2574,
+ "tokens_seen": 2336,
+ "tokens_tracked": 115,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -58,9 +58,9 @@
  "account_trades": 1,
  "helius": {
   "connected": true,
-  "notifications": 1254071,
-  "parsed": 141,
-  "skipped": 1253386,
+  "notifications": 1339453,
+  "parsed": 149,
+  "skipped": 1338751,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
@@ -69,7 +69,7 @@
    "14:26:03 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 32,
+ "follow_buys_seen": 33,
  "guard": {
   "alerts": [
    "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
@@ -86,12 +86,12 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 26,
+ "st_requests": 27,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 4,
-  "create": 2317,
+  "create": 2395,
   "sell": 102,
   "buy": 73
  },
