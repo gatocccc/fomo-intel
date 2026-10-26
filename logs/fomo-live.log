@@ -1,4 +1,3 @@
-Oct 26 02:18:46 simplai-prod python3[585537]: 2026-10-26 02:18:46,570 INFO live: FABRICA (Helius) B32Qbb… creó 5SUJUTNi
 Oct 26 02:18:46 simplai-prod python3[585537]: 2026-10-26 02:18:46,571 INFO live: FABRICA B32Qbb… creó 5SUJUT (5SUJUTNi) -> entrando
 Oct 26 02:18:47 simplai-prod python3[585537]: 2026-10-26 02:18:47,393 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… 5SUJUTNi 1.941 SOL
 Oct 26 02:18:48 simplai-prod python3[585537]: 2026-10-26 02:18:48,330 INFO live.helius: HELIUS B32Qbb sell 5SUJUTNi 1.8918 SOL @ 4.937e-08 (lat 0.9s)
@@ -298,3 +297,4 @@ Oct 26 10:52:04 simplai-prod python3[697392]: 2026-10-26 10:52:04,858 INFO live:
 Oct 26 10:57:04 simplai-prod python3[697392]: 2026-10-26 10:57:04,728 INFO live: latido: stream=True tokens_vistos=58 seguidos=58 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$101
 Oct 26 11:02:05 simplai-prod python3[697392]: 2026-10-26 11:02:05,709 INFO live: latido: stream=True tokens_vistos=111 seguidos=93 candidatos=0 abiertas=0 cerradas=0 st_requests=2 SOL=$101
 Oct 26 11:07:06 simplai-prod python3[697392]: 2026-10-26 11:07:06,000 INFO live: latido: stream=True tokens_vistos=145 seguidos=53 candidatos=0 abiertas=0 cerradas=0 st_requests=3 SOL=$101
+Oct 26 11:12:06 simplai-prod python3[697392]: 2026-10-26 11:12:06,497 INFO live: latido: stream=True tokens_vistos=181 seguidos=55 candidatos=0 abiertas=0 cerradas=0 st_requests=4 SOL=$101
