@@ -1,5 +1,3 @@
-Oct 26 13:51:10 simplai-prod python3[718129]: 2026-10-26 13:51:10,825 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… Ekb1Ej4u 0.000 SOL
-Oct 26 13:51:11 simplai-prod python3[718129]: 2026-10-26 13:51:11,332 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… Ekb1Ej4u 0.000 SOL
 Oct 26 13:51:11 simplai-prod python3[718129]: 2026-10-26 13:51:11,715 INFO live.helius: HELIUS 4vw54B sell Ekb1Ej4u 3.0457 SOL @ 2.539e-07 (lat 0.9s)
 Oct 26 13:51:11 simplai-prod python3[718129]: 2026-10-26 13:51:11,816 INFO live.helius: HELIUS 4vw54B sell Ekb1Ej4u 1.7649 SOL @ 2.207e-07 (lat 0.5s)
 Oct 26 13:51:17 simplai-prod python3[718129]: 2026-10-26 13:51:17,110 INFO live.helius: HELIUS 4vw54B buy Ekb1Ej4u 0.2600 SOL @ 2.303e-07 (lat 0.9s)
@@ -298,3 +296,5 @@ Oct 26 16:23:48 simplai-prod python3[718129]: 2026-10-26 16:23:48,238 INFO live.
 Oct 26 16:24:15 simplai-prod python3[718129]: 2026-10-26 16:24:15,352 INFO live.helius: HELIUS 4vw54B buy 3QDbhasy 0.2600 SOL @ 9.549e-08 (lat 0.9s)
 Oct 26 16:24:37 simplai-prod python3[718129]: 2026-10-26 16:24:37,027 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 3QDbhasy 2.789 SOL
 Oct 26 16:24:37 simplai-prod python3[718129]: 2026-10-26 16:24:37,894 INFO live.helius: HELIUS 4vw54B sell 3QDbhasy 2.7218 SOL @ 5.410e-08 (lat 0.9s)
+Oct 26 16:27:29 simplai-prod python3[718129]: 2026-10-26 16:27:29,839 INFO live: latido: stream=True tokens_vistos=3892 seguidos=128 candidatos=0 abiertas=0 cerradas=1 st_requests=44 SOL=$101
+Oct 26 16:28:58 simplai-prod python3[718129]: 2026-10-26 16:28:58,326 INFO live.helius: HELIUS create RÁPIDO 4vw54B… -> 9UzMkAnf slot 461732009 precio 2.805e-08
