@@ -1,0 +1,40 @@
+== 077_sombra_parcial 2026-10-26T15:22:03Z ==
+14:52:16 creados 704 | con tweet 284 (40%) | metadatos ok 53% | latencia metadatos media 1.54s
+15:02:18 creados 880 | con tweet 364 (41%) | metadatos ok 52% | latencia metadatos media 1.28s
+15:12:21 creados 1044 | con tweet 422 (40%) | metadatos ok 50% | latencia metadatos media 1.11s
+registrados: 1290 desde 11:12 ART | con tweet: 509 | metadatos ok: 693
+compras grandes de decu desde que arrancó la sombra: 16 tokens
+de esas, vistas por la sombra: 2 (12%)
+compradas con tweet: 1 de 2
+
+compradas por decu: n=1
+  tweet->creación s mediana 192.4
+  herramienta [('meta.uxento.io', 1)]
+  autores [('correctoor', 1)]
+  init_sol mediana 0.815213748 | mcap_sol mediana 29.499142538858262
+
+tweet NO compradas: n=508
+  tweet->creación s mediana 16.9
+  herramienta [('metadata.j7tracker.io', 213), ('meta.uxento.io', 117), ('ipfs2.extraction.live', 37), ('gateway.pinata.cloud', 23), ('gg.sc', 22)]
+  autores [('devvvooooor', 38), ('i', 20), ('quantsdev1223', 13), ('zumpsol', 13), ('jncquant', 11), ('essencepnl', 11), ('jigglypoostools', 11), ('njpigeon', 10)]
+  init_sol mediana 0 | mcap_sol mediana 27.958993476234856
+
+tokens por tweet: [(1, 181), (2, 64), (3, 26), (4, 11), (5, 4), (6, 4), (8, 2), (9, 2)]
+tweets con compra de decu: 1 de 294
+  tamaño del grupo en esos tweets: [1]
+   correctoor | tokens: 1 | decu compró el # [1] | ['Crime ']
+  no visto: 8oNMjTvkDU 1 min
+  no visto: 9oZ96M1eKm 1 min
+  no visto: 9wWbxwZ3Eh 3 min
+  no visto: 3cnYu3hFYn 6 min
+  no visto: 9wccGbB9aZ 8 min
+  no visto: CKUbsKpEyy 13 min
+  no visto: 7TpPN7Vu4r 18 min
+  no visto: 9hupbUrdRa 23 min
+  no visto: EkT6PE1CBa 29 min
+  no visto: F5kyCivfh5 40 min
+  no visto: 8qLXVJWBDW 51 min
+  no visto: ATUS6eYZqo 55 min
+  no visto: 5hbCTx53hn 63 min
+  no visto: 2qbaRGyVhF 65 min
+== exit 0 ==
