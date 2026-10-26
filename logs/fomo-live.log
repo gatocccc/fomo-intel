@@ -1,14 +1,3 @@
-Oct 26 02:21:19 simplai-prod python3[585537]: 2026-10-26 02:21:19,781 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… ESm72rR9 0.379 SOL
-Oct 26 02:21:20 simplai-prod python3[585537]: 2026-10-26 02:21:20,667 INFO live.helius: HELIUS B32Qbb sell ESm72rR9 0.3649 SOL @ 4.342e-08 (lat 0.9s)
-Oct 26 02:22:20 simplai-prod python3[585537]: 2026-10-26 02:22:20,645 INFO live: latido: stream=True tokens_vistos=1964 seguidos=71 candidatos=0 abiertas=0 cerradas=2 st_requests=40 SOL=$101
-Oct 26 02:23:58 simplai-prod python3[585537]: 2026-10-26 02:23:58,149 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… 8EDY7iw5 1.183 SOL
-Oct 26 02:23:58 simplai-prod python3[585537]: 2026-10-26 02:23:58,236 INFO live.helius: HELIUS B32Qbb sell 8EDY7iw5 1.1507 SOL @ 1.332e-07 (lat 0.1s)
-Oct 26 02:27:20 simplai-prod python3[585537]: 2026-10-26 02:27:20,783 INFO live: latido: stream=True tokens_vistos=1994 seguidos=65 candidatos=0 abiertas=0 cerradas=2 st_requests=41 SOL=$101
-Oct 26 02:32:20 simplai-prod python3[585537]: 2026-10-26 02:32:20,917 INFO live: latido: stream=True tokens_vistos=2035 seguidos=52 candidatos=0 abiertas=0 cerradas=2 st_requests=42 SOL=$101
-Oct 26 02:32:32 simplai-prod python3[585537]: 2026-10-26 02:32:32,357 INFO live.helius: HELIUS B32Qbb buy 6NftqSSq 1.6640 SOL @ 8.434e-08 (lat 0.9s)
-Oct 26 02:32:35 simplai-prod python3[585537]: 2026-10-26 02:32:35,818 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… 6NftqSSq 0.933 SOL
-Oct 26 02:32:38 simplai-prod python3[585537]: 2026-10-26 02:32:38,820 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… 6NftqSSq 0.646 SOL
-Oct 26 02:32:40 simplai-prod python3[585537]: 2026-10-26 02:32:40,896 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… 6NftqSSq 0.617 SOL
 Oct 26 02:32:43 simplai-prod python3[585537]: 2026-10-26 02:32:43,026 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… 6NftqSSq 0.605 SOL
 Oct 26 02:32:45 simplai-prod python3[585537]: 2026-10-26 02:32:45,240 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… 6NftqSSq 0.560 SOL
 Oct 26 02:32:47 simplai-prod python3[585537]: 2026-10-26 02:32:47,289 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… 6NftqSSq 0.249 SOL
@@ -298,3 +287,14 @@ Oct 26 11:32:08 simplai-prod python3[697392]: 2026-10-26 11:32:08,431 INFO live:
 Oct 26 11:37:08 simplai-prod python3[697392]: 2026-10-26 11:37:08,840 INFO live: latido: stream=True tokens_vistos=355 seguidos=48 candidatos=0 abiertas=0 cerradas=0 st_requests=9 SOL=$101
 Oct 26 11:37:21 simplai-prod python3[697392]: 2026-10-26 11:37:21,330 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 6Fdodgtd 0.097 SOL
 Oct 26 11:42:08 simplai-prod python3[697392]: 2026-10-26 11:42:08,919 INFO live: latido: stream=True tokens_vistos=403 seguidos=69 candidatos=0 abiertas=0 cerradas=0 st_requests=10 SOL=$101
+Oct 26 11:45:03 simplai-prod python3[697392]: 2026-10-26 11:45:03,920 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
+Oct 26 11:45:06 simplai-prod python3[697392]: 2026-10-26 11:45:06,532 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 11:45:06 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 26 11:45:06 simplai-prod python3[697392]: <head><title>502 Bad Gateway</title></head>
+Oct 26 11:45:06 simplai-prod python3[697392]: <body>
+Oct 26 11:45:06 simplai-prod python3[697392]: <center><h1>502 Bad Gateway</h1></center>
+Oct 26 11:45:06 simplai-prod python3[697392]: <hr><center>nginx/1.22.1</center>
+Oct 26 11:45:06 simplai-prod python3[697392]: </body>
+Oct 26 11:45:06 simplai-prod python3[697392]: </html>
+Oct 26 11:45:06 simplai-prod python3[697392]: ; reconecto en 4s
+Oct 26 11:45:11 simplai-prod python3[697392]: 2026-10-26 11:45:11,186 INFO live.stream: stream conectado
+Oct 26 11:47:09 simplai-prod python3[697392]: 2026-10-26 11:47:09,257 INFO live: latido: stream=True tokens_vistos=437 seguidos=56 candidatos=0 abiertas=0 cerradas=0 st_requests=11 SOL=$101
