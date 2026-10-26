@@ -1,5 +1,5 @@
 {
- "ts": 1793044502.0740404,
+ "ts": 1793044802.2260058,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-26",
-  "seen": 190,
+  "seen": 192,
   "bought": 1,
   "by_reason": {
-   "freno": 169,
+   "freno": 171,
    "en_banco": 12,
    "precio_corrido": 4,
    "compra_fallida": 4,
@@ -45,22 +45,22 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.2454,
- "sol_usd": 100.33005901908814,
+ "sol_usd": 100.43159930974555,
  "stream_connected": true,
- "stream_msgs": 8277,
- "tokens_seen": 7898,
- "tokens_tracked": 84,
+ "stream_msgs": 8343,
+ "tokens_seen": 7961,
+ "tokens_tracked": 93,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
  "factories": 0,
  "factory_pending": 0,
- "account_trades": 25,
+ "account_trades": 26,
  "helius": {
   "connected": true,
-  "notifications": 4700710,
-  "parsed": 386,
-  "skipped": 4698723,
+  "notifications": 4751705,
+  "parsed": 391,
+  "skipped": 4749696,
   "fast_creates": 4,
   "subs": 1,
   "errors": [
@@ -69,7 +69,7 @@
    "19:32:06 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 90,
+ "follow_buys_seen": 92,
  "guard": {
   "alerts": [
    "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
@@ -86,7 +86,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 84,
+ "st_requests": 85,
  "stream_errors": [
   "15:35:02 Connection to remote host was lost.",
   "15:35:05 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 15:35:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
@@ -96,9 +96,9 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 8,
-  "create": 8070,
+  "create": 8135,
   "sell": 102,
-  "buy": 97
+  "buy": 98
  },
  "stream_samples": [
   "{\"message\":\"Unsubscribed.\"}",
