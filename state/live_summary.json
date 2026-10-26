@@ -1,5 +1,5 @@
 {
- "ts": 1792989303.4462664,
+ "ts": 1792989599.5605917,
  "mode": "real",
  "open": 0,
  "closed": 2,
@@ -50,11 +50,11 @@
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.3076,
- "sol_usd": 100.56840337385603,
+ "sol_usd": 101.05197208958755,
  "stream_connected": true,
- "stream_msgs": 5447,
- "tokens_seen": 3076,
- "tokens_tracked": 72,
+ "stream_msgs": 5486,
+ "tokens_seen": 3114,
+ "tokens_tracked": 55,
  "candidates": [],
  "strategy": "factory",
  "followed_wallets": 0,
@@ -63,32 +63,34 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 509819,
+  "notifications": 516743,
   "parsed": 190,
-  "skipped": 509565,
+  "skipped": 516488,
   "fast_creates": 11,
   "subs": 2,
   "errors": []
  },
  "follow_buys_seen": 0,
- "st_requests": 65,
+ "st_requests": 66,
  "stream_errors": [
   "23:48:02 Connection to remote host was lost.",
-  "23:48:07 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 23:48:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
+  "23:48:07 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 23:48:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
+  "04:35:05 Connection to remote host was lost.",
+  "04:35:07 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 04:35:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "rules_st": null,
  "stream_counts": {
-  "otros": 26,
-  "create": 3127,
+  "otros": 27,
+  "create": 3165,
   "sell": 1086,
   "buy": 1208
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}"
+  "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Successfully subscribed to token creation events.\"}"
  ],
  "stream_trades": 2294,
  "stream_cost_sol_est": 0.0023,
