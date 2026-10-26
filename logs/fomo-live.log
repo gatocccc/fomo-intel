@@ -1,4 +1,3 @@
-Oct 26 02:21:18 simplai-prod python3[585537]: 2026-10-26 02:21:18,712 INFO live.helius: HELIUS B32Qbb buy ESm72rR9 1.3871 SOL @ 1.650e-07 (lat 0.9s)
 Oct 26 02:21:19 simplai-prod python3[585537]: 2026-10-26 02:21:19,781 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… ESm72rR9 0.379 SOL
 Oct 26 02:21:20 simplai-prod python3[585537]: 2026-10-26 02:21:20,667 INFO live.helius: HELIUS B32Qbb sell ESm72rR9 0.3649 SOL @ 4.342e-08 (lat 0.9s)
 Oct 26 02:22:20 simplai-prod python3[585537]: 2026-10-26 02:22:20,645 INFO live: latido: stream=True tokens_vistos=1964 seguidos=71 candidatos=0 abiertas=0 cerradas=2 st_requests=40 SOL=$101
@@ -298,3 +297,4 @@ Oct 26 11:27:40 simplai-prod python3[697392]: 2026-10-26 11:27:40,697 INFO live.
 Oct 26 11:32:08 simplai-prod python3[697392]: 2026-10-26 11:32:08,431 INFO live: latido: stream=True tokens_vistos=318 seguidos=51 candidatos=0 abiertas=0 cerradas=0 st_requests=8 SOL=$101
 Oct 26 11:37:08 simplai-prod python3[697392]: 2026-10-26 11:37:08,840 INFO live: latido: stream=True tokens_vistos=355 seguidos=48 candidatos=0 abiertas=0 cerradas=0 st_requests=9 SOL=$101
 Oct 26 11:37:21 simplai-prod python3[697392]: 2026-10-26 11:37:21,330 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 6Fdodgtd 0.097 SOL
+Oct 26 11:42:08 simplai-prod python3[697392]: 2026-10-26 11:42:08,919 INFO live: latido: stream=True tokens_vistos=403 seguidos=69 candidatos=0 abiertas=0 cerradas=0 st_requests=10 SOL=$101
