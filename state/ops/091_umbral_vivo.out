@@ -1,0 +1,3 @@
+== 091_umbral_vivo 2026-10-26T23:21:02Z ==
+{'enabled': True, 'mode': 'paper', 'size_usd': 5.0, 'max_open': 3, 'total_loss_usd': 25.0, 'daily_loss_usd': 25.0, 'threshold': 0.27, 'tp': 1.0, 'stop': 0.35, 'hold_s': 80, 'decide_at_s': 1.0, 'paper_slip': 0.03}
+== exit 0 ==
