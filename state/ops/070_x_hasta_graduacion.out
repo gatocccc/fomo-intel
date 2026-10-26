@@ -1,0 +1,20 @@
+== 070_x_hasta_graduacion 2026-10-26T10:37:03Z ==
+tokens con velas: 3042
+
+entradas al minuto 3: 2849 | graduaron DESPUÉS de entrar: 44 (1.5%) | ya habían graduado: 150 | no graduaron: 2619
+
+X AL MOMENTO DE GRADUAR (neto de costos), 44 tokens:
+   mediana 2.70x | promedio 57.66x | p25 1.33x | p75 4.56x | p90 22.39x | min 0.00x | max 2239.94x
+   con x<1 (perdés aun graduando): 16%
+   minutos desde el lanzamiento hasta graduar: mediana 44, p75 196, p90 478
+   peor caída en el camino (precio/entrada): mediana 0.60, p25 0.37 | bajaron >40% antes de graduar: 52%
+   ya había subido al minuto 3 (vs primer precio): mediana 2.6x
+   1 h después de graduar: pico mediano 4.87x, cierre mediano 0.97x
+
+NO GRADUARON (2619): valor final mediano 0.43x de lo invertido
+
+ESTRATEGIA 'comprar al min 3 y holdear hasta graduar (o hasta que muera)': prob. graduar 1.7% | valor esperado por US$1 = 1.32 (+32%)
+   creador con >=1 graduación previa: prob. graduar 1.3% (n=1959) | x mediana al graduar 2.17x | valor esperado 1.58
+
+ejemplos: [('CBC', 0.0, 254), ('$One', 0.13, 12), ('Bear', 1.19, 715), ('bBTC', 1.41, 13), ('BATON', 1.76, 16), ('NICKI', 2.49, 42), ('mihao', 3.04, 196), ('Tanuki', 3.87, 131), ('Chubby', 4.34, 56), ('NNN', 8.25, 16), ('INJ', 26.64, 290)]
+== exit 0 ==
