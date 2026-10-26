@@ -1,4 +1,3 @@
-Oct 25 20:35:38 simplai-prod python3[557562]: 2026-10-25 20:35:38,504 INFO live.helius: HELIUS B32Qbb sell CGjEgNs7 1.5621 SOL @ 4.448e-08 (lat 0.1s)
 Oct 25 20:35:42 simplai-prod python3[557562]: 2026-10-25 20:35:42,300 INFO live.helius: HELIUS B32Qbb sell CGjEgNs7 2.0882 SOL @ 3.964e-08 (lat 0.1s)
 Oct 25 20:35:45 simplai-prod python3[557562]: 2026-10-25 20:35:45,255 INFO live.helius: HELIUS B32Qbb sell CGjEgNs7 1.8669 SOL @ 3.544e-08 (lat 0.1s)
 Oct 25 20:36:20 simplai-prod python3[557562]: 2026-10-25 20:36:20,194 INFO live.helius: HELIUS B32Qbb buy 6Yttvkpk 1.7537 SOL @ 1.417e-07 (lat 0.1s)
@@ -298,3 +297,4 @@ Oct 26 00:47:13 simplai-prod python3[585537]: 2026-10-26 00:47:13,631 INFO live:
 Oct 26 00:52:13 simplai-prod python3[585537]: 2026-10-26 00:52:13,764 INFO live: latido: stream=True tokens_vistos=1196 seguidos=42 candidatos=0 abiertas=0 cerradas=2 st_requests=22 SOL=$101
 Oct 26 00:57:14 simplai-prod python3[585537]: 2026-10-26 00:57:14,289 INFO live: latido: stream=True tokens_vistos=1241 seguidos=58 candidatos=0 abiertas=0 cerradas=2 st_requests=23 SOL=$101
 Oct 26 01:02:14 simplai-prod python3[585537]: 2026-10-26 01:02:14,482 INFO live: latido: stream=True tokens_vistos=1290 seguidos=66 candidatos=0 abiertas=0 cerradas=2 st_requests=24 SOL=$101
+Oct 26 01:07:14 simplai-prod python3[585537]: 2026-10-26 01:07:14,606 INFO live: latido: stream=True tokens_vistos=1326 seguidos=50 candidatos=0 abiertas=0 cerradas=2 st_requests=25 SOL=$101
