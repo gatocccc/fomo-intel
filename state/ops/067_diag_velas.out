@@ -1,0 +1,28 @@
+== 067_diag_velas 2026-10-26T03:07:03Z ==
+
+== bags: tokens 2500 | velas: mediana 14.0, p90 44, max 790 | con 0 velas: 38 | >=1000: 0
+   último minuto con velas desde la creación: mediana 13 min, p75 1448, p90 1449 | con velas más allá del minuto 60: 993
+   mcap actual: >=US$10K: 579, >=US$50K: 1, >=US$100K: 1, >=US$1M: 0 | status: [('graduating', 1362), ('default', 1138)]
+   ALTAI velas 1m pidiendo 6 h: 209
+   ALTAI velas 1m pidiendo 12 h: 386
+   ALTAI velas 1m pidiendo 48 h: 1394
+   top: HIRE       mcap_now      857,007 velas   83 min_ult   1500 precio@60min 0.0009252445580651092 max_post 0.0009252445580651092 socials {'twitter': 'https://x.com/UseHireAgents/status/2109639839176179760', 'telegram': 'https://t.me/', 'website': 'https://hireagents.fun/'} creador_prev 0
+   top: PARROT     mcap_now       45,599 velas  141 min_ult   1447 precio@60min 5.386353347870831e-05 max_post 5.386364347225619e-05 socials {'twitter': 'https://x.com/search?q=%24PARROT&src=typed_query', 'telegram': 'https://t.me/', 'website': 'https://bags.fm'} creador_prev 0
+   top: MERCEDES   mcap_now       35,309 velas   49 min_ult   1446 precio@60min 3.855075033936387e-05 max_post 3.899808274091202e-05 socials {'twitter': 'https://x.com/bagspay', 'website': 'https://bags.fm'} creador_prev 24
+   top: TFLY       mcap_now       31,414 velas   34 min_ult   1447 precio@60min 3.211856156648677e-05 max_post 3.212812408845582e-05 socials {'twitter': 'https://x.com/Tfly_sol', 'website': 'https://bags.fm/@Tfly_sol'} creador_prev 57
+   top: HYPE       mcap_now       31,064 velas   33 min_ult   1448 precio@60min 3.175626942636552e-05 max_post 3.177864914522289e-05 socials {'twitter': 'https://x.com/search?q=%24HYPE&src=typed_query', 'website': 'https://bags.fm'} creador_prev 43
+   top: URL        mcap_now       30,983 velas   42 min_ult   1449 precio@60min 3.168987925508039e-05 max_post 3.177465913125602e-05 socials {'twitter': 'https://x.com/search?q=%24URL&src=typed_query', 'website': 'https://bags.fm'} creador_prev 33
+   top: FMC        mcap_now       30,919 velas   61 min_ult   1449 precio@60min 3.239054371066734e-05 max_post 3.261395703072986e-05 socials {'twitter': 'https://x.com/search?q=%24FMC&src=typed_query', 'website': 'https://bags.fm'} creador_prev 59
+   top: PONYTAIL   mcap_now       30,901 velas   43 min_ult   1450 precio@60min 3.365096884625421e-05 max_post 3.413785798567607e-05 socials {'twitter': 'https://x.com/pontyail', 'website': 'https://bags.fm/@pontyail'} creador_prev 34
+   top: NVIDIA     mcap_now       30,878 velas   43 min_ult   1448 precio@60min 3.15601426972083e-05 max_post 3.163316256876318e-05 socials {'twitter': 'https://x.com/nvidia', 'website': 'https://bags.fm/@nvidia'} creador_prev 53
+   top: ASSHOLE    mcap_now       30,840 velas   33 min_ult   1448 precio@60min 3.152723836687036e-05 max_post 3.154961184706348e-05 socials {'twitter': 'https://x.com/search?q=%24ASSHOLE&src=typed_query', 'website': 'https://bags.fm'} creador_prev 56
+   top: FOMO       mcap_now       30,838 velas   42 min_ult   1448 precio@60min 3.151425582440819e-05 max_post 3.15745006230558e-05 socials {'twitter': 'https://x.com/fomo', 'website': 'https://bags.fm/@fomo'} creador_prev 37
+   top: TKNZ       mcap_now       30,838 velas  233 min_ult   1453 precio@60min 3.160989623136572e-05 max_post 3.165344307656205e-05 socials {'twitter': 'https://x.com/search?q=%24TKNZ&src=typed_query', 'website': 'https://bags.fm'} creador_prev 36
+
+== pump: tokens 2000 | velas: mediana 12.0, p90 70, max 451 | con 0 velas: 3 | >=1000: 0
+   último minuto con velas desde la creación: mediana 120 min, p75 360, p90 425 | con velas más allá del minuto 3: 1944
+   mcap actual: >=US$10K: 86, >=US$50K: 31, >=US$100K: 14, >=US$1M: 7 | status: [('default', 1722), ('graduated', 172), ('graduating', 106)]
+   USOE velas 1m pidiendo 6 h: 361
+   USOE velas 1m pidiendo 12 h: 581
+   USOE velas 1m pidiendo 48 h: 581
+== exit 0 ==
