@@ -1,5 +1,5 @@
 {
- "ts": 1793023203.1475768,
+ "ts": 1793023499.9777803,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,11 +32,11 @@
  ],
  "rejections": {
   "day": "2026-10-26",
-  "seen": 33,
+  "seen": 45,
   "bought": 1,
   "by_reason": {
+   "freno": 24,
    "en_banco": 12,
-   "freno": 12,
    "precio_corrido": 4,
    "compra_fallida": 4,
    "comprado": 1
@@ -45,11 +45,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.2454,
- "sol_usd": 100.5803484441135,
+ "sol_usd": 100.59838504945812,
  "stream_connected": true,
- "stream_msgs": 1422,
- "tokens_seen": 1203,
- "tokens_tracked": 186,
+ "stream_msgs": 1500,
+ "tokens_seen": 1281,
+ "tokens_tracked": 128,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -58,18 +58,18 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 441244,
-  "parsed": 62,
-  "skipped": 441005,
+  "notifications": 522362,
+  "parsed": 86,
+  "skipped": 522068,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
-   "13:58:42 getTransaction: Expecting value: line 1 column 1 (char 0)",
-   "13:59:12 getTransaction: Expecting value: line 1 column 1 (char 0)",
-   "13:59:12 getTransaction: Expecting value: line 1 column 1 (char 0)"
+   "14:04:07 getTransaction: Expecting value: line 1 column 1 (char 0)",
+   "14:04:12 getTransaction: Expecting value: line 1 column 1 (char 0)",
+   "14:04:18 getTransaction: Expecting value: line 1 column 1 (char 0)"
   ]
  },
- "follow_buys_seen": 12,
+ "follow_buys_seen": 15,
  "guard": {
   "alerts": [
    "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
@@ -85,12 +85,12 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 15,
+ "st_requests": 16,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 4,
-  "create": 1244,
+  "create": 1322,
   "sell": 102,
   "buy": 72
  },
@@ -102,7 +102,7 @@
  ],
  "stream_trades": 174,
  "stream_cost_sol_est": 0.0002,
- "pumpportal_wallet_sol": 0.0999,
+ "pumpportal_wallet_sol": null,
  "params": {
   "mode": "real",
   "strategy": "follow",
