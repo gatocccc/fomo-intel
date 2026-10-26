@@ -1,0 +1,69 @@
+== 062_experimentos_red 2026-10-26T01:45:03Z ==
+launchpad=bags               total=211365  ej: NU 5TKvbsxX market=meteora-curve createdAt=1792978957725
+launchpad=believe            total=30915  ej: LU28E HHHGCcKw market=meteora-curve createdAt=1766666881492
+launchpad=launchcoin         total=7  ej: FRT 9iLydwWq market=raydium-launchpad createdAt=1790024821621
+launchpad=bonk               total=0  ej: None  market=None createdAt=None
+launchpad=letsbonk           total=1  ej: PIGHERETIC 3i7RzwnC market=raydium-launchpad createdAt=1777412604279
+launchpad=boop               total=37469  ej: BOOP 67WMmC7f market=raydium-launchpad createdAt=1790059376839
+launchpad=moonshot           total=173985  ej: KUKUCOIN 9gkcDByv market=meteora-curve createdAt=1792976934745
+launchpad=pumpfun            total=24223227  ej: CYBERDOG 5xeqet4y market=pumpfun createdAt=1792979103722
+launchpad=raydium-launchpad  total=1728  ej: GOONPAD A3ch11Gc market=raydium-launchpad createdAt=1792963043856
+launchpad=jupiter-studio     total=0  ej: None  market=None createdAt=None
+launchpad=zora               total=0  ej: None  market=None createdAt=None
+launchpad=heaven             total=48657  ej: sdf 9DmQbJ5W market=heaven createdAt=1788256034691
+campos de un resultado bags: {
+"id": "5TKvbsxXFh6dcxKZQNzRA3AToqGAXX6mhNLXtsAPGNou_E4DHqzqTJF3qVZMgg7F5mhyPQ2ic5PS4Pwo69cFgp9YH",
+"name": "Nu",
+"symbol": "NU",
+"mint": "5TKvbsxXFh6dcxKZQNzRA3AToqGAXX6mhNLXtsAPGNou",
+"image": "https://image.solanatracker.io/proxy?url=https%3A%2F%2Fipfs.io%2Fipfs%2FQmSFCm7sE3SJxYrCX4ZLJPSRpMSPBou6KADZ8zafZXfUyg",
+"decimals": 6,
+"hasSocials": true,
+"hasCoinCommunity": false,
+"communityMessages": 0,
+"poolAddress": "E4DHqzqTJF3qVZMgg7F5mhyPQ2ic5PS4Pwo69cFgp9YH",
+"liquidityUsd": 988313.9916103795,
+"marketCapUsd": 988382.5401010502,
+"priceUsd": 0.0009883825401010501,
+"lpBurn": 100,
+"market": "meteora-curve",
+"quoteToken": "So11111111111111111111111111111111111111112",
+"freezeAuthority": null,
+"mintAuthority": null,
+"deployer": "BAGSB9TpGrZxQbEsrEznv5jXXdwyP6AXerN8aVRiAmcv",
+"status": "graduating",
+"createdAt": 1792978957725,
+"lastUpdated": 1792979105729,
+"holders": null,
+"launchpad": {
+"name": "BAGS",
+"url": "https://bags.fm",
+"logo": "https://bags.fm/assets/images/bags-icon.png",
+"curvePercentage": 90.21,
+"fee": 1
+},
+"buys": 71,
+"sells": 17,
+"totalTransactions": 88,
+"volume": 1009.7958866560732,
+"volume_5m": 992.8330355603789,
+"volume_15m": 992.8330355603789,
+"volume_30m": 992.8330355603789,
+"volume_1h": 991.325226574095,
+"volume_6h": 759.0299081364817,
+"volume_12h": 759.0299081364817,
+"volume_24h": 759.0299081364817,
+"top10": 0,
+"dev": 0,
+"insiders": 0,
+"snipers": 0.0047,
+"bundlers": {
+"count": 0,
+"balance": 0,
+"percentage": 0
+},
+"riskScore": 3,
+"socials": {
+"twitter": "https
+lanzados en segundo plano: 2 procesos
+== exit 0 ==
