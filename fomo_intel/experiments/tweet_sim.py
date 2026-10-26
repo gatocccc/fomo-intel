@@ -55,10 +55,15 @@ def sim(m, c0, entry_s, exit_s=80, slip=0.08, stop=0.35, tp=1.0):
     return cs[-1][1] / px * (1 - 0.02) - 1
 
 random.seed(1)
-samp = random.sample(nopick, min(60, len(nopick)))
-res = {}
-for name, g in (("COMPRADOS", pick), ("NO comprados (muestra)", samp)):
-    for es in (2, 5):
-        rr = [x for x in (sim(r["mint"], r["seen_ts"], es) for r in g) if x is not None]
-        if rr:
-            print(f"SIM {name} entrada seg {es}: n={len(rr)} acierto {sum(x>0 for x in rr)/len(rr):.0%} mediana {med(rr):+.2f} media {sum(rr)/len(rr):+.3f}")
+def _main():
+    samp = random.sample(nopick, min(60, len(nopick)))
+    res = {}
+    for name, g in (("COMPRADOS", pick), ("NO comprados (muestra)", samp)):
+        for es in (2, 5):
+            rr = [x for x in (sim(r["mint"], r["seen_ts"], es) for r in g) if x is not None]
+            if rr:
+                print(f"SIM {name} entrada seg {es}: n={len(rr)} acierto {sum(x>0 for x in rr)/len(rr):.0%} mediana {med(rr):+.2f} media {sum(rr)/len(rr):+.3f}")
+
+
+if __name__ == '__main__':
+    _main()
