@@ -1,0 +1,5 @@
+== 086_test_trades 2026-10-26T21:22:02Z ==
+TradeEvent (discriminador): 1755 | decodificador viejo: 1855 con sol=0: 226
+muestras (len, sol, tokens, is_buy, mint): [(391, 0.052673735, 5387145.761905, 0, 'WJpump'), (391, 0.0, 7570328.796105, 0, 'rZpump'), (391, 0.0, 314901.038146, 0, 'zjpump'), (405, 0.008044281, 173462.836083, 1, 'dxpump')]
+discriminadores vistos: {'b12433a601000000': 41, '4b29e8a6c8ac9ac0': 417, '5f72619cd42e9808': 144, 'b104621600000000': 41, 'caf2e41c25c23422': 59, 'b12a33a601000000': 41, '40c6cde8260871e2': 221, 'b13a33a601000000': 41, 'b17133a601000000': 41, 'e8f5c2eeeada3a59': 120, 'e2d6f62107f293e5': 72, '3ae6f2034b7104a9': 232} trade disc bddb7fd34ee661ee
+== exit 0 ==
