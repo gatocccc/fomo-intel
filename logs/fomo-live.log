@@ -1,14 +1,3 @@
-Oct 26 03:12:59 simplai-prod python3[585537]: 2026-10-26 03:12:59,311 INFO live.helius: HELIUS B32Qbb buy 3TNHqd22 1.5560 SOL @ 6.872e-08 (lat 0.9s)
-Oct 26 03:13:43 simplai-prod python3[585537]: 2026-10-26 03:13:43,725 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… 3TNHqd22 2.841 SOL
-Oct 26 03:13:44 simplai-prod python3[585537]: 2026-10-26 03:13:44,611 INFO live.helius: HELIUS B32Qbb sell 3TNHqd22 2.7713 SOL @ 1.224e-07 (lat 0.9s)
-Oct 26 03:17:23 simplai-prod python3[585537]: 2026-10-26 03:17:23,430 INFO live: latido: stream=True tokens_vistos=2473 seguidos=82 candidatos=0 abiertas=0 cerradas=2 st_requests=50 SOL=$101
-Oct 26 03:21:53 simplai-prod python3[585537]: 2026-10-26 03:21:53,710 INFO live.helius: HELIUS create RÁPIDO gVDXho… -> EThNKS2j slot 461509651 precio 7.158e-08
-Oct 26 03:21:53 simplai-prod python3[585537]: 2026-10-26 03:21:53,719 INFO live: FABRICA (Helius) gVDXho… creó EThNKS2j
-Oct 26 03:21:53 simplai-prod python3[585537]: 2026-10-26 03:21:53,720 INFO live: FABRICA gVDXho… creó EThNKS (EThNKS2j) -> entrando
-Oct 26 03:21:54 simplai-prod python3[585537]: 2026-10-26 03:21:54,646 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 4.120 SOL
-Oct 26 03:21:54 simplai-prod python3[585537]: 2026-10-26 03:21:54,896 INFO live.helius: HELIUS gVDXho sell EThNKS2j 4.0160 SOL @ 9.981e-08 (lat 0.2s)
-Oct 26 03:21:54 simplai-prod python3[585537]: 2026-10-26 03:21:54,924 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 4.101 SOL
-Oct 26 03:21:54 simplai-prod python3[585537]: 2026-10-26 03:21:54,968 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 3.445 SOL
 Oct 26 03:21:55 simplai-prod python3[585537]: 2026-10-26 03:21:55,220 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 3.211 SOL
 Oct 26 03:21:55 simplai-prod python3[585537]: 2026-10-26 03:21:55,385 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 2.852 SOL
 Oct 26 03:21:55 simplai-prod python3[585537]: 2026-10-26 03:21:55,589 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 2.587 SOL
@@ -298,3 +287,14 @@ Oct 26 13:33:42 simplai-prod python3[718129]: 2026-10-26 13:33:42,319 INFO live.
 Oct 26 13:33:43 simplai-prod python3[718129]: 2026-10-26 13:33:43,201 INFO live.helius: HELIUS 4vw54B sell 5Ft4d3Yb 1.7089 SOL @ 4.795e-08 (lat 0.9s)
 Oct 26 13:34:38 simplai-prod python3[718129]: 2026-10-26 13:34:38,868 INFO live.helius: HELIUS 4vw54B buy 9KJ699Z9 2.5115 SOL @ 4.209e-08 (lat 0.9s)
 Oct 26 13:34:39 simplai-prod python3[718129]: 2026-10-26 13:34:39,843 WARNING live: copia 9KJ699Z9 falló: precio cotizado +79.5% vs referencia (máx 25.0%)
+Oct 26 13:35:11 simplai-prod python3[718129]: 2026-10-26 13:35:11,613 INFO live.helius: HELIUS 4vw54B buy 9KJ699Z9 0.0350 SOL @ 8.970e-08 (lat 0.9s)
+Oct 26 13:36:00 simplai-prod python3[718129]: 2026-10-26 13:36:00,765 INFO live.helius: HELIUS 4vw54B buy 9KJ699Z9 0.2600 SOL @ 1.121e-07 (lat 0.9s)
+Oct 26 13:36:10 simplai-prod python3[718129]: 2026-10-26 13:36:10,276 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 9KJ699Z9 3.571 SOL
+Oct 26 13:36:11 simplai-prod python3[718129]: 2026-10-26 13:36:11,179 INFO live.helius: HELIUS 4vw54B sell 9KJ699Z9 3.4859 SOL @ 1.118e-07 (lat 0.9s)
+Oct 26 13:36:17 simplai-prod python3[718129]: 2026-10-26 13:36:17,368 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 9KJ699Z9 2.514 SOL
+Oct 26 13:36:18 simplai-prod python3[718129]: 2026-10-26 13:36:18,257 INFO live.helius: HELIUS 4vw54B sell 9KJ699Z9 2.4529 SOL @ 7.865e-08 (lat 0.9s)
+Oct 26 13:37:09 simplai-prod python3[718129]: 2026-10-26 13:37:09,885 INFO live: latido: stream=True tokens_vistos=643 seguidos=79 candidatos=0 abiertas=0 cerradas=0 st_requests=10 SOL=$101
+Oct 26 13:39:33 simplai-prod python3[718129]: 2026-10-26 13:39:33,063 INFO live.helius: HELIUS 4vw54B buy 5mAbrm3s 2.0115 SOL @ 4.799e-08 (lat 0.9s)
+Oct 26 13:39:39 simplai-prod python3[718129]: 2026-10-26 13:39:39,921 WARNING live.guard: ALERTA: buy 5mAbrm3s falló: tx falló en cadena: {'InstructionError': [3, {'Custom': 6063}]}
+Oct 26 13:39:39 simplai-prod python3[718129]: 2026-10-26 13:39:39,922 WARNING live: copia 5mAbrm3s falló: tx falló en cadena: {'InstructionError': [3, {'Custom': 6063}]}
+Oct 26 13:39:47 simplai-prod python3[718129]: 2026-10-26 13:39:47,799 INFO live.helius: HELIUS 4vw54B buy 5mAbrm3s 0.2600 SOL @ 9.703e-08 (lat 0.9s)
