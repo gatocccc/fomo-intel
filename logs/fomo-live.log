@@ -1,4 +1,3 @@
-Oct 25 19:56:35 simplai-prod python3[556897]: 2026-10-25 19:56:35,184 INFO live.helius: HELIUS gVDXho sell 9jAU3J6h 1.8730 SOL @ 8.139e-08 (lat 0.1s)
 Oct 25 19:56:35 simplai-prod python3[556897]: 2026-10-25 19:56:35,511 INFO live.helius: HELIUS gVDXho sell 9jAU3J6h 1.4571 SOL @ 8.443e-08 (lat 0.1s)
 Oct 25 19:56:36 simplai-prod python3[556897]: 2026-10-25 19:56:36,177 INFO live.helius: HELIUS gVDXho sell 9jAU3J6h 2.1328 SOL @ 8.238e-08 (lat 0.2s)
 Oct 25 19:56:36 simplai-prod python3[556897]: 2026-10-25 19:56:36,658 INFO live: COMPRA fábrica 9jAU3J a 8.952e-08 (3.20x de la base) 2.6 s tras la creación, slippage +7.3%
@@ -298,3 +297,4 @@ Oct 25 23:48:07 simplai-prod python3[585537]: </html>
 Oct 25 23:48:07 simplai-prod python3[585537]: ; reconecto en 4s
 Oct 25 23:48:12 simplai-prod python3[585537]: 2026-10-25 23:48:12,039 INFO live.stream: stream conectado
 Oct 25 23:52:09 simplai-prod python3[585537]: 2026-10-25 23:52:09,253 INFO live: latido: stream=True tokens_vistos=575 seguidos=107 candidatos=0 abiertas=0 cerradas=2 st_requests=10 SOL=$101
+Oct 25 23:57:09 simplai-prod python3[585537]: 2026-10-25 23:57:09,577 INFO live: latido: stream=True tokens_vistos=608 seguidos=64 candidatos=0 abiertas=0 cerradas=2 st_requests=11 SOL=$101
