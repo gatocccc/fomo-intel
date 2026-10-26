@@ -1,0 +1,9 @@
+== 073_guardas 2026-10-26T12:47:04Z ==
+active
+Oct 26 12:47:04 simplai-prod python3[718129]: 2026-10-26 12:47:04,583 INFO live: arranca bot modo=real estrategia=follow seguidos=1 tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+/usr/bin/python3: No module named pytest
+modo: real follow | abiertas: 0 | stop: None
+guardas: {"alerts": [], "bench": 0, "bench_by_reason": {}, "source_down_s": 0, "exec_fails_recent": 0}
+rechazos hoy: {"day": "", "seen": 0, "bought": 0, "by_reason": {}, "note": ""}
+params: {'stale_exit_s': 90.0, 'exec_fail_halt': 5, 'exec_fail_window_s': 600.0, 'source_down_exit_s': 60.0, 'fast_sell_after': 3, 'bench_min': {}}
+== exit 0 ==

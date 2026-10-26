@@ -41,6 +41,12 @@
  "factory_max_hold_s": 20,
  "factory_stop": 0.5,
  "factory_paper_wait_s": 2.0,
+ "bench_min": {},
+ "stale_exit_s": 90.0,
+ "exec_fail_halt": 5,
+ "exec_fail_window_s": 600.0,
+ "source_down_exit_s": 60.0,
+ "fast_sell_after": 3,
  "paper_slippage": 0.05,
  "paper_fee": 0.01
 }
