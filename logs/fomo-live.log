@@ -1,4 +1,3 @@
-Oct 26 01:18:26 simplai-prod python3[585537]: 2026-10-26 01:18:26,926 INFO live.helius: HELIUS B32Qbb sell DCfpY1v6 1.6936 SOL @ 1.644e-07 (lat 0.9s)
 Oct 26 01:22:15 simplai-prod python3[585537]: 2026-10-26 01:22:15,772 INFO live: latido: stream=True tokens_vistos=1486 seguidos=77 candidatos=0 abiertas=0 cerradas=2 st_requests=28 SOL=$101
 Oct 26 01:27:16 simplai-prod python3[585537]: 2026-10-26 01:27:16,391 INFO live: latido: stream=True tokens_vistos=1520 seguidos=51 candidatos=0 abiertas=0 cerradas=2 st_requests=29 SOL=$101
 Oct 26 01:29:33 simplai-prod python3[585537]: 2026-10-26 01:29:33,313 INFO live.helius: HELIUS create RÁPIDO gVDXho… -> 6iaMAnGp slot 461477960 precio 7.158e-08
@@ -298,3 +297,4 @@ Oct 26 05:47:34 simplai-prod python3[585537]: 2026-10-26 05:47:34,537 INFO live:
 Oct 26 05:52:34 simplai-prod python3[585537]: 2026-10-26 05:52:34,626 INFO live: latido: stream=True tokens_vistos=3638 seguidos=45 candidatos=0 abiertas=0 cerradas=2 st_requests=81 SOL=$101
 Oct 26 05:57:35 simplai-prod python3[585537]: 2026-10-26 05:57:35,112 INFO live: latido: stream=True tokens_vistos=3671 seguidos=49 candidatos=0 abiertas=0 cerradas=2 st_requests=82 SOL=$101
 Oct 26 06:02:35 simplai-prod python3[585537]: 2026-10-26 06:02:35,407 INFO live: latido: stream=True tokens_vistos=3696 seguidos=43 candidatos=0 abiertas=0 cerradas=2 st_requests=83 SOL=$101
+Oct 26 06:07:35 simplai-prod python3[585537]: 2026-10-26 06:07:35,824 INFO live: latido: stream=True tokens_vistos=3720 seguidos=29 candidatos=0 abiertas=0 cerradas=2 st_requests=84 SOL=$101
