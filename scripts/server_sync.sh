@@ -34,7 +34,7 @@ for f in ops/run_once/*.sh; do
   id=$(basename "$f" .sh)
   grep -qx "$id" state/ops/ran.txt && continue
   echo "$id" >> state/ops/ran.txt
-  { echo "== $id $(date -u +%FT%TZ) =="; timeout 600 bash "$f"; echo "== exit $? =="; } > "state/ops/$id.out" 2>&1
+  { echo "== $id $(date -u +%FT%TZ) =="; timeout 600 bash "$f" 9>&-; echo "== exit $? =="; } > "state/ops/$id.out" 2>&1
 done
 
 # ---- resultados a 6 h de los tokens que pasaron el primer corte (cada 10 min) ----
