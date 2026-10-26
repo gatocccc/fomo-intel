@@ -1,5 +1,7 @@
 {
- "ts": 1793050208.8629124,
+ "ts": 1793050500.3422034,
+ "lag_slots": 0,
+ "tokens_tracked": 86,
  "ctrl": {
   "enabled": true,
   "mode": "paper",
@@ -15,12 +17,12 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "no_tweet": 17,
-  "sin_meta_a_tiempo": 28,
-  "tweet": 7
+  "no_tweet": 23,
+  "sin_meta_a_tiempo": 44,
+  "tweet": 19
  },
  "open": [],
- "sol_usd": 100.42633477050273,
+ "sol_usd": 100.55576617986185,
  "closed": 0,
  "wins": 0,
  "pnl_usd": 0,

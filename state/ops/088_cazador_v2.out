@@ -1,0 +1,12 @@
+== 088_cazador_v2 2026-10-26T21:32:03Z ==
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+2026-10-26 21:32:08,238 INFO sniper: conectado; modo paper umbral 0.4223
+atraso (slots): 1 | stats: {'no_tweet': 21, 'sin_meta_a_tiempo': 36, 'tweet': 17} | tokens: 74
+decisiones: 17 | vol_s1 p25/p50/p75: 0 6 559
+con vol_s1>0: 10 | score máx: 0.1736
+   maxxing 0.1736 100 1.0 1 clavicular bajo umbral
+   PVE 0.1457 1387 1.51 1 clowntrenches bajo umbral
+   Wallet 0.1415 30 1.0 1 raminnasibov bajo umbral
+   FAQUAT 0.1004 1123 1.389 1 444dev444 bajo umbral
+   FUMPUN 0.0876 99 1.007 4 crypto_banter bajo umbral
+== exit 0 ==
