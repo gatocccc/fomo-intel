@@ -1,7 +1,10 @@
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/root/fomo_intel/fomo_intel/experiments/red.py", line 297, in <module>
-    k = a[i].lstrip("-").replace("-", "_"); kw[k] = float(a[i + 1]); i += 2
-                                                    ^^^^^^^^^^^^^^^
-ValueError: could not convert string to float: '--days'
+03:16:07 search pumpfun 881 total 70788
+03:16:12 search pumpfun 1867 total 70789
+03:16:17 search pumpfun 2856 total 70789
+03:16:22 search pumpfun 3839 total 70789
+03:16:27 search pumpfun 4815 total 70790
+03:16:32 search pumpfun 5792 total 70790
+03:16:37 search pumpfun 6772 total 70789
+03:16:41 search pumpfun 7748 total 70789
+03:16:46 search pumpfun 8738 total 70787
+03:16:47 pump tokens en ventana: 9000

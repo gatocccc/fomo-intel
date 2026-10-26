@@ -1,4 +1,3 @@
-Oct 25 23:18:32 simplai-prod python3[585537]: 2026-10-25 23:18:32,925 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 3.418 SOL
 Oct 25 23:18:33 simplai-prod python3[585537]: 2026-10-25 23:18:33,419 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 3.102 SOL
 Oct 25 23:18:33 simplai-prod python3[585537]: 2026-10-25 23:18:33,624 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 2.687 SOL
 Oct 25 23:18:33 simplai-prod python3[585537]: 2026-10-25 23:18:33,939 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 3.3312 SOL @ 8.279e-08 (lat 1.0s)
@@ -298,3 +297,4 @@ Oct 26 03:12:23 simplai-prod python3[585537]: 2026-10-26 03:12:23,768 INFO live.
 Oct 26 03:12:59 simplai-prod python3[585537]: 2026-10-26 03:12:59,311 INFO live.helius: HELIUS B32Qbb buy 3TNHqd22 1.5560 SOL @ 6.872e-08 (lat 0.9s)
 Oct 26 03:13:43 simplai-prod python3[585537]: 2026-10-26 03:13:43,725 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… 3TNHqd22 2.841 SOL
 Oct 26 03:13:44 simplai-prod python3[585537]: 2026-10-26 03:13:44,611 INFO live.helius: HELIUS B32Qbb sell 3TNHqd22 2.7713 SOL @ 1.224e-07 (lat 0.9s)
+Oct 26 03:17:23 simplai-prod python3[585537]: 2026-10-26 03:17:23,430 INFO live: latido: stream=True tokens_vistos=2473 seguidos=82 candidatos=0 abiertas=0 cerradas=2 st_requests=50 SOL=$101
