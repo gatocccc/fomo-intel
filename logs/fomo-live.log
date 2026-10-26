@@ -1,5 +1,3 @@
-Oct 26 17:27:34 simplai-prod python3[718129]: 2026-10-26 17:27:34,529 INFO live: latido: stream=True tokens_vistos=5024 seguidos=188 candidatos=0 abiertas=0 cerradas=1 st_requests=55 SOL=$102
-Oct 26 17:28:00 simplai-prod python3[718129]: 2026-10-26 17:28:00,733 INFO live.helius: HELIUS 4vw54B buy JD1aLNej 3.0115 SOL @ 9.607e-08 (lat 0.9s)
 Oct 26 17:28:24 simplai-prod python3[718129]: 2026-10-26 17:28:24,441 INFO live.helius: HELIUS 4vw54B buy JD1aLNej 0.0350 SOL @ 2.182e-07 (lat 1.0s)
 Oct 26 17:28:46 simplai-prod python3[718129]: 2026-10-26 17:28:46,709 INFO live.helius: HELIUS 4vw54B buy JD1aLNej 0.2600 SOL @ 1.345e-07 (lat 0.9s)
 Oct 26 17:28:53 simplai-prod python3[718129]: 2026-10-26 17:28:53,945 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… JD1aLNej 3.232 SOL
@@ -298,3 +296,5 @@ Oct 26 20:32:50 simplai-prod python3[718129]: 2026-10-26 20:32:50,484 INFO live:
 Oct 26 20:33:13 simplai-prod python3[718129]: 2026-10-26 20:33:13,613 INFO live.helius: HELIUS 4vw54B buy EdkCXPap 0.0350 SOL @ 1.857e-07 (lat 0.9s)
 Oct 26 20:33:41 simplai-prod python3[718129]: 2026-10-26 20:33:41,780 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… EdkCXPap 4.171 SOL
 Oct 26 20:33:42 simplai-prod python3[718129]: 2026-10-26 20:33:42,643 INFO live.helius: HELIUS 4vw54B sell EdkCXPap 4.0731 SOL @ 1.184e-07 (lat 0.9s)
+Oct 26 20:37:50 simplai-prod python3[718129]: 2026-10-26 20:37:50,696 INFO live: latido: stream=True tokens_vistos=8653 seguidos=161 candidatos=0 abiertas=0 cerradas=1 st_requests=92 SOL=$100
+Oct 26 20:39:30 simplai-prod python3[718129]: 2026-10-26 20:39:30,361 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 8J5k1MLw 708.986 SOL
