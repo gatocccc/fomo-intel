@@ -1,4 +1,3 @@
-Oct 26 01:29:38 simplai-prod python3[585537]: 2026-10-26 01:29:38,426 INFO live.helius: HELIUS gVDXho sell 6iaMAnGp 1.3808 SOL @ 1.094e-07 (lat 0.9s)
 Oct 26 01:29:38 simplai-prod python3[585537]: 2026-10-26 01:29:38,514 INFO live.helius: HELIUS gVDXho sell 6iaMAnGp 1.2010 SOL @ 1.057e-07 (lat 0.9s)
 Oct 26 01:29:38 simplai-prod python3[585537]: 2026-10-26 01:29:38,601 INFO live.helius: HELIUS gVDXho sell 6iaMAnGp 1.0479 SOL @ 1.025e-07 (lat 0.8s)
 Oct 26 01:29:38 simplai-prod python3[585537]: 2026-10-26 01:29:38,603 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 6iaMAnGp 1.755 SOL
@@ -298,3 +297,4 @@ Oct 26 08:27:49 simplai-prod python3[585537]: 2026-10-26 08:27:49,168 INFO live:
 Oct 26 08:32:49 simplai-prod python3[585537]: 2026-10-26 08:32:49,755 INFO live: latido: stream=True tokens_vistos=4751 seguidos=68 candidatos=0 abiertas=0 cerradas=2 st_requests=112 SOL=$101
 Oct 26 08:37:50 simplai-prod python3[585537]: 2026-10-26 08:37:50,175 INFO live: latido: stream=True tokens_vistos=4803 seguidos=72 candidatos=0 abiertas=0 cerradas=2 st_requests=113 SOL=$101
 Oct 26 08:42:50 simplai-prod python3[585537]: 2026-10-26 08:42:50,556 INFO live: latido: stream=True tokens_vistos=4841 seguidos=58 candidatos=0 abiertas=0 cerradas=2 st_requests=114 SOL=$101
+Oct 26 08:47:50 simplai-prod python3[585537]: 2026-10-26 08:47:50,877 INFO live: latido: stream=True tokens_vistos=4896 seguidos=67 candidatos=0 abiertas=0 cerradas=2 st_requests=115 SOL=$101
