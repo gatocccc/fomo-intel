@@ -2,3 +2,68 @@ trades de decu bajados: 1000 | tokens en 48 h: 164
 tokens con compra >= 1.0 SOL: 152 | solo compras chicas: 0
 resultado de decu: grandes acierto 101/151 mediana 0.12 | chicas acierto 0/0 mediana None
 en los grandes, la PRIMERA compra ya es >= 1.0 SOL en 152/152
+
+contexto reconstruido de 60 tokens en 558 s
+
+secs_from_create     p25 5.0 | mediana 11.0 | p75 49.0
+slots_from_create    p25 27 | mediana 49 | p75 237
+n_tx_before          p25 69 | mediana 152 | p75 319
+n_pre_buyers         p25 8 | mediana 15 | p75 20
+pre_buy_sol          p25 0.0 | mediana 0.0 | p75 6.74
+dev_buy_sol          p25 0 | mediana 0 | p75 0
+decu_mcap_usd        p25 5962 | mediana 7681 | p75 13787
+decu_first_sol       p25 1.98 | mediana 2.93 | p75 2.97
+decu_hold_s          p25 38 | mediana 78 | p75 205
+decu_ret             p25 -0.04 | mediana 0.09 | p75 0.45
+programa de creación: [('pump', 41), ('otro', 18), (None, 1)]
+lanzadas desde (createdOn): [('pump.fun', 30), ('https://pump.fun', 20), ('', 4), ('https://uselaunch.fun', 2), ('otc', 1), ('pumpstocks', 1), (None, 1), ('https://rapidlaunch.io', 1)]
+host de la imagen: [('', 59), (None, 1)]
+tiene X: 56 | web: 48 | telegram: 3 de 60
+links de X: [('x:@elonmusk/status', 6), ('x:@petais0l/status', 3), ('x:@stepcoinsol8/status', 2), ('x:@ripedevonchain/status', 2), ('x:@pscldev_pf/status', 2), ('x:@enw1nged/status', 1), ('x:@quantsdev1223/status', 1), ('x:@thealexmorgan15/status', 1), ('x:@faxriddinb01/status', 1), ('x:@prottlegang11/status', 1), ('x:@marioprezldente/status', 1), ('x:@zzzzzsol/status', 1), ('x:@firstpost/status', 1), ('x:@ddddddd8a/status', 1), ('x:@realalexjones/status', 1)]
+dev vendió antes de que compre decu: 7 de 60
+creadores repetidos: [('9mZeEDjX', 2), ('Dk2jdQ93', 2), ('2KP9miex', 2), ('BuekUk3Y', 2), ('HgKfkiGW', 2)]
+fondeadores de creadores repetidos: [('F7p3dFrj', 2)]
+¿decu fondeó a algún creador?: 0
+firmas del creador (billetera nueva si es chica): p25 3000 mediana 3000 p75 3000
+billeteras que compran ANTES que decu en >= 3 tokens: 25
+   FHpcNSe6tb2n15bAdq4BkeYWGyZKFD7yLYrH92ng7wCT en 10/60 tokens | SOL med 0.08 | ret decu en esos: mediana 0.2
+   ssssswdk4RR8HqkE3uwUWzDbd6mXFTTPjcXBKNzQ57E en 8/60 tokens | SOL med 0.26 | ret decu en esos: mediana -0.01
+   9pQQc1xyqwPzYdHztDHEYkgNucYWSQsZTrzNRzdCrRdN en 7/60 tokens | SOL med 0.69 | ret decu en esos: mediana 0.24
+   AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51 en 6/60 tokens | SOL med 0.0 | ret decu en esos: mediana 0.23
+   AFrSqSLka3US1KyTW3XZToBSDumGCif5zKG6egJWGHXS en 5/60 tokens | SOL med 0.5 | ret decu en esos: mediana 0.02
+   J6YEG5cmN3jbDy2BhMmvE59h9Ar8t84A9uYa5R5icKix en 5/60 tokens | SOL med 0.5 | ret decu en esos: mediana -0.01
+   sssssCUP5wgSW3sxjtQNa7u88ytE4st2Z7goX5kKNwi en 4/60 tokens | SOL med 0.0 | ret decu en esos: mediana 0.23
+   sssssyv2q57u9sJrL1BB7Ep71X6YBY71iYt7CtHB5zJ en 4/60 tokens | SOL med 0.0 | ret decu en esos: mediana 0.23
+   DF7eRXHnvRQ9QeVCrdfS56a7RpBD6se6mgPvzApHPNr9 en 4/60 tokens | SOL med 0.59 | ret decu en esos: mediana 1.37
+   CrpkzhuoPeUaAy7PZt1rPjLZ9aenu5cvTm3MzLTz58Fn en 4/60 tokens | SOL med 0.0 | ret decu en esos: mediana 0.17
+   omegoMAe1AMY5MFKQQr3JwXVy8F4eCvmBAfcpo8XAfq en 4/60 tokens | SOL med 0.64 | ret decu en esos: mediana 0.14
+   SKmksffBedVUw4fYNLJKARjmwuxZMNnNjkrYR8JScjy en 4/60 tokens | SOL med 0.0 | ret decu en esos: mediana 0.42
+   GTW4HfwbJfmjG1xCRQGeJixRJLbEtu7e54uE3b2ATfXT en 4/60 tokens | SOL med 0.0 | ret decu en esos: mediana 1.76
+   AkddJqWNdWyiedjx3aoPFsq221HZpbHK99bUvVVhBMCx en 3/60 tokens | SOL med 0.0 | ret decu en esos: mediana 0.01
+   haqqiUUXB5gp7gDbSjpEkw3phAjQb25r86uXJsZQgWq en 3/60 tokens | SOL med 0.74 | ret decu en esos: mediana -0.0
+   J77G27faJHyAd8NyHA77a6ogBv1cxe4WJQq5fYbuRATx en 3/60 tokens | SOL med 0.0 | ret decu en esos: mediana -0.13
+   BUkpShoEWRiPckdFs3kzYGjBPfUhL6G39ufo84QeogPP en 3/60 tokens | SOL med 0.83 | ret decu en esos: mediana -0.01
+   BvARJCjgRF2fTFKWWb3qqWU3nTBCGfL356PV9RJ4HdxD en 3/60 tokens | SOL med 0.0 | ret decu en esos: mediana -0.13
+   HLU8QbLdvHDSWiQtyc8SGsTTdSdwZ3UKt8cEkG2wv4qk en 3/60 tokens | SOL med 0.59 | ret decu en esos: mediana -0.03
+   8PgC4ngpx6zUG3KFQAQHqSeePDFA7kGyEaA2yMoZ4HUk en 3/60 tokens | SOL med 0.78 | ret decu en esos: mediana 0.19
+última billetera antes de decu (repetidas): [('AkddJqWN', 2), ('FHpcNSe6', 2)]
+segundos entre el último trade y decu: 0.0
+  secs_from_create   ganó: 11.0  perdió: 10.0
+  n_pre_buyers       ganó: 15  perdió: 15
+  pre_buy_sol        ganó: 0  perdió: 3.52
+  dev_buy_sol        ganó: 0  perdió: 0
+  decu_mcap_usd      ganó: 6936  perdió: 9667
+  decu_first_sol     ganó: 2.93  perdió: 2.93
+  tiene X           ganó: 34/38  perdió: 21/21
+
+muestra (10 más recientes):
+{"symbol": "AI", "name": "Anti Inu", "secs_from_create": 106.0, "n_pre_buyers": 23, "pre_buy_sol": 0.0, "dev_buy_sol": 0, "decu_mcap_usd": 11729, "decu_first_sol": 4.95, "decu_ret": null, "decu_hold_s": null, "twitter": "https://x.com/enw1nged/status/2114716249070440745", "image_host": "", "created_on": "pump.fun", "description": ""}
+{"symbol": "AI", "name": "Anti Inu", "secs_from_create": 7.0, "n_pre_buyers": 12, "pre_buy_sol": 0.0, "dev_buy_sol": 0, "decu_mcap_usd": 7174, "decu_first_sol": 2.97, "decu_ret": 0.555, "decu_hold_s": 302, "twitter": "https://x.com/QuantsDev1223/status/2114715765878198643", "image_host": "", "created_on": "pump.fun", "description": ""}
+{"symbol": "ROBODICK", "name": "RoboDick", "secs_from_create": 74.0, "n_pre_buyers": 0, "pre_buy_sol": 0, "dev_buy_sol": 0, "decu_mcap_usd": 25683, "decu_first_sol": 4.95, "decu_ret": 0.452, "decu_hold_s": 54, "twitter": "https://x.com/elonmusk/status/2114714943417110693", "image_host": "", "created_on": "", "description": ""}
+{"symbol": "ROBODICK", "name": "RoboDick", "secs_from_create": 2.0, "n_pre_buyers": 9, "pre_buy_sol": 4.876, "dev_buy_sol": 0, "decu_mcap_usd": 22016, "decu_first_sol": 4.889, "decu_ret": -0.738, "decu_hold_s": 18, "twitter": "https://x.com/elonmusk/status/2114714943417110693", "image_host": "", "created_on": "otc", "description": ""}
+{"symbol": "CUMROCKET", "name": "cumrocket", "secs_from_create": 7.0, "n_pre_buyers": 16, "pre_buy_sol": 0.0, "dev_buy_sol": 0, "decu_mcap_usd": 20950, "decu_first_sol": 2.97, "decu_ret": -0.113, "decu_hold_s": 39, "twitter": "https://x.com/elonmusk/status/2114714943417110693", "image_host": "", "created_on": "https://pump.fun", "description": ""}
+{"symbol": "Alone", "name": "Alone", "secs_from_create": 2.0, "n_pre_buyers": 3, "pre_buy_sol": 0.0, "dev_buy_sol": 0, "decu_mcap_usd": 4787, "decu_first_sol": 1.98, "decu_ret": 0.174, "decu_hold_s": 270, "twitter": "https://x.com/StepCoinsol8/status/2114711926882050247", "image_host": "", "created_on": "pump.fun", "description": ""}
+{"symbol": "Wolf", "name": "Lone Wolf", "secs_from_create": 3.0, "n_pre_buyers": 1, "pre_buy_sol": 3.951, "dev_buy_sol": 0.385, "decu_mcap_usd": 4126, "decu_first_sol": 2.444, "decu_ret": 1.243, "decu_hold_s": 100, "twitter": "https://x.com/StepCoinsol8/status/2114711926882050247", "image_host": "", "created_on": "https://pump.fun", "description": ""}
+{"symbol": "Gudi", "name": "Gudi Eisenkut", "secs_from_create": 4.0, "n_pre_buyers": 2, "pre_buy_sol": 3.516, "dev_buy_sol": 0, "decu_mcap_usd": 6234, "decu_first_sol": 1.956, "decu_ret": -0.203, "decu_hold_s": 22, "twitter": "https://x.com/thealexmorgan15/status/2114711946746347868", "image_host": "", "created_on": "pump.fun", "description": "Deployed using https://j7tracker.io"}
+{"symbol": "PROSPERITY", "name": "Prosperity Coin", "secs_from_create": 3.0, "n_pre_buyers": 4, "pre_buy_sol": 0.0, "dev_buy_sol": 0, "decu_mcap_usd": 3680, "decu_first_sol": 1.98, "decu_ret": 0.025, "decu_hold_s": 26, "twitter": "https://x.com/Faxriddinb01/status/2114710808156401718", "image_host": "", "created_on": "pump.fun", "description": "https://www.youtube.com/watch?v=o-CRlTN55K4"}
+{"symbol": "Elonhouse", "name": "Elonhouse", "secs_from_create": 3.0, "n_pre_buyers": 3, "pre_buy_sol": 1.957, "dev_buy_sol": 0, "decu_mcap_usd": 6994, "decu_first_sol": 2.933, "decu_ret": 0.228, "decu_hold_s": 130, "twitter": "https://x.com/prottlegang11/status/2114710625699897654", "image_host": "", "created_on": "", "description": ""}
