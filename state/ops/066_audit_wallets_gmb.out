@@ -1,0 +1,62 @@
+== 066_audit_wallets_gmb 2026-10-26T03:02:03Z ==
+
+===== decu 4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9
+  HTTP 404 /pnl/4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9 {"error":"Unknown error"}
+  HTTP 404 /pnl/4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9 {"error":"Unknown error"}
+  HTTP 404 /pnl/4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9 {"error":"Unknown error"}
+trades bajados: 2000
+EJEMPLO {"tx": "b3eNap7tMyNzDb8z1edeLqM6GPUTVrvHYDaFZp56TnRDehgCStx1nDEEagscTffoNEzCZr17CzT9GAXFpz9QjRy", "from": {"address": "FtpTigEp8KfdoKdcmTRRzCtgZpGWE4SFo5wdE9Ttpump", "amount": 32233160.46181, "token": {"name": "Larp Coin", "symbol": "Larp", "image": "https://image.solanatracker.io/proxy?url=https://edge.uxento.io/image/6LjEA1eX8HhYf1RwzNRuMR96AWRxmMeB1XMsXV8rpump", "decimals": 6}, "priceUsd": 8.00035550411976e-06, "marketCap": 8000.355504119761}, "to": {"address": "So11111111111111111111111111111111111111112", "amount": 2.544603968, "token": {"name": "Wrapped SOL", "symbol": "SOL", "image": "https://image.solanatracker.io/proxy?url=https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png", "decimals": 9}, "priceUsd": 101.3425845274077, "marketCap": 59756978337.95283}, "price": {"usd": 8.00035550411976e-06, "sol": 7.
+tokens operados (3d): 376 | completos: 359
+tamaño compra US$: mediana 25.16 p25 2.6 p75 199.91
+tenencia min: p25 0.82 mediana 1.67 p75 3.8 | <1min 111 <5min 290 >60min 4
+retorno por token: acierto 70% mediana 0.12 media 0.399
+ganancia por dólar (tokens completos 3d): 0.335 sobre US$134,912
+  Larp: mcap_actual 3007.2639109382912 liq 6236.394777820273 | compró a los 0.2 min de creado | buy US$225 sell US$258
+  carti: mcap_actual 17443.449004287784 liq 12852.505094726388 | compró a los 19.4 min de creado | buy US$2007 sell US$2035
+  Karteh: mcap_actual 2931.949068004397 liq 6157.735988382022 | compró a los 4.2 min de creado | buy US$321 sell US$375
+  TCC: mcap_actual 3778.260653588211 liq 6989.518483340045 | compró a los 3.2 min de creado | buy US$717 sell US$640
+  Green: mcap_actual 2845.2936827625776 liq 6066.08442142343 | compró a los 0.1 min de creado | buy US$351 sell US$359
+  Olivia: mcap_actual 5547.649034270952 liq 6895.357167051888 | compró a los -0.9 min de creado | buy US$375 sell US$888
+  SPL: mcap_actual 3036.697703878662 liq 6480.512809648372 | compró a los 0.2 min de creado | buy US$329 sell US$332
+  CRIME: mcap_actual 2266.5365312523336 liq 4414.151318472618 | compró a los -0.3 min de creado | buy US$730 sell US$792
+
+===== zeropnl_wugi 4xY9T1Q7foJzJsJ6YZDSsfp9zkzeZsXnxd45SixduMmr
+  HTTP 404 /pnl/4xY9T1Q7foJzJsJ6YZDSsfp9zkzeZsXnxd45SixduMmr {"error":"Unknown error"}
+  HTTP 404 /pnl/4xY9T1Q7foJzJsJ6YZDSsfp9zkzeZsXnxd45SixduMmr {"error":"Unknown error"}
+  HTTP 404 /pnl/4xY9T1Q7foJzJsJ6YZDSsfp9zkzeZsXnxd45SixduMmr {"error":"Unknown error"}
+trades bajados: 3000
+EJEMPLO {"tx": "2hoFUaxPg2xYXdZNN19u3MQGWr9KBaYPGrG6miD56Rrjt23VR44mcMhkx39nECyJSa7xUX65FiryZtVH39G6G4ok", "from": {"address": "A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS", "amount": 0.08328087, "token": {"name": "Zcash", "symbol": "ZEC", "image": "https://image.solanatracker.io/proxy?url=https://arweave.net/QSYqnmB7NYlB7n1R6rz935Y07dlRK0tIuKe2mof5Sho", "decimals": 8}, "priceUsd": 1209.3110389086962, "marketCap": 117812086.14906313}, "to": {"address": "So11111111111111111111111111111111111111112", "amount": 0.990210405, "token": {"name": "Wrapped SOL", "symbol": "SOL", "image": "https://image.solanatracker.io/proxy?url=https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png", "decimals": 9}, "priceUsd": 101.70815708699816, "marketCap": 59972539364.211136}, "price": {"usd": 1209.3110389086962, "sol": 11.890010334906442}, 
+tokens operados (3d): 423 | completos: 289
+tamaño compra US$: mediana 511.73 p25 502.54 p75 689.02
+tenencia min: p25 0.1 mediana 0.15 p75 0.23 | <1min 262 <5min 267 >60min 16
+retorno por token: acierto 78% mediana 0.34 media 0.301
+ganancia por dólar (tokens completos 3d): 0.034 sobre US$215,854
+  ZEC: mcap_actual 122899583.40355358 liq 4063588.674585295 | compró a los None min de creado | buy US$4401 sell US$443
+  DJT: mcap_actual 1163308.4761907503 liq 39768.36715295794 | compró a los 36957.8 min de creado | buy US$1536 sell US$51
+  GAMBY: mcap_actual 2819.4709377608688 liq 6050.584632434824 | compró a los -0.0 min de creado | buy US$503 sell US$503
+  SNOWBALL: mcap_actual 2818.8918493036167 liq 6049.341908605561 | compró a los -0.0 min de creado | buy US$703 sell US$919
+  CATE: mcap_actual 47540513.607058994 liq 2501991.7364869006 | compró a los 131136.8 min de creado | buy US$509 sell US$50
+  PEPE: mcap_actual 1157785.5825658338 liq 60100.518341749776 | compró a los 53040.3 min de creado | buy US$509 sell US$50
+  PUMP: mcap_actual 3453429058.868045 liq 22872352.789886 | compró a los 673942.4 min de creado | buy US$1018 sell US$10
+  Bonk: mcap_actual 262495661.6044601 liq 302410.16984274937 | compró a los 2010310.9 min de creado | buy US$1592 sell US$156
+
+===== sheep 78N177fzNJpp8pG49xDv1efYcTMSzo9tPTKEA9mAVkh2
+  HTTP 404 /pnl/78N177fzNJpp8pG49xDv1efYcTMSzo9tPTKEA9mAVkh2 {"error":"Unknown error"}
+  HTTP 404 /pnl/78N177fzNJpp8pG49xDv1efYcTMSzo9tPTKEA9mAVkh2 {"error":"Unknown error"}
+  HTTP 404 /pnl/78N177fzNJpp8pG49xDv1efYcTMSzo9tPTKEA9mAVkh2 {"error":"Unknown error"}
+trades bajados: 1000
+EJEMPLO {"tx": "2vwMzvbWvTxiEUYweYm1XnBebEL7EXsyDdUTwjiqChCcbrwAMRXBDAuhiJYkmm6VqYNXPeywcG1qKBLnMT76htqf", "from": {"address": "3NVMMPAYA84Sj1s5ACgazozvusm1PXE1LkXcAaQLpump", "amount": 5174697.459608, "token": {"name": "Crimecoin", "symbol": "CRIME", "image": "https://image.solanatracker.io/proxy?url=https://axiomtrading.sfo3.cdn.digitaloceanspaces.com/Dsvu32gYajF9QD8i22wGRzKfGNpvXbr92mqzhu7Zpump.webp", "decimals": 6}, "priceUsd": 2.3479902064534015e-05, "marketCap": 23479.902064534013}, "to": {"address": "So11111111111111111111111111111111111111112", "amount": 1.197500928, "token": {"name": "Wrapped SOL", "symbol": "SOL", "image": "https://image.solanatracker.io/proxy?url=https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/So11111111111111111111111111111111111111112/logo.png", "decimals": 9}, "priceUsd": 101.46245963091962, "marketCap": 59827663075.24493}, "price": {"us
+tokens operados (3d): 338 | completos: 108
+tamaño compra US$: mediana 50.43 p25 5.07 p75 147.86
+tenencia min: p25 0.22 mediana 0.52 p75 2.95 | <1min 74 <5min 86 >60min 4
+retorno por token: acierto 30% mediana -0.17 media -0.045
+ganancia por dólar (tokens completos 3d): -0.524 sobre US$28,634
+  CRIME: mcap_actual 2271.298197050209 liq 4423.424812665189 | compró a los 2.8 min de creado | buy US$147 sell US$122
+  Haaland: mcap_actual 2899.7781791118377 liq 6132.194202740146 | compró a los -0.0 min de creado | buy US$356 sell US$484
+  GENNY: mcap_actual 8951.77430732251 liq 8400.851142944619 | compró a los 10.3 min de creado | buy US$509 sell US$0
+  MTXCAT: mcap_actual 4.083948794622051 liq 16.932051654922578 | compró a los 0.2 min de creado | buy US$51 sell US$5
+  quacker: mcap_actual 51.31679536375745 liq 123.82629380555392 | compró a los 0.6 min de creado | buy US$51 sell US$7
+  PUMPHAW: mcap_actual 1.2768997850944135 liq 3.447898971859549 | compró a los 0.9 min de creado | buy US$51 sell US$73
+  Dog Think: mcap_actual 3285.8026002609963 liq 6536.316226046682 | compró a los 0.9 min de creado | buy US$51 sell US$124
+  CONGO: mcap_actual 745.9697758012379 liq 1450.6151200051813 | compró a los 0.9 min de creado | buy US$56 sell US$116
+== exit 0 ==

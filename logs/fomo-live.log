@@ -1,7 +1,3 @@
-Oct 25 23:07:25 simplai-prod python3[585537]: 2026-10-25 23:07:25,107 INFO live.helius: HELIUS gVDXho sell 5p8ACco1 2.3356 SOL @ 9.128e-08 (lat 0.9s)
-Oct 25 23:07:25 simplai-prod python3[585537]: 2026-10-25 23:07:25,197 INFO live.helius: HELIUS gVDXho sell 5p8ACco1 1.9345 SOL @ 8.400e-08 (lat 0.8s)
-Oct 25 23:07:25 simplai-prod python3[585537]: 2026-10-25 23:07:25,284 INFO live.helius: HELIUS gVDXho sell 5p8ACco1 1.7217 SOL @ 8.307e-08 (lat 0.8s)
-Oct 25 23:07:25 simplai-prod python3[585537]: 2026-10-25 23:07:25,376 INFO live: FABRICA (Helius) gVDXho… creó C5xph2yL
 Oct 25 23:07:25 simplai-prod python3[585537]: 2026-10-25 23:07:25,376 INFO live: FABRICA gVDXho… creó C5xph2 (C5xph2yL) -> entrando
 Oct 25 23:07:25 simplai-prod python3[585537]: 2026-10-25 23:07:25,428 INFO live.helius: HELIUS gVDXho sell 5p8ACco1 1.4529 SOL @ 7.789e-08 (lat 0.7s)
 Oct 25 23:07:26 simplai-prod python3[585537]: 2026-10-25 23:07:26,347 INFO live.helius: HELIUS gVDXho sell 5p8ACco1 1.4320 SOL @ 8.530e-08 (lat 0.9s)
@@ -298,3 +294,7 @@ Oct 26 02:47:21 simplai-prod python3[585537]: 2026-10-26 02:47:21,398 INFO live:
 Oct 26 02:49:11 simplai-prod python3[585537]: 2026-10-26 02:49:11,760 INFO live.helius: HELIUS B32Qbb buy GT7XkhLV 1.4546 SOL @ 3.555e-08 (lat 0.9s)
 Oct 26 02:49:14 simplai-prod python3[585537]: 2026-10-26 02:49:14,647 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… GT7XkhLV 1.699 SOL
 Oct 26 02:49:15 simplai-prod python3[585537]: 2026-10-26 02:49:15,527 INFO live.helius: HELIUS B32Qbb sell GT7XkhLV 1.6551 SOL @ 4.045e-08 (lat 0.9s)
+Oct 26 02:51:03 simplai-prod python3[585537]: 2026-10-26 02:51:03,024 INFO live.helius: HELIUS B32Qbb buy 5YEk5atS 3.5375 SOL @ 1.019e-06 (lat 0.9s)
+Oct 26 02:52:21 simplai-prod python3[585537]: 2026-10-26 02:52:21,593 INFO live: latido: stream=True tokens_vistos=2220 seguidos=58 candidatos=0 abiertas=0 cerradas=2 st_requests=45 SOL=$101
+Oct 26 02:57:22 simplai-prod python3[585537]: 2026-10-26 02:57:22,084 INFO live: latido: stream=True tokens_vistos=2262 seguidos=67 candidatos=0 abiertas=0 cerradas=2 st_requests=46 SOL=$100
+Oct 26 03:02:22 simplai-prod python3[585537]: 2026-10-26 03:02:22,318 INFO live: latido: stream=True tokens_vistos=2313 seguidos=63 candidatos=0 abiertas=0 cerradas=2 st_requests=47 SOL=$100
