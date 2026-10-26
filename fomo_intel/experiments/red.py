@@ -111,18 +111,20 @@ def chart(mint, created_ts, hours, itype="1m"):
     cs.sort(key=lambda x: x["t"]); return cs
 
 
-def pull(universe, days=None, hours=None, cap=2000, min_buys=0, hold_h=None):
+def pull(universe, days=None, hours=None, cap=2000, min_buys=0, hold_h=None, only_good=0, name=None):
     DIR.mkdir(parents=True, exist_ok=True); (DIR / "charts").mkdir(exist_ok=True)
     now = time.time()
     span = (days or 0) * 86400 + (hours or 0) * 3600
     hold_h = hold_h or (24 if universe == "bags" else 6)
+    name = name or universe
     max_ms = int((now - hold_h * 3600 - 3600) * 1000)   # solo tokens con ventana de resultado completa
     min_ms = int((now - span) * 1000)
     extra = {"minBuys": min_buys} if min_buys else {}
     lp = {"bags": "bags", "pump": "pumpfun"}[universe]
     toks = search_window(lp, min_ms, max_ms, cap, extra)
     log(universe, "tokens en ventana:", len(toks))
-    outp = DIR / f"{universe}_tokens.jsonl"
+    outp = DIR / f"{name}_tokens.jsonl"
+    random.seed(11)
     done = set()
     if outp.exists():
         for line in open(outp): done.add(json.loads(line)["mint"])
@@ -139,6 +141,12 @@ def pull(universe, days=None, hours=None, cap=2000, min_buys=0, hold_h=None):
                "holders": t.get("holders"), "buys": t.get("buys"), "sells": t.get("sells"), "mcap_now": t.get("marketCapUsd"), "liq_now": t.get("liquidityUsd"),
                "jupiter": t.get("jupiter"), "verified": t.get("verified"), "lp_burn": t.get("lpBurn")}
         row["dev_hist"] = deployer_history(dev, created) if dev else None
+        if only_good:
+            prior = (row["dev_hist"] or {}).get("prior") or []
+            good = sum(1 for x in prior if x.get("graduated")) >= 1 and sum(1 for x in prior if created - x["created"] < 86400) < 5
+            row["control"] = not good
+            if not good and random.random() > 0.08:
+                f.write(json.dumps({**row, "n_candles": -1}) + "\n"); continue
         cs = chart(mint, created, hold_h + 1.5, "1m")
         if universe == "bags":
             cs7 = chart(mint, created, 24 * 7, "1h")
@@ -223,8 +231,10 @@ def creator_key(row, universe):
     return "historia sin exitos"
 
 
-def analyze(universe, entry_min=None, hold_min=None):
-    rows = [json.loads(l) for l in open(DIR / f"{universe}_tokens.jsonl")]
+def analyze(universe, entry_min=None, hold_min=None, name=None):
+    name = name or universe
+    rows = [json.loads(l) for l in open(DIR / f"{name}_tokens.jsonl")]
+    rows = [r for r in rows if r.get("n_candles", 0) >= 0]
     entry_min = entry_min or (60 if universe == "bags" else 3)
     hold_min = hold_min or (24 * 60 if universe == "bags" else 360)
     P = SimParams(entry_min=entry_min, max_wait_min=15 if universe == "bags" else 2, slippage=0.03 if universe == "bags" else 0.05, fee=0.01,
@@ -275,7 +285,7 @@ def analyze(universe, entry_min=None, hold_min=None):
             cs = json.load(open(DIR / "charts" / f"{r['mint']}.json"))["m1"]; s = simulate(r["mint"], r["symbol"] or "", r["created"], cs, p2)
             if s.entered: g.append({"ret": s.ret, "exit": s.exits[-1][3] if s.exits else ""})
         desc(name, g)
-    json.dump(res, open(DIR / f"{universe}_results.json", "w"))
+    json.dump(res, open(DIR / f"{name}_results.json", "w"))
 
 
 if __name__ == "__main__":
@@ -285,10 +295,10 @@ if __name__ == "__main__":
         kw = {}; i = 2
         while i < len(a):
             k = a[i].lstrip("-").replace("-", "_"); kw[k] = float(a[i + 1]); i += 2
-        pull(a[1], days=kw.get("days"), hours=kw.get("hours"), cap=int(kw.get("max", 2000)), min_buys=int(kw.get("min_buys", 0)), hold_h=kw.get("hold_h"))
+        pull(a[1], days=kw.get("days"), hours=kw.get("hours"), cap=int(kw.get("max", 2000)), min_buys=int(kw.get("min_buys", 0)), hold_h=kw.get("hold_h"), only_good=int(kw.get("only_good", 0)), name=a[2] if len(a) > 2 and not a[2].startswith("-") else None)
     elif a[0] == "fix_creators": fix_creators(a[1] if len(a) > 1 else "bags")
     elif a[0] == "analyze":
         kw = {}; i = 2
         while i < len(a):
             k = a[i].lstrip("-").replace("-", "_"); kw[k] = int(a[i + 1]); i += 2
-        analyze(a[1], **kw)
+        analyze(a[1], name=a[2] if len(a) > 2 and not a[2].startswith("-") else None, **kw)
