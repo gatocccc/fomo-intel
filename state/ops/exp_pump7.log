@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/root/fomo_intel/fomo_intel/experiments/red.py", line 297, in <module>
+    k = a[i].lstrip("-").replace("-", "_"); kw[k] = float(a[i + 1]); i += 2
+                                                    ^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: '--days'
