@@ -1,5 +1,5 @@
 {
- "ts": 1793022902.3908715,
+ "ts": 1793023203.1475768,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,11 +32,11 @@
  ],
  "rejections": {
   "day": "2026-10-26",
-  "seen": 29,
+  "seen": 33,
   "bought": 1,
   "by_reason": {
    "en_banco": 12,
-   "freno": 8,
+   "freno": 12,
    "precio_corrido": 4,
    "compra_fallida": 4,
    "comprado": 1
@@ -45,11 +45,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.2454,
- "sol_usd": 100.67286493676485,
+ "sol_usd": 100.5803484441135,
  "stream_connected": true,
- "stream_msgs": 1283,
- "tokens_seen": 1064,
- "tokens_tracked": 189,
+ "stream_msgs": 1422,
+ "tokens_seen": 1203,
+ "tokens_tracked": 186,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -58,14 +58,18 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 393655,
-  "parsed": 56,
-  "skipped": 393440,
+  "notifications": 441244,
+  "parsed": 62,
+  "skipped": 441005,
   "fast_creates": 0,
   "subs": 1,
-  "errors": []
+  "errors": [
+   "13:58:42 getTransaction: Expecting value: line 1 column 1 (char 0)",
+   "13:59:12 getTransaction: Expecting value: line 1 column 1 (char 0)",
+   "13:59:12 getTransaction: Expecting value: line 1 column 1 (char 0)"
+  ]
  },
- "follow_buys_seen": 11,
+ "follow_buys_seen": 12,
  "guard": {
   "alerts": [
    "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
@@ -81,12 +85,12 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 14,
+ "st_requests": 15,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 4,
-  "create": 1105,
+  "create": 1244,
   "sell": 102,
   "buy": 72
  },
