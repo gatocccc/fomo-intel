@@ -1,0 +1,20 @@
+== 090_validar_vivo 2026-10-26T23:17:03Z ==
+decisiones: 1422 | puntaje p50 0.035 p90 0.139 p99 0.274 máx 0.528 | umbral 0.4223
+vol_s1 vivo p50/p75/p90: 2.0 516.0 1268.0
+top 1%           n= 13 acierto 38% media +0.103 mediana -0.075 | puntaje 0.277-0.528
+top 1-3%         n= 27 acierto 15% media -0.106 mediana -0.161 | puntaje 0.211-0.274
+top 3-10%        n= 54 acierto 24% media -0.012 mediana -0.109 | puntaje 0.152-0.153
+resto (muestra)  n= 61 acierto 13% media -0.064 mediana -0.092 | puntaje 0.023-0.038
+   OBUMA 0.5283 2433 3.758 1 xerias_x 5
+   WAYMO 0.4105 1652 2.655 9 elonmusk 432
+   BELIEF 0.3334 100 1.0 1 asdfhgdev_pf 0
+   WALLY 0.3322 40 1.0 1 dar1anp 0
+   DUOLINGO 0.3268 100 1.0 1 duolingo 261
+   ZERODAY 0.3254 1637 2.613 39 elonmusk 579
+   ZERODAY 0.3219 1615 2.673 40 elonmusk 647
+   ZERODAY 0.3103 1885 2.529 33 elonmusk 0
+   OG 0.3069 100 1.0 1 asdfhgdev_pf 0
+   WAYMO 0.2974 1627 2.74 10 elonmusk 694
+   Tstache 0.2912 1464 2.698 1 albaroon_x 0
+   ZERODAY 0.2882 1543 2.714 41 elonmusk 837
+== exit 0 ==
