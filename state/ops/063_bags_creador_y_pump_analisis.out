@@ -1,0 +1,65 @@
+== 063_bags_creador_y_pump_analisis 2026-10-26T02:48:03Z ==
+search bags: deployer BAGSB9TpGrZxQbEsrEznv5jXXdwyP6AXerN8aVRiAmcv | tokenDetails {'creator': 'Cx587mCvRxyZ1VjvViRPqNXFR9iCigiXsvcNXeLiQqnN', 'tx': 'F3QsxnUSVA6p4jYUDkK2y1eb1GYkQN3bw6o9A2xqo7zibf1r7v2R3n4CppZKbdYjLvrEEPjKzDEwnSHUZdocjpV', 'time': 1792982637} | socials {'twitter': 'https://x.com/search?q=%24NSFW&src=typed_query', 'telegram': 'https://t.me/', 'website': 'https://bags.fm'}
+token.creation: {'creator': 'Cx587mCvRxyZ1VjvViRPqNXFR9iCigiXsvcNXeLiQqnN', 'created_tx': 'F3QsxnUSVA6p4jYUDkK2y1eb1GYkQN3bw6o9A2xqo7zibf1r7v2R3n4CppZKbdYjLvrEEPjKzDEwnSHUZdocjpV', 'created_time': 1792982637} | creator: None | creators: None | createdOn: https://bags.fm None | twitter: https://x.com/search?q=%24NSFW&src=typed_query
+risk.dev: {'percentage': 0, 'amount': 0}
+  first buyer: 8FgV61be2CugNQSmB3QcntgwPqUFDEwa7FfGVmhhR35D None 1792982638053
+  first buyer: HXKZK3HuKPe5HxXQCKRUiHKpRU3s4JLBZyAwD5nvSoQ5 {'platforms': ['gmgn'], 'type': 'gmgn', 'tags': ['gmgn']} 1792982638325
+  first buyer: Fk3FjBU6AwaC5583MiA9ySTFhYzHyK9DcAGbYdRdRQbt None 1792982639225
+  first buyer: 4J8xfNozg8cxBN9bTLuUcrJWGcPnFeeNQ9GKehABYHy6 None 1792982643561
+  first buyer: 2gZV6rCoSchdGKzypRzYgcw7Be5D4zZEK899Z4A1Ttpd None 1792982643682
+bags token-launch/creator/v3?tokenMint=DvC2Pw -> 400 {"success":false,"response":"[\n  {\n    \"code\": \"custom\",\n    \"path\": [\n      \"tokenMint\"\n    ],\n    \"message\": \"Invalid mint\"\n  }\n]"}
+bags token-launch/creator/v3?tokenMint=DvC2Pw -> 401 {"success":false,"error":"API key is required. Please provide x-api-key header."}
+bags token-launch?tokenMint=DvC2PwEm6qv3kjr7E -> 400 {"success":false,"response":"[\n  {\n    \"code\": \"custom\",\n    \"path\": [\n      \"tokenMint\"\n    ],\n    \"message\": \"Invalid mint\"\n  }\n]"}
+02:48:05 pump tokens: 2000 con entrada posible: 1827
+
+== pump | entrada min 3 | tenencia 360 min | diseño (mitad vieja) ==
+   CONTROL: todos                     n= 913 acierto=   7% ret/op=-0.432 mediana=-0.556 <-50%:  68% salidas={'sin liquidez': 497, 'stop': 223, 'trailing': 122}
+  por socials:
+     ---                              n= 472 acierto=   6% ret/op=-0.459 mediana=-0.557 <-50%:  77% salidas={'sin liquidez': 284, 'stop': 121, 'trailing': 43}
+     --web                            n=  24 acierto=  12% ret/op=-0.325 mediana=-0.556 <-50%:  62% salidas={'sin liquidez': 10, 'stop': 9, 'fin de datos': 3}
+     -tg-                             n=   7 (poca muestra)
+     tw--                             n= 139 acierto=  10% ret/op=-0.411 mediana=-0.556 <-50%:  64% salidas={'sin liquidez': 81, 'stop': 22, 'trailing': 22}
+     tw-web                           n= 259 acierto=   7% ret/op=-0.402 mediana=-0.554 <-50%:  56% salidas={'sin liquidez': 112, 'stop': 67, 'trailing': 51}
+     twtg-                            n=   3 (poca muestra)
+     twtgweb                          n=   9 (poca muestra)
+  por historia del creador:
+     sin historia                     n= 157 acierto=  14% ret/op=-0.365 mediana=-0.541 <-50%:  54% salidas={'stop': 70, 'trailing': 40, 'sin liquidez': 38}
+     historia sin exitos              n=  66 acierto=  20% ret/op=-0.267 mediana=-0.555 <-50%:  56% salidas={'sin liquidez': 27, 'trailing': 17, 'stop': 14}
+     historia buena (1 exito)         n=  11 (poca muestra)
+     historia buena (>=2 exitos)      n=   2 (poca muestra)
+     fabrica                          n= 677 acierto=   4% ret/op=-0.465 mediana=-0.557 <-50%:  73% salidas={'sin liquidez': 427, 'stop': 134, 'trailing': 63}
+  combinadas:
+     socials tw+web o mas, no fabrica n=  92 acierto=  14% ret/op=-0.325 mediana=-0.480 <-50%:  48% salidas={'stop': 33, 'trailing': 29, 'sin liquidez': 24}
+     historia buena + algun social    n=   8 (poca muestra)
+     historia buena + tw+web          n=   3 (poca muestra)
+     AZAR (30% al azar)               n= 309 acierto=  10% ret/op=-0.404 mediana=-0.557 <-50%:  69% salidas={'sin liquidez': 170, 'stop': 67, 'trailing': 45}
+
+== pump | entrada min 3 | tenencia 360 min | PRUEBA (mitad nueva) ==
+   CONTROL: todos                     n= 914 acierto=   9% ret/op=-0.020 mediana=-0.557 <-50%:  71% salidas={'sin liquidez': 556, 'stop': 166, 'trailing': 132}
+  por socials:
+     ---                              n= 447 acierto=   7% ret/op=-0.468 mediana=-0.557 <-50%:  79% salidas={'sin liquidez': 303, 'stop': 88, 'trailing': 46}
+     --web                            n=  25 acierto=  16% ret/op=-0.301 mediana=-0.554 <-50%:  60% salidas={'sin liquidez': 10, 'stop': 6, 'trailing': 5}
+     -tg-                             n=   4 (poca muestra)
+     -tgweb                           n=   1 (poca muestra)
+     tw--                             n= 153 acierto=  14% ret/op=-0.372 mediana=-0.556 <-50%:  64% salidas={'sin liquidez': 94, 'trailing': 30, 'stop': 21}
+     tw-web                           n= 271 acierto=   8% ret/op=+0.974 mediana=-0.557 <-50%:  62% salidas={'sin liquidez': 140, 'trailing': 48, 'stop': 46}
+     twtg-                            n=   3 (poca muestra)
+     twtgweb                          n=  10 (poca muestra)
+  por historia del creador:
+     sin historia                     n= 155 acierto=  19% ret/op=-0.311 mediana=-0.492 <-50%:  49% salidas={'stop': 58, 'trailing': 44, 'sin liquidez': 38}
+     historia sin exitos              n=  64 acierto=  17% ret/op=-0.324 mediana=-0.556 <-50%:  61% salidas={'sin liquidez': 30, 'trailing': 19, 'stop': 14}
+     historia buena (1 exito)         n=  11 (poca muestra)
+     historia buena (>=2 exitos)      n=   7 (poca muestra)
+     fabrica                          n= 677 acierto=   5% ret/op=+0.083 mediana=-0.557 <-50%:  78% salidas={'sin liquidez': 481, 'stop': 90, 'trailing': 62}
+  combinadas:
+     socials tw+web o mas, no fabrica n=  96 acierto=  16% ret/op=-0.312 mediana=-0.532 <-50%:  52% salidas={'sin liquidez': 30, 'trailing': 30, 'stop': 27}
+     historia buena + algun social    n=  11 (poca muestra)
+     historia buena + tw+web          n=   6 (poca muestra)
+     AZAR (30% al azar)               n= 309 acierto=   9% ret/op=-0.430 mediana=-0.557 <-50%:  72% salidas={'sin liquidez': 189, 'stop': 61, 'trailing': 42}
+
+  variantes de salida (solo mitad de diseño, grupo 'historia buena + algun social'):
+   escalera 1.5/2/3 + trail30 stop40  n=  11 (poca muestra)
+   escalera 1.3/1.6/2 trail20 stop30  n=  11 (poca muestra)
+   50% a 2x, trail 20, stop 30        n=  11 (poca muestra)
+   solo trailing 25 stop 35           n=  11 (poca muestra)
+== exit 0 ==
