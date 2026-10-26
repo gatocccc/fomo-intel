@@ -1,5 +1,5 @@
 {
- "ts": 1793029799.59109,
+ "ts": 1793030099.8144464,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-26",
-  "seen": 94,
+  "seen": 95,
   "bought": 1,
   "by_reason": {
-   "freno": 73,
+   "freno": 74,
    "en_banco": 12,
    "precio_corrido": 4,
    "compra_fallida": 4,
@@ -45,22 +45,22 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.2454,
- "sol_usd": 102.13350473444679,
+ "sol_usd": 102.03076728071403,
  "stream_connected": true,
- "stream_msgs": 3488,
- "tokens_seen": 3234,
- "tokens_tracked": 107,
+ "stream_msgs": 3572,
+ "tokens_seen": 3316,
+ "tokens_tracked": 116,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
  "factories": 0,
  "factory_pending": 0,
- "account_trades": 5,
+ "account_trades": 6,
  "helius": {
   "connected": true,
-  "notifications": 1899112,
-  "parsed": 185,
-  "skipped": 1898210,
+  "notifications": 1940245,
+  "parsed": 187,
+  "skipped": 1939336,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
@@ -69,7 +69,7 @@
    "14:26:03 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 40,
+ "follow_buys_seen": 41,
  "guard": {
   "alerts": [
    "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
@@ -86,7 +86,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 36,
+ "st_requests": 37,
  "stream_errors": [
   "15:35:02 Connection to remote host was lost.",
   "15:35:05 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 15:35:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
@@ -94,9 +94,9 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 6,
-  "create": 3303,
+  "create": 3386,
   "sell": 102,
-  "buy": 77
+  "buy": 78
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",
