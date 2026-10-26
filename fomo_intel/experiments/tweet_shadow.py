@@ -52,7 +52,7 @@ def handle(msg: dict, seen_ts: float) -> None:
     tw = meta.get("twitter") or ""
     row = {"seen_ts": round(seen_ts, 3), "mint": msg.get("mint"), "name": msg.get("name"), "symbol": msg.get("symbol"),
            "creator": msg.get("traderPublicKey"), "init_sol": msg.get("solAmount"), "mcap_sol": msg.get("marketCapSol"),
-           "pool": msg.get("pool"), "uri": uri, "meta_lat_s": round(lat, 2), "meta_src": src,
+           "pool": msg.get("pool"), "uri": uri, "src": "helius" if msg.get("signature") else "pumpportal", "meta_lat_s": round(lat, 2), "meta_src": src,
            "twitter": tw, "website": meta.get("website") or "", "telegram": meta.get("telegram") or "",
            "description": (meta.get("description") or "")[:200], "created_on": meta.get("createdOn") or "",
            "is_tweet": "/status/" in tw}
@@ -65,7 +65,7 @@ def handle(msg: dict, seen_ts: float) -> None:
         except Exception:  # noqa: BLE001
             pass
     with lock:
-        with open(OUT / "creates.jsonl", "a") as f:
+        with open(OUT / ("creates_helius.jsonl" if msg.get("signature") else "creates.jsonl"), "a") as f:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
         stats["creates"] += 1; stats["tweet"] += row["is_tweet"]; stats["meta_ok"] += bool(meta)
         stats["lat_sum"] += lat
@@ -77,8 +77,74 @@ def worker(pool: ThreadPoolExecutor):
         pool.submit(handle, msg, ts)
 
 
+CREATE_DISC = __import__("hashlib").sha256(b"event:CreateEvent").digest()[:8]
+PUMP = "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"
+
+
+def decode_create(logs: list[str]) -> dict | None:
+    """CreateEvent de pump.fun (Create y CreateV2) desde los logs: name, symbol, uri, mint, user. Acepta mints sin sufijo 'pump'."""
+    import base64, struct
+    from solders.pubkey import Pubkey
+    for l in logs:
+        if not l.startswith("Program data: "):
+            continue
+        try:
+            b = base64.b64decode(l[14:])
+        except Exception:  # noqa: BLE001
+            continue
+        if b[:8] != CREATE_DISC:
+            continue
+        try:
+            o, strs = 8, []
+            for _ in range(3):
+                n = struct.unpack_from("<I", b, o)[0]; o += 4
+                strs.append(b[o:o + n].decode("utf-8", "replace")); o += n
+            mint = str(Pubkey.from_bytes(b[o:o + 32])); o += 64            # mint, bonding_curve
+            user = str(Pubkey.from_bytes(b[o:o + 32]))
+            return {"name": strs[0], "symbol": strs[1], "uri": strs[2], "mint": mint, "traderPublicKey": user}
+        except Exception:  # noqa: BLE001
+            return None
+    return None
+
+
+def run_helius(t_end: float):
+    import os
+    url = f"wss://mainnet.helius-rpc.com/?api-key={os.environ['HELIUS_API_KEY']}"
+    last_stat = time.time()
+    while time.time() < t_end:
+        try:
+            ws = websocket.create_connection(url, timeout=30)
+            ws.send(json.dumps({"jsonrpc": "2.0", "id": 1, "method": "logsSubscribe", "params": [{"mentions": [PUMP]}, {"commitment": "processed"}]}))
+            while time.time() < t_end:
+                raw = ws.recv()
+                if not raw or "Instruction: Create" not in raw:      # filtro barato antes de parsear (~1.000 avisos/s)
+                    continue
+                v = json.loads(raw).get("params", {}).get("result", {}).get("value", {})
+                if v.get("err"):
+                    continue
+                c = decode_create(v.get("logs") or [])
+                if c:
+                    c["signature"] = v.get("signature")
+                    q.put((c, time.time()))
+                else:
+                    stats["create_sin_decodificar"] += 1
+                if time.time() - last_stat > 600:
+                    last_stat = time.time()
+                    with lock:
+                        n = max(stats["creates"], 1)
+                        line = (f"{time.strftime('%H:%M:%S')} [helius] creados {stats['creates']} | con tweet {stats['tweet']} ({stats['tweet'] / n:.0%}) | "
+                                f"metadatos ok {stats['meta_ok'] / n:.0%} | lat media {stats['lat_sum'] / n:.2f}s | sin decodificar {stats['create_sin_decodificar']}")
+                    print(line, flush=True); (OUT / "stats.txt").write_text(line + "\n")
+        except Exception as e:  # noqa: BLE001
+            print("helius caído:", str(e)[:120], flush=True); time.sleep(3)
+
+
 def main():
     dur = float(sys.argv[1]) if len(sys.argv) > 1 else 36000
+    if len(sys.argv) > 2 and sys.argv[2] == "helius":
+        pool = ThreadPoolExecutor(16)
+        threading.Thread(target=worker, args=(pool,), daemon=True).start()
+        run_helius(time.time() + dur); print("fin", dict(stats), flush=True); return
     t_end = time.time() + dur
     pool = ThreadPoolExecutor(12)
     threading.Thread(target=worker, args=(pool,), daemon=True).start()
