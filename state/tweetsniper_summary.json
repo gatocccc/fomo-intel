@@ -1,7 +1,7 @@
 {
- "ts": 1793058301.845118,
- "lag_slots": 1,
- "tokens_tracked": 2196,
+ "ts": 1793058603.212168,
+ "lag_slots": 0,
+ "tokens_tracked": 2365,
  "ctrl": {
   "enabled": true,
   "mode": "paper",
@@ -17,14 +17,27 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "tweet": 1789,
-  "no_tweet": 2263,
-  "meta_fail": 1051,
-  "sin_meta_a_tiempo": 909,
-  "entra": 3
+  "tweet": 1832,
+  "no_tweet": 2360,
+  "meta_fail": 1081,
+  "sin_meta_a_tiempo": 941,
+  "entra": 4
  },
- "open": [],
- "sol_usd": 100.69682813310166,
+ "open": [
+  {
+   "mint": "3zXt7sGveqfN7U6X86eGXa4RBJ7bP9AynCwbMJK8pump",
+   "symbol": "AS",
+   "t_in": 1793058564.2130167,
+   "entry": 4.2320657316438014e-07,
+   "tokens": 117253.83405530728,
+   "sol_in": 0.04962259330093149,
+   "peak": 4.2320657316438014e-07,
+   "score": 0.3241,
+   "t0": 1793058561.4576426,
+   "mode": "paper"
+  }
+ ],
+ "sol_usd": 100.72910049815262,
  "closed": 3,
  "wins": 2,
  "pnl_usd": -0.29,
