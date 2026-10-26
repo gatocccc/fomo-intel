@@ -1,45 +1,3 @@
-Oct 25 23:18:33 simplai-prod python3[585537]: 2026-10-25 23:18:33,419 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 3.102 SOL
-Oct 25 23:18:33 simplai-prod python3[585537]: 2026-10-25 23:18:33,624 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 2.687 SOL
-Oct 25 23:18:33 simplai-prod python3[585537]: 2026-10-25 23:18:33,939 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 3.3312 SOL @ 8.279e-08 (lat 1.0s)
-Oct 25 23:18:34 simplai-prod python3[585537]: 2026-10-25 23:18:34,026 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 3.0236 SOL @ 8.349e-08 (lat 0.6s)
-Oct 25 23:18:34 simplai-prod python3[585537]: 2026-10-25 23:18:34,058 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 2.446 SOL
-Oct 25 23:18:34 simplai-prod python3[585537]: 2026-10-25 23:18:34,113 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 2.6182 SOL @ 8.033e-08 (lat 0.5s)
-Oct 25 23:18:34 simplai-prod python3[585537]: 2026-10-25 23:18:34,354 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 2.143 SOL
-Oct 25 23:18:34 simplai-prod python3[585537]: 2026-10-25 23:18:34,599 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 2.148 SOL
-Oct 25 23:18:34 simplai-prod python3[585537]: 2026-10-25 23:18:34,951 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 2.244 SOL
-Oct 25 23:18:34 simplai-prod python3[585537]: 2026-10-25 23:18:34,979 INFO live: COMPRA fábrica 45m4ZF a 1.161e-07 (4.15x de la base) 0.4 s tras la creación, slippage +62.1%
-Oct 25 23:18:34 simplai-prod python3[585537]: 2026-10-25 23:18:34,995 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 2.3830 SOL @ 8.124e-08 (lat 0.9s)
-Oct 25 23:18:35 simplai-prod python3[585537]: 2026-10-25 23:18:35,080 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 2.0875 SOL @ 7.907e-08 (lat 0.7s)
-Oct 25 23:18:35 simplai-prod python3[585537]: 2026-10-25 23:18:35,171 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 2.0932 SOL @ 8.810e-08 (lat 0.6s)
-Oct 25 23:18:35 simplai-prod python3[585537]: 2026-10-25 23:18:35,252 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 2.1862 SOL @ 1.022e-07 (lat 0.3s)
-Oct 25 23:18:35 simplai-prod python3[585537]: 2026-10-25 23:18:35,300 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 1.880 SOL
-Oct 25 23:18:35 simplai-prod python3[585537]: 2026-10-25 23:18:35,427 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 1.756 SOL
-Oct 25 23:18:35 simplai-prod python3[585537]: 2026-10-25 23:18:35,665 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 1.587 SOL
-Oct 25 23:18:35 simplai-prod python3[585537]: 2026-10-25 23:18:35,989 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 1.437 SOL
-Oct 25 23:18:36 simplai-prod python3[585537]: 2026-10-25 23:18:36,160 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 1.8312 SOL @ 9.515e-08 (lat 0.9s)
-Oct 25 23:18:36 simplai-prod python3[585537]: 2026-10-25 23:18:36,169 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 1.247 SOL
-Oct 25 23:18:36 simplai-prod python3[585537]: 2026-10-25 23:18:36,262 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 1.7104 SOL @ 9.875e-08 (lat 0.8s)
-Oct 25 23:18:36 simplai-prod python3[585537]: 2026-10-25 23:18:36,349 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 1.5459 SOL @ 9.917e-08 (lat 0.7s)
-Oct 25 23:18:36 simplai-prod python3[585537]: 2026-10-25 23:18:36,434 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 1.3995 SOL @ 9.975e-08 (lat 0.4s)
-Oct 25 23:18:36 simplai-prod python3[585537]: 2026-10-25 23:18:36,519 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 1.2144 SOL @ 9.618e-08 (lat 0.3s)
-Oct 25 23:18:36 simplai-prod python3[585537]: 2026-10-25 23:18:36,566 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 1.077 SOL
-Oct 25 23:18:36 simplai-prod python3[585537]: 2026-10-25 23:18:36,862 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 1.002 SOL
-Oct 25 23:18:37 simplai-prod python3[585537]: 2026-10-25 23:18:37,083 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 0.845 SOL
-Oct 25 23:18:37 simplai-prod python3[585537]: 2026-10-25 23:18:37,376 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 0.772 SOL
-Oct 25 23:18:37 simplai-prod python3[585537]: 2026-10-25 23:18:37,592 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 1.0482 SOL @ 9.224e-08 (lat 1.0s)
-Oct 25 23:18:37 simplai-prod python3[585537]: 2026-10-25 23:18:37,745 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 0.9756 SOL @ 9.539e-08 (lat 0.9s)
-Oct 25 23:18:37 simplai-prod python3[585537]: 2026-10-25 23:18:37,773 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 1.635 SOL
-Oct 25 23:18:37 simplai-prod python3[585537]: 2026-10-25 23:18:37,825 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 0.8220 SOL @ 8.930e-08 (lat 0.7s)
-Oct 25 23:18:37 simplai-prod python3[585537]: 2026-10-25 23:18:37,916 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 0.7515 SOL @ 9.071e-08 (lat 0.5s)
-Oct 25 23:18:38 simplai-prod python3[585537]: 2026-10-25 23:18:38,486 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 2.612 SOL
-Oct 25 23:18:38 simplai-prod python3[585537]: 2026-10-25 23:18:38,793 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 1.5924 SOL @ 8.543e-08 (lat 1.0s)
-Oct 25 23:18:39 simplai-prod python3[585537]: 2026-10-25 23:18:39,043 INFO live.helius: HELIUS venta RÁPIDA gVDXho… 45m4ZFox 2.503 SOL
-Oct 25 23:18:39 simplai-prod python3[585537]: 2026-10-25 23:18:39,669 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 2.5452 SOL @ 9.103e-08 (lat 1.2s)
-Oct 25 23:18:39 simplai-prod python3[585537]: 2026-10-25 23:18:39,749 INFO live.helius: HELIUS gVDXho sell 45m4ZFox 2.4393 SOL @ 8.724e-08 (lat 0.7s)
-Oct 25 23:18:41 simplai-prod python3[585537]: 2026-10-25 23:18:41,419 INFO live.portfolio: CERRADA 45m4ZF ret=-29.4% pnl=US$-0.41 salidas=['fábrica vendió']
-Oct 25 23:18:41 simplai-prod python3[585537]: 2026-10-25 23:18:41,420 INFO live: VENTA 45m4ZF: la fábrica vendió (3.42 SOL) -> salimos a 0.71x [CERRADA]
-Oct 25 23:20:42 simplai-prod python3[585537]: 2026-10-25 23:20:42,277 INFO live.helius: HELIUS B32Qbb sell 3b9Hqmcn 1.2445 SOL @ 3.110e-07 (lat 0.9s)
-Oct 25 23:22:07 simplai-prod python3[585537]: 2026-10-25 23:22:07,207 INFO live: latido: stream=True tokens_vistos=191 seguidos=84 candidatos=0 abiertas=0 cerradas=2 st_requests=4 SOL=$101
 Oct 25 23:24:40 simplai-prod python3[585537]: 2026-10-25 23:24:40,048 INFO live.helius: HELIUS B32Qbb buy 555vsKfr 1.0130 SOL @ 4.438e-08 (lat 0.9s)
 Oct 25 23:27:07 simplai-prod python3[585537]: 2026-10-25 23:27:07,396 INFO live: latido: stream=True tokens_vistos=224 seguidos=62 candidatos=0 abiertas=0 cerradas=2 st_requests=5 SOL=$101
 Oct 25 23:32:07 simplai-prod python3[585537]: 2026-10-25 23:32:07,683 INFO live: latido: stream=True tokens_vistos=278 seguidos=71 candidatos=0 abiertas=0 cerradas=2 st_requests=6 SOL=$101
@@ -298,3 +256,45 @@ Oct 26 03:12:59 simplai-prod python3[585537]: 2026-10-26 03:12:59,311 INFO live.
 Oct 26 03:13:43 simplai-prod python3[585537]: 2026-10-26 03:13:43,725 INFO live.helius: HELIUS venta RÁPIDA B32Qbb… 3TNHqd22 2.841 SOL
 Oct 26 03:13:44 simplai-prod python3[585537]: 2026-10-26 03:13:44,611 INFO live.helius: HELIUS B32Qbb sell 3TNHqd22 2.7713 SOL @ 1.224e-07 (lat 0.9s)
 Oct 26 03:17:23 simplai-prod python3[585537]: 2026-10-26 03:17:23,430 INFO live: latido: stream=True tokens_vistos=2473 seguidos=82 candidatos=0 abiertas=0 cerradas=2 st_requests=50 SOL=$101
+Oct 26 03:21:53 simplai-prod python3[585537]: 2026-10-26 03:21:53,710 INFO live.helius: HELIUS create RÁPIDO gVDXho… -> EThNKS2j slot 461509651 precio 7.158e-08
+Oct 26 03:21:53 simplai-prod python3[585537]: 2026-10-26 03:21:53,719 INFO live: FABRICA (Helius) gVDXho… creó EThNKS2j
+Oct 26 03:21:53 simplai-prod python3[585537]: 2026-10-26 03:21:53,720 INFO live: FABRICA gVDXho… creó EThNKS (EThNKS2j) -> entrando
+Oct 26 03:21:54 simplai-prod python3[585537]: 2026-10-26 03:21:54,646 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 4.120 SOL
+Oct 26 03:21:54 simplai-prod python3[585537]: 2026-10-26 03:21:54,896 INFO live.helius: HELIUS gVDXho sell EThNKS2j 4.0160 SOL @ 9.981e-08 (lat 0.2s)
+Oct 26 03:21:54 simplai-prod python3[585537]: 2026-10-26 03:21:54,924 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 4.101 SOL
+Oct 26 03:21:54 simplai-prod python3[585537]: 2026-10-26 03:21:54,968 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 3.445 SOL
+Oct 26 03:21:55 simplai-prod python3[585537]: 2026-10-26 03:21:55,220 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 3.211 SOL
+Oct 26 03:21:55 simplai-prod python3[585537]: 2026-10-26 03:21:55,385 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 2.852 SOL
+Oct 26 03:21:55 simplai-prod python3[585537]: 2026-10-26 03:21:55,589 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 2.587 SOL
+Oct 26 03:21:55 simplai-prod python3[585537]: 2026-10-26 03:21:55,733 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 2.268 SOL
+Oct 26 03:21:55 simplai-prod python3[585537]: 2026-10-26 03:21:55,780 INFO live.helius: HELIUS gVDXho sell EThNKS2j 3.9975 SOL @ 1.104e-07 (lat 0.9s)
+Oct 26 03:21:55 simplai-prod python3[585537]: 2026-10-26 03:21:55,916 INFO live.helius: HELIUS gVDXho sell EThNKS2j 3.3572 SOL @ 1.030e-07 (lat 0.9s)
+Oct 26 03:21:55 simplai-prod python3[585537]: 2026-10-26 03:21:55,969 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 1.985 SOL
+Oct 26 03:21:56 simplai-prod python3[585537]: 2026-10-26 03:21:56,002 INFO live.helius: HELIUS gVDXho sell EThNKS2j 3.1299 SOL @ 1.067e-07 (lat 0.8s)
+Oct 26 03:21:56 simplai-prod python3[585537]: 2026-10-26 03:21:56,088 INFO live.helius: HELIUS gVDXho sell EThNKS2j 2.7793 SOL @ 1.053e-07 (lat 0.7s)
+Oct 26 03:21:56 simplai-prod python3[585537]: 2026-10-26 03:21:56,137 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 1.795 SOL
+Oct 26 03:21:56 simplai-prod python3[585537]: 2026-10-26 03:21:56,174 INFO live.helius: HELIUS gVDXho sell EThNKS2j 2.5212 SOL @ 1.061e-07 (lat 0.6s)
+Oct 26 03:21:56 simplai-prod python3[585537]: 2026-10-26 03:21:56,259 INFO live.helius: HELIUS gVDXho sell EThNKS2j 2.2094 SOL @ 1.033e-07 (lat 0.5s)
+Oct 26 03:21:56 simplai-prod python3[585537]: 2026-10-26 03:21:56,342 INFO live.helius: HELIUS gVDXho sell EThNKS2j 1.9336 SOL @ 1.005e-07 (lat 0.4s)
+Oct 26 03:21:56 simplai-prod python3[585537]: 2026-10-26 03:21:56,368 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 1.656 SOL
+Oct 26 03:21:56 simplai-prod python3[585537]: 2026-10-26 03:21:56,529 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 1.625 SOL
+Oct 26 03:21:56 simplai-prod python3[585537]: 2026-10-26 03:21:56,871 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 1.417 SOL
+Oct 26 03:21:57 simplai-prod python3[585537]: 2026-10-26 03:21:57,016 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 1.241 SOL
+Oct 26 03:21:57 simplai-prod python3[585537]: 2026-10-26 03:21:57,156 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 1.047 SOL
+Oct 26 03:21:57 simplai-prod python3[585537]: 2026-10-26 03:21:57,214 INFO live.helius: HELIUS gVDXho sell EThNKS2j 1.7485 SOL @ 1.009e-07 (lat 1.1s)
+Oct 26 03:21:57 simplai-prod python3[585537]: 2026-10-26 03:21:57,297 INFO live.helius: HELIUS gVDXho sell EThNKS2j 1.6132 SOL @ 1.035e-07 (lat 0.9s)
+Oct 26 03:21:57 simplai-prod python3[585537]: 2026-10-26 03:21:57,380 INFO live.helius: HELIUS gVDXho sell EThNKS2j 1.5832 SOL @ 1.128e-07 (lat 0.9s)
+Oct 26 03:21:57 simplai-prod python3[585537]: 2026-10-26 03:21:57,454 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 0.972 SOL
+Oct 26 03:21:57 simplai-prod python3[585537]: 2026-10-26 03:21:57,467 INFO live.helius: HELIUS gVDXho sell EThNKS2j 1.3803 SOL @ 1.093e-07 (lat 0.6s)
+Oct 26 03:21:57 simplai-prod python3[585537]: 2026-10-26 03:21:57,620 INFO live.helius: HELIUS gVDXho sell EThNKS2j 1.2080 SOL @ 1.063e-07 (lat 0.6s)
+Oct 26 03:21:57 simplai-prod python3[585537]: 2026-10-26 03:21:57,706 INFO live.helius: HELIUS gVDXho sell EThNKS2j 1.0191 SOL @ 9.964e-08 (lat 0.5s)
+Oct 26 03:21:57 simplai-prod python3[585537]: 2026-10-26 03:21:57,799 INFO live.helius: HELIUS gVDXho sell EThNKS2j 0.9463 SOL @ 1.028e-07 (lat 0.3s)
+Oct 26 03:21:58 simplai-prod python3[585537]: 2026-10-26 03:21:58,219 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 2.489 SOL
+Oct 26 03:21:58 simplai-prod python3[585537]: 2026-10-26 03:21:58,649 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 1.695 SOL
+Oct 26 03:21:59 simplai-prod python3[585537]: 2026-10-26 03:21:59,155 INFO live.helius: HELIUS gVDXho sell EThNKS2j 2.4258 SOL @ 1.171e-07 (lat 0.9s)
+Oct 26 03:21:59 simplai-prod python3[585537]: 2026-10-26 03:21:59,171 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 2.429 SOL
+Oct 26 03:21:59 simplai-prod python3[585537]: 2026-10-26 03:21:59,695 INFO live.helius: HELIUS venta RÁPIDA gVDXho… EThNKS2j 2.632 SOL
+Oct 26 03:22:00 simplai-prod python3[585537]: 2026-10-26 03:22:00,020 INFO live.helius: HELIUS gVDXho sell EThNKS2j 1.6516 SOL @ 1.063e-07 (lat 1.4s)
+Oct 26 03:22:00 simplai-prod python3[585537]: 2026-10-26 03:22:00,162 INFO live.helius: HELIUS gVDXho sell EThNKS2j 2.3666 SOL @ 1.016e-07 (lat 1.0s)
+Oct 26 03:22:00 simplai-prod python3[585537]: 2026-10-26 03:22:00,290 INFO live.helius: HELIUS gVDXho sell EThNKS2j 2.5648 SOL @ 1.101e-07 (lat 0.6s)
+Oct 26 03:22:23 simplai-prod python3[585537]: 2026-10-26 03:22:23,553 INFO live: latido: stream=True tokens_vistos=2530 seguidos=81 candidatos=0 abiertas=0 cerradas=2 st_requests=51 SOL=$101
