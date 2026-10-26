@@ -1,4 +1,3 @@
-Oct 26 02:17:20 simplai-prod python3[585537]: 2026-10-26 02:17:20,065 INFO live: latido: stream=True tokens_vistos=1917 seguidos=48 candidatos=0 abiertas=0 cerradas=2 st_requests=39 SOL=$101
 Oct 26 02:17:21 simplai-prod python3[585537]: 2026-10-26 02:17:21,981 INFO live.helius: HELIUS B32Qbb sell EYkMp8DY 0.6923 SOL @ 1.516e-07 (lat 0.9s)
 Oct 26 02:18:45 simplai-prod python3[585537]: 2026-10-26 02:18:45,638 INFO live.helius: HELIUS create RÁPIDO B32Qbb… -> 5SUJUTNi slot 461491839 precio 3.806e-08
 Oct 26 02:18:46 simplai-prod python3[585537]: 2026-10-26 02:18:46,570 INFO live: FABRICA (Helius) B32Qbb… creó 5SUJUTNi
@@ -298,3 +297,4 @@ Oct 26 10:52:04 simplai-prod python3[697392]: 2026-10-26 10:52:04,326 INFO live:
 Oct 26 10:52:04 simplai-prod python3[697392]: 2026-10-26 10:52:04,434 INFO live.helius: helius conectado; suscribiendo 1 billeteras
 Oct 26 10:52:04 simplai-prod python3[697392]: 2026-10-26 10:52:04,701 INFO live.stream: stream conectado
 Oct 26 10:52:04 simplai-prod python3[697392]: 2026-10-26 10:52:04,858 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$101
+Oct 26 10:57:04 simplai-prod python3[697392]: 2026-10-26 10:57:04,728 INFO live: latido: stream=True tokens_vistos=58 seguidos=58 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$101
