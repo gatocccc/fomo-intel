@@ -133,7 +133,7 @@ def pull(universe, days=None, hours=None, cap=2000, min_buys=0, hold_h=None):
         created = t.get("createdAt") or (t.get("tokenDetails") or {}).get("time") or 0
         created = int(created / 1000) if created > 1e11 else int(created)
         dev = t.get("deployer") or (t.get("tokenDetails") or {}).get("creator") or ""
-        row = {"mint": mint, "symbol": t.get("symbol"), "name": t.get("name"), "created": created, "deployer": dev,
+        row = {"mint": mint, "symbol": t.get("symbol"), "name": t.get("name"), "created": created, "deployer": dev, "creator": (t.get("tokenDetails") or {}).get("creator"),
                "market": t.get("market"), "status": t.get("status"), "socials": t.get("socials"), "has_community": t.get("hasCoinCommunity"),
                "community_msgs": t.get("communityMessages"), "fees": t.get("fees"), "dev_pct": t.get("dev"), "top10": t.get("top10"),
                "holders": t.get("holders"), "buys": t.get("buys"), "sells": t.get("sells"), "mcap_now": t.get("marketCapUsd"), "liq_now": t.get("liquidityUsd"),
@@ -151,11 +151,60 @@ def pull(universe, days=None, hours=None, cap=2000, min_buys=0, hold_h=None):
     log(universe, "descarga terminada")
 
 
+def fix_creators(universe="bags"):
+    """Bags: el `deployer` del search es la wallet de la plataforma. Reconstruye creador real (tokenDetails.creator)
+    y su historia previa con /search?creator=... (incluye tokens muertos)."""
+    rows = [json.loads(l) for l in open(DIR / f"{universe}_tokens.jsonl")]
+    mints = {r["mint"] for r in rows}
+    cmap = {}
+    if any(r.get("creator") for r in rows):
+        cmap = {r["mint"]: r["creator"] for r in rows if r.get("creator")}
+    else:
+        lo = min(r["created"] for r in rows) * 1000 - 1000; hi = max(r["created"] for r in rows) * 1000 + 1000
+        lp = {"bags": "bags", "pump": "pumpfun"}[universe]
+        for t in search_window(lp, int(lo), int(hi), len(rows) + 500, {}):
+            if t.get("mint") in mints: cmap[t["mint"]] = (t.get("tokenDetails") or {}).get("creator")
+    log("creadores mapeados:", len(cmap), "de", len(rows))
+    hist = {}; cache_p = DIR / f"{universe}_creators.json"
+    if cache_p.exists(): hist = json.load(open(cache_p))
+    for i, (mint, cre) in enumerate(cmap.items()):
+        if not cre or cre in hist: continue
+        d = get("/search", creator=cre, limit=100, sortBy="createdAt", sortOrder="desc")
+        toks = (d or {}).get("data") or []
+        hist[cre] = {"total": (d or {}).get("total"), "tokens": [{"mint": t.get("mint"), "created": (t.get("createdAt") or 0) / 1000, "mcap": t.get("marketCapUsd") or 0, "status": t.get("status"), "lp": (t.get("launchpad") or {}).get("name")} for t in toks]}
+        if i % 100 == 0: log("creadores", i, "/", len(cmap)); json.dump(hist, open(cache_p, "w"))
+    json.dump(hist, open(cache_p, "w"))
+    with open(DIR / f"{universe}_tokens.jsonl", "w") as f:
+        for r in rows:
+            cre = cmap.get(r["mint"]); r["creator"] = cre
+            h = hist.get(cre or "", {}); prior = [t for t in h.get("tokens", []) if t["created"] and t["created"] < r["created"] - 5]
+            r["dev_hist"] = {"n_total_api": h.get("total"), "prior": [{"created": t["created"], "graduated": t["status"] in ("graduated", "migrated"), "mcap": t["mcap"]} for t in prior]}
+            f.write(json.dumps(r) + "\n")
+    log("historias de creador reescritas")
+
+
 # ---------------------------------------------------------------- análisis
+def real_tw(u):
+    u = (u or "").lower().rstrip("/")
+    if not ("x.com/" in u or "twitter.com/" in u): return False
+    tail = u.split(".com/", 1)[1]
+    return bool(tail) and not tail.startswith(("search", "i/", "home", "explore")) and "?" not in tail.split("/")[0] and len(tail.split("/")[0]) > 1
+
+
+def real_tg(u):
+    u = (u or "").lower().rstrip("/")
+    return "t.me/" in u and len(u.split("t.me/", 1)[1]) > 2
+
+
+def real_web(u):
+    u = (u or "").lower().rstrip("/")
+    return bool(u) and not any(b in u for b in ("bags.fm", "pump.fun", "x.com", "twitter.com", "t.me", "t.co/", "believe.app", "google.com", "youtube.com"))
+
+
 def soc_key(row):
     s = row.get("socials") or {}
     if isinstance(s, list): s = {x: True for x in s}
-    tw = bool(s.get("twitter")); tg = bool(s.get("telegram")); web = bool(s.get("website"))
+    tw = real_tw(s.get("twitter")); tg = real_tg(s.get("telegram")); web = real_web(s.get("website"))
     return ("tw" if tw else "-") + ("tg" if tg else "-") + ("web" if web else "-")
 
 
@@ -237,6 +286,7 @@ if __name__ == "__main__":
         while i < len(a):
             k = a[i].lstrip("-").replace("-", "_"); kw[k] = float(a[i + 1]); i += 2
         pull(a[1], days=kw.get("days"), hours=kw.get("hours"), cap=int(kw.get("max", 2000)), min_buys=int(kw.get("min_buys", 0)), hold_h=kw.get("hold_h"))
+    elif a[0] == "fix_creators": fix_creators(a[1] if len(a) > 1 else "bags")
     elif a[0] == "analyze":
         kw = {}; i = 2
         while i < len(a):
