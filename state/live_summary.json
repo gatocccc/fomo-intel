@@ -1,5 +1,5 @@
 {
- "ts": 1793021100.6470342,
+ "ts": 1793021401.6600778,
  "mode": "real",
  "open": 0,
  "closed": 0,
@@ -12,19 +12,23 @@
  "positions": [],
  "last_closed": [],
  "rejections": {
-  "day": "",
-  "seen": 0,
+  "day": "2026-10-26",
+  "seen": 6,
   "bought": 0,
-  "by_reason": {},
+  "by_reason": {
+   "en_banco": 3,
+   "precio_corrido": 2,
+   "compra_fallida": 1
+  },
   "note": ""
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.3076,
- "sol_usd": 101.12780632974984,
+ "wallet_sol": 1.3056,
+ "sol_usd": 100.87370050965356,
  "stream_connected": true,
- "stream_msgs": 511,
- "tokens_seen": 484,
- "tokens_tracked": 105,
+ "stream_msgs": 587,
+ "tokens_seen": 560,
+ "tokens_tracked": 113,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -33,27 +37,32 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 127583,
-  "parsed": 0,
-  "skipped": 127543,
+  "notifications": 167990,
+  "parsed": 9,
+  "skipped": 167906,
   "fast_creates": 0,
   "subs": 1,
   "errors": []
  },
- "follow_buys_seen": 0,
+ "follow_buys_seen": 3,
  "guard": {
-  "alerts": [],
-  "bench": 0,
-  "bench_by_reason": {},
+  "alerts": [
+   "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}"
+  ],
+  "bench": 2,
+  "bench_by_reason": {
+   "precio_corrido": 1,
+   "compra_fallida": 1
+  },
   "source_down_s": 0,
-  "exec_fails_recent": 0
+  "exec_fails_recent": 1
  },
- "st_requests": 8,
+ "st_requests": 9,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 2,
-  "create": 509
+  "create": 585
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
