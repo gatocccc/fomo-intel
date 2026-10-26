@@ -1,0 +1,11 @@
+== 071_decu_real 2026-10-26T10:52:03Z ==
+saldo bot: 1.307626833 SOL
+control: {'mode': 'real', 'strategy': 'follow', 'size_usd': 10.0, 'max_open': 3, 'daily_loss_usd': 30.0, 'total_loss_usd': 50.0, 'max_trades': 100, 'follow_min_mcap_sol': 10.0, 'follow_max_hold_min': 15, 'follow_stop': 0.35}
+active
+Oct 26 10:52:04 simplai-prod systemd[1]: fomo-live.service: Consumed 14min 41.052s CPU time.
+Oct 26 10:52:04 simplai-prod systemd[1]: Started fomo-live.service - FOMO Intel - bot en vivo.
+Oct 26 10:52:04 simplai-prod python3[697392]: 2026-10-26 10:52:04,326 INFO live: arranca bot modo=real estrategia=follow seguidos=1 tamaño=US$10 máx_abiertas=3 billetera=4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+Oct 26 10:52:04 simplai-prod python3[697392]: 2026-10-26 10:52:04,434 INFO live.helius: helius conectado; suscribiendo 1 billeteras
+Oct 26 10:52:04 simplai-prod python3[697392]: 2026-10-26 10:52:04,701 INFO live.stream: stream conectado
+Oct 26 10:52:04 simplai-prod python3[697392]: 2026-10-26 10:52:04,858 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=0 st_requests=1 SOL=$101
+== exit 0 ==
