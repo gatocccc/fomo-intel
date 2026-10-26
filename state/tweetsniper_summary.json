@@ -1,7 +1,7 @@
 {
- "ts": 1793051693.3168108,
+ "ts": 1793051994.514633,
  "lag_slots": 0,
- "tokens_tracked": 611,
+ "tokens_tracked": 827,
  "ctrl": {
   "enabled": true,
   "mode": "paper",
@@ -17,16 +17,32 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "tweet": 204,
-  "no_tweet": 289,
-  "meta_fail": 137,
-  "sin_meta_a_tiempo": 117
+  "tweet": 276,
+  "no_tweet": 403,
+  "meta_fail": 172,
+  "sin_meta_a_tiempo": 147,
+  "entra": 1
  },
  "open": [],
- "sol_usd": 100.52768639468685,
- "closed": 0,
- "wins": 0,
- "pnl_usd": 0,
- "ret_sum": 0,
- "last": []
+ "sol_usd": 100.43691629847157,
+ "closed": 1,
+ "wins": 1,
+ "pnl_usd": 0.66,
+ "ret_sum": 0.132,
+ "last": [
+  {
+   "ts": 1793051963.5510356,
+   "day": "2026-10-26",
+   "mint": "A53C2LNuZ8kxi7FFhxHXrZbCAzYxPYeMD1tADs2pump",
+   "symbol": "OBUMA",
+   "mode": "paper",
+   "why": "tiempo",
+   "ret": 0.132,
+   "pnl_usd": 0.66,
+   "peak_mult": 1.19,
+   "hold_s": 80,
+   "entry_age_s": 2.3,
+   "score": 0.5283
+  }
+ ]
 }
