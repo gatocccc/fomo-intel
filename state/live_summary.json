@@ -1,5 +1,5 @@
 {
- "ts": 1792973100.8235135,
+ "ts": 1792973403.5203536,
  "mode": "real",
  "open": 0,
  "closed": 2,
@@ -49,12 +49,12 @@
   }
  ],
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.3096,
- "sol_usd": 101.15894584595722,
+ "wallet_sol": 1.3076,
+ "sol_usd": 101.31683438279134,
  "stream_connected": true,
- "stream_msgs": 1144,
- "tokens_seen": 707,
- "tokens_tracked": 87,
+ "stream_msgs": 1214,
+ "tokens_seen": 753,
+ "tokens_tracked": 70,
  "candidates": [],
  "strategy": "factory",
  "followed_wallets": 0,
@@ -63,34 +63,34 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 57488,
-  "parsed": 43,
-  "skipped": 57440,
-  "fast_creates": 2,
+  "notifications": 60258,
+  "parsed": 61,
+  "skipped": 60190,
+  "fast_creates": 3,
   "subs": 2,
   "errors": []
  },
  "follow_buys_seen": 0,
- "st_requests": 13,
+ "st_requests": 14,
  "stream_errors": [
   "23:48:02 Connection to remote host was lost.",
   "23:48:07 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sun, 25 Oct 2026 23:48:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
  ],
  "rules_st": null,
  "stream_counts": {
-  "otros": 7,
-  "create": 731,
-  "sell": 200,
-  "buy": 206
+  "otros": 9,
+  "create": 778,
+  "sell": 208,
+  "buy": 219
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Unsubscribed.\"}",
+  "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}",
-  "{\"message\":\"Successfully subscribed to token creation events.\"}"
+  "{\"message\":\"Unsubscribed.\"}"
  ],
- "stream_trades": 406,
+ "stream_trades": 427,
  "stream_cost_sol_est": 0.0004,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
