@@ -1,5 +1,5 @@
 {
- "ts": 1793028902.474007,
+ "ts": 1793029202.8156202,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-26",
-  "seen": 85,
+  "seen": 90,
   "bought": 1,
   "by_reason": {
-   "freno": 64,
+   "freno": 69,
    "en_banco": 12,
    "precio_corrido": 4,
    "compra_fallida": 4,
@@ -45,11 +45,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.2454,
- "sol_usd": 102.09939579378684,
+ "sol_usd": 102.33322081392181,
  "stream_connected": true,
- "stream_msgs": 3235,
- "tokens_seen": 2987,
- "tokens_tracked": 194,
+ "stream_msgs": 3336,
+ "tokens_seen": 3085,
+ "tokens_tracked": 148,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -58,9 +58,9 @@
  "account_trades": 4,
  "helius": {
   "connected": true,
-  "notifications": 1744484,
-  "parsed": 168,
-  "skipped": 1743636,
+  "notifications": 1809563,
+  "parsed": 176,
+  "skipped": 1808682,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
@@ -69,7 +69,7 @@
    "14:26:03 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 37,
+ "follow_buys_seen": 38,
  "guard": {
   "alerts": [
    "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
@@ -86,20 +86,24 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 33,
- "stream_errors": [],
+ "st_requests": 34,
+ "stream_errors": [
+  "15:35:02 Connection to remote host was lost.",
+  "15:35:05 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 15:35:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
+ ],
  "rules_st": null,
  "stream_counts": {
-  "otros": 4,
-  "create": 3053,
+  "otros": 6,
+  "create": 3152,
   "sell": 102,
   "buy": 76
  },
  "stream_samples": [
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
+  "{\"message\":\"Unsubscribed.\"}",
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Unsubscribed.\"}"
+  "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
  "stream_trades": 174,
  "stream_cost_sol_est": 0.0002,
