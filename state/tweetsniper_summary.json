@@ -1,0 +1,29 @@
+{
+ "ts": 1793050208.8629124,
+ "ctrl": {
+  "enabled": true,
+  "mode": "paper",
+  "size_usd": 5.0,
+  "max_open": 3,
+  "total_loss_usd": 25.0,
+  "daily_loss_usd": 25.0,
+  "threshold": 0.422307525573052,
+  "tp": 1.0,
+  "stop": 0.35,
+  "hold_s": 80,
+  "decide_at_s": 1.0,
+  "paper_slip": 0.03
+ },
+ "stats": {
+  "no_tweet": 17,
+  "sin_meta_a_tiempo": 28,
+  "tweet": 7
+ },
+ "open": [],
+ "sol_usd": 100.42633477050273,
+ "closed": 0,
+ "wins": 0,
+ "pnl_usd": 0,
+ "ret_sum": 0,
+ "last": []
+}

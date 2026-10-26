@@ -1,0 +1,42 @@
+== 087_cazador_paper 2026-10-26T21:28:03Z ==
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+modelo entrenado con 5404 tokens | umbral (top 1%) 0.4223 | autores 1056
+  ASS: vela vol_s1=16827.0 | trades ST hasta seg1: n=13 US$=16828 SOL=0.00 | primeros: [(0.0, 1504.6803665667787), (0.0, 1419.4785194188764), (0.0, 3304.686783313681), (0.0, 2567.78124547462)]
+  三星堆: vela vol_s1=8512.0 | trades ST hasta seg1: n=82 US$=8512 SOL=0.00 | primeros: [(0.0, 2.5773172471707957), (0.0, 126.09759278632103), (0.0, 2.017561341586466), (0.0, 2.0181303515938644)]
+  MOON: vela vol_s1=7308.0 | trades ST hasta seg1: n=7 US$=1035 SOL=0.00 | primeros: [(0.0, 29.917594746810366), (0.0, 262.6533457978163), (0.0, 261.55606819658453), (0.0, 49.8626579113506)]
+  ROKO: vela vol_s1=6186.0 | trades ST hasta seg1: n=57 US$=6186 SOL=0.00 | primeros: [(0.0, 221.7239360323334), (0.0, 39.15480097493778), (0.0, 80.74438018220262), (0.0, 100.93047522775328)]
+2026-10-26 21:28:17,474 INFO sniper: conectado; modo paper umbral 0.4223
+{
+ "ts": 1793050208.8629124,
+ "ctrl": {
+  "enabled": true,
+  "mode": "paper",
+  "size_usd": 5.0,
+  "max_open": 3,
+  "total_loss_usd": 25.0,
+  "daily_loss_usd": 25.0,
+  "threshold": 0.422307525573052,
+  "tp": 1.0,
+  "stop": 0.35,
+  "hold_s": 80,
+  "decide_at_s": 1.0,
+  "paper_slip": 0.03
+ },
+ "stats": {
+  "no_tweet": 17,
+  "sin_meta_a_tiempo": 28,
+  "tweet": 7
+ },
+ "open": [],
+ "sol_usd": 100.42633477050273,
+ "closed": 0,
+ "wins": 0,
+ "pnl_usd": 0,
+ "ret_sum": 0,
+ "last": []
+}{"ts": 1793050153.6195211, "mint": "A1XaL1DidvsVa8JS6SMxEzeeQUwPQsagpMVv2t5Hpump", "symbol": "SCARED", "score": 0.0303, "vol_s1": 1, "px_s1": 1.0, "rank": 3, "author": "gazetory", "tw2c": 77351.47296619415, "tool": "pump.mypinata.cloud", "meta_lat": 0.27, "tw_likes": 42050, "tw_text": "Köpeğinin a
+{"ts": 1793050159.8251975, "mint": "Bu7fMrsr1EWuqVVNrfht9JtyAmsU6sU4aEmy3QUpqCxv", "symbol": "MOONCOIN", "score": 0.014, "vol_s1": 19, "px_s1": 1.0, "rank": 7, "author": "elonmusk", "tw2c": 17869.805052518845, "tool": "pub-543ef38e324945e280cc9df894252571.r2.dev", "meta_lat": 0.25, "tw_likes": 16832
+{"ts": 1793050182.0673735, "mint": "9zd8A9wY8gzDKeBHm8XhWzCVaKL9FjsnApi227uJ9314", "symbol": "Trinity", "score": 0.0064, "vol_s1": 0, "px_s1": 1.0, "rank": 1, "author": "bandmanzzsahur", "tw2c": 14.241960048675537, "tool": "metadata.j7tracker.io", "meta_lat": 0.27, "tw_likes": 0, "tw_text": "PewDieP
+{"ts": 1793050188.4358337, "mint": "6PZjk7pLrQRXBRKMBexw9s8h4MKkUcwe7ARRjL4ipump", "symbol": "Nothing", "score": 0.0444, "vol_s1": 0, "px_s1": 1.0, "rank": 23, "author": "essencepnl", "tw2c": 1726.773533821106, "tool": "pump.mypinata.cloud", "meta_lat": 0.46, "tw_likes": 34, "tw_text": "This is so f
+{"ts": 1793050203.421212, "mint": "7wpJdXzaCqAsd1rXZj5m4JFg8bxc2Zj6AE8Er5A9f5jW", "symbol": "Doupi", "score": 0.0153, "vol_s1": 0, "px_s1": 1.0, "rank": 29, "author": "firstpost", "tw2c": 10546.622505426407, "tool": "metadata.j7tracker.io", "meta_lat": 0.1, "tw_likes": 39, "tw_text": "Meet Doupi, Th
+== exit 0 ==
