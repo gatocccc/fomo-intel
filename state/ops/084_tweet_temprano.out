@@ -1,0 +1,55 @@
+== 084_tweet_temprano 2026-10-26T20:52:03Z ==
+sombra desde 12:41 ART: 14491 creados, 6299 de tweet (43%)
+compras grandes de decu: 62 | vistas por la sombra: 57 (92%) | de tweet: 52
+
+
+
+DECU n=52 | con datos de tweet: 42 | con velas: 52
+  vol_s1    p25 710.0 | mediana 1181.0 | p75 1953.0
+  vol_s2    p25 1119.0 | mediana 1521.0 | p75 2535.0
+  px_s1     p25 1.45 | mediana 1.68 | p75 1.95
+  px_s2     p25 1.42 | mediana 1.66 | p75 2.01
+  likes     p25 0 | mediana 3 | p75 12
+  followers p25 None | mediana None | p75 None
+  text_len  p25 42 | mediana 103 | p75 257
+  verified  32/52
+  has_media 20/52
+  is_reply  1/52
+  quote     22/52
+
+CONTROL rank1 n=120 | con datos de tweet: 106 | con velas: 118
+  vol_s1    p25 99.0 | mediana 723.0 | p75 1121.0
+  vol_s2    p25 100.0 | mediana 760.0 | p75 1390.0
+  px_s1     p25 1.07 | mediana 1.54 | p75 1.72
+  px_s2     p25 1.08 | mediana 1.51 | p75 1.72
+  likes     p25 0 | mediana 1 | p75 81
+  followers p25 None | mediana None | p75 None
+  text_len  p25 38 | mediana 80 | p75 196
+  verified  78/120
+  has_media 60/120
+  is_reply  9/120
+  quote     41/120
+
+muestra DECU:
+   {"sym": "Coge", "author": "himothyjamesjr_", "followers": null, "likes": 0, "px_s2": 1.01, "vol_s2": 162.0, "text": "we ran Kabosu as Dogecoin\n\nso why are we not running Ginnan as Coge?? it makes the most sense\n\nhttps"}
+   {"sym": "SOLCAT", "author": "guibibeau", "followers": null, "likes": null, "px_s2": 1.39, "vol_s2": 548.0, "text": ""}
+   {"sym": "JEFF", "author": "forestmansol555", "followers": null, "likes": 0, "px_s2": 1.54, "vol_s2": 1521.0, "text": "god tier narrative,\n\nr/antiai just dropped an official mascot, 1.5k upvotes in 12h\n\nfees paired to p"}
+   {"sym": "Ginnan", "author": "0xbl33q", "followers": null, "likes": 0, "px_s2": 1.83, "vol_s2": 1183.0, "text": "Everyone is missing that Ginnan is in cancer treatment\n\nPairing with Ginnan with fee's to the Japan "}
+   {"sym": "MANSLOP", "author": "444dev444", "followers": null, "likes": null, "px_s2": 1.47, "vol_s2": 649.0, "text": ""}
+   {"sym": "MARINA", "author": "lalosalamx", "followers": null, "likes": 1, "px_s2": 1.81, "vol_s2": 1302.0, "text": "This clip of marina is going GIGA viral rn. It shows her doing some booty calps with her gigantic as"}
+   {"sym": "Muskjak", "author": "essencepnl", "followers": null, "likes": 4, "px_s2": 1.49, "vol_s2": 1899.0, "text": "Reddit has a new Anti Musk Mascot and its actually taking over.\n\nWe all know Elon has been always ta"}
+   {"sym": "Muskjak", "author": "essencepnl", "followers": null, "likes": 4, "px_s2": 1.42, "vol_s2": 1206.0, "text": "Reddit has a new Anti Musk Mascot and its actually taking over.\n\nWe all know Elon has been always ta"}
+   {"sym": "Moon", "author": "mystiquexbt", "followers": null, "likes": 72, "px_s2": 1.65, "vol_s2": 2910.0, "text": "Just send MoonCoin?\n\nBNB had MarsCoin go to 250mil, SOL never had it's plantet coin runner.\n\nhttps:/"}
+   {"sym": "MOON", "author": "altowins", "followers": null, "likes": null, "px_s2": 1.32, "vol_s2": 492.0, "text": ""}
+   {"sym": "Cryingface", "author": "trenchdame", "followers": null, "likes": null, "px_s2": 1.32, "vol_s2": 967.0, "text": ""}
+   {"sym": "AudaCity", "author": "leftcurveit", "followers": null, "likes": 18, "px_s2": 2.2, "vol_s2": 2535.0, "text": "HELLOOO THE CITY ON THE MOON IS AUDA CITY?"}
+muestra CONTROL:
+   {"sym": "DOVE", "author": "luminaries", "followers": null, "likes": 39, "px_s2": 1.77, "vol_s2": 1001.0, "text": "Crypto Event Starter Pack: https://t.co/a1fKz1kZQq"}
+   {"sym": "URANUS", "author": "cb_doge", "followers": null, "likes": 1670, "px_s2": 1.16, "vol_s2": 81.0, "text": "This is a real image of Uranus taken by NASA’s James Webb Space Telescope. https://t.co/DfVJANYQKU"}
+   {"sym": "BUKANGI", "author": "thestripesgirl", "followers": null, "likes": 9, "px_s2": 1.18, "vol_s2": 255.0, "text": "🦈🦈Bukangi, the viral shark that has spent more than a month in a canal in Busan, South Korea, is bac"}
+   {"sym": "Goldcoins", "author": "i", "followers": null, "likes": 0, "px_s2": 1.43, "vol_s2": 593.0, "text": "coins\n\nhttps://t.co/qUQNr1YLCE https://t.co/guClcNWN71"}
+   {"sym": "Incognito", "author": "elonmusk", "followers": null, "likes": 554, "px_s2": 1.2, "vol_s2": 0.0, "text": "@AustinTByrd @bot Bot can communicate via email and X DMs. Other messaging platforms coming soon."}
+   {"sym": "ELON", "author": "devvvooooor", "followers": null, "likes": 0, "px_s2": 1.52, "vol_s2": 837.0, "text": "TRUMP AND ELON COINS HAVE ALREADY GONE TO MILLIONS\n\nNow there's an actual Elon Musk silver collectib"}
+   {"sym": "POOPCOIN", "author": "jameskuhn2318", "followers": null, "likes": 0, "px_s2": 1.47, "vol_s2": 643.0, "text": "qwen is alibaba. its baba and anth. https://t.co/6EP21tuDJO https://t.co/2DHrPsDEOW"}
+   {"sym": "GOONER", "author": "ikarbro", "followers": null, "likes": 0, "px_s2": 1.64, "vol_s2": 1625.0, "text": "dev is stealing the fees https://t.co/ndQ45T798D"}
+== exit 0 ==
