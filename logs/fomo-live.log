@@ -1,4 +1,3 @@
-Oct 26 02:02:19 simplai-prod python3[585537]: 2026-10-26 02:02:19,379 INFO live: latido: stream=True tokens_vistos=1809 seguidos=56 candidatos=0 abiertas=0 cerradas=2 st_requests=36 SOL=$101
 Oct 26 02:02:26 simplai-prod python3[585537]: 2026-10-26 02:02:26,857 INFO live.helius: HELIUS create RÁPIDO B32Qbb… -> BV9ycabg slot 461487244 precio 2.796e-08
 Oct 26 02:02:27 simplai-prod python3[585537]: 2026-10-26 02:02:27,536 INFO live: FABRICA (Helius) B32Qbb… creó BV9ycabg
 Oct 26 02:02:27 simplai-prod python3[585537]: 2026-10-26 02:02:27,537 INFO live: FABRICA B32Qbb… creó BV9yca (BV9ycabg) -> entrando
@@ -298,3 +297,4 @@ Oct 26 10:12:59 simplai-prod python3[585537]: 2026-10-26 10:12:59,723 INFO live:
 Oct 26 10:18:00 simplai-prod python3[585537]: 2026-10-26 10:18:00,185 INFO live: latido: stream=True tokens_vistos=6021 seguidos=101 candidatos=0 abiertas=0 cerradas=2 st_requests=132 SOL=$101
 Oct 26 10:23:00 simplai-prod python3[585537]: 2026-10-26 10:23:00,434 INFO live: latido: stream=True tokens_vistos=6066 seguidos=68 candidatos=0 abiertas=0 cerradas=2 st_requests=133 SOL=$101
 Oct 26 10:28:00 simplai-prod python3[585537]: 2026-10-26 10:28:00,656 INFO live: latido: stream=True tokens_vistos=6104 seguidos=56 candidatos=0 abiertas=0 cerradas=2 st_requests=134 SOL=$101
+Oct 26 10:33:01 simplai-prod python3[585537]: 2026-10-26 10:33:01,427 INFO live: latido: stream=True tokens_vistos=6134 seguidos=43 candidatos=0 abiertas=0 cerradas=2 st_requests=135 SOL=$101
