@@ -28,6 +28,11 @@ import requests
 import websocket
 from solders.pubkey import Pubkey
 
+try:
+    from orjson import loads
+except ImportError:  # noqa: BLE001
+    from json import loads
+
 from .tweet_shadow import decode_create, fetch_meta
 
 log = logging.getLogger("sniper")
@@ -59,10 +64,10 @@ def decode_trade(b: bytes):
 
 
 class Token:
-    __slots__ = ("mint", "t0", "name", "symbol", "uri", "meta", "feat", "trades", "decided", "first_px", "last_px", "last_ts")
+    __slots__ = ("mint", "t0", "slot0", "name", "symbol", "uri", "meta", "feat", "trades", "decided", "first_px", "last_px", "last_ts")
 
-    def __init__(self, mint, t0, c):
-        self.mint, self.t0, self.name, self.symbol, self.uri = mint, t0, c["name"], c["symbol"], c["uri"]
+    def __init__(self, mint, t0, c, slot0=0):
+        self.mint, self.t0, self.slot0, self.name, self.symbol, self.uri = mint, t0, slot0, c["name"], c["symbol"], c["uri"]
         self.meta = None; self.feat = None; self.trades = []; self.decided = False
         self.first_px = self.last_px = 0.0; self.last_ts = 0.0
 
@@ -89,6 +94,7 @@ class Sniper:
             env = Env(); p = LiveParams(); p.swap_slippage_pct = 30.0; p.priority_fee_sol = 0.002
             self.exe = RealExecutor(p, load_or_create(env.wallet_file), Rpc(env.rpc_url), env.solanatracker_api_key)
         self._seed_rank()
+        self.cur_slot = 0; self.lag_slots = None
 
     # ---------- utilidades ----------
     def _ctrl(self):
@@ -161,7 +167,7 @@ class Sniper:
         m = t.meta or {}
         if not m.get("is_tweet"):
             self.stats["no_tweet" if t.meta else "sin_meta_a_tiempo"] += 1; return
-        w = [x for x in t.trades if x[0] <= t.t0 + 1.0]
+        w = [x for x in t.trades if x[3] <= t.slot0 + 3]          # ~1,2 s de cadena (3 slots) desde la creación
         vol = sum(x[1] for x in w) * self.sol_usd
         px1 = (w[-1][2] / t.first_px) if (w and t.first_px) else 1.0
         x = {**m, "vol_s1": vol, "px_s1": px1}
@@ -244,7 +250,7 @@ class Sniper:
     # ---------- loop ----------
     def _summary(self):
         closed = self._closed()
-        s = {"ts": time.time(), "ctrl": self.ctrl, "stats": dict(self.stats), "open": list(self.open.values()), "sol_usd": self.sol_usd,
+        s = {"ts": time.time(), "lag_slots": self.lag_slots, "tokens_tracked": len(self.tokens), "ctrl": self.ctrl, "stats": dict(self.stats), "open": list(self.open.values()), "sol_usd": self.sol_usd,
              "closed": len(closed), "wins": sum(1 for r in closed if (r["ret"] or 0) > 0), "pnl_usd": round(sum(r["pnl_usd"] for r in closed), 2),
              "ret_sum": round(sum(r["ret"] or 0 for r in closed), 3), "last": closed[-8:][::-1]}
         json.dump(s, open("state/tweetsniper_summary.json", "w"), indent=1)
@@ -264,13 +270,20 @@ class Sniper:
                         raw = None
                     now = time.time()
                     if raw and "Program data" in raw:
-                        v = json.loads(raw).get("params", {}).get("result", {}).get("value", {})
+                        res = loads(raw).get("params", {}).get("result", {})
+                        v = res.get("value", {}); slot = (res.get("context") or {}).get("slot") or 0
+                        if slot > self.cur_slot: self.cur_slot = slot
                         if not v.get("err"):
-                            self._on_logs(v.get("logs") or [], now)
+                            self._on_logs(v.get("logs") or [], now, slot)
                     if now - last_tick > 0.2:
                         last_tick = now
                         for t in list(self.tokens.values()):
-                            if not t.decided and now >= t.t0 + self.ctrl["decide_at_s"] + (0.5 if t.meta is None else 0):
+                            if t.decided or not t.slot0: continue
+                            # decidir cuando ya pasaron 4 slots de cadena (los trades del 1er segundo ya se leyeron) y hay metadatos;
+                            # sin metadatos a los 12 slots (~5 s): se descarta
+                            if self.cur_slot >= t.slot0 + 4 and t.meta is not None:
+                                self._decide(t, now)
+                            elif self.cur_slot >= t.slot0 + 12:
                                 self._decide(t, now)
                         self._manage(now)
                         if len(self.tokens) > 3000:
@@ -278,13 +291,19 @@ class Sniper:
                                 self.tokens.pop(m, None)
                     if now - last_sum > 10:
                         last_sum = now; self._summary()
+                        try:
+                            rs = requests.post(f"https://mainnet.helius-rpc.com/?api-key={os.environ['HELIUS_API_KEY']}",
+                                               json={"jsonrpc": "2.0", "id": 1, "method": "getSlot", "params": [{"commitment": "processed"}]}, timeout=3).json()["result"]
+                            self.lag_slots = rs - self.cur_slot
+                        except Exception:  # noqa: BLE001
+                            pass
                     if now - last_ctrl > 30:
                         last_ctrl = now; mode = self.ctrl["mode"]; self.ctrl = self._ctrl(); self.ctrl["mode"] = mode
                         self.sol_usd = self._sol_usd() or self.sol_usd
             except Exception as e:  # noqa: BLE001
                 log.warning("ws caído: %s", str(e)[:120]); time.sleep(2)
 
-    def _on_logs(self, logs, now):
+    def _on_logs(self, logs, now, slot=0):
         for l in logs:
             if not l.startswith("Program data: "):
                 continue
@@ -295,7 +314,7 @@ class Sniper:
             if b[:8] == CREATE_D:
                 c = decode_create(["Program data: " + l[14:]])
                 if c and c["mint"] not in self.tokens:
-                    t = Token(c["mint"], now, c); self.tokens[c["mint"]] = t
+                    t = Token(c["mint"], now, c, slot); self.tokens[c["mint"]] = t
                     self.pool.submit(self._enrich, t)
             elif b[:8] == TRADE_D:
                 tr = decode_trade(b)
@@ -304,7 +323,7 @@ class Sniper:
                     if t and tr["price"] > 0:
                         if not t.first_px: t.first_px = tr["price"]
                         t.last_px, t.last_ts = tr["price"], now
-                        if now - t.t0 <= 3: t.trades.append((now, tr["sol"], tr["price"]))
+                        if slot and t.slot0 and slot <= t.slot0 + 3: t.trades.append((now, tr["sol"], tr["price"], slot))
 
 
 def main():
