@@ -292,13 +292,13 @@ if __name__ == "__main__":
     a = sys.argv[1:]
     if not a or a[0] == "discover": discover()
     elif a[0] == "pull":
-        kw = {}; i = 2
+        kw = {}; i = 3 if len(a) > 2 and not a[2].startswith("-") else 2
         while i < len(a):
             k = a[i].lstrip("-").replace("-", "_"); kw[k] = float(a[i + 1]); i += 2
         pull(a[1], days=kw.get("days"), hours=kw.get("hours"), cap=int(kw.get("max", 2000)), min_buys=int(kw.get("min_buys", 0)), hold_h=kw.get("hold_h"), only_good=int(kw.get("only_good", 0)), name=a[2] if len(a) > 2 and not a[2].startswith("-") else None)
     elif a[0] == "fix_creators": fix_creators(a[1] if len(a) > 1 else "bags")
     elif a[0] == "analyze":
-        kw = {}; i = 2
+        kw = {}; i = 3 if len(a) > 2 and not a[2].startswith("-") else 2
         while i < len(a):
             k = a[i].lstrip("-").replace("-", "_"); kw[k] = int(a[i + 1]); i += 2
         analyze(a[1], name=a[2] if len(a) > 2 and not a[2].startswith("-") else None, **kw)
