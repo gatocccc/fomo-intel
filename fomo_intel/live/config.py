@@ -61,6 +61,13 @@ class LiveParams:
     factory_max_hold_s: int = 180       # si no llegó, vende al cumplirse este tiempo
     factory_stop: float = 0.5
     factory_paper_wait_s: float = 2.0   # paper: precio del primer trade visto >= este retraso desde la creación
+    # --- guardas operativas (live/guard.py) ---
+    bench_min: dict = field(default_factory=dict)  # minutos en el banco por motivo; vacío = valores de guard.DEFAULT_BENCH_MIN
+    stale_exit_s: float = 90.0          # sin precio fresco este tiempo (y 2 consultas fallidas) -> se cierra la posición
+    exec_fail_halt: int = 5             # tantas fallas de ejecución seguidas...
+    exec_fail_window_s: float = 600.0   # ...en esta ventana -> STOP (no abre nuevas) + alerta
+    source_down_exit_s: float = 60.0    # seguidor: fuente de señales caída este tiempo -> salir de las copias (no vemos al líder vender)
+    fast_sell_after: int = 3            # tras N ventas fallidas del mismo token, vender por la vía directa (PumpPortal)
     # --- simulado ---
     paper_slippage: float = 0.05
     paper_fee: float = 0.01

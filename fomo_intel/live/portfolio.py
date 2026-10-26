@@ -45,6 +45,7 @@ class Position:
     last_price: float = 0.0
     last_ts: float = 0.0
     pending_sell: bool = False
+    last_fresh_ts: float = 0.0  # última vez que llegó un precio REAL (stream o consulta); 0 = desde la apertura
 
     @property
     def size_usd(self) -> float:
@@ -59,6 +60,8 @@ class Portfolio:
         self.dir = Path(state_dir); self.dir.mkdir(parents=True, exist_ok=True)
         self.p = p
         self.positions: dict[str, Position] = {}
+        from .guard import RejectionLog
+        self.rejections = RejectionLog()
         self._load()
 
     # ---------- persistencia ----------
@@ -67,6 +70,10 @@ class Portfolio:
         if f.exists():
             for d in json.load(open(f)).values():
                 self.positions[d["mint"]] = Position(**d)
+        today = ba_day()                       # contadores de rechazos del día: sobreviven a un reinicio
+        for r in self._read("signals.jsonl")[-20000:]:
+            if ba_day(r.get("ts")) == today:
+                self.rejections.add(r.get("decision", ""), today)
 
     def save(self) -> None:
         tmp = self.dir / "positions.json.tmp"
@@ -91,7 +98,9 @@ class Portfolio:
 
     # ---------- registro ----------
     def log_signal(self, feats: dict, decision: str) -> None:
-        self._append("signals.jsonl", {"ts": time.time(), "decision": decision, **feats})
+        from .guard import reason_key
+        self.rejections.add(decision, ba_day())
+        self._append("signals.jsonl", {"ts": time.time(), "decision": decision, "check": reason_key(decision), **feats})
 
     def log_fill(self, f: Fill, mode: str, why: str, sol_usd: float) -> None:
         self._append("trades.jsonl", {"ts": time.time(), "mode": mode, "why": why, "sol_usd": sol_usd, **asdict(f)})
@@ -166,7 +175,7 @@ class Portfolio:
         pos.exits.append({"ts": time.time(), "why": why, "tokens": f.tokens, "sol": f.sol, "price": f.price, "sig": f.sig})
         if why.startswith("tp"):
             pos.tp_done = True
-        closed = pos.tokens <= pos.tokens_initial * 0.001 or why in ("stop", "trailing", "tiempo", "panic")
+        closed = pos.tokens <= pos.tokens_initial * 0.001 or why in ("stop", "trailing", "tiempo", "panic", "sin datos", "fuente caída")
         if closed:
             self._close(pos)
         self.save()
@@ -198,7 +207,7 @@ class Portfolio:
                             "sol_in": round(x.sol_in, 4), "value_sol": round(x.tokens * (x.last_price or 0) + x.sol_out, 4), "last_ts": x.last_ts,
                             "mult": round(x.mult(x.last_price), 2), "peak_mult": round(x.mult(x.peak_price), 2),
                             "size_usd": round(x.size_usd, 2), "tp_done": x.tp_done} for x in self.positions.values()],
-             "last_closed": closed[-10:][::-1], **extra}
+             "last_closed": closed[-10:][::-1], "rejections": self.rejections.snapshot(), **extra}
         tmp = self.dir / "live_summary.json.tmp"
         json.dump(s, open(tmp, "w"), indent=1)
         tmp.replace(self.dir / "live_summary.json")

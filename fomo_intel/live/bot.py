@@ -90,7 +90,33 @@ class Bot:
         from collections import deque
         self._follow_seen_sigs = deque(maxlen=3000)
         self._price_poll: dict[str, float] = {}
+        self._poll_fails: dict[str, int] = {}        # mint -> consultas de precio fallidas seguidas
+        from .guard import Bench, Ladder
+        self.bench = Bench(self.state, self.p.bench_min)
+        self.ladder = Ladder()
         self.running = True
+
+    # ---------- guardas (live/guard.py) ----------
+    def _log_fill(self, fill, mode: str, why: str, sol_usd: float) -> None:
+        """Registra el fill y alimenta la escalera de fallas: fallas de ejecución seguidas -> STOP + alerta."""
+        self.port.log_fill(fill, mode, why, sol_usd)
+        now = time.time()
+        self.ladder.on_fill(fill.ok, fill.side, fill.mint, fill.error, now)
+        if not fill.ok and self.ladder.counts_as_failure(fill.error):
+            self.ladder.alert(f"{fill.side} {fill.mint[:8]} falló: {fill.error[:90]}")
+        k = self.ladder.exec_fail_burst(self.p.exec_fail_halt, self.p.exec_fail_window_s, now)
+        if k:
+            self.port._auto_stop(f"escalera: {k} fallas de ejecución seguidas")
+            self.ladder.alert(f"STOP: {k} fallas de ejecución seguidas; no abro nuevas (las abiertas se siguen gestionando)")
+            self.ladder.exec_fails.clear()
+
+    def _bench_add(self, mint: str, decision: str) -> None:
+        from .guard import reason_key
+        self.bench.add(mint, reason_key(decision))
+
+    def _source_ok(self) -> bool:
+        """Fuente de señales del modo seguidor: Helius (la vía confiable) o, si no hay Helius, PumpPortal."""
+        return self.helius.connected if self.helius else self.stream.connected
 
     # ---------- utilidades ----------
     def _load_creators(self) -> dict:
@@ -135,7 +161,7 @@ class Bot:
                 if pos and now >= self._sell_backoff.get(m, 0):
                     px = e.get("price") or pos.last_price
                     fill = self.exe.sell(m, pos.tokens, px, fast=True)
-                    self.port.log_fill(fill, self.p.mode, "fábrica vendió", self.sol_usd)
+                    self._log_fill(fill, self.p.mode, "fábrica vendió", self.sol_usd)
                     if fill.ok:
                         closed = self.port.apply_sell(pos, fill, "fábrica vendió")
                         log.info("VENTA %s: la fábrica vendió (%.2f SOL) -> salimos a %.2fx%s", pos.symbol, e.get("sol", 0), fill.price / pos.entry_price, " [CERRADA]" if closed else "")
@@ -226,7 +252,7 @@ class Bot:
                 if bal - size_sol < self.p.min_sol_reserve:
                     self.port.log_signal(d, f"sin saldo: {bal:.4f} SOL"); self.stream.release(mint); continue
             fill = self.exe.buy(mint, size_sol, ref, fast=True)
-            self.port.log_fill(fill, self.p.mode, f"fábrica {info['creator'][:6]}", self.sol_usd)
+            self._log_fill(fill, self.p.mode, f"fábrica {info['creator'][:6]}", self.sol_usd)
             if not fill.ok:
                 self.port.log_signal(d, f"compra fallida: {fill.error}"); self.stream.release(mint); continue
             pos = self.port.open(fill, info["symbol"] or mint[:6], self.sol_usd)
@@ -282,8 +308,11 @@ class Bot:
                     self.leaders.setdefault(mint, set()).add(w); continue
                 d = {"mint": mint, "symbol": mint[:6], "wallet": w, "sol": e["sol"], "mcap_sol": e["mcap_sol"], "price": e["price"], "pool": e["pool"],
                      "n_wallets": len(self.follow_buys[mint])}
+                benched = self.bench.check(mint, now)
+                if benched:
+                    self.port.log_signal(d, f"banco: {benched}"); continue
                 if e["mcap_sol"] and e["mcap_sol"] > self.p.follow_max_mcap_sol:
-                    self.port.log_signal(d, "seguidor: mcap alto"); continue
+                    self.port.log_signal(d, "seguidor: mcap alto"); self._bench_add(mint, "seguidor: mcap alto"); continue
                 if e["mcap_sol"] and e["mcap_sol"] < self.p.follow_min_mcap_sol:
                     self.port.log_signal(d, "seguidor: mcap muy chico"); continue
                 if len(self.follow_buys[mint]) < self.p.follow_min_wallets:
@@ -302,9 +331,10 @@ class Bot:
                 if ref <= 0:
                     self.port.log_signal(d, "sin precio de referencia"); continue
                 fill = self.exe.buy(mint, size_sol, ref)
-                self.port.log_fill(fill, self.p.mode, f"copia {w[:6]}", self.sol_usd)
+                self._log_fill(fill, self.p.mode, f"copia {w[:6]}", self.sol_usd)
                 if not fill.ok:
-                    self.port.log_signal(d, f"compra fallida: {fill.error}"); log.warning("copia %s falló: %s", mint[:8], fill.error); continue
+                    self.port.log_signal(d, f"compra fallida: {fill.error}"); self._bench_add(mint, f"compra fallida: {fill.error}")
+                    log.warning("copia %s falló: %s", mint[:8], fill.error); continue
                 pos = self.port.open(fill, mint[:6], self.sol_usd)
                 self.leaders[mint] = {w}
                 self.stream.pin(mint, pos.symbol, fill.price)
@@ -312,13 +342,14 @@ class Bot:
                 log.info("COPIA %s siguiendo a %s… %.4f SOL a %.3e (lat %.1fs slip %+.1f%%) mcap=%.0f SOL", mint[:8], w[:6], fill.sol, fill.price, fill.latency_s, fill.slippage_pct, e["mcap_sol"])
             elif side == "sell" and self.p.follow_exit_on_sell:
                 pos = self.port.positions.get(mint)
-                if not pos or w not in self.leaders.get(mint, set()):
+                # tras un reinicio se pierde quién nos llevó a cada token: vale cualquier seguido
+                if not pos or w not in (self.leaders.get(mint) or set(self.follow)):
                     continue
                 if now < self._sell_backoff.get(mint, 0):
                     continue
                 px = e["price"] or pos.last_price
-                fill = self.exe.sell(mint, pos.tokens, px)
-                self.port.log_fill(fill, self.p.mode, f"seguido vendió {w[:6]}", self.sol_usd)
+                fill = self.exe.sell(mint, pos.tokens, px, fast=self.ladder.sell_fails[mint] >= self.p.fast_sell_after)
+                self._log_fill(fill, self.p.mode, f"seguido vendió {w[:6]}", self.sol_usd)
                 if not fill.ok:
                     self._sell_backoff[mint] = now + 10; log.warning("venta copia %s falló: %s", mint[:8], fill.error); continue
                 closed = self.port.apply_sell(pos, fill, "seguido vendió")
@@ -347,7 +378,7 @@ class Bot:
             d["px_ref_chart"] = px_usd; d["px_ref_fresh"] = fresh
             ref = fresh / self.sol_usd
         fill = self.exe.buy(mint, size_sol, ref)
-        self.port.log_fill(fill, self.p.mode, "entrada v1.2", self.sol_usd)
+        self._log_fill(fill, self.p.mode, "entrada v1.2", self.sol_usd)
         if not fill.ok:
             self.port.log_signal(d, f"compra fallida: {fill.error}"); log.warning("compra %s falló: %s", d.get("symbol"), fill.error); return
         pos = self.port.open(fill, d.get("symbol") or mint[:6], self.sol_usd)
@@ -367,6 +398,8 @@ class Bot:
             newp.stop, newp.trail, newp.tp_mult, newp.tp_frac, newp.max_hold_min = newp.factory_stop, 0.99, newp.factory_tp, 1.0, max(1, newp.factory_max_hold_s // 60)
         self.p = newp
         self.port.p = newp
+        from .guard import DEFAULT_BENCH_MIN
+        self.bench.minutes = {**DEFAULT_BENCH_MIN, **(newp.bench_min or {})}
         self.exe.p = newp
 
     def _pumpportal_balance(self):
@@ -457,7 +490,7 @@ class Bot:
                     self.port.log_signal(d, f"sin saldo: {bal:.4f} SOL"); log.warning("sin saldo para operar: %.4f SOL", bal); continue
             ref = st.last_price or px3
             fill = self.exe.buy(mint, size_sol, ref)
-            self.port.log_fill(fill, self.p.mode, "entrada", self.sol_usd)
+            self._log_fill(fill, self.p.mode, "entrada", self.sol_usd)
             if not fill.ok:
                 self.port.log_signal(d, f"compra fallida: {fill.error}"); log.warning("compra %s falló: %s", f.symbol, fill.error); continue
             self.port.open(fill, f.symbol, self.sol_usd)
@@ -470,31 +503,57 @@ class Bot:
     def _current_price(self, pos, now: float) -> float:
         st = self.stream.snapshot(pos.mint)
         if st and st.last_ts and now - st.last_ts < 20 and st.last_price > 0:
+            pos.last_fresh_ts = now; self._poll_fails.pop(pos.mint, None)
             return st.last_price
         # stream callado (token graduado o sin operaciones): consulto precio cada 15 s
         if now - self._price_poll.get(pos.mint, 0) >= 15:
             self._price_poll[pos.mint] = now
-            usd = self.st.price(pos.mint)
+            try:
+                usd = self.st.price(pos.mint)
+            except Exception:  # noqa: BLE001
+                usd = None
             if usd and self.sol_usd > 0:
-                pos.last_price, pos.last_ts = usd / self.sol_usd, now
+                pos.last_price, pos.last_ts, pos.last_fresh_ts = usd / self.sol_usd, now, now
+                self._poll_fails.pop(pos.mint, None)
                 return pos.last_price
+            self._poll_fails[pos.mint] = self._poll_fails.get(pos.mint, 0) + 1
         return pos.last_price
 
+    def _forced_exit(self, pos, now: float) -> str | None:
+        """Salidas de la escalera, por encima de stop/trailing/tiempo:
+        - 'sin datos': sin precio fresco hace stale_exit_s y 2+ consultas fallidas seguidas (una posición que no se mide no se tiene)
+        - 'fuente caída': modo seguidor con la fuente de señales caída hace source_down_exit_s (no veríamos al líder vender)"""
+        fresh = pos.last_fresh_ts or pos.opened_ts
+        if now - fresh >= self.p.stale_exit_s and self._poll_fails.get(pos.mint, 0) >= 2:
+            return "sin datos"
+        if self.p.strategy == "follow" and self.ladder.source_down_since and now - self.ladder.source_down_since >= self.p.source_down_exit_s:
+            return "fuente caída"
+        return None
+
     def step_positions(self, now: float) -> None:
+        if self.p.strategy == "follow":
+            down = self.ladder.source(self._source_ok(), now)
+            if down >= self.p.source_down_exit_s and self.port.positions:
+                self.ladder.alert(f"fuente de señales caída hace {down:.0f} s: salgo de las copias abiertas")
         for mint, pos in list(self.port.positions.items()):
             px = self._current_price(pos, now)
-            if px <= 0:
+            forced = self._forced_exit(pos, now)
+            if px <= 0 and not forced:
                 continue
-            pos.last_price, pos.last_ts = px, now
-            pos.peak_price = max(pos.peak_price, px)
-            why, frac = self.port.exit_decision(pos, px, now)
+            px = px if px > 0 else pos.last_price
+            if not forced:
+                pos.last_price, pos.last_ts = px, now
+                pos.peak_price = max(pos.peak_price, px)
+            why, frac = (forced, 1.0) if forced else self.port.exit_decision(pos, px, now)
             if not why:
                 continue
+            if forced == "sin datos":
+                self.ladder.alert(f"{pos.symbol}: sin precio hace {now - (pos.last_fresh_ts or pos.opened_ts):.0f} s; cierro")
             if now < self._sell_backoff.get(mint, 0):
                 continue
             tokens = pos.tokens if frac >= 1.0 else min(pos.tokens, pos.tokens_initial * frac)
-            fill = self.exe.sell(mint, tokens, px)
-            self.port.log_fill(fill, self.p.mode, why, self.sol_usd)
+            fill = self.exe.sell(mint, tokens, px, fast=self.ladder.sell_fails[mint] >= self.p.fast_sell_after)
+            self._log_fill(fill, self.p.mode, why, self.sol_usd)
             if not fill.ok:
                 self._sell_backoff[mint] = now + 10
                 log.warning("venta %s (%s) falló: %s", pos.symbol, why, fill.error)
@@ -506,7 +565,9 @@ class Bot:
             log.info("VENTA %s %s %.0f%% a %.2fx slippage=%+.1f%% -> %.4f SOL%s", pos.symbol, why, fill.tokens / pos.tokens_initial * 100,
                      fill.price / pos.entry_price, fill.slippage_pct, fill.sol, " [CERRADA]" if closed else "")
             if closed:
-                self.stream.unpin(mint); self.leaders.pop(mint, None)
+                self.stream.unpin(mint); self.leaders.pop(mint, None); self._poll_fails.pop(mint, None)
+                if why in ("stop", "sin datos"):
+                    self.bench.add(mint, why.replace(" ", "_"), now)
 
     # ---------- 4) resumen ----------
     def step_summary(self, now: float) -> None:
@@ -522,6 +583,10 @@ class Bot:
                            "strategy": self.p.strategy, "followed_wallets": len(self.follow), "factories": len(self.factories), "factory_pending": len(self.factory_pending), "account_trades": self.stream.account_trades,
                            "helius": {"connected": self.helius.connected, "notifications": self.helius.notifications, "parsed": self.helius.parsed, "skipped": self.helius.skipped, "fast_creates": self.helius.fast_creates, "subs": len(self.helius.sub_to_wallet), "errors": list(self.helius.errors)[-3:]} if self.helius else None,
                            "follow_buys_seen": len(self.follow_buys),
+                           "guard": {"alerts": list(self.ladder.alerts)[-8:], "bench": len(self.bench.rows),
+                                     "bench_by_reason": dict(__import__("collections").Counter(r["why"] for r in self.bench.rows.values())),
+                                     "source_down_s": round(now - self.ladder.source_down_since) if self.ladder.source_down_since else 0,
+                                     "exec_fails_recent": len(self.ladder.exec_fails)},
                            "st_requests": self.st.requests_made + (self.rules_st.requests_made() if self.rules_st else 0), "stream_errors": list(self.stream.errors)[-5:],
                            "rules_st": ({**self.rules_st.stats, "pending_t3": len(self.rules_st.pending_t3), "evaluated": len(self.rules_st.evaluated)} if self.rules_st else None),
                            "stream_counts": dict(self.stream.counts), "stream_samples": list(self.stream.samples),
