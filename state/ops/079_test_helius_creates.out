@@ -1,0 +1,6 @@
+== 079_test_helius_creates 2026-10-26T15:31:03Z ==
+msg {'jsonrpc': '2.0', 'id': 1, 'result': 82435737}
+90s: 91021 avisos (1011/s), 1.12 MB/s, creaciones 58 (39/min), creación sin decodificar 72
+PumpPortal en la misma ventana: 49 | de las de Helius también en PumpPortal: 17
+finales de mint: ['pump']
+== exit 0 ==
