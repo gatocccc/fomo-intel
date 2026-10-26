@@ -82,6 +82,7 @@ class Sniper:
         self.tokens: dict[str, Token] = {}
         self.rank = defaultdict(int)
         self.pool = ThreadPoolExecutor(48)
+        self.meta_pool = ThreadPoolExecutor(96)
         self.lock = threading.Lock()
         self.open: dict[str, dict] = {}
         self.sol_usd = self._sol_usd() or 100.0
@@ -136,8 +137,32 @@ class Sniper:
         return [json.loads(l) for l in open(f)] if f.exists() else []
 
     # ---------- metadatos y tweet ----------
+    def _fast_meta(self, uri: str):
+        """Metadatos rápido: si es IPFS, pide a 4 gateways en paralelo y usa el primero que responde (2,5 s máx); si no, directo."""
+        from concurrent.futures import as_completed
+        from .tweet_shadow import GATEWAYS
+        t0 = time.time()
+        urls = [uri]
+        if "/ipfs/" in uri:
+            cid = uri.split("/ipfs/", 1)[1]; urls = [uri] + [g + cid for g in GATEWAYS[:4]]
+        def get(u):
+            r = requests.get(u, timeout=2.5); r.raise_for_status(); return r.json(), u.split("/")[2]
+        futs = [self.meta_pool.submit(get, u) for u in urls]
+        for f in as_completed(futs, timeout=3):
+            try:
+                j, host = f.result(); return j, time.time() - t0, host
+            except Exception:  # noqa: BLE001
+                continue
+        return {}, time.time() - t0, "fail"
+
     def _enrich(self, t: Token):
-        meta, lat, src = fetch_meta(t.uri) if t.uri else ({}, 0, "sin uri")
+        try:
+            meta, lat, src = self._fast_meta(t.uri) if t.uri else ({}, 0, "sin uri")
+        except Exception:  # noqa: BLE001
+            meta, lat, src = {}, 0, "fail"
+        if not meta:
+            self.stats["meta_fail"] += 1
+            meta, lat, src = fetch_meta(t.uri) if t.uri else ({}, 0, "sin uri")
         tw = meta.get("twitter") or ""
         if "/status/" not in tw:
             t.meta = {"is_tweet": False}; return
