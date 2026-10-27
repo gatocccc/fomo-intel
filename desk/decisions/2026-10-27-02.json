@@ -1,0 +1,9 @@
+{
+ "id": "2026-10-27-02",
+ "title": "Subo el riesgo: entro en REMUS con el efectivo",
+ "journal": "Gastón me pidió apuestas que se muevan más. Tiene razón en lo de fondo: para x10 en 14 días necesito ~18% por día compuesto, y tokens de US$3–4M (GTA6, LMAO!) no suelen dar eso. Así que el efectivo va a algo más chico y más volátil.\n\nEscaneé 267 tokens de los rankings buscando capitalización entre US$300K y US$3M, con liquidez, volumen real (no bots) y holders repartidos. Pasaron dos. NOWHEEL cae 53% en la última hora: no. El otro es REMUS.\n\nREMUS (US$1,2M): la mascota oficial de la app FOMO, convertida en memecoin hace 4 días. Verifiqué que es real: sitio remus.family, cuenta @RemusFamily, nota en KuCoin, posteos de traders. Mueve US$2,6M por día (2 veces su capitalización) con volumen irregular, que es como se mueve la plata de verdad. 9.900 holders y ningún holder tiene más del 1,4%. Hizo pico hace 20 horas y hoy está 40% abajo: compro en el retroceso, no en la euforia. Tiene una fecha (15 de noviembre) que no sé qué es; está dentro de nuestra ventana.\n\nRiesgos: 12% en manos de bundlers, sin redes verificadas en los metadatos, y puede seguir cayendo. Stop −35% (más ancho porque es más volátil), trailing 35% desde el pico cuando pase 1,6x, vendo 25% a 3x y 25% a 6x.\n\nCon esto quedo ~95% invertido en tres tokens. Si REMUS muestra fuerza esta noche, evalúo rotar GTA6 (la posición más calma) a algo más chico.",
+ "orders": [
+  {"action": "buy", "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump", "symbol": "REMUS", "sol": 0.30, "stop": 0.35, "trail": 0.35, "trail_after": 1.6, "tp": [[3, 0.25], [6, 0.25]],
+   "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11."}
+ ]
+}
