@@ -1,7 +1,7 @@
 {
- "ts": 1793058894.259068,
- "lag_slots": 1,
- "tokens_tracked": 2573,
+ "ts": 1793059196.3052495,
+ "lag_slots": 0,
+ "tokens_tracked": 2723,
  "ctrl": {
   "enabled": true,
   "mode": "paper",
@@ -17,19 +17,33 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "tweet": 1934,
-  "no_tweet": 2436,
-  "meta_fail": 1116,
-  "sin_meta_a_tiempo": 970,
-  "entra": 6
+  "tweet": 1990,
+  "no_tweet": 2520,
+  "meta_fail": 1127,
+  "sin_meta_a_tiempo": 980,
+  "entra": 7
  },
  "open": [],
- "sol_usd": 100.70974552630497,
- "closed": 6,
+ "sol_usd": 100.80215637225996,
+ "closed": 7,
  "wins": 3,
- "pnl_usd": 1.86,
- "ret_sum": 0.37,
+ "pnl_usd": -0.02,
+ "ret_sum": -0.007,
  "last": [
+  {
+   "ts": 1793059110.786829,
+   "day": "2026-10-26",
+   "mint": "JmnMrTXB5SaLRbE13gYrFkkCdEQwSE2rCPvWjXdpump",
+   "symbol": "CAT",
+   "mode": "paper",
+   "why": "stop",
+   "ret": -0.377,
+   "pnl_usd": -1.88,
+   "peak_mult": 1.0,
+   "hold_s": 1,
+   "entry_age_s": 2.5,
+   "score": 0.2941
+  },
   {
    "ts": 1793058787.0056324,
    "day": "2026-10-26",
