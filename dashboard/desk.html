@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Mesa autónoma</title>
+<style>
+:root{--bg:#0b0d12;--card:#141821;--line:#232837;--txt:#e7e9ee;--mut:#8a91a3;--ok:#3ddc84;--bad:#ff5c6c;--warn:#ffb648;--acc:#7aa2ff;--grid:#1c2130}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:max(14px,env(safe-area-inset-top)) 16px 40px}
+.wrap{max-width:760px;margin:0 auto}
+.top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.top h1{font-size:15px;margin:0;font-weight:700;letter-spacing:.02em}
+.badge{font-weight:700;font-size:12px;letter-spacing:.05em;padding:5px 10px;border-radius:999px;border:1px solid var(--line);white-space:nowrap}
+.b-on{background:#10301f;color:var(--ok);border-color:#1d5a37}.b-pause{background:#2b230e;color:#ffd27a;border-color:#5a4614}.b-halt{background:#3a0d14;color:#ff8b97;border-color:#6b1a26}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px}
+.k{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.big{font-size:40px;font-weight:700;letter-spacing:-.02em;margin:2px 0;font-variant-numeric:tabular-nums}
+.sub{color:var(--mut);font-size:13px}
+.prog{height:8px;background:#0f1219;border-radius:6px;margin:12px 0 6px;overflow:hidden;border:1px solid var(--line)}.prog i{display:block;height:100%;background:var(--acc);border-radius:6px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.grid div{background:#0f1219;border:1px solid var(--line);border-radius:12px;padding:9px}
+.grid b{display:block;font-size:17px;font-variant-numeric:tabular-nums}.grid span{font-size:11px;color:var(--mut)}
+@media(max-width:520px){.grid{grid-template-columns:repeat(2,1fr)}.big{font-size:34px}}
+h2{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;margin:20px 2px 8px}
+.chart{position:relative}.chart svg{width:100%;height:180px;display:block}
+.tip{position:absolute;pointer-events:none;background:#0f1219;border:1px solid var(--line);border-radius:8px;padding:6px 9px;font-size:12px;white-space:nowrap;display:none;transform:translate(-50%,-110%)}
+.pos{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;margin-bottom:8px}
+.pos .row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.pos .sym{font-weight:700;font-size:17px}.pos .mult{font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}
+.pos .meta{font-size:12px;color:var(--mut);margin-top:4px}.pos .th{font-size:13px;margin-top:8px;color:#c9cdd8}
+.empty{color:var(--mut);background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:16px;text-align:center}
+.j{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:8px}
+.j .h{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--mut);margin-bottom:4px}
+.j .t{font-weight:700;font-size:14px;margin-bottom:4px}.j p{margin:0;white-space:pre-wrap;font-size:14px;color:#d4d7df}
+.tag{font-size:11px;font-weight:700;padding:2px 6px;border-radius:6px;white-space:nowrap;background:#1a2133;color:#9db7ff}
+.tag.automático{background:#2a2410;color:var(--warn)}.tag.alerta,.tag.sistema{background:#3a0d14;color:#ff8b97}.tag.ejecución{background:#10301f;color:var(--ok)}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.mut{color:var(--mut)}
+table{width:100%;border-collapse:collapse;font-size:13px}td,th{padding:7px 4px;border-bottom:1px solid var(--line);text-align:left;font-variant-numeric:tabular-nums}th{color:var(--mut);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em}td.r,th.r{text-align:right}
+.scroll{overflow-x:auto}
+a{color:var(--acc);text-decoration:none}
+.foot{margin-top:22px;font-size:12px;color:var(--mut);text-align:center}.foot a{margin:0 6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><h1 id="title">Mesa autónoma</h1><span id="status" class="badge">…</span></div>
+
+  <div class="card">
+    <div class="k">Patrimonio de la mesa</div>
+    <div class="big" id="eq">—</div>
+    <div class="sub" id="eqsub">—</div>
+    <div class="prog" title="avance hacia el objetivo"><i id="bar" style="width:0"></i></div>
+    <div class="sub" id="goal">—</div>
+    <div class="grid">
+      <div><b id="cash">—</b><span>efectivo (SOL)</span></div>
+      <div><b id="inpos">—</b><span>en posiciones</span></div>
+      <div><b id="real">—</b><span>ganancia realizada</span></div>
+      <div><b id="hit">—</b><span>operaciones ganadas</span></div>
+    </div>
+  </div>
+
+  <h2>Evolución</h2>
+  <div class="card chart" id="chartbox"><svg id="chart" role="img" aria-label="Evolución del patrimonio en US$"></svg><div class="tip" id="tip"></div></div>
+
+  <h2>Posiciones abiertas</h2>
+  <div id="pos"></div>
+
+  <h2>Razonamiento y movimientos</h2>
+  <div id="journal"></div>
+
+  <h2>Operaciones cerradas</h2>
+  <div class="card scroll" id="closed"></div>
+
+  <div class="foot">Se actualiza solo cada 20 s · <span id="upd">—</span><br><a href="/bot.html">bot anterior</a><a href="/historico.html">histórico</a></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const usd=v=>v==null?'—':(v<0?'−':'')+'US$'+Math.abs(v).toLocaleString('es-AR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const pct=v=>(v>=0?'+':'−')+Math.abs(v*100).toFixed(1)+'%';
+const hm=ts=>new Date(ts*1000).toLocaleString('es-AR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false});
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let last=null;
+function chart(d){
+  const svg=$('chart'),W=svg.clientWidth||700,H=180,pl=48,pr=10,pt=10,pb=22;
+  const pts=d.equity.length?d.equity:[[d.now,d.equity_usd]];
+  if(pts.length===1)pts.unshift([d.start_ts,d.start_usd]);
+  const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]).concat([d.start_usd]);
+  const x0=Math.min(...xs),x1=Math.max(...xs,x0+1),y0=Math.min(...ys)*0.97,y1=Math.max(...ys)*1.03;
+  const X=t=>pl+(t-x0)/(x1-x0)*(W-pl-pr),Y=v=>pt+(1-(v-y0)/(y1-y0))*(H-pt-pb);
+  let g='';
+  for(let i=0;i<=3;i++){const v=y0+(y1-y0)*i/3;g+=`<line x1="${pl}" x2="${W-pr}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--grid)"/><text x="${pl-6}" y="${Y(v)+4}" fill="var(--mut)" font-size="11" text-anchor="end">${Math.round(v)}</text>`}
+  g+=`<line x1="${pl}" x2="${W-pr}" y1="${Y(d.start_usd)}" y2="${Y(d.start_usd)}" stroke="var(--mut)" stroke-dasharray="4 4"/><text x="${W-pr}" y="${Y(d.start_usd)-5}" fill="var(--mut)" font-size="11" text-anchor="end">inicio</text>`;
+  const path=pts.map((p,i)=>(i?'L':'M')+X(p[0]).toFixed(1)+' '+Y(p[1]).toFixed(1)).join(' ');
+  g+=`<path d="${path}" fill="none" stroke="var(--acc)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>`;
+  const lp=pts[pts.length-1];g+=`<circle cx="${X(lp[0])}" cy="${Y(lp[1])}" r="4" fill="var(--acc)" stroke="var(--card)" stroke-width="2"/>`;
+  g+=`<line id="cross" y1="${pt}" y2="${H-pb}" stroke="var(--mut)" stroke-width="1" style="display:none"/><rect x="${pl}" y="0" width="${W-pl-pr}" height="${H}" fill="transparent" id="hit"/>`;
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.innerHTML=g;
+  const hit=svg.querySelector('#hit'),cross=svg.querySelector('#cross'),tip=$('tip');
+  hit.onmousemove=hit.ontouchmove=e=>{const r=svg.getBoundingClientRect(),cx=((e.touches?e.touches[0].clientX:e.clientX)-r.left)*W/r.width;
+    let best=pts[0];for(const p of pts)if(Math.abs(X(p[0])-cx)<Math.abs(X(best[0])-cx))best=p;
+    cross.setAttribute('x1',X(best[0]));cross.setAttribute('x2',X(best[0]));cross.style.display='';
+    tip.style.display='block';tip.style.left=(X(best[0])*r.width/W)+'px';tip.style.top=(Y(best[1])*r.height/H)+'px';
+    tip.innerHTML=`<b>${usd(best[1])}</b> · ${hm(best[0])}`};
+  hit.onmouseleave=()=>{cross.style.display='none';tip.style.display='none'};
+}
+function render(d){
+  last=d;
+  $('title').textContent=`Mesa autónoma · día ${Math.min(d.day,d.days)} de ${d.days}`;
+  const st=$('status');st.className='badge '+(d.halt?'b-halt':d.pause?'b-pause':'b-on');st.textContent=d.halt?'DETENIDA':d.pause?'EN PAUSA':'OPERANDO · REAL';
+  const ch=d.equity_usd/d.start_usd-1;
+  $('eq').textContent=usd(d.equity_usd);
+  $('eqsub').innerHTML=`<span class="${ch>=0?'ok':'bad'}">${pct(ch)}</span> desde el inicio (${usd(d.start_usd)}) · ${d.equity_sol} SOL · SOL a US$${d.sol_usd}`;
+  const prog=Math.max(0,Math.min(1,(d.equity_usd-d.start_usd)/(d.goal_usd-d.start_usd)));
+  $('bar').style.width=(prog*100).toFixed(1)+'%';
+  $('goal').textContent=`Objetivo x${(d.goal_usd/d.start_usd).toFixed(0)}: ${usd(d.goal_usd)} · vamos ${d.mult}x · ${(prog*100).toFixed(1)}% del camino`;
+  $('cash').textContent=d.cash_sol;$('inpos').textContent=usd(d.positions_usd);
+  $('real').innerHTML=`<span class="${d.realized_usd>=0?'ok':'bad'}">${usd(d.realized_usd)}</span>`;
+  $('hit').textContent=d.n_closed?`${d.wins}/${d.n_closed}`:'—';
+  chart(d);
+  $('pos').innerHTML=d.positions.length?d.positions.map(p=>{const m=p.mult,c=m>=1?'ok':'bad';
+    return `<div class="pos"><div class="row"><span class="sym">${esc(p.symbol)}</span><span class="mult ${c}">${m.toFixed(2)}x</span></div>
+    <div class="meta">vale ${usd(p.value_usd)} · entrada US$${Number(p.entry_usd).toPrecision(4)} · pico ${(p.peak_usd/p.entry_usd).toFixed(2)}x · stop −${Math.round(p.stop*100)}% · trailing ${Math.round(p.trail*100)}% desde ${p.trail_after}x${p.tp&&p.tp.length?' · ventas en '+p.tp.map(t=>t[0]+'x').join(', '):''} · abierta ${hm(p.opened_ts)}</div>
+    ${p.thesis?`<div class="th">${esc(p.thesis)}</div>`:''}</div>`}).join(''):'<div class="empty">Sin posiciones abiertas</div>';
+  $('journal').innerHTML=d.journal.length?d.journal.slice(0,60).map(j=>`<div class="j"><div class="h"><span>${hm(j.ts)}</span><span class="tag ${esc(j.kind)}">${esc(j.kind)}</span></div><div class="t">${esc(j.title)}</div><p>${esc(j.text)}</p></div>`).join(''):'<div class="empty">Todavía no hay movimientos</div>';
+  $('closed').innerHTML=d.closed.length?`<table><tr><th>Token</th><th>Salida</th><th class="r">Tenencia</th><th class="r">Resultado</th></tr>${d.closed.map(c=>`<tr><td>${esc(c.symbol)}</td><td class="mut">${esc(c.why)}</td><td class="r">${c.hold_h} h</td><td class="r ${c.pnl_usd>=0?'ok':'bad'}">${usd(c.pnl_usd)} (${pct(c.ret)})</td></tr>`).join('')}</table>`:'<span class="mut">Todavía ninguna</span>';
+  $('upd').textContent='datos de las '+new Date(d.now*1000).toLocaleTimeString('es-AR',{hour12:false});
+}
+async function load(){try{const r=await fetch('desk.json?'+Date.now(),{cache:'no-store'});if(r.ok)render(await r.json())}catch(e){$('upd').textContent='sin conexión'}}
+load();setInterval(load,20000);addEventListener('resize',()=>last&&chart(last));
+</script>
+</body>
+</html>

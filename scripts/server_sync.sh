@@ -25,6 +25,7 @@ if [ -n "$REMOTE" ] && [ "$LOCAL" != "$REMOTE" ]; then
     systemctl restart fomo-live && echo "$(date -u +%FT%TZ) fomo-live reiniciado" >> logs/sync.log
   fi
   if echo "$CHANGED" | grep -q '^fomo_intel/live/control_server.py'; then systemctl restart fomo-control 2>/dev/null || true; fi
+  if echo "$CHANGED" | grep -Eq '^fomo_intel/(desk/|live/executor.py|live/wallet.py|live/signals.py)'; then systemctl restart fomo-desk 2>/dev/null && echo "$(date -u +%FT%TZ) fomo-desk reiniciado" >> logs/sync.log; fi
 fi
 
 # ---- 2) mantenimiento: scripts de una sola vez ----
@@ -42,7 +43,8 @@ MIN=$(date +%M); if [ $((10#$MIN % 10)) -eq 0 ]; then set -a; . ./.env; set +a; 
 
 # ---- dashboard (cada minuto, barato: solo lee archivos) ----
 [ -d /var/www/fomo ] && python3 -m fomo_intel.dashboard /var/www/fomo/historico.html >> logs/dashboard.log 2>&1 || true
-[ -d /var/www/fomo ] && cmp -s dashboard/live.html /var/www/fomo/index.html || cp dashboard/live.html /var/www/fomo/index.html 2>/dev/null || true
+# portada = mesa autónoma (desde 27/10); el bot anterior queda en /bot.html
+[ -d /var/www/fomo ] && { cmp -s dashboard/desk.html /var/www/fomo/index.html || cp dashboard/desk.html /var/www/fomo/index.html; cmp -s dashboard/live.html /var/www/fomo/bot.html || cp dashboard/live.html /var/www/fomo/bot.html; } 2>/dev/null || true
 
 # ---- 3) publicar estado cada 5 min ----
 MIN=$(date +%M); [ "${FORCE_STATE:-0}" = "1" ] || [ $((10#$MIN % 5)) -eq 0 ] || exit 0
