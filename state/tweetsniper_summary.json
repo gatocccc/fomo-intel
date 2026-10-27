@@ -1,7 +1,7 @@
 {
- "ts": 1793065795.3195255,
- "lag_slots": 0,
- "tokens_tracked": 1656,
+ "ts": 1793066096.9847815,
+ "lag_slots": 1,
+ "tokens_tracked": 1780,
  "ctrl": {
   "enabled": true,
   "mode": "real",
@@ -17,19 +17,34 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "no_tweet": 777,
-  "tweet": 636,
-  "sin_meta_a_tiempo": 243,
-  "meta_fail": 283,
-  "entra": 5
+  "no_tweet": 840,
+  "tweet": 678,
+  "sin_meta_a_tiempo": 262,
+  "meta_fail": 305,
+  "entra": 6
  },
  "open": [],
- "sol_usd": 100.64072174293851,
- "closed": 9,
+ "sol_usd": 100.48033890390869,
+ "closed": 10,
  "wins": 0,
- "pnl_usd": -21.77,
- "ret_sum": -3.963,
+ "pnl_usd": -25.8,
+ "ret_sum": -4.703,
  "last": [
+  {
+   "ts": 1793065823.2492647,
+   "day": "2026-10-26",
+   "mint": "27DUn7trkjkgnL7kRgahkDjWDrU11PhP2oFwVy9Lpump",
+   "symbol": "GATE",
+   "mode": "real",
+   "why": "stop",
+   "ret": -0.74,
+   "pnl_usd": -4.03,
+   "peak_mult": 1.0,
+   "hold_s": 10,
+   "entry_age_s": 3.1,
+   "score": 0.2937,
+   "tid": "2114897348073849015"
+  },
   {
    "ts": 1793065462.3256962,
    "day": "2026-10-26",
@@ -132,20 +147,6 @@
    "hold_s": 15,
    "entry_age_s": 4.7,
    "score": 0.5014
-  },
-  {
-   "ts": 1793062366.9055634,
-   "day": "2026-10-26",
-   "mint": "41rumtQW3s5KiEYK5AzpT8FwjZP2wHk6446ZwtBspump",
-   "symbol": "MMIGRATION",
-   "mode": "real",
-   "why": "tiempo",
-   "ret": -0.135,
-   "pnl_usd": -0.73,
-   "peak_mult": 1.0,
-   "hold_s": 83,
-   "entry_age_s": 3.4,
-   "score": 0.2724
   }
  ]
 }
