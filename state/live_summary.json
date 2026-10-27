@@ -1,5 +1,5 @@
 {
- "ts": 1793071200.2260027,
+ "ts": 1793071500.7497633,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,20 +32,20 @@
  ],
  "rejections": {
   "day": "2026-10-27",
-  "seen": 4,
+  "seen": 10,
   "bought": 0,
   "by_reason": {
-   "freno": 4
+   "freno": 10
   },
   "note": ""
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.9833,
- "sol_usd": 99.88586817191499,
+ "sol_usd": 100.01279979191051,
  "stream_connected": true,
- "stream_msgs": 14707,
- "tokens_seen": 14134,
- "tokens_tracked": 66,
+ "stream_msgs": 14746,
+ "tokens_seen": 14171,
+ "tokens_tracked": 58,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -54,9 +54,9 @@
  "account_trades": 49,
  "helius": {
   "connected": true,
-  "notifications": 7956192,
-  "parsed": 627,
-  "skipped": 7952889,
+  "notifications": 7972100,
+  "parsed": 637,
+  "skipped": 7968726,
   "fast_creates": 7,
   "subs": 1,
   "errors": [
@@ -65,7 +65,7 @@
    "01:49:06 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 140,
+ "follow_buys_seen": 142,
  "guard": {
   "alerts": [
    "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
@@ -82,7 +82,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 171,
+ "st_requests": 172,
  "stream_errors": [
   "15:35:05 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 15:35:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
   "19:35:05 Connection to remote host was lost.",
@@ -93,7 +93,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 10,
-  "create": 14474,
+  "create": 14513,
   "sell": 102,
   "buy": 121
  },
