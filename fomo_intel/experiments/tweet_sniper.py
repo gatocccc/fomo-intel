@@ -96,6 +96,13 @@ class Sniper:
             self.exe = RealExecutor(p, load_or_create(env.wallet_file), Rpc(env.rpc_url), env.solanatracker_api_key)
         self._seed_rank()
         self.cur_slot = 0; self.lag_slots = None
+        self.bench: dict[str, float] = {}          # "sym:<NOMBRE>" / "tid:<id>" -> hasta cuándo no se entra
+        try:
+            for r in self._closed():
+                if r.get("why") == "stop" and time.time() - r["ts"] < 3600:
+                    self._bench_add(r.get("symbol"), r.get("tid"), r["ts"])
+        except Exception:  # noqa: BLE001
+            pass
 
     # ---------- utilidades ----------
     def _ctrl(self):
@@ -203,12 +210,24 @@ class Sniper:
         thr = self.ctrl["threshold"]
         if score < thr:
             row["decision"] = "bajo umbral"; self._log("decisions.jsonl", row); return
-        why = self._stop_reason()
+        why = self._stop_reason() or (f"banco {self._benched(t.symbol, m.get('tid'))}" if self._benched(t.symbol, m.get("tid")) else None)
         if why:
             row["decision"] = f"freno: {why}"; self._log("decisions.jsonl", row); return
         row["decision"] = "ENTRA"; self._log("decisions.jsonl", row); self.stats["entra"] += 1
         log.info("ENTRA %s score %.3f vol_s1 US$%.0f px_s1 %.2f autor %s", t.symbol, score, vol, px1, m.get("author"))
         self.pool.submit(self._enter, t, row)
+
+    def _bench_add(self, symbol, tid, ts=None):
+        until = (ts or time.time()) + 3600
+        if symbol: self.bench["sym:" + symbol.strip().upper()] = until
+        if tid: self.bench["tid:" + str(tid)] = until
+
+    def _benched(self, symbol, tid):
+        now = time.time()
+        for k in ("sym:" + (symbol or "").strip().upper(), "tid:" + str(tid)):
+            if self.bench.get(k, 0) > now:
+                return k
+        return None
 
     def _stop_reason(self):
         c = self.ctrl
@@ -237,7 +256,7 @@ class Sniper:
             return
         with self.lock:
             self.open[t.mint] = {"mint": t.mint, "symbol": t.symbol, "t_in": time.time(), "entry": entry, "tokens": tokens, "sol_in": sol_in,
-                                 "peak": entry, "score": row["score"], "t0": t.t0, "mode": c["mode"]}
+                                 "peak": entry, "score": row["score"], "t0": t.t0, "mode": c["mode"], "tid": (t.meta or {}).get("tid")}
 
     def _manage(self, now: float):
         c = self.ctrl
@@ -268,8 +287,11 @@ class Sniper:
         pnl = (sol_out - p["sol_in"]) * self.sol_usd
         row = {"ts": time.time(), "day": time.strftime("%Y-%m-%d", time.gmtime(time.time() - 3 * 3600)), "mint": p["mint"], "symbol": p["symbol"],
                "mode": p["mode"], "why": why, "ret": round(sol_out / p["sol_in"] - 1, 3) if p["sol_in"] else None, "pnl_usd": round(pnl, 2),
-               "peak_mult": round(p["peak"] / p["entry"], 2), "hold_s": round(time.time() - p["t_in"]), "entry_age_s": round(p["t_in"] - p["t0"], 1), "score": p["score"]}
+               "peak_mult": round(p["peak"] / p["entry"], 2), "hold_s": round(time.time() - p["t_in"]), "entry_age_s": round(p["t_in"] - p["t0"], 1), "score": p["score"],
+               "tid": p.get("tid")}
         self._log("closed.jsonl", row)
+        if why == "stop" or (row["ret"] or 0) < -0.3:
+            self._bench_add(p["symbol"], p.get("tid"))
         log.info("SALE %s %s ret %+.0f%% pnl US$%+.2f", p["symbol"], why, (row["ret"] or 0) * 100, pnl)
 
     # ---------- loop ----------
