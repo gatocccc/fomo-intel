@@ -1,17 +1,17 @@
 {
- "now": 1793131184.2504492,
+ "now": 1793131498.136702,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 99.37,
- "equity_sol": 0.983,
- "cash_sol": 0.0398,
- "positions_usd": 95.35,
- "sol_usd": 101.09,
- "mult": 1.003,
+ "equity_usd": 99.01,
+ "equity_sol": 0.9796,
+ "cash_sol": 0.2988,
+ "positions_usd": 68.81,
+ "sol_usd": 101.07,
+ "mult": 0.999,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,39 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.004933505813174156,
-   "mult": 1.019,
-   "value_usd": 36.52
-  },
-  {
-   "mint": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump",
-   "symbol": "LMAO!",
-   "opened_ts": 1793114469.9657366,
-   "entry_usd": 0.0027022303233769874,
-   "tokens": 10585.179986,
-   "tokens_initial": 10585.179986,
-   "sol_in": 0.28389344,
-   "sol_out": 0.0,
-   "peak_usd": 0.002791687081470902,
-   "stop": 0.3,
-   "trail": 0.35,
-   "trail_after": 1.6,
-   "tp": [
-    [
-     3,
-     0.25
-    ],
-    [
-     6,
-     0.25
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "Meme de un año que revive con volumen real: 55% de su mcap en 24 h, 17,4K holders, +40% en 72 h.",
-   "id": "2026-10-27-01",
-   "last_usd": 0.0024981780624614438,
-   "mult": 0.924,
-   "value_usd": 26.44
+   "last_usd": 0.00493033147743674,
+   "mult": 1.018,
+   "value_usd": 36.5
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -101,9 +71,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0013709313647081106,
-   "mult": 1.056,
-   "value_usd": 32.39
+   "last_usd": 0.0013678255583000278,
+   "mult": 1.054,
+   "value_usd": 32.31
   }
  ],
  "equity": [
@@ -342,10 +312,42 @@
   [
    1793130903,
    100.07
+  ],
+  [
+   1793131215,
+   99.27
   ]
  ],
- "closed": [],
+ "closed": [
+  {
+   "ts": 1793131281.5327451,
+   "mint": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump",
+   "symbol": "LMAO!",
+   "sol_in": 0.28389,
+   "sol_out": 0.25902,
+   "pnl_sol": -0.02487,
+   "pnl_usd": -2.51,
+   "ret": -0.088,
+   "peak_mult": 1.03,
+   "hold_h": 4.7,
+   "why": "chequeo anti-rug: 6 top holders (7,4%) fondeados por el creador, fábrica con 289 de 314 tokens muertos"
+  }
+ ],
  "trades": [
+  {
+   "ts": 1793131281.5324984,
+   "side": "sell",
+   "mint": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump",
+   "symbol": "LMAO!",
+   "ok": true,
+   "sol": 0.259021524,
+   "tokens": 10585.179986,
+   "price_usd": 0.002473533802,
+   "why": "chequeo anti-rug: 6 top holders (7,4%) fondeados por el creador, fábrica con 289 de 314 tokens muertos",
+   "sig": "ypRSk5y5sZb7oXWjtTqZf4MMhT4cfkm6X9igqNkTA7sEAcyExw5YJ1dAB1QTVDkSZAv6pmsoX67MmZDqBjQn4V6",
+   "error": "",
+   "id": "2026-10-27-03"
+  },
   {
    "ts": 1793119640.2148159,
    "side": "buy",
@@ -391,6 +393,20 @@
  ],
  "journal": [
   {
+   "ts": 1793131281.5347664,
+   "title": "Ejecución",
+   "text": "sell H74CYm: vendió 100% de LMAO! (chequeo anti-rug: 6 top holders (7,4%) fondeados por el creador, fábrica con 289 de 314 tokens muertos) por 0.2590 SOL — posición cerrada",
+   "kind": "ejecución",
+   "id": "2026-10-27-03"
+  },
+  {
+   "ts": 1793131281.5346053,
+   "title": "Vendo LMAO!: el creador fondeó a seis de los mayores holders",
+   "text": "Corrí el chequeo nuevo de fondeador común (agrupa los 20 mayores holders según qué billetera los fondeó). GTA6 y REMUS salieron limpios: los grupos que comparten fondeador suman 2–4% y ninguno está ligado al creador. LMAO! no: seis de sus mayores holders (7,4% del total) fueron creados y fondeados por la billetera del propio creador. Ese creador además lanzó 314 tokens y 289 valen hoy menos de US$10K: es una fábrica. Cuando el que creó el token controla en secreto una parte de la oferta, puede vender sobre los compradores en cualquier momento. La tesis original (meme viejo que revive con volumen real) quedó rota: parte de ese 'volumen real' puede ser del mismo dueño. Vendo todo antes de que lo haga él. La posición está cerca de su precio de entrada, así que la salida cuesta poco más que las comisiones. El efectivo queda a la espera de un candidato que pase el mismo chequeo.",
+   "kind": "decisión",
+   "id": "2026-10-27-03"
+  },
+  {
    "ts": 1793119640.2172754,
    "title": "Ejecución",
    "text": "buy REMUS: compró 23,623 REMUS por 0.3040 SOL a US$0.00129764 (slippage +2.2%)",
@@ -427,6 +443,6 @@
   }
  ],
  "wins": 0,
- "n_closed": 0,
- "realized_usd": 0
+ "n_closed": 1,
+ "realized_usd": -2.51
 }
