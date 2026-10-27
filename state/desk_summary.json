@@ -1,17 +1,17 @@
 {
- "now": 1793120078.7330003,
+ "now": 1793120390.9880939,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 96.19,
- "equity_sol": 0.9546,
+ "equity_usd": 95.87,
+ "equity_sol": 0.9495,
  "cash_sol": 0.0397,
- "positions_usd": 92.19,
- "sol_usd": 100.76,
- "mult": 0.971,
+ "positions_usd": 91.86,
+ "sol_usd": 100.97,
+ "mult": 0.968,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.004730763573365483,
-   "mult": 0.977,
-   "value_usd": 35.02
+   "last_usd": 0.0047420475752898315,
+   "mult": 0.979,
+   "value_usd": 35.11
   },
   {
    "mint": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Meme de un año que revive con volumen real: 55% de su mcap en 24 h, 17,4K holders, +40% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.0027130923724088805,
-   "mult": 1.004,
-   "value_usd": 28.72
+   "last_usd": 0.002696429093907302,
+   "mult": 0.998,
+   "value_usd": 28.54
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0012041577452385221,
-   "mult": 0.928,
-   "value_usd": 28.45
+   "last_usd": 0.0011943160589897963,
+   "mult": 0.92,
+   "value_usd": 28.21
   }
  ],
  "equity": [
@@ -202,6 +202,10 @@
   [
    1793120078,
    96.19
+  ],
+  [
+   1793120390,
+   95.87
   ]
  ],
  "closed": [],
