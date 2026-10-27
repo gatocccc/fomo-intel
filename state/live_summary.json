@@ -1,5 +1,5 @@
 {
- "ts": 1793093999.5428786,
+ "ts": 1793094299.4968562,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -41,11 +41,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.9833,
- "sol_usd": 99.60713033988537,
+ "sol_usd": 99.53229928324758,
  "stream_connected": true,
- "stream_msgs": 20305,
- "tokens_seen": 19620,
- "tokens_tracked": 54,
+ "stream_msgs": 20337,
+ "tokens_seen": 19651,
+ "tokens_tracked": 52,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -54,28 +54,28 @@
  "account_trades": 52,
  "helius": {
   "connected": true,
-  "notifications": 9063761,
+  "notifications": 9069231,
   "parsed": 697,
-  "skipped": 9059992,
+  "skipped": 9065462,
   "fast_creates": 7,
   "subs": 1,
   "errors": [
-   "08:34:00 Connection to remote host was lost.",
    "09:05:23 Connection to remote host was lost.",
-   "09:38:40 Connection to remote host was lost."
+   "09:38:40 Connection to remote host was lost.",
+   "09:43:23 Connection to remote host was lost."
   ]
  },
  "follow_buys_seen": 150,
  "guard": {
   "alerts": [
-   "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
    "13:39:39 buy 5mAbrm3s fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
    "13:45:29 buy 9PNK23MB fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
    "13:47:11 buy 78vqoxGG fall\u00f3: cotizaci\u00f3n: swap api 500: {\"error\":\"Failed to swap\"} | pumpportal: pumpportal 400: Bad Req",
    "14:26:06 fuente de se\u00f1ales recuperada tras 2 s",
    "08:34:03 fuente de se\u00f1ales recuperada tras 3 s",
    "09:05:26 fuente de se\u00f1ales recuperada tras 2 s",
-   "09:38:43 fuente de se\u00f1ales recuperada tras 3 s"
+   "09:38:43 fuente de se\u00f1ales recuperada tras 3 s",
+   "09:43:26 fuente de se\u00f1ales recuperada tras 2 s"
   ],
   "bench": 4,
   "bench_by_reason": {
@@ -85,7 +85,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 245,
+ "st_requests": 246,
  "stream_errors": [
   "19:35:07 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 19:35:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
   "23:48:02 Connection to remote host was lost.",
@@ -96,7 +96,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 12,
-  "create": 20067,
+  "create": 20099,
   "sell": 102,
   "buy": 124
  },
