@@ -1,8 +1,3 @@
-Oct 26 20:32:50 simplai-prod python3[718129]: 2026-10-26 20:32:50,484 INFO live: latido: stream=True tokens_vistos=8553 seguidos=207 candidatos=0 abiertas=0 cerradas=1 st_requests=91 SOL=$100
-Oct 26 20:33:13 simplai-prod python3[718129]: 2026-10-26 20:33:13,613 INFO live.helius: HELIUS 4vw54B buy EdkCXPap 0.0350 SOL @ 1.857e-07 (lat 0.9s)
-Oct 26 20:33:41 simplai-prod python3[718129]: 2026-10-26 20:33:41,780 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… EdkCXPap 4.171 SOL
-Oct 26 20:33:42 simplai-prod python3[718129]: 2026-10-26 20:33:42,643 INFO live.helius: HELIUS 4vw54B sell EdkCXPap 4.0731 SOL @ 1.184e-07 (lat 0.9s)
-Oct 26 20:37:50 simplai-prod python3[718129]: 2026-10-26 20:37:50,696 INFO live: latido: stream=True tokens_vistos=8653 seguidos=161 candidatos=0 abiertas=0 cerradas=1 st_requests=92 SOL=$100
 Oct 26 20:39:30 simplai-prod python3[718129]: 2026-10-26 20:39:30,361 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 8J5k1MLw 708.986 SOL
 Oct 26 20:40:45 simplai-prod python3[718129]: 2026-10-26 20:40:45,771 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… EdCUGdHE 0.063 SOL
 Oct 26 20:42:51 simplai-prod python3[718129]: 2026-10-26 20:42:51,159 INFO live: latido: stream=True tokens_vistos=8784 seguidos=170 candidatos=0 abiertas=0 cerradas=1 st_requests=93 SOL=$100
@@ -298,3 +293,8 @@ Oct 27 00:53:11 simplai-prod python3[718129]: 2026-10-27 00:53:11,166 INFO live:
 Oct 27 00:53:50 simplai-prod python3[718129]: 2026-10-27 00:53:50,107 INFO live.helius: HELIUS 4vw54B sell DMnMwUvo 2.9679 SOL @ 4.156e-07 (lat 0.9s)
 Oct 27 00:53:50 simplai-prod python3[718129]: 2026-10-27 00:53:50,976 INFO live.helius: HELIUS 4vw54B sell DMnMwUvo 2.9664 SOL @ 3.858e-07 (lat 0.9s)
 Oct 27 00:54:29 simplai-prod python3[718129]: 2026-10-27 00:54:29,029 INFO live.helius: HELIUS 4vw54B buy DMnMwUvo 0.0350 SOL @ 7.415e-07 (lat 0.1s)
+Oct 27 00:55:12 simplai-prod python3[718129]: 2026-10-27 00:55:12,948 INFO live.helius: HELIUS 4vw54B sell DMnMwUvo 2.9713 SOL @ 5.082e-07 (lat 0.9s)
+Oct 27 00:55:48 simplai-prod python3[718129]: 2026-10-27 00:55:48,130 INFO live.helius: HELIUS 4vw54B buy DMnMwUvo 0.0350 SOL @ 4.522e-07 (lat 0.9s)
+Oct 27 00:56:18 simplai-prod python3[718129]: 2026-10-27 00:56:18,846 INFO live.helius: HELIUS 4vw54B buy DMnMwUvo 0.2600 SOL @ 2.103e-07 (lat 1.0s)
+Oct 27 00:56:36 simplai-prod python3[718129]: 2026-10-27 00:56:36,328 INFO live.helius: HELIUS 4vw54B sell DMnMwUvo 3.3737 SOL @ 1.789e-07 (lat 0.9s)
+Oct 27 00:58:11 simplai-prod python3[718129]: 2026-10-27 00:58:11,333 INFO live: latido: stream=True tokens_vistos=12520 seguidos=92 candidatos=0 abiertas=0 cerradas=1 st_requests=143 SOL=$101

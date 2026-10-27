@@ -1,7 +1,7 @@
 {
- "ts": 1793062501.2817457,
+ "ts": 1793062798.2042546,
  "lag_slots": 0,
- "tokens_tracked": 246,
+ "tokens_tracked": 100,
  "ctrl": {
   "enabled": true,
   "mode": "real",
@@ -17,32 +17,32 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "tweet": 60,
-  "meta_fail": 35,
-  "no_tweet": 155,
-  "sin_meta_a_tiempo": 30,
-  "entra": 4
+  "no_tweet": 48,
+  "tweet": 31,
+  "sin_meta_a_tiempo": 21,
+  "meta_fail": 22
  },
- "open": [
+ "open": [],
+ "sol_usd": 100.72684363286712,
+ "closed": 4,
+ "wins": 0,
+ "pnl_usd": -7.79,
+ "ret_sum": -1.406,
+ "last": [
   {
+   "ts": 1793062569.3166766,
+   "day": "2026-10-26",
    "mint": "27D7oBrx9GBLbmMi6hUKtCsbExhTJaxAGvFeDALPpump",
    "symbol": "Lynk",
-   "t_in": 1793062486.2892268,
-   "entry": 3.1493512796385116e-08,
-   "tokens": 1713736.328778,
-   "sol_in": 0.053971577,
-   "peak": 3.1493512796385116e-08,
-   "score": 0.2704,
-   "t0": 1793062482.9423754,
-   "mode": "real"
-  }
- ],
- "sol_usd": 100.83691411977131,
- "closed": 3,
- "wins": 0,
- "pnl_usd": -6.9,
- "ret_sum": -1.243,
- "last": [
+   "mode": "real",
+   "why": "tiempo",
+   "ret": -0.163,
+   "pnl_usd": -0.89,
+   "peak_mult": 1.0,
+   "hold_s": 83,
+   "entry_age_s": 3.3,
+   "score": 0.2704
+  },
   {
    "ts": 1793062422.743293,
    "day": "2026-10-26",
