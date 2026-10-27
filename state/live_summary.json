@@ -1,5 +1,5 @@
 {
- "ts": 1793089799.252421,
+ "ts": 1793090101.1945267,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -41,11 +41,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.9833,
- "sol_usd": 99.87226100409833,
+ "sol_usd": 99.77699103148687,
  "stream_connected": true,
- "stream_msgs": 18878,
- "tokens_seen": 18219,
- "tokens_tracked": 417,
+ "stream_msgs": 19174,
+ "tokens_seen": 18514,
+ "tokens_tracked": 383,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -54,15 +54,15 @@
  "account_trades": 52,
  "helius": {
   "connected": true,
-  "notifications": 8942227,
+  "notifications": 8960919,
   "parsed": 697,
-  "skipped": 8938464,
+  "skipped": 8957155,
   "fast_creates": 7,
   "subs": 1,
   "errors": [
-   "01:49:06 Connection to remote host was lost.",
    "06:31:11 Connection to remote host was lost.",
-   "07:07:01 Connection to remote host was lost."
+   "07:07:01 Connection to remote host was lost.",
+   "08:34:00 Connection to remote host was lost."
   ]
  },
  "follow_buys_seen": 150,
@@ -72,7 +72,8 @@
    "13:39:39 buy 5mAbrm3s fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
    "13:45:29 buy 9PNK23MB fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
    "13:47:11 buy 78vqoxGG fall\u00f3: cotizaci\u00f3n: swap api 500: {\"error\":\"Failed to swap\"} | pumpportal: pumpportal 400: Bad Req",
-   "14:26:06 fuente de se\u00f1ales recuperada tras 2 s"
+   "14:26:06 fuente de se\u00f1ales recuperada tras 2 s",
+   "08:34:03 fuente de se\u00f1ales recuperada tras 3 s"
   ],
   "bench": 4,
   "bench_by_reason": {
@@ -82,7 +83,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 231,
+ "st_requests": 232,
  "stream_errors": [
   "19:35:07 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 19:35:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
   "23:48:02 Connection to remote host was lost.",
@@ -93,7 +94,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 12,
-  "create": 18640,
+  "create": 18936,
   "sell": 102,
   "buy": 124
  },
