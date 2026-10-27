@@ -1,6 +1,3 @@
-Oct 27 00:58:11 simplai-prod python3[718129]: 2026-10-27 00:58:11,333 INFO live: latido: stream=True tokens_vistos=12520 seguidos=92 candidatos=0 abiertas=0 cerradas=1 st_requests=143 SOL=$101
-Oct 27 01:03:11 simplai-prod python3[718129]: 2026-10-27 01:03:11,778 INFO live: latido: stream=True tokens_vistos=12570 seguidos=70 candidatos=0 abiertas=0 cerradas=1 st_requests=144 SOL=$101
-Oct 27 01:05:35 simplai-prod python3[718129]: 2026-10-27 01:05:35,500 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… AtJA72xg 0.013 SOL
 Oct 27 01:08:12 simplai-prod python3[718129]: 2026-10-27 01:08:12,243 INFO live: latido: stream=True tokens_vistos=12628 seguidos=85 candidatos=0 abiertas=0 cerradas=1 st_requests=145 SOL=$101
 Oct 27 01:08:55 simplai-prod python3[718129]: 2026-10-27 01:08:55,491 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… AtJA72xg 0.014 SOL
 Oct 27 01:09:47 simplai-prod python3[718129]: 2026-10-27 01:09:47,678 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… AtJA72xg 0.331 SOL
@@ -298,3 +295,6 @@ Oct 27 04:37:17 simplai-prod python3[718129]: 2026-10-27 04:37:17,300 INFO live.
 Oct 27 04:37:18 simplai-prod python3[718129]: 2026-10-27 04:37:18,182 INFO live.helius: HELIUS 4vw54B sell FcFA8c87 1.8153 SOL @ 5.404e-08 (lat 0.9s)
 Oct 27 04:38:29 simplai-prod python3[718129]: 2026-10-27 04:38:29,614 INFO live: latido: stream=True tokens_vistos=14886 seguidos=70 candidatos=0 abiertas=0 cerradas=1 st_requests=186 SOL=$100
 Oct 27 04:38:48 simplai-prod python3[718129]: 2026-10-27 04:38:48,815 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… DJDYXux9 0.019 SOL
+Oct 27 04:41:07 simplai-prod python3[718129]: 2026-10-27 04:41:07,377 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 2G6QUmbQ 0.107 SOL
+Oct 27 04:43:14 simplai-prod python3[718129]: 2026-10-27 04:43:14,534 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 9fhAX327 0.018 SOL
+Oct 27 04:43:29 simplai-prod python3[718129]: 2026-10-27 04:43:29,865 INFO live: latido: stream=True tokens_vistos=14914 seguidos=53 candidatos=0 abiertas=0 cerradas=1 st_requests=187 SOL=$100
