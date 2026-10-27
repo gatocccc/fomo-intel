@@ -1,4 +1,3 @@
-Oct 26 20:44:32 simplai-prod python3[718129]: 2026-10-26 20:44:32,432 INFO live.helius: HELIUS 4vw54B buy 3EQw75DF 0.0350 SOL @ 1.165e-07 (lat 0.9s)
 Oct 26 20:44:53 simplai-prod python3[718129]: 2026-10-26 20:44:53,876 INFO live.helius: HELIUS 4vw54B buy 3EQw75DF 0.2600 SOL @ 1.047e-07 (lat 0.9s)
 Oct 26 20:45:19 simplai-prod python3[718129]: 2026-10-26 20:45:19,662 INFO live.helius: HELIUS 4vw54B buy 3EQw75DF 0.0350 SOL @ 8.984e-08 (lat 0.1s)
 Oct 26 20:45:36 simplai-prod python3[718129]: 2026-10-26 20:45:36,261 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 3EQw75DF 1.830 SOL
@@ -298,3 +297,4 @@ Oct 27 01:08:12 simplai-prod python3[718129]: 2026-10-27 01:08:12,243 INFO live:
 Oct 27 01:08:55 simplai-prod python3[718129]: 2026-10-27 01:08:55,491 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… AtJA72xg 0.014 SOL
 Oct 27 01:09:47 simplai-prod python3[718129]: 2026-10-27 01:09:47,678 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… AtJA72xg 0.331 SOL
 Oct 27 01:13:12 simplai-prod python3[718129]: 2026-10-27 01:13:12,752 INFO live: latido: stream=True tokens_vistos=12687 seguidos=97 candidatos=0 abiertas=0 cerradas=1 st_requests=146 SOL=$101
+Oct 27 01:18:13 simplai-prod python3[718129]: 2026-10-27 01:18:13,066 INFO live: latido: stream=True tokens_vistos=12717 seguidos=55 candidatos=0 abiertas=0 cerradas=1 st_requests=147 SOL=$101
