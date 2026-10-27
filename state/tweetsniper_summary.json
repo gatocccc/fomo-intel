@@ -1,7 +1,7 @@
 {
- "ts": 1793060701.418236,
- "lag_slots": 1,
- "tokens_tracked": 734,
+ "ts": 1793061002.9024913,
+ "lag_slots": 0,
+ "tokens_tracked": 1029,
  "ctrl": {
   "enabled": true,
   "mode": "paper",
@@ -17,19 +17,33 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "tweet": 2292,
-  "no_tweet": 2963,
-  "meta_fail": 1268,
-  "sin_meta_a_tiempo": 1102,
-  "entra": 8
+  "tweet": 2371,
+  "no_tweet": 3154,
+  "meta_fail": 1295,
+  "sin_meta_a_tiempo": 1126,
+  "entra": 9
  },
  "open": [],
- "sol_usd": 100.81001360279046,
- "closed": 8,
+ "sol_usd": 100.78218057966242,
+ "closed": 9,
  "wins": 3,
- "pnl_usd": -1.92,
- "ret_sum": -0.387,
+ "pnl_usd": -2.16,
+ "ret_sum": -0.436,
  "last": [
+  {
+   "ts": 1793060848.1345265,
+   "day": "2026-10-26",
+   "mint": "F6gGYC3jutUbwozVYFskCHNGtUWDwmgGzthq2JeBpump",
+   "symbol": "MUSK",
+   "mode": "paper",
+   "why": "tiempo",
+   "ret": -0.049,
+   "pnl_usd": -0.24,
+   "peak_mult": 1.0,
+   "hold_s": 81,
+   "entry_age_s": 2.4,
+   "score": 0.2832
+  },
   {
    "ts": 1793060568.0315638,
    "day": "2026-10-26",
@@ -127,20 +141,6 @@
    "hold_s": 80,
    "entry_age_s": 2.2,
    "score": 0.2776
-  },
-  {
-   "ts": 1793051963.5510356,
-   "day": "2026-10-26",
-   "mint": "A53C2LNuZ8kxi7FFhxHXrZbCAzYxPYeMD1tADs2pump",
-   "symbol": "OBUMA",
-   "mode": "paper",
-   "why": "tiempo",
-   "ret": 0.132,
-   "pnl_usd": 0.66,
-   "peak_mult": 1.19,
-   "hold_s": 80,
-   "entry_age_s": 2.3,
-   "score": 0.5283
   }
  ]
 }
