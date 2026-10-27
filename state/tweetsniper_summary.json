@@ -1,7 +1,7 @@
 {
- "ts": 1793063100.5336568,
+ "ts": 1793063401.928246,
  "lag_slots": 0,
- "tokens_tracked": 266,
+ "tokens_tracked": 429,
  "ctrl": {
   "enabled": true,
   "mode": "real",
@@ -17,19 +17,34 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "no_tweet": 108,
-  "tweet": 107,
-  "sin_meta_a_tiempo": 50,
-  "meta_fail": 56,
-  "entra": 1
+  "no_tweet": 196,
+  "tweet": 167,
+  "sin_meta_a_tiempo": 66,
+  "meta_fail": 74,
+  "entra": 2
  },
  "open": [],
- "sol_usd": 100.77437772917735,
- "closed": 5,
+ "sol_usd": 100.79574739577673,
+ "closed": 6,
  "wins": 0,
- "pnl_usd": -11.56,
- "ret_sum": -1.962,
+ "pnl_usd": -15.58,
+ "ret_sum": -2.823,
  "last": [
+  {
+   "ts": 1793063116.5785782,
+   "day": "2026-10-26",
+   "mint": "27DCWCwKbiXdRRUnMEavcguhC8FBbwxn49V6CwEhpump",
+   "symbol": "NBAA",
+   "mode": "real",
+   "why": "stop",
+   "ret": -0.861,
+   "pnl_usd": -4.02,
+   "peak_mult": 1.64,
+   "hold_s": 12,
+   "entry_age_s": 3.2,
+   "score": 0.2727,
+   "tid": "2114885971594596736"
+  },
   {
    "ts": 1793062970.4450305,
    "day": "2026-10-26",

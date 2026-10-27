@@ -1,5 +1,5 @@
 {
- "ts": 1793063101.1284168,
+ "ts": 1793063401.264033,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -44,12 +44,12 @@
   "note": ""
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.1287,
+ "wallet_sol": 1.0869,
  "sol_usd": 100.77437772917735,
  "stream_connected": true,
- "stream_msgs": 13106,
- "tokens_seen": 12587,
- "tokens_tracked": 72,
+ "stream_msgs": 13171,
+ "tokens_seen": 12651,
+ "tokens_tracked": 88,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -58,9 +58,9 @@
  "account_trades": 43,
  "helius": {
   "connected": true,
-  "notifications": 7296629,
+  "notifications": 7319985,
   "parsed": 559,
-  "skipped": 7293761,
+  "skipped": 7317103,
   "fast_creates": 7,
   "subs": 1,
   "errors": [
@@ -97,7 +97,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 10,
-  "create": 12879,
+  "create": 12944,
   "sell": 102,
   "buy": 115
  },
