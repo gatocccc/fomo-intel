@@ -1,17 +1,17 @@
 {
- "now": 1793126088.1197035,
+ "now": 1793126400.2876673,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 98.74,
- "equity_sol": 0.9798,
+ "equity_usd": 98.34,
+ "equity_sol": 0.9745,
  "cash_sol": 0.0397,
- "positions_usd": 94.73,
- "sol_usd": 100.77,
- "mult": 0.996,
+ "positions_usd": 94.33,
+ "sol_usd": 100.91,
+ "mult": 0.992,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.004801124448257242,
-   "mult": 0.992,
-   "value_usd": 35.54
+   "last_usd": 0.004809028445106008,
+   "mult": 0.993,
+   "value_usd": 35.6
   },
   {
    "mint": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Meme de un año que revive con volumen real: 55% de su mcap en 24 h, 17,4K holders, +40% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.0026063182204090576,
-   "mult": 0.965,
-   "value_usd": 27.59
+   "last_usd": 0.0025703135125430088,
+   "mult": 0.951,
+   "value_usd": 27.21
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -84,7 +84,7 @@
    "tokens_initial": 23623.122876,
    "sol_in": 0.30401884,
    "sol_out": 0.0,
-   "peak_usd": 0.0013446340145646487,
+   "peak_usd": 0.001357918161518676,
    "stop": 0.35,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.001337771562127907,
-   "mult": 1.031,
-   "value_usd": 31.6
+   "last_usd": 0.0013341719686639966,
+   "mult": 1.028,
+   "value_usd": 31.52
   }
  ],
  "equity": [
@@ -278,6 +278,10 @@
   [
    1793125900,
    97.25
+  ],
+  [
+   1793126212,
+   99.01
   ]
  ],
  "closed": [],
