@@ -1,7 +1,7 @@
 {
- "ts": 1793064902.2658556,
- "lag_slots": 0,
- "tokens_tracked": 1210,
+ "ts": 1793065203.1890092,
+ "lag_slots": 1,
+ "tokens_tracked": 1379,
  "ctrl": {
   "enabled": true,
   "mode": "real",
@@ -17,14 +17,14 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "no_tweet": 571,
-  "tweet": 458,
-  "sin_meta_a_tiempo": 179,
-  "meta_fail": 206,
+  "no_tweet": 638,
+  "tweet": 535,
+  "sin_meta_a_tiempo": 206,
+  "meta_fail": 235,
   "entra": 3
  },
  "open": [],
- "sol_usd": 100.47712581647045,
+ "sol_usd": 100.67541314643995,
  "closed": 7,
  "wins": 0,
  "pnl_usd": -18.17,
