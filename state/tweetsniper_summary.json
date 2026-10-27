@@ -1,7 +1,7 @@
 {
- "ts": 1793061595.6979733,
- "lag_slots": 1,
- "tokens_tracked": 1320,
+ "ts": 1793061896.6052523,
+ "lag_slots": 0,
+ "tokens_tracked": 1456,
  "ctrl": {
   "enabled": true,
   "mode": "paper",
@@ -17,44 +17,75 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "tweet": 2464,
-  "no_tweet": 3314,
-  "meta_fail": 1341,
-  "sin_meta_a_tiempo": 1164,
-  "entra": 13
+  "tweet": 2514,
+  "no_tweet": 3385,
+  "meta_fail": 1361,
+  "sin_meta_a_tiempo": 1181,
+  "entra": 15
  },
- "open": [
+ "open": [],
+ "sol_usd": 100.74911052142127,
+ "closed": 15,
+ "wins": 5,
+ "pnl_usd": -1.63,
+ "ret_sum": -0.326,
+ "last": [
   {
-   "mint": "DM2JikiT8y5jonpJnSP6PTwsVZSSwkiZyh7UoD7Jpump",
-   "symbol": "ANGEL",
-   "t_in": 1793061534.6835258,
-   "entry": 1.2476663255171773e-07,
-   "tokens": 397628.2640945564,
-   "sol_in": 0.04961073951846289,
-   "peak": 1.676000277819481e-07,
-   "score": 0.3467,
-   "t0": 1793061532.4161587,
-   "mode": "paper"
+   "ts": 1793061720.4655147,
+   "day": "2026-10-26",
+   "mint": "2ay2zAB3WwYM5Jqe1GW9tzzzS9vnHHLXzRU2tkVppump",
+   "symbol": "Fomo Drake",
+   "mode": "paper",
+   "why": "tp",
+   "ret": 1.021,
+   "pnl_usd": 5.1,
+   "peak_mult": 2.06,
+   "hold_s": 28,
+   "entry_age_s": 2.4,
+   "score": 0.3397
   },
   {
+   "ts": 1793061621.845408,
+   "day": "2026-10-26",
    "mint": "27D45vwhrFmEg773RmuZSKvx19vhtgHXf9b5jLiipump",
    "symbol": "ELON",
-   "t_in": 1793061541.5395234,
-   "entry": 2.975349029929713e-08,
-   "tokens": 1666965.5357708752,
-   "sol_in": 0.049598042897821375,
-   "peak": 3.1731850256997606e-08,
-   "score": 0.2735,
-   "t0": 1793061539.1635242,
-   "mode": "paper"
-  }
- ],
- "sol_usd": 100.81073215854612,
- "closed": 11,
- "wins": 3,
- "pnl_usd": -5.56,
- "ret_sum": -1.115,
- "last": [
+   "mode": "paper",
+   "why": "tiempo",
+   "ret": -0.079,
+   "pnl_usd": -0.4,
+   "peak_mult": 1.07,
+   "hold_s": 80,
+   "entry_age_s": 2.4,
+   "score": 0.2735
+  },
+  {
+   "ts": 1793061614.9160693,
+   "day": "2026-10-26",
+   "mint": "DM2JikiT8y5jonpJnSP6PTwsVZSSwkiZyh7UoD7Jpump",
+   "symbol": "ANGEL",
+   "mode": "paper",
+   "why": "tiempo",
+   "ret": 0.295,
+   "pnl_usd": 1.47,
+   "peak_mult": 1.36,
+   "hold_s": 80,
+   "entry_age_s": 2.3,
+   "score": 0.3467
+  },
+  {
+   "ts": 1793061601.1904392,
+   "day": "2026-10-26",
+   "mint": "FXXChvofCyggNxHQQ6bgG2LErQvmpU3Xfrw2U4TNpump",
+   "symbol": "CAT",
+   "mode": "paper",
+   "why": "stop",
+   "ret": -0.448,
+   "pnl_usd": -2.24,
+   "peak_mult": 1.0,
+   "hold_s": 1,
+   "entry_age_s": 2.3,
+   "score": 0.3928
+  },
   {
    "ts": 1793061110.9308016,
    "day": "2026-10-26",
@@ -110,62 +141,6 @@
    "hold_s": 9,
    "entry_age_s": 2.4,
    "score": 0.553
-  },
-  {
-   "ts": 1793059110.786829,
-   "day": "2026-10-26",
-   "mint": "JmnMrTXB5SaLRbE13gYrFkkCdEQwSE2rCPvWjXdpump",
-   "symbol": "CAT",
-   "mode": "paper",
-   "why": "stop",
-   "ret": -0.377,
-   "pnl_usd": -1.88,
-   "peak_mult": 1.0,
-   "hold_s": 1,
-   "entry_age_s": 2.5,
-   "score": 0.2941
-  },
-  {
-   "ts": 1793058787.0056324,
-   "day": "2026-10-26",
-   "mint": "5i3kTpFpYkaccgn1HDng7Hm81TjAnryYfjMeMvsNpump",
-   "symbol": "CAT",
-   "mode": "paper",
-   "why": "stop",
-   "ret": -0.489,
-   "pnl_usd": -2.45,
-   "peak_mult": 1.0,
-   "hold_s": 2,
-   "entry_age_s": 2.5,
-   "score": 0.5865
-  },
-  {
-   "ts": 1793058737.4354596,
-   "day": "2026-10-26",
-   "mint": "CHqjmKQiBJCyQzwvoqPAh9AYXbNEaAmb8anjZ7SPpump",
-   "symbol": "CAT",
-   "mode": "paper",
-   "why": "tp",
-   "ret": 0.968,
-   "pnl_usd": 4.84,
-   "peak_mult": 2.01,
-   "hold_s": 2,
-   "entry_age_s": 2.4,
-   "score": 0.5049
-  },
-  {
-   "ts": 1793058644.2667544,
-   "day": "2026-10-26",
-   "mint": "3zXt7sGveqfN7U6X86eGXa4RBJ7bP9AynCwbMJK8pump",
-   "symbol": "AS",
-   "mode": "paper",
-   "why": "tiempo",
-   "ret": -0.049,
-   "pnl_usd": -0.24,
-   "peak_mult": 1.0,
-   "hold_s": 80,
-   "entry_age_s": 2.8,
-   "score": 0.3241
   }
  ]
 }
