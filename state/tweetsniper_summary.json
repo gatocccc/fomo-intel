@@ -1,7 +1,7 @@
 {
- "ts": 1793065203.1890092,
+ "ts": 1793065494.1101177,
  "lag_slots": 1,
- "tokens_tracked": 1379,
+ "tokens_tracked": 1501,
  "ctrl": {
   "enabled": true,
   "mode": "real",
@@ -17,19 +17,49 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "no_tweet": 638,
-  "tweet": 535,
-  "sin_meta_a_tiempo": 206,
-  "meta_fail": 235,
-  "entra": 3
+  "no_tweet": 692,
+  "tweet": 584,
+  "sin_meta_a_tiempo": 225,
+  "meta_fail": 257,
+  "entra": 5
  },
  "open": [],
- "sol_usd": 100.67541314643995,
- "closed": 7,
+ "sol_usd": 100.78269156831202,
+ "closed": 9,
  "wins": 0,
- "pnl_usd": -18.17,
- "ret_sum": -3.33,
+ "pnl_usd": -21.77,
+ "ret_sum": -3.963,
  "last": [
+  {
+   "ts": 1793065462.3256962,
+   "day": "2026-10-26",
+   "mint": "27DTKkJJn6aVyNJsENV9pz1NLMMcm4Pc8yqqKZBRpump",
+   "symbol": "CATA",
+   "mode": "real",
+   "why": "tiempo",
+   "ret": -0.206,
+   "pnl_usd": -1.28,
+   "peak_mult": 1.0,
+   "hold_s": 83,
+   "entry_age_s": 3.1,
+   "score": 0.3649,
+   "tid": "2114895506396602818"
+  },
+  {
+   "ts": 1793065355.010632,
+   "day": "2026-10-26",
+   "mint": "27DSy2BeqLDXz2pDLvxoMbcQjvQpYo5tT6fQnKQDpump",
+   "symbol": "BGA",
+   "mode": "real",
+   "why": "stop",
+   "ret": -0.427,
+   "pnl_usd": -2.32,
+   "peak_mult": 1.0,
+   "hold_s": 3,
+   "entry_age_s": 3.4,
+   "score": 0.2875,
+   "tid": "2114895413090144561"
+  },
   {
    "ts": 1793064635.8626673,
    "day": "2026-10-26",
@@ -116,20 +146,6 @@
    "hold_s": 83,
    "entry_age_s": 3.4,
    "score": 0.2724
-  },
-  {
-   "ts": 1793062052.6374743,
-   "day": "2026-10-26",
-   "mint": "7hrpHbRAnrHkupJ1y7JqNJycMeTcq3GjF4stf67rpump",
-   "symbol": "STAKE",
-   "mode": "real",
-   "why": "stop",
-   "ret": -0.732,
-   "pnl_usd": -3.71,
-   "peak_mult": 1.0,
-   "hold_s": 5,
-   "entry_age_s": 3.4,
-   "score": 0.3984
   }
  ]
 }
