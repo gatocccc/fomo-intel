@@ -1,0 +1,34 @@
+== 093_revisar_saldo 2026-10-27T00:51:03Z ==
+21:47:31 +0.01346 SOL ok XTcFnk5tBb1A
+21:47:25 -0.05022 SOL ok 5qqh3pvETYoa
+10:46:17 +0.03758 SOL ok KhoUNFynYoXS
+10:46:10 -0.09377 SOL ok 2szhojmt5h8a
+10:45:28 -0.00200 SOL ERR 4VVwigLvYihH
+10:39:38 -0.00200 SOL ERR 4VHHk2N6EccX
+10:28:57 -0.00200 SOL ERR 3RjCr69kcTHV
+21:05:08 -0.00200 SOL ERR 4WTE9XBFuWpg
+20:18:39 +0.00961 SOL ok 4eNByrVNorMr
+20:18:33 -0.01361 SOL ok 4vAAQz36C2pu
+20:07:23 -0.00200 SOL ERR 41eBc2aJwrxU
+17:49:20 -0.00101 SOL ERR 5PRYw4qFiGNC
+17:36:46 -0.00101 SOL ERR 4BC2CC1A72ZG
+17:35:42 -0.00101 SOL ERR nTSZ6vUk9X9N
+17:28:48 -0.00101 SOL ERR 2sqhQGszodHV
+16:59:41 +0.15213 SOL ok 5LNypE3P8vLa
+16:56:34 -0.10136 SOL ok 4KthtFtquZhi
+18:09:21 +0.12641 SOL ok 5F5QVtcW8VHC
+17:09:15 +0.11770 SOL ok S1obr4V1Bh3b
+17:04:06 -0.10146 SOL ok 5ruWZk74Qz3p
+16:55:25 +0.09099 SOL ok QR9HexitD6R5
+16:55:08 -0.10150 SOL ok 5MJ5qfiLwjQb
+16:52:07 -0.10154 SOL ok 4PyjVtMxAGg7
+16:45:03 +0.03970 SOL ok 3CaU3ze7M5Pm
+16:44:48 -0.00051 SOL ERR HjhcEU54HDqc
+saldo: 1.208663338
+--- cazador
+2026-10-27 00:47:24,898 INFO sniper: ENTRA STAKE score 0.398 vol_s1 US$6 px_s1 0.92 autor nypost
+2026-10-27 00:47:32,637 INFO sniper: SALE STAKE stop ret -73% pnl US$-3.71
+{"ts": 1793062047.3162363, "mint": "7hrpHbRAnrHkupJ1y7JqNJycMeTcq3GjF4stf67rpump", "side": "buy", "ok": true, "price": 2.8461045156636592e-08, "sol": 0.050222147, "lat": 2.4, "sig": "5qqh3pvETYoacAhsRQc4TC5byMcx7uUescHS2WRjhvkiDUkhFG6PdozJiNgVanp1kGPzCKTUfjfvh
+{"ts": 1793062052.636912, "mint": "7hrpHbRAnrHkupJ1y7JqNJycMeTcq3GjF4stf67rpump", "side": "sell", "ok": true, "sol": 0.013464359, "error": ""}
+cerradas 1 pnl -3.71 abiertas 0 {'tweet': 26, 'meta_fail': 20, 'no_tweet': 81, 'sin_meta_a_tiempo': 17, 'entra': 1}
+== exit 0 ==
