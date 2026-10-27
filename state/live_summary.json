@@ -1,5 +1,5 @@
 {
- "ts": 1793093701.1940064,
+ "ts": 1793093999.5428786,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -41,11 +41,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.9833,
- "sol_usd": 99.69766472765909,
+ "sol_usd": 99.60713033988537,
  "stream_connected": true,
- "stream_msgs": 20266,
- "tokens_seen": 19583,
- "tokens_tracked": 50,
+ "stream_msgs": 20305,
+ "tokens_seen": 19620,
+ "tokens_tracked": 54,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -54,15 +54,15 @@
  "account_trades": 52,
  "helius": {
   "connected": true,
-  "notifications": 9058165,
+  "notifications": 9063761,
   "parsed": 697,
-  "skipped": 9054396,
+  "skipped": 9059992,
   "fast_creates": 7,
   "subs": 1,
   "errors": [
-   "07:07:01 Connection to remote host was lost.",
    "08:34:00 Connection to remote host was lost.",
-   "09:05:23 Connection to remote host was lost."
+   "09:05:23 Connection to remote host was lost.",
+   "09:38:40 Connection to remote host was lost."
   ]
  },
  "follow_buys_seen": 150,
@@ -74,7 +74,8 @@
    "13:47:11 buy 78vqoxGG fall\u00f3: cotizaci\u00f3n: swap api 500: {\"error\":\"Failed to swap\"} | pumpportal: pumpportal 400: Bad Req",
    "14:26:06 fuente de se\u00f1ales recuperada tras 2 s",
    "08:34:03 fuente de se\u00f1ales recuperada tras 3 s",
-   "09:05:26 fuente de se\u00f1ales recuperada tras 2 s"
+   "09:05:26 fuente de se\u00f1ales recuperada tras 2 s",
+   "09:38:43 fuente de se\u00f1ales recuperada tras 3 s"
   ],
   "bench": 4,
   "bench_by_reason": {
@@ -84,7 +85,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 244,
+ "st_requests": 245,
  "stream_errors": [
   "19:35:07 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 19:35:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
   "23:48:02 Connection to remote host was lost.",
@@ -95,7 +96,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 12,
-  "create": 20028,
+  "create": 20067,
   "sell": 102,
   "buy": 124
  },
