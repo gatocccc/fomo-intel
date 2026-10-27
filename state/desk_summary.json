@@ -1,0 +1,38 @@
+{
+ "now": 1793113476.7776763,
+ "start_ts": 1793113265.7107127,
+ "start_usd": 99.09,
+ "start_sol": 0.983291,
+ "goal_usd": 990.9,
+ "days": 14,
+ "day": 1,
+ "equity_usd": 99.03,
+ "equity_sol": 0.9833,
+ "cash_sol": 0.9833,
+ "positions_usd": 0,
+ "sol_usd": 100.72,
+ "mult": 0.999,
+ "halt": false,
+ "pause": false,
+ "positions": [],
+ "equity": [
+  [
+   1793113266,
+   99.09
+  ]
+ ],
+ "closed": [],
+ "trades": [],
+ "journal": [
+  {
+   "ts": 1793113265.7115865,
+   "title": "Arranque de la mesa",
+   "text": "Saldo inicial 0.9833 SOL (US$99.09, SOL a US$100.77). Objetivo: x10 en 14 días. Piso de corte: US$15.",
+   "kind": "sistema",
+   "id": null
+  }
+ ],
+ "wins": 0,
+ "n_closed": 0,
+ "realized_usd": 0
+}

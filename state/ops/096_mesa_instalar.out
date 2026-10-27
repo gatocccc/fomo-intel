@@ -1,0 +1,14 @@
+== 096_mesa_instalar 2026-10-27T15:01:03Z ==
+fomo-live: inactive
+Created symlink /etc/systemd/system/multi-user.target.wants/fomo-desk.service → /etc/systemd/system/fomo-desk.service.
+active
+Oct 27 15:01:05 simplai-prod systemd[1]: Started fomo-desk.service - FOMO mesa autonoma.
+total 144
+drwxr-xr-x 2 root root   4096 Oct 27 15:01 .
+drwxr-xr-x 4 root root   4096 Oct 23 16:10 ..
+-rw-r--r-- 1 root root   9187 Oct 27 15:01 bot.html
+-rw-r--r-- 1 root root    694 Oct 27 15:01 desk.json
+-rw-r--r-- 1 root root 110375 Oct 27 15:00 historico.html
+-rw-r--r-- 1 root root  11138 Oct 27 15:01 index.html
+{'start_usd': 99.09, 'equity_usd': 99.09, 'cash_sol': 0.9833, 'sol_usd': 100.77, 'goal_usd': 990.9}
+== exit 0 ==
