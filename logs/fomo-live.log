@@ -1,4 +1,3 @@
-Oct 27 02:25:10 simplai-prod python3[718129]: 2026-10-27 02:25:10,457 INFO live.helius: HELIUS 4vw54B buy GgQkMxSG 0.2600 SOL @ 9.943e-08 (lat 0.9s)
 Oct 27 02:26:10 simplai-prod python3[718129]: 2026-10-27 02:26:10,379 INFO live.helius: HELIUS 4vw54B buy GgQkMxSG 0.2600 SOL @ 1.281e-07 (lat 0.9s)
 Oct 27 02:26:44 simplai-prod python3[718129]: 2026-10-27 02:26:44,599 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… GgQkMxSG 0.000 SOL
 Oct 27 02:26:44 simplai-prod python3[718129]: 2026-10-27 02:26:44,600 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… FcxLv8B8 8441503208.370 SOL
@@ -298,3 +297,4 @@ Oct 27 08:34:03 simplai-prod python3[718129]: 2026-10-27 08:34:03,361 WARNING li
 Oct 27 08:38:49 simplai-prod python3[718129]: 2026-10-27 08:38:49,159 INFO live: latido: stream=True tokens_vistos=18631 seguidos=354 candidatos=0 abiertas=0 cerradas=1 st_requests=233 SOL=$100
 Oct 27 08:43:50 simplai-prod python3[718129]: 2026-10-27 08:43:50,153 INFO live: latido: stream=True tokens_vistos=18900 seguidos=375 candidatos=0 abiertas=0 cerradas=1 st_requests=234 SOL=$100
 Oct 27 08:48:50 simplai-prod python3[718129]: 2026-10-27 08:48:50,158 INFO live: latido: stream=True tokens_vistos=18958 seguidos=196 candidatos=0 abiertas=0 cerradas=1 st_requests=235 SOL=$100
+Oct 27 08:53:50 simplai-prod python3[718129]: 2026-10-27 08:53:50,609 INFO live: latido: stream=True tokens_vistos=18995 seguidos=61 candidatos=0 abiertas=0 cerradas=1 st_requests=236 SOL=$100
