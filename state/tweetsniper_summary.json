@@ -1,7 +1,7 @@
 {
- "ts": 1793061294.1681762,
+ "ts": 1793061595.6979733,
  "lag_slots": 1,
- "tokens_tracked": 1181,
+ "tokens_tracked": 1320,
  "ctrl": {
   "enabled": true,
   "mode": "paper",
@@ -17,14 +17,39 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "tweet": 2428,
-  "no_tweet": 3231,
-  "meta_fail": 1318,
-  "sin_meta_a_tiempo": 1146,
-  "entra": 11
+  "tweet": 2464,
+  "no_tweet": 3314,
+  "meta_fail": 1341,
+  "sin_meta_a_tiempo": 1164,
+  "entra": 13
  },
- "open": [],
- "sol_usd": 100.70525157579151,
+ "open": [
+  {
+   "mint": "DM2JikiT8y5jonpJnSP6PTwsVZSSwkiZyh7UoD7Jpump",
+   "symbol": "ANGEL",
+   "t_in": 1793061534.6835258,
+   "entry": 1.2476663255171773e-07,
+   "tokens": 397628.2640945564,
+   "sol_in": 0.04961073951846289,
+   "peak": 1.676000277819481e-07,
+   "score": 0.3467,
+   "t0": 1793061532.4161587,
+   "mode": "paper"
+  },
+  {
+   "mint": "27D45vwhrFmEg773RmuZSKvx19vhtgHXf9b5jLiipump",
+   "symbol": "ELON",
+   "t_in": 1793061541.5395234,
+   "entry": 2.975349029929713e-08,
+   "tokens": 1666965.5357708752,
+   "sol_in": 0.049598042897821375,
+   "peak": 3.1731850256997606e-08,
+   "score": 0.2735,
+   "t0": 1793061539.1635242,
+   "mode": "paper"
+  }
+ ],
+ "sol_usd": 100.81073215854612,
  "closed": 11,
  "wins": 3,
  "pnl_usd": -5.56,
