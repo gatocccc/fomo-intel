@@ -1,7 +1,7 @@
 {
- "ts": 1793060400.8768327,
- "lag_slots": 0,
- "tokens_tracked": 518,
+ "ts": 1793060701.418236,
+ "lag_slots": 1,
+ "tokens_tracked": 734,
  "ctrl": {
   "enabled": true,
   "mode": "paper",
@@ -17,19 +17,33 @@
   "paper_slip": 0.03
  },
  "stats": {
-  "tweet": 2207,
-  "no_tweet": 2862,
-  "meta_fail": 1238,
-  "sin_meta_a_tiempo": 1073,
-  "entra": 7
+  "tweet": 2292,
+  "no_tweet": 2963,
+  "meta_fail": 1268,
+  "sin_meta_a_tiempo": 1102,
+  "entra": 8
  },
  "open": [],
- "sol_usd": 100.85048639282734,
- "closed": 7,
+ "sol_usd": 100.81001360279046,
+ "closed": 8,
  "wins": 3,
- "pnl_usd": -0.02,
- "ret_sum": -0.007,
+ "pnl_usd": -1.92,
+ "ret_sum": -0.387,
  "last": [
+  {
+   "ts": 1793060568.0315638,
+   "day": "2026-10-26",
+   "mint": "2DkLJR6o8ELgSuY13s3Rjk8gyCC1FSBJyNvjanyipump",
+   "symbol": "STAKE",
+   "mode": "paper",
+   "why": "stop",
+   "ret": -0.38,
+   "pnl_usd": -1.9,
+   "peak_mult": 1.0,
+   "hold_s": 9,
+   "entry_age_s": 2.4,
+   "score": 0.553
+  },
   {
    "ts": 1793059110.786829,
    "day": "2026-10-26",
