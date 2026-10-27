@@ -1,15 +1,3 @@
-Oct 27 03:04:38 simplai-prod python3[718129]: 2026-10-27 03:04:38,300 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… GPfNZqVK 0.000 SOL
-Oct 27 03:04:38 simplai-prod python3[718129]: 2026-10-27 03:04:38,300 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… F7FRvyTi 13420656433.281 SOL
-Oct 27 03:04:38 simplai-prod python3[718129]: 2026-10-27 03:04:38,300 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… B7PifWoG 1024284255.558 SOL
-Oct 27 03:05:43 simplai-prod python3[718129]: 2026-10-27 03:05:43,696 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 8wCdVGT3 0.018 SOL
-Oct 27 03:07:06 simplai-prod python3[718129]: 2026-10-27 03:07:06,121 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… AWhnTyUH 0.000 SOL
-Oct 27 03:07:06 simplai-prod python3[718129]: 2026-10-27 03:07:06,121 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 4XhCWxdm 12221035639.225 SOL
-Oct 27 03:08:22 simplai-prod python3[718129]: 2026-10-27 03:08:22,771 INFO live: latido: stream=True tokens_vistos=14028 seguidos=79 candidatos=0 abiertas=0 cerradas=1 st_requests=169 SOL=$100
-Oct 27 03:08:43 simplai-prod python3[718129]: 2026-10-27 03:08:43,173 INFO live.helius: HELIUS 4vw54B buy DvrNsBxq 0.0350 SOL @ 2.907e-07 (lat 0.9s)
-Oct 27 03:08:48 simplai-prod python3[718129]: 2026-10-27 03:08:48,878 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 5BQCndqT 16197257132.508 SOL
-Oct 27 03:08:48 simplai-prod python3[718129]: 2026-10-27 03:08:48,878 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 8J5k1MLw 474.476 SOL
-Oct 27 03:08:48 simplai-prod python3[718129]: 2026-10-27 03:08:48,879 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… Esvfxt3j 17376516358.540 SOL
-Oct 27 03:08:53 simplai-prod python3[718129]: 2026-10-27 03:08:53,664 INFO live.helius: HELIUS 4vw54B buy DvrNsBxq 0.2600 SOL @ 1.418e-07 (lat 0.9s)
 Oct 27 03:08:54 simplai-prod python3[718129]: 2026-10-27 03:08:54,325 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 8J5k1MLw 469.959 SOL
 Oct 27 03:09:38 simplai-prod python3[718129]: 2026-10-27 03:09:38,817 INFO live.helius: HELIUS 4vw54B sell DvrNsBxq 4.8669 SOL @ 1.487e-07 (lat 0.9s)
 Oct 27 03:09:39 simplai-prod python3[718129]: 2026-10-27 03:09:39,786 INFO live.helius: HELIUS 4vw54B sell DvrNsBxq 2.3896 SOL @ 1.288e-07 (lat 0.9s)
@@ -298,3 +286,15 @@ Oct 27 11:34:05 simplai-prod python3[718129]: 2026-10-27 11:34:05,462 INFO live:
 Oct 27 11:36:48 simplai-prod python3[718129]: 2026-10-27 11:36:48,534 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 7uwCe3SE 0.022 SOL
 Oct 27 11:39:06 simplai-prod python3[718129]: 2026-10-27 11:39:06,201 INFO live: latido: stream=True tokens_vistos=21455 seguidos=56 candidatos=0 abiertas=0 cerradas=1 st_requests=268 SOL=$100
 Oct 27 11:44:06 simplai-prod python3[718129]: 2026-10-27 11:44:06,935 INFO live: latido: stream=True tokens_vistos=21568 seguidos=128 candidatos=0 abiertas=0 cerradas=1 st_requests=269 SOL=$100
+Oct 27 11:45:05 simplai-prod python3[718129]: 2026-10-27 11:45:05,366 WARNING live.stream: stream caído: Connection to remote host was lost.; reconecto en 2s
+Oct 27 11:45:07 simplai-prod python3[718129]: 2026-10-27 11:45:07,967 WARNING live.stream: stream caído: Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Tue, 27 Oct 2026 11:45:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>
+Oct 27 11:45:07 simplai-prod python3[718129]: <head><title>502 Bad Gateway</title></head>
+Oct 27 11:45:07 simplai-prod python3[718129]: <body>
+Oct 27 11:45:07 simplai-prod python3[718129]: <center><h1>502 Bad Gateway</h1></center>
+Oct 27 11:45:07 simplai-prod python3[718129]: <hr><center>nginx/1.22.1</center>
+Oct 27 11:45:07 simplai-prod python3[718129]: </body>
+Oct 27 11:45:07 simplai-prod python3[718129]: </html>
+Oct 27 11:45:07 simplai-prod python3[718129]: ; reconecto en 4s
+Oct 27 11:45:12 simplai-prod python3[718129]: 2026-10-27 11:45:12,506 INFO live.stream: stream conectado
+Oct 27 11:48:34 simplai-prod python3[718129]: 2026-10-27 11:48:34,029 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… Cm5zxLod 0.014 SOL
+Oct 27 11:49:07 simplai-prod python3[718129]: 2026-10-27 11:49:07,253 INFO live: latido: stream=True tokens_vistos=21702 seguidos=164 candidatos=0 abiertas=0 cerradas=1 st_requests=270 SOL=$100
