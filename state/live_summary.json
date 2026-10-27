@@ -1,5 +1,5 @@
 {
- "ts": 1793112601.056647,
+ "ts": 1793112901.465621,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,21 +32,21 @@
  ],
  "rejections": {
   "day": "2026-10-27",
-  "seen": 64,
+  "seen": 65,
   "bought": 0,
   "by_reason": {
-   "freno": 63,
+   "freno": 64,
    "mcap_alto": 1
   },
   "note": "rechaza todo: revisar si el filtro est\u00e1 muy cerrado"
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.9833,
- "sol_usd": 100.31365986913498,
+ "sol_usd": 100.47637759979919,
  "stream_connected": true,
- "stream_msgs": 25405,
- "tokens_seen": 24583,
- "tokens_tracked": 113,
+ "stream_msgs": 25501,
+ "tokens_seen": 24678,
+ "tokens_tracked": 121,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -55,18 +55,18 @@
  "account_trades": 52,
  "helius": {
   "connected": true,
-  "notifications": 10032461,
-  "parsed": 753,
-  "skipped": 10028354,
+  "notifications": 10074832,
+  "parsed": 756,
+  "skipped": 10070699,
   "fast_creates": 7,
   "subs": 1,
   "errors": [
-   "09:38:40 Connection to remote host was lost.",
    "09:43:23 Connection to remote host was lost.",
-   "14:11:13 Connection to remote host was lost."
+   "14:11:13 Connection to remote host was lost.",
+   "14:53:17 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 166,
+ "follow_buys_seen": 167,
  "guard": {
   "alerts": [
    "13:39:39 buy 5mAbrm3s fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
@@ -85,7 +85,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 306,
+ "st_requests": 307,
  "stream_errors": [
   "23:48:05 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 23:48:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
   "04:35:02 Connection to remote host was lost.",
@@ -96,7 +96,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 14,
-  "create": 25165,
+  "create": 25261,
   "sell": 102,
   "buy": 124
  },
