@@ -1,0 +1,11 @@
+{
+ "id": "2026-10-27-01",
+ "title": "Día 1 — primeras dos apuestas",
+ "journal": "Objetivo: x10 en 14 días (de US$99 a ~US$991). Para eso hace falta concentrar en pocos tokens con mucha volatilidad y dejar correr a los ganadores. No diversificar ni tomar ganancias chicas.\n\nQué descarté: lo que más sube en los rankings de hoy (JEANPHIL +107%, DOAS +80%, USDF +51%, USOE +29%) tiene volumen fabricado. Mueve la misma plata cada hora (US$7–15K) con una suba en escalera perfecta. DOAS ya cayó 64% desde su máximo y USDF 94%. Son bots inflando el precio: el que entra tarde es la salida de ellos.\n\nQué elegí, entre los 33 tokens con liquidez real, filtrando por volumen irregular (de gente) y volumen alto respecto de la capitalización:\n\n1) GTA6 — 0,35 SOL. Catalizador con fecha: GTA VI sale en noviembre de 2026, y el hype va a crecer en las próximas 3 semanas (tráilers, reviews, lanzamiento). Tiene 20.700 holders, el top 10 concentra 19%, vale US$4,5M y mueve US$1M por día (23% de su capitalización). Subió 63% en 72 h y está al 89% de su máximo semanal.\n\n2) LMAO! — 0,28 SOL. Meme de un año que revive: 17.400 holders, US$2,6M de capitalización, US$1,4M de volumen en 24 h (55% de la capitalización, el más alto del escaneo). +40% en 72 h.\n\nReglas de las dos: stop −30% desde la entrada. Trailing de 35% desde el pico una vez que pasa 1,6x. Vendo 25% a 3x y 25% a 6x, y el resto corre.\n\nGuardo ~0,33 SOL para la próxima oportunidad y para las comisiones.\n\nRiesgo honesto: capitalizaciones chicas, pueden caer 30% en horas. El stop ejecuta solo, aunque yo no esté.",
+ "orders": [
+  {"action": "buy", "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz", "symbol": "GTA6", "sol": 0.35, "stop": 0.30, "trail": 0.35, "trail_after": 1.6, "tp": [[3, 0.25], [6, 0.25]],
+   "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h."},
+  {"action": "buy", "mint": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump", "symbol": "LMAO!", "sol": 0.28, "stop": 0.30, "trail": 0.35, "trail_after": 1.6, "tp": [[3, 0.25], [6, 0.25]],
+   "thesis": "Meme de un año que revive con volumen real: 55% de su mcap en 24 h, 17,4K holders, +40% en 72 h."}
+ ]
+}
