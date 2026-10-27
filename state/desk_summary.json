@@ -1,20 +1,81 @@
 {
- "now": 1793114374.7134588,
+ "now": 1793114678.5949008,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 98.9,
- "equity_sol": 0.9833,
- "cash_sol": 0.9833,
- "positions_usd": 0,
- "sol_usd": 100.59,
- "mult": 0.998,
+ "equity_usd": 98.66,
+ "equity_sol": 0.9755,
+ "cash_sol": 0.3437,
+ "positions_usd": 63.9,
+ "sol_usd": 101.13,
+ "mult": 0.996,
  "halt": false,
  "pause": false,
- "positions": [],
+ "positions": [
+  {
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "opened_ts": 1793114467.6297858,
+   "entry_usd": 0.00484132770803147,
+   "tokens": 7403.269484125,
+   "tokens_initial": 7403.269484125,
+   "sol_in": 0.355731879,
+   "sol_out": 0.0,
+   "peak_usd": 0.00484132770803147,
+   "stop": 0.3,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
+   "id": "2026-10-27-01",
+   "last_usd": 0.004826182146170334,
+   "mult": 0.997,
+   "value_usd": 35.73
+  },
+  {
+   "mint": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump",
+   "symbol": "LMAO!",
+   "opened_ts": 1793114469.9657366,
+   "entry_usd": 0.0027022303233769874,
+   "tokens": 10585.179986,
+   "tokens_initial": 10585.179986,
+   "sol_in": 0.28389344,
+   "sol_out": 0.0,
+   "peak_usd": 0.0027022303233769874,
+   "stop": 0.3,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "Meme de un año que revive con volumen real: 55% de su mcap en 24 h, 17,4K holders, +40% en 72 h.",
+   "id": "2026-10-27-01",
+   "last_usd": 0.0026615925705114826,
+   "mult": 0.985,
+   "value_usd": 28.17
+  }
+ ],
  "equity": [
   [
    1793113266,
@@ -31,11 +92,58 @@
   [
    1793114164,
    98.73
+  ],
+  [
+   1793114465,
+   96.75
   ]
  ],
  "closed": [],
- "trades": [],
+ "trades": [
+  {
+   "ts": 1793114469.965091,
+   "side": "buy",
+   "mint": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump",
+   "symbol": "LMAO!",
+   "ok": true,
+   "sol": 0.28389344,
+   "tokens": 10585.179986,
+   "price_usd": 0.002702230323,
+   "slip": 1.83,
+   "sig": "2CV3yFVsxbF2V5vyWzWf8rFTKmBhGUFfTWmByjdnxTMFKJJ49Rv1DcZWPSW7nyb58ifVxhNiezxHR6Sjn8FcaFz",
+   "error": "",
+   "id": "2026-10-27-01"
+  },
+  {
+   "ts": 1793114467.6287785,
+   "side": "buy",
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "ok": true,
+   "sol": 0.355731879,
+   "tokens": 7403.269484125,
+   "price_usd": 0.004841327708,
+   "slip": 5.35,
+   "sig": "3jJKbnwRu1WmRXHjYK7vyCr5UZpr25ZNGAv2vUa6jht4kLe9XiVhr1MR8aNqitMN9RDLcibDuFGifjhbaeKZ8njQ",
+   "error": "",
+   "id": "2026-10-27-01"
+  }
+ ],
  "journal": [
+  {
+   "ts": 1793114469.9669843,
+   "title": "Ejecución",
+   "text": "buy GTA6: compró 7,403 GTA6 por 0.3557 SOL a US$0.00484133 (slippage +5.3%)\nbuy LMAO!: compró 10,585 LMAO! por 0.2839 SOL a US$0.00270223 (slippage +1.8%)",
+   "kind": "ejecución",
+   "id": "2026-10-27-01"
+  },
+  {
+   "ts": 1793114469.9668248,
+   "title": "Día 1 — primeras dos apuestas",
+   "text": "Objetivo: x10 en 14 días (de US$99 a ~US$991). Para eso hace falta concentrar en pocos tokens con mucha volatilidad y dejar correr a los ganadores. No diversificar ni tomar ganancias chicas.\n\nQué descarté: lo que más sube en los rankings de hoy (JEANPHIL +107%, DOAS +80%, USDF +51%, USOE +29%) tiene volumen fabricado. Mueve la misma plata cada hora (US$7–15K) con una suba en escalera perfecta. DOAS ya cayó 64% desde su máximo y USDF 94%. Son bots inflando el precio: el que entra tarde es la salida de ellos.\n\nQué elegí, entre los 33 tokens con liquidez real, filtrando por volumen irregular (de gente) y volumen alto respecto de la capitalización:\n\n1) GTA6 — 0,35 SOL. Catalizador con fecha: GTA VI sale en noviembre de 2026, y el hype va a crecer en las próximas 3 semanas (tráilers, reviews, lanzamiento). Tiene 20.700 holders, el top 10 concentra 19%, vale US$4,5M y mueve US$1M por día (23% de su capitalización). Subió 63% en 72 h y está al 89% de su máximo semanal.\n\n2) LMAO! — 0,28 SOL. Meme de un año que revive: 17.400 holders, US$2,6M de capitalización, US$1,4M de volumen en 24 h (55% de la capitalización, el más alto del escaneo). +40% en 72 h.\n\nReglas de las dos: stop −30% desde la entrada. Trailing de 35% desde el pico una vez que pasa 1,6x. Vendo 25% a 3x y 25% a 6x, y el resto corre.\n\nGuardo ~0,33 SOL para la próxima oportunidad y para las comisiones.\n\nRiesgo honesto: capitalizaciones chicas, pueden caer 30% en horas. El stop ejecuta solo, aunque yo no esté.",
+   "kind": "decisión",
+   "id": "2026-10-27-01"
+  },
   {
    "ts": 1793113265.7115865,
    "title": "Arranque de la mesa",
