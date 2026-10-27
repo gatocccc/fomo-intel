@@ -1,9 +1,3 @@
-Oct 26 21:42:55 simplai-prod python3[718129]: 2026-10-26 21:42:55,041 INFO live: latido: stream=True tokens_vistos=9716 seguidos=108 candidatos=0 abiertas=0 cerradas=1 st_requests=105 SOL=$101
-Oct 26 21:47:55 simplai-prod python3[718129]: 2026-10-26 21:47:55,334 INFO live: latido: stream=True tokens_vistos=9785 seguidos=97 candidatos=0 abiertas=0 cerradas=1 st_requests=106 SOL=$101
-Oct 26 21:48:32 simplai-prod python3[718129]: 2026-10-26 21:48:32,971 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 5US6uNpd 0.002 SOL
-Oct 26 21:48:43 simplai-prod python3[718129]: 2026-10-26 21:48:43,636 INFO live.helius: HELIUS 4vw54B buy 5Y2Satjd 3.0115 SOL @ 9.477e-08 (lat 0.9s)
-Oct 26 21:49:04 simplai-prod python3[718129]: 2026-10-26 21:49:04,902 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 2arUPsUy 0.000 SOL
-Oct 26 21:49:25 simplai-prod python3[718129]: 2026-10-26 21:49:25,702 INFO live.helius: HELIUS 4vw54B buy 5Y2Satjd 0.2600 SOL @ 1.214e-07 (lat 0.9s)
 Oct 26 21:50:33 simplai-prod python3[718129]: 2026-10-26 21:50:33,609 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 5Y2Satjd 0.004 SOL
 Oct 26 21:52:55 simplai-prod python3[718129]: 2026-10-26 21:52:55,959 INFO live: latido: stream=True tokens_vistos=9844 seguidos=84 candidatos=0 abiertas=0 cerradas=1 st_requests=107 SOL=$101
 Oct 26 21:53:39 simplai-prod python3[718129]: 2026-10-26 21:53:39,995 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 5Y2Satjd 2.763 SOL
@@ -298,3 +292,9 @@ Oct 27 01:59:55 simplai-prod python3[718129]: 2026-10-27 01:59:55,051 INFO live.
 Oct 27 02:03:16 simplai-prod python3[718129]: 2026-10-27 02:03:16,343 INFO live: latido: stream=True tokens_vistos=13260 seguidos=87 candidatos=0 abiertas=0 cerradas=1 st_requests=156 SOL=$100
 Oct 27 02:08:16 simplai-prod python3[718129]: 2026-10-27 02:08:16,893 INFO live: latido: stream=True tokens_vistos=13330 seguidos=94 candidatos=0 abiertas=0 cerradas=1 st_requests=157 SOL=$100
 Oct 27 02:13:17 simplai-prod python3[718129]: 2026-10-27 02:13:17,556 INFO live: latido: stream=True tokens_vistos=13417 seguidos=128 candidatos=0 abiertas=0 cerradas=1 st_requests=158 SOL=$100
+Oct 27 02:16:07 simplai-prod python3[718129]: 2026-10-27 02:16:07,572 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 9JsDnmZo 5992794394.161 SOL
+Oct 27 02:18:17 simplai-prod python3[718129]: 2026-10-27 02:18:17,990 INFO live: latido: stream=True tokens_vistos=13487 seguidos=105 candidatos=0 abiertas=0 cerradas=1 st_requests=159 SOL=$100
+Oct 27 02:18:54 simplai-prod python3[718129]: 2026-10-27 02:18:54,009 INFO live.helius: HELIUS 4vw54B buy UEsBzED6 2.0115 SOL @ 6.496e-08 (lat 0.9s)
+Oct 27 02:19:34 simplai-prod python3[718129]: 2026-10-27 02:19:34,894 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… UEsBzED6 0.000 SOL
+Oct 27 02:19:34 simplai-prod python3[718129]: 2026-10-27 02:19:34,894 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 7iqWWNju 13833511972.870 SOL
+Oct 27 02:19:35 simplai-prod python3[718129]: 2026-10-27 02:19:35,772 INFO live.helius: HELIUS 4vw54B sell UEsBzED6 1.7904 SOL @ 5.782e-08 (lat 0.9s)
