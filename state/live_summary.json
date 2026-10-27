@@ -1,5 +1,5 @@
 {
- "ts": 1793073898.9618223,
+ "ts": 1793074199.5764546,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,31 +32,31 @@
  ],
  "rejections": {
   "day": "2026-10-27",
-  "seen": 26,
+  "seen": 28,
   "bought": 0,
   "by_reason": {
-   "freno": 26
+   "freno": 28
   },
   "note": ""
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.9833,
- "sol_usd": 100.03896487968048,
+ "sol_usd": 100.01864643300387,
  "stream_connected": true,
- "stream_msgs": 15180,
- "tokens_seen": 14592,
- "tokens_tracked": 105,
+ "stream_msgs": 15226,
+ "tokens_seen": 14636,
+ "tokens_tracked": 92,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
  "factories": 0,
  "factory_pending": 0,
- "account_trades": 51,
+ "account_trades": 52,
  "helius": {
   "connected": true,
-  "notifications": 8207472,
-  "parsed": 677,
-  "skipped": 8203938,
+  "notifications": 8241113,
+  "parsed": 680,
+  "skipped": 8237568,
   "fast_creates": 7,
   "subs": 1,
   "errors": [
@@ -65,7 +65,7 @@
    "01:49:06 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 146,
+ "follow_buys_seen": 147,
  "guard": {
   "alerts": [
    "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
@@ -82,7 +82,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 180,
+ "st_requests": 181,
  "stream_errors": [
   "15:35:05 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 15:35:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
   "19:35:05 Connection to remote host was lost.",
@@ -93,9 +93,9 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 10,
-  "create": 14945,
+  "create": 14990,
   "sell": 102,
-  "buy": 123
+  "buy": 124
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",
