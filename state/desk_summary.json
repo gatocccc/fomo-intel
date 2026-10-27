@@ -1,17 +1,17 @@
 {
- "now": 1793119483.5213645,
+ "now": 1793119797.2698407,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 98.15,
- "equity_sol": 0.9732,
- "cash_sol": 0.3437,
- "positions_usd": 63.48,
- "sol_usd": 100.85,
- "mult": 0.991,
+ "equity_usd": 96.86,
+ "equity_sol": 0.9616,
+ "cash_sol": 0.0397,
+ "positions_usd": 92.86,
+ "sol_usd": 100.73,
+ "mult": 0.977,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,7 +41,7 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.004730379624897965,
+   "last_usd": 0.004729779383190404,
    "mult": 0.977,
    "value_usd": 35.02
   },
@@ -71,9 +71,39 @@
    "tp_done": [],
    "thesis": "Meme de un año que revive con volumen real: 55% de su mcap en 24 h, 17,4K holders, +40% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.0026890913096435584,
-   "mult": 0.995,
-   "value_usd": 28.46
+   "last_usd": 0.0026921853089349745,
+   "mult": 0.996,
+   "value_usd": 28.5
+  },
+  {
+   "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
+   "symbol": "REMUS",
+   "opened_ts": 1793119640.2155895,
+   "entry_usd": 0.001297642981337872,
+   "tokens": 23623.122876,
+   "tokens_initial": 23623.122876,
+   "sol_in": 0.30401884,
+   "sol_out": 0.0,
+   "peak_usd": 0.001297642981337872,
+   "stop": 0.35,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
+   "id": "2026-10-27-02",
+   "last_usd": 0.001242267315446939,
+   "mult": 0.957,
+   "value_usd": 29.35
   }
  ],
  "equity": [
@@ -164,10 +194,28 @@
   [
    1793119452,
    97.95
+  ],
+  [
+   1793119765,
+   96.61
   ]
  ],
  "closed": [],
  "trades": [
+  {
+   "ts": 1793119640.2148159,
+   "side": "buy",
+   "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
+   "symbol": "REMUS",
+   "ok": true,
+   "sol": 0.30401884,
+   "tokens": 23623.122876,
+   "price_usd": 0.001297642981,
+   "slip": 2.21,
+   "sig": "5wTsAWZ52WWu9EsusUazdkuThB7scMPXozVho2dxyXi7dDLjjKNMBjMUXJijDuZ6ttqgc87a2hCHnChDurMRgs8G",
+   "error": "",
+   "id": "2026-10-27-02"
+  },
   {
    "ts": 1793114469.965091,
    "side": "buy",
@@ -198,6 +246,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793119640.2172754,
+   "title": "Ejecución",
+   "text": "buy REMUS: compró 23,623 REMUS por 0.3040 SOL a US$0.00129764 (slippage +2.2%)",
+   "kind": "ejecución",
+   "id": "2026-10-27-02"
+  },
+  {
+   "ts": 1793119640.2170982,
+   "title": "Subo el riesgo: entro en REMUS con el efectivo",
+   "text": "Gastón me pidió apuestas que se muevan más. Tiene razón en lo de fondo: para x10 en 14 días necesito ~18% por día compuesto, y tokens de US$3–4M (GTA6, LMAO!) no suelen dar eso. Así que el efectivo va a algo más chico y más volátil.\n\nEscaneé 267 tokens de los rankings buscando capitalización entre US$300K y US$3M, con liquidez, volumen real (no bots) y holders repartidos. Pasaron dos. NOWHEEL cae 53% en la última hora: no. El otro es REMUS.\n\nREMUS (US$1,2M): la mascota oficial de la app FOMO, convertida en memecoin hace 4 días. Verifiqué que es real: sitio remus.family, cuenta @RemusFamily, nota en KuCoin, posteos de traders. Mueve US$2,6M por día (2 veces su capitalización) con volumen irregular, que es como se mueve la plata de verdad. 9.900 holders y ningún holder tiene más del 1,4%. Hizo pico hace 20 horas y hoy está 40% abajo: compro en el retroceso, no en la euforia. Tiene una fecha (15 de noviembre) que no sé qué es; está dentro de nuestra ventana.\n\nRiesgos: 12% en manos de bundlers, sin redes verificadas en los metadatos, y puede seguir cayendo. Stop −35% (más ancho porque es más volátil), trailing 35% desde el pico cuando pase 1,6x, vendo 25% a 3x y 25% a 6x.\n\nCon esto quedo ~95% invertido en tres tokens. Si REMUS muestra fuerza esta noche, evalúo rotar GTA6 (la posición más calma) a algo más chico.",
+   "kind": "decisión",
+   "id": "2026-10-27-02"
+  },
   {
    "ts": 1793114469.9669843,
    "title": "Ejecución",
