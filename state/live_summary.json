@@ -1,5 +1,5 @@
 {
- "ts": 1793066100.208485,
+ "ts": 1793066400.5941284,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-26",
-  "seen": 274,
+  "seen": 276,
   "bought": 1,
   "by_reason": {
-   "freno": 253,
+   "freno": 255,
    "en_banco": 12,
    "precio_corrido": 4,
    "compra_fallida": 4,
@@ -44,12 +44,12 @@
   "note": ""
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 0.9853,
- "sol_usd": 100.57549151162763,
+ "wallet_sol": 0.9833,
+ "sol_usd": 100.53170904079612,
  "stream_connected": true,
- "stream_msgs": 13696,
- "tokens_seen": 13157,
- "tokens_tracked": 71,
+ "stream_msgs": 13762,
+ "tokens_seen": 13222,
+ "tokens_tracked": 93,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -58,9 +58,9 @@
  "account_trades": 45,
  "helius": {
   "connected": true,
-  "notifications": 7529243,
-  "parsed": 577,
-  "skipped": 7526221,
+  "notifications": 7575920,
+  "parsed": 583,
+  "skipped": 7572870,
   "fast_creates": 7,
   "subs": 1,
   "errors": [
@@ -69,7 +69,7 @@
    "01:49:06 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 132,
+ "follow_buys_seen": 133,
  "guard": {
   "alerts": [
    "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
@@ -86,7 +86,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 154,
+ "st_requests": 155,
  "stream_errors": [
   "15:35:05 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 15:35:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
   "19:35:05 Connection to remote host was lost.",
@@ -97,7 +97,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 10,
-  "create": 13467,
+  "create": 13533,
   "sell": 102,
   "buy": 117
  },
