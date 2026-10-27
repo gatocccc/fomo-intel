@@ -1,4 +1,3 @@
-Oct 27 02:41:24 simplai-prod python3[718129]: 2026-10-27 02:41:24,666 INFO live.helius: HELIUS 4vw54B buy 5DVR39rX 0.0350 SOL @ 1.308e-07 (lat 0.9s)
 Oct 27 02:41:50 simplai-prod python3[718129]: 2026-10-27 02:41:50,457 INFO live.helius: HELIUS 4vw54B buy 5DVR39rX 0.2600 SOL @ 7.773e-08 (lat 0.9s)
 Oct 27 02:42:04 simplai-prod python3[718129]: 2026-10-27 02:42:04,174 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 5DVR39rX 0.149 SOL
 Oct 27 02:42:17 simplai-prod python3[718129]: 2026-10-27 02:42:17,093 INFO live.helius: HELIUS 4vw54B buy 5DVR39rX 0.0350 SOL @ 1.279e-07 (lat 1.0s)
@@ -298,3 +297,4 @@ Oct 27 09:48:56 simplai-prod python3[718129]: 2026-10-27 09:48:56,595 INFO live:
 Oct 27 09:53:56 simplai-prod python3[718129]: 2026-10-27 09:53:56,986 INFO live: latido: stream=True tokens_vistos=19916 seguidos=184 candidatos=0 abiertas=0 cerradas=1 st_requests=248 SOL=$100
 Oct 27 09:58:57 simplai-prod python3[718129]: 2026-10-27 09:58:57,295 INFO live: latido: stream=True tokens_vistos=19943 seguidos=48 candidatos=0 abiertas=0 cerradas=1 st_requests=249 SOL=$100
 Oct 27 10:03:57 simplai-prod python3[718129]: 2026-10-27 10:03:57,875 INFO live: latido: stream=True tokens_vistos=19987 seguidos=64 candidatos=0 abiertas=0 cerradas=1 st_requests=250 SOL=$100
+Oct 27 10:08:58 simplai-prod python3[718129]: 2026-10-27 10:08:58,238 INFO live: latido: stream=True tokens_vistos=20019 seguidos=47 candidatos=0 abiertas=0 cerradas=1 st_requests=251 SOL=$99
