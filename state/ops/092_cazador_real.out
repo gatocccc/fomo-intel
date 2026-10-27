@@ -1,0 +1,21 @@
+== 092_cazador_real 2026-10-27T00:47:03Z ==
+papel hasta ahora: 16 cerradas | ganadas 5 | ret medio -0.048 | pnl US$ -3.82
+   CAT tp 0.968 2.01 0.5049
+   CAT stop -0.489 1.0 0.5865
+   CAT stop -0.377 1.0 0.2941
+   STAKE stop -0.38 1.0 0.553
+   MUSK tiempo -0.049 1.0 0.2832
+   STAKE stop -0.409 1.2 0.3341
+   LGBTQ+S tiempo -0.27 1.0 0.3173
+   CAT stop -0.448 1.0 0.3928
+   ANGEL tiempo 0.295 1.36 0.3467
+   ELON tiempo -0.079 1.07 0.2735
+   Fomo Drake tp 1.021 2.06 0.3397
+   STAKE stop -0.439 1.0 0.3047
+saldo billetera: 1.245421126 SOL
+control: {'enabled': True, 'mode': 'real', 'size_usd': 5.0, 'max_open': 3, 'total_loss_usd': 30.0, 'daily_loss_usd': 30.0, 'threshold': 0.27, 'tp': 1.0, 'stop': 0.35, 'hold_s': 80, 'decide_at_s': 1.0, 'paper_slip': 0.03}
+2026-10-27 00:47:07,691 INFO sniper: conectado; modo real umbral 0.2700
+2026-10-27 00:47:24,898 INFO sniper: ENTRA STAKE score 0.398 vol_s1 US$6 px_s1 0.92 autor nypost
+2026-10-27 00:47:32,637 INFO sniper: SALE STAKE stop ret -73% pnl US$-3.71
+modo real | lag 0 | stats {'tweet': 12, 'meta_fail': 5, 'no_tweet': 33, 'sin_meta_a_tiempo': 5, 'entra': 1}
+== exit 0 ==
