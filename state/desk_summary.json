@@ -1,17 +1,17 @@
 {
- "now": 1793115879.3738139,
+ "now": 1793116188.4158878,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 100.74,
- "equity_sol": 0.9987,
+ "equity_usd": 101.31,
+ "equity_sol": 1.0034,
  "cash_sol": 0.3437,
- "positions_usd": 66.07,
- "sol_usd": 100.87,
- "mult": 1.017,
+ "positions_usd": 66.61,
+ "sol_usd": 100.96,
+ "mult": 1.022,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.004765892116456924,
-   "mult": 0.984,
-   "value_usd": 35.28
+   "last_usd": 0.004768265481892606,
+   "mult": 0.985,
+   "value_usd": 35.3
   },
   {
    "mint": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump",
@@ -54,7 +54,7 @@
    "tokens_initial": 10585.179986,
    "sol_in": 0.28389344,
    "sol_out": 0.0,
-   "peak_usd": 0.002942833003696507,
+   "peak_usd": 0.0029798040536029766,
    "stop": 0.3,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Meme de un año que revive con volumen real: 55% de su mcap en 24 h, 17,4K holders, +40% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.002908854479034947,
-   "mult": 1.076,
-   "value_usd": 30.79
+   "last_usd": 0.0029576950564298723,
+   "mult": 1.095,
+   "value_usd": 31.31
   }
  ],
  "equity": [
@@ -112,6 +112,10 @@
   [
    1793115694,
    100.69
+  ],
+  [
+   1793116003,
+   100.79
   ]
  ],
  "closed": [],
