@@ -1,12 +1,12 @@
 {
- "ts": 1793069701.9071069,
+ "ts": 1793070002.0791514,
  "mode": "real",
  "open": 0,
  "closed": 1,
  "wins": 0,
  "hit_rate": 0.0,
  "pnl_usd_total": -5.67,
- "pnl_usd_today": -5.67,
+ "pnl_usd_today": 0,
  "ret_per_usd": -0.599,
  "stop_reason": "trading_enabled=false",
  "positions": [],
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-26",
-  "seen": 288,
+  "seen": 292,
   "bought": 1,
   "by_reason": {
-   "freno": 267,
+   "freno": 271,
    "en_banco": 12,
    "precio_corrido": 4,
    "compra_fallida": 4,
@@ -45,11 +45,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.9833,
- "sol_usd": 100.18637993186763,
+ "sol_usd": 100.09035498272578,
  "stream_connected": true,
- "stream_msgs": 14460,
- "tokens_seen": 13897,
- "tokens_tracked": 72,
+ "stream_msgs": 14502,
+ "tokens_seen": 13936,
+ "tokens_tracked": 65,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -58,9 +58,9 @@
  "account_trades": 48,
  "helius": {
   "connected": true,
-  "notifications": 7873809,
-  "parsed": 609,
-  "skipped": 7870566,
+  "notifications": 7887839,
+  "parsed": 617,
+  "skipped": 7884578,
   "fast_creates": 7,
   "subs": 1,
   "errors": [
@@ -69,7 +69,7 @@
    "01:49:06 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 137,
+ "follow_buys_seen": 139,
  "guard": {
   "alerts": [
    "13:28:58 buy 7Bhuk8uz fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
@@ -86,7 +86,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 1
  },
- "st_requests": 166,
+ "st_requests": 167,
  "stream_errors": [
   "15:35:05 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 15:35:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
   "19:35:05 Connection to remote host was lost.",
@@ -97,7 +97,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 10,
-  "create": 14228,
+  "create": 14270,
   "sell": 102,
   "buy": 120
  },
