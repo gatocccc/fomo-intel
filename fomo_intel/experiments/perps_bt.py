@@ -267,7 +267,7 @@ def control(series, name, param, ex, lo, hi, real, reps=20):
     return stats(out)
 
 
-def xs_momentum(series, lo, hi, look_d, hold_d, reverse, rnd=None, k=3):
+def xs_momentum(series, lo, hi, look_d, hold_d, reverse, rnd=None, k=2):
     """Pares largo/corto entre memes: cada día a las 00 UTC, largo en los k mejores de los últimos look_d días y corto en los k peores
     (reverse=True al revés). Casi neutral al mercado. Retorno por día = (largos − cortos)/2 neto de costos y funding."""
     memes = {c: s for c, s in series.items() if s["meme"]}
