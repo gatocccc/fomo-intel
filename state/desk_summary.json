@@ -1,17 +1,17 @@
 {
- "now": 1793205602.0888975,
+ "now": 1793205878.0473044,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 119.44,
- "equity_sol": 1.1825,
+ "equity_usd": 122.51,
+ "equity_sol": 1.2148,
  "cash_sol": 0.032,
- "positions_usd": 116.22,
- "sol_usd": 101.01,
- "mult": 1.205,
+ "positions_usd": 119.29,
+ "sol_usd": 100.85,
+ "mult": 1.236,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,7 +24,7 @@
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
    "sol_out": 0.0,
-   "peak_usd": 0.007564435895055827,
+   "peak_usd": 0.007304021433807922,
    "stop": -0.05,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.006754065499403863,
-   "mult": 1.395,
-   "value_usd": 50.0
+   "last_usd": 0.007104244085337262,
+   "mult": 1.467,
+   "value_usd": 52.59
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0015600044458731247,
-   "mult": 1.202,
-   "value_usd": 36.85
+   "last_usd": 0.001563791574803729,
+   "mult": 1.205,
+   "value_usd": 36.94
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -84,7 +84,7 @@
    "tokens_initial": 6636.507512,
    "sol_in": 0.26682112,
    "sol_out": 0.0,
-   "peak_usd": 0.004746023135180909,
+   "peak_usd": 0.0045561093166071424,
    "stop": 0.3,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.004424140854069828,
-   "mult": 1.084,
-   "value_usd": 29.36
+   "last_usd": 0.004483225578081979,
+   "mult": 1.099,
+   "value_usd": 29.75
   }
  ],
  "equity": [
@@ -1310,6 +1310,10 @@
   [
    1793205508,
    120.72
+  ],
+  [
+   1793205724,
+   122.33
   ]
  ],
  "closed": [
