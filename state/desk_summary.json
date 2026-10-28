@@ -1,17 +1,17 @@
 {
- "now": 1793217294.9982467,
+ "now": 1793217601.479111,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 120.32,
- "equity_sol": 1.1728,
+ "equity_usd": 119.61,
+ "equity_sol": 1.1624,
  "cash_sol": 0.2046,
- "positions_usd": 99.33,
- "sol_usd": 102.59,
- "mult": 1.214,
+ "positions_usd": 98.56,
+ "sol_usd": 102.9,
+ "mult": 1.207,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.007960856628953725,
-   "mult": 1.644,
-   "value_usd": 58.94
+   "last_usd": 0.007871609394456382,
+   "mult": 1.626,
+   "value_usd": 58.28
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.0036474330962835634,
-   "mult": 0.894,
-   "value_usd": 24.21
+   "last_usd": 0.003682249777071299,
+   "mult": 0.902,
+   "value_usd": 24.44
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.014451731111745197,
-   "mult": 0.965,
-   "value_usd": 16.19
+   "last_usd": 0.014148378379053462,
+   "mult": 0.945,
+   "value_usd": 15.85
   }
  ],
  "equity": [
@@ -1466,6 +1466,10 @@
   [
    1793217111,
    123.15
+  ],
+  [
+   1793217417,
+   119.19
   ]
  ],
  "closed": [
@@ -1800,7 +1804,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793216763.4460785,
+  "last_run": 1793217364.5495336,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
@@ -1811,7 +1815,7 @@
   },
   "last_note": null,
   "trad_status": null,
-  "sol_ch24h": 1.2,
-  "sol_vs_ma20": -0.0276
+  "sol_ch24h": 1.6,
+  "sol_vs_ma20": -0.0238
  }
 }
