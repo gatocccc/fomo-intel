@@ -1,17 +1,17 @@
 {
- "now": 1793225996.7884717,
+ "now": 1793226303.0351574,
  "start_ts": 1793203599.7169404,
  "start_usd": 200.84,
  "start_sol": 1.99,
  "goal_usd": 401.68,
  "days": 30,
  "day": 1,
- "equity_usd": 201.47,
- "equity_sol": 1.9687,
+ "equity_usd": 201.89,
+ "equity_sol": 1.9746,
  "cash_sol": 0.0427,
- "positions_usd": 197.1,
- "sol_usd": 102.33,
- "mult": 1.003,
+ "positions_usd": 197.52,
+ "sol_usd": 102.24,
+ "mult": 1.005,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.008280256297428708,
-   "mult": 1.102,
-   "value_usd": 73.13
+   "last_usd": 0.00835341402515441,
+   "mult": 1.112,
+   "value_usd": 73.77
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "52K holders, top 10 hold 11%, real volume at 34% of market cap per day, 20% below weekly high. Clean anti-rug check.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.013778787701319932,
-   "mult": 0.952,
-   "value_usd": 58.22
+   "last_usd": 0.013806416222335367,
+   "mult": 0.954,
+   "value_usd": 58.34
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-agresivo-20261028-2057",
-   "last_usd": 0.0035825446673045424,
-   "mult": 0.958,
-   "value_usd": 65.74
+   "last_usd": 0.0035640973038882336,
+   "mult": 0.953,
+   "value_usd": 65.41
   }
  ],
  "equity": [
@@ -406,6 +406,10 @@
   [
    1793225966,
    204.11
+  ],
+  [
+   1793226272,
+   199.67
   ]
  ],
  "closed": [
