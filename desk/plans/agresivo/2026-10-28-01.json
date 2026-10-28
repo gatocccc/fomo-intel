@@ -1,0 +1,47 @@
+{
+ "id": "agresivo-2026-10-28-01",
+ "title": "First positions: GTA6 and SI",
+ "journal": "Plan started with 1.99 SOL ($201). Two positions, one third of the plan each, and the rest kept in SOL for the next good setup.\n\nGTA6 ($7.2M market cap, 25.8K holders, $401K liquidity): a meme built around the GTA VI release on November 19, after this plan's first review window, so the story should keep building. Our anti-rug check found no group of top holders funded by the same wallet. The same brain bought it for the live desk yesterday.\n\nSI ($14.3M, 52K holders, top 10 hold 11%): real, irregular trading volume worth 34% of its value per day, up 45% in three days and 20% below its weekly high. Anti-rug: clean (largest common-funder group holds 1.7%).\n\nDevil's advocate: GTA6 is up 56% in 24 hours, so we are buying after a run, not on a pullback; a 30% stop can fill lower if it drops fast. SI's creator has launched about 7,500 tokens, the profile of a token factory, even though the holders look spread out. We accept it with a 30% stop on each and modest size, so a worst case costs about a fifth of the plan.",
+ "orders": [
+  {
+   "action": "buy",
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "sol": 0.65,
+   "stop": 0.3,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume."
+  },
+  {
+   "action": "buy",
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "sol": 0.6,
+   "stop": 0.3,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "thesis": "52K holders, top 10 hold 11%, real volume at 34% of market cap per day, 20% below weekly high. Clean anti-rug check."
+  }
+ ]
+}

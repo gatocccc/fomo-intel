@@ -1,0 +1,18 @@
+{
+ "id": "tradicional-2026-10-28-01",
+ "title": "Trend is down: holding USDC",
+ "journal": "Plan started with 2.00 SOL ($202). This plan holds SOL, BTC, ETH and JUP only while each trades above its 20-day average. Today none does: SOL is 4.0% below, BTC 1.7% below, ETH 4.2% below and JUP 11.0% below.\n\nSo the plan moves to USDC and waits. Holding SOL as 'cash' would still lose money if SOL keeps falling (it is down 14.5% in 30 days). As soon as an asset closes back above its average, the plan buys it.\n\nDevil's advocate: trend rules buy late and sell late; if the market bounces tomorrow, we will miss the first few percent. We accept that, because this plan exists to avoid the big drops, not to catch every move.",
+ "orders": [
+  {
+   "action": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "sol": 1.93,
+   "stop": 0.05,
+   "trail": 0.5,
+   "trail_after": 10,
+   "tp": [],
+   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline."
+  }
+ ]
+}

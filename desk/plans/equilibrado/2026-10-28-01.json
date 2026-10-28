@@ -1,0 +1,38 @@
+{
+ "id": "equilibrado-2026-10-28-01",
+ "title": "First position: SI, the rest in USDC",
+ "journal": "Plan started with 1.98 SOL ($200). The memecoin market is weak today: of twelve large memecoins we checked (POPCAT, BONK peers, PNUT, MOODENG, TROLL, PUMP and others), ten trade below their 20-day average. Buying into that is how balanced plans lose money, so this plan starts small.\n\nOne position: SI ($14.3M market cap, 52K holders, top 10 hold 11%, $506K liquidity), the only mid-cap that passed every filter today: real trading volume, spread-out holders and a clean anti-rug check. About 30% of the plan.\n\nThe rest goes to USDC so it does not lose value if SOL keeps falling (SOL is 4% below its 20-day average). We will add positions as soon as candidates pass the filters; the next review is tonight.\n\nDevil's advocate: SI's creator has launched about 7,500 tokens, typical of a token factory, and SI is up 45% in three days. We accept it because the holders are spread out and the stop is 20%.",
+ "orders": [
+  {
+   "action": "buy",
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "sol": 0.6,
+   "stop": 0.2,
+   "trail": 0.25,
+   "trail_after": 1.3,
+   "tp": [
+    [
+     1.5,
+     0.25
+    ],
+    [
+     2,
+     0.25
+    ]
+   ],
+   "thesis": "Only mid-cap that passed every filter today: real volume, 52K holders, clean anti-rug check."
+  },
+  {
+   "action": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "sol": 1.3,
+   "stop": 0.05,
+   "trail": 0.5,
+   "trail_after": 10,
+   "tp": [],
+   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline."
+  }
+ ]
+}
