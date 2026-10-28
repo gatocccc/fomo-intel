@@ -24,6 +24,7 @@ if [ -n "$REMOTE" ] && [ "$LOCAL" != "$REMOTE" ]; then
   if echo "$CHANGED" | grep -Eq '^(fomo_intel/live/|fomo_intel/backtest/rules.py|requirements)'; then
     systemctl restart fomo-live && echo "$(date -u +%FT%TZ) fomo-live reiniciado" >> logs/sync.log
   fi
+  if echo "$CHANGED" | grep -q '^fomo_intel/app/'; then systemctl restart fomo-app 2>/dev/null && echo "$(date -u +%FT%TZ) fomo-app reiniciado" >> logs/sync.log; fi
   if echo "$CHANGED" | grep -q '^fomo_intel/live/control_server.py'; then systemctl restart fomo-control 2>/dev/null || true; fi
   if echo "$CHANGED" | grep -Eq '^fomo_intel/(desk/|live/executor.py|live/wallet.py|live/signals.py)'; then systemctl restart fomo-desk 2>/dev/null && echo "$(date -u +%FT%TZ) fomo-desk reiniciado" >> logs/sync.log; fi
 fi
@@ -46,6 +47,10 @@ MIN=$(date +%M); if [ $((10#$MIN % 10)) -eq 0 ]; then set -a; . ./.env; set +a; 
 # portada = mesa autónoma (desde 27/10); el bot anterior queda en /bot.html
 [ -d /var/www/fomo ] && { cmp -s dashboard/desk.html /var/www/fomo/index.html || cp dashboard/desk.html /var/www/fomo/index.html; cmp -s dashboard/live.html /var/www/fomo/bot.html || cp dashboard/live.html /var/www/fomo/bot.html; } 2>/dev/null || true
 
+# ---- piloto automático: landing y panel (cada minuto) + certificado cuando el DNS esté listo ----
+[ -d /var/www/autopilot ] && { cmp -s dashboard/autopilot/index.html /var/www/autopilot/index.html || cp dashboard/autopilot/index.html /var/www/autopilot/index.html; cmp -s dashboard/autopilot/admin.html /var/www/autopilot/admin/index.html || cp dashboard/autopilot/admin.html /var/www/autopilot/admin/index.html; } 2>/dev/null || true
+MIN=$(date +%M); [ $((10#$MIN % 5)) -eq 2 ] && bash scripts/app_cert.sh 2>/dev/null || true
+
 # ---- 3) publicar estado cada 5 min ----
 MIN=$(date +%M); [ "${FORCE_STATE:-0}" = "1" ] || [ $((10#$MIN % 5)) -eq 0 ] || exit 0
 if [ ! -d "$STATE_WT/.git" ]; then
@@ -56,6 +61,11 @@ if [ ! -d "$STATE_WT/.git" ]; then
 fi
 rm -rf "$STATE_WT"/state "$STATE_WT"/logs; mkdir -p "$STATE_WT/state" "$STATE_WT/logs"
 cp state/*.json "$STATE_WT/state/" 2>/dev/null
+[ -f state/app/aplicaciones.jsonl ] && mkdir -p "$STATE_WT/state/app" && python3 -c "
+import json,sys
+for l in open('state/app/aplicaciones.jsonl'):
+    d=json.loads(l); d.pop('ip',None); d.pop('email',None); print(json.dumps(d,ensure_ascii=False))
+" > "$STATE_WT/state/app/aplicaciones.jsonl" 2>/dev/null
 for f in trades closed signals outcomes; do [ -f state/$f.jsonl ] && tail -n 1500 state/$f.jsonl > "$STATE_WT/state/$f.jsonl"; done
 cp -r state/ops "$STATE_WT/state/" 2>/dev/null
 [ -f state/STOP ] && cp state/STOP "$STATE_WT/state/"

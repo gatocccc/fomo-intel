@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopilot · Panel</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--mist:#E8EEEF;--paper:#F6F8F8;--pond:#123236;--reed:#4A6E6D;--line:#C7D3D4;--go:#2E9B5F;--stop:#CF4A3A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--mist);color:var(--pond);font:15px/1.5 "Atkinson Hyperlegible",system-ui,sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+h1{font:800 34px/1 "Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 80;margin:0 0 4px}
+h2{font:700 20px/1.2 "Bricolage Grotesque",sans-serif;margin:32px 0 12px}
+.sub{color:var(--reed);margin:0 0 24px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.kpis div{background:var(--paper);border-radius:16px;padding:16px}
+.kpis span{display:block;color:var(--reed);font-size:13.5px}
+.kpis strong{font:800 30px/1.15 "Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 80;font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;background:var(--paper);border-radius:16px;overflow:hidden}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--pond);color:var(--paper);font-weight:700}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+code{font-size:12.5px;word-break:break-all}
+.tag{display:inline-block;padding:2px 8px;border-radius:99px;background:var(--mist);font-size:12.5px}
+.tag.h{background:var(--go);color:#fff}
+.scroll{overflow-x:auto}
+@media (max-width:700px){.kpis{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Nonco Autopilot · Panel</h1>
+  <p class="sub" id="upd">Cargando…</p>
+  <div class="kpis">
+    <div><span>Aplicaciones</span><strong id="k-ap">—</strong></div>
+    <div><span>Últimas 24 h</span><strong id="k-24">—</strong></div>
+    <div><span>Holders (verificados / a verificar)</span><strong id="k-h">—</strong></div>
+    <div><span>Capital anotado</span><strong id="k-m">—</strong></div>
+    <div><span>Billeteras activas</span><strong id="k-act">—</strong></div>
+    <div><span>Capital bajo el bot</span><strong id="k-cap">—</strong></div>
+    <div><span>Comisiones generadas</span><strong id="k-fee">—</strong></div>
+    <div><span>Comisión por op. / éxito externos</span><strong id="k-fees">—</strong></div>
+  </div>
+
+  <h2>Billeteras de los planes</h2>
+  <div class="scroll"><table><thead><tr><th>Plan</th><th>Dirección</th><th>Saldo (SOL)</th></tr></thead><tbody id="w"></tbody></table></div>
+
+  <h2>Por plan</h2>
+  <div class="scroll"><table><thead><tr><th>Plan</th><th>Aplicaciones</th><th>Capital anotado</th></tr></thead><tbody id="pp"></tbody></table></div>
+
+  <h2>Aplicaciones</h2>
+  <div class="scroll"><table><thead><tr><th>Fecha</th><th>Nombre</th><th>Contacto</th><th>Tipo</th><th>Monto</th><th>Objetivo</th><th>Plan</th><th>Freno</th><th>Billetera Solana</th></tr></thead><tbody id="ap"></tbody></table></div>
+</div>
+<script>
+const usd = v => "US$" + Number(v || 0).toLocaleString("es-AR", {maximumFractionDigits: 0});
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function load(){
+  fetch("/api/admin/resumen").then(r => r.json()).then(d => {
+    document.getElementById("upd").textContent = "Actualizado " + new Date().toLocaleTimeString("es-AR") + " · se refresca cada minuto";
+    k("k-ap", d.aplicaciones); k("k-24", d.ultimas_24h); k("k-h", `${d.holders} / ${d.holders_a_verificar}`);
+    k("k-m", usd(d.monto_total_usd)); k("k-act", d.usuarios_activos); k("k-cap", usd(d.capital_bajo_bot_usd));
+    k("k-fee", usd(d.comisiones_usd)); k("k-fees", `${d.fees.por_operacion}% / ${d.fees.exito_externos}%`);
+    document.getElementById("w").innerHTML = Object.entries(d.billeteras_planes).map(([p, w]) =>
+      `<tr><td>${esc(p)}</td><td><code>${esc(w.direccion)}</code></td><td class="n">${w.sol == null ? "—" : w.sol.toFixed(4)}</td></tr>`).join("") || `<tr><td colspan="3">Todavía no se generaron.</td></tr>`;
+    document.getElementById("pp").innerHTML = Object.entries(d.por_plan).map(([p, x]) =>
+      `<tr><td>${esc(p)}</td><td class="n">${x.aplicaciones}</td><td class="n">${usd(x.monto_usd)}</td></tr>`).join("") || `<tr><td colspan="3">Sin aplicaciones.</td></tr>`;
+    document.getElementById("ap").innerHTML = d.detalle.map(a => {
+      const h = a.holder || {}; const tipo = h.estado === "holder" ? `<span class="tag h">holder · ${h.patos} patos</span>` : h.estado ? `<span class="tag">${esc(h.estado)}</span>` : `<span class="tag">externo</span>`;
+      return `<tr><td>${new Date(a.ts * 1000).toLocaleString("es-AR")}</td><td>${esc(a.nombre)}</td><td>${a.telegram ? "@" + esc(a.telegram) : ""}<br>${esc(a.email)}</td><td>${tipo}</td><td class="n">${usd(a.monto_usd)}</td><td>x${esc(a.objetivo)} en ${esc(a.dias)} d</td><td>${esc(a.plan || "—")}</td><td class="n">${esc(a.freno_pct)}%</td><td><code>${esc(a.billetera_solana)}</code></td></tr>`;
+    }).join("") || `<tr><td colspan="9">Sin aplicaciones todavía.</td></tr>`;
+  }).catch(() => document.getElementById("upd").textContent = "No se pudo cargar el panel.");
+}
+const k = (id, v) => document.getElementById(id).textContent = v;
+load(); setInterval(load, 60000);
+</script>
+</body>
+</html>

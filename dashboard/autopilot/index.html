@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nonco Autopilot</title>
+<meta name="description" content="Un bot que opera por vos y te dice la verdad sobre tus chances. De la comunidad NoncoDucks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#E8EEEF; --paper:#F6F8F8; --pond:#123236; --reed:#4A6E6D; --line:#C7D3D4;
+  --bill:#F5A524; --go:#2E9B5F; --wait:#D99A1E; --stop:#CF4A3A; --idle:#8C9A9C;
+  --display:"Bricolage Grotesque", system-ui, sans-serif; --body:"Atkinson Hyperlegible", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--mist);color:var(--pond);font:17px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--bill);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.mark{display:flex;align-items:center;gap:10px;font:700 20px/1 var(--display);font-variation-settings:"wdth" 85;text-decoration:none}
+.mark svg{width:30px;height:30px}
+.btn{display:inline-block;font:700 16px/1 var(--body);padding:14px 22px;border-radius:999px;border:2px solid var(--pond);background:var(--pond);color:var(--paper);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--pond)}
+.btn:hover{filter:brightness(1.15)}
+.btn.ghost:hover{background:var(--pond);color:var(--paper);filter:none}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:start;padding:32px 0 72px}
+h1{font:800 clamp(40px,6.2vw,76px)/.95 var(--display);font-variation-settings:"wdth" 78;letter-spacing:-.02em;margin:0 0 24px}
+.lede{font-size:19px;max-width:30em;color:var(--reed);margin:0 0 32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+
+/* el semáforo */
+.lab{background:var(--paper);border-radius:28px;padding:28px;box-shadow:0 1px 0 var(--line), 0 24px 48px -32px rgba(18,50,54,.45)}
+.lab h2{font:700 22px/1.2 var(--display);margin:0 0 4px}
+.lab p.sub{margin:0 0 20px;color:var(--reed);font-size:15px}
+.knobs{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
+.knob label{display:block;font-size:14px;color:var(--reed);margin-bottom:6px}
+.knob output{display:block;font:800 34px/1 var(--display);font-variation-settings:"wdth" 80;margin-bottom:8px;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--pond)}
+.plans{display:grid;gap:10px}
+.plan{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;padding:14px;border-radius:18px;border:2px solid transparent;background:var(--mist);cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%}
+.plan[aria-pressed=true]{border-color:var(--pond);background:#fff}
+.light{width:44px;height:44px;border-radius:50%;background:var(--idle);box-shadow:inset 0 -4px 0 rgba(0,0,0,.12)}
+.light.verde{background:var(--go);box-shadow:0 0 0 6px rgba(46,155,95,.16), inset 0 -4px 0 rgba(0,0,0,.12)}
+.light.amarillo{background:var(--wait);box-shadow:0 0 0 6px rgba(217,154,30,.18), inset 0 -4px 0 rgba(0,0,0,.12)}
+.light.rojo{background:var(--stop);box-shadow:0 0 0 6px rgba(207,74,58,.16), inset 0 -4px 0 rgba(0,0,0,.12)}
+.plan b{display:block;font:700 17px/1.2 var(--display)}
+.plan small{display:block;color:var(--reed);font-size:13.5px}
+.plan .pct{font:800 30px/1 var(--display);font-variation-settings:"wdth" 80;text-align:right;font-variant-numeric:tabular-nums}
+.plan .pct small{font:400 12.5px/1.3 var(--body);color:var(--reed)}
+.note{font-size:13.5px;color:var(--reed);margin:16px 0 0}
+
+/* secciones */
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2.big{font:800 clamp(30px,4vw,46px)/1.02 var(--display);font-variation-settings:"wdth" 82;letter-spacing:-.01em;margin:0 0 16px;max-width:18em}
+.intro{color:var(--reed);max-width:36em;margin:0 0 40px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.grid4 h3{font:700 19px/1.2 var(--display);margin:0 0 8px}
+.grid4 p{margin:0;font-size:15.5px;color:var(--reed)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.facts{list-style:none;padding:0;margin:0}
+.facts li{padding:14px 0;border-bottom:1px solid var(--line)}
+.facts li strong{display:block;font-family:var(--display)}
+table.price{width:100%;border-collapse:collapse;background:var(--paper);border-radius:20px;overflow:hidden}
+.price th,.price td{text-align:left;padding:16px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+.price thead th{font:700 16px/1.2 var(--display);background:var(--pond);color:var(--paper)}
+.price tr:last-child td{border-bottom:0}
+.live{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:28px}
+.live div{background:var(--paper);border-radius:20px;padding:20px}
+.live span{display:block;color:var(--reed);font-size:14px}
+.live strong{font:800 36px/1.1 var(--display);font-variation-settings:"wdth" 80;font-variant-numeric:tabular-nums}
+.pos{list-style:none;margin:0;padding:0}
+.pos li{display:grid;grid-template-columns:110px 80px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:15px}
+.pos li b{font-family:var(--display)}
+.risks{columns:2;column-gap:48px}
+.risks p{break-inside:avoid;margin:0 0 18px}
+
+/* formulario */
+form{background:var(--paper);border-radius:28px;padding:32px;display:grid;gap:28px}
+fieldset{border:0;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+legend{font:700 21px/1.2 var(--display);margin-bottom:12px;padding:0}
+.f label{display:block;font-size:14px;color:var(--reed);margin-bottom:6px}
+.f input,.f select{width:100%;font:inherit;padding:12px 14px;border:2px solid var(--line);border-radius:12px;background:#fff;color:var(--pond)}
+.f input:focus,.f select:focus{border-color:var(--pond);outline:none}
+.f.wide{grid-column:1/-1}
+.hint{font-size:13.5px;color:var(--reed);margin:6px 0 0}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:15px}
+.check input{width:22px;height:22px;margin-top:2px;accent-color:var(--pond)}
+.duck{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.status{font-size:15px}
+.status.ok{color:var(--go)} .status.err{color:var(--stop)}
+#res{display:none;background:var(--pond);color:var(--paper);border-radius:28px;padding:32px}
+#res h3{font:800 32px/1.05 var(--display);margin:0 0 8px}
+footer{padding:40px 0 60px;color:var(--reed);font-size:14px;border-top:1px solid var(--line)}
+
+@media (max-width:900px){
+  .hero,.split{grid-template-columns:1fr}
+  .grid4{grid-template-columns:1fr 1fr}
+  .live{grid-template-columns:1fr}
+  .risks{columns:1}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .grid4,fieldset,.knobs{grid-template-columns:1fr}
+  .lab,form{padding:20px;border-radius:22px}
+  .pos li{grid-template-columns:90px 60px 1fr}
+  section{padding:56px 0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="mark" href="#" aria-label="Nonco Autopilot, inicio">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="15" r="10" fill="#123236"/><path d="M21 13c4 0 8 1 9 3-1 2-5 3-9 3z" fill="#F5A524"/><circle cx="15" cy="12" r="2" fill="#F6F8F8"/></svg>
+    Nonco Autopilot
+  </a>
+  <a class="btn" href="#aplicar">Aplicar</a>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>Un bot que opera por vos y te dice la verdad sobre tus chances.</h1>
+    <p class="lede">Cargás tu billetera, elegís cuánto querés ganar y en cuánto tiempo. El bot decide, compra, vende y se cuida de los rugs. Vos mirás cómo lo hace, operación por operación.</p>
+    <div class="cta"><a class="btn" href="#aplicar">Aplicar a la beta</a><a class="btn ghost" href="#mesa">Ver la mesa en vivo</a></div>
+  </div>
+
+  <div class="lab" aria-labelledby="lab-t">
+    <h2 id="lab-t">¿Cuánto querés ganar?</h2>
+    <p class="sub">Mové las perillas. Cada plan te muestra la probabilidad de llegar y la de perder la mitad.</p>
+    <div class="knobs">
+      <div class="knob"><label for="obj">Objetivo</label><output id="obj-o" for="obj">x1,5</output><input id="obj" type="range" min="1.1" max="10" step="0.1" value="1.5"></div>
+      <div class="knob"><label for="dias">Plazo</label><output id="dias-o" for="dias">30 días</output><input id="dias" type="range" min="7" max="90" step="1" value="30"></div>
+    </div>
+    <div class="plans" id="plans" role="group" aria-label="Planes"></div>
+    <p class="note" id="lab-note">Calculando…</p>
+  </div>
+</div>
+
+<section aria-labelledby="hace">
+  <h2 class="big" id="hace">Lo que hace mientras vos no mirás</h2>
+  <p class="intro">Perdemos plata por las mismas razones: nos enamoramos del token, no ponemos el stop o lo corremos, y no tenemos tiempo de averiguar quién está detrás. El bot no tiene ninguno de esos problemas.</p>
+  <div class="grid4">
+    <div><h3>Revisa quién está detrás</h3><p>Antes de comprar mira quién fondeó a los mayores holders, si el creador es una fábrica de tokens, si hay bundlers y si se puede vender. Si huele a rug, no entra.</p></div>
+    <div><h3>Mueve los stops solo</h3><p>Cuando una posición gana, sube el stop para asegurar la ganancia. Si el creador vende o la liquidez se va, sale sin esperar.</p></div>
+    <div><h3>No deja la plata dormida</h3><p>Si una posición se queda quieta y aparece algo mejor, rota. Si no hay nada bueno, se queda en efectivo y te explica por qué.</p></div>
+    <div><h3>Aprende de cada error</h3><p>Cada operación queda registrada con lo que sabía al entrar. Cada pérdida tiene una causa y un costo, y las reglas nuevas se prueban antes de tocar tu plata.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="seg">
+  <div class="split">
+    <div>
+      <h2 class="big" id="seg">Tu plata no sale de tu billetera</h2>
+      <p class="intro">El bot tiene permiso para comprar y vender. Nada más. No puede retirar ni mandar fondos a otra dirección, y vos podés sacar tu plata o apagarlo cuando quieras.</p>
+    </div>
+    <ul class="facts">
+      <li><strong>Solo swaps</strong>Lo que compra vuelve siempre a tu billetera.</li>
+      <li><strong>Tu freno</strong>Elegís cuánto estás dispuesto a perder. Si llega, pasa todo a USDC y se pausa.</li>
+      <li><strong>Botón de pánico</strong>Vende todo en el momento, desde tu pantalla.</li>
+      <li><strong>Todo a la vista</strong>Cada compra y cada venta, con su razonamiento, en tu panel y por Telegram.</li>
+    </ul>
+  </div>
+</section>
+
+<section aria-labelledby="precio">
+  <h2 class="big" id="precio">Lo que paga cada uno</h2>
+  <p class="intro">La comisión por operación sostiene la infraestructura y el mantenimiento. Los holders de NoncoDucks no pagan nada sobre lo que ganan.</p>
+  <table class="price">
+    <thead><tr><th scope="col"></th><th scope="col">Holder de NoncoDucks</th><th scope="col">Sin patos</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Por operación</th><td><span class="fee-trade">0,5%</span></td><td><span class="fee-trade">0,5%</span></td></tr>
+      <tr><th scope="row">Sobre lo ganado</th><td>Nada</td><td><span id="fee-succ">10%</span> de cada operación ganada, se cumpla o no tu objetivo</td></tr>
+      <tr><th scope="row">Cupo</th><td>Prioridad</td><td>Lista de espera</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="mesa" aria-labelledby="mesa-t">
+  <h2 class="big" id="mesa-t">La mesa, en vivo</h2>
+  <p class="intro">El mismo cerebro opera su propia billetera desde el 27/10, a la vista de todos. Ganadas y perdidas.</p>
+  <div class="live">
+    <div><span>Arrancó con</span><strong id="l-ini">—</strong></div>
+    <div><span>Hoy tiene</span><strong id="l-eq">—</strong></div>
+    <div><span>Operaciones cerradas</span><strong id="l-ops">—</strong></div>
+  </div>
+  <ul class="pos" id="l-pos"></ul>
+</section>
+
+<section aria-labelledby="riesgos">
+  <h2 class="big" id="riesgos">Lo que tenés que saber antes de entrar</h2>
+  <div class="risks">
+    <p><strong>Podés perder.</strong> Las memecoins se mueven fuerte para los dos lados. El bot no garantiza ganancias y nadie honesto puede hacerlo.</p>
+    <p><strong>Estamos aprendiendo.</strong> El bot es nuevo y evoluciona todas las semanas. Quien entra temprano entra a un sistema en aprendizaje, con ese riesgo.</p>
+    <p><strong>Los stops pueden saltar.</strong> En una caída brusca, una venta programada a −30% puede ejecutarse peor. Por eso el bot reparte el riesgo en varias posiciones.</p>
+    <p><strong>Las chances son estimaciones.</strong> Salen de simular miles de caminos con los resultados del bot. Mientras haya pocas operaciones reales, son preliminares y lo vas a ver escrito.</p>
+  </div>
+</section>
+
+<section id="aplicar" aria-labelledby="ap-t">
+  <h2 class="big" id="ap-t">Aplicar a la beta</h2>
+  <p class="intro">Los cupos son limitados para que el bot no compita contra sus propios usuarios. Los holders entran primero. Te avisamos por Telegram o email cuando se abra tu lugar.</p>
+
+  <form id="f" novalidate>
+    <fieldset>
+      <legend>Tu objetivo</legend>
+      <div class="f"><label for="monto">Cuánto pensás cargar (US$)</label><input id="monto" name="monto_usd" type="number" min="20" step="10" value="300" inputmode="decimal" required></div>
+      <div class="f"><label for="plan">Plan</label><select id="plan" name="plan"><option value="">Elegilo después</option><option value="agresivo">Agresivo</option><option value="equilibrado">Equilibrado</option><option value="tradicional">Tradicional</option></select></div>
+      <div class="f"><label for="fobj">Objetivo</label><input id="fobj" name="objetivo" type="number" min="1.05" step="0.05" value="1.5"><p class="hint">Multiplicador: 2 es duplicar.</p></div>
+      <div class="f"><label for="fdias">Plazo (días)</label><input id="fdias" name="dias" type="number" min="7" max="90" value="30"></div>
+      <div class="f"><label for="freno">Tu freno: si pierdo este %, apagá todo</label><input id="freno" name="freno_pct" type="number" min="10" max="90" step="5" value="30"></div>
+      <div class="f"><label for="llegar">Al llegar al objetivo</label><select id="llegar" name="al_llegar"><option value="asegurar">Pasar todo a USDC</option><option value="retirar_ganancia">Asegurar solo la ganancia</option><option value="seguir">Seguir operando</option></select></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Tu contacto</legend>
+      <div class="f"><label for="nombre">Nombre</label><input id="nombre" name="nombre" autocomplete="name" required></div>
+      <div class="f"><label for="tg">Usuario de Telegram</label><input id="tg" name="telegram" placeholder="@usuario"></div>
+      <div class="f"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
+      <div class="f"><label for="sol">Tu billetera de Solana (opcional)</label><input id="sol" name="billetera_solana" autocomplete="off" spellcheck="false"><p class="hint">Si ya tenés una. Si no, te creamos una al abrir tu cupo.</p></div>
+    </fieldset>
+
+    <fieldset>
+      <legend>¿Tenés patos?</legend>
+      <div class="f wide">
+        <div class="duck"><button class="btn ghost" type="button" id="eth-btn">Verificar con mi billetera de Ethereum</button><span class="status" id="eth-st" role="status"></span></div>
+        <p class="hint">Firmás un mensaje desde MetaMask o Rabby. No mueve fondos ni cuesta gas. Cada pato habilita una sola cuenta.</p>
+      </div>
+    </fieldset>
+
+    <label class="check"><input type="checkbox" id="riesgo" name="acepta_riesgos"> <span>Entiendo que puedo perder parte o todo lo que cargue, que el bot está en aprendizaje y que nadie me garantiza ganancias.</span></label>
+    <div><button class="btn" type="submit" id="send">Enviar aplicación</button> <span class="status" id="f-st" role="status"></span></div>
+  </form>
+
+  <div id="res" role="status" aria-live="polite"><h3>Aplicación enviada</h3><p id="res-p"></p></div>
+</section>
+
+<footer>Nonco Autopilot es una herramienta de la comunidad NoncoDucks. No es asesoramiento financiero. Operar criptoactivos implica riesgo de pérdida total.</footer>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const fmtX = v => "x" + Number(v).toFixed(v >= 10 ? 0 : 1).replace(".", ",");
+const pct = v => Math.round(v * 100) + "%";
+const usd = v => v == null ? "—" : "US$" + Number(v).toLocaleString("es-AR", {maximumFractionDigits: 0});
+let selected = "";
+
+function renderPlans(d){
+  const box = $("#plans"); box.innerHTML = "";
+  let prelim = false;
+  d.planes.forEach(p => {
+    prelim = prelim || p.preliminar;
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "plan"; b.setAttribute("aria-pressed", selected === p.plan);
+    const sug = p.color === "rojo" && p.objetivo_sugerido ? ` · con este plan, ${fmtX(p.objetivo_sugerido)} sale mejor` : "";
+    b.innerHTML = `<span class="light ${p.color}" aria-hidden="true"></span>
+      <span><b>${p.nombre}</b><small>${p.mercados}</small><small>Perder la mitad: ${pct(p.prob_perder_mitad)} · lo más probable: ${fmtX(p.mediana)}${sug}</small></span>
+      <span class="pct">${pct(p.prob_objetivo)}<small>de llegar</small></span>`;
+    b.setAttribute("aria-label", `${p.nombre}: ${pct(p.prob_objetivo)} de llegar, semáforo ${p.color}, ${pct(p.prob_perder_mitad)} de perder la mitad`);
+    b.onclick = () => { selected = p.plan; $("#plan").value = p.plan; renderPlans(d); };
+    box.appendChild(b);
+  });
+  const n = d.planes.map(p => p.ops_reales).reduce((a, b) => a + b, 0);
+  $("#lab-note").textContent = prelim
+    ? `Estimación preliminar: ${n} operaciones reales hasta hoy más supuestos iniciales. Se recalcula sola a medida que el bot opera.`
+    : `Calculado con ${n} operaciones reales.`;
+}
+
+let t;
+function update(){
+  const o = +$("#obj").value, d = +$("#dias").value;
+  $("#obj-o").textContent = fmtX(o); $("#dias-o").textContent = d + " días";
+  $("#fobj").value = o; $("#fdias").value = d;
+  clearTimeout(t);
+  t = setTimeout(() => fetch(`/api/semaforo?objetivo=${o}&dias=${d}`).then(r => r.json()).then(renderPlans)
+    .catch(() => $("#lab-note").textContent = "No pudimos calcular ahora. Probá en un rato."), 180);
+}
+$("#obj").oninput = update; $("#dias").oninput = update; update();
+
+fetch("/api/config").then(r => r.json()).then(c => {
+  document.querySelectorAll(".fee-trade").forEach(e => e.textContent = String(c.fees.por_operacion).replace(".", ",") + "%");
+  $("#fee-succ").textContent = c.fees.exito_externos + "%";
+}).catch(() => {});
+
+fetch("/api/publico").then(r => r.json()).then(p => {
+  $("#l-ini").textContent = usd(p.inicio_usd);
+  $("#l-eq").textContent = p.patrimonio_usd ? `${usd(p.patrimonio_usd)} (${fmtX(p.multiplo)})` : "—";
+  $("#l-ops").textContent = p.operaciones_cerradas != null ? `${p.operaciones_cerradas} · ${p.ganadas || 0} ganadas` : "—";
+  const ul = $("#l-pos");
+  (p.posiciones || []).forEach(x => { const li = document.createElement("li"); li.innerHTML = `<b></b><span></span><span></span>`;
+    li.children[0].textContent = x.token; li.children[1].textContent = fmtX(x.multiplo || 1) + " abierta"; li.children[2].textContent = x.tesis || ""; ul.appendChild(li); });
+  (p.ultimas || []).forEach(x => { const li = document.createElement("li"); li.innerHTML = `<b></b><span></span><span></span>`;
+    li.children[0].textContent = x.token; li.children[1].textContent = (x.resultado > 0 ? "+" : "") + Math.round(x.resultado * 100) + "%"; li.children[2].textContent = x.motivo || ""; ul.appendChild(li); });
+}).catch(() => {});
+
+let eth = null;
+$("#eth-btn").onclick = async () => {
+  const st = $("#eth-st"); st.className = "status";
+  if (!window.ethereum) { st.className = "status err"; st.textContent = "Abrí esta página desde el navegador de MetaMask o Rabby, o con la extensión instalada."; return; }
+  try {
+    st.textContent = "Esperando tu billetera…";
+    const [addr] = await window.ethereum.request({method: "eth_requestAccounts"});
+    const m = await fetch(`/api/holder/mensaje?eth=${addr}`).then(r => r.json());
+    const sig = await window.ethereum.request({method: "personal_sign", params: [m.mensaje, addr]});
+    eth = {eth: addr, eth_firma: sig, eth_mensaje: m.mensaje};
+    st.className = "status ok"; st.textContent = `Billetera ${addr.slice(0, 6)}…${addr.slice(-4)} firmada. Revisamos tus patos al enviar.`;
+  } catch (e) { st.className = "status err"; st.textContent = "No se firmó. Podés intentar de nuevo o seguir sin verificar."; }
+};
+
+$("#f").onsubmit = async ev => {
+  ev.preventDefault();
+  const st = $("#f-st"), btn = $("#send"); st.className = "status";
+  const fd = new FormData(ev.target), body = Object.fromEntries(fd.entries());
+  body.acepta_riesgos = $("#riesgo").checked;
+  if (eth) Object.assign(body, eth);
+  btn.disabled = true; st.textContent = "Enviando…";
+  try {
+    const r = await fetch("/api/aplicar", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error || "No se pudo enviar.");
+    ev.target.style.display = "none"; $("#res").style.display = "block";
+    $("#res-p").textContent = d.tipo === "holder"
+      ? `Quedaste en el puesto ${d.puesto} con prioridad de holder. Te escribimos cuando se abra tu cupo.`
+      : `Quedaste en el puesto ${d.puesto} de la lista. Te escribimos cuando se abra tu cupo.`;
+  } catch (e) { st.className = "status err"; st.textContent = e.message; btn.disabled = false; }
+};
+</script>
+</body>
+</html>
