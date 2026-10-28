@@ -1,24 +1,24 @@
 [hidden]{display:none!important}
-/* Lloyd's Tavern: Nonconformist Ducks Studio tokens (1:1 with nonconformistducks.com).
+/* Lloyd's Tavern: Nonconformist Ducks DNA (ink outlines, hard shadows, pills, Space type) on its own card-table identity.
    The old variable names (--mist, --paper, --pond, --reed, --line, --display, --body) are kept as aliases
    so /app/ and /plans/ keep working. */
 :root{
-  --ink:#1A1814; --white:#FFFDF7; --cream:#FBF3E2; --beak:#FFC226; --ember:#FF5A2A;
+  --ink:#1A1814; --white:#FFFDF7; --cream:#F6EEDC; --felt:#1D6A4B; --felt-dk:#14513A; --felt-lt:#2A7F5C; --card-red:#C8323B; --beak:#FFC226; --ember:#FF5A2A;
   --water:#5BC8BD; --water-dk:#46ADA2; --sky:#8FC7F2; --peach:#FFAE79; --lav:#B9A6F2; --mint:#8FDF9A;
   --dim:#6E6A60; --hellred:#C4271E;
   --b:3px solid var(--ink); --sh:0 6px 0 var(--ink); --sh-s:0 4px 0 var(--ink); --r:22px;
-  --t:"Anton",Impact,"Arial Narrow",sans-serif;
+  --t:"Bowlby One","Arial Black",Impact,sans-serif;
   --f:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
   --m:"Space Mono",ui-monospace,Menlo,monospace;
   /* aliases */
-  --mist:var(--water); --paper:var(--white); --pond:var(--ink); --reed:var(--dim); --line:var(--ink);
+  --mist:var(--felt); --paper:var(--white); --pond:var(--ink); --reed:var(--dim); --line:var(--ink);
   --bill:var(--beak); --go:#2E9E4F; --wait:#E89B00; --stop:var(--hellred); --idle:#8E8A7E;
   --display:var(--t); --body:var(--f);
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{margin:0;background:var(--water);color:var(--ink);font:16.5px/1.55 var(--f);-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--felt) radial-gradient(circle at 1px 1px, rgba(0,0,0,.09) 1px, transparent 1.5px) 0 0/5px 5px;color:var(--ink);font:16.5px/1.55 var(--f);-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--ember);outline-offset:3px}
@@ -27,15 +27,15 @@ a{color:inherit}
 /* nav: floating pill bar like the Studio */
 header.top{position:sticky;top:0;z-index:50;padding:14px 0 10px}
 header.top .bar{display:flex;align-items:center;gap:10px;background:var(--white);border:var(--b);border-radius:999px;box-shadow:var(--sh-s);padding:7px 7px 7px 10px}
-.mark{display:flex;align-items:center;gap:9px;text-decoration:none;font:400 18px/1 var(--t);text-transform:uppercase;letter-spacing:.03em;margin-right:auto;white-space:nowrap}
+.mark{display:flex;align-items:center;gap:9px;text-decoration:none;font:400 19px/1 var(--t);margin-right:auto;white-space:nowrap}
 .mark img{width:34px;height:34px;border-radius:50%;border:2px solid var(--ink)}
-.mark b{color:var(--ember);font-weight:400}
+.mark b{color:var(--card-red);font-weight:400}
 .navl{display:flex;gap:2px}
 .navl a{font:13.5px var(--m);text-decoration:none;padding:8px 13px;border-radius:999px}
 .navl a:hover{background:var(--cream)}
 
 /* type */
-h1,h2,h3,.ttl{font-family:var(--t);font-weight:400;text-transform:uppercase;letter-spacing:.02em;line-height:.98;margin:0}
+h1,h2,h3,.ttl{font-family:var(--t);font-weight:400;letter-spacing:-.005em;line-height:1.02;margin:0}
 .ttl{color:#fff;text-shadow:0 5px 0 var(--ink)}
 h2.ttl,h2.big{font-size:clamp(40px,6vw,64px)}
 h2.big{margin:0 0 16px}
@@ -69,9 +69,10 @@ input[type=range]{width:100%;accent-color:var(--ember)}
 .plan{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:center;padding:12px 14px;border-radius:16px;border:var(--b);background:var(--cream);cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%;box-shadow:var(--sh-s);transition:transform .1s}
 .plan:hover{transform:translateY(-2px)}
 .plan[aria-pressed=true]{background:var(--beak)}
-.light{width:42px;height:42px;border-radius:50%;background:var(--idle);border:var(--b)}
+.light{width:42px;height:42px;border-radius:50%;background:var(--idle);border:var(--b);box-shadow:inset 0 0 0 4px rgba(255,255,255,.0),inset 0 0 0 5px var(--white),inset 0 0 0 7px rgba(26,24,20,.0);position:relative}
+.light::after{content:"";position:absolute;inset:7px;border-radius:50%;border:2px dashed rgba(255,253,247,.9)}
 .light.green{background:var(--mint)} .light.yellow{background:var(--beak)} .light.red{background:var(--ember)}
-.plan b{display:block;font:400 22px/1.05 var(--t);text-transform:uppercase;letter-spacing:.02em}
+.plan b{display:block;font:400 20px/1.1 var(--t)}
 .plan small{display:block;font-size:13px;color:var(--dim)}
 .plan .pct{font:400 34px/1 var(--t);text-align:right;font-variant-numeric:tabular-nums}
 .plan .pct small{font:700 11px/1.3 var(--m);color:var(--ink)}
@@ -80,7 +81,7 @@ input[type=range]{width:100%;accent-color:var(--ember)}
 /* forms (/app/) */
 form{display:grid;gap:22px}
 fieldset{border:0;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-legend{font:400 24px/1.1 var(--t);text-transform:uppercase;margin-bottom:12px;padding:0}
+legend{font:400 22px/1.1 var(--t);margin-bottom:12px;padding:0}
 .f label{display:block;font:700 11.5px var(--m);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
 .f input,.f select{width:100%;font:inherit;padding:11px 16px;border:2px solid var(--ink);border-radius:999px;background:var(--cream);color:var(--ink)}
 .f input:focus,.f select:focus{background:#fff;outline:3px solid var(--ember);outline-offset:1px}

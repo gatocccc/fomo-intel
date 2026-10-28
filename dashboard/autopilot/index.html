@@ -9,45 +9,52 @@
 <meta property="og:description" content="The Nonconformist Ducks trading bot. Every move on the board, wins and losses.">
 <meta property="og:image" content="https://app.nonconformistducks.com/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#5BC8BD">
+<meta name="theme-color" content="#1D6A4B">
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 <style>
 /* hero */
 .hero{padding:34px 0 0;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;padding-bottom:64px}
-.hero h1{font-size:clamp(58px,8.6vw,118px);margin:22px 0 22px;color:#fff;text-shadow:0 6px 0 var(--ink)}
+.hero h1{font-size:clamp(50px,7.2vw,98px);line-height:.98;margin:22px 0 24px;color:var(--white);text-shadow:0 6px 0 var(--ink)}
+.hero h1 em{font-style:normal;color:var(--beak)}
 .hero h1 span{display:block}
-.hero-note{margin-top:18px;font:13px var(--m)}
+.hero-note{margin-top:18px;font:13px var(--m);color:var(--cream)}
+.hero .lede{color:var(--white)}
 .frame{position:relative;justify-self:center;width:min(460px,100%)}
 .pic{position:relative}
-.photo{position:relative;aspect-ratio:1;background:var(--peach);border:var(--b);border-radius:var(--r);box-shadow:0 8px 0 var(--ink);overflow:hidden;transform:rotate(-1.5deg)}
-.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
-.tape{position:absolute;z-index:3;width:90px;height:28px;background:rgba(251,243,226,.85);border:1px solid rgba(26,24,20,.15);top:-10px}
-.tape.l{left:18px;transform:rotate(-12deg)}.tape.r{right:18px;transform:rotate(10deg)}
-.sticker{position:absolute;z-index:4;left:-14px;bottom:28px;background:var(--beak);border:var(--b);border-radius:16px;padding:9px 14px;box-shadow:var(--sh-s);transform:rotate(-5deg);font:400 26px/1 var(--t);text-transform:uppercase}
+.photo{position:relative;z-index:1;aspect-ratio:5/6;background:var(--white);border:var(--b);border-radius:26px;box-shadow:0 8px 0 var(--ink);overflow:hidden;transform:rotate(-3deg)}
+.photo::before{content:"";position:absolute;inset:16px;border:2px solid var(--ink);border-radius:14px;background:var(--peach)}
+.pic::before{content:"";position:absolute;inset:0;background:var(--card-red);border:var(--b);border-radius:26px;transform:rotate(5deg) translate(22px,6px);box-shadow:0 8px 0 var(--ink);background-image:repeating-linear-gradient(45deg,rgba(255,253,247,.2) 0 6px,transparent 6px 14px)}
+.idx{position:absolute;z-index:3;font:400 30px/.9 var(--t);text-align:center;color:var(--card-red)}
+.idx small{display:block;font-size:24px}
+.idx.tl{left:30px;top:28px;transform:rotate(-3deg)}
+.idx.br{right:34px;bottom:34px;transform:rotate(177deg)}
+.photo img{position:absolute;left:18px;bottom:18px;width:calc(100% - 36px);height:auto;border-radius:0 0 12px 12px}
+.sticker{position:absolute;z-index:4;left:-22px;bottom:48px;background:var(--beak);border:var(--b);border-radius:16px;padding:9px 14px;box-shadow:var(--sh-s);transform:rotate(-5deg);font:400 24px/1 var(--t)}
 .sticker small{display:block;font:700 11px var(--m);margin-top:4px;text-transform:none}
 .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;list-style:none;margin:12px 0 0;padding:0}
-.chips-t{text-align:center;font:700 11.5px var(--m);letter-spacing:.12em;text-transform:uppercase;margin:30px 0 0}
+.chips-t{color:var(--white);text-align:center;font:700 11.5px var(--m);letter-spacing:.12em;text-transform:uppercase;margin:30px 0 0}
 .chips li{background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:3px 11px;font:700 11.5px var(--m);box-shadow:0 3px 0 var(--ink)}
 
 /* ticker: the board, live */
-.ticker{background:var(--ink);color:var(--beak);border-block:var(--b);overflow:hidden;white-space:nowrap;font:400 19px var(--t);letter-spacing:.06em;text-transform:uppercase;padding:11px 0}
+.ticker{background:var(--card-red);color:var(--white);border-block:var(--b);overflow:hidden;white-space:nowrap;font:400 18px var(--t);letter-spacing:.02em;padding:11px 0}
 .ticker div{display:inline-block;animation:tick 40s linear infinite;padding-left:100%}
 .ticker span{margin:0 18px}
-.ticker i{font-style:normal;color:var(--ember)}
-.ticker .w{color:var(--white)}
-.ticker .g{color:var(--mint)}
+.ticker i{font-style:normal;color:var(--ink)}
+.ticker .w{color:var(--cream)}
+.ticker .g{color:var(--beak)}
 @keyframes tick{to{transform:translateX(-100%)}}
 
 .sec{padding:96px 0}
 .sec-head{display:grid;gap:16px;margin-bottom:38px;max-width:780px}
-.sec-sky{background:var(--sky);border-top:var(--b)}
+.sec-sky{background:var(--felt-dk);border-top:var(--b)}
+.sec-sky .lede,.sec-water .lede{color:var(--white)}
 .sec-cream{background:var(--cream);border-top:var(--b)}
-.sec-cream .ttl{color:var(--ink);text-shadow:none}
+.sec-cream .ttl{color:var(--ink);text-shadow:0 4px 0 var(--beak)}
 .sec-water{border-top:var(--b)}
 
 /* board */
@@ -56,11 +63,12 @@
 .stat span{display:block;font:700 11.5px var(--m);letter-spacing:.12em;text-transform:uppercase}
 .stat strong{display:block;font:400 clamp(38px,4.4vw,56px)/1.05 var(--t);font-variant-numeric:tabular-nums;margin-top:6px}
 .stat.y{background:var(--beak)}
+.stat strong{font-size:clamp(34px,4vw,50px)}
 .slate{list-style:none;margin:0;padding:8px 22px}
 .slate li{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:12px 0;border-bottom:2px dashed rgba(26,24,20,.25)}
 .slate li:last-child{border-bottom:0}
-.slate b{font:400 24px/1 var(--t);text-transform:uppercase;letter-spacing:.02em}
-.slate .x{font:400 24px/1 var(--t);font-variant-numeric:tabular-nums}
+.slate b{font:400 22px/1 var(--t)}
+.slate .x{font:400 22px/1 var(--t);font-variant-numeric:tabular-nums}
 .pill{font:700 11px var(--m);text-transform:uppercase;letter-spacing:.05em;border:2px solid var(--ink);border-radius:999px;padding:2px 10px;background:var(--mint)}
 .pill.c{background:var(--cream)}
 .slate .empty{display:block;font:13px var(--m);color:var(--dim);border:0}
@@ -68,18 +76,18 @@
 /* steps */
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:n}
 .steps li{counter-increment:n;padding:22px;position:relative}
-.steps li::before{content:counter(n);position:absolute;top:-16px;left:18px;width:40px;height:40px;display:grid;place-items:center;background:var(--beak);border:var(--b);border-radius:50%;font:400 22px/1 var(--t);box-shadow:var(--sh-s)}
-.steps h3{font-size:26px;margin:12px 0 8px}
+.steps li::before{content:counter(n);position:absolute;top:-16px;left:18px;width:42px;height:42px;display:grid;place-items:center;background:var(--card-red);color:var(--white);outline:2px dashed var(--white);outline-offset:-8px;border:var(--b);border-radius:50%;font:400 22px/1 var(--t);box-shadow:var(--sh-s)}
+.steps h3{font-size:22px;margin:12px 0 8px}
 .steps p{margin:0;font-size:15.5px}
 
 .tables{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:start}
 
 .rules{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .rules .panel{padding:22px}
-.rules h3{font-size:26px;margin:0 0 8px}
+.rules h3{font-size:22px;margin:0 0 8px}
 .rules p{margin:0;font-size:15.5px}
 .pocket{margin-top:26px;display:grid;grid-template-columns:1fr 1.2fr;gap:28px;background:var(--beak);padding:28px}
-.pocket h3{font-size:clamp(32px,4vw,46px)}
+.pocket h3{font-size:clamp(28px,3.4vw,40px)}
 .pocket p{margin:12px 0 0;font-weight:500}
 .pocket ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .pocket li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
@@ -88,7 +96,7 @@
 
 table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:var(--b);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
 .tab th,.tab td{text-align:left;padding:16px 20px;border-bottom:2px solid var(--ink);vertical-align:top}
-.tab thead th{font:400 22px/1.1 var(--t);text-transform:uppercase;letter-spacing:.02em;background:var(--ink);color:var(--white)}
+.tab thead th{font:400 19px/1.15 var(--t);background:var(--ink);color:var(--white)}
 .tab thead th.h{background:var(--beak);color:var(--ink)}
 .tab tbody th{font:700 13px var(--m)}
 .tab td{font-weight:500}
@@ -96,11 +104,11 @@ table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--
 
 .risks{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .risks .panel{padding:22px}
-.risks h3{font-size:24px;margin:0 0 8px;color:var(--hellred)}
+.risks h3{font-size:21px;margin:0 0 8px;color:var(--card-red)}
 .risks p{margin:0;font-size:15.5px}
 
 .doors{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:var(--ink);color:var(--white);padding:30px}
-.doors h2{color:var(--beak);font-size:clamp(36px,5vw,58px)}
+.doors h2{color:var(--beak);font-size:clamp(32px,4.4vw,52px)}
 .doors p{margin:10px 0 0;max-width:62ch}
 .doors .btn{box-shadow:0 4px 0 var(--beak)}
 
@@ -130,7 +138,7 @@ table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--
 <div class="hero"><div class="wrap hero-grid">
   <div>
     <span class="tag">A Nonconformist Ducks joint</span>
-    <h1><span>Trade</span><span>shitcoins</span><span>with an edge</span></h1>
+    <h1>Trade shitcoins <em>with an edge.</em></h1>
     <p class="lede">Lloyd's Tavern is the pond's trading bar. A bot works the counter for you: it checks who is behind every token before it buys, keeps its own stops, and writes down why it made every move. You keep the wallet. Lloyd keeps the receipts.</p>
     <div class="cta" style="margin-top:28px"><a class="btn y" href="#board">See the board</a><a class="btn" href="/plans/">Watch the live plans</a></div>
     <p class="hero-note">Doors are not open yet. Nonco Genesis holders get the first stools.</p>
@@ -138,7 +146,7 @@ table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--
   <div class="frame">
     <div class="pic">
       <div class="photo"><img src="/assets/lloyd.webp" width="1000" height="1000" alt="Lloyd, an OG Nonconformist Duck with a bowl cut, round bookkeeper glasses, a goatee and a red card shark vest"></div>
-      <i class="tape l" aria-hidden="true"></i><i class="tape r" aria-hidden="true"></i>
+      <span class="idx tl" aria-hidden="true">L<small>♠</small></span><span class="idx br" aria-hidden="true">L<small>♠</small></span>
       <div class="sticker">Lloyd<small>Regular. Reads the chart, not the hype.</small></div>
     </div>
     <p class="chips-t" id="chips-t">Unlike a human trader, Lloyd</p><ul class="chips" aria-labelledby="chips-t"><li>Never sleeps</li><li>Never moves its stop</li><li>Checks who funds every holder</li><li>No FOMO, no revenge trades</li><li>Writes down every reason</li></ul>
@@ -188,7 +196,7 @@ table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--
     </div>
     <div class="lab" aria-labelledby="lab-t">
       <h2 id="lab-t">What are you here for?</h2>
-      <p class="sub">Each plan shows your odds of getting there, and your odds of losing half.</p>
+      <p class="sub">Your odds of reaching the goal within the timeframe before the stop kicks in at half your money. More days never lowers them.</p>
       <div class="knobs">
         <div class="knob"><label for="obj">Goal</label><output id="obj-o" for="obj">x1.5</output><input id="obj" type="range" min="1.1" max="10" step="0.1" value="1.5"></div>
         <div class="knob"><label for="dias">Timeframe</label><output id="dias-o" for="dias">30 days</output><input id="dias" type="range" min="7" max="90" step="1" value="30"></div>

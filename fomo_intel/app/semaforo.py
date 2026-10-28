@@ -59,23 +59,29 @@ def _sample(p: dict, real: list[float], rng: random.Random) -> float:
 
 
 def simulate(plan: str, objetivo: float, dias: int, paths: int = 4000, seed: int = 7) -> dict:
+    """Probabilidad de tocar el objetivo antes del freno (perder la mitad), dentro del plazo.
+
+    Cada camino usa siempre la misma secuencia de operaciones (semilla fija por camino), así un plazo
+    más largo solo agrega operaciones al final: la probabilidad nunca baja al dar más días.
+    """
     p = PLANS[plan]
     real = _real_returns(p["fuente"])
-    rng = random.Random(seed)
     hits = halves = 0
     finals = []
     n_trades = max(1, round(p["per_day"] * dias))
-    for _ in range(paths):
+    for i in range(paths):
+        rng = random.Random(seed * 1_000_003 + i)
         eq = 1.0
         hit = False
         for _ in range(n_trades):
             eq *= 1 + p["frac"] * _sample(p, real, rng)
             if eq >= objetivo:
                 hit = True
+                break  # al llegar, el plan asegura (ver "qué hacer al llegar")
             if eq <= 0.5:
-                break
+                break  # el freno corta
         hits += hit
-        halves += eq <= 0.5
+        halves += (not hit) and eq <= 0.5
         finals.append(eq)
     finals.sort()
     prob = hits / paths

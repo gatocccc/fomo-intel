@@ -33,7 +33,7 @@ window.Semaforo = (() => {
   }
 
   function mount({goal, days, goalOut, daysOut, box, note, selected = "", onPick, onChange}) {
-    let t, last = null, sel = selected;
+    let t, seq = 0, last = null, sel = selected;
     const pick = plan => { sel = plan; if (last) render(last, box, note, sel, pick); onPick && onPick(plan); };
     const update = () => {
       const o = +goal.value, d = +days.value;
@@ -41,8 +41,9 @@ window.Semaforo = (() => {
       if (daysOut) daysOut.textContent = d + " days";
       onChange && onChange(o, d);
       clearTimeout(t);
+      const id = ++seq;
       t = setTimeout(() => fetch(`/api/semaforo?objetivo=${o}&dias=${d}`).then(r => r.json())
-        .then(x => { last = x; render(x, box, note, sel, pick); })
+        .then(x => { if (id !== seq) return; last = x; render(x, box, note, sel, pick); })
         .catch(() => note.textContent = "We could not calculate right now. Try again in a moment."), 180);
     };
     goal.addEventListener("input", update); days.addEventListener("input", update); update();
