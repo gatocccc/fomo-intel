@@ -1,0 +1,51 @@
+== 104_scan4_dd 2026-10-28T03:01:03Z ==
+  http 400 /tokens/graduated {} {"error":"Invalid token address"}
+en rankings: 336
+  campos /search: ['bundlers', 'buys', 'communityMessages', 'createdAt', 'decimals', 'deployer', 'dev', 'fees', 'freezeAuthority', 'hasCoinCommunity', 'hasSocials', 'holders', 'id', 'image', 'insiders', 'lastUpdated', 'liquidityUsd', 'lpBurn', 'market', 'marketCapUsd', 'mint', 'mintAuthority', 'name', 'poolAddress', 'priceUsd', 'quoteToken', 'riskScore', 'sells', 'snipers', 'socials', 'status', 'symbol', 'top10', 'totalTransactions', 'volume', 'volume_12h', 'volume_15m', 'volume_1h', 'volume_24h', 'volume_30m']
+sumados por /search: 899 | total: 1235
+pasan liquidez/mcap/edad: 858
+con velas: 86
+PASAN TODOS LOS FILTROS: 9
+
+CHICO      mcap $ 4.86M liq $ 202K edad   27h vol24 $  3921K (0.81x) acel 2.2 CV 2.19 | 1h +0% 6h -7% 24h -7% 72h +1354% | 71% del máx | hold 12404 top10 3% | 9v4airX4Vt45ADFg3QQG9pXX68LkX9Big4GiYEuJpump | https://x.com/chicothegta From sunset speedboat rides with Jason a
+SAPLING    mcap $ 3.12M liq $ 368K edad  776h vol24 $  1316K (0.42x) acel 2.0 CV 1.51 | 1h -0% 6h +2% 24h +251% 72h +206% | 71% del máx | hold 4751 top10 19% | BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W | https://x.com/saplingdotcash/status the rootstock of sapling.cash, the zcash
+tSpaceX    mcap $ 0.66M liq $ 541K edad 6214h vol24 $   622K (0.94x) acel 0.9 CV 0.53 | 1h +0% 6h +0% 24h +0% 72h -1% | 98% del máx | hold 980 top10 7% | TSPXcLV76s6V2zDiZQ18kBfcbnjaE2ZzNT3ga2Pd99v |  
+SI         mcap $13.55M liq $ 477K edad  875h vol24 $  4691K (0.35x) acel 0.8 CV 2.02 | 1h +2% 6h +6% 24h +35% 72h +34% | 90% del máx | hold 51721 top10 11% | DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP | https://truthsocial.com/@realdonald 
+GATO       mcap $ 4.55M liq $ 215K edad 1527h vol24 $   874K (0.19x) acel 1.0 CV 0.46 | 1h -0% 6h -5% 24h +11% 72h +40% | 80% del máx | hold 7397 top10 17% | HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump |  
+CX         mcap $ 0.51M liq $ 675K edad 14961h vol24 $   382K (0.75x) acel 0.2 CV 1.04 | 1h -1% 6h -1% 24h -7% 72h +16% | 89% del máx | hold 325 top10 18% | CortexFv3fRcLKTgACr7aLqckGh5eP7TP3z9JHoKqMc6 |  
+DOPE       mcap $ 2.38M liq $ 208K edad  398h vol24 $   961K (0.40x) acel 0.7 CV 0.66 | 1h -0% 6h -5% 24h -5% 72h -38% | 62% del máx | hold 9161 top10 19% | 33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump | https://x.com/essencepnl/status/210 
+LMAO!      mcap $ 2.32M liq $ 287K edad 9013h vol24 $   516K (0.22x) acel 0.6 CV 0.60 | 1h +1% 6h -3% 24h -14% 72h +10% | 67% del máx | hold 17421 top10 27% | H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump |  LMAO!
+OTC        mcap $ 6.32M liq $ 618K edad 1453h vol24 $  1033K (0.16x) acel 0.8 CV 0.96 | 1h +1% 6h -14% 24h +8% 72h +5% | 84% del máx | hold 20741 top10 25% | MukLDtJ8Cx9DxLbeyLRSWPSposTMWuwHANbuaudpump | https://x.com/OTCDesks Over-The-Counter Desks, earn stocks, pre
+
+=== chequeo anti-rug de los 5 mejores: 9v4airX4Vt45ADFg3QQG9pXX68LkX9Big4GiYEuJpump BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W TSPXcLV76s6V2zDiZQ18kBfcbnjaE2ZzNT3ga2Pd99v DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump ===
+
+=== CHICO 9v4airX4Vt45ADFg3QQG9pXX68LkX9Big4GiYEuJpump → CONCENTRADO
+top 20: billeteras 6.57% · pools/curva 0% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': 4.2588, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': []}
+creador: {'creator': '9niizgWj6JEArEhmrCNfZ21WokTXrYbvS8UA73PxghhK', 'lanzamientos': 1, 'muertos_<US$10K': 0, 'graduados_aprox': 0, 'muestra': 1}
+  grupo fondeador GJeRNNKD…  : 19 billeteras, 6.57%
+
+=== SAPLING BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W → LIMPIO
+top 20: billeteras 33.71% · pools/curva 2.93% · sin fondeador identificado 6
+riesgo ST: {'bundlers%': 2.4056, 'insiders%': 0, 'snipers%': 2.9637, 'dev%': 0, 'risks': ['Top 10 Holders']}
+creador: {'creator': 'FauKh2enCxjqMDaEEmo3qMmA9toxyZPFvPhGEZNMzChr', 'lanzamientos': 8, 'muertos_<US$10K': 0, 'graduados_aprox': 0, 'muestra': 8}
+  grupo fondeador winkACDS…  : 2 billeteras, 3.19%
+
+=== tSpaceX TSPXcLV76s6V2zDiZQ18kBfcbnjaE2ZzNT3ga2Pd99v → CONCENTRADO
+top 20: billeteras 8.85% · pools/curva 0.28% · sin fondeador identificado 4
+riesgo ST: {'bundlers%': None, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': []}
+creador: None
+  grupo fondeador FmDgTPfW…  : 4 billeteras, 0.77%
+
+=== SI DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP → LIMPIO
+top 20: billeteras 15.42% · pools/curva 0% · sin fondeador identificado 5
+riesgo ST: {'bundlers%': None, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': []}
+creador: {'creator': '9pkJqJLtefuna3GLtKZyF5DBWwEGUdxZUSGCmf5jZhA9', 'lanzamientos': 7495, 'muertos_<US$10K': 495, 'graduados_aprox': 0, 'muestra': 500}
+  grupo fondeador F7p3dFrj…  : 2 billeteras, 1.74%
+
+=== GATO HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump → LIMPIO
+top 20: billeteras 20.45% · pools/curva 0% · sin fondeador identificado 2
+riesgo ST: {'bundlers%': 3.5076, 'insiders%': 0, 'snipers%': 0, 'dev%': 3.3244, 'risks': ['No social media', 'Top 10 Holders', 'Dev Holdings']}
+creador: {'creator': '5MVneCfDge5vtf4C7QZmczCJbBB8vfvDbMqvopvkBLJm', 'lanzamientos': 2, 'muertos_<US$10K': 0, 'graduados_aprox': 0, 'muestra': 2}
+  grupo fondeador iGdFcQoy…  : 3 billeteras, 2.51%
+== exit 0 ==
