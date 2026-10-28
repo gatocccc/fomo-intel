@@ -1,17 +1,17 @@
 {
- "now": 1793202899.5959344,
+ "now": 1793203175.5148609,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 121.77,
- "equity_sol": 1.2076,
+ "equity_usd": 123.64,
+ "equity_sol": 1.2251,
  "cash_sol": 0.032,
- "positions_usd": 118.55,
- "sol_usd": 100.84,
- "mult": 1.229,
+ "positions_usd": 120.41,
+ "sol_usd": 100.92,
+ "mult": 1.248,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.006676194495073217,
-   "mult": 1.379,
-   "value_usd": 49.43
+   "last_usd": 0.006891298767060876,
+   "mult": 1.423,
+   "value_usd": 51.02
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -71,7 +71,7 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0016543542319325066,
+   "last_usd": 0.0016543060523785192,
    "mult": 1.275,
    "value_usd": 39.08
   },
@@ -84,7 +84,7 @@
    "tokens_initial": 6636.507512,
    "sol_in": 0.26682112,
    "sol_out": 0.0,
-   "peak_usd": 0.004740356179808285,
+   "peak_usd": 0.004746023135180909,
    "stop": 0.3,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.0045265048649462455,
-   "mult": 1.109,
-   "value_usd": 30.04
+   "last_usd": 0.0045675923355418,
+   "mult": 1.119,
+   "value_usd": 30.31
   }
  ],
  "equity": [
@@ -1274,6 +1274,10 @@
   [
    1793202746,
    122.68
+  ],
+  [
+   1793203052,
+   123.2
   ]
  ],
  "closed": [
