@@ -13,7 +13,9 @@ Qué hace, por perfil de mesa:
   4. Régimen de mercado: si SOL cae fuerte (≤ −6% en 24 h o ≤ −4% en 4 h) no abre memecoins por 6 h y asegura entrada en
      todo lo que ya ganó 15%.
   Límites: máx 3 posiciones, máx 35% del patrimonio por compra, máx 2 compras automáticas por día, nada recomprado dentro de
-  48 h de su cierre, nada con suba > 60% en 24 h o > 30% en 6 h, ni a menos de 10% de su máximo de 3 días.
+  48 h de su cierre, nada con suba > 60% en 24 h o > 30% en 6 h, ni fuera de un retroceso sano
+  (55–90% del máximo de 3 días, 24 h entre −40% y +60%), ni con volumen < 30% de la mcap, < 1.000 holders o en la lista de
+  volumen fabricado (DOAS, JEANPHIL, USDF, USOE, Verse + state/desk/blacklist.json). Escaneo de menos de 2,5 h.
 - Equilibrado: solo stops que suben solos (más cortos).
 - Tradicional: la regla del plan (SOL, BTC, ETH, JUP por encima del promedio de 20 días, un cuarto del plan cada uno; el resto
   en USDC), revisada cada hora en vez de dos veces por día, con banda de 1% para no entrar y salir por ruido.
@@ -56,7 +58,11 @@ SCAN_JSON = Path("state/desk/scan4.json")
 DD_DIR = Path("state/desk/dd")
 
 LIM = {"max_pos": 3, "max_frac": 0.35, "min_buy_sol": 0.08, "idle_frac": 0.15, "max_auto_buys_day": 2, "cooldown_h": 48,
-       "stale_h": 36, "scan_every_h": 2, "dd_max_age_h": 6, "mcap_lo": 3e5, "mcap_hi": 3e7, "max_ch24h": 0.6, "max_ch6h": 0.3, "max_from_hi": 0.9, "max_bundlers": 15.0}
+       "stale_h": 36, "scan_every_h": 2, "dd_max_age_h": 6, "mcap_lo": 3e5, "mcap_hi": 3e7, "max_ch24h": 0.6, "min_ch24h": -0.4, "max_ch6h": 0.3,
+       "max_from_hi": 0.9, "min_from_hi": 0.55, "min_vol_mcap": 0.3, "min_holders": 1000, "max_scan_age_h": 2.5, "max_bundlers": 15.0}
+# volumen fabricado por bots (regla 3 de la mesa); se suma state/desk/blacklist.json ({"mints": [...], "symbols": [...]})
+BLACK_SYMS = {"JEANPHIL", "DOAS", "USDF", "USOE", "VERSE"}
+BLACK_MINTS = {"27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump"}
 
 
 def jload(p, d):
@@ -169,18 +175,24 @@ class Brain:
 
     def candidates(self, held, cooled):
         sc = jload(SCAN_JSON, {})
-        if time.time() - sc.get("ts", 0) > 6 * 3600:
+        if time.time() - sc.get("ts", 0) > LIM["max_scan_age_h"] * 3600:
             return []
+        bl = jload(Path("state/desk/blacklist.json"), {})
+        bmints = BLACK_MINTS | set(bl.get("mints", [])); bsyms = BLACK_SYMS | {x.upper() for x in bl.get("symbols", [])}
         out = []
         for v in sc.get("ok", [])[:8]:
             m = v["mint"]
-            if m in held or m in cooled:
+            if m in held or m in cooled or m in bmints or (v.get("sym") or "").upper() in bsyms:
+                continue
+            if (v.get("vol_mcap") or 0) < LIM["min_vol_mcap"] or (v.get("holders") or 0) < LIM["min_holders"]:
                 continue
             if not (LIM["mcap_lo"] <= (v.get("mcap") or 0) <= LIM["mcap_hi"]):
                 continue
             # comprar en retroceso, no en la vela de euforia (regla 4 de la mesa): al menos 10% bajo el máximo de 3 días
-            if (v.get("ch24h") or 0) > LIM["max_ch24h"] or (v.get("ch6h") or 0) > LIM["max_ch6h"] or (v.get("from_hi") or 1) > LIM["max_from_hi"] \
-                    or (v.get("ch1h") or 0) < -0.15:
+            # y tampoco un derrumbe (−98% en 24 h = dato roto o token muerto): retroceso sano = 55–90% del máximo de 3 días
+            ch24, fh = v.get("ch24h") or 0, v.get("from_hi") or 1
+            if not (LIM["min_ch24h"] <= ch24 <= LIM["max_ch24h"]) or (v.get("ch6h") or 0) > LIM["max_ch6h"] \
+                    or not (LIM["min_from_hi"] <= fh <= LIM["max_from_hi"]) or (v.get("ch1h") or 0) < -0.15:
                 continue
             dd = jload(DD_DIR / f"{m}.json", {})
             if dd.get("verdict") != "LIMPIO" or time.time() - dd.get("ts", 0) > LIM["dd_max_age_h"] * 3600 * 2:
