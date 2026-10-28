@@ -1,17 +1,17 @@
 {
- "now": 1793214885.9414456,
+ "now": 1793215180.3745592,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 124.44,
- "equity_sol": 1.22,
- "cash_sol": 0.043,
- "positions_usd": 120.05,
- "sol_usd": 102.0,
- "mult": 1.256,
+ "equity_usd": 126.25,
+ "equity_sol": 1.2384,
+ "cash_sol": 0.369,
+ "positions_usd": 88.63,
+ "sol_usd": 101.95,
+ "mult": 1.274,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,8 +24,8 @@
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
    "sol_out": 0.0,
-   "peak_usd": 0.008283464255151824,
-   "stop": -0.224,
+   "peak_usd": 0.008659395077198692,
+   "stop": -0.284,
    "trail": 0.35,
    "trail_after": 1.6,
    "tp": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.008283464255151824,
-   "mult": 1.711,
-   "value_usd": 61.32
+   "last_usd": 0.008659395077198692,
+   "mult": 1.789,
+   "value_usd": 64.11
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -71,39 +71,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.003787805929164251,
-   "mult": 0.928,
-   "value_usd": 25.14
-  },
-  {
-   "mint": "27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump",
-   "symbol": "DOAS",
-   "opened_ts": 1793214457.0499268,
-   "entry_usd": 0.0049188131192978365,
-   "tokens": 6948.882933,
-   "tokens_initial": 6948.882933,
-   "sol_in": 0.33509398,
-   "sol_out": 0.0,
-   "peak_usd": 0.0049188131192978365,
-   "stop": 0.3,
-   "trail": 0.35,
-   "trail_after": 1.6,
-   "tp": [
-    [
-     3,
-     0.25
-    ],
-    [
-     6,
-     0.25
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
-   "id": "auto-mesa-20261028-1907",
-   "last_usd": 0.004833807262812384,
-   "mult": 0.983,
-   "value_usd": 33.59
+   "last_usd": 0.0036955613794914426,
+   "mult": 0.906,
+   "value_usd": 24.53
   }
  ],
  "equity": [
@@ -1434,9 +1404,26 @@
   [
    1793214733,
    123.19
+  ],
+  [
+   1793214964,
+   122.36
   ]
  ],
  "closed": [
+  {
+   "ts": 1793214967.0149581,
+   "mint": "27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump",
+   "symbol": "DOAS",
+   "sol_in": 0.33509,
+   "sol_out": 0.32595,
+   "pnl_sol": -0.00915,
+   "pnl_usd": -0.93,
+   "ret": -0.027,
+   "peak_mult": 1.0,
+   "hold_h": 0.1,
+   "why": "lista de volumen fabricado; compra automática por error de filtro"
+  },
   {
    "ts": 1793206937.973388,
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -1465,6 +1452,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793214967.014495,
+   "side": "sell",
+   "mint": "27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump",
+   "symbol": "DOAS",
+   "ok": true,
+   "sol": 0.325948905,
+   "tokens": 6948.882933,
+   "price_usd": 0.004790096139,
+   "why": "lista de volumen fabricado; compra automática por error de filtro",
+   "sig": "5o2v6HsH5ZnykAMFjos4bFpCR48QPDXf51Vw21nA5o43EejhpHmJDUsPZXL2Nkr4rac2Jaasuqvz4KAmxyc5rYiP",
+   "error": "",
+   "id": "2026-10-28-03"
+  },
   {
    "ts": 1793214457.0492864,
    "side": "buy",
@@ -1565,6 +1566,34 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793214982.2642617,
+   "title": "Ejecución",
+   "text": "set 4kjruq: ajustó GTA6: stop=-0.284",
+   "kind": "ejecución",
+   "id": "auto-mesa-20261028-1916"
+  },
+  {
+   "ts": 1793214982.264138,
+   "title": "Cerebro automático: ajuste de stops",
+   "text": "GTA6: llegó a 1.71x de pico; subo el stop a 1.28x (antes 1.22x).",
+   "kind": "decisión",
+   "id": "auto-mesa-20261028-1916"
+  },
+  {
+   "ts": 1793214967.016186,
+   "title": "Ejecución",
+   "text": "sell 27Fe2s: vendió 100% de DOAS (lista de volumen fabricado; compra automática por error de filtro) por 0.3259 SOL — posición cerrada",
+   "kind": "ejecución",
+   "id": "2026-10-28-03"
+  },
+  {
+   "ts": 1793214967.0160596,
+   "title": "Vendo DOAS: la compra automática rompió una regla",
+   "text": "El cerebro automático compró DOAS a las 16:07 con el efectivo ocioso. Fue un error de mis filtros, no una apuesta: DOAS está en la lista de tokens con volumen fabricado por bots desde el 27/10 (regla 3), y los datos del escaneo eran incoherentes (−98% en 24 h y 2% de su máximo: o el dato está roto o el token se derrumbó). El filtro solo frenaba subas exageradas, no derrumbes.\n\nLo vendo ya, cerca del precio de compra; el costo es la comisión y el slippage de ida y vuelta (~3%, unos US$1). Corregí el cerebro: ahora solo compra en un retroceso sano (55–90% del máximo de 3 días, 24 h entre −40% y +60%), con volumen ≥ 30% de la mcap, ≥ 1.000 holders, escaneo de menos de 2,5 h, y con una lista negra de volumen fabricado.",
+   "kind": "decisión",
+   "id": "2026-10-28-03"
+  },
   {
    "ts": 1793214457.0522728,
    "title": "Ejecución",
@@ -1679,24 +1708,24 @@
   }
  ],
  "wins": 1,
- "n_closed": 2,
- "realized_usd": 1.75,
+ "n_closed": 3,
+ "realized_usd": 0.82,
  "plan": null,
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793214444.4787283,
+  "last_run": 1793214964.004036,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
-   "ts": 1793214444.4809437,
-   "title": "Cerebro automático: compra",
-   "orders": 2,
+   "ts": 1793214964.0047798,
+   "title": "Cerebro automático: ajuste de stops",
+   "orders": 1,
    "mode": "live"
   },
   "last_note": null,
   "trad_status": null,
-  "sol_ch24h": 0.9,
-  "sol_vs_ma20": -0.0307
+  "sol_ch24h": 1.0,
+  "sol_vs_ma20": -0.0292
  }
 }
