@@ -48,13 +48,24 @@ TRAD = {"SOL": SOL_MINT, "BTC": "cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij", "
 
 DESKS = {
     "mesa": {"name": "", "profile": "aggressive", "lang": "es"},
-    "agresivo": {"name": "agresivo", "profile": "aggressive", "lang": "en"},
+    "agresivo": {"name": "agresivo", "profile": "fast", "lang": "en"},
     "equilibrado": {"name": "equilibrado", "profile": "balanced", "lang": "en"},
     "tradicional": {"name": "tradicional", "profile": "traditional", "lang": "en"},
 }
 DEFAULT_MODES = {"mesa": "shadow", "agresivo": "shadow", "equilibrado": "shadow", "tradicional": "shadow"}
 CFG = Path("state/brain_config.json")
 SCAN_JSON = Path("state/desk/scan4.json")
+SCAN_FAST = Path("state/desk/scan_fast.json")
+# Perfil "rápido" (plan agresivo, desde 28/10 21:00 ART, pedido de Gastón: "todo demasiado estático"). El plan se vende como
+# memecoins de US$300K–3M: hasta ahora tenía tokens de US$3–15M (los mismos que la mesa) y el escaneo, con liquidez mínima de
+# US$150K, casi no veía esa franja. Ahora: su propia franja, 2 posiciones concentradas, salidas más cortas, rotación a las 12 h.
+# No hay backtest que pruebe que esto rinde más: compra más movimiento (varianza), con freno diario.
+FAST = {"since": 1793229600, "max_pos": 2, "max_frac": 0.48, "min_buy_sol": 0.15, "max_auto_buys_day": 4, "scan_every_h": 1,
+        "stale_h": 12, "stale_peak": 1.15, "day_brake": 0.12, "mcap_lo": 3e5, "mcap_hi": 3e6, "min_vol_mcap": 0.5, "min_holders": 500,
+        "max_top10": 35, "min_ch24h": -0.3, "max_ch24h": 1.0, "min_ch6h": -0.05, "max_ch6h": 0.4, "min_from_hi": 0.6, "max_from_hi": 0.92,
+        "min_ch1h": -0.10, "stop": 0.25, "trail": 0.25, "trail_after": 1.3, "tp": [[1.5, 0.4], [2.5, 0.3]]}
+SCAN_FAST_ENV = {"SCAN_LO": "300000", "SCAN_HI": "3000000", "SCAN_LIQ": "60000", "SCAN_AGE_H": "6", "SCAN_VOLMCAP": "0.5",
+                 "SCAN_TOP10": "35", "SCAN_MIN_CANDLES": "8", "SCAN_OUT": str(SCAN_FAST)}
 DD_DIR = Path("state/desk/dd")
 
 LIM = {"max_pos": 3, "max_frac": 0.35, "min_buy_sol": 0.08, "idle_frac": 0.15, "max_auto_buys_day": 2, "cooldown_h": 48,
@@ -129,6 +140,7 @@ class Brain:
         self.regime = {"state": "neutral", "ts": 0}
         self.trend_cache: dict = {}
         self.last_scan = jload(Path("state/desk/brain_scan.json"), {}).get("ts", 0)
+        self.last_scan_fast = jload(Path("state/desk/brain_scan.json"), {}).get("fast_ts", 0)
 
     def modes(self):
         m = {**DEFAULT_MODES, **jload(CFG, {}).get("modes", {})}
@@ -159,7 +171,7 @@ class Brain:
         """Corre el escaneo amplio cada 2 h (solo si alguna mesa necesita candidatos) y el anti-rug de los 5 mejores."""
         if not need or time.time() - self.last_scan < LIM["scan_every_h"] * 3600:
             return
-        self.last_scan = time.time(); jsave(Path("state/desk/brain_scan.json"), {"ts": self.last_scan})
+        self.last_scan = time.time(); jsave(Path("state/desk/brain_scan.json"), {"ts": self.last_scan, "fast_ts": self.last_scan_fast})
         log.info("escaneo scan4…")
         try:
             subprocess.run([sys.executable, "-m", "fomo_intel.desk.scan4"], timeout=1200, capture_output=True)
@@ -172,6 +184,52 @@ class Brain:
                 subprocess.run([sys.executable, "-m", "fomo_intel.desk.dd", *stale], timeout=1500, capture_output=True)
             except Exception as e:  # noqa: BLE001
                 log.warning("dd falló: %s", e)
+
+    def refresh_fast(self, need):
+        """Escaneo de la franja chica (US$300K–3M, liquidez ≥ US$60K, edad ≥ 6 h) cada hora + anti-rug de los 4 mejores."""
+        if not need or time.time() - self.last_scan_fast < FAST["scan_every_h"] * 3600:
+            return
+        self.last_scan_fast = time.time(); jsave(Path("state/desk/brain_scan.json"), {"ts": self.last_scan, "fast_ts": self.last_scan_fast})
+        log.info("escaneo rápido (franja chica)…")
+        try:
+            subprocess.run([sys.executable, "-m", "fomo_intel.desk.scan4"], timeout=1200, capture_output=True, env={**os.environ, **SCAN_FAST_ENV})
+        except Exception as e:  # noqa: BLE001
+            log.warning("escaneo rápido falló: %s", e); return
+        top = [v["mint"] for v in self.fast_candidates(set(), set(), need_dd=False)[:4]]
+        stale = [m for m in top if time.time() - jload(DD_DIR / f"{m}.json", {}).get("ts", 0) > LIM["dd_max_age_h"] * 3600]
+        if stale:
+            try:
+                subprocess.run([sys.executable, "-m", "fomo_intel.desk.dd", *stale], timeout=1200, capture_output=True)
+            except Exception as e:  # noqa: BLE001
+                log.warning("dd falló: %s", e)
+
+    def fast_candidates(self, held, cooled, need_dd=True):
+        sc = jload(SCAN_FAST, {})
+        if time.time() - sc.get("ts", 0) > 2 * 3600:
+            return []
+        bl = jload(Path("state/desk/blacklist.json"), {})
+        bmints = BLACK_MINTS | set(bl.get("mints", [])); bsyms = BLACK_SYMS | {x.upper() for x in bl.get("symbols", [])}
+        out = []
+        for v in sc.get("ok", [])[:15]:
+            m = v["mint"]; F = FAST
+            if m in held or m in cooled or m in bmints or (v.get("sym") or "").upper() in bsyms:
+                continue
+            if not (F["mcap_lo"] <= (v.get("mcap") or 0) <= F["mcap_hi"]) or (v.get("vol_mcap") or 0) < F["min_vol_mcap"] \
+                    or (v.get("holders") or 0) < F["min_holders"] or (v.get("top10") or 100) >= F["max_top10"]:
+                continue
+            # se está moviendo (6 h no negativas) pero entramos en un retroceso, no en el pico
+            if not (F["min_ch24h"] <= (v.get("ch24h") or 0) <= F["max_ch24h"]) or not (F["min_ch6h"] <= (v.get("ch6h") or 0) <= F["max_ch6h"]) \
+                    or not (F["min_from_hi"] <= (v.get("from_hi") or 1) <= F["max_from_hi"]) or (v.get("ch1h") or 0) < F["min_ch1h"]:
+                continue
+            if not need_dd:
+                out.append(v); continue
+            dd = jload(DD_DIR / f"{m}.json", {})
+            if dd.get("verdict") != "LIMPIO" or time.time() - dd.get("ts", 0) > LIM["dd_max_age_h"] * 3600 * 2:
+                continue
+            if ((dd.get("risk") or {}).get("bundlers%") or 0) > LIM["max_bundlers"]:
+                continue
+            out.append({**v, "dd": dd, "factory": ((dd.get("deployer") or {}).get("lanzamientos") or 0) > 200})
+        return out
 
     def candidates(self, held, cooled):
         sc = jload(SCAN_JSON, {})
@@ -213,6 +271,9 @@ class Brain:
             if peak >= 3: lock = peak * 0.70
             elif peak >= 1.6: lock = peak * 0.75
             elif peak >= 1.3: lock = 1.02
+        elif profile == "fast":
+            if peak >= 1.6: lock = peak * 0.80
+            elif peak >= 1.3: lock = 1.05
         elif profile == "balanced":
             if peak >= 1.4: lock = peak * 0.85
             elif peak >= 1.2: lock = 1.01
@@ -287,6 +348,64 @@ class Brain:
             bstate["_noted_no_cands"] = now
         return orders, notes, new_buys
 
+    def fast(self, d, s, regime, bstate):
+        """Plan agresivo: franja chica, 2 posiciones concentradas, rotación a las 12 h, freno diario de −12%."""
+        F = FAST; orders, notes, new_buys = [], [], []
+        now = time.time(); sol_usd = s.get("sol_usd") or 100; eq_sol = s["equity_usd"] / sol_usd
+        today = time.strftime("%Y-%m-%d", time.localtime(now - 3 * 3600))
+        if bstate.get("day") != today:
+            bstate["day"] = today; bstate["day_start_usd"] = s["equity_usd"]
+        pos = [p for p in s.get("positions", []) if p["mint"] not in STABLES and p.get("brain") is not False]
+        held = {p["mint"] for p in s.get("positions", [])}
+        cooled = {c["mint"] for c in s.get("closed", []) if now - c.get("ts", 0) < LIM["cooldown_h"] * 3600}
+        legacy = [p for p in pos if p.get("opened_ts", 0) < F["since"]]          # de antes del cambio: fuera de la franja del plan
+        dead = [p for p in pos if p not in legacy and (now - p.get("opened_ts", now)) / 3600 >= F["stale_h"]
+                and p["peak_usd"] / p["entry_usd"] < F["stale_peak"]]
+        # 1) plata dormida: a las 12 h sin haber pasado 1,15x, afuera (aunque no haya candidato: el efectivo se recoloca en la hora)
+        for p in dead:
+            orders.append({"action": "sell", "mint": p["mint"], "frac": 1.0, "why": "time stop: no move in 12h"})
+            notes.append(f"{p['symbol']}: {(now - p['opened_ts']) / 3600:.0f}h in, never above {p['peak_usd'] / p['entry_usd']:.2f}x, now {p.get('mult', 1):.2f}x. "
+                         f"This plan pays for movement; a flat token is dead money. Sold.")
+        brake = s["equity_usd"] < bstate.get("day_start_usd", s["equity_usd"]) * (1 - F["day_brake"])
+        buys_today = [b for b in bstate.get("auto_buys", []) if b.get("day") == today]
+        if regime == "risk_off" or brake or len(buys_today) >= F["max_auto_buys_day"]:
+            if brake and not bstate.get("_brake_noted") == today:
+                notes.append(f"Daily brake: the plan is down more than {F['day_brake']:.0%} today (from ${bstate['day_start_usd']:.0f} to ${s['equity_usd']:.0f}). "
+                             "No new positions until tomorrow; open ones keep their stops.")
+                bstate["_brake_noted"] = today
+            return orders, notes, new_buys
+        cands = self.fast_candidates(held, cooled)
+        free = s.get("cash_sol", 0) - 0.05 + sum(p["value_usd"] / sol_usd * 0.97 for p in dead)
+        slots = F["max_pos"] - (len(pos) - len(dead) - len(legacy))
+        # 2) efectivo (o lo que liberó el time stop) → mejor candidato de la franja
+        while cands and slots > 0 and free >= F["min_buy_sol"] and len(new_buys) + len(buys_today) < F["max_auto_buys_day"]:
+            c = cands.pop(0)
+            sol = min(free, eq_sol * F["max_frac"]) * (0.5 if c["factory"] else 1.0)
+            if sol < F["min_buy_sol"]:
+                break
+            orders.append(self.fast_buy(c, sol)); notes.append(self.thesis_note(d, c)); new_buys.append(c["sym"])
+            free -= sol; slots -= 1
+        # 3) posiciones viejas (fuera de la franja): se rotan a medida que aparecen candidatos, la más débil primero
+        legacy.sort(key=lambda p: p.get("mult") or 1)
+        n_fast = len(pos) - len(dead) - len(legacy) + len(new_buys)
+        while legacy and cands and len(new_buys) + len(buys_today) < F["max_auto_buys_day"] and n_fast < F["max_pos"]:
+            p = legacy.pop(0); c = cands.pop(0)
+            sol = min(p["value_usd"] / sol_usd * 0.97 + max(free, 0), eq_sol * F["max_frac"])
+            orders.append({"action": "sell", "mint": p["mint"], "frac": 1.0, "why": "rotation into the plan's own range"})
+            orders.append(self.fast_buy(c, sol)); new_buys.append(c["sym"]); free = 0; n_fast += 1
+            notes.append(f"Rotating {p['symbol']} ({p.get('mult', 1):.2f}x) out: it is a larger, slower token than this plan is meant to hold. Capital moves to {c['sym']}.")
+            notes.append(self.thesis_note(d, c))
+        if not orders and s.get("cash_sol", 0) - 0.05 > eq_sol * LIM["idle_frac"] and now - bstate.get("_noted_no_cands", 0) > 6 * 3600:
+            notes.append("Idle cash, but nothing in the $300K–3M range passes the filters and the anti-rug check this hour. The range is rescanned every hour.")
+            bstate["_noted_no_cands"] = now
+        return orders, notes, new_buys
+
+    def fast_buy(self, c, sol):
+        F = FAST
+        return {"action": "buy", "mint": c["mint"], "symbol": c["sym"], "sol": round(sol, 4), "stop": F["stop"], "trail": F["trail"], "trail_after": F["trail_after"],
+                "tp": F["tp"], "thesis": f"Fast plan: ${c['mcap'] / 1e6:.1f}M token moving ({c['ch24h']:+.0%} 24h) bought on a pullback ({c['from_hi']:.0%} of its 3-day high); clean anti-rug check. "
+                                         "Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x."}
+
     def buy_order(self, d, c, sol):
         stop = 0.30 if (c.get("mcap") or 0) >= 2e6 else 0.35
         return {"action": "buy", "mint": c["mint"], "symbol": c["sym"], "sol": round(sol, 4), "stop": stop, "trail": 0.35, "trail_after": 1.6,
@@ -300,7 +419,7 @@ class Brain:
                  f"En contra: bundlers {r.get('bundlers%') or 0:.0f}%" + (", creador con muchos lanzamientos (tamaño a la mitad)" if c["factory"] else "") + "; un stop de 30–35% puede ejecutarse más abajo en una caída rápida.",
                  f"{c['sym']}: ${c['mcap'] / 1e6:.1f}M market cap, ${c['liq'] / 1e3:.0f}K liquidity, 24h volume {c['vol_mcap']:.1f}x its value, {c.get('holders')} holders, top 10 hold {c.get('top10', 0):.0f}%; "
                  f"24h {c['ch24h']:+.0%}, at {c['from_hi']:.0%} of its 3-day high. Anti-rug: clean (common-funder groups {dd.get('clusters_sospechosos_pct')}%). "
-                 f"Against: bundlers {r.get('bundlers%') or 0:.0f}%" + (", creator launched many tokens (half size)" if c["factory"] else "") + "; a 30–35% stop can fill lower in a fast drop.")
+                 f"Against: bundlers {r.get('bundlers%') or 0:.0f}%" + (", creator launched many tokens (half size)" if c["factory"] else "") + ("; a 25% stop can fill lower in a fast drop; small tokens can halve in an hour." if d["profile"] == "fast" else "; a 30–35% stop can fill lower in a fast drop."))
 
     def traditional(self, d, s, bstate):
         """Regla del plan: cada activo arriba de su promedio de 20 días (+1%) ocupa un cuarto del plan; abajo (−1%) vuelve a USDC."""
@@ -366,6 +485,9 @@ class Brain:
         if d["profile"] == "aggressive":
             o2, n2, new_buys = self.aggressive(d, s, st_dir, self.regime.get("state"), bstate)
             orders += o2; notes += n2
+        elif d["profile"] == "fast":
+            o2, n2, new_buys = self.fast(d, s, self.regime.get("state"), bstate)
+            orders += o2; notes += n2
         elif d["profile"] == "traditional":
             o2, n2 = self.traditional(d, s, bstate)
             orders += o2; notes += n2
@@ -408,6 +530,7 @@ class Brain:
         self.update_regime()
         if self.regime.get("state") != "risk_off":
             self.refresh_candidates(self.needs_candidates(modes))
+            self.refresh_fast(modes.get("agresivo", "off") != "off")
         for key, d in DESKS.items():
             if modes.get(key, "off") == "off":
                 continue
