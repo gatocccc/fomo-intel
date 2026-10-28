@@ -118,3 +118,4 @@ footer img{width:36px;height:36px;border-radius:50%;border:2px solid var(--ink)}
   .card,.lab{padding:18px}
   .btn{white-space:normal;text-align:center}
 }
+.plan .pct.off{font-size:20px;line-height:1.05;max-width:7em}

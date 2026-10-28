@@ -10,13 +10,19 @@ window.Semaforo = (() => {
       prelim = prelim || p.preliminar;
       const b = document.createElement("button");
       b.type = "button"; b.className = "plan"; b.setAttribute("aria-pressed", selected === p.plan);
+      const out = p.prob_objetivo < 0.01;
       const sug = p.color === "red" && p.objetivo_sugerido ? ` · with this plan, ${fmtX(p.objetivo_sugerido)} is more realistic` : "";
+      const line = out
+        ? `This table is not built for that goal${p.objetivo_sugerido ? `: it aims for up to ${fmtX(p.objetivo_sugerido)} in this time` : ""}. Pick a louder table.`
+        : `Lose half: ${pct(p.prob_perder_mitad)} · most likely: ${fmtX(p.mediana)}${sug}`;
       b.innerHTML = `<span class="light ${p.color}" aria-hidden="true"></span>
-        <span><b></b><small></small><small>Lose half: ${pct(p.prob_perder_mitad)} · most likely: ${fmtX(p.mediana)}${sug}</small></span>
-        <span class="pct">${pct(p.prob_objetivo)}<small>to get there</small></span>`;
+        <span><b></b><small></small><small class="ln"></small></span>
+        <span class="pct">${out ? "Out of range" : pct(p.prob_objetivo)}<small>${out ? "for this table" : "to get there"}</small></span>`;
+      b.querySelector(".ln").textContent = line;
+      if (out) b.querySelector(".pct").classList.add("off");
       b.querySelector("b").textContent = p.nombre;
       b.querySelector("small").textContent = p.mercados;
-      b.setAttribute("aria-label", `${p.nombre}: ${pct(p.prob_objetivo)} to get there, ${p.color} light, ${pct(p.prob_perder_mitad)} to lose half`);
+      b.setAttribute("aria-label", out ? `${p.nombre}: out of range for this goal` : `${p.nombre}: ${pct(p.prob_objetivo)} to get there, ${p.color} light, ${pct(p.prob_perder_mitad)} to lose half`);
       b.onclick = () => onPick && onPick(p.plan);
       box.appendChild(b);
     });

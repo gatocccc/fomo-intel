@@ -84,7 +84,7 @@
 const $ = s => document.querySelector(s);
 const post = (url, body) => fetch(url, {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body || {})})
   .then(async r => { const d = await r.json(); if (!r.ok) throw new Error(d.error || "Something went wrong."); return d; });
-let fees = {trade_pct: 0.5, success_pct_external: 10}, sem = null;
+let fees = {trade_pct_holder: 1, trade_pct_external: 2, success_pct_external: 10}, sem = null;
 
 function showAuth(which) {
   $("#auth").hidden = false; $("#dash").hidden = true; $("#logout").hidden = true;
@@ -115,7 +115,7 @@ function fill(u) {
   const holder = u.holder_status === "holder";
   $("#d-type").innerHTML = holder ? `<span class="badge ok">Genesis holder · ${u.ducks} ducks</span>`
     : u.holder_status === "pending" ? `<span class="badge">Holder check pending</span>` : `<span class="badge">Standard</span>`;
-  $("#d-fees").textContent = holder || u.holder_status === "pending" ? `${fees.trade_pct}% per trade, nothing on profits` : `${fees.trade_pct}% per trade + ${fees.success_pct_external}% of every winning trade`;
+  $("#d-fees").textContent = holder || u.holder_status === "pending" ? `${fees.trade_pct_holder}% per trade, nothing on profits` : `${fees.trade_pct_external}% per trade + ${fees.success_pct_external}% of every winning trade`;
   if (u.eth) { $("#eth-st").className = "status ok"; $("#eth-st").textContent = `Linked: ${u.eth.slice(0, 6)}…${u.eth.slice(-4)}`; }
   const f = $("#f-set");
   if (u.goal) f.goal.value = u.goal; if (u.days) f.days.value = u.days;

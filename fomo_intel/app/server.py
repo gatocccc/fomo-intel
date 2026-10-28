@@ -41,7 +41,8 @@ APP.mkdir(parents=True, exist_ok=True)
 DB = APP / "app.db"
 PORT = int(os.getenv("APP_PORT", "8770"))
 ETH_RPC = os.getenv("ETH_RPC_URL", "https://ethereum-rpc.publicnode.com")
-FEES = {"trade_pct": float(os.getenv("FEE_TRADE_PCT", "0.5")), "success_pct_external": float(os.getenv("FEE_SUCCESS_PCT", "10"))}
+FEES = {"trade_pct_holder": float(os.getenv("FEE_TRADE_HOLDER_PCT", "1")), "trade_pct_external": float(os.getenv("FEE_TRADE_EXTERNAL_PCT", "2")),
+        "success_pct_external": float(os.getenv("FEE_SUCCESS_PCT", "10"))}
 SOL_RPC = os.getenv("SOLANA_RPC_URL") or f"https://mainnet.helius-rpc.com/?api-key={os.getenv('HELIUS_API_KEY', '')}"
 SESSION_DAYS = 30
 EMAIL = re.compile(r"^[^@\s]{1,64}@[^@\s]{1,190}\.[^@\s]{2,}$")
