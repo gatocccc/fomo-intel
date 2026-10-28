@@ -1,0 +1,20 @@
+== 119_cerebro_real 2026-10-28T19:07:03Z ==
+fomo-brain: active
+Oct 28 19:07:02 simplai-prod systemd[1]: fomo-brain.service: Deactivated successfully.
+Oct 28 19:07:02 simplai-prod systemd[1]: Stopped fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta).
+Oct 28 19:07:02 simplai-prod systemd[1]: fomo-brain.service: Consumed 14.116s CPU time.
+Oct 28 19:07:02 simplai-prod systemd[1]: Started fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta).
+Oct 28 19:07:03 simplai-prod python3[1492946]: 2026-10-28 19:07:03,609 INFO brain: [mesa/shadow] Cerebro automático: compra: ['set 4kjruq', 'buy DOAS']
+Oct 28 19:07:03 simplai-prod python3[1492946]: 2026-10-28 19:07:03,611 INFO brain: [agresivo/shadow] Automatic brain: new position: ['buy DOAS']
+Oct 28 19:07:23 simplai-prod systemd[1]: Stopping fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta)...
+Oct 28 19:07:23 simplai-prod systemd[1]: fomo-brain.service: Deactivated successfully.
+Oct 28 19:07:23 simplai-prod systemd[1]: Stopped fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta).
+Oct 28 19:07:23 simplai-prod systemd[1]: Started fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta).
+Oct 28 19:07:24 simplai-prod python3[1493210]: 2026-10-28 19:07:24,481 INFO brain: [mesa/live] Cerebro automático: compra: ['set 4kjruq', 'buy DOAS']
+Oct 28 19:07:24 simplai-prod python3[1493210]: 2026-10-28 19:07:24,485 INFO brain: [agresivo/live] Automatic brain: new position: ['buy DOAS']
+state/desk/auto:
+auto-mesa-20261028-1907.json
+
+state/plan_agresivo/auto:
+auto-agresivo-20261028-1907.json
+== exit 0 ==

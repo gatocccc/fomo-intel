@@ -1,17 +1,17 @@
 {
- "now": 1793214285.2497377,
+ "now": 1793214579.8378556,
  "start_ts": 1793203599.7169404,
  "start_usd": 200.84,
  "start_sol": 1.99,
  "goal_usd": 401.68,
  "days": 30,
  "day": 1,
- "equity_usd": 210.13,
- "equity_sol": 2.0547,
- "cash_sol": 0.7272,
- "positions_usd": 135.76,
- "sol_usd": 102.27,
- "mult": 1.046,
+ "equity_usd": 206.18,
+ "equity_sol": 2.0186,
+ "cash_sol": 0.0427,
+ "positions_usd": 201.82,
+ "sol_usd": 102.14,
+ "mult": 1.027,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,7 +24,7 @@
    "tokens_initial": 8831.632745155,
    "sol_in": 0.65723188,
    "sol_out": 0.0,
-   "peak_usd": 0.008965929615085431,
+   "peak_usd": 0.008018336896649027,
    "stop": 0.3,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.008583318690209143,
-   "mult": 1.143,
-   "value_usd": 75.8
+   "last_usd": 0.00800370784331141,
+   "mult": 1.065,
+   "value_usd": 70.69
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -54,7 +54,7 @@
    "tokens_initial": 4225.637077,
    "sol_in": 0.6055798,
    "sol_out": 0.0,
-   "peak_usd": 0.014499510984374714,
+   "peak_usd": 0.014708216996128225,
    "stop": 0.3,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -71,9 +71,39 @@
    "tp_done": [],
    "thesis": "52K holders, top 10 hold 11%, real volume at 34% of market cap per day, 20% below weekly high. Clean anti-rug check.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.014189130816827517,
-   "mult": 0.981,
-   "value_usd": 59.96
+   "last_usd": 0.014708216996128225,
+   "mult": 1.017,
+   "value_usd": 62.15
+  },
+  {
+   "mint": "27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump",
+   "symbol": "DOAS",
+   "opened_ts": 1793214457.0600228,
+   "entry_usd": 0.004873045585773435,
+   "tokens": 14326.846434,
+   "tokens_initial": 14326.846434,
+   "sol_in": 0.68445104,
+   "sol_out": 0.0,
+   "peak_usd": 0.004873045585773435,
+   "stop": 0.3,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
+   "id": "auto-agresivo-20261028-1907",
+   "last_usd": 0.00481462654505116,
+   "mult": 0.988,
+   "value_usd": 68.98
   }
  ],
  "equity": [
@@ -220,10 +250,28 @@
   [
    1793214132,
    213.03
+  ],
+  [
+   1793214424,
+   202.09
   ]
  ],
  "closed": [],
  "trades": [
+  {
+   "ts": 1793214457.0597723,
+   "side": "buy",
+   "mint": "27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump",
+   "symbol": "DOAS",
+   "ok": true,
+   "sol": 0.68445104,
+   "tokens": 14326.846434,
+   "price_usd": 0.004873045586,
+   "slip": 1.47,
+   "sig": "3BwWnLbTmqYT7ouvwnkNVNkryoa7yDcgnkG2ZT1FDH5rWoyvA6ym85ty5rUL4VX74jtBzDsB3CzBzZkKUZUaT8jB",
+   "error": "",
+   "id": "auto-agresivo-20261028-1907"
+  },
   {
    "ts": 1793204961.3594608,
    "side": "buy",
@@ -255,6 +303,20 @@
  ],
  "journal": [
   {
+   "ts": 1793214457.0645432,
+   "title": "Execution",
+   "text": "buy DOAS: bought 14,327 DOAS for 0.6845 SOL at $0.00487305 (slippage +1.5%)",
+   "kind": "execution",
+   "id": "auto-agresivo-20261028-1907"
+  },
+  {
+   "ts": 1793214457.064388,
+   "title": "Automatic brain: new position",
+   "text": "Idle cash: 0.677 SOL (34% of the plan). Putting it to work in DOAS.\n\nDOAS: $4.7M market cap, $184K liquidity, 24h volume 0.2x its value, 2815 holders, top 10 hold 1%; 24h -98%, at 2% of its 3-day high. Anti-rug: clean (common-funder groups 0%). Against: bundlers 0%; a 30–35% stop can fill lower in a fast drop.",
+   "kind": "decisión",
+   "id": "auto-agresivo-20261028-1907"
+  },
+  {
    "ts": 1793204961.3617384,
    "title": "Ejecución",
    "text": "buy GTA6: compró 8,832 GTA6 por 0.6572 SOL a US$0.00751249 (slippage +4.3%)\nbuy SI: compró 4,226 SI por 0.6056 SOL a US$0.0144672 (slippage +3.4%)",
@@ -282,19 +344,19 @@
  "plan": "agresivo",
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
-  "mode": "shadow",
-  "last_run": 1793214123.7884073,
+  "mode": "live",
+  "last_run": 1793214444.4827425,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
-   "ts": 1793214123.7892733,
+   "ts": 1793214444.4847932,
    "title": "Automatic brain: new position",
    "orders": 1,
-   "mode": "shadow"
+   "mode": "live"
   },
   "last_note": null,
   "trad_status": null,
-  "sol_ch24h": 1.2,
-  "sol_vs_ma20": -0.03
+  "sol_ch24h": 0.9,
+  "sol_vs_ma20": -0.0307
  }
 }

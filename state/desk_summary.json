@@ -1,17 +1,17 @@
 {
- "now": 1793214285.243685,
+ "now": 1793214579.738931,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 126.49,
- "equity_sol": 1.2369,
- "cash_sol": 0.3781,
- "positions_usd": 87.82,
- "sol_usd": 102.27,
- "mult": 1.277,
+ "equity_usd": 121.49,
+ "equity_sol": 1.1894,
+ "cash_sol": 0.043,
+ "positions_usd": 117.09,
+ "sol_usd": 102.14,
+ "mult": 1.226,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,8 +24,8 @@
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
    "sol_out": 0.0,
-   "peak_usd": 0.008965929615085431,
-   "stop": -0.05,
+   "peak_usd": 0.008018336896649027,
+   "stop": -0.224,
    "trail": 0.35,
    "trail_after": 1.6,
    "tp": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.008583318690209143,
-   "mult": 1.773,
-   "value_usd": 63.54
+   "last_usd": 0.00800370784331141,
+   "mult": 1.653,
+   "value_usd": 59.25
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -71,9 +71,39 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.0036583935359817735,
-   "mult": 0.896,
-   "value_usd": 24.28
+   "last_usd": 0.003674072387088927,
+   "mult": 0.9,
+   "value_usd": 24.38
+  },
+  {
+   "mint": "27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump",
+   "symbol": "DOAS",
+   "opened_ts": 1793214457.0499268,
+   "entry_usd": 0.0049188131192978365,
+   "tokens": 6948.882933,
+   "tokens_initial": 6948.882933,
+   "sol_in": 0.33509398,
+   "sol_out": 0.0,
+   "peak_usd": 0.0049188131192978365,
+   "stop": 0.3,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
+   "id": "auto-mesa-20261028-1907",
+   "last_usd": 0.00481462654505116,
+   "mult": 0.979,
+   "value_usd": 33.46
   }
  ],
  "equity": [
@@ -1396,6 +1426,10 @@
   [
    1793214132,
    129.17
+  ],
+  [
+   1793214424,
+   121.49
   ]
  ],
  "closed": [
@@ -1427,6 +1461,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793214457.0492864,
+   "side": "buy",
+   "mint": "27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump",
+   "symbol": "DOAS",
+   "ok": true,
+   "sol": 0.33509398,
+   "tokens": 6948.882933,
+   "price_usd": 0.004918813119,
+   "slip": 2.42,
+   "sig": "4pwAFpbgQLdmaavQskk3tJYTnd8CSBsNxUUCm5frKnoypP1qLHHcnfA5GbpAyLhjhNBsSViGLe23MYc9F6pqDeFj",
+   "error": "",
+   "id": "auto-mesa-20261028-1907"
+  },
   {
    "ts": 1793206937.9727077,
    "side": "sell",
@@ -1513,6 +1561,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793214457.0522728,
+   "title": "Ejecución",
+   "text": "set 4kjruq: ajustó GTA6: stop=-0.224\nbuy DOAS: compró 6,949 DOAS por 0.3351 SOL a US$0.00491881 (slippage +2.4%)",
+   "kind": "ejecución",
+   "id": "auto-mesa-20261028-1907"
+  },
+  {
+   "ts": 1793214457.0512261,
+   "title": "Cerebro automático: compra",
+   "text": "GTA6: llegó a 1.63x de pico; subo el stop a 1.22x (antes 1.05x).\n\nEfectivo ocioso: 0.328 SOL (28% del patrimonio). Lo pongo a trabajar en DOAS.\n\nDOAS: US$4.7M, liquidez US$184K, volumen 24 h 0.2x su valor, 2815 holders, top 10 1%; 24 h -98%, 2% del máximo de 3 días. Anti-rug LIMPIO (grupos con fondeador común 0%). En contra: bundlers 0%; un stop de 30–35% puede ejecutarse más abajo en una caída rápida.",
+   "kind": "decisión",
+   "id": "auto-mesa-20261028-1907"
+  },
   {
    "ts": 1793206937.9745176,
    "title": "Salida automática",
@@ -1618,19 +1680,19 @@
  "plan": null,
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
-  "mode": "shadow",
-  "last_run": 1793214123.7868884,
+  "mode": "live",
+  "last_run": 1793214444.4787283,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
-   "ts": 1793214123.7878313,
+   "ts": 1793214444.4809437,
    "title": "Cerebro automático: compra",
    "orders": 2,
-   "mode": "shadow"
+   "mode": "live"
   },
   "last_note": null,
   "trad_status": null,
-  "sol_ch24h": 1.2,
-  "sol_vs_ma20": -0.03
+  "sol_ch24h": 0.9,
+  "sol_vs_ma20": -0.0307
  }
 }
