@@ -1,17 +1,17 @@
 {
- "now": 1793227801.3779535,
+ "now": 1793228076.980794,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 115.67,
- "equity_sol": 1.1278,
+ "equity_usd": 117.14,
+ "equity_sol": 1.1432,
  "cash_sol": 0.2046,
- "positions_usd": 94.68,
- "sol_usd": 102.56,
- "mult": 1.167,
+ "positions_usd": 96.17,
+ "sol_usd": 102.47,
+ "mult": 1.182,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.007732175651827226,
-   "mult": 1.597,
-   "value_usd": 57.24
+   "last_usd": 0.007881903757314564,
+   "mult": 1.628,
+   "value_usd": 58.35
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.003301660568840978,
-   "mult": 0.809,
-   "value_usd": 21.91
+   "last_usd": 0.003392307413550378,
+   "mult": 0.831,
+   "value_usd": 22.51
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.013864889252413361,
-   "mult": 0.926,
-   "value_usd": 15.53
+   "last_usd": 0.013668357007424158,
+   "mult": 0.913,
+   "value_usd": 15.31
   }
  ],
  "equity": [
@@ -1602,6 +1602,10 @@
   [
    1793227526,
    116.11
+  ],
+  [
+   1793227832,
+   116.33
   ]
  ],
  "closed": [
