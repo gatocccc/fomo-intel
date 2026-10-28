@@ -3,109 +3,281 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nonco Autopilot</title>
-<meta name="description" content="An autopilot that trades for you and tells you the truth about your odds. By the Nonconformist Ducks.">
+<title>Lloyd's Tavern · Trade shitcoins with an edge</title>
+<meta name="description" content="A trading bot for degens that checks who is behind every token, keeps its own stops and shows you every move. By the Nonconformist Ducks.">
+<meta name="theme-color" content="#211610">
+<link rel="icon" href="/mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
+<style>
+/* landing only */
+body{background:
+  radial-gradient(900px 520px at 78% 120px, rgba(227,163,59,.16), transparent 70%),
+  repeating-linear-gradient(90deg, rgba(0,0,0,.10) 0 1px, transparent 1px 132px),
+  var(--mist)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;padding:24px 0 0}
+.hero h1{font-size:clamp(46px,7.4vw,96px);line-height:.95;margin-bottom:28px;max-width:9em}
+.hero .lede{font-size:20px}
+.pitch{padding-bottom:64px}
+header.top .btn,.mark{white-space:nowrap}
+.hero .doors{font-size:14.5px;color:var(--reed);margin:16px 0 0}
+.lloyd{position:relative;margin:0}
+.lloyd svg{display:block;width:100%;height:auto;max-width:460px;margin-left:auto}
+.lloyd figcaption{position:absolute;left:8%;bottom:14px;font:400 15px/1.2 var(--display);color:#F6D9A8;transform:rotate(-2deg)}
+
+/* the chalkboard */
+.board-wrap{padding:0 0 88px}
+.board{position:relative;background:
+  radial-gradient(120% 90% at 30% 20%, rgba(255,255,255,.06), transparent 60%),
+  var(--chalk);color:var(--chalk-ink);border-radius:10px;padding:40px clamp(20px,4vw,56px) 36px;
+  border:14px solid #5A3720;box-shadow:inset 0 0 0 2px #2B1A0F, 0 30px 60px -30px rgba(0,0,0,.8);transform:rotate(-.4deg)}
+.board h2{font:400 clamp(30px,4vw,44px)/1.05 var(--display);margin:0 0 6px}
+.board .say{color:var(--chalk-dim);margin:0 0 28px;max-width:40em}
+.board .say a{color:var(--chalk-ink)}
+.tally{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:0 0 28px;padding:0 0 24px;border-bottom:2px dashed rgba(233,237,228,.25)}
+.tally span{display:block;color:var(--chalk-dim);font-size:14.5px}
+.tally strong{display:block;font:400 clamp(30px,3.6vw,44px)/1.1 var(--display);font-variant-numeric:tabular-nums}
+.slate{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);column-gap:48px}
+.slate li{display:flex;align-items:baseline;gap:10px;padding:9px 0;font-size:17px}
+.slate li b{font:400 20px/1.2 var(--display)}
+.slate li i{flex:1;border-bottom:2px dotted rgba(233,237,228,.3);transform:translateY(-4px)}
+.slate li span{font-variant-numeric:tabular-nums;white-space:nowrap}
+.slate li.open span{color:#F6D9A8}
+.slate .empty{color:var(--chalk-dim)}
+
+/* the night, in order */
+.night{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:36px 40px;counter-reset:n}
+.night li{counter-increment:n;padding-top:18px;border-top:2px solid var(--line)}
+.night li::before{content:counter(n);display:block;font:400 40px/1 var(--display);color:var(--bill);margin-bottom:12px}
+.night h3{font:400 21px/1.2 var(--display);margin:0 0 8px}
+.night p{margin:0;color:var(--reed);font-size:16px}
+
+/* tables */
+.tables{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+
+/* house rules */
+.rules{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+.rules div{padding:22px 0;border-bottom:1px solid var(--line)}
+.rules h3{font:400 21px/1.2 var(--display);margin:0 0 6px}
+.rules p{margin:0;color:var(--reed);font-size:16px}
+.pocket{margin-top:56px;background:var(--oxblood);border-radius:22px;padding:36px clamp(20px,4vw,48px);display:grid;grid-template-columns:1fr 1.2fr;gap:40px}
+.pocket h2{margin:0}
+.pocket p{margin:12px 0 0;color:#EAD2C2}
+.pocket ul{list-style:none;margin:0;padding:0}
+.pocket li{padding:12px 0;border-bottom:1px solid rgba(242,230,204,.18);color:#EAD2C2;font-size:16px}
+.pocket li:last-child{border-bottom:0}
+.pocket li strong{display:block;color:var(--pond);font:400 18px/1.3 var(--display)}
+
+/* the tab */
+table.tab{width:100%;border-collapse:collapse;background:var(--paper);border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.tab th,.tab td{text-align:left;padding:18px 20px;border-bottom:1px solid var(--line);vertical-align:top}
+.tab thead th{font:400 18px/1.2 var(--display);background:var(--plank)}
+.tab tbody th{font-weight:500;color:var(--reed)}
+.tab tr:last-child th,.tab tr:last-child td{border-bottom:0}
+
+.risks{columns:2;column-gap:56px}
+.risks p{break-inside:avoid;margin:0 0 20px;color:var(--reed)}
+.risks strong{color:var(--pond);font-weight:700}
+
+.last{text-align:left;padding-bottom:96px}
+.last h2.big{font-size:clamp(36px,5vw,60px)}
+
+@media (max-width:900px){
+  .hero,.tables,.pocket{grid-template-columns:1fr}
+  .lloyd svg{max-width:360px;margin:0 auto}
+  .night{grid-template-columns:1fr 1fr}
+  .slate{grid-template-columns:1fr}
+  .rules{grid-template-columns:1fr}
+  .risks{columns:1}
+}
+@media (max-width:560px){
+  .night,.tally{grid-template-columns:1fr}
+  .tally{gap:12px}
+  .board{border-width:10px;transform:none}
+  header.top nav .btn{padding:10px 14px;font-size:14.5px}
+  header.top nav .btn[href='/plans/']{display:none}
+  .pitch{padding-bottom:8px}
+}
+</style>
 </head>
 <body>
 <div class="wrap">
 <header class="top">
-  <a class="mark" href="/" aria-label="Nonco Autopilot, home">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="15" r="10" fill="#123236"/><path d="M21 13c4 0 8 1 9 3-1 2-5 3-9 3z" fill="#F5A524"/><circle cx="15" cy="12" r="2" fill="#F6F8F8"/></svg>
-    Nonco Autopilot
+  <a class="mark" href="/" aria-label="Lloyd's Tavern, home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="18" r="11" fill="#F2C14E"/><path d="M5 20v-5C5 8.5 10 5 16 5s11 3.5 11 10v5h-2.2v-6.6H7.2V20z" fill="#4A2C1A"/><circle cx="12" cy="17.4" r="3" fill="none" stroke="#211610" stroke-width="1.4"/><circle cx="20" cy="17.4" r="3" fill="none" stroke="#211610" stroke-width="1.4"/><path d="M15 17.2h2" stroke="#211610" stroke-width="1.2"/><ellipse cx="16" cy="24" rx="6" ry="2.6" fill="#E8742A"/></svg>
+    Lloyd's Tavern
   </a>
   <nav style="display:flex;gap:10px"><a class="btn ghost" href="/plans/">Live plans</a><a class="btn ghost" href="/app/#login">Log in</a></nav>
 </header>
 
 <div class="hero">
-  <div>
-    <h1>An autopilot that trades for you, and tells you the truth about your odds.</h1>
-    <p class="lede">Fund your wallet. Choose how much you want to make, and by when. The bot picks, buys, sells and screens out rugs, and you can watch every move it makes.</p>
-    <div class="cta"><a class="btn" href="/app/#signup">Create account</a><a class="btn ghost" href="#desk">See the live desk</a></div>
+  <div class="pitch">
+    <h1>Trade shitcoins with an edge.</h1>
+    <p class="lede">Lloyd's Tavern is where the Nonconformist Ducks drink and trade. A bot works the bar for you: it checks who is behind every token before it buys, keeps its own stops, and writes down why it made every move. You keep the wallet. It keeps the receipts.</p>
+    <div class="cta"><a class="btn" href="#board">See tonight's board</a><a class="btn ghost" href="/plans/">Watch the live plans</a></div>
+    <p class="doors">The doors are not open yet. Nonco Genesis holders get the first stools.</p>
   </div>
 
-  <div class="lab" aria-labelledby="lab-t">
-    <h2 id="lab-t">What is your goal?</h2>
-    <p class="sub">Move the dials. Each plan shows your odds of getting there, and your odds of losing half.</p>
-    <div class="knobs">
-      <div class="knob"><label for="obj">Goal</label><output id="obj-o" for="obj">x1.5</output><input id="obj" type="range" min="1.1" max="10" step="0.1" value="1.5"></div>
-      <div class="knob"><label for="dias">Timeframe</label><output id="dias-o" for="dias">30 days</output><input id="dias" type="range" min="7" max="90" step="1" value="30"></div>
+  <figure class="lloyd">
+    <svg viewBox="0 0 420 440" role="img" aria-labelledby="lloyd-t">
+      <title id="lloyd-t">Lloyd, a duck with a bowl cut and round glasses, leaning on the bar with a pint</title>
+      <defs>
+        <radialGradient id="lamp"><stop offset="0" stop-color="#E3A33B" stop-opacity=".42"/><stop offset=".6" stop-color="#E3A33B" stop-opacity=".12"/><stop offset="1" stop-color="#E3A33B" stop-opacity="0"/></radialGradient>
+        <linearGradient id="beer" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0B54A"/><stop offset="1" stop-color="#B8661C"/></linearGradient>
+        <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7A4826"/><stop offset="1" stop-color="#4E2D17"/></linearGradient>
+      </defs>
+      <circle cx="210" cy="200" r="200" fill="url(#lamp)"/>
+      <!-- body in a bottle-green tee -->
+      <path d="M78 352c6-74 62-112 132-112s126 38 132 112z" fill="#3F5E4A"/>
+      <path d="M176 246q34 22 68 0" fill="none" stroke="#2F4738" stroke-width="6" stroke-linecap="round"/>
+      <!-- head -->
+      <circle cx="210" cy="188" r="100" fill="#F2C14E"/>
+      <ellipse cx="150" cy="222" rx="18" ry="11" fill="#EE9F5C" opacity=".45"/>
+      <ellipse cx="270" cy="222" rx="18" ry="11" fill="#EE9F5C" opacity=".45"/>
+      <!-- bill -->
+      <ellipse cx="210" cy="242" rx="64" ry="24" fill="#E8742A"/>
+      <ellipse cx="210" cy="234" rx="56" ry="12" fill="#F28C3E"/>
+      <path d="M156 246q54 14 108 0" fill="none" stroke="#B9531A" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="196" cy="230" r="3" fill="#B9531A"/><circle cx="224" cy="230" r="3" fill="#B9531A"/>
+      <!-- eyes, glancing at the pint -->
+      <circle cx="172" cy="190" r="17" fill="#FFFDF6"/><circle cx="248" cy="190" r="17" fill="#FFFDF6"/>
+      <circle cx="178" cy="193" r="8" fill="#211610"/><circle cx="254" cy="193" r="8" fill="#211610"/>
+      <circle cx="181" cy="190" r="2.4" fill="#fff"/><circle cx="257" cy="190" r="2.4" fill="#fff"/>
+      <!-- round glasses -->
+      <g fill="rgba(255,255,255,.1)" stroke="#241811" stroke-width="7">
+        <circle cx="172" cy="190" r="29"/><circle cx="248" cy="190" r="29"/>
+      </g>
+      <path d="M201 188q9-8 18 0M143 186l-30-6M277 186l30-6" fill="none" stroke="#241811" stroke-width="6" stroke-linecap="round"/>
+      <path d="M154 176q8-8 18-6" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+      <!-- the bowl cut: dead-straight fringe -->
+      <path d="M104 210v-48c0-62 46-82 106-82s106 20 106 82v48h-19v-58H123v58z" fill="#4A2C1A"/>
+      <path d="M128 108c20-14 48-20 82-20" fill="none" stroke="#6E4428" stroke-width="7" stroke-linecap="round"/>
+      <g stroke="#34200F" stroke-width="3" stroke-linecap="round">
+        <path d="M132 146v-9M150 146v-10M168 146v-9M186 146v-10M204 146v-9M222 146v-10M240 146v-9M258 146v-10M276 146v-9M292 146v-8"/>
+      </g>
+      <!-- the bar -->
+      <rect x="0" y="338" width="420" height="22" rx="4" fill="#9A6236"/>
+      <rect x="0" y="356" width="420" height="84" fill="url(#wood)"/>
+      <path d="M0 384h120M150 384h270M0 412h210M240 412h180" stroke="#3C2211" stroke-width="2" opacity=".6"/>
+      <!-- left wing resting on the bar -->
+      <path d="M70 344c10-26 48-34 86-22 8 3 8 14 0 18-30 10-64 12-86 4z" fill="#E9B544"/>
+      <!-- the pint -->
+      <path d="M300 258h62l-6 82h-50z" fill="url(#beer)"/>
+      <path d="M300 258h62l-6 82h-50z" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3"/>
+      <path d="M362 274c18 0 22 12 20 30s-12 24-24 22" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="5"/>
+      <path d="M296 262c-2-14 12-20 20-14 6-10 20-10 26-2 8-8 24-4 22 10 2 8-6 12-12 10H306c-6 2-10-1-10-4z" fill="#F6EEDB"/>
+      <g fill="#FFE6B0" opacity=".8"><circle cx="318" cy="300" r="2.5"/><circle cx="336" cy="318" r="2"/><circle cx="344" cy="292" r="1.8"/><circle cx="324" cy="326" r="1.6"/></g>
+      <!-- right wing around the glass -->
+      <path d="M262 336c-6-22 10-44 40-46 14 0 18 14 8 22-12 10-24 20-48 24z" fill="#E9B544"/>
+    </svg>
+    <figcaption>Lloyd, at his usual stool</figcaption>
+  </figure>
+</div>
+</div>
+
+<div class="wrap board-wrap" id="board">
+  <div class="board" aria-labelledby="board-t">
+    <h2 id="board-t">On the board tonight</h2>
+    <p class="say">The bot has traded its own wallet in public since October 27. Real money, wins and losses, chalked up every minute. <a href="/plans/">See each plan's full tab</a>.</p>
+    <div class="tally">
+      <div><span>Walked in with</span><strong id="l-ini">—</strong></div>
+      <div><span>Holding now</span><strong id="l-eq">—</strong></div>
+      <div><span>Trades closed</span><strong id="l-ops">—</strong></div>
     </div>
-    <div class="plans" id="plans" role="group" aria-label="Plans"></div>
-    <p class="note" id="lab-note">Calculating…</p>
+    <ul class="slate" id="l-pos"><li class="empty">Wiping the board…</li></ul>
   </div>
 </div>
 
-<section aria-labelledby="does">
-  <h2 class="big" id="does">What it does while you are not looking</h2>
-  <p class="intro">We all lose money for the same reasons: we fall in love with a token, we skip the stop or move it, and we never have time to check who is behind it. The bot has none of those problems.</p>
-  <div class="grid4">
-    <div><h3>It checks who is behind it</h3><p>Before buying, it traces who funded the top holders, whether the creator is a token factory, whether bundlers are in, and whether it can actually sell. If it smells like a rug, it stays out.</p></div>
-    <div><h3>It moves its own stops</h3><p>When a position is winning, it raises the stop to lock in profit. If the creator sells or liquidity leaves, it exits without waiting.</p></div>
-    <div><h3>It keeps your money working</h3><p>If a position goes flat and something better shows up, it rotates. If nothing is good enough, it holds cash and tells you why.</p></div>
-    <div><h3>It learns from every mistake</h3><p>Every trade is logged with what the bot knew when it entered. Every loss gets a cause and a cost, and new rules are tested before they touch your money.</p></div>
+<div class="wrap">
+<section aria-labelledby="night-t">
+  <h2 class="big" id="night-t">How a night at the tavern goes</h2>
+  <p class="intro">Six steps, from the door to the bar and back out with your money.</p>
+  <ol class="night">
+    <li><h3>Make an account</h3><p>An email and a password. No app to install, no chat group to join.</p></li>
+    <li><h3>Pick a goal and a table</h3><p>Say how much you want to make, and by when. The odds light shows, before you put in a cent, how likely each plan is to get you there and how likely it is to cost you half.</p></li>
+    <li><h3>Get your own wallet</h3><p>One wallet per person, however many ducks you hold. The bot is allowed to swap inside it and nothing else.</p></li>
+    <li><h3>Fund it and let the bot trade</h3><p>It buys, sells, raises its stops and rotates out of what goes flat, following the plan you chose.</p></li>
+    <li><h3>Watch from the bar</h3><p>Every buy and every sell shows up in your dashboard with the reasoning behind it, as it happens.</p></li>
+    <li><h3>Leave whenever you like</h3><p>Withdraw to your own wallet, pause the bot, or sell everything on the spot.</p></li>
+  </ol>
+</section>
+
+<section aria-labelledby="tables-t">
+  <div class="tables">
+    <div>
+      <h2 class="big" id="tables-t">Pick your table</h2>
+      <p class="intro" style="margin-bottom:20px">Three plans, from the loud table at the back to the quiet one by the window. Move the dials and the light tells you the truth about your odds, green, yellow or red.</p>
+      <p class="intro" style="margin:0">If a goal is out of reach, it says so, and tells you what is more realistic.</p>
+    </div>
+    <div class="lab" aria-labelledby="lab-t">
+      <h2 id="lab-t">What are you here for?</h2>
+      <p class="sub">Each plan shows your odds of getting there, and your odds of losing half.</p>
+      <div class="knobs">
+        <div class="knob"><label for="obj">Goal</label><output id="obj-o" for="obj">x1.5</output><input id="obj" type="range" min="1.1" max="10" step="0.1" value="1.5"></div>
+        <div class="knob"><label for="dias">Timeframe</label><output id="dias-o" for="dias">30 days</output><input id="dias" type="range" min="7" max="90" step="1" value="30"></div>
+      </div>
+      <div class="plans" id="plans" role="group" aria-label="Plans"></div>
+      <p class="note" id="lab-note">Calculating…</p>
+    </div>
   </div>
 </section>
 
-<section aria-labelledby="safe">
-  <div class="split">
+<section aria-labelledby="rules-t">
+  <h2 class="big" id="rules-t">The house rules</h2>
+  <p class="intro">Most of us lose for the same reasons: we fall for a token, we move the stop, and we never check who is behind it. The bot was built to skip all three.</p>
+  <div class="rules">
+    <div><h3>It asks who is behind the token</h3><p>Before buying, it traces who funded the top holders, whether the creator is a token factory, whether bundlers are in, and whether it can actually sell. If it smells like a rug, it stays out.</p></div>
+    <div><h3>It never falls in love</h3><p>When a position is winning, it raises the stop to lock in profit. If the creator sells or liquidity leaves, it walks out without waiting.</p></div>
+    <div><h3>It keeps your money working</h3><p>If a position goes flat and something better turns up, it rotates. If nothing is good enough, it holds cash and tells you why.</p></div>
+    <div><h3>It remembers every bad night</h3><p>Every trade is logged with what the bot knew when it went in. Every loss gets a cause and a cost, and a new rule is tested before it touches your money.</p></div>
+  </div>
+
+  <div class="pocket">
     <div>
-      <h2 class="big" id="safe">Your money never leaves your wallet</h2>
-      <p class="intro">The bot can buy and sell. Nothing else. It cannot withdraw or send funds anywhere, and you can take your money out or switch it off at any time.</p>
+      <h2 class="big">Your money stays in your pocket</h2>
+      <p>The bot can buy and sell. It cannot withdraw, and it cannot send your funds anywhere.</p>
     </div>
-    <ul class="facts">
-      <li><strong>Swaps only</strong>Everything it buys lands back in your wallet.</li>
-      <li><strong>Your stop</strong>You choose how much you are willing to lose. If it gets there, everything moves to USDC and the bot pauses.</li>
-      <li><strong>Panic button</strong>Sell everything on the spot, from your dashboard.</li>
-      <li><strong>Nothing hidden</strong>Every buy and every sell, with its reasoning, in your dashboard.</li>
+    <ul>
+      <li><strong>Swaps only</strong>Everything it buys lands back in your own wallet.</li>
+      <li><strong>Your limit</strong>You choose how much you are willing to lose. If it gets there, everything moves to USDC and the bot stops.</li>
+      <li><strong>Panic button</strong>Sell everything at once, from your dashboard.</li>
+      <li><strong>Nothing under the counter</strong>Every move, with its reasoning, where you can see it.</li>
     </ul>
   </div>
 </section>
 
-<section aria-labelledby="price">
-  <h2 class="big" id="price">What it costs</h2>
-  <p class="intro">The per-trade fee covers infrastructure and upkeep. Nonco Genesis holders pay nothing on their profits.</p>
-  <table class="price">
-    <thead><tr><th scope="col"></th><th scope="col">Nonco Genesis holder</th><th scope="col">Everyone else</th></tr></thead>
+<section aria-labelledby="tab-t">
+  <h2 class="big" id="tab-t">The tab</h2>
+  <p class="intro">A small fee on every trade keeps the lights on. Nonco Genesis holders drink free on their profits.</p>
+  <table class="tab">
+    <thead><tr><th scope="col"><span class="sr" hidden>Fee</span></th><th scope="col">Nonco Genesis holders</th><th scope="col">Everyone else</th></tr></thead>
     <tbody>
       <tr><th scope="row">Per trade</th><td class="fee-trade">0.5%</td><td class="fee-trade">0.5%</td></tr>
-      <tr><th scope="row">On profits</th><td>Nothing</td><td><span id="fee-succ">10%</span> of every winning trade, whether or not you hit your goal</td></tr>
-      <tr><th scope="row">Seat</th><td>Priority</td><td>Waitlist</td></tr>
+      <tr><th scope="row">On profits</th><td>Nothing</td><td><span id="fee-succ">10%</span> of every winning trade, whether or not you reach your goal</td></tr>
+      <tr><th scope="row">Seat</th><td>First in the door</td><td>Waitlist</td></tr>
     </tbody>
   </table>
 </section>
 
-<section id="desk" aria-labelledby="desk-t">
-  <h2 class="big" id="desk-t">The desk, live</h2>
-  <p class="intro">The same brain has traded its own wallet in public since October 27. Wins and losses. <a href="/plans/">See each plan trading live</a>.</p>
-  <div class="live">
-    <div><span>Started with</span><strong id="l-ini">—</strong></div>
-    <div><span>Today</span><strong id="l-eq">—</strong></div>
-    <div><span>Closed trades</span><strong id="l-ops">—</strong></div>
-  </div>
-  <ul class="pos" id="l-pos"></ul>
-</section>
-
-<section aria-labelledby="risks">
-  <h2 class="big" id="risks">What you should know before you join</h2>
+<section aria-labelledby="risks-t">
+  <h2 class="big" id="risks-t">Before you pull up a stool</h2>
   <div class="risks">
-    <p><strong>You can lose.</strong> Memecoins move hard in both directions. The bot does not guarantee profits, and no honest tool can.</p>
-    <p><strong>It is still learning.</strong> The bot is new and changes every week. Joining early means joining a system that is still learning, with the risk that comes with it.</p>
+    <p><strong>You can lose.</strong> Memecoins move hard in both directions. The bot does not guarantee profits, and no honest tool can. An edge means better odds than walking in blind, not a sure thing.</p>
+    <p><strong>It is still learning.</strong> The bot is new and changes every week. Coming in early means trading with a system that is still finding its feet, and taking the risk that comes with that.</p>
     <p><strong>Stops can slip.</strong> In a sudden crash, a sell set at −30% can fill lower. That is why the bot spreads risk across several positions.</p>
-    <p><strong>Odds are estimates.</strong> They come from simulating thousands of paths with the bot's results. While real trades are few, they are preliminary, and the page says so.</p>
+    <p><strong>Odds are estimates.</strong> They come from simulating thousands of paths with the bot's own results. While real trades are few, they are preliminary, and the odds light says so.</p>
   </div>
 </section>
 
-<section id="join" aria-labelledby="join-t">
-  <h2 class="big" id="join-t">Join the beta</h2>
-  <p class="intro">Seats are limited so the bot never competes against its own users. Nonco Genesis holders go first. Create your account, set your goal, and we will email you when your seat opens.</p>
-  <div class="cta"><a class="btn" href="/app/#signup">Create account</a><a class="btn ghost" href="/app/#login">Log in</a></div>
+<section class="last" aria-labelledby="last-t">
+  <h2 class="big" id="last-t">The doors open soon</h2>
+  <p class="intro">We are still fitting out the place. Nonco Genesis holders, Canvas and Legacy, get the first stools; everyone else follows from the waitlist. Seats are limited so the bot never trades against its own customers. Until then, the house plans trade real money in public.</p>
+  <div class="cta"><a class="btn" href="/plans/">Watch the live plans</a></div>
 </section>
 
-<footer>Nonco Autopilot is a tool by the Nonconformist Ducks. It is not financial advice. Trading crypto assets carries the risk of total loss.</footer>
+<footer>Lloyd's Tavern is built by the Nonconformist Ducks. Nothing here is financial advice. Trading crypto assets can cost you everything you put in.</footer>
 </div>
 
 <script src="/semaforo.js"></script>
@@ -122,12 +294,17 @@ fetch("/api/config").then(r => r.json()).then(c => {
 fetch("/api/publico").then(r => r.json()).then(p => {
   $("#l-ini").textContent = usd(p.start_usd);
   $("#l-eq").textContent = p.equity_usd ? `${usd(p.equity_usd)} (${Semaforo.fmtX(p.multiple)})` : "—";
-  $("#l-ops").textContent = p.closed_trades != null ? `${p.closed_trades} · ${p.wins || 0} won` : "—";
-  const ul = $("#l-pos");
-  const row = (a, b) => { const li = document.createElement("li"); li.innerHTML = "<b></b><span></span><span></span>"; li.children[0].textContent = a; li.children[1].textContent = b; ul.appendChild(li); };
-  (p.positions || []).forEach(x => row(x.token, Semaforo.fmtX(x.multiple || 1) + " open"));
-  (p.recent || []).forEach(x => row(x.token, (x.result > 0 ? "+" : "") + Math.round(x.result * 100) + "% closed"));
-}).catch(() => {});
+  $("#l-ops").textContent = p.closed_trades != null ? `${p.closed_trades} (${p.wins || 0} won)` : "—";
+  const ul = $("#l-pos"); ul.innerHTML = "";
+  const row = (token, val, cls) => {
+    const li = document.createElement("li"); li.className = cls;
+    li.innerHTML = "<b></b><i aria-hidden='true'></i><span></span>";
+    li.children[0].textContent = token; li.children[2].textContent = val; ul.appendChild(li);
+  };
+  (p.positions || []).forEach(x => row(x.token, Semaforo.fmtX(x.multiple || 1) + ", still open", "open"));
+  (p.recent || []).forEach(x => row(x.token, (x.result > 0 ? "+" : "") + Math.round(x.result * 100) + "%, closed", "closed"));
+  if (!ul.children.length) ul.innerHTML = "<li class='empty'>Nothing on the board right now. The bot is holding cash.</li>";
+}).catch(() => { $("#l-pos").innerHTML = "<li class='empty'>The board could not be read right now. Try again in a minute.</li>"; });
 </script>
 </body>
 </html>

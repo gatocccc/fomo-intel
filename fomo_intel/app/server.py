@@ -1,4 +1,4 @@
-"""API de Nonco Autopilot (landing pública, cuentas de usuario y panel de administración).
+"""API de Lloyd's Tavern (ex Nonco Autopilot) (landing pública, cuentas de usuario y panel de administración).
 
 Escucha en 127.0.0.1:8770, detrás de nginx (app.nonconformistducks.com). Todo lo que ve el usuario está en inglés.
 Cuentas: email + contraseña (scrypt), sesión en cookie HttpOnly. Base: state/app/app.db (SQLite).
@@ -183,7 +183,7 @@ def holder_message(uid: int, eth: str) -> str:
     nonce = secrets.token_hex(8)
     with _lock:
         _nonces[f"{uid}:{eth.lower()}"] = (nonce, time.time())
-    return f"Nonco Autopilot: I own this wallet and want the holder benefit.\nWallet: {eth.lower()}\nCode: {nonce}"
+    return f"Lloyd's Tavern: I own this wallet and want the holder benefit.\nWallet: {eth.lower()}\nCode: {nonce}"
 
 
 def count_ducks(eth: str) -> int | None:
@@ -225,7 +225,7 @@ def verify_holder(u: sqlite3.Row, b: dict) -> tuple[int, dict]:
             c.execute("UPDATE users SET eth=?, ducks=?, holder_status=? WHERE id=?", (eth, ducks, status, u["id"]))
             u2 = c.execute("SELECT * FROM users WHERE id=?", (u["id"],)).fetchone()
     except sqlite3.IntegrityError:
-        return 409, {"error": "That wallet is already linked to another account. One duck wallet, one account."}
+        return 409, {"error": "That wallet is already linked to another account. One person, one account, however many ducks you hold."}
     return 200, {"ok": True, "user": public_user(u2)}
 
 
@@ -299,7 +299,7 @@ def trading_wallets() -> list[dict]:
     for k in PLAN_KEYS:
         d = _summary(STATE / f"plan_{k}_summary.json")
         if d:
-            rows.append({"owner": "Nonco house plan", "email": None, "plan": k, **wallet_view(d)})
+            rows.append({"owner": "Tavern house plan", "email": None, "plan": k, **wallet_view(d)})
     with db() as c:
         users = c.execute("SELECT id, email, name, plan, bot_wallet, holder_status FROM users WHERE bot_wallet IS NOT NULL").fetchall()
     for u in users:

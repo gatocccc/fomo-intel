@@ -3,18 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Autopilot</title>
+<title>Your stool · Lloyd's Tavern</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/mark.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <div class="wrap">
 <header class="top">
-  <a class="mark" href="/" aria-label="Nonco Autopilot, home">
-    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="15" r="10" fill="#123236"/><path d="M21 13c4 0 8 1 9 3-1 2-5 3-9 3z" fill="#F5A524"/><circle cx="15" cy="12" r="2" fill="#F6F8F8"/></svg>
-    Nonco Autopilot
+  <a class="mark" href="/" aria-label="Lloyd's Tavern, home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="18" r="11" fill="#F2C14E"/><path d="M5 20v-5C5 8.5 10 5 16 5s11 3.5 11 10v5h-2.2v-6.6H7.2V20z" fill="#4A2C1A"/><circle cx="12" cy="17.4" r="3" fill="none" stroke="#211610" stroke-width="1.4"/><circle cx="20" cy="17.4" r="3" fill="none" stroke="#211610" stroke-width="1.4"/><path d="M15 17.2h2" stroke="#211610" stroke-width="1.2"/><ellipse cx="16" cy="24" rx="6" ry="2.6" fill="#E8742A"/></svg>
+    Lloyd's Tavern
   </a>
   <button class="btn ghost" id="logout" type="button" hidden>Log out</button>
 </header>
@@ -41,7 +42,7 @@
 </main>
 
 <main id="dash" hidden>
-  <h1 id="hello" style="font-size:clamp(32px,5vw,56px)">Your autopilot</h1>
+  <h1 id="hello" style="font-size:clamp(32px,5vw,56px)">Your stool</h1>
   <div class="dash">
     <div class="card">
       <h2 class="big" style="font-size:26px">Your seat</h2>
@@ -51,12 +52,12 @@
         <dt>Account type</dt><dd id="d-type">—</dd>
         <dt>Fees</dt><dd id="d-fees">—</dd>
       </dl>
-      <p class="hint" style="margin-top:16px"><a href="/plans/">Watch the three plans trading live</a>. When your seat opens, you will create your bot wallet here, fund it, and the autopilot starts trading. We will email you.</p>
+      <p class="hint" style="margin-top:16px"><a href="/plans/">Watch the three plans trading live</a>. When your seat opens, you will create your bot wallet here, fund it, and the bot starts trading. We will email you.</p>
     </div>
 
     <div class="card">
       <h2 class="big" style="font-size:26px">Nonco Genesis holder?</h2>
-      <p class="hint" id="h-text">Holders pay no fee on profits and get priority seats. Sign a message with the Ethereum wallet that holds your Canvas or Legacy duck. It moves no funds and costs no gas. One duck wallet, one account.</p>
+      <p class="hint" id="h-text">Holders pay no fee on profits and get priority seats. Sign a message with the Ethereum wallet that holds your Canvas or Legacy duck. It moves no funds and costs no gas. One person, one account, however many ducks you hold.</p>
       <div class="duck" style="margin-top:16px"><button class="btn ghost" type="button" id="eth-btn">Verify with my Ethereum wallet</button><span class="status" id="eth-st" role="status"></span></div>
     </div>
 
@@ -111,7 +112,7 @@ $("#logout").onclick = () => post("/api/logout").then(() => { location.hash = "l
 
 function fill(u) {
   $("#auth").hidden = true; $("#dash").hidden = false; $("#logout").hidden = false;
-  $("#hello").textContent = u.name ? `Welcome, ${u.name.split(" ")[0]}` : "Your autopilot";
+  $("#hello").textContent = u.name ? `Welcome, ${u.name.split(" ")[0]}` : "Your stool";
   $("#d-status").textContent = {waitlist: "On the waitlist", active: "Trading", paused: "Paused"}[u.status] || u.status;
   $("#d-pos").textContent = "#" + u.position;
   const holder = u.holder_status === "holder";
