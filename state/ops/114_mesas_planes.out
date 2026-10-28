@@ -1,0 +1,35 @@
+== 114_mesas_planes 2026-10-28T15:52:03Z ==
+== agresivo: active
+Oct 28 15:52:04 simplai-prod systemd[1]: Started fomo-desk@agresivo.service - Nonco Autopilot - mesa del plan agresivo.
+{
+ "now": 1793202724.92678,
+ "plan": "agresivo",
+ "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
+ "started": false,
+ "cash_sol": 0.0,
+ "sol_usd": 100.79
+}
+== equilibrado: active
+Oct 28 15:52:04 simplai-prod systemd[1]: Started fomo-desk@equilibrado.service - Nonco Autopilot - mesa del plan equilibrado.
+{
+ "now": 1793202725.2048323,
+ "plan": "equilibrado",
+ "wallet": "8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82",
+ "started": false,
+ "cash_sol": 0.0,
+ "sol_usd": 100.79
+}
+== tradicional: active
+Oct 28 15:52:04 simplai-prod systemd[1]: Started fomo-desk@tradicional.service - Nonco Autopilot - mesa del plan tradicional.
+{
+ "now": 1793202725.3085423,
+ "plan": "tradicional",
+ "wallet": "EgkDFMH5oaRrKjo3UWFhGG78hgzxxRMKVbvX9R6MM7o4",
+ "started": false,
+ "cash_sol": 0.0,
+ "sol_usd": 100.79
+}
+--- precio por Jupiter
+{"So11111111111111111111111111111111111111112":{"createdAt":"2024-06-05T08:55:25.527Z","liquidity":923538729.3723027,"usdPrice":100.76537770906869,"blockId":462533748,"decimals":9,"priceChange24h":-0.16849011153908286}}
+active
+== exit 0 ==

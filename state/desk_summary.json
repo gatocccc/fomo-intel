@@ -1,17 +1,17 @@
 {
- "now": 1793202594.6912918,
+ "now": 1793202899.5959344,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 122.75,
- "equity_sol": 1.2178,
+ "equity_usd": 121.77,
+ "equity_sol": 1.2076,
  "cash_sol": 0.032,
- "positions_usd": 119.53,
- "sol_usd": 100.8,
- "mult": 1.239,
+ "positions_usd": 118.55,
+ "sol_usd": 100.84,
+ "mult": 1.229,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.006678381877522482,
+   "last_usd": 0.006676194495073217,
    "mult": 1.379,
-   "value_usd": 49.44
+   "value_usd": 49.43
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0016704222907228115,
-   "mult": 1.287,
-   "value_usd": 39.46
+   "last_usd": 0.0016543542319325066,
+   "mult": 1.275,
+   "value_usd": 39.08
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -84,7 +84,7 @@
    "tokens_initial": 6636.507512,
    "sol_in": 0.26682112,
    "sol_out": 0.0,
-   "peak_usd": 0.004831270472714525,
+   "peak_usd": 0.004740356179808285,
    "stop": 0.3,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.004615140348646863,
-   "mult": 1.131,
-   "value_usd": 30.63
+   "last_usd": 0.0045265048649462455,
+   "mult": 1.109,
+   "value_usd": 30.04
   }
  ],
  "equity": [
@@ -1262,6 +1262,18 @@
   [
    1793202375,
    123.32
+  ],
+  [
+   1793202688,
+   122.61
+  ],
+  [
+   1793202724,
+   122.81
+  ],
+  [
+   1793202746,
+   122.68
   ]
  ],
  "closed": [
@@ -1446,5 +1458,7 @@
  ],
  "wins": 0,
  "n_closed": 1,
- "realized_usd": -2.51
+ "realized_usd": -2.51,
+ "plan": null,
+ "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao"
 }
