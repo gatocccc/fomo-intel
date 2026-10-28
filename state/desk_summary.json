@@ -1,17 +1,17 @@
 {
- "now": 1793191799.1642892,
+ "now": 1793192080.4275248,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 123.33,
- "equity_sol": 1.2159,
+ "equity_usd": 123.09,
+ "equity_sol": 1.2138,
  "cash_sol": 0.032,
- "positions_usd": 120.09,
- "sol_usd": 101.43,
- "mult": 1.245,
+ "positions_usd": 119.85,
+ "sol_usd": 101.41,
+ "mult": 1.242,
  "halt": false,
  "pause": false,
  "positions": [
@@ -25,7 +25,7 @@
    "sol_in": 0.355731879,
    "sol_out": 0.0,
    "peak_usd": 0.007304021433807922,
-   "stop": 0.3,
+   "stop": -0.05,
    "trail": 0.35,
    "trail_after": 1.6,
    "tp": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.006787776900723804,
+   "last_usd": 0.006785163057558996,
    "mult": 1.402,
-   "value_usd": 50.25
+   "value_usd": 50.23
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -55,7 +55,7 @@
    "sol_in": 0.30401884,
    "sol_out": 0.0,
    "peak_usd": 0.001975979637942528,
-   "stop": 0.1,
+   "stop": -0.15,
    "trail": 0.35,
    "trail_after": 1.6,
    "tp": [
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0017600056900392103,
-   "mult": 1.356,
-   "value_usd": 41.58
+   "last_usd": 0.001750186370076885,
+   "mult": 1.349,
+   "value_usd": 41.34
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.004258556118132092,
+   "last_usd": 0.0042602295874343355,
    "mult": 1.044,
-   "value_usd": 28.26
+   "value_usd": 28.27
   }
  ],
  "equity": [
@@ -1126,6 +1126,10 @@
   [
    1793191736,
    123.18
+  ],
+  [
+   1793192048,
+   123.07
   ]
  ],
  "closed": [
@@ -1216,6 +1220,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793191923.5040987,
+   "title": "Ejecución",
+   "text": "set 4kjruq: ajustó GTA6: stop=-0.05\nset CA8q2m: ajustó REMUS: stop=-0.15",
+   "kind": "ejecución",
+   "id": "2026-10-28-02"
+  },
+  {
+   "ts": 1793191923.5039377,
+   "title": "Mañana 28/10: mantengo las tres, aseguro ganancia en GTA6 y REMUS",
+   "text": "Chequeo anti-rug de la mañana: las tres posiciones siguen LIMPIAS (ningún grupo de billeteras con fondeador común por encima de 3,2%, ningún holder fondeado por el creador). Lo único que empeora es REMUS: la porción en manos de 'bundlers' (billeteras que compraron juntas en el lanzamiento) subió de 13,5% a 17% y ahora a 18,9%, y su liquidez bajó a US$136K. No es motivo para vender (el token sube 23% en 24 h con 10.000 holders), pero sí para no devolver lo ganado.\n\nGTA6 está en 1,39x (pico 1,51x), +53% en 24 h, 24.800 holders y volumen US$2,2M. Busqué la fecha del juego: Rockstar confirmó GTA VI para el 19/11/2026, nueve días después de que termine nuestro desafío; la expectativa debería crecer en estas dos semanas, así que la dejo correr.\n\nSAPLING está en 1,04x, plano tras la suba de ayer, limpia. Sin cambios.\n\nAjustes: subo el stop de GTA6 para que venda si cae a 1,05x (hoy 1,39x) y el de REMUS a 1,15x (hoy 1,33x). Así, pase lo que pase, estas dos cierran con ganancia; el trailing de 35% sigue igual para cuando pasen 1,6x.\n\nCompras: no hay efectivo (0,032 SOL, que es la reserva para comisiones). Igual miré el escaneo amplio (1.248 tokens, 6 pasan filtros) por si convenía rotar: CHICO otra vez CONCENTRADO (19 de los 20 mayores holders los fondeó la misma billetera), SI y DOPE vienen de creadores-fábrica (7.485 y 4.114 lanzamientos), CX tiene poco volumen y el creador todavía puede emitir más tokens. Ninguno es mejor que lo que ya tenemos, así que no roto.",
+   "kind": "decisión",
+   "id": "2026-10-28-02"
+  },
   {
    "ts": 1793156836.399928,
    "title": "Ejecución",
