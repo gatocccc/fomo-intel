@@ -1,17 +1,17 @@
 {
- "now": 1793198687.3953922,
+ "now": 1793199000.1672728,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 121.99,
- "equity_sol": 1.2105,
+ "equity_usd": 116.42,
+ "equity_sol": 1.1543,
  "cash_sol": 0.032,
- "positions_usd": 118.77,
- "sol_usd": 100.78,
- "mult": 1.231,
+ "positions_usd": 113.19,
+ "sol_usd": 100.85,
+ "mult": 1.175,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.006290242664491793,
-   "mult": 1.299,
-   "value_usd": 46.57
+   "last_usd": 0.006359074386426151,
+   "mult": 1.313,
+   "value_usd": 47.08
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0017209199987939592,
-   "mult": 1.326,
-   "value_usd": 40.65
+   "last_usd": 0.001552403554013104,
+   "mult": 1.196,
+   "value_usd": 36.67
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.004754070124683329,
-   "mult": 1.165,
-   "value_usd": 31.55
+   "last_usd": 0.004436585280297981,
+   "mult": 1.087,
+   "value_usd": 29.44
   }
  ],
  "equity": [
@@ -1214,6 +1214,10 @@
   [
    1793198624,
    121.07
+  ],
+  [
+   1793198937,
+   119.14
   ]
  ],
  "closed": [
