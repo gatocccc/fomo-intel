@@ -1,16 +1,16 @@
 {
- "now": 1793220603.3783586,
+ "now": 1793220878.875464,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 118.02,
- "equity_sol": 1.1564,
+ "equity_usd": 118.04,
+ "equity_sol": 1.1541,
  "cash_sol": 0.2046,
- "positions_usd": 97.14,
- "sol_usd": 102.06,
+ "positions_usd": 97.11,
+ "sol_usd": 102.28,
  "mult": 1.191,
  "halt": false,
  "pause": false,
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.007668105480969856,
-   "mult": 1.584,
-   "value_usd": 56.77
+   "last_usd": 0.007622562310297631,
+   "mult": 1.574,
+   "value_usd": 56.43
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.00360038259208597,
-   "mult": 0.882,
-   "value_usd": 23.89
+   "last_usd": 0.003597228495427262,
+   "mult": 0.881,
+   "value_usd": 23.87
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -84,7 +84,7 @@
    "tokens_initial": 1119.958959,
    "sol_in": 0.16436574,
    "sol_out": 0.0,
-   "peak_usd": 0.014977795130042985,
+   "peak_usd": 0.015003927191750546,
    "stop": 0.3,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.014709126687621433,
-   "mult": 0.982,
-   "value_usd": 16.47
+   "last_usd": 0.015003927191750546,
+   "mult": 1.002,
+   "value_usd": 16.8
   }
  ],
  "equity": [
@@ -1510,6 +1510,10 @@
   [
    1793220480,
    118.31
+  ],
+  [
+   1793220786,
+   117.89
   ]
  ],
  "closed": [
