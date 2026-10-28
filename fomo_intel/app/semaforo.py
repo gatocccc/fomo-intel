@@ -31,9 +31,12 @@ MIN_REAL = 30  # operaciones reales para dejar de llamarlo "preliminar"
 
 
 def _real_returns(fuente: str) -> list[float]:
-    f = STATE / ("desk" if fuente == "desk" else fuente) / "closed.jsonl"
+    dirs = ["desk", "plan_agresivo"] if fuente == "desk" else [fuente]
     out = []
-    if f.exists():
+    for d in dirs:
+        f = STATE / d / "closed.jsonl"
+        if not f.exists():
+            continue
         for line in f.read_text().splitlines():
             try:
                 r = json.loads(line).get("ret")

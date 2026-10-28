@@ -24,10 +24,23 @@ from ..live.executor import RealExecutor
 from ..live.signals import STClient
 from ..live.wallet import Rpc, load_or_create
 
-log = logging.getLogger("desk")
-DEC = Path("desk/decisions")
-ST_DIR = Path("state/desk"); ST_DIR.mkdir(parents=True, exist_ok=True)
-WEB = Path("/var/www/fomo/desk.json")
+# Mesa principal (DESK_NAME vacío) o una mesa por plan del piloto automático (DESK_NAME=agresivo|equilibrado|tradicional).
+NAME = os.getenv("DESK_NAME", "").strip()
+log = logging.getLogger("desk" + (f"-{NAME}" if NAME else ""))
+if NAME:
+    DEC = Path(f"desk/plans/{NAME}")
+    ST_DIR = Path(f"state/plan_{NAME}")
+    WEB = Path(f"/var/www/autopilot/plans/{NAME}.json")
+    SUMMARY = Path(f"state/plan_{NAME}_summary.json")
+    WALLET = Path(f"secrets/plan_{NAME}.json")
+else:
+    DEC = Path("desk/decisions")
+    ST_DIR = Path("state/desk")
+    WEB = Path("/var/www/fomo/desk.json")
+    SUMMARY = Path("state/desk_summary.json")
+    WALLET = None
+ST_DIR.mkdir(parents=True, exist_ok=True)
+JUP_PRICE = "https://api.jup.ag/price/v3"
 CFG_DEFAULT = {"start_ts": None, "start_usd": None, "start_sol": None, "goal_mult": 10, "days": 14, "floor_usd": 15.0,
                "reserve_sol": 0.03, "max_slippage_pct": 8.0, "swap_slippage_pct": 12.0, "priority_fee_sol": 0.001}
 
@@ -67,7 +80,7 @@ class Desk:
         self.st = STClient(self.env.solanatracker_api_key)
         p = LiveParams(); p.max_slippage_pct = self.cfg["max_slippage_pct"]; p.swap_slippage_pct = self.cfg["swap_slippage_pct"]
         p.priority_fee_sol = self.cfg["priority_fee_sol"]; p.min_sol_reserve = self.cfg["reserve_sol"]
-        self.kp = load_or_create(self.env.wallet_file); self.pub = str(self.kp.pubkey())
+        self.kp = load_or_create(WALLET or self.env.wallet_file); self.pub = str(self.kp.pubkey())
         self.rpc = Rpc(self.env.rpc_url)
         self.exe = RealExecutor(p, self.kp, self.rpc, self.env.solanatracker_api_key)
         self.pos: dict = jload(ST_DIR / "positions.json", {})
@@ -76,9 +89,24 @@ class Desk:
         self.prices: dict = {}
         self.no_price_since: dict = {}
         self.wallet_sol = self.rpc.sol_balance(self.pub)
+        self.jup_key = os.getenv("JUPITER_API_KEY", "")
+        self.maybe_start()
+
+    def maybe_start(self):
+        """La mesa arranca (fija saldo inicial) recién cuando la billetera tiene fondos."""
+        if self.cfg["start_ts"] or self.wallet_sol < 0.05:
+            return
+        if NAME:
+            self.cfg.setdefault("plan", NAME)
+            self.cfg["floor_usd"] = round(self.wallet_sol * self.sol_usd * 0.4, 2)   # corta si pierde 60%
+            self.cfg["goal_mult"] = 2; self.cfg["days"] = 30
         if not self.cfg["start_ts"]:
             self.cfg.update({"start_ts": time.time(), "start_sol": round(self.wallet_sol, 6), "start_usd": round(self.wallet_sol * self.sol_usd, 2)})
             jsave(ST_DIR / "config.json", self.cfg)
+            if NAME:
+                self.journal("Plan started", f"Starting balance {self.wallet_sol:.4f} SOL (${self.wallet_sol * self.sol_usd:.2f} at SOL ${self.sol_usd:.2f}). "
+                             f"Hard floor: ${self.cfg['floor_usd']:.0f} (stops everything if the plan loses 60%).", kind="system")
+                return
             self.journal("Arranque de la mesa", f"Saldo inicial {self.wallet_sol:.4f} SOL (US${self.wallet_sol * self.sol_usd:.2f}, SOL a US${self.sol_usd:.2f}). "
                          f"Objetivo: x{self.cfg['goal_mult']} en {self.cfg['days']} días. Piso de corte: US${self.cfg['floor_usd']:.0f}.", kind="sistema")
 
@@ -90,8 +118,19 @@ class Desk:
         jsave(ST_DIR / "positions.json", self.pos); jsave(ST_DIR / "processed.json", self.processed)
 
     # ---------- precios ----------
+    def jup_price(self, mint):
+        if not self.jup_key:
+            return None
+        try:
+            import requests
+            r = requests.get(JUP_PRICE, params={"ids": mint}, headers={"x-api-key": self.jup_key}, timeout=8)
+            d = r.json().get(mint) or {}
+            return float(d.get("usdPrice") or 0) or None
+        except Exception:  # noqa: BLE001
+            return None
+
     def price_usd(self, mint):
-        px = self.st.price(mint)
+        px = self.jup_price(mint) or self.st.price(mint)
         if px:
             self.prices[mint] = px; self.no_price_since.pop(mint, None)
         else:
@@ -240,6 +279,14 @@ class Desk:
 
     def publish(self, eq, pos_usd):
         c = self.cfg; now = time.time()
+        if not c["start_ts"]:
+            s = {"now": now, "plan": NAME or None, "wallet": self.pub, "started": False, "cash_sol": round(self.wallet_sol, 4), "sol_usd": round(self.sol_usd, 2)}
+            jsave(SUMMARY, s)
+            try:
+                if NAME: WEB.parent.mkdir(parents=True, exist_ok=True); jsave(WEB, s)
+            except Exception:  # noqa: BLE001
+                pass
+            return
         hist = tail("equity.jsonl", 3000)
         closed = tail("closed.jsonl", 200)
         s = {"now": now, "start_ts": c["start_ts"], "start_usd": c["start_usd"], "start_sol": c["start_sol"], "goal_usd": round(c["start_usd"] * c["goal_mult"], 2),
@@ -251,8 +298,10 @@ class Desk:
              "equity": [[round(h["ts"]), h["usd"]] for h in hist],
              "closed": closed[::-1][:50], "trades": tail("trades.jsonl", 60)[::-1], "journal": tail("journal.jsonl", 200)[::-1],
              "wins": sum(1 for r in closed if (r.get("pnl_usd") or 0) > 0), "n_closed": len(closed), "realized_usd": round(sum(r.get("pnl_usd") or 0 for r in closed), 2)}
-        jsave("state/desk_summary.json", s)
+        s["plan"] = NAME or None; s["wallet"] = self.pub
+        jsave(SUMMARY, s)
         try:
+            if NAME: WEB.parent.mkdir(parents=True, exist_ok=True)
             if WEB.parent.exists(): jsave(WEB, s)
         except Exception:  # noqa: BLE001
             pass
@@ -270,8 +319,10 @@ class Desk:
                     self.protect()
                 if now - last_pub > 30:
                     eq, pos_usd = self.equity(); last_pub = now
-                    self.floor_check(eq)
-                    if now - last_eq > 300:
+                    self.maybe_start()
+                    if self.cfg["start_ts"]:
+                        self.floor_check(eq)
+                    if now - last_eq > 300 and self.cfg["start_ts"]:
                         append("equity.jsonl", {"ts": now, "usd": round(eq, 2), "sol": round(eq / self.sol_usd, 4), "sol_usd": round(self.sol_usd, 2)}); last_eq = now
                     self.publish(eq, pos_usd)
             except Exception as e:  # noqa: BLE001
