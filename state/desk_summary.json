@@ -1,17 +1,17 @@
 {
- "now": 1793206797.6121502,
+ "now": 1793207075.594153,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 124.42,
- "equity_sol": 1.2304,
- "cash_sol": 0.032,
- "positions_usd": 121.18,
- "sol_usd": 101.12,
- "mult": 1.256,
+ "equity_usd": 121.77,
+ "equity_sol": 1.2046,
+ "cash_sol": 0.3781,
+ "positions_usd": 83.55,
+ "sol_usd": 101.09,
+ "mult": 1.229,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,39 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.007545472186707875,
-   "mult": 1.559,
-   "value_usd": 55.86
-  },
-  {
-   "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
-   "symbol": "REMUS",
-   "opened_ts": 1793119640.2155895,
-   "entry_usd": 0.001297642981337872,
-   "tokens": 23623.122876,
-   "tokens_initial": 23623.122876,
-   "sol_in": 0.30401884,
-   "sol_out": 0.0,
-   "peak_usd": 0.001975979637942528,
-   "stop": -0.15,
-   "trail": 0.35,
-   "trail_after": 1.6,
-   "tp": [
-    [
-     3,
-     0.25
-    ],
-    [
-     6,
-     0.25
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
-   "id": "2026-10-27-02",
-   "last_usd": 0.0015302010959347,
-   "mult": 1.179,
-   "value_usd": 36.15
+   "last_usd": 0.00733069791845598,
+   "mult": 1.514,
+   "value_usd": 54.27
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -101,9 +71,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.004396003814433733,
-   "mult": 1.077,
-   "value_usd": 29.17
+   "last_usd": 0.004411591791779541,
+   "mult": 1.081,
+   "value_usd": 29.28
   }
  ],
  "equity": [
@@ -1326,9 +1296,26 @@
   [
    1793206644,
    123.77
+  ],
+  [
+   1793206953,
+   121.22
   ]
  ],
  "closed": [
+  {
+   "ts": 1793206937.973388,
+   "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
+   "symbol": "REMUS",
+   "sol_in": 0.30402,
+   "sol_out": 0.34616,
+   "pnl_sol": 0.04214,
+   "pnl_usd": 4.26,
+   "ret": 0.139,
+   "peak_mult": 1.52,
+   "hold_h": 24.2,
+   "why": "stop (1.15x)"
+  },
   {
    "ts": 1793131281.5327451,
    "mint": "H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump",
@@ -1344,6 +1331,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793206937.9727077,
+   "side": "sell",
+   "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
+   "symbol": "REMUS",
+   "ok": true,
+   "sol": 0.346163789,
+   "tokens": 23623.122876,
+   "price_usd": 0.001481379774,
+   "why": "stop (1.15x)",
+   "sig": "63pLgEEZoUeGvYRbv2nYRCpJRpRwEZuEAss69mN6E3UDaEkyu5u4YiuVARt8kqTjd3ReEApm4GCUuCRPzDw5TC9V",
+   "error": "",
+   "id": null
+  },
   {
    "ts": 1793156836.397777,
    "side": "buy",
@@ -1416,6 +1417,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793206937.9745176,
+   "title": "Salida automática",
+   "text": "REMUS: vendió 100% de REMUS (stop (1.15x)) por 0.3462 SOL — posición cerrada",
+   "kind": "automático",
+   "id": null
+  },
   {
    "ts": 1793191923.5040987,
    "title": "Ejecución",
@@ -1508,9 +1516,9 @@
    "id": null
   }
  ],
- "wins": 0,
- "n_closed": 1,
- "realized_usd": -2.51,
+ "wins": 1,
+ "n_closed": 2,
+ "realized_usd": 1.75,
  "plan": null,
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao"
 }
