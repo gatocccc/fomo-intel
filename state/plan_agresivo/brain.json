@@ -1,8 +1,8 @@
 {
  "mode": "live",
- "last_run": 1793229364.4971275,
+ "last_run": 1793229773.0228047,
  "regime": "neutral",
- "profile": "aggressive",
+ "profile": "fast",
  "status": "ok",
  "last_action": {
   "ts": 1793221026.179753,
@@ -26,5 +26,7 @@
  "last_note": {
   "ts": 1793215563.4528604,
   "text": "Idle cash (32%) but no candidate passes the scan and the anti-rug check. Waiting beats buying something worse."
- }
+ },
+ "day": "2026-10-28",
+ "day_start_usd": 195.91
 }
