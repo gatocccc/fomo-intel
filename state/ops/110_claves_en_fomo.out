@@ -1,0 +1,5 @@
+== 110_claves_en_fomo 2026-10-28T14:57:03Z ==
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+{"claves": [{"nombre": "JUPITER_API_KEY", "descripcion": "API key de Jupiter", "cargada": false}, {"nombre": "TELEGRAM_BOT_TOKEN", "descripcion": "Token del bot de Telegram (BotFather)", "cargada": false}, {"nombre": "TURNKEY_ORG_ID", "descripcion": "Organization ID de Turnkey", "cargada": false}, {"nombre": "TURNKEY_API_USER_ID", "descripcion": "User ID del usuario de API en Turnkey", "cargada": false}, {"nombre": "NONCO_CONTRACTS", "descripcion": "Contratos de NoncoDucks (separados por coma)", "cargada": false}]}
+{"public": "026c46fff317aa74126367f2aa071f451b0d89b326cd70f029ea659e4db6ab6655"}== exit 0 ==
