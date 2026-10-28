@@ -1,0 +1,47 @@
+{
+ "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP": {
+  "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+  "symbol": "SI",
+  "opened_ts": 1793204945.3420432,
+  "entry_usd": 0.014502934475541825,
+  "tokens": 4225.594163,
+  "tokens_initial": 4225.594163,
+  "sol_in": 0.60706824,
+  "sol_out": 0.0,
+  "peak_usd": 0.014502934475541825,
+  "stop": 0.2,
+  "trail": 0.25,
+  "trail_after": 1.3,
+  "tp": [
+   [
+    1.5,
+    0.25
+   ],
+   [
+    2,
+    0.25
+   ]
+  ],
+  "tp_done": [],
+  "thesis": "Only mid-cap that passed every filter today: real volume, 52K holders, clean anti-rug check.",
+  "id": "equilibrado-2026-10-28-01"
+ },
+ "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+  "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "symbol": "USDC",
+  "opened_ts": 1793204947.898395,
+  "entry_usd": 1.0075943560922527,
+  "tokens": 131.146861,
+  "tokens_initial": 131.146861,
+  "sol_in": 1.30899344,
+  "sol_out": 0.0,
+  "peak_usd": 1.0075943560922527,
+  "stop": 0.05,
+  "trail": 0.5,
+  "trail_after": 10.0,
+  "tp": [],
+  "tp_done": [],
+  "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
+  "id": "equilibrado-2026-10-28-01"
+ }
+}

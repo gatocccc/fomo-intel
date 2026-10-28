@@ -1,20 +1,81 @@
 {
- "now": 1793204685.5506508,
+ "now": 1793204991.993129,
  "start_ts": 1793203599.7169404,
  "start_usd": 200.84,
  "start_sol": 1.99,
  "goal_usd": 401.68,
  "days": 30,
  "day": 1,
- "equity_usd": 200.64,
- "equity_sol": 1.99,
- "cash_sol": 1.99,
- "positions_usd": 0,
- "sol_usd": 100.82,
- "mult": 0.999,
+ "equity_usd": 197.34,
+ "equity_sol": 1.9549,
+ "cash_sol": 0.7272,
+ "positions_usd": 123.93,
+ "sol_usd": 100.95,
+ "mult": 0.983,
  "halt": false,
  "pause": false,
- "positions": [],
+ "positions": [
+  {
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "opened_ts": 1793204959.1775496,
+   "entry_usd": 0.007512487746237798,
+   "tokens": 8831.632745155,
+   "tokens_initial": 8831.632745155,
+   "sol_in": 0.65723188,
+   "sol_out": 0.0,
+   "peak_usd": 0.007512487746237798,
+   "stop": 0.3,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
+   "id": "agresivo-2026-10-28-01",
+   "last_usd": 0.007261235779833791,
+   "mult": 0.967,
+   "value_usd": 64.13
+  },
+  {
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "opened_ts": 1793204961.3601325,
+   "entry_usd": 0.014467228536671355,
+   "tokens": 4225.637077,
+   "tokens_initial": 4225.637077,
+   "sol_in": 0.6055798,
+   "sol_out": 0.0,
+   "peak_usd": 0.014467228536671355,
+   "stop": 0.3,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "52K holders, top 10 hold 11%, real volume at 34% of market cap per day, 20% below weekly high. Clean anti-rug check.",
+   "id": "agresivo-2026-10-28-01",
+   "last_usd": 0.014153130788432331,
+   "mult": 0.978,
+   "value_usd": 59.81
+  }
+ ],
  "equity": [
   [
    1793203600,
@@ -31,11 +92,58 @@
   [
    1793204504,
    200.8
+  ],
+  [
+   1793204806,
+   200.63
   ]
  ],
  "closed": [],
- "trades": [],
+ "trades": [
+  {
+   "ts": 1793204961.3594608,
+   "side": "buy",
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "ok": true,
+   "sol": 0.6055798,
+   "tokens": 4225.637077,
+   "price_usd": 0.014467228537,
+   "slip": 3.43,
+   "sig": "3mg5V4tvMASvVn4iTb1gntUoyqgq4zCFsvXUzXjJFKrnVz2fxsbFrpNZBTJEK2ShuuSFhvit5M2GKx7EAZMdoL4y",
+   "error": "",
+   "id": "agresivo-2026-10-28-01"
+  },
+  {
+   "ts": 1793204959.176875,
+   "side": "buy",
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "ok": true,
+   "sol": 0.65723188,
+   "tokens": 8831.632745155,
+   "price_usd": 0.007512487746,
+   "slip": 4.31,
+   "sig": "5uVsgBwCqccJfKztrzN12tHAyHukKV89RZGvTtcppxFKfvVGo2UinfPfxpJdV6r7PoP79cjNzKEuA8uavakfRWUQ",
+   "error": "",
+   "id": "agresivo-2026-10-28-01"
+  }
+ ],
  "journal": [
+  {
+   "ts": 1793204961.3617384,
+   "title": "Ejecución",
+   "text": "buy GTA6: compró 8,832 GTA6 por 0.6572 SOL a US$0.00751249 (slippage +4.3%)\nbuy SI: compró 4,226 SI por 0.6056 SOL a US$0.0144672 (slippage +3.4%)",
+   "kind": "ejecución",
+   "id": "agresivo-2026-10-28-01"
+  },
+  {
+   "ts": 1793204961.361558,
+   "title": "First positions: GTA6 and SI",
+   "text": "Plan started with 1.99 SOL ($201). Two positions, one third of the plan each, and the rest kept in SOL for the next good setup.\n\nGTA6 ($7.2M market cap, 25.8K holders, $401K liquidity): a meme built around the GTA VI release on November 19, after this plan's first review window, so the story should keep building. Our anti-rug check found no group of top holders funded by the same wallet. The same brain bought it for the live desk yesterday.\n\nSI ($14.3M, 52K holders, top 10 hold 11%): real, irregular trading volume worth 34% of its value per day, up 45% in three days and 20% below its weekly high. Anti-rug: clean (largest common-funder group holds 1.7%).\n\nDevil's advocate: GTA6 is up 56% in 24 hours, so we are buying after a run, not on a pullback; a 30% stop can fill lower if it drops fast. SI's creator has launched about 7,500 tokens, the profile of a token factory, even though the holders look spread out. We accept it with a 30% stop on each and modest size, so a worst case costs about a fifth of the plan.",
+   "kind": "decisión",
+   "id": "agresivo-2026-10-28-01"
+  },
   {
    "ts": 1793203599.7174072,
    "title": "Plan started",

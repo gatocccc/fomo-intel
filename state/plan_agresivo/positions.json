@@ -1,0 +1,56 @@
+{
+ "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz": {
+  "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+  "symbol": "GTA6",
+  "opened_ts": 1793204959.1775496,
+  "entry_usd": 0.007512487746237798,
+  "tokens": 8831.632745155,
+  "tokens_initial": 8831.632745155,
+  "sol_in": 0.65723188,
+  "sol_out": 0.0,
+  "peak_usd": 0.007512487746237798,
+  "stop": 0.3,
+  "trail": 0.35,
+  "trail_after": 1.6,
+  "tp": [
+   [
+    3,
+    0.25
+   ],
+   [
+    6,
+    0.25
+   ]
+  ],
+  "tp_done": [],
+  "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
+  "id": "agresivo-2026-10-28-01"
+ },
+ "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP": {
+  "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+  "symbol": "SI",
+  "opened_ts": 1793204961.3601325,
+  "entry_usd": 0.014467228536671355,
+  "tokens": 4225.637077,
+  "tokens_initial": 4225.637077,
+  "sol_in": 0.6055798,
+  "sol_out": 0.0,
+  "peak_usd": 0.014467228536671355,
+  "stop": 0.3,
+  "trail": 0.35,
+  "trail_after": 1.6,
+  "tp": [
+   [
+    3,
+    0.25
+   ],
+   [
+    6,
+    0.25
+   ]
+  ],
+  "tp_done": [],
+  "thesis": "52K holders, top 10 hold 11%, real volume at 34% of market cap per day, 20% below weekly high. Clean anti-rug check.",
+  "id": "agresivo-2026-10-28-01"
+ }
+}

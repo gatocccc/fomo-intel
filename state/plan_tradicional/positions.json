@@ -1,0 +1,20 @@
+{
+ "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+  "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "symbol": "USDC",
+  "opened_ts": 1793204959.9542832,
+  "entry_usd": 1.007881349981768,
+  "tokens": 194.675259,
+  "tokens_initial": 194.675259,
+  "sol_in": 1.94363188,
+  "sol_out": 0.0,
+  "peak_usd": 1.007881349981768,
+  "stop": 0.05,
+  "trail": 0.5,
+  "trail_after": 10.0,
+  "tp": [],
+  "tp_done": [],
+  "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
+  "id": "tradicional-2026-10-28-01"
+ }
+}

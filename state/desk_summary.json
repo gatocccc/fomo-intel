@@ -1,16 +1,16 @@
 {
- "now": 1793204679.5795777,
+ "now": 1793204986.2538471,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 123.08,
- "equity_sol": 1.2208,
+ "equity_usd": 123.02,
+ "equity_sol": 1.2184,
  "cash_sol": 0.032,
- "positions_usd": 119.86,
- "sol_usd": 100.82,
+ "positions_usd": 119.79,
+ "sol_usd": 100.97,
  "mult": 1.242,
  "halt": false,
  "pause": false,
@@ -24,7 +24,7 @@
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
    "sol_out": 0.0,
-   "peak_usd": 0.0074962717836163945,
+   "peak_usd": 0.007564435895055827,
    "stop": -0.05,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.007253172237333554,
-   "mult": 1.498,
-   "value_usd": 53.7
+   "last_usd": 0.007270905165280326,
+   "mult": 1.502,
+   "value_usd": 53.83
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0015613074952470904,
-   "mult": 1.203,
-   "value_usd": 36.88
+   "last_usd": 0.0015560049299059755,
+   "mult": 1.199,
+   "value_usd": 36.76
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.004411442476774288,
-   "mult": 1.081,
-   "value_usd": 29.28
+   "last_usd": 0.004401126020090426,
+   "mult": 1.078,
+   "value_usd": 29.21
   }
  ],
  "equity": [
@@ -1298,6 +1298,10 @@
   [
    1793204587,
    122.61
+  ],
+  [
+   1793204894,
+   121.7
   ]
  ],
  "closed": [

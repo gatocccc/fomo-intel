@@ -1,20 +1,42 @@
 {
- "now": 1793204686.2238927,
+ "now": 1793204990.4508967,
  "start_ts": 1793203780.9833093,
  "start_usd": 201.95,
  "start_sol": 1.999276,
  "goal_usd": 403.9,
  "days": 30,
  "day": 1,
- "equity_usd": 201.58,
- "equity_sol": 1.9993,
- "cash_sol": 1.9993,
- "positions_usd": 0,
- "sol_usd": 100.82,
- "mult": 0.998,
+ "equity_usd": 200.17,
+ "equity_sol": 1.9828,
+ "cash_sol": 0.0556,
+ "positions_usd": 194.55,
+ "sol_usd": 100.95,
+ "mult": 0.991,
  "halt": false,
  "pause": false,
- "positions": [],
+ "positions": [
+  {
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "opened_ts": 1793204959.9542832,
+   "entry_usd": 1.007881349981768,
+   "tokens": 194.675259,
+   "tokens_initial": 194.675259,
+   "sol_in": 1.94363188,
+   "sol_out": 0.0,
+   "peak_usd": 1.007881349981768,
+   "stop": 0.05,
+   "trail": 0.5,
+   "trail_after": 10.0,
+   "tp": [],
+   "tp_done": [],
+   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
+   "id": "tradicional-2026-10-28-01",
+   "last_usd": 0.9993452946471536,
+   "mult": 0.992,
+   "value_usd": 194.55
+  }
+ ],
  "equity": [
   [
    1793203781,
@@ -31,11 +53,44 @@
   [
    1793204686,
    201.58
+  ],
+  [
+   1793204990,
+   200.17
   ]
  ],
  "closed": [],
- "trades": [],
+ "trades": [
+  {
+   "ts": 1793204959.9539106,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 1.94363188,
+   "tokens": 194.675259,
+   "price_usd": 1.007881349982,
+   "slip": 0.85,
+   "sig": "kCkzN5CE9YgYBXu22MzLTDnU79pM5BSrQs51enXrUaeJkucYayEKQxMnZSdrerrU1mDHArgSB8tyMWTtHJfhTWK",
+   "error": "",
+   "id": "tradicional-2026-10-28-01"
+  }
+ ],
  "journal": [
+  {
+   "ts": 1793204959.9554257,
+   "title": "Ejecución",
+   "text": "buy USDC: compró 195 USDC por 1.9436 SOL a US$1.00788 (slippage +0.8%)",
+   "kind": "ejecución",
+   "id": "tradicional-2026-10-28-01"
+  },
+  {
+   "ts": 1793204959.955336,
+   "title": "Trend is down: holding USDC",
+   "text": "Plan started with 2.00 SOL ($202). This plan holds SOL, BTC, ETH and JUP only while each trades above its 20-day average. Today none does: SOL is 4.0% below, BTC 1.7% below, ETH 4.2% below and JUP 11.0% below.\n\nSo the plan moves to USDC and waits. Holding SOL as 'cash' would still lose money if SOL keeps falling (it is down 14.5% in 30 days). As soon as an asset closes back above its average, the plan buys it.\n\nDevil's advocate: trend rules buy late and sell late; if the market bounces tomorrow, we will miss the first few percent. We accept that, because this plan exists to avoid the big drops, not to catch every move.",
+   "kind": "decisión",
+   "id": "tradicional-2026-10-28-01"
+  },
   {
    "ts": 1793203780.984311,
    "title": "Plan started",
