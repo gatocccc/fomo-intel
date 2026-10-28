@@ -1,17 +1,17 @@
 {
- "now": 1793148283.6451366,
+ "now": 1793148591.6628003,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 110.3,
- "equity_sol": 1.0901,
+ "equity_usd": 109.14,
+ "equity_sol": 1.0789,
  "cash_sol": 0.2988,
- "positions_usd": 80.07,
- "sol_usd": 101.18,
- "mult": 1.113,
+ "positions_usd": 78.91,
+ "sol_usd": 101.15,
+ "mult": 1.101,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.005600185156860397,
-   "mult": 1.157,
-   "value_usd": 41.46
+   "last_usd": 0.0055970546581514844,
+   "mult": 1.156,
+   "value_usd": 41.44
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -55,7 +55,7 @@
    "sol_in": 0.30401884,
    "sol_out": 0.0,
    "peak_usd": 0.0017067130883469772,
-   "stop": 0.35,
+   "stop": 0.1,
    "trail": 0.35,
    "trail_after": 1.6,
    "tp": [
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0016343072994696585,
-   "mult": 1.259,
-   "value_usd": 38.61
+   "last_usd": 0.0015864303469996898,
+   "mult": 1.223,
+   "value_usd": 37.48
   }
  ],
  "equity": [
@@ -536,6 +536,10 @@
   [
    1793148191,
    109.97
+  ],
+  [
+   1793148499,
+   108.84
   ]
  ],
  "closed": [
@@ -612,6 +616,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793148375.7328134,
+   "title": "Ejecución",
+   "text": "set CA8q2m: ajustó REMUS: stop=0.1",
+   "kind": "ejecución",
+   "id": "2026-10-27-04"
+  },
+  {
+   "ts": 1793148375.7327445,
+   "title": "Noche día 1: nada de compras; acorto el stop de REMUS",
+   "text": "Chequeo anti-rug nocturno: GTA6 y REMUS siguen LIMPIOS (ningún grupo de holders fondeado por la misma billetera supera el 2,5%, y ninguno ligado al creador). Pero en REMUS los 'bundlers' (billeteras que compraron en paquete al lanzamiento) subieron de 13,5% a 17% del total en seis horas: alguien está acumulando en bloque. Puede ser una ballena que cree en el token, o alguien preparando una venta grande. Como REMUS ya está +24% sobre mi entrada, no quiero devolver esa ganancia y además perder: subo su stop de −35% a −10% desde la entrada. Sigue teniendo ~27% de margen sobre el precio actual para moverse, pero si se desarma, salgo casi sin pérdida. GTA6 queda igual (+16%, catalizador con fecha, holders limpios).\n\nCompras: no. El escaneo de 274 tokens dejó dos. 'Nothing' subió 611% en 24 h con liquidez de US$132K (debajo de mi mínimo de US$150K) y está en plena euforia: comprar ahí es ser la salida de otro. USOE ya lo descarté ayer por volumen de bots. Prefiero tener 27% en efectivo esperando un buen candidato que forzar una entrada mala.",
+   "kind": "decisión",
+   "id": "2026-10-27-04"
+  },
   {
    "ts": 1793131281.5347664,
    "title": "Ejecución",
