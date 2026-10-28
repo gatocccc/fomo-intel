@@ -1,17 +1,17 @@
 {
- "now": 1793231375.4915905,
+ "now": 1793231681.2238579,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 113.74,
- "equity_sol": 1.112,
+ "equity_usd": 119.84,
+ "equity_sol": 1.1723,
  "cash_sol": 0.2046,
- "positions_usd": 92.82,
- "sol_usd": 102.28,
- "mult": 1.148,
+ "positions_usd": 98.92,
+ "sol_usd": 102.23,
+ "mult": 1.209,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.00748399209795951,
-   "mult": 1.546,
-   "value_usd": 55.41
+   "last_usd": 0.008339717190033914,
+   "mult": 1.723,
+   "value_usd": 61.74
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.0032416931839800616,
-   "mult": 0.794,
-   "value_usd": 21.51
+   "last_usd": 0.003209741115910553,
+   "mult": 0.787,
+   "value_usd": 21.3
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.014193898007375463,
-   "mult": 0.948,
-   "value_usd": 15.9
+   "last_usd": 0.014179158567294386,
+   "mult": 0.947,
+   "value_usd": 15.88
   }
  ],
  "equity": [
@@ -1658,6 +1658,10 @@
   [
    1793231344,
    113.89
+  ],
+  [
+   1793231650,
+   116.46
   ]
  ],
  "closed": [
@@ -1992,7 +1996,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793230924.5337195,
+  "last_run": 1793231378.0835052,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
