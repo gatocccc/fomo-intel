@@ -53,6 +53,12 @@ function spark(eq, start) {
   const col = pts[pts.length - 1] >= start ? "var(--go)" : "var(--stop)";
   return `<svg viewBox="0 0 300 64" preserveAspectRatio="none" aria-hidden="true"><line x1="0" x2="300" y1="${y(start)}" y2="${y(start)}" stroke="var(--line)" stroke-dasharray="4 4"/><path d="${d}" fill="none" stroke="${col}" stroke-width="2"/></svg>`;
 }
+function brainLine(b) {
+  if (!b || !b.live) return "";
+  const mk = {risk_off: "defensive (SOL falling hard)", risk_on: "constructive", neutral: "neutral"}[b.market] || "—";
+  const age = b.last_run ? Math.max(0, Math.round((Date.now() / 1000 - b.last_run) / 60)) : null;
+  return `<p class="mk">Lloyd checks this plan every 10 minutes${age !== null ? ` · last check ${age} min ago` : ""} · market: ${esc(mk)}${b.trend ? ` · vs 20-day average: ${esc(b.trend)}` : ""}</p>`;
+}
 function card(k, p) {
   if (!p.started) return `<div class="pc"><h2>${esc(p.name)}</h2><p class="mk">${esc(p.markets)}</p><p>Waiting for funds.</p></div>`;
   const cls = (p.pnl_usd || 0) >= 0 ? "up" : "down";
@@ -63,6 +69,7 @@ function card(k, p) {
     <div><h2>${esc(p.name)}</h2><p class="mk">${esc(p.markets)}</p></div>
     <div><div class="eq">${usd(p.equity_usd)}</div><div class="pnl ${cls}">${p.pnl_usd >= 0 ? "+" : ""}${usd(p.pnl_usd)} (${pctS(p.pnl_pct)}) since ${when(p.since)}, from ${usd(p.start_usd)}</div></div>
     ${spark(p.equity, p.start_usd)}
+    ${brainLine(p.brain)}
     <h3>Open positions</h3><ul>${pos}</ul>
     ${cl ? `<h3>Closed</h3><ul>${cl}</ul>` : ""}
     <h3>Reasoning</h3><div class="jr">${jr || "<p>No entries yet.</p>"}</div>

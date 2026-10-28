@@ -280,6 +280,10 @@ def wallet_view(d: dict, full: bool = False) -> dict:
            "last_trade": (d.get("trades") or [{}])[0].get("ts") if d.get("trades") else None,
            "positions": [{"token": x.get("symbol"), "mint": x.get("mint"), "multiple": x.get("mult"), "value_usd": x.get("value_usd"),
                           "stop": x.get("stop"), "thesis": x.get("thesis")} for x in d.get("positions") or []]}
+    b = d.get("brain") or {}
+    if b:
+        out["brain"] = {"live": b.get("mode") == "live", "last_run": b.get("last_run"), "market": b.get("regime"),
+                        "sol_24h": b.get("sol_ch24h"), "trend": b.get("trad_status")}
     if full:
         out["equity"] = (d.get("equity") or [])[-400:]
         out["closed_list"] = [{"token": c.get("symbol"), "result": c.get("ret"), "pnl_usd": c.get("pnl_usd"), "why": c.get("why"), "ts": c.get("ts")} for c in closed[:30]]

@@ -65,6 +65,8 @@ a{color:var(--acc);text-decoration:none}
   <h2>Evolución</h2>
   <div class="card chart" id="chartbox"><svg id="chart" role="img" aria-label="Evolución del patrimonio en US$"></svg><div class="tip" id="tip"></div></div>
 
+  <div class="foot" id="brain" style="text-align:left;margin:10px 0 0"></div>
+
   <h2>Posiciones abiertas</h2>
   <div id="pos"></div>
 
@@ -110,6 +112,9 @@ function render(d){
   last=d;
   $('title').textContent=`Mesa autónoma · día ${Math.min(d.day,d.days)} de ${d.days}`;
   const st=$('status');st.className='badge '+(d.halt?'b-halt':d.pause?'b-pause':'b-on');st.textContent=d.halt?'DETENIDA':d.pause?'EN PAUSA':'OPERANDO · REAL';
+  const b=d.brain||{};
+  if(b.mode){const mk={risk_off:'defensa (SOL cae fuerte)',risk_on:'favorable',neutral:'neutro'}[b.regime]||'—';const age=b.last_run?Math.round((Date.now()/1000-b.last_run)/60):null;
+    $('brain').innerHTML=`Cerebro automático: <b>${b.mode==='live'?'activo':'en sombra (solo registra)'}</b> · revisa cada 10 min${age!==null?' · última revisión hace '+age+' min':''} · mercado: ${mk}${b.sol_ch24h!=null?' · SOL 24 h '+b.sol_ch24h+'%':''}${b.last_action?' · último movimiento: '+esc(b.last_action.title)+' ('+hm(b.last_action.ts)+')':''}`;}
   const ch=d.equity_usd/d.start_usd-1;
   $('eq').textContent=usd(d.equity_usd);
   $('eqsub').innerHTML=`<span class="${ch>=0?'ok':'bad'}">${pct(ch)}</span> desde el inicio (${usd(d.start_usd)}) · ${d.equity_sol} SOL · SOL a US$${d.sol_usd}`;

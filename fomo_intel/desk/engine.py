@@ -205,9 +205,10 @@ class Desk:
         return T(f"vendió {frac:.0%} de {p['symbol']} ({why}) por {f.sol:.4f} SOL" + (" — posición cerrada" if closed else ""), f"sold {frac:.0%} of {p['symbol']} ({why}) for {f.sol:.4f} SOL" + (" — position closed" if closed else ""))
 
     def apply_decisions(self):
-        if not DEC.exists():
-            return
-        for fp in sorted(DEC.glob("*.json")):
+        # decisiones de Claude (repo) y del cerebro automático (state/<mesa>/auto, ver brain.py)
+        files = sorted(DEC.glob("*.json")) if DEC.exists() else []
+        files += sorted((ST_DIR / "auto").glob("*.json")) if (ST_DIR / "auto").exists() else []
+        for fp in files:
             try:
                 d = json.load(open(fp))
             except Exception as e:  # noqa: BLE001
@@ -225,7 +226,7 @@ class Desk:
                     elif a == "set":
                         p = self.pos.get(o["mint"])
                         if p:
-                            for k in ("stop", "trail", "trail_after", "tp", "thesis"):
+                            for k in ("stop", "trail", "trail_after", "tp", "thesis", "brain"):
                                 if k in o: p[k] = o[k]
                             self.save(); r = f"ajustó {p['symbol']}: " + ", ".join(f"{k}={o[k]}" for k in o if k not in ("action", "mint"))
                         else: r = "sin posición"
@@ -304,6 +305,9 @@ class Desk:
              "closed": closed[::-1][:50], "trades": tail("trades.jsonl", 60)[::-1], "journal": tail("journal.jsonl", 200)[::-1],
              "wins": sum(1 for r in closed if (r.get("pnl_usd") or 0) > 0), "n_closed": len(closed), "realized_usd": round(sum(r.get("pnl_usd") or 0 for r in closed), 2)}
         s["plan"] = NAME or None; s["wallet"] = self.pub
+        b = jload(ST_DIR / "brain.json", {}); rg = jload(Path("state/desk/regime.json"), {})
+        if b:
+            s["brain"] = {k: b.get(k) for k in ("mode", "last_run", "regime", "status", "last_action", "last_note", "trad_status")} | {"sol_ch24h": rg.get("sol_ch24h"), "sol_vs_ma20": round(rg["sol"] / rg["sol_ma20"] - 1, 4) if rg.get("sol_ma20") else None}
         jsave(SUMMARY, s)
         try:
             if NAME: WEB.parent.mkdir(parents=True, exist_ok=True)
