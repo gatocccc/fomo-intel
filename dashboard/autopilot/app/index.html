@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Autopilot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <a class="mark" href="/" aria-label="Nonco Autopilot, home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="13" cy="15" r="10" fill="#123236"/><path d="M21 13c4 0 8 1 9 3-1 2-5 3-9 3z" fill="#F5A524"/><circle cx="15" cy="12" r="2" fill="#F6F8F8"/></svg>
+    Nonco Autopilot
+  </a>
+  <button class="btn ghost" id="logout" type="button" hidden>Log out</button>
+</header>
+
+<main id="auth" class="auth" hidden>
+  <div class="card">
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" id="t-signup" aria-selected="true">Create account</button>
+      <button type="button" role="tab" id="t-login" aria-selected="false">Log in</button>
+    </div>
+    <form id="f-signup" novalidate>
+      <div class="f"><label for="su-name">Name</label><input id="su-name" name="name" autocomplete="name"></div>
+      <div class="f"><label for="su-email">Email</label><input id="su-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="f"><label for="su-pw">Password</label><input id="su-pw" name="password" type="password" autocomplete="new-password" minlength="10" required><p class="hint">At least 10 characters.</p></div>
+      <label class="check"><input type="checkbox" name="accept_risk" id="su-risk"> <span>I understand I can lose part or all of what I fund, that the bot is still learning, and that nobody guarantees profits.</span></label>
+      <div><button class="btn" type="submit">Create account</button> <span class="status" role="status"></span></div>
+    </form>
+    <form id="f-login" novalidate hidden>
+      <div class="f"><label for="li-email">Email</label><input id="li-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="f"><label for="li-pw">Password</label><input id="li-pw" name="password" type="password" autocomplete="current-password" required></div>
+      <div><button class="btn" type="submit">Log in</button> <span class="status" role="status"></span></div>
+    </form>
+  </div>
+</main>
+
+<main id="dash" hidden>
+  <h1 id="hello" style="font-size:clamp(32px,5vw,56px)">Your autopilot</h1>
+  <div class="dash">
+    <div class="card">
+      <h2 class="big" style="font-size:26px">Your seat</h2>
+      <dl class="kv">
+        <dt>Status</dt><dd id="d-status">—</dd>
+        <dt>Place in line</dt><dd id="d-pos">—</dd>
+        <dt>Account type</dt><dd id="d-type">—</dd>
+        <dt>Fees</dt><dd id="d-fees">—</dd>
+      </dl>
+      <p class="hint" style="margin-top:16px">When your seat opens, you will create your bot wallet here, fund it, and the autopilot starts trading. We will email you.</p>
+    </div>
+
+    <div class="card">
+      <h2 class="big" style="font-size:26px">Nonco Genesis holder?</h2>
+      <p class="hint" id="h-text">Holders pay no fee on profits and get priority seats. Sign a message with the Ethereum wallet that holds your Canvas or Legacy duck. It moves no funds and costs no gas. One duck wallet, one account.</p>
+      <div class="duck" style="margin-top:16px"><button class="btn ghost" type="button" id="eth-btn">Verify with my Ethereum wallet</button><span class="status" id="eth-st" role="status"></span></div>
+    </div>
+
+    <form class="card wide" id="f-set" novalidate>
+      <h2 class="big" style="font-size:26px;margin:0">Your goal and your rules</h2>
+      <div class="knobs" style="max-width:640px">
+        <div class="knob"><label for="s-goal">Goal</label><output id="s-goal-o">x1.5</output><input id="s-goal" name="goal" type="range" min="1.1" max="10" step="0.1" value="1.5"></div>
+        <div class="knob"><label for="s-days">Timeframe</label><output id="s-days-o">30 days</output><input id="s-days" name="days" type="range" min="7" max="90" step="1" value="30"></div>
+      </div>
+      <div class="plans" id="s-plans" role="group" aria-label="Plans"></div>
+      <p class="note" id="s-note"></p>
+      <fieldset>
+        <div class="f"><label for="s-amount">How much you plan to fund (USD)</label><input id="s-amount" name="amount_usd" type="number" min="20" step="10" value="300" inputmode="decimal"></div>
+        <div class="f"><label for="s-plan">Plan</label><select id="s-plan" name="plan"><option value="">Choose later</option><option value="agresivo">Aggressive</option><option value="equilibrado">Balanced</option><option value="tradicional">Core</option></select></div>
+        <div class="f"><label for="s-stop">Your stop: if I lose this %, shut everything down</label><input id="s-stop" name="stop_pct" type="number" min="5" max="95" step="5" value="30"></div>
+        <div class="f"><label for="s-at">When I hit my goal</label><select id="s-at" name="at_goal"><option value="lock">Move everything to USDC</option><option value="lock_profit">Lock in only the profit</option><option value="continue">Keep trading</option></select></div>
+        <div class="f wide"><label for="s-sol">Your Solana wallet, to withdraw to (optional)</label><input id="s-sol" name="sol_wallet" autocomplete="off" spellcheck="false"></div>
+      </fieldset>
+      <div><button class="btn" type="submit">Save</button> <span class="status" id="s-st" role="status"></span></div>
+    </form>
+  </div>
+</main>
+</div>
+
+<script src="/semaforo.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const post = (url, body) => fetch(url, {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body || {})})
+  .then(async r => { const d = await r.json(); if (!r.ok) throw new Error(d.error || "Something went wrong."); return d; });
+let fees = {trade_pct: 0.5, success_pct_external: 10}, sem = null;
+
+function showAuth(which) {
+  $("#auth").hidden = false; $("#dash").hidden = true; $("#logout").hidden = true;
+  const su = which !== "login";
+  $("#f-signup").hidden = !su; $("#f-login").hidden = su;
+  $("#t-signup").setAttribute("aria-selected", su); $("#t-login").setAttribute("aria-selected", !su);
+}
+$("#t-signup").onclick = () => { location.hash = "signup"; showAuth("signup"); };
+$("#t-login").onclick = () => { location.hash = "login"; showAuth("login"); };
+
+function formJSON(f) { const o = Object.fromEntries(new FormData(f).entries()); f.querySelectorAll("input[type=checkbox]").forEach(c => o[c.name] = c.checked); return o; }
+function wire(form, url) {
+  form.onsubmit = async ev => {
+    ev.preventDefault();
+    const st = form.querySelector(".status"); st.className = "status"; st.textContent = "…";
+    try { await post(url, formJSON(form)); st.textContent = ""; load(); }
+    catch (e) { st.className = "status err"; st.textContent = e.message; }
+  };
+}
+wire($("#f-signup"), "/api/signup"); wire($("#f-login"), "/api/login");
+$("#logout").onclick = () => post("/api/logout").then(() => { location.hash = "login"; showAuth("login"); });
+
+function fill(u) {
+  $("#auth").hidden = true; $("#dash").hidden = false; $("#logout").hidden = false;
+  $("#hello").textContent = u.name ? `Welcome, ${u.name.split(" ")[0]}` : "Your autopilot";
+  $("#d-status").textContent = {waitlist: "On the waitlist", active: "Trading", paused: "Paused"}[u.status] || u.status;
+  $("#d-pos").textContent = "#" + u.position;
+  const holder = u.holder_status === "holder";
+  $("#d-type").innerHTML = holder ? `<span class="badge ok">Genesis holder · ${u.ducks} ducks</span>`
+    : u.holder_status === "pending" ? `<span class="badge">Holder check pending</span>` : `<span class="badge">Standard</span>`;
+  $("#d-fees").textContent = holder || u.holder_status === "pending" ? `${fees.trade_pct}% per trade, nothing on profits` : `${fees.trade_pct}% per trade + ${fees.success_pct_external}% of every winning trade`;
+  if (u.eth) { $("#eth-st").className = "status ok"; $("#eth-st").textContent = `Linked: ${u.eth.slice(0, 6)}…${u.eth.slice(-4)}`; }
+  const f = $("#f-set");
+  if (u.goal) f.goal.value = u.goal; if (u.days) f.days.value = u.days;
+  if (u.amount_usd) f.amount_usd.value = u.amount_usd; if (u.stop_pct) f.stop_pct.value = u.stop_pct;
+  if (u.plan) f.plan.value = u.plan; if (u.at_goal) f.at_goal.value = u.at_goal; if (u.sol_wallet) f.sol_wallet.value = u.sol_wallet;
+  if (!sem) sem = Semaforo.mount({goal: f.goal, days: f.days, goalOut: $("#s-goal-o"), daysOut: $("#s-days-o"), box: $("#s-plans"), note: $("#s-note"),
+    selected: u.plan || "", onPick: p => f.plan.value = p});
+  else sem.refresh();
+}
+
+$("#f-set").onsubmit = async ev => {
+  ev.preventDefault();
+  const st = $("#s-st"); st.className = "status"; st.textContent = "Saving…";
+  try { const d = await post("/api/me/settings", formJSON(ev.target)); fill(d.user); st.className = "status ok"; st.textContent = "Saved."; }
+  catch (e) { st.className = "status err"; st.textContent = e.message; }
+};
+
+$("#eth-btn").onclick = async () => {
+  const st = $("#eth-st"); st.className = "status";
+  if (!window.ethereum) { st.className = "status err"; st.textContent = "Open this page in MetaMask or Rabby, or with their extension installed."; return; }
+  try {
+    st.textContent = "Waiting for your wallet…";
+    const [addr] = await window.ethereum.request({method: "eth_requestAccounts"});
+    const m = await fetch(`/api/holder/message?eth=${addr}`).then(r => r.json());
+    const sig = await window.ethereum.request({method: "personal_sign", params: [m.message, addr]});
+    const d = await post("/api/holder/verify", {eth: addr, signature: sig, message: m.message});
+    fill(d.user);
+    st.className = d.user.holder_status === "none" ? "status err" : "status ok";
+    st.textContent = d.user.holder_status === "holder" ? "Verified. Welcome, duck." : d.user.holder_status === "pending" ? "Signed. We will confirm your ducks shortly." : "No Canvas or Legacy duck found in that wallet.";
+  } catch (e) { st.className = "status err"; st.textContent = e.message || "Not signed. You can try again."; }
+};
+
+function load() {
+  fetch("/api/me").then(r => r.ok ? r.json() : Promise.reject()).then(d => fill(d.user))
+    .catch(() => showAuth(location.hash === "#login" ? "login" : "signup"));
+}
+fetch("/api/config").then(r => r.json()).then(c => fees = c.fees).catch(() => {}).finally(load);
+</script>
+</body>
+</html>

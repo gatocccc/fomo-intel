@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autopilot · Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--mist:#E8EEEF;--paper:#F6F8F8;--pond:#123236;--reed:#4A6E6D;--line:#C7D3D4;--go:#2E9B5F;--stop:#CF4A3A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--mist);color:var(--pond);font:15px/1.5 "Atkinson Hyperlegible",system-ui,sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+h1{font:800 34px/1 "Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 80;margin:0 0 4px}
+h2{font:700 20px/1.2 "Bricolage Grotesque",sans-serif;margin:32px 0 12px}
+.sub{color:var(--reed);margin:0 0 24px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.kpis div{background:var(--paper);border-radius:16px;padding:16px}
+.kpis span{display:block;color:var(--reed);font-size:13.5px}
+.kpis strong{font:800 30px/1.15 "Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 80;font-variant-numeric:tabular-nums}
+table{width:100%;border-collapse:collapse;background:var(--paper);border-radius:16px;overflow:hidden}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--pond);color:var(--paper);font-weight:700}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+code{font-size:12.5px;word-break:break-all}
+.tag{display:inline-block;padding:2px 8px;border-radius:99px;background:var(--mist);font-size:12.5px}
+.tag.h{background:var(--go);color:#fff}
+.scroll{overflow-x:auto}
+@media (max-width:700px){.kpis{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Nonco Autopilot · Admin</h1>
+  <p class="sub" id="upd">Loading…</p>
+  <div class="kpis">
+    <div><span>Accounts</span><strong id="k-ap">—</strong></div>
+    <div><span>New in 24 h</span><strong id="k-24">—</strong></div>
+    <div><span>Logged in, 24 h</span><strong id="k-li">—</strong></div>
+    <div><span>Holders (verified / pending)</span><strong id="k-h">—</strong></div>
+    <div><span>Pledged capital</span><strong id="k-m">—</strong></div>
+    <div><span>Active bot wallets</span><strong id="k-act">—</strong></div>
+    <div><span>Capital under the bot</span><strong id="k-cap">—</strong></div>
+    <div><span>Fees earned</span><strong id="k-fee">—</strong></div>
+  </div>
+
+  <h2>Plan wallets</h2>
+  <div class="scroll"><table><thead><tr><th>Plan</th><th>Address</th><th>Balance (SOL)</th></tr></thead><tbody id="w"></tbody></table></div>
+
+  <h2>By plan</h2>
+  <div class="scroll"><table><thead><tr><th>Plan</th><th>Accounts</th><th>Pledged</th></tr></thead><tbody id="pp"></tbody></table></div>
+
+  <h2>Accounts</h2>
+  <div class="scroll"><table><thead><tr><th>Created</th><th>Name</th><th>Email</th><th>Type</th><th>Amount</th><th>Goal</th><th>Plan</th><th>Stop</th><th>Status</th></tr></thead><tbody id="ap"></tbody></table></div>
+</div>
+<script>
+const usd = v => "$" + Number(v || 0).toLocaleString("en-US", {maximumFractionDigits: 0});
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const k = (id, v) => document.getElementById(id).textContent = v;
+function load(){
+  fetch("/api/admin/resumen").then(r => r.json()).then(d => {
+    k("upd", "Updated " + new Date().toLocaleTimeString("en-US") + " · refreshes every minute · fees " + d.fees.trade_pct + "% per trade, " + d.fees.success_pct_external + "% of winning trades for non-holders");
+    k("k-ap", d.users); k("k-24", d.new_24h); k("k-li", d.logins_24h); k("k-h", `${d.holders} / ${d.holders_pending}`);
+    k("k-m", usd(d.pledged_usd)); k("k-act", d.active_wallets); k("k-cap", usd(d.capital_under_bot_usd)); k("k-fee", usd(d.fees_usd));
+    document.getElementById("w").innerHTML = Object.entries(d.plan_wallets).map(([p, w]) =>
+      `<tr><td>${esc(p)}</td><td><code>${esc(w.address)}</code></td><td class="n">${w.sol == null ? "—" : w.sol.toFixed(4)}</td></tr>`).join("") || `<tr><td colspan="3">Not created yet.</td></tr>`;
+    document.getElementById("pp").innerHTML = Object.entries(d.by_plan).map(([p, x]) =>
+      `<tr><td>${esc(p)}</td><td class="n">${x.users}</td><td class="n">${usd(x.amount_usd)}</td></tr>`).join("") || `<tr><td colspan="3">No accounts yet.</td></tr>`;
+    document.getElementById("ap").innerHTML = d.detail.map(a => {
+      const t = a.holder_status === "holder" ? `<span class="tag h">holder · ${a.ducks}</span>` : a.holder_status === "pending" ? `<span class="tag">holder pending</span>` : `<span class="tag">standard</span>`;
+      return `<tr><td>${new Date(a.created * 1000).toLocaleString("en-US")}</td><td>${esc(a.name)}</td><td>${esc(a.email)}</td><td>${t}</td><td class="n">${a.amount_usd ? usd(a.amount_usd) : "—"}</td><td>${a.goal ? "x" + esc(a.goal) + " in " + esc(a.days) + " d" : "—"}</td><td>${esc(a.plan || "—")}</td><td class="n">${a.stop_pct ? esc(a.stop_pct) + "%" : "—"}</td><td>${esc(a.status)}</td></tr>`;
+    }).join("") || `<tr><td colspan="9">No accounts yet.</td></tr>`;
+  }).catch(() => k("upd", "Could not load."));
+}
+load(); setInterval(load, 60000);
+</script>
+</body>
+</html>

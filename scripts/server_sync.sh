@@ -48,7 +48,7 @@ MIN=$(date +%M); if [ $((10#$MIN % 10)) -eq 0 ]; then set -a; . ./.env; set +a; 
 [ -d /var/www/fomo ] && { cmp -s dashboard/desk.html /var/www/fomo/index.html || cp dashboard/desk.html /var/www/fomo/index.html; cmp -s dashboard/live.html /var/www/fomo/bot.html || cp dashboard/live.html /var/www/fomo/bot.html; } 2>/dev/null || true
 
 # ---- piloto automático: landing y panel (cada minuto) + certificado cuando el DNS esté listo ----
-[ -d /var/www/autopilot ] && { cmp -s dashboard/autopilot/index.html /var/www/autopilot/index.html || cp dashboard/autopilot/index.html /var/www/autopilot/index.html; cmp -s dashboard/autopilot/admin.html /var/www/autopilot/admin/index.html || cp dashboard/autopilot/admin.html /var/www/autopilot/admin/index.html; cmp -s dashboard/autopilot/claves.html /var/www/fomo/claves.html || cp dashboard/autopilot/claves.html /var/www/fomo/claves.html; } 2>/dev/null || true
+[ -d /var/www/autopilot ] && { rsync -a --exclude claves.html dashboard/autopilot/ /var/www/autopilot/; cmp -s dashboard/autopilot/claves.html /var/www/fomo/claves.html || cp dashboard/autopilot/claves.html /var/www/fomo/claves.html; } 2>/dev/null || true
 MIN=$(date +%M); [ $((10#$MIN % 5)) -eq 2 ] && bash scripts/app_cert.sh 2>/dev/null || true
 
 # ---- 3) publicar estado cada 5 min ----

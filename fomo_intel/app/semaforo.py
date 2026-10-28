@@ -17,13 +17,13 @@ STATE = Path("state")
 #   win: probabilidad de ganar una operación · up/down: resultado promedio al ganar / perder
 #   spread: dispersión relativa del resultado · frac: parte del capital por operación · per_day: operaciones por día
 PLANS = {
-    "agresivo": {"nombre": "Agresivo", "mercados": "Memecoins chicas (US$300K–3M)",
+    "agresivo": {"nombre": "Aggressive", "mercados": "Small-cap memecoins ($300K–3M)",
                  "win": 0.42, "up": 0.55, "down": -0.30, "spread": 0.8, "frac": 0.33, "per_day": 1.5,
                  "fuente": "desk"},
-    "equilibrado": {"nombre": "Equilibrado", "mercados": "Memecoins medianas y grandes (US$3M–500M)",
+    "equilibrado": {"nombre": "Balanced", "mercados": "Mid and large-cap memecoins ($3M–500M)",
                     "win": 0.45, "up": 0.20, "down": -0.13, "spread": 0.6, "frac": 0.30, "per_day": 1.2,
                     "fuente": "plan_equilibrado"},
-    "tradicional": {"nombre": "Tradicional", "mercados": "SOL, BTC, ETH y JUP",
+    "tradicional": {"nombre": "Core", "mercados": "SOL, BTC, ETH and JUP",
                     "win": 0.50, "up": 0.07, "down": -0.04, "spread": 0.5, "frac": 0.50, "per_day": 0.4,
                     "fuente": "plan_tradicional"},
 }
@@ -80,7 +80,7 @@ def simulate(plan: str, objetivo: float, dias: int, paths: int = 4000, seed: int
     nivel = 2 if prob >= 0.60 else 1 if prob >= 0.25 else 0
     # el riesgo de perder la mitad baja el color: una meta probable con mucho riesgo no es verde
     nivel -= (1 if half >= 0.25 else 0) + (1 if half >= 0.50 else 0)
-    color = ("rojo", "amarillo", "verde")[max(nivel, 0)]
+    color = ("red", "yellow", "green")[max(nivel, 0)]
     return {"plan": plan, "nombre": p["nombre"], "mercados": p["mercados"],
             "prob_objetivo": round(prob, 3), "prob_perder_mitad": round(half, 3),
             "mediana": round(finals[len(finals) // 2], 3), "color": color,
@@ -92,7 +92,7 @@ def sugerido(plan: str, dias: int) -> float | None:
     best = None
     for k in range(101, 400, 2):
         obj = k / 100
-        if simulate(plan, obj, dias, paths=1200)["color"] != "rojo":
+        if simulate(plan, obj, dias, paths=1200)["color"] != "red":
             best = obj
         else:
             break
@@ -108,7 +108,7 @@ def semaforo(objetivo: float, dias: int) -> dict:
     planes = []
     for k in PLANS:
         r = simulate(k, objetivo, dias)
-        if r["color"] == "rojo":
+        if r["color"] == "red":
             r["objetivo_sugerido"] = sugerido(k, dias)
         planes.append(r)
     out = {"objetivo": objetivo, "dias": dias, "planes": planes}

@@ -1,20 +1,32 @@
-"""API del piloto automático (landing pública + panel de administración).
+"""API de Nonco Autopilot (landing pública, cuentas de usuario y panel de administración).
 
-Escucha en 127.0.0.1:8770, detrás de nginx (app.nonconformistducks.com).
-  GET  /api/semaforo?objetivo=2&dias=30   -> chances por plan
-  GET  /api/publico                        -> historial en vivo de la mesa (sin datos sensibles)
-  GET  /api/holder/mensaje?eth=0x...       -> mensaje para firmar con la billetera de Ethereum
-  POST /api/aplicar                        -> guarda una aplicación (state/app/aplicaciones.jsonl)
-  GET  /api/admin/resumen                  -> panel (nginx le pone basic auth a /api/admin/ y /admin/)
+Escucha en 127.0.0.1:8770, detrás de nginx (app.nonconformistducks.com). Todo lo que ve el usuario está en inglés.
+Cuentas: email + contraseña (scrypt), sesión en cookie HttpOnly. Base: state/app/app.db (SQLite).
+
+  GET  /api/semaforo?objetivo=2&dias=30    chances por plan
+  GET  /api/publico                         historial en vivo de la mesa
+  GET  /api/config                          comisiones y planes
+  POST /api/signup  {email,password,name}   crea la cuenta e inicia sesión
+  POST /api/login   {email,password}
+  POST /api/logout
+  GET  /api/me                              cuenta + su configuración
+  POST /api/me/settings                     monto, objetivo, plazo, plan, freno, al llegar, billetera
+  GET  /api/holder/message?eth=0x..         mensaje para firmar (requiere sesión)
+  POST /api/holder/verify {eth,signature,message}
+  GET  /api/admin/resumen | /api/admin/claves, POST /api/admin/claves   (basic auth en nginx)
 """
 from __future__ import annotations
 
+import hashlib
+import hmac
 import json
 import os
 import re
 import secrets
+import sqlite3
 import threading
 import time
+from http.cookies import SimpleCookie
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -26,78 +38,211 @@ from fomo_intel.app.semaforo import PLANS, semaforo
 STATE = Path(os.getenv("FOMO_STATE_DIR", "state"))
 APP = STATE / "app"
 APP.mkdir(parents=True, exist_ok=True)
-APLIC = APP / "aplicaciones.jsonl"
+DB = APP / "app.db"
 PORT = int(os.getenv("APP_PORT", "8770"))
 ETH_RPC = os.getenv("ETH_RPC_URL", "https://ethereum-rpc.publicnode.com")
-# Contratos de NoncoDucks que habilitan el beneficio de holder (separados por coma). Sin configurar: queda "a verificar".
-NONCO_CONTRACTS = [c.strip().lower() for c in os.getenv("NONCO_CONTRACTS", "").split(",") if c.strip()]
-FEES = {"por_operacion": float(os.getenv("FEE_TRADE_PCT", "0.5")), "exito_externos": float(os.getenv("FEE_SUCCESS_PCT", "10"))}
+FEES = {"trade_pct": float(os.getenv("FEE_TRADE_PCT", "0.5")), "success_pct_external": float(os.getenv("FEE_SUCCESS_PCT", "10"))}
 SOL_RPC = os.getenv("SOLANA_RPC_URL") or f"https://mainnet.helius-rpc.com/?api-key={os.getenv('HELIUS_API_KEY', '')}"
+SESSION_DAYS = 30
+EMAIL = re.compile(r"^[^@\s]{1,64}@[^@\s]{1,190}\.[^@\s]{2,}$")
+B58 = re.compile(r"^[1-9A-HJ-NP-Za-km-z]{32,44}$")
+ETH = re.compile(r"^0x[0-9a-fA-F]{40}$")
 
 _lock = threading.Lock()
 _nonces: dict[str, tuple[str, float]] = {}
 _hits: dict[str, list[float]] = {}
-B58 = re.compile(r"^[1-9A-HJ-NP-Za-km-z]{32,44}$")
-ETH = re.compile(r"^0x[0-9a-fA-F]{40}$")
 
 
-def _rate_ok(ip: str, limit: int = 8, window: int = 3600) -> bool:
+def nonco_contracts() -> list[str]:
+    return [c.strip().lower() for c in os.getenv("NONCO_CONTRACTS", "").split(",") if c.strip()]
+
+
+# ---------- base de datos ----------
+def db() -> sqlite3.Connection:
+    c = sqlite3.connect(DB, timeout=10)
+    c.row_factory = sqlite3.Row
+    return c
+
+
+def init_db() -> None:
+    with db() as c:
+        c.executescript("""
+        CREATE TABLE IF NOT EXISTS users (
+          id INTEGER PRIMARY KEY, email TEXT UNIQUE NOT NULL, name TEXT, pw TEXT NOT NULL, created REAL,
+          amount_usd REAL, goal REAL, days INTEGER, plan TEXT, stop_pct REAL, at_goal TEXT, sol_wallet TEXT,
+          eth TEXT UNIQUE, ducks INTEGER, holder_status TEXT, status TEXT DEFAULT 'waitlist', bot_wallet TEXT, last_login REAL);
+        CREATE TABLE IF NOT EXISTS sessions (token TEXT PRIMARY KEY, user_id INTEGER, expires REAL);
+        """)
+    os.chmod(DB, 0o600)
+
+
+def hash_pw(pw: str) -> str:
+    salt = secrets.token_bytes(16)
+    h = hashlib.scrypt(pw.encode(), salt=salt, n=2 ** 14, r=8, p=1)
+    return salt.hex() + ":" + h.hex()
+
+
+def check_pw(pw: str, stored: str) -> bool:
+    try:
+        salt, h = stored.split(":")
+        return hmac.compare_digest(hashlib.scrypt(pw.encode(), salt=bytes.fromhex(salt), n=2 ** 14, r=8, p=1).hex(), h)
+    except Exception:  # noqa: BLE001
+        return False
+
+
+def new_session(uid: int) -> str:
+    tok = secrets.token_urlsafe(32)
+    with db() as c:
+        c.execute("INSERT INTO sessions VALUES (?,?,?)", (tok, uid, time.time() + SESSION_DAYS * 86400))
+        c.execute("UPDATE users SET last_login=? WHERE id=?", (time.time(), uid))
+    return tok
+
+
+def user_by_token(tok: str | None) -> sqlite3.Row | None:
+    if not tok:
+        return None
+    with db() as c:
+        return c.execute("SELECT u.* FROM sessions s JOIN users u ON u.id=s.user_id WHERE s.token=? AND s.expires>?",
+                         (tok, time.time())).fetchone()
+
+
+def public_user(u: sqlite3.Row) -> dict:
+    d = dict(u); d.pop("pw", None)
+    with db() as c:
+        d["position"] = c.execute("SELECT COUNT(*) FROM users WHERE created<=?", (u["created"],)).fetchone()[0]
+    d["type"] = "holder" if u["holder_status"] in ("holder", "pending") else "external"
+    return d
+
+
+def _rate_ok(key: str, limit: int, window: int = 3600) -> bool:
     now = time.time()
     with _lock:
-        h = [t for t in _hits.get(ip, []) if now - t < window]
-        if len(h) >= limit:
-            _hits[ip] = h
-            return False
-        h.append(now); _hits[ip] = h
-    return True
+        h = [t for t in _hits.get(key, []) if now - t < window]
+        ok = len(h) < limit
+        if ok:
+            h.append(now)
+        _hits[key] = h
+    return ok
 
 
-def _read_jsonl(f: Path) -> list[dict]:
-    out = []
-    if f.exists():
-        for line in f.read_text().splitlines():
-            try: out.append(json.loads(line))
-            except Exception: pass  # noqa: BLE001
-    return out
+# ---------- cuentas ----------
+def signup(b: dict) -> tuple[int, dict, str | None]:
+    email = str(b.get("email") or "").strip().lower()[:254]
+    pw = str(b.get("password") or "")
+    name = str(b.get("name") or "").strip()[:80]
+    if not EMAIL.match(email):
+        return 400, {"error": "Enter a valid email."}, None
+    if len(pw) < 10:
+        return 400, {"error": "Use a password of at least 10 characters."}, None
+    if not b.get("accept_risk"):
+        return 400, {"error": "You need to accept the risks to create an account."}, None
+    try:
+        with db() as c:
+            cur = c.execute("INSERT INTO users (email,name,pw,created,status) VALUES (?,?,?,?, 'waitlist')",
+                            (email, name, hash_pw(pw), time.time()))
+            uid = cur.lastrowid
+    except sqlite3.IntegrityError:
+        return 409, {"error": "That email already has an account. Log in instead."}, None
+    return 200, {"ok": True}, new_session(uid)
 
 
-def holder_message(eth: str) -> str:
+def login(b: dict) -> tuple[int, dict, str | None]:
+    email = str(b.get("email") or "").strip().lower()
+    with db() as c:
+        u = c.execute("SELECT * FROM users WHERE email=?", (email,)).fetchone()
+    if not u or not check_pw(str(b.get("password") or ""), u["pw"]):
+        return 401, {"error": "Wrong email or password."}, None
+    return 200, {"ok": True}, new_session(u["id"])
+
+
+def save_settings(u: sqlite3.Row, b: dict) -> tuple[int, dict]:
+    try:
+        amount = float(b.get("amount_usd") or 0); goal = float(b.get("goal") or 0)
+        days = int(b.get("days") or 0); stop = float(b.get("stop_pct") or 0)
+    except (TypeError, ValueError):
+        return 400, {"error": "Check the numbers."}
+    plan = str(b.get("plan") or "")
+    at_goal = str(b.get("at_goal") or "lock")
+    sol = str(b.get("sol_wallet") or "").strip()
+    if not (20 <= amount <= 100000): return 400, {"error": "Amount must be between $20 and $100,000."}
+    if not (1.01 <= goal <= 100): return 400, {"error": "Goal must be between x1.01 and x100."}
+    if not (7 <= days <= 120): return 400, {"error": "Timeframe must be between 7 and 120 days."}
+    if not (5 <= stop <= 95): return 400, {"error": "Your stop must be between 5% and 95%."}
+    if plan and plan not in PLANS: return 400, {"error": "Pick a plan from the list."}
+    if at_goal not in ("lock", "lock_profit", "continue"): return 400, {"error": "Pick what happens at your goal."}
+    if sol and not B58.match(sol): return 400, {"error": "That Solana address doesn't look right."}
+    with db() as c:
+        c.execute("UPDATE users SET amount_usd=?,goal=?,days=?,plan=?,stop_pct=?,at_goal=?,sol_wallet=? WHERE id=?",
+                  (amount, goal, days, plan or None, stop, at_goal, sol or None, u["id"]))
+        u2 = c.execute("SELECT * FROM users WHERE id=?", (u["id"],)).fetchone()
+    return 200, {"ok": True, "user": public_user(u2)}
+
+
+# ---------- holders (firma de Ethereum) ----------
+def holder_message(uid: int, eth: str) -> str:
     nonce = secrets.token_hex(8)
     with _lock:
-        _nonces[eth.lower()] = (nonce, time.time())
-    return (f"Nonco Autopilot: confirmo que soy dueño de esta billetera para el beneficio de holder.\n"
-            f"Billetera: {eth.lower()}\nCódigo: {nonce}")
+        _nonces[f"{uid}:{eth.lower()}"] = (nonce, time.time())
+    return f"Nonco Autopilot: I own this wallet and want the holder benefit.\nWallet: {eth.lower()}\nCode: {nonce}"
 
 
-def verify_holder(eth: str, signature: str, message: str) -> dict:
-    eth = eth.lower()
+def count_ducks(eth: str) -> int | None:
+    cs = nonco_contracts()
+    if not cs:
+        return None
+    total = 0
+    for c in cs:
+        data = "0x70a08231" + eth[2:].lower().rjust(64, "0")  # balanceOf(address)
+        try:
+            r = requests.post(ETH_RPC, json={"jsonrpc": "2.0", "id": 1, "method": "eth_call",
+                                             "params": [{"to": c, "data": data}, "latest"]}, timeout=10).json()
+            total += int(r.get("result", "0x0"), 16)
+        except Exception:  # noqa: BLE001
+            return None
+    return total
+
+
+def verify_holder(u: sqlite3.Row, b: dict) -> tuple[int, dict]:
+    eth = str(b.get("eth") or "").lower(); sig = str(b.get("signature") or ""); msg = str(b.get("message") or "")[:400]
+    if not ETH.match(eth):
+        return 400, {"error": "Invalid Ethereum address."}
     with _lock:
-        n = _nonces.get(eth)
-    if not n or n[0] not in message or time.time() - n[1] > 1800:
-        return {"firma": False, "motivo": "el código venció; volvé a firmar"}
+        n = _nonces.get(f"{u['id']}:{eth}")
+    if not n or n[0] not in msg or time.time() - n[1] > 1800:
+        return 400, {"error": "The code expired. Sign again."}
     try:
         from eth_account import Account
         from eth_account.messages import encode_defunct
-        rec = Account.recover_message(encode_defunct(text=message), signature=signature).lower()
-    except Exception as e:  # noqa: BLE001
-        return {"firma": False, "motivo": f"firma inválida ({type(e).__name__})"}
+        rec = Account.recover_message(encode_defunct(text=msg), signature=sig).lower()
+    except Exception:  # noqa: BLE001
+        return 400, {"error": "Invalid signature."}
     if rec != eth:
-        return {"firma": False, "motivo": "la firma no corresponde a esa billetera"}
-    out = {"firma": True, "patos": None, "estado": "a verificar"}
-    if NONCO_CONTRACTS:
-        total = 0
-        for c in NONCO_CONTRACTS:
-            data = "0x70a08231" + eth[2:].rjust(64, "0")  # balanceOf(address)
-            try:
-                r = requests.post(ETH_RPC, json={"jsonrpc": "2.0", "id": 1, "method": "eth_call",
-                                                 "params": [{"to": c, "data": data}, "latest"]}, timeout=10).json()
-                total += int(r.get("result", "0x0"), 16)
-            except Exception:  # noqa: BLE001
-                return out
-        out.update({"patos": total, "estado": "holder" if total > 0 else "sin patos"})
-    return out
+        return 400, {"error": "The signature doesn't match that wallet."}
+    ducks = count_ducks(eth)
+    status = "pending" if ducks is None else ("holder" if ducks > 0 else "none")
+    try:
+        with db() as c:
+            c.execute("UPDATE users SET eth=?, ducks=?, holder_status=? WHERE id=?", (eth, ducks, status, u["id"]))
+            u2 = c.execute("SELECT * FROM users WHERE id=?", (u["id"],)).fetchone()
+    except sqlite3.IntegrityError:
+        return 409, {"error": "That wallet is already linked to another account. One duck wallet, one account."}
+    return 200, {"ok": True, "user": public_user(u2)}
 
 
+def recheck_pending() -> None:
+    """Cuando se cargan los contratos, revisa los holders que quedaron 'pending'."""
+    if not nonco_contracts():
+        return
+    with db() as c:
+        rows = c.execute("SELECT id, eth FROM users WHERE holder_status='pending' AND eth IS NOT NULL").fetchall()
+    for r in rows:
+        ducks = count_ducks(r["eth"])
+        if ducks is not None:
+            with db() as c:
+                c.execute("UPDATE users SET ducks=?, holder_status=? WHERE id=?", (ducks, "holder" if ducks > 0 else "none", r["id"]))
+
+
+# ---------- datos públicos y admin ----------
 def publico() -> dict:
     try:
         d = json.load(open(STATE / "desk_summary.json"))
@@ -105,11 +250,11 @@ def publico() -> dict:
         try: d = json.load(open("/var/www/fomo/desk.json"))
         except Exception: d = {}  # noqa: BLE001
     closed = d.get("closed") or []
-    return {"desde": d.get("start_ts"), "inicio_usd": d.get("start_usd"), "patrimonio_usd": d.get("equity_usd"),
-            "multiplo": d.get("mult"), "operaciones_cerradas": d.get("n_closed", len(closed)), "ganadas": d.get("wins"),
-            "posiciones": [{"token": p.get("symbol"), "multiplo": p.get("mult"), "tesis": p.get("thesis")} for p in d.get("positions") or []],
-            "ultimas": [{"token": c.get("symbol"), "resultado": c.get("ret"), "motivo": c.get("why")} for c in closed[:8]],
-            "actualizado": d.get("now")}
+    return {"since": d.get("start_ts"), "start_usd": d.get("start_usd"), "equity_usd": d.get("equity_usd"),
+            "multiple": d.get("mult"), "closed_trades": d.get("n_closed", len(closed)), "wins": d.get("wins"),
+            "positions": [{"token": p.get("symbol"), "multiple": p.get("mult")} for p in d.get("positions") or []],
+            "recent": [{"token": c.get("symbol"), "result": c.get("ret")} for c in closed[:8]],
+            "updated": d.get("now")}
 
 
 def _sol_balance(pub: str) -> float | None:
@@ -121,27 +266,29 @@ def _sol_balance(pub: str) -> float | None:
 
 
 def admin_resumen() -> dict:
-    apps = _read_jsonl(APLIC)
+    with db() as c:
+        users = [dict(r) for r in c.execute("SELECT * FROM users ORDER BY created DESC").fetchall()]
+    for u in users:
+        u.pop("pw", None)
     try: wallets = json.load(open(STATE / "plan_wallets.json"))
     except Exception: wallets = {}  # noqa: BLE001
-    hoy = time.time() - 86400
-    por_plan: dict[str, dict] = {}
-    for a in apps:
-        k = a.get("plan") or "sin elegir"
-        x = por_plan.setdefault(k, {"aplicaciones": 0, "monto_usd": 0})
-        x["aplicaciones"] += 1; x["monto_usd"] += a.get("monto_usd") or 0
-    return {"aplicaciones": len(apps), "ultimas_24h": sum(1 for a in apps if a.get("ts", 0) >= hoy),
-            "holders": sum(1 for a in apps if (a.get("holder") or {}).get("estado") == "holder"),
-            "holders_a_verificar": sum(1 for a in apps if (a.get("holder") or {}).get("estado") == "a verificar"),
-            "monto_total_usd": sum(a.get("monto_usd") or 0 for a in apps), "por_plan": por_plan,
-            "billeteras_planes": {k: {"direccion": v, "sol": _sol_balance(v)} for k, v in wallets.items()},
-            "usuarios_activos": 0, "capital_bajo_bot_usd": 0, "comisiones_usd": 0,
-            "detalle": apps[::-1][:300], "fees": FEES, "contratos_holder": NONCO_CONTRACTS}
+    day = time.time() - 86400
+    by_plan: dict[str, dict] = {}
+    for u in users:
+        x = by_plan.setdefault(u.get("plan") or "not chosen", {"users": 0, "amount_usd": 0})
+        x["users"] += 1; x["amount_usd"] += u.get("amount_usd") or 0
+    return {"users": len(users), "new_24h": sum(1 for u in users if (u.get("created") or 0) >= day),
+            "logins_24h": sum(1 for u in users if (u.get("last_login") or 0) >= day),
+            "holders": sum(1 for u in users if u.get("holder_status") == "holder"),
+            "holders_pending": sum(1 for u in users if u.get("holder_status") == "pending"),
+            "pledged_usd": sum(u.get("amount_usd") or 0 for u in users), "by_plan": by_plan,
+            "active_wallets": sum(1 for u in users if u.get("status") == "active"), "capital_under_bot_usd": 0, "fees_usd": 0,
+            "plan_wallets": {k: {"address": v, "sol": _sol_balance(v)} for k, v in wallets.items()},
+            "detail": users[:500], "fees": FEES, "holder_contracts": nonco_contracts()}
 
 
-CLAVES = {"JUPITER_API_KEY": "API key de Jupiter", "TELEGRAM_BOT_TOKEN": "Token del bot de Telegram (BotFather)",
-          "TURNKEY_ORG_ID": "Organization ID de Turnkey", "TURNKEY_API_USER_ID": "User ID del usuario de API en Turnkey",
-          "NONCO_CONTRACTS": "Contratos de NoncoDucks (separados por coma)"}
+CLAVES = {"JUPITER_API_KEY": "Jupiter API key", "TURNKEY_ORG_ID": "Turnkey organization ID",
+          "TURNKEY_API_USER_ID": "Turnkey API user ID", "NONCO_CONTRACTS": "Nonco Genesis contract addresses (comma separated)"}
 ENV = Path(os.getenv("FOMO_ENV_FILE", ".env"))
 
 
@@ -151,72 +298,39 @@ def claves_estado() -> dict:
     return {"claves": [{"nombre": k, "descripcion": v, "cargada": k in have} for k, v in CLAVES.items()]}
 
 
-def claves_guardar(body: dict) -> tuple[int, dict]:
-    k = str(body.get("nombre") or ""); v = str(body.get("valor") or "").strip()
+def claves_guardar(b: dict) -> tuple[int, dict]:
+    k = str(b.get("nombre") or ""); v = str(b.get("valor") or "").strip()
     if k not in CLAVES or not v or len(v) > 500 or "\n" in v or "\r" in v:
-        return 400, {"error": "Clave o valor inválido."}
+        return 400, {"error": "Invalid key or value."}
     lines = ENV.read_text().splitlines() if ENV.exists() else []
     lines = [l for l in lines if not l.startswith(k + "=")] + [f"{k}={v}"]
     tmp = ENV.with_suffix(".tmp"); tmp.write_text("\n".join(lines) + "\n"); os.chmod(tmp, 0o600); tmp.replace(ENV)
     os.environ[k] = v
+    if k == "NONCO_CONTRACTS":
+        threading.Thread(target=recheck_pending, daemon=True).start()
     return 200, {"ok": True, **claves_estado()}
 
 
-def aplicar(body: dict, ip: str) -> tuple[int, dict]:
-    def s(k, n=120): return str(body.get(k) or "").strip()[:n]
-    nombre, tg, email = s("nombre", 80), s("telegram", 40), s("email", 120)
-    if not nombre or not (tg or email):
-        return 400, {"error": "Completá tu nombre y un contacto (Telegram o email)."}
-    if email and not re.match(r"^[^@\s]+@[^@\s]+\.[^@\s]+$", email):
-        return 400, {"error": "El email no parece válido."}
-    plan = s("plan", 20)
-    if plan and plan not in PLANS:
-        return 400, {"error": "Elegí un plan de la lista."}
-    try:
-        monto = float(body.get("monto_usd") or 0); objetivo = float(body.get("objetivo") or 0)
-        dias = int(body.get("dias") or 0); freno = float(body.get("freno_pct") or 0)
-    except (TypeError, ValueError):
-        return 400, {"error": "Revisá los números del monto, objetivo, plazo y freno."}
-    if not (20 <= monto <= 100000):
-        return 400, {"error": "El monto tiene que estar entre US$20 y US$100.000."}
-    sol = s("billetera_solana", 44)
-    if sol and not B58.match(sol):
-        return 400, {"error": "La billetera de Solana no tiene un formato válido."}
-    if not body.get("acepta_riesgos"):
-        return 400, {"error": "Para aplicar tenés que aceptar los riesgos."}
-    holder = None
-    eth = s("eth", 42)
-    if eth:
-        if not ETH.match(eth):
-            return 400, {"error": "La billetera de Ethereum no tiene un formato válido."}
-        holder = verify_holder(eth, s("eth_firma", 200), str(body.get("eth_mensaje") or "")[:400])
-        if not holder.get("firma"):
-            return 400, {"error": f"No pudimos verificar el pato: {holder.get('motivo')}."}
-        holder["eth"] = eth.lower()
-        if any((a.get("holder") or {}).get("eth") == eth.lower() for a in _read_jsonl(APLIC)):
-            return 409, {"error": "Esa billetera de Ethereum ya está asociada a otra aplicación."}
-    row = {"ts": time.time(), "id": secrets.token_hex(5), "nombre": nombre, "telegram": tg.lstrip("@"), "email": email,
-           "monto_usd": round(monto, 2), "objetivo": objetivo, "dias": dias, "plan": plan, "freno_pct": freno,
-           "al_llegar": s("al_llegar", 20), "billetera_solana": sol, "holder": holder,
-           "tipo": "holder" if holder and holder.get("estado") in ("holder", "a verificar") else "externo",
-           "estado": "en lista", "ip": ip}
-    with _lock, open(APLIC, "a") as f:
-        f.write(json.dumps(row, ensure_ascii=False) + "\n")
-    pos = len(_read_jsonl(APLIC))
-    return 200, {"ok": True, "id": row["id"], "puesto": pos, "tipo": row["tipo"]}
-
-
+# ---------- HTTP ----------
 class H(BaseHTTPRequestHandler):
-    def _send(self, code: int, obj: dict) -> None:
+    def _send(self, code: int, obj: dict, cookie: str | None = None, clear: bool = False) -> None:
         b = json.dumps(obj, ensure_ascii=False).encode()
         self.send_response(code)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Cache-Control", "no-store")
+        if cookie:
+            self.send_header("Set-Cookie", f"np_session={cookie}; Path=/; Max-Age={SESSION_DAYS * 86400}; HttpOnly; Secure; SameSite=Lax")
+        if clear:
+            self.send_header("Set-Cookie", "np_session=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Lax")
         self.send_header("Content-Length", str(len(b)))
         self.end_headers(); self.wfile.write(b)
 
     def _ip(self) -> str:
         return self.headers.get("X-Real-IP") or self.client_address[0]
+
+    def _token(self) -> str | None:
+        c = SimpleCookie(self.headers.get("Cookie") or "")
+        return c["np_session"].value if "np_session" in c else None
 
     def do_GET(self):  # noqa: N802
         u = urlparse(self.path); q = {k: v[0] for k, v in parse_qs(u.query).items()}
@@ -226,41 +340,63 @@ class H(BaseHTTPRequestHandler):
             if u.path == "/api/publico":
                 return self._send(200, publico())
             if u.path == "/api/config":
-                return self._send(200, {"fees": FEES, "planes": {k: {"nombre": v["nombre"], "mercados": v["mercados"]} for k, v in PLANS.items()}})
-            if u.path == "/api/holder/mensaje":
+                return self._send(200, {"fees": FEES, "plans": {k: {"name": v["nombre"], "markets": v["mercados"]} for k, v in PLANS.items()}})
+            if u.path == "/api/me":
+                usr = user_by_token(self._token())
+                return self._send(200, {"user": public_user(usr)}) if usr else self._send(401, {"error": "Not logged in."})
+            if u.path == "/api/holder/message":
+                usr = user_by_token(self._token())
+                if not usr: return self._send(401, {"error": "Not logged in."})
                 eth = q.get("eth", "")
-                if not ETH.match(eth):
-                    return self._send(400, {"error": "billetera de Ethereum inválida"})
-                return self._send(200, {"mensaje": holder_message(eth)})
-            if u.path == "/api/admin/claves":
-                return self._send(200, claves_estado())
+                if not ETH.match(eth): return self._send(400, {"error": "Invalid Ethereum address."})
+                return self._send(200, {"message": holder_message(usr["id"], eth)})
             if u.path == "/api/admin/resumen":
                 return self._send(200, admin_resumen())
+            if u.path == "/api/admin/claves":
+                return self._send(200, claves_estado())
         except (TypeError, ValueError):
-            return self._send(400, {"error": "parámetros inválidos"})
-        self._send(404, {"error": "no existe"})
+            return self._send(400, {"error": "Invalid parameters."})
+        self._send(404, {"error": "Not found."})
 
     def do_POST(self):  # noqa: N802
         path = urlparse(self.path).path
-        if path not in ("/api/aplicar", "/api/admin/claves"):
-            return self._send(404, {"error": "no existe"})
         n = int(self.headers.get("Content-Length") or 0)
         if n > 20000:
-            return self._send(413, {"error": "demasiado grande"})
-        if path == "/api/aplicar" and not _rate_ok(self._ip()):
-            return self._send(429, {"error": "Demasiados intentos. Probá de nuevo en una hora."})
+            return self._send(413, {"error": "Too large."})
         try:
-            body = json.loads(self.rfile.read(n) or b"{}")
+            b = json.loads(self.rfile.read(n) or b"{}")
         except Exception:  # noqa: BLE001
-            return self._send(400, {"error": "datos inválidos"})
-        code, out = claves_guardar(body) if path == "/api/admin/claves" else aplicar(body, self._ip())
-        self._send(code, out)
+            return self._send(400, {"error": "Invalid data."})
+        ip = self._ip()
+        if path == "/api/signup":
+            if not _rate_ok("su:" + ip, 5): return self._send(429, {"error": "Too many attempts. Try again in an hour."})
+            code, out, tok = signup(b); return self._send(code, out, cookie=tok)
+        if path == "/api/login":
+            if not _rate_ok("li:" + ip, 20) or not _rate_ok("le:" + str(b.get("email", "")).lower(), 10):
+                return self._send(429, {"error": "Too many attempts. Try again in an hour."})
+            code, out, tok = login(b); return self._send(code, out, cookie=tok)
+        if path == "/api/logout":
+            tok = self._token()
+            if tok:
+                with db() as c: c.execute("DELETE FROM sessions WHERE token=?", (tok,))
+            return self._send(200, {"ok": True}, clear=True)
+        if path == "/api/admin/claves":
+            code, out = claves_guardar(b); return self._send(code, out)
+        usr = user_by_token(self._token())
+        if not usr:
+            return self._send(401, {"error": "Not logged in."})
+        if path == "/api/me/settings":
+            code, out = save_settings(usr, b); return self._send(code, out)
+        if path == "/api/holder/verify":
+            code, out = verify_holder(usr, b); return self._send(code, out)
+        self._send(404, {"error": "Not found."})
 
     def log_message(self, fmt, *args):  # silenciar
         pass
 
 
 def main() -> None:
+    init_db()
     ThreadingHTTPServer(("127.0.0.1", PORT), H).serve_forever()
 
 
