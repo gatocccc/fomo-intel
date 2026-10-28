@@ -25,61 +25,33 @@
   "tp_done": [],
   "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
   "id": "agresivo-2026-10-28-01",
-  "last_usd": 0.007632926788536207
+  "last_usd": 0.007484198153892085
  },
- "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP": {
-  "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
-  "symbol": "SI",
-  "opened_ts": 1793204961.3601325,
-  "entry_usd": 0.014467228536671355,
-  "tokens": 4225.637077,
-  "tokens_initial": 4225.637077,
-  "sol_in": 0.6055798,
+ "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw": {
+  "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
+  "symbol": "INVERSE",
+  "opened_ts": 1793231394.7251604,
+  "entry_usd": 0.0013270191683602255,
+  "tokens": 44013.92122,
+  "tokens_initial": 44013.92122,
+  "sol_in": 0.57102828,
   "sol_out": 0.0,
-  "peak_usd": 0.015003927191750546,
-  "stop": 0.3,
-  "trail": 0.35,
-  "trail_after": 1.6,
+  "peak_usd": 0.0013270191683602255,
+  "stop": 0.25,
+  "trail": 0.25,
+  "trail_after": 1.3,
   "tp": [
    [
-    3,
-    0.25
+    1.5,
+    0.4
    ],
    [
-    6,
-    0.25
+    2.5,
+    0.3
    ]
   ],
   "tp_done": [],
-  "thesis": "52K holders, top 10 hold 11%, real volume at 34% of market cap per day, 20% below weekly high. Clean anti-rug check.",
-  "id": "agresivo-2026-10-28-01",
-  "last_usd": 0.014845118800764416
- },
- "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W": {
-  "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
-  "symbol": "SAPLING",
-  "opened_ts": 1793221035.093284,
-  "entry_usd": 0.003738808213527452,
-  "tokens": 18351.331005,
-  "tokens_initial": 18351.331005,
-  "sol_in": 0.67082478,
-  "sol_out": 0.0,
-  "peak_usd": 0.003738808213527452,
-  "stop": 0.3,
-  "trail": 0.35,
-  "trail_after": 1.6,
-  "tp": [
-   [
-    3,
-    0.25
-   ],
-   [
-    6,
-    0.25
-   ]
-  ],
-  "tp_done": [],
-  "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
-  "id": "auto-agresivo-20261028-2057"
+  "thesis": "Fast plan: $1.4M token moving (+102% 24h) bought on a pullback (77% of its 3-day high); clean anti-rug check. Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x.",
+  "id": "auto-agresivo-20261028-2349"
  }
 }
