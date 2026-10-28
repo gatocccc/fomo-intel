@@ -1,6 +1,6 @@
 {
  "mode": "live",
- "last_run": 1793214964.005479,
+ "last_run": 1793215563.4511797,
  "regime": "neutral",
  "profile": "aggressive",
  "status": "ok",
@@ -16,5 +16,10 @@
    "sym": "DOAS",
    "ts": 1793214444.4847932
   }
- ]
+ ],
+ "_noted_no_cands": 1793215563.4511948,
+ "last_note": {
+  "ts": 1793215563.4528604,
+  "text": "Idle cash (32%) but no candidate passes the scan and the anti-rug check. Waiting beats buying something worse."
+ }
 }

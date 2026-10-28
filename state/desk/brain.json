@@ -1,13 +1,13 @@
 {
  "mode": "live",
- "last_run": 1793214964.004036,
+ "last_run": 1793215563.4466214,
  "regime": "neutral",
  "profile": "aggressive",
  "status": "ok",
  "last_action": {
-  "ts": 1793214964.0047798,
-  "title": "Cerebro automático: ajuste de stops",
-  "orders": 1,
+  "ts": 1793215563.4485838,
+  "title": "Cerebro automático: compra",
+  "orders": 2,
   "mode": "live"
  },
  "auto_buys": [
@@ -15,6 +15,11 @@
    "day": "2026-10-28",
    "sym": "DOAS",
    "ts": 1793214444.4809437
+  },
+  {
+   "day": "2026-10-28",
+   "sym": "SI",
+   "ts": 1793215563.4485838
   }
  ]
 }
