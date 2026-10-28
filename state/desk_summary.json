@@ -1,17 +1,17 @@
 {
- "now": 1793157896.9549885,
+ "now": 1793158177.4842052,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 117.52,
- "equity_sol": 1.1556,
+ "equity_usd": 116.77,
+ "equity_sol": 1.1467,
  "cash_sol": 0.032,
- "positions_usd": 114.27,
- "sol_usd": 101.7,
- "mult": 1.186,
+ "positions_usd": 113.52,
+ "sol_usd": 101.83,
+ "mult": 1.178,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.006284863675866748,
-   "mult": 1.298,
-   "value_usd": 46.53
+   "last_usd": 0.006171108754343168,
+   "mult": 1.275,
+   "value_usd": 45.69
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0017261875316298336,
-   "mult": 1.33,
-   "value_usd": 40.78
+   "last_usd": 0.0017603650910832322,
+   "mult": 1.357,
+   "value_usd": 41.59
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -84,7 +84,7 @@
    "tokens_initial": 6636.507512,
    "sol_in": 0.26682112,
    "sol_out": 0.0,
-   "peak_usd": 0.004080901911610542,
+   "peak_usd": 0.004106022947874755,
    "stop": 0.3,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.004063390338653753,
-   "mult": 0.996,
-   "value_usd": 26.97
+   "last_usd": 0.003954417915164465,
+   "mult": 0.969,
+   "value_usd": 26.24
   }
  ],
  "equity": [
@@ -690,6 +690,10 @@
   [
    1793157709,
    117.03
+  ],
+  [
+   1793158021,
+   117.17
   ]
  ],
  "closed": [
