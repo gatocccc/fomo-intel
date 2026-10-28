@@ -1,0 +1,13 @@
+== 118_cerebro_sombra_y_perps 2026-10-28T18:52:03Z ==
+fomo-brain: active
+--- Hyperliquid alcanzable
+{'SOL': '102.085', 'BTC': '80989.5', 'ETH': '2352.85', 'JUP': '0.28386', 'kPEPE': '0.004863', 'WIF': '0.182355', 'FARTCOIN': '0.13201'}
+--- precios Jupiter de los activos del plan tradicional
+7vfCXT 2351.1155566643733 21401008.897893004
+JUPyiw 0.28365932498009305 5209271.799207247
+So1111 102.0501238016197 927517750.3060756
+cbbtcf 81025.059410945 28206710.307371985
+--- backtest de perps en segundo plano (log: state/ops/perps_bt.log)
+Oct 28 18:52:03 simplai-prod systemd[1]: Started fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta).
+Oct 28 18:52:04 simplai-prod python3[1488977]: 2026-10-28 18:52:04,328 INFO brain: escaneo scan4…
+== exit 0 ==

@@ -1,17 +1,17 @@
 {
- "now": 1793213391.298895,
+ "now": 1793213676.0687342,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 129.98,
- "equity_sol": 1.2748,
+ "equity_usd": 129.05,
+ "equity_sol": 1.2657,
  "cash_sol": 0.3781,
- "positions_usd": 91.43,
+ "positions_usd": 90.5,
  "sol_usd": 101.96,
- "mult": 1.312,
+ "mult": 1.302,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,7 +24,7 @@
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
    "sol_out": 0.0,
-   "peak_usd": 0.00904110173203328,
+   "peak_usd": 0.008965929615085431,
    "stop": -0.05,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.00895410336569958,
-   "mult": 1.85,
-   "value_usd": 66.29
+   "last_usd": 0.00895275329673961,
+   "mult": 1.849,
+   "value_usd": 66.28
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.0037877080436380423,
-   "mult": 0.928,
-   "value_usd": 25.14
+   "last_usd": 0.0036494532525898453,
+   "mult": 0.894,
+   "value_usd": 24.22
   }
  ],
  "equity": [
@@ -1384,6 +1384,10 @@
   [
    1793213361,
    127.96
+  ],
+  [
+   1793213523,
+   129.91
   ]
  ],
  "closed": [
@@ -1604,5 +1608,21 @@
  "n_closed": 2,
  "realized_usd": 1.75,
  "plan": null,
- "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao"
+ "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
+ "brain": {
+  "mode": "shadow",
+  "last_run": 1793213592.7140574,
+  "regime": "neutral",
+  "status": "ok",
+  "last_action": {
+   "ts": 1793213592.7172546,
+   "title": "Cerebro automático: compra",
+   "orders": 2,
+   "mode": "shadow"
+  },
+  "last_note": null,
+  "trad_status": null,
+  "sol_ch24h": 1.2,
+  "sol_vs_ma20": -0.03
+ }
 }

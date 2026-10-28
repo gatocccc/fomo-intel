@@ -1,17 +1,17 @@
 {
- "now": 1793213380.268112,
+ "now": 1793213676.139811,
  "start_ts": 1793203690.827375,
  "start_usd": 200.16,
  "start_sol": 1.981514,
  "goal_usd": 400.32,
  "days": 30,
  "day": 1,
- "equity_usd": 196.75,
- "equity_sol": 1.9297,
+ "equity_usd": 197.97,
+ "equity_sol": 1.9416,
  "cash_sol": 0.0655,
- "positions_usd": 190.07,
+ "positions_usd": 191.3,
  "sol_usd": 101.96,
- "mult": 0.983,
+ "mult": 0.989,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Only mid-cap that passed every filter today: real volume, 52K holders, clean anti-rug check.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.01395823224672998,
-   "mult": 0.962,
-   "value_usd": 58.98
+   "last_usd": 0.014245606034867905,
+   "mult": 0.982,
+   "value_usd": 60.2
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
@@ -62,9 +62,9 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9995848748371996,
+   "last_usd": 0.9996418044379962,
    "mult": 0.992,
-   "value_usd": 131.09
+   "value_usd": 131.1
   }
  ],
  "equity": [
@@ -199,6 +199,10 @@
   [
    1793213350,
    196.35
+  ],
+  [
+   1793213523,
+   198.16
   ]
  ],
  "closed": [],
@@ -259,5 +263,16 @@
  "n_closed": 0,
  "realized_usd": 0,
  "plan": "equilibrado",
- "wallet": "8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82"
+ "wallet": "8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82",
+ "brain": {
+  "mode": "shadow",
+  "last_run": 1793213592.722039,
+  "regime": "neutral",
+  "status": "ok",
+  "last_action": null,
+  "last_note": null,
+  "trad_status": null,
+  "sol_ch24h": 1.2,
+  "sol_vs_ma20": -0.03
+ }
 }
