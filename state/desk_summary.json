@@ -1,17 +1,17 @@
 {
- "now": 1793186079.3307028,
+ "now": 1793186391.4762385,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 123.15,
- "equity_sol": 1.201,
+ "equity_usd": 125.47,
+ "equity_sol": 1.2238,
  "cash_sol": 0.032,
- "positions_usd": 119.88,
- "sol_usd": 102.54,
- "mult": 1.243,
+ "positions_usd": 122.19,
+ "sol_usd": 102.52,
+ "mult": 1.266,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,7 +24,7 @@
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
    "sol_out": 0.0,
-   "peak_usd": 0.006906806358452469,
+   "peak_usd": 0.0070034953318297,
    "stop": 0.3,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.006906806358452469,
-   "mult": 1.427,
-   "value_usd": 51.13
+   "last_usd": 0.0070034953318297,
+   "mult": 1.447,
+   "value_usd": 51.85
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0017947300930352638,
-   "mult": 1.383,
-   "value_usd": 42.4
+   "last_usd": 0.0018619654150677004,
+   "mult": 1.435,
+   "value_usd": 43.99
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.003969956558281934,
+   "last_usd": 0.003972029295652422,
    "mult": 0.973,
-   "value_usd": 26.35
+   "value_usd": 26.36
   }
  ],
  "equity": [
@@ -1050,6 +1050,10 @@
   [
    1793185798,
    123.07
+  ],
+  [
+   1793186110,
+   123.56
   ]
  ],
  "closed": [
