@@ -139,6 +139,29 @@ def admin_resumen() -> dict:
             "detalle": apps[::-1][:300], "fees": FEES, "contratos_holder": NONCO_CONTRACTS}
 
 
+CLAVES = {"JUPITER_API_KEY": "API key de Jupiter", "TELEGRAM_BOT_TOKEN": "Token del bot de Telegram (BotFather)",
+          "TURNKEY_ORG_ID": "Organization ID de Turnkey", "TURNKEY_API_USER_ID": "User ID del usuario de API en Turnkey",
+          "NONCO_CONTRACTS": "Contratos de NoncoDucks (separados por coma)"}
+ENV = Path(os.getenv("FOMO_ENV_FILE", ".env"))
+
+
+def claves_estado() -> dict:
+    txt = ENV.read_text() if ENV.exists() else ""
+    have = {l.split("=", 1)[0].strip() for l in txt.splitlines() if "=" in l and l.split("=", 1)[1].strip()}
+    return {"claves": [{"nombre": k, "descripcion": v, "cargada": k in have} for k, v in CLAVES.items()]}
+
+
+def claves_guardar(body: dict) -> tuple[int, dict]:
+    k = str(body.get("nombre") or ""); v = str(body.get("valor") or "").strip()
+    if k not in CLAVES or not v or len(v) > 500 or "\n" in v or "\r" in v:
+        return 400, {"error": "Clave o valor inválido."}
+    lines = ENV.read_text().splitlines() if ENV.exists() else []
+    lines = [l for l in lines if not l.startswith(k + "=")] + [f"{k}={v}"]
+    tmp = ENV.with_suffix(".tmp"); tmp.write_text("\n".join(lines) + "\n"); os.chmod(tmp, 0o600); tmp.replace(ENV)
+    os.environ[k] = v
+    return 200, {"ok": True, **claves_estado()}
+
+
 def aplicar(body: dict, ip: str) -> tuple[int, dict]:
     def s(k, n=120): return str(body.get(k) or "").strip()[:n]
     nombre, tg, email = s("nombre", 80), s("telegram", 40), s("email", 120)
@@ -209,6 +232,8 @@ class H(BaseHTTPRequestHandler):
                 if not ETH.match(eth):
                     return self._send(400, {"error": "billetera de Ethereum inválida"})
                 return self._send(200, {"mensaje": holder_message(eth)})
+            if u.path == "/api/admin/claves":
+                return self._send(200, claves_estado())
             if u.path == "/api/admin/resumen":
                 return self._send(200, admin_resumen())
         except (TypeError, ValueError):
@@ -216,18 +241,19 @@ class H(BaseHTTPRequestHandler):
         self._send(404, {"error": "no existe"})
 
     def do_POST(self):  # noqa: N802
-        if urlparse(self.path).path != "/api/aplicar":
+        path = urlparse(self.path).path
+        if path not in ("/api/aplicar", "/api/admin/claves"):
             return self._send(404, {"error": "no existe"})
         n = int(self.headers.get("Content-Length") or 0)
         if n > 20000:
             return self._send(413, {"error": "demasiado grande"})
-        if not _rate_ok(self._ip()):
+        if path == "/api/aplicar" and not _rate_ok(self._ip()):
             return self._send(429, {"error": "Demasiados intentos. Probá de nuevo en una hora."})
         try:
             body = json.loads(self.rfile.read(n) or b"{}")
         except Exception:  # noqa: BLE001
             return self._send(400, {"error": "datos inválidos"})
-        code, out = aplicar(body, self._ip())
+        code, out = claves_guardar(body) if path == "/api/admin/claves" else aplicar(body, self._ip())
         self._send(code, out)
 
     def log_message(self, fmt, *args):  # silenciar
