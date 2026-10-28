@@ -1,0 +1,34 @@
+== 108_diag_app 2026-10-28T14:33:03Z ==
+total 0
+lrwxrwxrwx 1 root root 36 Oct 28 14:26 autopilot -> /etc/nginx/sites-available/autopilot
+lrwxrwxrwx 1 root root 31 Oct 23 16:10 fomo -> /etc/nginx/sites-available/fomo
+lrwxrwxrwx 1 root root 33 Apr 17  2026 gaucha -> /etc/nginx/sites-available/gaucha
+lrwxrwxrwx 1 root root 34 Mar 12  2026 simplai -> /etc/nginx/sites-available/simplai
+6:include /etc/nginx/modules-enabled/*.conf;
+24:	# server_names_hash_bucket_size 64;
+25:	# server_name_in_redirect off;
+27:	include /etc/nginx/mime.types;
+60:	include /etc/nginx/conf.d/*.conf;
+61:	include /etc/nginx/sites-enabled/*;
+74:#		listen     localhost:110;
+80:#		listen     localhost:143;
+191:    listen 80;
+192:    server_name app.nonconformistducks.com;
+221:    server_name fomo.nonconformistducks.com;
+239:    listen 443 ssl; # managed by Certbot
+242:    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+252:    listen 80;
+253:    server_name fomo.nonconformistducks.com;
+276:    server_name gauchaba.com www.gauchaba.com;
+288:    listen 443 ssl; # managed by Certbot
+291:    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+301:    listen 80;
+302:    server_name gauchaba.com www.gauchaba.com;
+310:    listen 80;
+311:    server_name simplai.academy www.simplai.academy;
+--- curl 127.0.0.1:8770
+{"desde": 1793113265.7107127, "inicio_usd": 99.09, "patrimonio_usd": 121.31, "multiplo": 1.224, "operaciones_cerradas": 1, "ganadas": 0, "posiciones": [{"token": "GTA6", "multiplo": 1.296, "tesis": "C
+--- curl ip publica
+{"desde": 1793113265.7107127, "inicio_usd": 99.09, "patrimonio_usd": 121.31, "multiplo": 1.224, "operaciones_cerradas": 1, "ganadas": 0, "posiciones": [{"token": "GTA6", "multiplo": 1.296, "tesis": "C
+Oct 28 14:26:04 simplai-prod systemd[1]: Started fomo-app.service - Nonco Autopilot - API de la landing y el panel.
+== exit 0 ==
