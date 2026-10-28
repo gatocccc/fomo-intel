@@ -1,8 +1,40 @@
 {
- "now": 1793203479.5635083,
+ "now": 1793203781.0708563,
+ "start_ts": 1793203690.827375,
+ "start_usd": 200.16,
+ "start_sol": 1.981514,
+ "goal_usd": 400.32,
+ "days": 30,
+ "day": 1,
+ "equity_usd": 200.16,
+ "equity_sol": 1.9815,
+ "cash_sol": 1.9815,
+ "positions_usd": 0,
+ "sol_usd": 101.01,
+ "mult": 1.0,
+ "halt": false,
+ "pause": false,
+ "positions": [],
+ "equity": [
+  [
+   1793203690,
+   200.16
+  ]
+ ],
+ "closed": [],
+ "trades": [],
+ "journal": [
+  {
+   "ts": 1793203690.8277366,
+   "title": "Plan started",
+   "text": "Starting balance 1.9815 SOL ($200.16 at SOL $101.01). Hard floor: $80 (stops everything if the plan loses 60%).",
+   "kind": "system",
+   "id": null
+  }
+ ],
+ "wins": 0,
+ "n_closed": 0,
+ "realized_usd": 0,
  "plan": "equilibrado",
- "wallet": "8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82",
- "started": false,
- "cash_sol": 0.0,
- "sol_usd": 100.92
+ "wallet": "8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82"
 }

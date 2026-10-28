@@ -1,0 +1,13 @@
+{
+ "start_ts": 1793203780.9833093,
+ "start_usd": 201.95,
+ "start_sol": 1.999276,
+ "goal_mult": 2,
+ "days": 30,
+ "floor_usd": 80.78,
+ "reserve_sol": 0.03,
+ "max_slippage_pct": 8.0,
+ "swap_slippage_pct": 12.0,
+ "priority_fee_sol": 0.001,
+ "plan": "tradicional"
+}
