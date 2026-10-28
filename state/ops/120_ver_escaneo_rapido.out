@@ -1,0 +1,24 @@
+== 120_ver_escaneo_rapido 2026-10-28T23:42:03Z ==
+Oct 28 23:22:03 simplai-prod systemd[1]: Stopping fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta)...
+Oct 28 23:22:03 simplai-prod systemd[1]: fomo-brain.service: Deactivated successfully.
+Oct 28 23:22:03 simplai-prod systemd[1]: Stopped fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta).
+Oct 28 23:22:03 simplai-prod systemd[1]: fomo-brain.service: Consumed 12.398s CPU time.
+Oct 28 23:22:03 simplai-prod systemd[1]: Started fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta).
+Oct 28 23:22:05 simplai-prod python3[1572557]: 2026-10-28 23:22:05,007 INFO brain: escaneo rápido (franja chica)…
+escaneo rápido hace 19 min · pasan filtros base: 15 · con velas: 160
+INVERSE    $1.41M liq $115K vol 3.6x 1h -8% 6h +22% 24h +102% máx 77% hold 4310 top10 19.591399999999997 dd -
+PMUP       $0.40M liq $66K vol 2.6x 1h -8% 6h -41% 24h -13% máx 40% hold 1689 top10 18.1708 dd -
+STONKLANA  $0.61M liq $188K vol 4.2x 1h -8% 6h +3% 24h +141% máx 83% hold 1591 top10 14.1905 dd -
+███WIF     $0.95M liq $90K vol 1.8x 1h +9% 6h -50% 24h +28% máx 17% hold 6809 top10 4.8837 dd CONCENTRADO
+USOE       $0.86M liq $79K vol 3.8x 1h +5% 6h -100% 24h -100% máx 0% hold 3150 top10 0.6998000000000001 dd -
+jeff       $0.75M liq $91K vol 4.1x 1h -3% 6h +138% 24h +44587% máx 69% hold 1248 top10 16.2877 dd -
+e/acc      $0.57M liq $143K vol 1.2x 1h -2% 6h -10% 24h +33% máx 65% hold 19373 top10 16.1557 dd LIMPIO
+ANTS       $0.57M liq $67K vol 2.4x 1h -0% 6h +74% 24h +1885% máx 87% hold 2661 top10 2.1056999999999997 dd -
+███        $0.46M liq $74K vol 2.1x 1h -4% 6h -33% 24h -36% máx 26% hold 2941 top10 23.8902 dd -
+SIB        $0.32M liq $66K vol 2.2x 1h +4% 6h +24% 24h +204% máx 59% hold 2712 top10 15.3126 dd -
+RETIRED    $0.56M liq $67K vol 0.8x 1h -6% 6h -5% 24h -24% máx 49% hold 3465 top10 3.3249 dd -
+SAPLING    $2.62M liq $351K vol 0.5x 1h -0% 6h -12% 24h -12% máx 60% hold 4737 top10 19.0631 dd LIMPIO
+tSpaceX    $0.67M liq $545K vol 1.1x 1h +0% 6h +1% 24h +1% máx 99% hold 977 top10 8.1515 dd CONCENTRADO
+Macca      $0.85M liq $101K vol 0.5x 1h +0% 6h -20% 24h -9% máx 55% hold 3227 top10 21.6818 dd -
+MeiMei     $0.96M liq $127K vol 0.5x 1h -0% 6h +6% 24h +63% máx 47% hold 2338 top10 22.9178 dd -
+== exit 0 ==

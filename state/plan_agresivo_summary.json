@@ -1,17 +1,17 @@
 {
- "now": 1793230795.532905,
+ "now": 1793231101.891499,
  "start_ts": 1793203599.7169404,
  "start_usd": 200.84,
  "start_sol": 1.99,
  "goal_usd": 401.68,
  "days": 30,
  "day": 1,
- "equity_usd": 189.93,
- "equity_sol": 1.8559,
+ "equity_usd": 191.69,
+ "equity_sol": 1.8734,
  "cash_sol": 0.0427,
- "positions_usd": 185.56,
- "sol_usd": 102.34,
- "mult": 0.946,
+ "positions_usd": 187.32,
+ "sol_usd": 102.32,
+ "mult": 0.954,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.0077187016113589284,
-   "mult": 1.027,
-   "value_usd": 68.17
+   "last_usd": 0.007488595351504969,
+   "mult": 0.997,
+   "value_usd": 66.14
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "52K holders, top 10 hold 11%, real volume at 34% of market cap per day, 20% below weekly high. Clean anti-rug check.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.013847996663743352,
-   "mult": 0.957,
-   "value_usd": 58.52
+   "last_usd": 0.014198766077103893,
+   "mult": 0.981,
+   "value_usd": 60.0
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-agresivo-20261028-2057",
-   "last_usd": 0.003208031792323077,
-   "mult": 0.858,
-   "value_usd": 58.87
+   "last_usd": 0.003334043880224847,
+   "mult": 0.892,
+   "value_usd": 61.18
   }
  ],
  "equity": [
@@ -470,6 +470,10 @@
   [
    1793230642,
    190.23
+  ],
+  [
+   1793230948,
+   194.26
   ]
  ],
  "closed": [
@@ -631,7 +635,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793230323.9615872,
+  "last_run": 1793230924.536214,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
@@ -645,7 +649,7 @@
    "text": "Idle cash (32%) but no candidate passes the scan and the anti-rug check. Waiting beats buying something worse."
   },
   "trad_status": null,
-  "sol_ch24h": 1.1,
-  "sol_vs_ma20": -0.0233
+  "sol_ch24h": 1.0,
+  "sol_vs_ma20": -0.024
  }
 }
