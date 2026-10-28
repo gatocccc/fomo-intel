@@ -1,0 +1,74 @@
+== 115_planes_inicio 2026-10-28T16:12:04Z ==
+=== saldos
+agresivo True 1.99 200.84 200.88
+equilibrado True 1.9815 200.16 200.03
+tradicional True 1.9993 201.95 201.82
+
+=== tradicional: precio vs promedio de 20 días (velas diarias)
+SOL    SOL Wrapped SOL liq $28.6M | precio 100.9639 ma20 105.1769 (-4.0%) ma10 103.2328 (-2.2%) | 7d -6.7% 30d -14.5%
+cbBTC  cbBTC Coinbase Wrapped BTC liq $8.5M | precio 80470.9519 ma20 81896.9741 (-1.7%) ma10 81481.4575 (-1.2%) | 7d -5.1% 30d -3.3%
+WETH   ETH Ether (Portal) liq $7.1M | precio 2332.0810 ma20 2434.0761 (-4.2%) ma10 2382.9369 (-2.1%) | 7d -5.0% 30d -13.2%
+JUP    JUP Jupiter liq $2.0M | precio 0.2799 ma20 0.3143 (-11.0%) ma10 0.2960 (-5.5%) | 7d -15.2% 30d -13.6%
+
+=== equilibrado: scan2 (mcap 3–500M, liq >= 500K)
+tokens en rankings: 271
+con velas: 32 | volumen con patrón de bot (CV<0,3): 1 -> ['Verse']
+volumen real y alto (CV>=0,45, vol/mcap>=15%): 7
+SI mcap 14.3M liq 506K vol/mcap 34% CV 0.75 6h -10% 24h +13% 72h +45% max7d 80% top10 11% DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP https://truthsocial.com/@realdonaldtrump 
+--- anti-rug top 4 equilibrado
+
+=== SI DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP → LIMPIO
+top 20: billeteras 15.45% · pools/curva 0% · sin fondeador identificado 5
+riesgo ST: {'bundlers%': None, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': []}
+creador: {'creator': '9pkJqJLtefuna3GLtKZyF5DBWwEGUdxZUSGCmf5jZhA9', 'lanzamientos': 7497, 'muertos_<US$10K': 497, 'graduados_aprox': 0, 'muestra': 500}
+  grupo fondeador F7p3dFrj…  : 2 billeteras, 1.74%
+
+=== agresivo: scan4 + anti-rug top 5
+pasan liquidez/mcap/edad: 866
+con velas: 80
+PASAN TODOS LOS FILTROS: 8
+
+CHICO      mcap $ 3.98M liq $ 185K edad   40h vol24 $  4260K (1.07x) acel 1.1 CV 2.08 | 1h -3% 6h -2% 24h -41% 72h +15595% | 47% del máx | hold 12527 top10 2% | 9v4airX4Vt45ADFg3QQG9pXX68LkX9Big4GiYEuJpump | https://x.com/chicothegta From sunset speedboat rides with Jason a
+DOAS       mcap $ 3.90M liq $ 167K edad   67h vol24 $   993K (0.25x) acel 2.9 CV 3.13 | 1h +1% 6h -99% 24h -98% 72h +137000% | 1% del máx | hold 2815 top10 1% | 27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump |  Digital Oil Asset Supply(DOAS)
+███WIF     mcap $ 4.61M liq $ 196K edad   41h vol24 $  1402K (0.30x) acel 1.4 CV 0.57 | 1h -7% 6h +544% 24h +949% 72h +3139% | 83% del máx | hold 6292 top10 5% | 8U6Rw9WVtPb9ShnUo1HeSKBLrGxWLSczCd2RSdYFpump |  No eyes. No identity. Pink knit hat. ███
+SAPLING    mcap $ 3.44M liq $ 394K edad  789h vol24 $  1883K (0.55x) acel 0.6 CV 0.92 | 1h -5% 6h +11% 24h +237% 72h +325% | 79% del máx | hold 4912 top10 19% | BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W | https://x.com/saplingdotcash/status the rootstock of sapling.cash, the zcash
+SI         mcap $14.28M liq $ 506K edad  888h vol24 $  4828K (0.34x) acel 0.7 CV 0.75 | 1h -0% 6h -10% 24h +13% 72h +45% | 80% del máx | hold 51887 top10 11% | DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP | https://truthsocial.com/@realdonald 
+CX         mcap $ 0.51M liq $ 660K edad 14974h vol24 $   133K (0.26x) acel 0.5 CV 0.94 | 1h -0% 6h -1% 24h -3% 72h +15% | 86% del máx | hold 325 top10 19% | CortexFv3fRcLKTgACr7aLqckGh5eP7TP3z9JHoKqMc6 |  
+DOPE       mcap $ 2.27M liq $ 203K edad  411h vol24 $   726K (0.32x) acel 0.6 CV 0.56 | 1h -1% 6h -3% 24h -4% 72h -24% | 74% del máx | hold 9097 top10 19% | 33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump | https://x.com/essencepnl/status/210 
+LMAO!      mcap $ 2.12M liq $ 273K edad 9026h vol24 $   335K (0.16x) acel 0.5 CV 0.77 | 1h +1% 6h -6% 24h -22% 72h -17% | 60% del máx | hold 17415 top10 27% | H74CYmXgMkYHYuSRsZt6RJb4NYp2u72Vw8BS5huApump |  LMAO!
+top: 9v4airX4Vt45ADFg3QQG9pXX68LkX9Big4GiYEuJpump 27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump 8U6Rw9WVtPb9ShnUo1HeSKBLrGxWLSczCd2RSdYFpump BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP
+
+=== CHICO 9v4airX4Vt45ADFg3QQG9pXX68LkX9Big4GiYEuJpump → CONCENTRADO
+top 20: billeteras 4.51% · pools/curva 0% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': 2.9103, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': []}
+creador: {'creator': '9niizgWj6JEArEhmrCNfZ21WokTXrYbvS8UA73PxghhK', 'lanzamientos': 1, 'muertos_<US$10K': 0, 'graduados_aprox': 0, 'muestra': 1}
+  grupo fondeador GJeRNNKD…  : 19 billeteras, 4.51%
+
+=== DOAS 27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump → LIMPIO
+top 20: billeteras 0.96% · pools/curva 0% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': 0.193, 'insiders%': 0, 'snipers%': 0, 'dev%': 0.02, 'risks': ['No social media', 'Price Decrease']}
+creador: {'creator': 'EqPxLYAdVoKMAKdygoEpv6mTU2FKTGjT5cPhXDk6erZg', 'lanzamientos': 1, 'muertos_<US$10K': 0, 'graduados_aprox': 0, 'muestra': 1}
+sin grupos con fondeador común
+
+=== ███WIF 8U6Rw9WVtPb9ShnUo1HeSKBLrGxWLSczCd2RSdYFpump → CONCENTRADO
+top 20: billeteras 9.14% · pools/curva 0% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': 0.0013, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': ['No social media']}
+creador: {'creator': '8NuQxmVfW3GNTz9fNnHqoAxo8X9uXjb7VF558gZ8uZPw', 'lanzamientos': 1, 'muertos_<US$10K': 0, 'graduados_aprox': 0, 'muestra': 1}
+  grupo fondeador BmFdpraQ…  : 4 billeteras, 1.99%
+  grupo fondeador F7p3dFrj…  : 4 billeteras, 1.94%
+  grupo fondeador 5tzFkiKs…  : 3 billeteras, 1.43%
+  grupo fondeador iGdFcQoy…  : 3 billeteras, 1.4%
+  grupo fondeador A77HErqt…  : 2 billeteras, 0.95%
+
+=== SAPLING BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W → LIMPIO
+top 20: billeteras 32.42% · pools/curva 4.21% · sin fondeador identificado 6
+riesgo ST: {'bundlers%': 2.4296, 'insiders%': 0, 'snipers%': 2.9806, 'dev%': 0, 'risks': ['Top 10 Holders']}
+creador: {'creator': 'FauKh2enCxjqMDaEEmo3qMmA9toxyZPFvPhGEZNMzChr', 'lanzamientos': 8, 'muertos_<US$10K': 0, 'graduados_aprox': 0, 'muestra': 8}
+  grupo fondeador winkACDS…  : 2 billeteras, 3.2%
+
+=== SI DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP → LIMPIO
+top 20: billeteras 15.45% · pools/curva 0% · sin fondeador identificado 5
+riesgo ST: {'bundlers%': None, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': []}
+creador: {'creator': '9pkJqJLtefuna3GLtKZyF5DBWwEGUdxZUSGCmf5jZhA9', 'lanzamientos': 7497, 'muertos_<US$10K': 497, 'graduados_aprox': 0, 'muestra': 500}
+  grupo fondeador F7p3dFrj…  : 2 billeteras, 1.74%
+== exit 0 ==
