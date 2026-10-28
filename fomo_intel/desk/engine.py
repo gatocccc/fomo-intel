@@ -41,6 +41,11 @@ else:
     WALLET = None
 ST_DIR.mkdir(parents=True, exist_ok=True)
 JUP_PRICE = "https://api.jup.ag/price/v3"
+
+
+def T(es: str, en: str) -> str:
+    """Textos del registro: castellano en la mesa, inglés en los planes (los ven los usuarios de la app)."""
+    return en if NAME else es
 CFG_DEFAULT = {"start_ts": None, "start_usd": None, "start_sol": None, "goal_mult": 10, "days": 14, "floor_usd": 15.0,
                "reserve_sol": 0.03, "max_slippage_pct": 8.0, "swap_slippage_pct": 12.0, "priority_fee_sol": 0.001}
 
@@ -169,7 +174,7 @@ class Desk:
                               "stop": float(o.get("stop", 0.3)), "trail": float(o.get("trail", 0.35)), "trail_after": float(o.get("trail_after", 1.5)),
                               "tp": o.get("tp", []), "tp_done": [], "thesis": o.get("thesis", ""), "id": did}
         self.save()
-        return f"compró {f.tokens:,.0f} {o.get('symbol')} por {f.sol:.4f} SOL a US${entry_usd:.6g} (slippage {f.slippage_pct:+.1f}%)"
+        return T(f"compró {f.tokens:,.0f} {o.get('symbol')} por {f.sol:.4f} SOL a US${entry_usd:.6g} (slippage {f.slippage_pct:+.1f}%)", f"bought {f.tokens:,.0f} {o.get('symbol')} for {f.sol:.4f} SOL at ${entry_usd:.6g} (slippage {f.slippage_pct:+.1f}%)")
 
     def sell(self, mint, frac, why, did=None):
         p = self.pos.get(mint)
@@ -197,7 +202,7 @@ class Desk:
                    "peak_mult": round(p["peak_usd"] / p["entry_usd"], 2), "hold_h": round((time.time() - p["opened_ts"]) / 3600, 1), "why": why}
             append("closed.jsonl", row); self.pos.pop(mint, None)
         self.save()
-        return f"vendió {frac:.0%} de {p['symbol']} ({why}) por {f.sol:.4f} SOL" + (" — posición cerrada" if closed else "")
+        return T(f"vendió {frac:.0%} de {p['symbol']} ({why}) por {f.sol:.4f} SOL" + (" — posición cerrada" if closed else ""), f"sold {frac:.0%} of {p['symbol']} ({why}) for {f.sol:.4f} SOL" + (" — position closed" if closed else ""))
 
     def apply_decisions(self):
         if not DEC.exists():
@@ -235,7 +240,7 @@ class Desk:
                 log.info("decisión %s -> %s", did, results[-1])
             self.journal(d.get("title") or "Decisión", d.get("journal", ""), kind="decisión", did=did)
             if results:
-                self.journal("Ejecución", "\n".join(results), kind="ejecución", did=did)
+                self.journal(T("Ejecución", "Execution"), "\n".join(results), kind=T("ejecución", "execution"), did=did)
 
     # ---------- protección ----------
     def protect(self):
@@ -243,7 +248,7 @@ class Desk:
             px = self.price_usd(mint)
             if not px:
                 if time.time() - self.no_price_since.get(mint, time.time()) > 600 and not p.get("_warned"):
-                    p["_warned"] = True; self.journal("Alerta", f"{p['symbol']}: sin precio hace más de 10 min", kind="alerta")
+                    p["_warned"] = True; self.journal(T("Alerta", "Alert"), T(f"{p['symbol']}: sin precio hace más de 10 min", f"{p['symbol']}: no price for over 10 minutes"), kind=T("alerta", "alert"))
                 continue
             p["peak_usd"] = max(p["peak_usd"], px); p["last_usd"] = px
             m = px / p["entry_usd"]
@@ -251,15 +256,15 @@ class Desk:
             if m <= 1 - p["stop"]:
                 why = f"stop ({m:.2f}x)"
             elif p["peak_usd"] >= p["entry_usd"] * p["trail_after"] and px <= p["peak_usd"] * (1 - p["trail"]):
-                why = f"trailing ({m:.2f}x, pico {p['peak_usd'] / p['entry_usd']:.2f}x)"
+                why = T(f"trailing ({m:.2f}x, pico {p['peak_usd'] / p['entry_usd']:.2f}x)", f"trailing stop ({m:.2f}x, peak {p['peak_usd'] / p['entry_usd']:.2f}x)")
             if why:
-                r = self.sell(mint, 1.0, why); self.journal("Salida automática", f"{p['symbol']}: {r}", kind="automático"); continue
+                r = self.sell(mint, 1.0, why); self.journal(T("Salida automática", "Automatic exit"), f"{p['symbol']}: {r}", kind=T("automático", "automatic")); continue
             for mult, frac in p.get("tp", []):
                 key = f"{mult}"
                 if key not in p["tp_done"] and m >= mult:
                     p["tp_done"].append(key); self.save()
-                    r = self.sell(mint, float(frac), f"toma de ganancia {mult}x")
-                    self.journal("Toma de ganancia", f"{p['symbol']}: {r}", kind="automático")
+                    r = self.sell(mint, float(frac), T(f"toma de ganancia {mult}x", f"take profit at {mult}x"))
+                    self.journal(T("Toma de ganancia", "Profit taken"), f"{p['symbol']}: {r}", kind=T("automático", "automatic"))
                     break
 
     def equity(self):
@@ -275,7 +280,7 @@ class Desk:
             (ST_DIR / "HALT").write_text(f"patrimonio US${eq:.2f} bajo el piso")
             for m in list(self.pos):
                 self.sell(m, 1.0, "piso de patrimonio")
-            self.journal("Mesa detenida", f"El patrimonio cayó a US${eq:.2f}, debajo del piso de US${self.cfg['floor_usd']:.0f}. Vendí todo y no opero más sin tu OK.", kind="sistema")
+            self.journal(T("Mesa detenida", "Plan stopped"), T(f"El patrimonio cayó a US${eq:.2f}, debajo del piso de US${self.cfg['floor_usd']:.0f}. Vendí todo y no opero más sin tu OK.", f"Balance fell to ${eq:.2f}, below the ${self.cfg['floor_usd']:.0f} floor. Everything was sold and the plan is stopped."), kind=T("sistema", "system"))
 
     def publish(self, eq, pos_usd):
         c = self.cfg; now = time.time()

@@ -25,6 +25,11 @@ code{font-size:12.5px;word-break:break-all}
 .tag{display:inline-block;padding:2px 8px;border-radius:99px;background:var(--mist);font-size:12.5px}
 .tag.h{background:var(--go);color:#fff}
 .scroll{overflow-x:auto}
+.up{color:var(--go);font-weight:700}.down{color:var(--stop);font-weight:700}
+tr.click{cursor:pointer} tr.click:hover td{background:#eef3f3}
+#detail{margin-top:16px}
+#detail .box{background:var(--paper);border-radius:16px;padding:16px}
+#detail p{margin:0 0 10px;white-space:pre-line;font-size:14px}
 @media (max-width:700px){.kpis{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -43,8 +48,10 @@ code{font-size:12.5px;word-break:break-all}
     <div><span>Fees earned</span><strong id="k-fee">—</strong></div>
   </div>
 
-  <h2>Plan wallets</h2>
-  <div class="scroll"><table><thead><tr><th>Plan</th><th>Address</th><th>Balance (SOL)</th></tr></thead><tbody id="w"></tbody></table></div>
+  <h2>Trading wallets</h2>
+  <p class="sub" id="tw-sum" style="margin:0 0 12px"></p>
+  <div class="scroll"><table><thead><tr><th>Owner</th><th>Plan</th><th>Wallet</th><th>Started</th><th>Start</th><th>Now</th><th>P&amp;L</th><th>Open</th><th>Closed (won)</th><th>Last trade</th><th>Status</th></tr></thead><tbody id="tw"></tbody></table></div>
+  <div id="detail"></div>
 
   <h2>By plan</h2>
   <div class="scroll"><table><thead><tr><th>Plan</th><th>Accounts</th><th>Pledged</th></tr></thead><tbody id="pp"></tbody></table></div>
@@ -53,16 +60,42 @@ code{font-size:12.5px;word-break:break-all}
   <div class="scroll"><table><thead><tr><th>Created</th><th>Name</th><th>Email</th><th>Type</th><th>Amount</th><th>Goal</th><th>Plan</th><th>Stop</th><th>Status</th></tr></thead><tbody id="ap"></tbody></table></div>
 </div>
 <script>
-const usd = v => "$" + Number(v || 0).toLocaleString("en-US", {maximumFractionDigits: 0});
+const usd = v => v == null ? "—" : (v < 0 ? "-" : "") + "$" + Math.abs(Number(v)).toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const k = (id, v) => document.getElementById(id).textContent = v;
+const pct = v => v == null ? "—" : (v >= 0 ? "+" : "") + (v * 100).toFixed(1) + "%";
+const when = ts => ts ? new Date(ts * 1000).toLocaleString("en-US", {month: "short", day: "numeric", hour: "2-digit", minute: "2-digit"}) : "—";
+function showDetail(plan){
+  fetch("/api/admin/wallet?plan=" + plan).then(r => r.json()).then(w => {
+    const pos = w.positions.map(x => `<tr><td>${esc(x.token)}</td><td class="n">${x.multiple ? "x" + Number(x.multiple).toFixed(2) : "—"}</td><td class="n">${usd(x.value_usd)}</td><td>${esc(x.thesis)}</td></tr>`).join("") || `<tr><td colspan="4">No open positions.</td></tr>`;
+    const cl = (w.closed_list || []).map(x => `<tr><td>${when(x.ts)}</td><td>${esc(x.token)}</td><td class="n ${(x.result||0)>=0?"up":"down"}">${pct(x.result)}</td><td class="n">${usd(x.pnl_usd)}</td><td>${esc(x.why)}</td></tr>`).join("") || `<tr><td colspan="5">No closed trades yet.</td></tr>`;
+    const jr = (w.journal || []).slice(0, 15).map(j => `<p><b>${esc(j.title)}</b> · ${when(j.ts)}<br>${esc(j.text)}</p>`).join("");
+    document.getElementById("detail").innerHTML = `<div class="box"><h2 style="margin-top:0">${esc(plan)} · detail</h2>
+      <h3>Open positions</h3><div class="scroll"><table><thead><tr><th>Token</th><th>Multiple</th><th>Value</th><th>Thesis</th></tr></thead><tbody>${pos}</tbody></table></div>
+      <h3>Closed trades</h3><div class="scroll"><table><thead><tr><th>When</th><th>Token</th><th>Result</th><th>P&amp;L</th><th>Why</th></tr></thead><tbody>${cl}</tbody></table></div>
+      <h3>Journal</h3>${jr}</div>`;
+    document.getElementById("detail").scrollIntoView({behavior: "smooth"});
+  });
+}
+function loadWallets(){
+  fetch("/api/admin/wallets").then(r => r.json()).then(d => {
+    const ws = d.wallets, live = ws.filter(w => w.started);
+    const cap = live.reduce((a, w) => a + (w.equity_usd || 0), 0), st = live.reduce((a, w) => a + (w.start_usd || 0), 0);
+    k("tw-sum", `${live.length} wallets trading · ${usd(cap)} under the bot · ${cap >= st ? "+" : ""}${usd(cap - st)} (${pct(st ? cap / st - 1 : null)}) since start · ${live.filter(w => (w.pnl_usd || 0) >= 0).length} up, ${live.filter(w => (w.pnl_usd || 0) < 0).length} down`);
+    document.getElementById("tw").innerHTML = ws.map(w => {
+      const cls = (w.pnl_usd || 0) >= 0 ? "up" : "down";
+      const status = !w.started ? "waiting for funds" : w.halted ? "stopped" : "trading";
+      return `<tr class="click" data-plan="${esc(w.plan)}"><td>${esc(w.owner)}</td><td>${esc(w.plan)}</td><td><a href="https://solscan.io/account/${esc(w.wallet)}" target="_blank" rel="noopener"><code>${esc((w.wallet || "").slice(0, 4) + "…" + (w.wallet || "").slice(-4))}</code></a></td><td>${when(w.since)}</td><td class="n">${usd(w.start_usd)}</td><td class="n">${usd(w.equity_usd)}</td><td class="n ${cls}">${w.pnl_usd == null ? "—" : usd(w.pnl_usd) + " (" + pct(w.pnl_pct) + ")"}</td><td class="n">${w.open}</td><td class="n">${w.closed} (${w.wins || 0})</td><td>${when(w.last_trade)}</td><td>${status}</td></tr>`;
+    }).join("") || `<tr><td colspan="11">No trading wallets yet.</td></tr>`;
+    document.querySelectorAll("tr.click").forEach(tr => tr.onclick = () => showDetail(tr.dataset.plan));
+  });
+}
 function load(){
+  loadWallets();
   fetch("/api/admin/resumen").then(r => r.json()).then(d => {
     k("upd", "Updated " + new Date().toLocaleTimeString("en-US") + " · refreshes every minute · fees " + d.fees.trade_pct + "% per trade, " + d.fees.success_pct_external + "% of winning trades for non-holders");
     k("k-ap", d.users); k("k-24", d.new_24h); k("k-li", d.logins_24h); k("k-h", `${d.holders} / ${d.holders_pending}`);
     k("k-m", usd(d.pledged_usd)); k("k-act", d.active_wallets); k("k-cap", usd(d.capital_under_bot_usd)); k("k-fee", usd(d.fees_usd));
-    document.getElementById("w").innerHTML = Object.entries(d.plan_wallets).map(([p, w]) =>
-      `<tr><td>${esc(p)}</td><td><code>${esc(w.address)}</code></td><td class="n">${w.sol == null ? "—" : w.sol.toFixed(4)}</td></tr>`).join("") || `<tr><td colspan="3">Not created yet.</td></tr>`;
     document.getElementById("pp").innerHTML = Object.entries(d.by_plan).map(([p, x]) =>
       `<tr><td>${esc(p)}</td><td class="n">${x.users}</td><td class="n">${usd(x.amount_usd)}</td></tr>`).join("") || `<tr><td colspan="3">No accounts yet.</td></tr>`;
     document.getElementById("ap").innerHTML = d.detail.map(a => {

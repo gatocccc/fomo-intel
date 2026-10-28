@@ -257,6 +257,57 @@ def publico() -> dict:
             "updated": d.get("now")}
 
 
+PLAN_KEYS = ("agresivo", "equilibrado", "tradicional")
+
+
+def _summary(path: Path) -> dict | None:
+    try:
+        return json.load(open(path))
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def wallet_view(d: dict, full: bool = False) -> dict:
+    """Vista de una billetera que opera (plan de la casa o, más adelante, la de un usuario)."""
+    start, eq = d.get("start_usd"), d.get("equity_usd")
+    closed = d.get("closed") or []
+    out = {"wallet": d.get("wallet"), "started": d.get("started", True) and bool(d.get("start_ts")), "since": d.get("start_ts"),
+           "start_usd": start, "equity_usd": eq, "pnl_usd": round(eq - start, 2) if start and eq is not None else None,
+           "pnl_pct": round(eq / start - 1, 4) if start and eq else None, "cash_sol": d.get("cash_sol"),
+           "open": len(d.get("positions") or []), "closed": d.get("n_closed", len(closed)), "wins": d.get("wins"),
+           "realized_usd": d.get("realized_usd"), "halted": d.get("halt"), "updated": d.get("now"),
+           "last_trade": (d.get("trades") or [{}])[0].get("ts") if d.get("trades") else None,
+           "positions": [{"token": x.get("symbol"), "mint": x.get("mint"), "multiple": x.get("mult"), "value_usd": x.get("value_usd"),
+                          "stop": x.get("stop"), "thesis": x.get("thesis")} for x in d.get("positions") or []]}
+    if full:
+        out["equity"] = (d.get("equity") or [])[-400:]
+        out["closed_list"] = [{"token": c.get("symbol"), "result": c.get("ret"), "pnl_usd": c.get("pnl_usd"), "why": c.get("why"), "ts": c.get("ts")} for c in closed[:30]]
+        out["journal"] = [{"ts": j.get("ts"), "title": j.get("title"), "text": j.get("text"), "kind": j.get("kind")} for j in (d.get("journal") or [])[:40]]
+    return out
+
+
+def plans_public() -> dict:
+    out = {}
+    for k in PLAN_KEYS:
+        d = _summary(STATE / f"plan_{k}_summary.json") or {}
+        out[k] = {"name": PLANS[k]["nombre"], "markets": PLANS[k]["mercados"], **wallet_view(d, full=True)}
+    return {"plans": out}
+
+
+def trading_wallets() -> list[dict]:
+    rows = []
+    for k in PLAN_KEYS:
+        d = _summary(STATE / f"plan_{k}_summary.json")
+        if d:
+            rows.append({"owner": "Nonco house plan", "email": None, "plan": k, **wallet_view(d)})
+    with db() as c:
+        users = c.execute("SELECT id, email, name, plan, bot_wallet, holder_status FROM users WHERE bot_wallet IS NOT NULL").fetchall()
+    for u in users:
+        d = _summary(STATE / "users" / f"{u['id']}_summary.json") or {"wallet": u["bot_wallet"]}
+        rows.append({"owner": u["name"] or u["email"], "email": u["email"], "plan": u["plan"], "holder": u["holder_status"] == "holder", **wallet_view(d)})
+    return rows
+
+
 def _sol_balance(pub: str) -> float | None:
     try:
         r = requests.post(SOL_RPC, json={"jsonrpc": "2.0", "id": 1, "method": "getBalance", "params": [pub]}, timeout=8).json()
@@ -272,6 +323,7 @@ def admin_resumen() -> dict:
         u.pop("pw", None)
     try: wallets = json.load(open(STATE / "plan_wallets.json"))
     except Exception: wallets = {}  # noqa: BLE001
+    tw = trading_wallets()
     day = time.time() - 86400
     by_plan: dict[str, dict] = {}
     for u in users:
@@ -282,7 +334,8 @@ def admin_resumen() -> dict:
             "holders": sum(1 for u in users if u.get("holder_status") == "holder"),
             "holders_pending": sum(1 for u in users if u.get("holder_status") == "pending"),
             "pledged_usd": sum(u.get("amount_usd") or 0 for u in users), "by_plan": by_plan,
-            "active_wallets": sum(1 for u in users if u.get("status") == "active"), "capital_under_bot_usd": 0, "fees_usd": 0,
+            "active_wallets": sum(1 for w in tw if w.get("started")), "capital_under_bot_usd": round(sum(w.get("equity_usd") or 0 for w in tw if w.get("started")), 2),
+            "pnl_usd": round(sum(w.get("pnl_usd") or 0 for w in tw if w.get("started")), 2), "fees_usd": 0,
             "plan_wallets": {k: {"address": v, "sol": _sol_balance(v)} for k, v in wallets.items()},
             "detail": users[:500], "fees": FEES, "holder_contracts": nonco_contracts()}
 
@@ -350,6 +403,14 @@ class H(BaseHTTPRequestHandler):
                 eth = q.get("eth", "")
                 if not ETH.match(eth): return self._send(400, {"error": "Invalid Ethereum address."})
                 return self._send(200, {"message": holder_message(usr["id"], eth)})
+            if u.path == "/api/plans":
+                return self._send(200, plans_public())
+            if u.path == "/api/admin/wallets":
+                return self._send(200, {"wallets": trading_wallets()})
+            if u.path == "/api/admin/wallet":
+                k = q.get("plan", "")
+                d = _summary(STATE / f"plan_{k}_summary.json") if k in PLAN_KEYS else None
+                return self._send(200, wallet_view(d, full=True)) if d else self._send(404, {"error": "Not found."})
             if u.path == "/api/admin/resumen":
                 return self._send(200, admin_resumen())
             if u.path == "/api/admin/claves":
