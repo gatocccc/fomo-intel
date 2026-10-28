@@ -62,7 +62,7 @@ SCAN_FAST = Path("state/desk/scan_fast.json")
 # No hay backtest que pruebe que esto rinde más: compra más movimiento (varianza), con freno diario.
 FAST = {"since": 1793229600, "max_pos": 2, "max_frac": 0.48, "min_buy_sol": 0.15, "max_auto_buys_day": 4, "scan_every_h": 1,
         "stale_h": 12, "stale_peak": 1.15, "day_brake": 0.12, "mcap_lo": 3e5, "mcap_hi": 3e6, "min_vol_mcap": 0.5, "min_holders": 500,
-        "max_top10": 35, "min_ch24h": -0.3, "max_ch24h": 1.0, "min_ch6h": -0.05, "max_ch6h": 0.4, "min_from_hi": 0.6, "max_from_hi": 0.92,
+        "max_top10": 35, "min_ch24h": -0.3, "max_ch24h": 2.5, "min_ch6h": -0.15, "max_ch6h": 0.4, "min_from_hi": 0.6, "max_from_hi": 0.92,
         "min_ch1h": -0.10, "stop": 0.25, "trail": 0.25, "trail_after": 1.3, "tp": [[1.5, 0.4], [2.5, 0.3]]}
 SCAN_FAST_ENV = {"SCAN_LO": "300000", "SCAN_HI": "3000000", "SCAN_LIQ": "60000", "SCAN_AGE_H": "6", "SCAN_VOLMCAP": "0.5",
                  "SCAN_TOP10": "35", "SCAN_MIN_CANDLES": "8", "SCAN_OUT": str(SCAN_FAST)}
@@ -187,17 +187,24 @@ class Brain:
 
     def refresh_fast(self, need):
         """Escaneo de la franja chica (US$300K–3M, liquidez ≥ US$60K, edad ≥ 6 h) cada hora + anti-rug de los 4 mejores."""
-        if not need or time.time() - self.last_scan_fast < FAST["scan_every_h"] * 3600:
+        if not need:
             return
+        if time.time() - self.last_scan_fast < FAST["scan_every_h"] * 3600:
+            return self.dd_fast()
         self.last_scan_fast = time.time(); jsave(Path("state/desk/brain_scan.json"), {"ts": self.last_scan, "fast_ts": self.last_scan_fast})
         log.info("escaneo rápido (franja chica)…")
         try:
             subprocess.run([sys.executable, "-m", "fomo_intel.desk.scan4"], timeout=1200, capture_output=True, env={**os.environ, **SCAN_FAST_ENV})
         except Exception as e:  # noqa: BLE001
             log.warning("escaneo rápido falló: %s", e); return
-        top = [v["mint"] for v in self.fast_candidates(set(), set(), need_dd=False)[:4]]
-        stale = [m for m in top if time.time() - jload(DD_DIR / f"{m}.json", {}).get("ts", 0) > LIM["dd_max_age_h"] * 3600]
+        self.dd_fast()
+
+    def dd_fast(self):
+        """Anti-rug de los 4 mejores de la franja chica que no tengan uno reciente (corre en cada ciclo; si ya están, no hace nada)."""
+        top = [v["mint"] for v in self.fast_candidates(set(), set(), need_dd=False)]
+        stale = [m for m in top if time.time() - jload(DD_DIR / f"{m}.json", {}).get("ts", 0) > LIM["dd_max_age_h"] * 3600][:3]
         if stale:
+            log.info("anti-rug franja chica: %s", stale)
             try:
                 subprocess.run([sys.executable, "-m", "fomo_intel.desk.dd", *stale], timeout=1200, capture_output=True)
             except Exception as e:  # noqa: BLE001
