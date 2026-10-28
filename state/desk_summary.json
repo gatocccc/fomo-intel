@@ -1,17 +1,17 @@
 {
- "now": 1793177681.805149,
+ "now": 1793177993.3511107,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 119.0,
- "equity_sol": 1.1589,
+ "equity_usd": 119.68,
+ "equity_sol": 1.1672,
  "cash_sol": 0.032,
- "positions_usd": 115.71,
- "sol_usd": 102.68,
- "mult": 1.201,
+ "positions_usd": 116.4,
+ "sol_usd": 102.53,
+ "mult": 1.208,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,7 +41,7 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.006079287181761184,
+   "last_usd": 0.006080252457057357,
    "mult": 1.256,
    "value_usd": 45.01
   },
@@ -54,7 +54,7 @@
    "tokens_initial": 23623.122876,
    "sol_in": 0.30401884,
    "sol_out": 0.0,
-   "peak_usd": 0.0018934618753485887,
+   "peak_usd": 0.0019273242594557436,
    "stop": 0.1,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.0018834368142945557,
-   "mult": 1.451,
-   "value_usd": 44.49
+   "last_usd": 0.0019129481929935858,
+   "mult": 1.474,
+   "value_usd": 45.19
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.003950070973736594,
-   "mult": 0.968,
-   "value_usd": 26.21
+   "last_usd": 0.003947836130246722,
+   "mult": 0.967,
+   "value_usd": 26.2
   }
  ],
  "equity": [
@@ -946,6 +946,10 @@
   [
    1793177681,
    119.0
+  ],
+  [
+   1793177993,
+   119.68
   ]
  ],
  "closed": [
