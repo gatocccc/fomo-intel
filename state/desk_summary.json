@@ -1,17 +1,17 @@
 {
- "now": 1793156679.9494815,
+ "now": 1793156992.7065864,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 1,
- "equity_usd": 119.05,
- "equity_sol": 1.173,
- "cash_sol": 0.2988,
- "positions_usd": 88.73,
- "sol_usd": 101.49,
- "mult": 1.201,
+ "equity_usd": 119.28,
+ "equity_sol": 1.175,
+ "cash_sol": 0.032,
+ "positions_usd": 116.04,
+ "sol_usd": 101.52,
+ "mult": 1.204,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.006461536642926652,
-   "mult": 1.335,
-   "value_usd": 47.84
+   "last_usd": 0.006399951630514746,
+   "mult": 1.322,
+   "value_usd": 47.38
   },
   {
    "mint": "CA8q2mkYWZnUNqYmf6pxyxAPZsmSe2EG9P7hHMW5pump",
@@ -54,7 +54,7 @@
    "tokens_initial": 23623.122876,
    "sol_in": 0.30401884,
    "sol_out": 0.0,
-   "peak_usd": 0.001758469306379835,
+   "peak_usd": 0.0018151145437842178,
    "stop": 0.1,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -71,9 +71,39 @@
    "tp_done": [],
    "thesis": "Mascota oficial de la app FOMO, 4 días, US$1,2M. Volumen real 2x la mcap, 9.900 holders repartidos. Entrada 40% abajo del pico. Fecha: 15/11.",
    "id": "2026-10-27-02",
-   "last_usd": 0.001730936042364641,
-   "mult": 1.334,
-   "value_usd": 40.89
+   "last_usd": 0.0017709472670160177,
+   "mult": 1.365,
+   "value_usd": 41.84
+  },
+  {
+   "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+   "symbol": "SAPLING",
+   "opened_ts": 1793156836.398467,
+   "entry_usd": 0.004080901911610542,
+   "tokens": 6636.507512,
+   "tokens_initial": 6636.507512,
+   "sol_in": 0.26682112,
+   "sol_out": 0.0,
+   "peak_usd": 0.004080901911610542,
+   "stop": 0.3,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
+   "id": "2026-10-28-01",
+   "last_usd": 0.004041449732847244,
+   "mult": 0.99,
+   "value_usd": 26.82
   }
  ],
  "equity": [
@@ -644,6 +674,10 @@
   [
    1793156464,
    119.59
+  ],
+  [
+   1793156772,
+   118.83
   ]
  ],
  "closed": [
@@ -662,6 +696,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793156836.397777,
+   "side": "buy",
+   "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+   "symbol": "SAPLING",
+   "ok": true,
+   "sol": 0.26682112,
+   "tokens": 6636.507512,
+   "price_usd": 0.004080901912,
+   "slip": 2.04,
+   "sig": "4Mcy4R7AgZRvxA6M9zEdZdYZ4Thmt1Cj2PUreF2uHPeasEQpL9nAu344JbjUJ1R5o2qE4f4RuJpvDBNgDS5XBrgX",
+   "error": "",
+   "id": "2026-10-28-01"
+  },
   {
    "ts": 1793131281.5324984,
    "side": "sell",
@@ -720,6 +768,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793156836.399928,
+   "title": "Ejecución",
+   "text": "buy SAPLING: compró 6,637 SAPLING por 0.2668 SOL a US$0.0040809 (slippage +2.0%)",
+   "kind": "ejecución",
+   "id": "2026-10-28-01"
+  },
+  {
+   "ts": 1793156836.3997216,
+   "title": "Pongo a trabajar el efectivo: entro en SAPLING",
+   "text": "Gastón señaló algo correcto: 27% del patrimonio quieto en la billetera no nos acerca al x10. El escaneo de siempre traía pocos tokens, así que armé uno más amplio (scan4): 1.235 tokens entre rankings y búsqueda por rango de capitalización, filtrados con las reglas de la mesa (liquidez ≥ US$150K, más de 1 día de vida, volumen irregular de personas, volumen 24 h ≥ 15% de la capitalización, top 10 < 30%). Pasaron 9. A los 5 mejores les corrí el chequeo anti-rug.\n\nDescartados: CHICO (el mejor del escaneo, otro meme de GTA) salió CONCENTRADO: 19 de sus 20 mayores holders fueron fondeados por la misma billetera, es decir que los 'holders repartidos' son en realidad una sola persona. tSpaceX también CONCENTRADO. SI depende de un creador con 7.495 lanzamientos (fábrica). GATO está limpio pero se mueve poco (volumen 19% de su capitalización).\n\nElegido: SAPLING (US$3,1M), LIMPIO. No es un meme vacío: es el token de sapling.cash, un launchpad y terminal de trading nativo de Zcash (narrativa de privacidad). Tiene comisiones reales registradas en DefiLlama y notas en KuCoin; ya tocó US$5M de capitalización. 32 días de vida, 4.750 holders, volumen US$1,3M en 24 h con patrón irregular (CV 1,5: gente real) y acelerando (el volumen de las últimas 6 h es el doble del promedio). El chequeo de fondeador común da un solo grupo de 2 billeteras con 3,2%, sin holders fondeados por el creador (8 lanzamientos, ninguno muerto).\n\nAbogado del diablo (datos on-chain): subió 251% en 24 h; comprar después de una suba así suele ser comprar el techo. Además los 20 mayores holders juntos tienen 34% del total, bastante más que GTA6 o REMUS: si unos pocos venden, el precio cae fuerte, y la liquidez (US$368K) es la de un token chico. Por qué igual entro: en las últimas 6 h el precio está plano (+2%) y 29% abajo del máximo, o sea que ya está digiriendo la suba en vez de desplomarse, y el volumen sigue creciendo. Para x10 necesitamos exactamente este tipo de token: chico, con producto y narrativa. El riesgo lo acoto con el stop.\n\nTamaño: 0,26 SOL (~US$26, 24% del patrimonio), dejando 0,035 SOL para comisiones. Stop −30%, trailing 35% desde el pico después de 1,6x, vendo 25% a 3x y 25% a 6x. Quedamos ~97% invertidos en tres tokens.",
+   "kind": "decisión",
+   "id": "2026-10-28-01"
+  },
   {
    "ts": 1793148375.7328134,
    "title": "Ejecución",
