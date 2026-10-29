@@ -1,17 +1,17 @@
 {
- "now": 1793263493.9219098,
+ "now": 1793263800.1609178,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 157.97,
- "equity_sol": 1.5812,
+ "equity_usd": 160.52,
+ "equity_sol": 1.6066,
  "cash_sol": 0.4791,
- "positions_usd": 110.1,
- "sol_usd": 99.9,
- "mult": 1.594,
+ "positions_usd": 112.65,
+ "sol_usd": 99.91,
+ "mult": 1.62,
  "halt": false,
  "pause": false,
  "positions": [
@@ -43,9 +43,9 @@
    ],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.01417751675786864,
-   "mult": 2.928,
-   "value_usd": 78.72
+   "last_usd": 0.014632384080296663,
+   "mult": 3.022,
+   "value_usd": 81.25
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -73,9 +73,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.012628492363707739,
-   "mult": 0.843,
-   "value_usd": 14.14
+   "last_usd": 0.01264883694459477,
+   "mult": 0.845,
+   "value_usd": 14.17
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -2089,6 +2089,10 @@
   [
    1793263218,
    157.88
+  ],
+  [
+   1793263524,
+   156.69
   ]
  ],
  "closed": [
@@ -2316,6 +2320,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793263692.7272155,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (27%), pero SOL cae fuerte (-2.7% en 24 h): no abro memecoins hasta que se calme.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261029-0848"
+  },
   {
    "ts": 1793263095.5761292,
    "title": "Cerebro automático: estado",
@@ -2646,7 +2657,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793263083.981473,
+  "last_run": 1793263684.8602886,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -2656,11 +2667,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793263083.9830186,
-   "text": "Efectivo ocioso (27%), pero SOL cae fuerte (-2.6% en 24 h): no abro memecoins hasta que se calme."
+   "ts": 1793263684.8626623,
+   "text": "Efectivo ocioso (27%), pero SOL cae fuerte (-2.7% en 24 h): no abro memecoins hasta que se calme."
   },
   "trad_status": null,
-  "sol_ch24h": -2.6,
-  "sol_vs_ma20": -0.0465
+  "sol_ch24h": -2.7,
+  "sol_vs_ma20": -0.0475
  }
 }
