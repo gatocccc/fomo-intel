@@ -246,6 +246,18 @@ def withdraw(u: sqlite3.Row) -> tuple[int, dict]:
     return 200, {"ok": True}
 
 
+def tip_lab(u: sqlite3.Row, b: dict) -> tuple[int, dict]:
+    """Propina al laboratorio desde la billetera del usuario: el motor de seguidores la transfiere a la billetera del lab."""
+    if not u["bot_wallet"]:
+        return 409, {"error": "You do not have a stool yet."}
+    try: sol = float(b.get("sol") or 0)
+    except (TypeError, ValueError): return 400, {"error": "How much?"}
+    if not (0.01 <= sol <= 5): return 400, {"error": "Between 0.01 and 5 SOL."}
+    (STATE / "users").mkdir(parents=True, exist_ok=True)
+    (STATE / "users" / f"{u['id']}_TIP").write_text(json.dumps({"sol": sol, "ts": time.time()}))
+    return 200, {"ok": True}
+
+
 def admin_seat(b: dict) -> tuple[int, dict]:
     """Da asiento (status='seated'): el motor de seguidores le crea la billetera en su próximo ciclo. 'unseat' lo saca del motor (no toca la plata)."""
     try: uid = int(b.get("id"))
@@ -571,6 +583,8 @@ class H(BaseHTTPRequestHandler):
             code, out = close_all(usr); return self._send(code, out)
         if path == "/api/me/withdraw":
             code, out = withdraw(usr); return self._send(code, out)
+        if path == "/api/me/tip":
+            code, out = tip_lab(usr, b); return self._send(code, out)
         if path == "/api/holder/verify":
             code, out = verify_holder(usr, b); return self._send(code, out)
         self._send(404, {"error": "Not found."})

@@ -314,7 +314,23 @@ class Stool:
         self.journal("Everything to SOL", "\n".join(res) or "Nothing to sell.", kind="system")
 
     def requests(self):
-        c = UDIR / f"{self.uid}_CLOSE"; w = UDIR / f"{self.uid}_WITHDRAW"
+        c = UDIR / f"{self.uid}_CLOSE"; w = UDIR / f"{self.uid}_WITHDRAW"; t = UDIR / f"{self.uid}_TIP"
+        if t.exists():
+            try: sol = float((jl(t, {}) or {}).get("sol") or 0)
+            except Exception: sol = 0.0  # noqa: BLE001
+            t.unlink()
+            lab = (jl(STATE / "plan_lab_summary.json", {}) or {}).get("wallet")
+            self.balance()
+            if lab and 0.01 <= sol <= 5 and self.sol - sol - float(self.cfg.get("fees_pending_sol") or 0) >= RESERVE_SOL:
+                sig = self.svc.transfer(self.kp, lab, sol)
+                if sig:
+                    self.resync_expected(); self.cfg["tipped_sol"] = round(self.cfg.get("tipped_sol", 0) + sol, 6)
+                    self.append("flows.jsonl", {"ts": time.time(), "kind": "tip", "sol": sol, "usd": round(sol * self.svc.sol_usd, 2), "to": lab, "sig": sig}); self.save()
+                    self.journal("You bought the lab a round", f"{sol} SOL went to Lloyd's lab wallet. Every experiment it funds ends up in your stool. Thank you.", kind="system")
+                else:
+                    self.journal("Tip did not go through", "The transfer did not confirm. Nothing was taken; try again.", kind="system")
+            else:
+                self.journal("Tip skipped", "Not enough free SOL in your stool for that tip right now (Lloyd keeps most of it at work).", kind="system")
         if c.exists():
             c.unlink(); self.close_all("you asked")
             with db() as d: d.execute("UPDATE users SET status='closed' WHERE id=?", (self.uid,))
@@ -343,8 +359,8 @@ class Stool:
             self.append("equity.jsonl", {"ts": now, "usd": round(eq, 2), "sol": round(eq / su, 4), "sol_usd": round(su, 2)}); c["_last_eq"] = now; self.save()
         s = {"now": now, "user_id": self.uid, "wallet": self.pub, "type": c.get("type"), "fee_pct": c.get("fee_pct"), "started": bool(c.get("start_ts")), "since": c.get("start_ts"),
              "halt": bool(c.get("halt")), "closed": bool(c.get("closed")), "sol_usd": round(su, 2), "cash_sol": round(self.sol, 4),
-             "equity_usd": round(eq, 2), "deposited_usd": round(dep, 2), "withdrawn_usd": round(wd, 2), "pnl_usd": round(eq + wd - dep, 2) if dep else None,
-             "pnl_pct": round((eq + wd) / dep - 1, 4) if dep else None, "fees_usd": round(float(c.get("fees_sol") or 0) * su, 2), "min_sol": MIN_SOL,
+             "equity_usd": round(eq, 2), "deposited_usd": round(dep, 2), "withdrawn_usd": round(wd, 2), "pnl_usd": round(eq + wd + float(c.get("tipped_sol") or 0) * su - dep, 2) if dep else None,
+             "pnl_pct": round((eq + wd + float(c.get("tipped_sol") or 0) * su) / dep - 1, 4) if dep else None, "fees_usd": round(float(c.get("fees_sol") or 0) * su, 2), "min_sol": MIN_SOL,
              "positions": [{"token": p["symbol"], "mint": m, "sleeve": p.get("sleeve"), "multiple": round((p.get("last_usd") or p["entry_usd"]) / p["entry_usd"], 3) if p["entry_usd"] else None,
                             "value_usd": round(p["tokens"] * (p.get("last_usd") or p["entry_usd"]), 2), "opened": p.get("opened_ts"), "thesis": p.get("thesis")} for m, p in self.pos.items() if m not in STABLES],
              "cash_usd": round(self.sol * su + sum(p["tokens"] * (p.get("last_usd") or 1) for m, p in self.pos.items() if m in STABLES), 2),

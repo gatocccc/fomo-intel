@@ -10,34 +10,73 @@
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="/style.css">
 <style>
-.now{display:grid;gap:12px;align-content:start}
-.now .eq{font:400 40px/1 var(--t);font-variant-numeric:tabular-nums}
-.now .eq small{display:block;font:700 12.5px var(--m);margin-top:6px}
-.now .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between}
-.dial-block{display:grid;gap:14px}
-.dial-block h3{font-size:22px;margin:0;display:flex;gap:10px;align-items:center}
-.dial-block h3 .n{flex:none;width:32px;height:32px;display:grid;place-items:center;background:var(--card-red);color:var(--white);border:var(--b);border-radius:50%;font-size:16px;box-shadow:var(--sh-s)}
-.dial-block > p{margin:0;font-size:15px}
-.sub-f{display:grid;gap:12px;padding:16px;border:2px dashed var(--ink);border-radius:16px;background:var(--cream)}
+.hello{display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;margin:14px 0 16px}
+.hello h1{margin:0;font-size:clamp(34px,7vw,52px)}
+.hello .badge{font-size:12px}
+.dash{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;padding:0 0 70px}
+.dash .wide{grid-column:1/-1}
+.card{padding:22px}
+.card h2{font-size:22px;margin:0 0 12px}
+.money .eq{font:400 clamp(44px,11vw,60px)/1 var(--t);font-variant-numeric:tabular-nums}
+.money .pnl{font:700 14px var(--m);margin-top:8px}
+.money .kv3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 0}
+.money .kv3 div{padding:10px 12px;background:var(--cream);border:2px solid var(--ink);border-radius:14px}
+.money .kv3 b{display:block;font:700 10.5px var(--m);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.money .kv3 span{font:400 18px/1.2 var(--t)}
+.where{margin-top:18px}
+.where h3{font-size:17px;margin:0 0 8px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.where h3 small{font:700 11.5px var(--m);color:var(--dim)}
+.rows{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px}
+.rows li{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:10px 12px;border:2px solid var(--ink);border-radius:14px;background:var(--white)}
+.rows li i{width:12px;height:12px;border-radius:50%;border:2px solid var(--ink);display:inline-block}
+.rows li b{font:400 18px/1 var(--t)}
+.rows li b small{display:block;font:700 11px var(--m);color:var(--dim);margin-top:3px;text-transform:uppercase;letter-spacing:.05em}
+.rows li .v{text-align:right;font:400 18px/1 var(--t);font-variant-numeric:tabular-nums}
+.rows li .v small{display:block;font:700 11px var(--m);margin-top:3px}
+.rows li.empty{display:block;font:13px var(--m);color:var(--dim);border-style:dashed}
+.deposit{display:grid;gap:10px;padding:16px;background:var(--beak);border:var(--b);border-radius:18px;box-shadow:var(--sh-s)}
+.deposit h3{font-size:22px;margin:0}
+.deposit p{margin:0;font-size:14.5px}
+.deposit .addr{display:flex;gap:8px;align-items:center;background:var(--white);border:2px solid var(--ink);border-radius:14px;padding:10px 12px}
+.deposit .addr code{flex:1;font:700 12px/1.4 var(--m);overflow-wrap:anywhere}
+.deposit .addr button{flex:none}
+.btn.sm{padding:8px 14px;font-size:12.5px}
+.actions{display:grid;gap:10px}
+.actions .btn{width:100%}
+.actions p{margin:0;font-size:14px;color:var(--dim)}
+.confirm{display:grid;gap:10px;padding:14px;border:2px dashed var(--ink);border-radius:14px;background:var(--cream)}
+.confirm p{margin:0;font-size:14.5px}
+.confirm .cta{gap:8px}
+.confirm input{width:100%;font:inherit;padding:10px 14px;border:2px solid var(--ink);border-radius:999px;background:var(--white)}
+.tip{background:var(--felt-dk);color:var(--white)}
+.tip h2{color:var(--beak)}
+.tip p{margin:0 0 12px;font-size:15px}
+.tip .amts{display:flex;gap:8px;flex-wrap:wrap}
+.tip .amts .btn{background:var(--beak);box-shadow:0 3px 0 var(--ink)}
+.tip .addr{margin-top:12px;font:700 11.5px var(--m);color:var(--cream);overflow-wrap:anywhere}
+.tip .addr code{color:var(--white)}
+.tip .status{color:var(--white)}
+.tip .status.ok{color:var(--mint)}
+.now .eq{font:400 36px/1 var(--t);font-variant-numeric:tabular-nums}
+.now .eq small{display:block;font:700 12px var(--m);margin-top:6px}
+.now .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}
+details.settings{border:var(--b);border-radius:var(--r);background:var(--white);box-shadow:var(--sh)}
+details.settings summary{cursor:pointer;list-style:none;padding:18px 22px;font:400 22px/1.1 var(--t);display:flex;justify-content:space-between;align-items:center}
+details.settings summary::-webkit-details-marker{display:none}
+details.settings summary::after{content:"+";font-size:26px;color:var(--card-red)}
+details.settings[open] summary::after{content:"–"}
+details.settings .in{padding:0 22px 22px;display:grid;gap:22px}
+.dial-block{display:grid;gap:12px}
+.dial-block h3{font-size:19px;margin:0}
+.dial-block > p{margin:0;font-size:14.5px}
+.sub-f{display:grid;gap:12px;padding:14px;border:2px dashed var(--ink);border-radius:16px;background:var(--cream)}
 .sub-f p{margin:0;font-size:14.5px}
-.amt{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:16px;align-items:center}
-.stool{display:grid;gap:12px;align-content:start}
-.stool .eq{font:400 44px/1 var(--t);font-variant-numeric:tabular-nums}
-.stool .eq small{display:block;font:700 12.5px var(--m);margin-top:6px}
-.stool .addr{display:grid;gap:6px;padding:12px 14px;background:var(--cream);border:2px solid var(--ink);border-radius:14px}
-.stool .addr code{font:700 12px var(--m);overflow-wrap:anywhere}
-.stool .addr b{font:700 11px var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
-.stool .kv2{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font:700 12.5px var(--m)}
-.stool .kv2 span{display:block;font:400 18px/1.1 var(--t)}
-.stool .slate{margin:0;padding:0 4px}
-.stool .slate li{grid-template-columns:1fr auto;padding:9px 0}
-.stool .slate b{font-size:18px}
-.stool .slate .x{font-size:18px}
-.danger-card{background:var(--cream)}
-.danger-card h2{color:var(--card-red)}
-.danger-card p{font-size:15px}
-.danger-card .cta{margin-top:14px}
-@media (max-width:560px){.amt{grid-template-columns:1fr}}
+.kv{margin-top:8px}
+@media (max-width:900px){.dash{grid-template-columns:1fr}}
+@media (max-width:560px){
+  .card{padding:16px}.money .kv3{grid-template-columns:1fr 1fr}.money .kv3 div:first-child{grid-column:1/-1}
+  details.settings summary{padding:14px 16px;font-size:20px}details.settings .in{padding:0 16px 16px}
+}
 </style>
 </head>
 <body data-tab="app">
@@ -70,107 +109,114 @@
 </main>
 
 <main id="dash" hidden>
-  <h1 id="hello">Your stool</h1>
+  <div class="hello"><h1 id="hello">Your stool</h1><span class="badge" id="d-status">—</span><span class="badge" id="d-type">—</span></div>
   <div class="dash">
-    <div class="card">
-      <h2 class="big" style="font-size:26px">Your seat</h2>
-      <dl class="kv">
-        <dt>Status</dt><dd id="d-status">—</dd>
-        <dt>Place in line</dt><dd id="d-pos">—</dd>
-        <dt>Account type</dt><dd id="d-type">—</dd>
-        <dt>Fees</dt><dd id="d-fees">—</dd>
-      </dl>
-      <p class="hint" style="margin-top:16px">When your seat opens you will create your bot wallet here, fund it, and Lloyd starts trading it at your risk level. We will email you.</p>
-    </div>
 
-    <div class="card stool wide" id="stool-card" hidden>
-      <h2 class="big" style="font-size:26px;margin:0">Your stool</h2>
-      <div class="eq" id="st-eq">—<small id="st-pnl"></small></div>
-      <div class="addr"><b>Your deposit address (Solana)</b><code id="st-addr">—</code><span class="hint" id="st-hint" style="margin:0"></span></div>
-      <div class="kv2"><div>Deposited<span id="st-dep">—</span></div><div>In cash<span id="st-cash">—</span></div><div>Fees so far<span id="st-fees">—</span></div><div>Since<span id="st-since">—</span></div></div>
-      <ul class="slate" id="st-pos" aria-label="Your open positions"></ul>
-      <ul class="feed" id="st-journal" style="gap:8px"></ul>
-      <div class="cta" style="gap:10px"><button class="btn ghost" type="button" id="wd-btn">Withdraw to my wallet</button><span class="status" id="wd-st" role="status"></span></div>
-    </div>
+    <section class="card money wide" id="money">
+      <h2>Your money</h2>
+      <div class="eq" id="m-eq">—</div>
+      <div class="pnl" id="m-pnl">—</div>
+      <div class="kv3"><div><b>You put in</b><span id="m-dep">—</span></div><div><b>Fees so far</b><span id="m-fees">—</span></div><div><b>Since</b><span id="m-since">—</span></div></div>
+      <div class="deposit" id="deposit" hidden>
+        <h3 id="dep-t">Fund your stool</h3>
+        <p id="dep-p">Send SOL to this address from any wallet or exchange. Lloyd starts trading for you the moment it lands.</p>
+        <div class="addr"><code id="dep-addr">—</code><button class="btn sm" type="button" id="dep-copy">Copy</button></div>
+      </div>
+      <div class="where" id="where">
+        <h3>Where it is right now <small id="w-upd"></small></h3>
+        <div class="pbar mini" id="w-bar"><span class="pk-cash" style="width:100%"></span></div>
+        <ul class="rows" id="w-rows"></ul>
+      </div>
+    </section>
 
-    <div class="card now">
-      <h2 class="big" style="font-size:26px;margin:0">Lloyd right now</h2>
+    <section class="card">
+      <h2>In your hands</h2>
+      <div class="actions">
+        <button class="btn y" type="button" id="act-stop">Stop and go to cash</button>
+        <p>Sells everything in your stool to SOL, right now, and pauses Lloyd on it. Your money stays in your stool.</p>
+        <div class="confirm" id="c-stop" hidden>
+          <p><b>Sure?</b> Everything is sold at market and Lloyd stops trading for you. You can withdraw afterwards, or ask us to start again.</p>
+          <div class="cta"><button class="btn danger" type="button" id="stop-yes">Yes, stop</button><button class="btn ghost" type="button" id="stop-no">Keep going</button></div>
+        </div>
+        <button class="btn" type="button" id="act-wd">Withdraw everything</button>
+        <p>Sells to SOL and sends it all to a wallet of yours. Takes a couple of minutes.</p>
+        <div class="confirm" id="c-wd" hidden>
+          <p>Where should it go? A Solana address you control.</p>
+          <input id="wd-addr" autocomplete="off" spellcheck="false" placeholder="Your Solana address">
+          <div class="cta"><button class="btn danger" type="button" id="wd-yes">Send it all</button><button class="btn ghost" type="button" id="wd-no">Cancel</button></div>
+        </div>
+        <span class="status" id="act-st" role="status"></span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Lloyd's latest moves on your stool</h2>
+      <ul class="feed" id="st-journal" style="gap:8px"><li><p>Nothing yet.</p></li></ul>
+    </section>
+
+    <section class="card tip wide" id="tip">
+      <h2>Buy Lloyd's lab a round</h2>
+      <p>Every idea that makes your stool smarter was tested first in Lloyd's lab: a separate wallet where new strategies trade real money, small, before they reach the book. Tips go straight into that wallet and fund the next experiments. It is the single most useful thing you can do for your own returns.</p>
+      <div class="amts" id="tip-amts"><button class="btn sm" type="button" data-sol="0.05">0.05 SOL</button><button class="btn sm" type="button" data-sol="0.1">0.1 SOL</button><button class="btn sm" type="button" data-sol="0.25">0.25 SOL</button><button class="btn sm" type="button" data-sol="0.5">0.5 SOL</button></div>
+      <p class="addr" style="margin-top:12px">From your stool, in one tap. Or send any amount to the lab directly: <code id="tip-addr">—</code></p>
+      <span class="status" id="tip-st" role="status"></span>
+    </section>
+
+    <section class="card now">
+      <h2>Lloyd right now</h2>
       <div class="row"><div class="eq" id="n-eq">—<small id="n-pnl">loading the book…</small></div><span class="regime" id="n-regime">Reading the room</span></div>
       <div class="pbar mini" id="n-bar"><span class="pk-cash" style="width:100%"></span></div>
       <ul class="plegend" id="n-legend" style="margin-top:4px"></ul>
-      <div class="cta" style="gap:10px"><a class="btn ghost" href="/book/">Open the full book</a><a class="btn ghost" href="/lab/">The notebook</a></div>
-    </div>
+      <div class="cta" style="gap:10px;margin-top:12px"><a class="btn ghost sm" href="/book/">The full book</a><a class="btn ghost sm" href="/lab/">The notebook</a></div>
+    </section>
 
-    <div class="card">
-      <h2 class="big" style="font-size:26px">Nonco Genesis holder?</h2>
-      <p class="hint">Holders never pay a cent on their profits and get the first seats. Sign a message with the Ethereum wallet that holds your Canvas or Legacy duck. It moves no funds and costs no gas. One person, one account, however many ducks you hold.</p>
-      <div class="duck" style="margin-top:16px"><button class="btn ghost" type="button" id="eth-btn">Verify with my Ethereum wallet</button><span class="status" id="eth-st" role="status"></span></div>
-    </div>
-
-    <div class="card danger-card">
-      <h2 class="big" style="font-size:26px">The red button</h2>
-      <p>Sells every position in your stool to SOL and stops Lloyd on it. It asks once, here, then does it. Withdraw afterwards from your stool card.</p>
-      <div class="cta"><button class="btn danger" type="button" id="close-btn">Close everything</button><span class="status" id="close-st" role="status"></span></div>
-    </div>
-
-    <form class="card wide" id="f-set" novalidate>
-      <h2 class="big" style="font-size:26px;margin:0">Your dials</h2>
-      <p class="hint" style="margin:-10px 0 0">Lloyd picks the tokens, the sizes and the timing. You decide these three things.</p>
-
-      <div class="dial-block">
-        <h3><span class="n">1</span>How much</h3>
-        <div class="amt">
-          <div class="f"><label for="s-amount">Amount you plan to fund (USD)</label><input id="s-amount" name="amount_usd" type="number" min="300" max="100000" step="10" value="300" inputmode="decimal"></div>
-          <p class="hint" style="margin:0" id="s-min">From US$300. Add or withdraw whenever you like.</p>
+    <details class="settings wide" id="settings">
+      <summary>Settings and your seat</summary>
+      <div class="in">
+        <dl class="kv">
+          <dt>Seat</dt><dd id="d-seat">—</dd>
+          <dt>Place in line</dt><dd id="d-pos">—</dd>
+          <dt>Fees</dt><dd id="d-fees">—</dd>
+          <dt>Deposit address</dt><dd id="d-addr">—</dd>
+        </dl>
+        <div class="dial-block">
+          <h3>Nonco Genesis holder?</h3>
+          <p>Holders never pay a cent on their profits and sit first. Sign a message with the Ethereum wallet that holds your duck; it moves no funds and costs no gas.</p>
+          <div class="duck"><button class="btn ghost sm" type="button" id="eth-btn">Verify with my Ethereum wallet</button><span class="status" id="eth-st" role="status"></span></div>
         </div>
+        <form id="f-set" novalidate style="display:grid;gap:22px">
+          <input type="hidden" name="amount_usd" id="s-amount" value="300">
+          <div class="dial-block">
+            <h3>Your risk: the biggest drop you accept</h3>
+            <p>While the tavern is opening, every stool follows the book as it is. Your dial is saved and takes over as soon as per-stool risk goes live.</p>
+            <div class="dials" id="s-dials" role="radiogroup" aria-label="Risk level"></div>
+          </div>
+          <div class="dial-block">
+            <h3>What happens with profits</h3>
+            <div class="opts" id="s-rules" role="radiogroup" aria-label="Profit rule"></div>
+            <div class="sub-f" id="lock-box" hidden>
+              <div class="f" style="max-width:260px"><label for="s-mult">Lock in when my stool reaches</label><select id="s-mult" name="profit_mult"><option value="1.5">x1.5</option><option value="2" selected>x2</option><option value="3">x3</option></select></div>
+              <p>At that multiple Lloyd moves your original stake to cash and keeps trading only with the profit.</p>
+            </div>
+            <div class="sub-f" id="sweep-box" hidden><p>Once a month, any profit above your stake is sent to the Solana wallet below. The stake keeps working.</p></div>
+          </div>
+          <div class="f"><label for="s-sol">Your own Solana wallet (for withdrawals and sweeps)</label><input id="s-sol" name="sol_wallet" autocomplete="off" spellcheck="false" placeholder="Optional"></div>
+          <div><button class="btn y sm" type="submit">Save</button> <span class="status" id="s-st" role="status"></span></div>
+        </form>
       </div>
-
-      <div class="dial-block">
-        <h3><span class="n">2</span>Your risk: the biggest drop you accept</h3>
-        <p>It sets how much of your money follows the book and how tight Lloyd cuts. If your wallet gets there, everything moves to USDC and Lloyd stops on it.</p>
-        <div class="dials" id="s-dials" role="radiogroup" aria-label="Risk level"></div>
-      </div>
-
-      <div class="dial-block">
-        <h3><span class="n">3</span>What happens with profits</h3>
-        <div class="opts" id="s-rules" role="radiogroup" aria-label="Profit rule"></div>
-        <div class="sub-f" id="lock-box" hidden>
-          <div class="f" style="max-width:260px"><label for="s-mult">Lock in when my wallet reaches</label><select id="s-mult" name="profit_mult"><option value="1.5">x1.5</option><option value="2" selected>x2</option><option value="3">x3</option></select></div>
-          <p>At that multiple Lloyd moves your original stake to USDC and keeps trading only with the profit.</p>
-        </div>
-        <div class="sub-f" id="sweep-box" hidden>
-          <p>Once a month, any profit above your stake is sent to the Solana wallet below. The stake keeps working. This needs a withdrawal wallet.</p>
-        </div>
-      </div>
-
-      <fieldset>
-        <div class="f wide"><label for="s-sol">Your Solana wallet, to withdraw and sweep to</label><input id="s-sol" name="sol_wallet" autocomplete="off" spellcheck="false" placeholder="Optional unless you chose the monthly sweep"></div>
-      </fieldset>
-      <div><button class="btn y" type="submit">Save my dials</button> <span class="status" id="s-st" role="status"></span></div>
-    </form>
+    </details>
   </div>
 </main>
 </div>
-
-<dialog class="modal" id="close-dlg" aria-labelledby="close-t">
-  <h3 id="close-t">Close everything?</h3>
-  <p>Lloyd will sell every open position in your bot wallet to USDC at market, right now, and stop trading on it. Fees apply to the sells like any other trade.</p>
-  <p>Your money stays in your wallet. You can withdraw it, or set your dials and start Lloyd again later.</p>
-  <div class="cta"><button class="btn danger" type="button" id="close-yes">Yes, close everything</button><button class="btn ghost" type="button" id="close-no">Keep trading</button></div>
-</dialog>
 
 <script src="/lloyd.js"></script>
 <script>
 const $ = s => document.querySelector(s);
 const L = window.Lloyd, post = L.post;
 let fees = {trade_pct_holder: 1, trade_pct_external: 1.5, success_pct_external: 15, min_deposit_usd: 300};
-let LEVELS = null;
+let LEVELS = null, ME = null, LAB = null;
 let RULES = [{key: "run", name: "Let it run"}, {key: "lock", name: "Lock in at a multiple"}, {key: "sweep", name: "Sweep monthly"}];
-const RULE_BLURB = {
-  run: "Profits stay in the book and keep working.",
-  lock: "At x1.5, x2 or x3 your stake goes to USDC; only the profit keeps trading.",
-  sweep: "Once a month, profit above your stake goes to your own Solana wallet.",
-};
+const RULE_BLURB = {run: "Profits stay in the stool and keep working.", lock: "At x1.5, x2 or x3 your stake goes to cash; only the profit keeps trading.", sweep: "Once a month, profit above your stake goes to your own Solana wallet."};
 
 function showAuth(which) {
   $("#auth").hidden = false; $("#dash").hidden = true; $("#logout").hidden = true;
@@ -180,7 +226,6 @@ function showAuth(which) {
 }
 $("#t-signup").onclick = () => { location.hash = "signup"; showAuth("signup"); };
 $("#t-login").onclick = () => { location.hash = "login"; showAuth("login"); };
-
 function formJSON(f) { const o = Object.fromEntries(new FormData(f).entries()); f.querySelectorAll("input[type=checkbox]").forEach(c => o[c.name] = c.checked); return o; }
 function wire(form, url) {
   form.onsubmit = async ev => {
@@ -217,99 +262,116 @@ function ruleUI() {
   $("#lock-box").hidden = r !== "lock"; $("#sweep-box").hidden = r !== "sweep";
 }
 
-// ----- fill from /api/me -----
+// ----- the page -----
 function fill(u) {
+  ME = u;
   $("#auth").hidden = true; $("#dash").hidden = false; $("#logout").hidden = false;
-  $("#hello").textContent = u.name ? `Welcome, ${u.name.split(" ")[0]}` : "Your stool";
-  $("#d-status").textContent = {waitlist: "On the waitlist", seated: "Seated", active: "Trading", paused: "Paused", closing: "Closing", closed: "Closed, holding SOL"}[u.status] || u.status || "—";
-  fillStool(u);
-  $("#d-pos").textContent = u.position != null ? "#" + u.position : "—";
+  $("#hello").textContent = u.name ? `Hi, ${u.name.split(" ")[0]}` : "Your stool";
+  const s = u.stool;
+  const st = !u.bot_wallet ? "On the waitlist" : !s || !s.started ? "Waiting for your deposit" : s.closed ? "Stopped, in cash" : s.halt ? "Stopped at the floor" : "Trading";
+  $("#d-status").textContent = st; $("#d-status").className = "badge" + (st === "Trading" ? " ok" : "");
   const holder = u.holder_status === "holder";
-  $("#d-type").innerHTML = holder ? `<span class="badge ok">Genesis holder · ${L.esc(u.ducks)} ducks</span>`
-    : u.holder_status === "pending" ? `<span class="badge">Holder check pending</span>` : `<span class="badge">Standard</span>`;
-  $("#d-fees").textContent = holder || u.holder_status === "pending" ? `${fees.trade_pct_holder}% on each token trade, included in the price. Nothing on profits.` : `${fees.trade_pct_external}% on each token trade, included in the price, plus ${fees.success_pct_external}% of your net monthly profit.`;
+  $("#d-type").textContent = holder ? `Genesis holder · ${u.ducks} ${u.ducks == 1 ? "duck" : "ducks"}` : u.holder_status === "pending" ? "Holder check pending" : "Standard seat";
+  $("#d-seat").textContent = {waitlist: "On the waitlist: we will email you when it opens.", seated: "Seated.", closing: "Closing.", closed: "Stopped."}[u.status] || u.status || "—";
+  $("#d-pos").textContent = u.position != null ? "#" + u.position : "—";
+  $("#d-fees").textContent = holder || u.holder_status === "pending" ? `${fees.trade_pct_holder}% built into each token trade. Nothing on profits, ever.` : `${fees.trade_pct_external}% built into each token trade, plus ${fees.success_pct_external}% of your net monthly profit. Nothing in a losing month.`;
+  $("#d-addr").innerHTML = u.bot_wallet ? `<code style="font-size:11px;overflow-wrap:anywhere">${L.esc(u.bot_wallet)}</code>` : "—";
   if (u.eth) { $("#eth-st").className = "status ok"; $("#eth-st").textContent = `Linked: ${u.eth.slice(0, 6)}…${u.eth.slice(-4)}`; }
   const f = $("#f-set");
-  if (u.amount_usd) f.amount_usd.value = u.amount_usd;
-  if (u.sol_wallet) f.sol_wallet.value = u.sol_wallet;
+  f.amount_usd.value = u.amount_usd || fees.min_deposit_usd || 300;
+  if (u.sol_wallet) { f.sol_wallet.value = u.sol_wallet; $("#wd-addr").value = u.sol_wallet; }
   if (!$("#s-dials").children.length) buildDials();
-  setRadio("risk_pct", u.risk_pct || 35);
-  setRadio("profit_rule", u.profit_rule || "run");
+  setRadio("risk_pct", u.risk_pct || 35); setRadio("profit_rule", u.profit_rule || "run");
   if (u.profit_mult) f.profit_mult.value = String(Number(u.profit_mult));
   ruleUI();
+  fillMoney(u);
 }
 
-function fillStool(u) {
-  const s = u.stool, card = $("#stool-card");
-  if (!s && !u.bot_wallet) { card.hidden = true; return; }
-  card.hidden = false;
-  const addr = (s && s.wallet) || u.bot_wallet;
-  $("#st-addr").textContent = addr;
-  if (!s || !s.started) {
-    $("#st-eq").firstChild.textContent = L.usd(s ? s.equity_usd : 0);
-    $("#st-pnl").textContent = "waiting for your deposit";
-    $("#st-hint").textContent = `Send SOL to this address from any wallet or exchange. Lloyd starts the moment it lands (at least ${s ? s.min_sol : 0.2} SOL; the public minimum is $${fees.min_deposit_usd}).`;
-  } else {
-    $("#st-eq").firstChild.textContent = L.usd(s.equity_usd, 2);
-    const p = $("#st-pnl"); p.textContent = s.pnl_pct != null ? `${L.frac(s.pnl_pct)} · ${L.usdS(s.pnl_usd, 2)} on what you put in` : "";
-    p.className = (s.pnl_pct || 0) >= 0 ? "up" : "down";
-    $("#st-hint").textContent = s.closed ? "Closed: everything is in SOL. Withdraw below, or ask us to reopen." : s.halt ? "Stopped at the hard floor. Everything is in SOL." : "You can add more SOL to this address any time.";
+function fillMoney(u) {
+  const s = u.stool, started = s && s.started;
+  // deposit box
+  const dep = $("#deposit");
+  if (!u.bot_wallet) {
+    dep.hidden = false; $("#dep-t").textContent = "Your seat is on the waitlist"; $("#dep-p").textContent = "Seats open in order, Nonco Genesis holders first. When yours opens, your deposit address appears right here and we email you."; $("#dep-addr").textContent = "—"; $("#dep-copy").hidden = true;
+  } else if (!started) {
+    dep.hidden = false; $("#dep-t").textContent = "Fund your stool"; $("#dep-copy").hidden = false;
+    $("#dep-p").textContent = `Send SOL to this address from any wallet or exchange (Phantom, Binance, Coinbase…). Lloyd starts trading for you the moment it lands. Minimum $${fees.min_deposit_usd}; during the opening at least ${s ? s.min_sol : 0.2} SOL.`;
+    $("#dep-addr").textContent = u.bot_wallet;
+  } else { dep.hidden = true; }
+  // money
+  $("#m-eq").textContent = s ? L.usd(s.equity_usd, 2) : "$0";
+  const pnl = $("#m-pnl");
+  if (started && s.pnl_pct != null) { pnl.textContent = `${L.frac(s.pnl_pct)} · ${L.usdS(s.pnl_usd, 2)} on what you put in`; pnl.className = "pnl " + ((s.pnl_pct || 0) >= 0 ? "up" : "down"); }
+  else { pnl.textContent = u.bot_wallet ? "Nothing in yet." : "Your stool opens with your seat."; pnl.className = "pnl"; }
+  $("#m-dep").textContent = s ? L.usd(s.deposited_usd, 2) : "—"; $("#m-fees").textContent = s ? L.usd(s.fees_usd, 2) : "—"; $("#m-since").textContent = s && s.since ? L.day(s.since) : "—";
+  // where
+  const where = $("#where"); where.hidden = !started;
+  if (started) {
+    $("#w-upd").textContent = s.now ? `updated ${L.ago(s.now)}` : "";
+    const eq = s.equity_usd || 0, pos = s.positions || [];
+    const by = {cash: s.cash_usd || 0, majors: 0, established: 0, picks: 0};
+    pos.forEach(p => { by[p.sleeve in by ? p.sleeve : "picks"] += p.value_usd || 0; });
+    L.drawBar($("#w-bar"), null, {sleeves: Object.entries(by).map(([k, v]) => ({key: k, value_usd: v, pct: eq ? v / eq * 100 : 0}))});
+    const rows = $("#w-rows"); rows.innerHTML = "";
+    const cashLi = document.createElement("li"); cashLi.innerHTML = `<i class="pk-cash"></i><b>Cash<small>USDC and SOL, waiting</small></b><span class="v">${L.usd(by.cash, 2)}<small>${eq ? L.pct(by.cash / eq * 100) : "—"}</small></span>`; rows.appendChild(cashLi);
+    pos.sort((a, b) => (b.value_usd || 0) - (a.value_usd || 0)).forEach(p => {
+      const li = document.createElement("li"); const pk = L.POCKETS[p.sleeve] || L.POCKETS.picks;
+      li.innerHTML = `<i class="${pk.cls}"></i><b></b><span class="v ${p.multiple != null && p.multiple < 1 ? "down" : "up"}">${L.usd(p.value_usd, 2)}<small>${L.fmtX(p.multiple)} since bought</small></span>`;
+      li.children[1].innerHTML = `${L.esc(p.token)}<small>${L.esc(pk.name)}</small>`; rows.appendChild(li);
+    });
+    if (!pos.length) { const li = document.createElement("li"); li.className = "empty"; li.textContent = "All in cash right now, like the book. Lloyd is waiting for something that passes his checks."; rows.appendChild(li); }
   }
-  $("#st-dep").textContent = s ? L.usd(s.deposited_usd, 2) : "—";
-  $("#st-cash").textContent = s && s.equity_usd ? L.pct(s.cash_usd / s.equity_usd * 100) : "—";
-  $("#st-fees").textContent = s ? L.usd(s.fees_usd, 2) : "—";
-  $("#st-since").textContent = s && s.since ? L.day(s.since) : "—";
-  const pos = $("#st-pos"); pos.innerHTML = "";
-  ((s && s.positions) || []).forEach(x => {
-    const li = document.createElement("li"); li.innerHTML = `<b></b><span class="x"></span>`;
-    li.children[0].textContent = x.token || "—";
-    li.children[1].innerHTML = `<span class="${x.multiple != null && x.multiple < 1 ? "down" : "up"}">${L.fmtX(x.multiple)}</span><small>${L.usd(x.value_usd, 2)}</small>`;
-    pos.appendChild(li);
-  });
-  if (s && s.started && !pos.children.length) { const li = document.createElement("li"); li.className = "empty"; li.textContent = "Nothing open right now: your stool is in cash, like the book."; pos.appendChild(li); }
-  $("#st-journal").innerHTML = ((s && s.journal) || []).slice(0, 6).map(j => `<li><time>${L.when(j.ts)}</time><b>${L.esc(j.title)}</b><p>${L.esc(j.text)}</p></li>`).join("");
+  // journal
+  $("#st-journal").innerHTML = ((s && s.journal) || []).slice(0, 5).map(j => `<li><time>${L.when(j.ts)}</time><b>${L.esc(j.title)}</b><p>${L.esc(j.text)}</p></li>`).join("") || `<li><p>${u.bot_wallet ? "Nothing yet. The first note appears when your deposit lands." : "Your stool's story starts when your seat opens."}</p></li>`;
+  // actions
+  const can = !!u.bot_wallet && started && !s.closed && !s.halt;
+  $("#act-stop").disabled = !can; $("#act-wd").disabled = !(u.bot_wallet && s && (s.equity_usd || 0) > 1);
+  $("#tip-amts").querySelectorAll("button").forEach(b => b.disabled = !(u.bot_wallet && s && (s.cash_sol || 0) > 0.06));
 }
-$("#wd-btn").onclick = async () => {
-  const st = $("#wd-st");
-  if (!confirm("Withdraw everything to the Solana wallet saved in your dials? Open positions are sold to SOL first.")) return;
-  st.className = "status"; st.textContent = "Asking Lloyd…";
-  try { await post("/api/me/withdraw"); st.className = "status ok"; st.textContent = "On its way. It can take a couple of minutes; this page refreshes on its own."; }
+
+// copy
+$("#dep-copy").onclick = async () => { try { await navigator.clipboard.writeText($("#dep-addr").textContent); $("#dep-copy").textContent = "Copied"; setTimeout(() => $("#dep-copy").textContent = "Copy", 1500); } catch (_) {} };
+
+// stop
+$("#act-stop").onclick = () => { $("#c-stop").hidden = false; $("#c-wd").hidden = true; $("#act-st").textContent = ""; };
+$("#stop-no").onclick = () => { $("#c-stop").hidden = true; };
+$("#stop-yes").onclick = async () => {
+  const st = $("#act-st"); $("#stop-yes").disabled = true;
+  try { await post("/api/me/close_all"); $("#c-stop").hidden = true; st.className = "status ok"; st.textContent = "Done. Lloyd is selling everything to SOL; your money shows up here within a few minutes."; setTimeout(load, 20000); }
   catch (e) { st.className = "status err"; st.textContent = e.message; }
+  finally { $("#stop-yes").disabled = false; }
 };
+// withdraw
+$("#act-wd").onclick = () => { $("#c-wd").hidden = false; $("#c-stop").hidden = true; $("#act-st").textContent = ""; $("#wd-addr").focus(); };
+$("#wd-no").onclick = () => { $("#c-wd").hidden = true; };
+$("#wd-yes").onclick = async () => {
+  const st = $("#act-st"), addr = $("#wd-addr").value.trim();
+  if (!/^[1-9A-HJ-NP-Za-km-z]{32,44}$/.test(addr)) { st.className = "status err"; st.textContent = "That does not look like a Solana address."; return; }
+  $("#wd-yes").disabled = true;
+  try {
+    if (addr !== (ME.sol_wallet || "")) await post("/api/me/settings", {amount_usd: Number($("#s-amount").value) || 300, risk_pct: ME.risk_pct || 35, profit_rule: ME.profit_rule || "run", profit_mult: ME.profit_mult || null, sol_wallet: addr});
+    await post("/api/me/withdraw"); $("#c-wd").hidden = true; st.className = "status ok"; st.textContent = "On its way. Open positions are sold first; the SOL lands in your wallet within a few minutes."; setTimeout(load, 20000);
+  } catch (e) { st.className = "status err"; st.textContent = e.message; }
+  finally { $("#wd-yes").disabled = false; }
+};
+// tip
+$("#tip-amts").querySelectorAll("button").forEach(b => b.onclick = async () => {
+  const st = $("#tip-st"), sol = Number(b.dataset.sol);
+  if (!confirm(`Send ${sol} SOL from your stool to Lloyd's lab?`)) return;
+  st.className = "status"; st.textContent = "Pouring…";
+  try { await post("/api/me/tip", {sol}); st.className = "status ok"; st.textContent = `Thank you. ${sol} SOL goes to the lab within a minute; it shows in your moves.`; }
+  catch (e) { st.className = "status err"; st.textContent = e.message; }
+});
 
 $("#f-set").onsubmit = async ev => {
   ev.preventDefault();
   const st = $("#s-st"); st.className = "status"; st.textContent = "Saving…";
-  const f = ev.target;
-  const rule = (f.querySelector("input[name=profit_rule]:checked") || {}).value || "run";
-  const body = {
-    amount_usd: Number(f.amount_usd.value),
-    risk_pct: Number((f.querySelector("input[name=risk_pct]:checked") || {}).value || 35),
-    profit_rule: rule,
-    profit_mult: rule === "lock" ? Number(f.profit_mult.value) : null,
-    sol_wallet: f.sol_wallet.value.trim(),
-  };
+  const f = ev.target, rule = (f.querySelector("input[name=profit_rule]:checked") || {}).value || "run";
+  const body = {amount_usd: Number(f.amount_usd.value) || 300, risk_pct: Number((f.querySelector("input[name=risk_pct]:checked") || {}).value || 35), profit_rule: rule,
+                profit_mult: rule === "lock" ? Number(f.profit_mult.value) : null, sol_wallet: f.sol_wallet.value.trim()};
   if (rule === "sweep" && !body.sol_wallet) { st.className = "status err"; st.textContent = "The monthly sweep needs a Solana wallet to send profits to."; f.sol_wallet.focus(); return; }
   try { const d = await post("/api/me/settings", body); if (d.user) fill(d.user); st.className = "status ok"; st.textContent = "Saved."; }
   catch (e) { st.className = "status err"; st.textContent = e.message; }
-};
-
-// ----- red button -----
-const dlg = $("#close-dlg");
-const openDlg = () => { if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", ""); };
-const shutDlg = () => { if (typeof dlg.close === "function" && dlg.open) dlg.close(); else dlg.removeAttribute("open"); };
-$("#close-btn").onclick = () => { $("#close-st").textContent = ""; openDlg(); };
-$("#close-no").onclick = shutDlg;
-$("#close-yes").onclick = async () => {
-  const st = $("#close-st"), btn = $("#close-yes");
-  btn.disabled = true; btn.textContent = "Closing…";
-  try {
-    await post("/api/me/close_all");
-    shutDlg(); st.className = "status ok"; st.textContent = "Done. Everything is being sold to USDC; it shows in the book within a few minutes.";
-    load();
-  } catch (e) {
-    shutDlg(); st.className = "status err"; st.textContent = e.message;
-  } finally { btn.disabled = false; btn.textContent = "Yes, close everything"; }
 };
 
 // ----- holder verification -----
@@ -332,12 +394,13 @@ $("#eth-btn").onclick = async () => {
 function loadBook() {
   L.get("/api/book").then(b => {
     $("#n-eq").firstChild.textContent = L.usd(b.equity_usd);
-    const p = $("#n-pnl");
-    p.textContent = b.pnl_pct != null ? `${L.frac(b.pnl_pct)} since ${L.day(b.since)}` : (b.since ? `since ${L.day(b.since)}` : "");
-    p.className = (b.pnl_pct || 0) >= 0 ? "up" : "down";
+    const p = $("#n-pnl"), t = (b.track || {}).first_table;
+    p.textContent = t ? `${L.signed(t.pct)} since day one` : (b.pnl_pct != null ? `${L.frac(b.pnl_pct)} since ${L.day(b.since)}` : "");
+    p.className = ((t ? t.pct : b.pnl_pct) || 0) >= 0 ? "up" : "down";
     L.regimeBadge($("#n-regime"), b.regime);
     L.drawBar($("#n-bar"), $("#n-legend"), b, {short: true});
   }).catch(() => { $("#n-pnl").textContent = "Could not load the book right now."; $("#n-regime").textContent = "Could not load"; });
+  L.get("/api/lab").then(d => { LAB = d.lab_wallet; $("#tip-addr").textContent = LAB && LAB.wallet ? LAB.wallet : "coming soon"; }).catch(() => {});
 }
 
 function load() {
@@ -345,11 +408,11 @@ function load() {
     .catch(() => showAuth(location.hash === "#login" ? "login" : "signup"));
 }
 L.get("/api/config").then(c => {
-  if (c.fees) { fees = c.fees; if (fees.min_deposit_usd) { $("#s-amount").min = fees.min_deposit_usd; $("#s-min").textContent = `From US$${fees.min_deposit_usd}. Add or withdraw whenever you like.`; } }
+  if (c.fees) fees = c.fees;
   if (Array.isArray(c.risk_levels) && c.risk_levels.length) LEVELS = c.risk_levels;
   if (Array.isArray(c.profit_rules) && c.profit_rules.length) RULES = c.profit_rules;
 }).catch(() => {}).finally(load);
-setInterval(() => { if (!$("#dash").hidden) { loadBook(); L.get("/api/me").then(d => fillStool(d.user)).catch(() => {}); } }, 60000);
+setInterval(() => { if (!$("#dash").hidden) { loadBook(); L.get("/api/me").then(d => { ME = d.user; fillMoney(d.user); }).catch(() => {}); } }, 45000);
 </script>
 </body>
 </html>
