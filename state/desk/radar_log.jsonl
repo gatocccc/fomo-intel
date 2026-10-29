@@ -16,3 +16,4 @@
 {"ts": 1793310603.7570567, "kind": "event", "src": "theblock", "title": "Binance investigating hack as suspicious outflows reach up to $5.8 billion", "cls": {"types": ["exchange", "exchange_risk", "hack"], "dir": -1, "sev": 3, "by": "kw"}}
 {"ts": 1793312163.8012571, "kind": "event", "src": "cointelegraph", "title": "Binance hacked for over $5.8B in massive crypto exploit", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
 {"ts": 1793313363.746426, "kind": "event", "src": "cointelegraph", "title": "Binance hit by $5.8B hack as Tether and Circle freeze billions", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
+{"ts": 1793315223.7778623, "kind": "event", "src": "bitcoinmagazine", "title": "Bitcoin Price Slides Below $79,000 as Binance Loses $5.8 Billion in Massive Hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}

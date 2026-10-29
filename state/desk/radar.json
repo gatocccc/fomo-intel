@@ -14,6 +14,17 @@
  },
  "events": [
   {
+   "ts": 1793315223.7778623,
+   "src": "bitcoinmagazine",
+   "title": "Bitcoin Price Slides Below $79,000 as Binance Loses $5.8 Billion in Massive Hack",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793313363.746426,
    "src": "cointelegraph",
    "title": "Binance hit by $5.8B hack as Tether and Circle freeze billions",
@@ -161,21 +172,21 @@
    ]
   }
  ],
- "ts": 1793315044.4113054,
+ "ts": 1793315344.464556,
  "bear_score": 9,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.432,
-   "ch15m": -0.0077378992426736515,
-   "ch1h": -0.00581467277001102,
-   "ch4h": -0.04057307730574078
+   "px": 96.35,
+   "ch15m": -0.006219508421606457,
+   "ch1h": -0.006455205411648346,
+   "ch4h": -0.04005180830925581
   },
   "BTC": {
-   "px": 78795.0,
-   "ch15m": -0.0024686669198632494,
-   "ch1h": -7.614116572129959e-05,
-   "ch4h": -0.025128052854279548
+   "px": 78691.0,
+   "ch15m": -0.0034194095819455317,
+   "ch1h": 5.083431824814966e-05,
+   "ch4h": -0.025932711113311746
   }
  },
  "mode": "live",
@@ -196,9 +207,9 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 96.432,
-  "ret_px": 0.0113,
-  "pnl_usd_est": 0.42,
-  "age_h": 1.66
+  "mark": 96.35,
+  "ret_px": 0.0121,
+  "pnl_usd_est": 0.45,
+  "age_h": 1.75
  }
 }
