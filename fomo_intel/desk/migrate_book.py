@@ -78,7 +78,7 @@ def transfer_all(rpc: Rpc, kp, dest: str, dry: bool):
         bh = rpc.call("getLatestBlockhash", [{"commitment": "finalized"}])["value"]["blockhash"]
         tx = Transaction.new_signed_with_payer(ixs, kp.pubkey(), [kp], Hash.from_string(bh))
         sig = rpc.send_raw(base64.b64encode(bytes(tx)).decode())
-        st = rpc.wait_confirmed(sig, 90)
+        st = rpc.wait_confirmed(sig, 150)
         log(f"  tokens {mint[:8]} {t['amount'] / 10 ** t['decimals']:.6g}: {sig[:16]}… {'ok' if st else 'SIN CONFIRMAR'}")
         done.append((mint, t["amount"] / 10 ** t["decimals"], sig, bool(st)))
         time.sleep(2)
@@ -117,6 +117,12 @@ def main():
     load_dotenv()
     env = Env(); rpc = Rpc(env.rpc_url)
     dst_dir = Path("state/plan_lloyd")
+    if "--transfer-only" in sys.argv:          # reintento: mover lo que haya quedado en las billeteras viejas (sin tocar el estado)
+        lloyd_pub = json.load(open("secrets/plan_lloyd.json"))["pubkey"]
+        for src in SOURCES:
+            kp = load_or_create(Path(f"secrets/plan_{src}.json"))
+            log(f"reintento {src} ({kp.pubkey()}) → lloyd"); transfer_all(rpc, kp, lloyd_pub, dry)
+        return
     if dst_dir.exists() and (dst_dir / "config.json").exists() and not dry:
         log("state/plan_lloyd ya existe: no se migra dos veces"); return
     if not dry:
