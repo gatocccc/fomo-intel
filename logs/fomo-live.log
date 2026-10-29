@@ -1,6 +1,3 @@
-Oct 27 09:53:56 simplai-prod python3[718129]: 2026-10-27 09:53:56,986 INFO live: latido: stream=True tokens_vistos=19916 seguidos=184 candidatos=0 abiertas=0 cerradas=1 st_requests=248 SOL=$100
-Oct 27 09:58:57 simplai-prod python3[718129]: 2026-10-27 09:58:57,295 INFO live: latido: stream=True tokens_vistos=19943 seguidos=48 candidatos=0 abiertas=0 cerradas=1 st_requests=249 SOL=$100
-Oct 27 10:03:57 simplai-prod python3[718129]: 2026-10-27 10:03:57,875 INFO live: latido: stream=True tokens_vistos=19987 seguidos=64 candidatos=0 abiertas=0 cerradas=1 st_requests=250 SOL=$100
 Oct 27 10:08:58 simplai-prod python3[718129]: 2026-10-27 10:08:58,238 INFO live: latido: stream=True tokens_vistos=20019 seguidos=47 candidatos=0 abiertas=0 cerradas=1 st_requests=251 SOL=$99
 Oct 27 10:13:58 simplai-prod python3[718129]: 2026-10-27 10:13:58,688 INFO live: latido: stream=True tokens_vistos=20081 seguidos=79 candidatos=0 abiertas=0 cerradas=1 st_requests=252 SOL=$99
 Oct 27 10:18:58 simplai-prod python3[718129]: 2026-10-27 10:18:58,855 INFO live: latido: stream=True tokens_vistos=20160 seguidos=103 candidatos=0 abiertas=0 cerradas=1 st_requests=253 SOL=$99
@@ -298,3 +295,6 @@ Oct 29 03:17:08 simplai-prod python3[1623361]: 2026-10-29 03:17:08,924 INFO live
 Oct 29 03:17:32 simplai-prod python3[1623361]: 2026-10-29 03:17:32,831 INFO live.helius: HELIUS 4vw54B buy G2hwwrBs 0.0350 SOL @ 2.486e-07 (lat 0.9s)
 Oct 29 03:18:39 simplai-prod python3[1623361]: 2026-10-29 03:18:39,798 INFO live.helius: HELIUS 4vw54B sell G2hwwrBs 3.7850 SOL @ 1.015e-07 (lat 0.9s)
 Oct 29 03:22:09 simplai-prod python3[1623361]: 2026-10-29 03:22:09,094 INFO live: latido: stream=True tokens_vistos=672 seguidos=75 candidatos=0 abiertas=0 cerradas=1 st_requests=16 SOL=$100
+Oct 29 03:26:08 simplai-prod python3[1623361]: 2026-10-29 03:26:08,067 INFO live.helius: HELIUS 4vw54B buy 4DRCn24H 3.0115 SOL @ 9.461e-08 (lat 0.9s)
+Oct 29 03:27:00 simplai-prod python3[1623361]: 2026-10-29 03:27:00,105 INFO live.helius: HELIUS 4vw54B buy 4DRCn24H 0.0350 SOL @ 1.492e-07 (lat 0.9s)
+Oct 29 03:27:09 simplai-prod python3[1623361]: 2026-10-29 03:27:09,587 INFO live: latido: stream=True tokens_vistos=705 seguidos=50 candidatos=0 abiertas=0 cerradas=1 st_requests=17 SOL=$100
