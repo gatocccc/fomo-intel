@@ -1,16 +1,16 @@
 {
- "now": 1793234996.4464831,
+ "now": 1793235274.8697407,
  "start_ts": 1793203690.827375,
  "start_usd": 200.16,
  "start_sol": 1.981514,
  "goal_usd": 400.32,
  "days": 30,
  "day": 1,
- "equity_usd": 192.0,
- "equity_sol": 1.8835,
- "cash_sol": 0.493,
- "positions_usd": 141.75,
- "sol_usd": 101.93,
+ "equity_usd": 191.89,
+ "equity_sol": 1.8829,
+ "cash_sol": 0.865,
+ "positions_usd": 103.73,
+ "sol_usd": 101.91,
  "mult": 0.959,
  "halt": false,
  "pause": false,
@@ -32,7 +32,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.999508285512654,
+   "last_usd": 0.9994981351473791,
    "mult": 0.991,
    "value_usd": 42.42
   },
@@ -58,35 +58,9 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.1493798437195868,
+   "last_usd": 0.1493872894840426,
    "mult": 0.966,
    "value_usd": 37.85
-  },
-  {
-   "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
-   "symbol": "USELESS",
-   "opened_ts": 1793232591.9609036,
-   "entry_usd": 0.17185367796403173,
-   "tokens": 227.062055,
-   "tokens_initial": 227.062055,
-   "sol_in": 0.38127794,
-   "sol_out": 0.0,
-   "peak_usd": 0.17185367796403173,
-   "stop": 0.2,
-   "trail": 0.25,
-   "trail_after": 1.4,
-   "tp": [
-    [
-     2,
-     0.3
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "USELESS: established memecoin back in an uptrend (+2% vs 20-day average, +13% in 7 days).",
-   "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.16768860960738763,
-   "mult": 0.976,
-   "value_usd": 38.08
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -110,9 +84,9 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.40233138711568095,
-   "mult": 0.963,
-   "value_usd": 23.4
+   "last_usd": 0.4033874590216419,
+   "mult": 0.965,
+   "value_usd": 23.46
   }
  ],
  "equity": [
@@ -539,9 +513,26 @@
   [
    1793234934,
    192.07
+  ],
+  [
+   1793235244,
+   191.84
   ]
  ],
  "closed": [
+  {
+   "ts": 1793235137.00246,
+   "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+   "symbol": "USELESS",
+   "sol_in": 0.38128,
+   "sol_out": 0.37206,
+   "pnl_sol": -0.00922,
+   "pnl_usd": -0.94,
+   "ret": -0.024,
+   "peak_mult": 1.0,
+   "hold_h": 0.7,
+   "why": "anti-rug check: 4 top holders (15.3%) funded by the same non-exchange wallet"
+  },
   {
    "ts": 1793232577.4007885,
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -557,6 +548,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793235137.0017984,
+   "side": "sell",
+   "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+   "symbol": "USELESS",
+   "ok": true,
+   "sol": 0.372056402,
+   "tokens": 227.062055,
+   "price_usd": 0.167026757354,
+   "why": "anti-rug check: 4 top holders (15.3%) funded by the same non-exchange wallet",
+   "sig": "1XgmxEF2aQ7SsQBqxNB3L6iKTcWRLZyBYWSTAfCCBase6brhQXQsBWRA5bEWVVCXGpvdETG4C71qWd97b8hWmgW",
+   "error": "",
+   "id": "equilibrado-2026-10-29-01"
+  },
   {
    "ts": 1793232594.2011442,
    "side": "buy",
@@ -672,6 +677,20 @@
  ],
  "journal": [
   {
+   "ts": 1793235137.0040095,
+   "title": "Execution",
+   "text": "sell Dz9mQ9: sold 100% of USELESS (anti-rug check: 4 top holders (15.3%) funded by the same non-exchange wallet) for 0.3721 SOL — position closed",
+   "kind": "execution",
+   "id": "equilibrado-2026-10-29-01"
+  },
+  {
+   "ts": 1793235137.003852,
+   "title": "Selling USELESS: one wallet funded holders with 15% of the supply",
+   "text": "Tonight's anti-rug check looks at who funded the 20 largest holders of each coin. USELESS came back CONCENTRATED: four of its biggest holders, together 15.3% of all tokens, were set up and paid for by the same wallet (D89hHJT5…), and I could not confirm that wallet belongs to an exchange. A single hidden owner of 15% can sell into everyone else at any moment, so under this plan's rules the coin goes. The position was bought a few hours ago by the automatic trend rule, which does not run this check before buying; it is down about 2%, so the exit costs little. The money stays in the plan's cash for the next coin that passes the check. STONK also showed a 4-wallet group (4.2%), but those wallets were funded by a Binance hot wallet, which is normal for coins traded on exchanges, so it stays. SPX is clean.",
+   "kind": "decisión",
+   "id": "equilibrado-2026-10-29-01"
+  },
+  {
    "ts": 1793232594.2040415,
    "title": "Execution",
    "text": "sell DEW9dS: sold 100% of SI (lost its trend (below 20-day average)) for 0.5752 SOL — position closed\nbuy USDC: bought 57 USDC for 0.5650 SOL at $1.01002 (slippage +1.1%)\nsell EPjFWd: sold 77% of USDC (fund trend position) for 1.4189 SOL\nbuy STONK: bought 253 STONK for 0.3828 SOL at $0.154625 (slippage +1.4%)\nbuy USELESS: bought 227 USELESS for 0.3813 SOL at $0.171854 (slippage +1.2%)\nbuy SPX: bought 58 SPX for 0.2375 SOL at $0.417845 (slippage +1.9%)",
@@ -708,8 +727,8 @@
   }
  ],
  "wins": 0,
- "n_closed": 1,
- "realized_usd": -3.27,
+ "n_closed": 2,
+ "realized_usd": -4.21,
  "plan": "equilibrado",
  "wallet": "8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82",
  "brain": {
