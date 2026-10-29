@@ -1,12 +1,12 @@
 {
  "mode": "live",
- "last_run": 1793243285.1055355,
+ "last_run": 1793243954.5922744,
  "regime": "neutral",
  "profile": "aggressive",
  "status": "ok",
  "last_action": {
-  "ts": 1793241123.7130203,
-  "title": "Cerebro automático: ajuste de stops",
+  "ts": 1793243954.5945077,
+  "title": "Cerebro automático: compra",
   "orders": 1,
   "mode": "live"
  },
@@ -20,6 +20,11 @@
    "day": "2026-10-28",
    "sym": "SI",
    "ts": 1793215563.4485838
+  },
+  {
+   "day": "2026-10-29",
+   "sym": "DOPE",
+   "ts": 1793243954.5945077
   }
  ],
  "_noted_no_cands": 1793243285.1055489,

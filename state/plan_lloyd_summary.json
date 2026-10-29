@@ -1,16 +1,16 @@
 {
- "now": 1793243685.5635183,
+ "now": 1793243998.4149356,
  "start_ts": 1793203599.7169404,
  "start_usd": 602.95,
  "start_sol": 5.9708,
  "goal_usd": 1205.9,
  "days": 365,
  "day": 1,
- "equity_usd": 571.32,
- "equity_sol": 5.7306,
- "cash_sol": 0.1416,
- "positions_usd": 557.2,
- "sol_usd": 99.7,
+ "equity_usd": 571.5,
+ "equity_sol": 5.729,
+ "cash_sol": 0.0762,
+ "positions_usd": 563.89,
+ "sol_usd": 99.76,
  "mult": 0.948,
  "halt": false,
  "pause": false,
@@ -41,21 +41,21 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.010765494535742555,
+   "last_usd": 0.010861247331340421,
    "sleeve": "picks",
    "from_plan": "agresivo",
-   "mult": 1.433,
-   "value_usd": 95.08
+   "mult": 1.446,
+   "value_usd": 95.92
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
    "symbol": "USDC",
    "opened_ts": 1793204947.898395,
    "entry_usd": 1.0083260823242841,
-   "tokens": 403.115509,
+   "tokens": 399.656392,
    "tokens_initial": 549.0662669999999,
    "sol_in": 5.47924614,
-   "sol_out": 1.418855868,
+   "sol_out": 1.453846492,
    "peak_usd": 1.0075943560922527,
    "stop": 0.05,
    "trail": 0.5,
@@ -64,11 +64,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994652059101063,
+   "last_usd": 0.9994747766629684,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 402.9
+   "value_usd": 399.45
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -92,11 +92,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14386739358042988,
+   "last_usd": 0.14291850681077942,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.93,
-   "value_usd": 36.45
+   "mult": 0.924,
+   "value_usd": 36.21
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -120,11 +120,42 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.39160761318054144,
+   "last_usd": 0.3924097353044908,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.937,
-   "value_usd": 22.78
+   "mult": 0.939,
+   "value_usd": 22.82
+  },
+  {
+   "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+   "symbol": "DOPE",
+   "opened_ts": 1793243967.0217607,
+   "entry_usd": 0.0020422637836622114,
+   "tokens": 4903.463974,
+   "tokens_initial": 4903.463974,
+   "sol_in": 0.10038678,
+   "sol_out": 0.0,
+   "peak_usd": 0.0020422637836622114,
+   "stop": 0.35,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
+   "id": "auto-lloyd-20261029-0319",
+   "sleeve": "picks",
+   "last_usd": 0.0019362796507048315,
+   "mult": 0.948,
+   "value_usd": 9.49
   }
  ],
  "equity": [
@@ -671,6 +702,10 @@
   [
    1793243624,
    568.29
+  ],
+  [
+   1793243931,
+   571.16
   ]
  ],
  "closed": [
@@ -774,6 +809,34 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793243967.0211153,
+   "side": "buy",
+   "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+   "symbol": "DOPE",
+   "ok": true,
+   "sol": 0.10038678,
+   "tokens": 4903.463974,
+   "price_usd": 0.002042263784,
+   "slip": 5.74,
+   "sig": "vEGyVqj8VYjdLLbhv8dDChEJ3QWfBexDm8W81ZUgBAJh2qdN9KGaUqe4xSkgTPUrAD7quSPUi35C4LPATFfedgt",
+   "error": "",
+   "id": "auto-lloyd-20261029-0319"
+  },
+  {
+   "ts": 1793243964.7156188,
+   "side": "sell",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.034990624,
+   "tokens": 3.459116999999992,
+   "price_usd": 1.009077997043,
+   "why": "treasury: fund buys",
+   "sig": "31zLNh6AfX27rjDoPGtww2tbxhqH3Jx2CiTykB7XeBHRCwVwxczEqD4NYXtJkDxQQQJbw84NcRoq9ETin59R4iyb",
+   "error": "",
+   "id": "auto-lloyd-20261029-0319"
+  },
   {
    "ts": 1793238981.590484,
    "side": "buy",
@@ -1121,6 +1184,20 @@
  ],
  "journal": [
   {
+   "ts": 1793243967.0232437,
+   "title": "Execution",
+   "text": "sell EPjFWd: sold 1% of USDC (treasury: fund buys) for 0.0350 SOL\nbuy DOPE: bought 4,903 DOPE for 0.1004 SOL at $0.00204226 (slippage +5.7%)",
+   "kind": "execution",
+   "id": "auto-lloyd-20261029-0319"
+  },
+  {
+   "ts": 1793243967.0230913,
+   "title": "Automatic brain: new position",
+   "text": "[Picks] Idle cash: 0.192 SOL (17% of the plan). Putting it to work in DOPE.\n\n[Picks] DOPE: $1.9M market cap, $197K liquidity, 24h volume 0.4x its value, 9010 holders, top 10 hold 19%; 24h -19%, at 61% of its 3-day high. Anti-rug: clean (common-funder groups 0%). Against: bundlers 0%, creator launched many tokens (half size); a 30–35% stop can fill lower in a fast drop.",
+   "kind": "decisión",
+   "id": "auto-lloyd-20261029-0319"
+  },
+  {
    "ts": 1793242700.107612,
    "title": "Automatic brain: status",
    "text": "[Majors] Still in USDC on purpose. Versus their 20-day averages: SOL -4.6%, BTC -2.4%, ETH -4.4%, JUP -13.5%. The plan buys each asset the hour it closes 1% above its average; until then, cash is the position. Checked every hour.",
@@ -1394,13 +1471,13 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793243285.1068368,
+  "last_run": 1793243954.5967548,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
-   "ts": 1793238967.816385,
-   "title": "Automatic brain: rebalance",
-   "orders": 1,
+   "ts": 1793243954.599274,
+   "title": "Automatic brain: new position",
+   "orders": 2,
    "mode": "live"
   },
   "last_note": {

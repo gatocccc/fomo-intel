@@ -1,17 +1,17 @@
 {
- "now": 1793243699.8884401,
+ "now": 1793243976.4620843,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 130.66,
- "equity_sol": 1.3101,
- "cash_sol": 0.3935,
- "positions_usd": 91.42,
- "sol_usd": 99.73,
- "mult": 1.319,
+ "equity_usd": 131.11,
+ "equity_sol": 1.3143,
+ "cash_sol": 0.2168,
+ "positions_usd": 109.49,
+ "sol_usd": 99.76,
+ "mult": 1.323,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.010544867441976597,
-   "mult": 2.178,
-   "value_usd": 78.07
+   "last_usd": 0.010641277339808687,
+   "mult": 2.198,
+   "value_usd": 78.78
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -71,9 +71,40 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.01192190332431123,
-   "mult": 0.796,
-   "value_usd": 13.35
+   "last_usd": 0.012213387426365886,
+   "mult": 0.815,
+   "value_usd": 13.68
+  },
+  {
+   "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+   "symbol": "DOPE",
+   "opened_ts": 1793243960.9328206,
+   "entry_usd": 0.0020041631329595507,
+   "tokens": 8793.44195,
+   "tokens_initial": 8793.44195,
+   "sol_in": 0.17666628,
+   "sol_out": 0.0,
+   "peak_usd": 0.0020041631329595507,
+   "stop": 0.35,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
+   "id": "auto-mesa-20261029-0319",
+   "sleeve": null,
+   "last_usd": 0.0019362796507048315,
+   "mult": 0.966,
+   "value_usd": 17.03
   }
  ],
  "equity": [
@@ -1800,6 +1831,10 @@
   [
    1793243608,
    130.29
+  ],
+  [
+   1793243913,
+   131.26
   ]
  ],
  "closed": [
@@ -1857,6 +1892,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793243960.932432,
+   "side": "buy",
+   "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+   "symbol": "DOPE",
+   "ok": true,
+   "sol": 0.17666628,
+   "tokens": 8793.44195,
+   "price_usd": 0.002004163133,
+   "slip": 3.76,
+   "sig": "5SRA6zu633w2HYsi2DtTCnaptv3r6nftiy89V4maCAVSWupi37mBTY9yFLGMk1gnYbxvgSehW3nyXBdfSYdcvj9N",
+   "error": "",
+   "id": "auto-mesa-20261029-0319"
+  },
   {
    "ts": 1793239141.374784,
    "side": "sell",
@@ -1999,6 +2048,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793243960.9344718,
+   "title": "Ejecución",
+   "text": "buy DOPE: compró 8,793 DOPE por 0.1767 SOL a US$0.00200416 (slippage +3.8%)",
+   "kind": "ejecución",
+   "id": "auto-mesa-20261029-0319"
+  },
+  {
+   "ts": 1793243960.934217,
+   "title": "Cerebro automático: compra",
+   "text": "Efectivo ocioso: 0.344 SOL (26% del patrimonio). Lo pongo a trabajar en DOPE.\n\nDOPE: US$1.9M, liquidez US$197K, volumen 24 h 0.4x su valor, 9010 holders, top 10 19%; 24 h -19%, 61% del máximo de 3 días. Anti-rug LIMPIO (grupos con fondeador común 0%). En contra: bundlers 0%, creador con muchos lanzamientos (tamaño a la mitad); un stop de 30–35% puede ejecutarse más abajo en una caída rápida.",
+   "kind": "decisión",
+   "id": "auto-mesa-20261029-0319"
+  },
   {
    "ts": 1793243287.9518375,
    "title": "Cerebro automático: estado",
@@ -2231,12 +2294,12 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793243285.1055355,
+  "last_run": 1793243954.5922744,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
-   "ts": 1793241123.7130203,
-   "title": "Cerebro automático: ajuste de stops",
+   "ts": 1793243954.5945077,
+   "title": "Cerebro automático: compra",
    "orders": 1,
    "mode": "live"
   },

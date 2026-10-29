@@ -25,7 +25,7 @@
   "tp_done": [],
   "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
   "id": "agresivo-2026-10-28-01",
-  "last_usd": 0.010621879224843136,
+  "last_usd": 0.010727949305404058,
   "sleeve": "picks",
   "from_plan": "agresivo"
  },
@@ -34,10 +34,10 @@
   "symbol": "USDC",
   "opened_ts": 1793204947.898395,
   "entry_usd": 1.0083260823242841,
-  "tokens": 403.115509,
+  "tokens": 399.656392,
   "tokens_initial": 549.0662669999999,
   "sol_in": 5.47924614,
-  "sol_out": 1.418855868,
+  "sol_out": 1.453846492,
   "peak_usd": 1.0075943560922527,
   "stop": 0.05,
   "trail": 0.5,
@@ -46,7 +46,7 @@
   "tp_done": [],
   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
   "id": "equilibrado-2026-10-28-01",
-  "last_usd": 0.9994761517537668,
+  "last_usd": 0.9994559119502548,
   "sleeve": "cash",
   "from_plan": "equilibrado"
  },
@@ -72,7 +72,7 @@
   "tp_done": [],
   "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.14350340954221974,
+  "last_usd": 0.14274495765745032,
   "sleeve": "established",
   "from_plan": "equilibrado"
  },
@@ -98,8 +98,36 @@
   "tp_done": [],
   "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.39150951905587345,
+  "last_usd": 0.39146277024909365,
   "sleeve": "established",
   "from_plan": "equilibrado"
+ },
+ "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump": {
+  "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+  "symbol": "DOPE",
+  "opened_ts": 1793243967.0217607,
+  "entry_usd": 0.0020422637836622114,
+  "tokens": 4903.463974,
+  "tokens_initial": 4903.463974,
+  "sol_in": 0.10038678,
+  "sol_out": 0.0,
+  "peak_usd": 0.0020422637836622114,
+  "stop": 0.35,
+  "trail": 0.35,
+  "trail_after": 1.6,
+  "tp": [
+   [
+    3,
+    0.25
+   ],
+   [
+    6,
+    0.25
+   ]
+  ],
+  "tp_done": [],
+  "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
+  "id": "auto-lloyd-20261029-0319",
+  "sleeve": "picks"
  }
 }
