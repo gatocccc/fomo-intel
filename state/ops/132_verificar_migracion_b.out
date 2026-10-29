@@ -1,0 +1,21 @@
+== 132_verificar_migracion_b 2026-10-29T02:08:03Z ==
+lloyd SOL 0.09072
+    J3NKxxXZcn 58.16224545
+    4kjruqGHDs 8831.632745155
+    EPjFWdd5Au 208.44025
+    6GmAFSYs4g 0.07610295
+equilibrado SOL 0.00301
+    6GmAFSYs4g 253.347503727
+tradicional SOL 0.05564
+    EPjFWdd5Au 194.675259
+equilibrado EPjFWdd5Au 122.683344 4VpJdifu3dsXCx → finalized None
+equilibrado J3NKxxXZcn 58.16224545 2tUFF7GJZYfoaR → finalized None
+equilibrado 6GmAFSYs4g 253.347503727 avyKvNEbFhuHv4 → None None
+equilibrado DEW9dSN6Qp 1e-06 2PChoMNDLXzitG → finalized None
+equilibrado SOL 0.062085147 2rtSEdYdGx6gJE → finalized None
+tradicional EPjFWdd5Au 194.675259 2rXNWhYvBwHPa7 → None None
+tradicional SOL 0.052639168 ZCuYPuzsPFNxKQ → None None
+positions.json: {'4kjruqGH': ('GTA6', 'picks', 8831.633), 'EPjFWdd5': ('USDC', 'cash', 403.116), '6GmAFSYs': ('STONK', 'established', 253.348), 'J3NKxxXZ': ('SPX', 'established', 58.162)}
+summary: [('GTA6', 8831.632745155), ('USDC', 403.115509), ('STONK', 253.347503727), ('SPX', 58.16224545)]
+Oct 29 01:56:03 simplai-prod systemd[1]: Started fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+== exit 0 ==

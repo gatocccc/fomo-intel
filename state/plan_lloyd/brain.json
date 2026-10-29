@@ -1,6 +1,6 @@
 {
  "mode": "live",
- "last_run": 1793238965.239488,
+ "last_run": 1793239563.610682,
  "regime": "neutral",
  "profile": "book",
  "_noted_no_cands": 1793238965.2395556,
@@ -13,5 +13,10 @@
   "title": "Automatic brain: rebalance",
   "orders": 1,
   "mode": "live"
+ },
+ "_noted_book": 1793239563.6115077,
+ "last_note": {
+  "ts": 1793239563.6115115,
+  "text": "Market is neutral. Pockets: Cash 70% (target 30%), Majors 0% (target 25%), Established memes 10% (target 25%), Picks 18% (target 20%). Nothing to change this hour: every open position is inside its rules and no new candidate passed the filters."
  }
 }
