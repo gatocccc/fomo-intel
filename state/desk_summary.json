@@ -1,17 +1,17 @@
 {
- "now": 1793237394.495024,
+ "now": 1793237700.6151528,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 132.66,
- "equity_sol": 1.3083,
+ "equity_usd": 135.53,
+ "equity_sol": 1.3396,
  "cash_sol": 0.2046,
- "positions_usd": 111.92,
- "sol_usd": 101.4,
- "mult": 1.339,
+ "positions_usd": 114.83,
+ "sol_usd": 101.18,
+ "mult": 1.368,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,8 +24,8 @@
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
    "sol_out": 0.0,
-   "peak_usd": 0.010267216428971205,
-   "stop": -0.591,
+   "peak_usd": 0.010807032045156406,
+   "stop": -0.636,
    "trail": 0.35,
    "trail_after": 1.6,
    "tp": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.010234689449228,
-   "mult": 2.114,
-   "value_usd": 75.77
+   "last_usd": 0.010807032045156406,
+   "mult": 2.232,
+   "value_usd": 80.01
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.0031874627797303296,
-   "mult": 0.781,
-   "value_usd": 21.15
+   "last_usd": 0.0030260679493056847,
+   "mult": 0.742,
+   "value_usd": 20.08
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.013387191784654032,
-   "mult": 0.894,
-   "value_usd": 14.99
+   "last_usd": 0.013163109355612603,
+   "mult": 0.879,
+   "value_usd": 14.74
   }
  ],
  "equity": [
@@ -1738,6 +1738,10 @@
   [
    1793237302,
    131.28
+  ],
+  [
+   1793237608,
+   131.9
   ]
  ],
  "closed": [
@@ -1910,6 +1914,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793237654.488434,
+   "title": "Ejecución",
+   "text": "set 4kjruq: ajustó GTA6: stop=-0.636",
+   "kind": "ejecución",
+   "id": "auto-mesa-20261029-0134"
+  },
+  {
+   "ts": 1793237654.4881575,
+   "title": "Cerebro automático: ajuste de stops",
+   "text": "GTA6: llegó a 2.18x de pico; subo el stop a 1.64x (antes 1.59x).",
+   "kind": "decisión",
+   "id": "auto-mesa-20261029-0134"
+  },
   {
    "ts": 1793231956.3447344,
    "title": "Ejecución",
@@ -2086,18 +2104,18 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793236983.4841802,
+  "last_run": 1793237642.1929991,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
-   "ts": 1793231944.0720458,
+   "ts": 1793237642.1936479,
    "title": "Cerebro automático: ajuste de stops",
    "orders": 1,
    "mode": "live"
   },
   "last_note": null,
   "trad_status": null,
-  "sol_ch24h": -0.1,
-  "sol_vs_ma20": -0.0317
+  "sol_ch24h": -0.3,
+  "sol_vs_ma20": -0.0342
  }
 }

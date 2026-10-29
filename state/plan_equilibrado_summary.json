@@ -1,17 +1,17 @@
 {
- "now": 1793237397.1935518,
+ "now": 1793237703.4971414,
  "start_ts": 1793203690.827375,
  "start_usd": 200.16,
  "start_sol": 1.981514,
  "goal_usd": 400.32,
  "days": 30,
  "day": 1,
- "equity_usd": 190.48,
- "equity_sol": 1.8785,
+ "equity_usd": 190.23,
+ "equity_sol": 1.8802,
  "cash_sol": 0.0681,
- "positions_usd": 183.57,
- "sol_usd": 101.4,
- "mult": 0.952,
+ "positions_usd": 183.34,
+ "sol_usd": 101.18,
+ "mult": 0.95,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,7 +32,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994516282320347,
+   "last_usd": 0.9994912962382893,
    "mult": 0.991,
    "value_usd": 122.62
   },
@@ -58,9 +58,9 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.1482398809953675,
-   "mult": 0.959,
-   "value_usd": 37.56
+   "last_usd": 0.1480742398688197,
+   "mult": 0.958,
+   "value_usd": 37.51
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -84,9 +84,9 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.4023486383266173,
-   "mult": 0.963,
-   "value_usd": 23.4
+   "last_usd": 0.3990287778539079,
+   "mult": 0.955,
+   "value_usd": 23.21
   }
  ],
  "equity": [
@@ -545,6 +545,10 @@
   [
    1793237305,
    190.35
+  ],
+  [
+   1793237611,
+   190.27
   ]
  ],
  "closed": [
@@ -789,7 +793,7 @@
  "wallet": "8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82",
  "brain": {
   "mode": "live",
-  "last_run": 1793236983.4863985,
+  "last_run": 1793237642.1956365,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
@@ -800,7 +804,7 @@
   },
   "last_note": null,
   "trad_status": "5 of 18 established memecoins above their 20-day average (best: STONK +13%, USELESS +2%, SPX +11%)",
-  "sol_ch24h": -0.1,
-  "sol_vs_ma20": -0.0317
+  "sol_ch24h": -0.3,
+  "sol_vs_ma20": -0.0342
  }
 }
