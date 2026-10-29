@@ -1,6 +1,3 @@
-Oct 29 18:56:00 simplai-prod python3[1623361]: 2026-10-29 18:56:00,612 INFO live.helius: HELIUS 4vw54B buy 7pHNy1oT 0.0350 SOL @ 1.075e-07 (lat 0.9s)
-Oct 29 18:56:31 simplai-prod python3[1623361]: 2026-10-29 18:56:31,580 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 7pHNy1oT 3.629 SOL
-Oct 29 18:56:32 simplai-prod python3[1623361]: 2026-10-29 18:56:32,462 INFO live.helius: HELIUS 4vw54B sell 7pHNy1oT 3.5429 SOL @ 7.059e-08 (lat 0.9s)
 Oct 29 18:58:22 simplai-prod python3[1623361]: 2026-10-29 18:58:22,380 INFO live: latido: stream=True tokens_vistos=10054 seguidos=91 candidatos=0 abiertas=0 cerradas=1 st_requests=201 SOL=$101
 Oct 29 18:58:39 simplai-prod python3[1623361]: 2026-10-29 18:58:39,924 INFO live.helius: HELIUS 4vw54B buy GxcvasG1 5.0115 SOL @ 2.134e-07 (lat 0.9s)
 Oct 29 18:58:55 simplai-prod python3[1623361]: 2026-10-29 18:58:55,985 INFO live.helius: HELIUS 4vw54B buy GxcvasG1 0.0350 SOL @ 2.720e-07 (lat 0.9s)
@@ -298,3 +295,6 @@ Oct 29 21:53:39 simplai-prod python3[1623361]: 2026-10-29 21:53:39,656 INFO live
 Oct 29 21:55:01 simplai-prod python3[1623361]: 2026-10-29 21:55:01,212 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 8J5k1MLw 130.087 SOL
 Oct 29 21:58:40 simplai-prod python3[1623361]: 2026-10-29 21:58:40,378 INFO live: latido: stream=True tokens_vistos=12841 seguidos=97 candidatos=0 abiertas=0 cerradas=1 st_requests=236 SOL=$97
 Oct 29 22:03:41 simplai-prod python3[1623361]: 2026-10-29 22:03:41,115 INFO live: latido: stream=True tokens_vistos=12915 seguidos=97 candidatos=0 abiertas=0 cerradas=1 st_requests=237 SOL=$97
+Oct 29 22:08:41 simplai-prod python3[1623361]: 2026-10-29 22:08:41,170 INFO live: latido: stream=True tokens_vistos=12974 seguidos=85 candidatos=0 abiertas=0 cerradas=1 st_requests=238 SOL=$97
+Oct 29 22:08:41 simplai-prod python3[1623361]: 2026-10-29 22:08:41,350 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 27pxQPyM 0.025 SOL
+Oct 29 22:08:41 simplai-prod python3[1623361]: 2026-10-29 22:08:41,350 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 83v8iPyZ 13840652472.863 SOL
