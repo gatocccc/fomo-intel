@@ -1,14 +1,14 @@
 {
- "ts": 1793252283.9802926,
+ "ts": 1793252885.354409,
  "regime": {
   "state": "risk_off",
-  "ts": 1793251685.232266,
+  "ts": 1793252885.347352,
   "since": 1793248084.8662407,
-  "sol": 100.55,
+  "sol": 100.54,
   "sol_ma20": 104.89,
   "sol_ch4h": 0.7,
   "sol_ch24h": -1.2,
-  "btc_vs_ma20": -0.0191,
+  "btc_vs_ma20": -0.0195,
   "breadth_above": 2,
   "breadth_total": 18,
   "label": "defensive"
@@ -24,8 +24,8 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 399.44,
-   "pct": 68.1,
+   "value_usd": 399.43,
+   "pct": 67.4,
    "positions": 0
   },
   {
@@ -40,19 +40,19 @@
    "key": "established",
    "name": "Established memes",
    "target_pct": 10,
-   "value_usd": 59.66,
-   "pct": 10.2,
+   "value_usd": 59.54,
+   "pct": 10.0,
    "positions": 2
   },
   {
    "key": "picks",
    "name": "Picks",
    "target_pct": 20,
-   "value_usd": 119.45,
-   "pct": 20.4,
+   "value_usd": 126.21,
+   "pct": 21.3,
    "positions": 2
   }
  ],
- "liquid_usd": 399.44,
+ "liquid_usd": 399.43,
  "trad_status": "SOL -4.1%, BTC -1.8%, ETH -3.7%, JUP -12.5%"
 }

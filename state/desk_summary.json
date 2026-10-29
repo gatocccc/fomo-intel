@@ -1,17 +1,17 @@
 {
- "now": 1793252678.3384109,
+ "now": 1793252984.5151966,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 145.96,
- "equity_sol": 1.4526,
+ "equity_usd": 150.05,
+ "equity_sol": 1.4928,
  "cash_sol": 0.2168,
- "positions_usd": 124.17,
- "sol_usd": 100.48,
- "mult": 1.473,
+ "positions_usd": 128.26,
+ "sol_usd": 100.52,
+ "mult": 1.514,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,8 +24,8 @@
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
    "sol_out": 0.0,
-   "peak_usd": 0.012908489548756112,
-   "stop": -1.0,
+   "peak_usd": 0.013420775420966764,
+   "stop": -1.047,
    "trail": 0.35,
    "trail_after": 1.6,
    "tp": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.012591806545952298,
-   "mult": 2.601,
-   "value_usd": 93.22
+   "last_usd": 0.01316283333487679,
+   "mult": 2.719,
+   "value_usd": 97.45
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.012379758492228034,
-   "mult": 0.827,
-   "value_usd": 13.86
+   "last_usd": 0.012368998033674392,
+   "mult": 0.826,
+   "value_usd": 13.85
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -102,9 +102,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.0019432805949878955,
-   "mult": 0.97,
-   "value_usd": 17.09
+   "last_usd": 0.0019284833372879497,
+   "mult": 0.962,
+   "value_usd": 16.96
   }
  ],
  "equity": [
@@ -1947,6 +1947,10 @@
   [
    1793252494,
    145.01
+  ],
+  [
+   1793252800,
+   149.5
   ]
  ],
  "closed": [
@@ -2160,6 +2164,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793252892.281507,
+   "title": "Ejecución",
+   "text": "set 4kjruq: ajustó GTA6: stop=-1.047",
+   "kind": "ejecución",
+   "id": "auto-mesa-20261029-0548"
+  },
+  {
+   "ts": 1793252892.2814503,
+   "title": "Cerebro automático: ajuste de stops",
+   "text": "GTA6: llegó a 2.73x de pico; subo el stop a 2.05x (antes 2.00x).",
+   "kind": "decisión",
+   "id": "auto-mesa-20261029-0548"
+  },
   {
    "ts": 1793251697.7581992,
    "title": "Ejecución",
@@ -2434,11 +2452,11 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793252283.9781866,
+  "last_run": 1793252885.3490028,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
-   "ts": 1793251685.2355607,
+   "ts": 1793252885.3506184,
    "title": "Cerebro automático: ajuste de stops",
    "orders": 1,
    "mode": "live"
@@ -2449,6 +2467,6 @@
   },
   "trad_status": null,
   "sol_ch24h": -1.2,
-  "sol_vs_ma20": -0.0414
+  "sol_vs_ma20": -0.0415
  }
 }
