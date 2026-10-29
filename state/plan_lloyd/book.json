@@ -1,13 +1,13 @@
 {
- "ts": 1793257083.9838333,
+ "ts": 1793257685.121372,
  "regime": {
   "state": "risk_off",
-  "ts": 1793256485.1109538,
+  "ts": 1793257685.114905,
   "since": 1793248084.8662407,
-  "sol": 99.93,
+  "sol": 99.95,
   "sol_ma20": 104.89,
-  "sol_ch4h": -0.1,
-  "sol_ch24h": -2.0,
+  "sol_ch4h": 0.3,
+  "sol_ch24h": -2.3,
   "btc_vs_ma20": -0.0244,
   "breadth_above": 2,
   "breadth_total": 18,
@@ -25,7 +25,7 @@
    "name": "Cash",
    "target_pct": 60,
    "value_usd": 399.44,
-   "pct": 67.9,
+   "pct": 68.0,
    "positions": 0
   },
   {
@@ -40,7 +40,7 @@
    "key": "established",
    "name": "Established memes",
    "target_pct": 10,
-   "value_usd": 58.04,
+   "value_usd": 57.99,
    "pct": 9.9,
    "positions": 2
   },
@@ -48,7 +48,7 @@
    "key": "picks",
    "name": "Picks",
    "target_pct": 20,
-   "value_usd": 123.0,
+   "value_usd": 122.77,
    "pct": 20.9,
    "positions": 2
   }
