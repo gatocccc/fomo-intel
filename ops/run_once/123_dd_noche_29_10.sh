@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /root/fomo_intel; set -a; . ./.env; set +a
+timeout 900 python3 -u -m fomo_intel.desk.dd 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP 2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw GF74fBfcaeLjUiUwKpRiUbvMQtTvNyzMoo6KNyyqNyk6 6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr
