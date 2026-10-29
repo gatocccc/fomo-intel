@@ -1,17 +1,17 @@
 {
- "now": 1793283596.3084495,
+ "now": 1793283874.4974244,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 1,
- "equity_usd": 606.9,
- "equity_sol": 6.0209,
+ "equity_usd": 603.48,
+ "equity_sol": 5.9915,
  "cash_sol": 0.5697,
- "positions_usd": 549.48,
- "sol_usd": 100.8,
- "mult": 1.108,
+ "positions_usd": 546.1,
+ "sol_usd": 100.72,
+ "mult": 1.102,
  "halt": false,
  "pause": false,
  "positions": [
@@ -43,11 +43,11 @@
    ],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.022607893649910796,
+   "last_usd": 0.021890966387086472,
    "sleeve": "picks",
    "from_plan": "agresivo",
-   "mult": 3.009,
-   "value_usd": 99.83
+   "mult": 2.914,
+   "value_usd": 96.67
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
@@ -66,7 +66,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9995198396068273,
+   "last_usd": 0.999498893874856,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
@@ -94,11 +94,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14457501852061322,
+   "last_usd": 0.14448611033276249,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.935,
-   "value_usd": 36.63
+   "mult": 0.934,
+   "value_usd": 36.61
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -122,11 +122,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3949409751669151,
+   "last_usd": 0.3952139042927451,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.945,
-   "value_usd": 22.97
+   "mult": 0.946,
+   "value_usd": 22.99
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -155,9 +155,9 @@
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-lloyd-20261029-0319",
    "sleeve": "picks",
-   "last_usd": 0.002062089108685235,
-   "mult": 1.01,
-   "value_usd": 10.11
+   "last_usd": 0.002021986077784437,
+   "mult": 0.99,
+   "value_usd": 9.91
   }
  ],
  "equity": [
@@ -1228,6 +1228,10 @@
   [
    1793283565,
    605.68
+  ],
+  [
+   1793283874,
+   603.48
   ]
  ],
  "closed": [
