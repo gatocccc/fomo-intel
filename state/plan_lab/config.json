@@ -1,0 +1,13 @@
+{
+ "start_ts": 1793271309.0330577,
+ "start_usd": 55.36,
+ "start_sol": 0.55,
+ "goal_mult": 2,
+ "days": 30,
+ "floor_usd": 22.14,
+ "reserve_sol": 0.03,
+ "max_slippage_pct": 8.0,
+ "swap_slippage_pct": 12.0,
+ "priority_fee_sol": 0.001,
+ "plan": "lab"
+}

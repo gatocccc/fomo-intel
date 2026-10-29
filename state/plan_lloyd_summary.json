@@ -1,17 +1,17 @@
 {
- "now": 1793271340.1908066,
+ "now": 1793271589.0313625,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 1,
- "equity_usd": 553.69,
- "equity_sol": 5.501,
+ "equity_usd": 551.71,
+ "equity_sol": 5.4931,
  "cash_sol": 0.3404,
- "positions_usd": 519.43,
- "sol_usd": 100.65,
- "mult": 1.011,
+ "positions_usd": 517.52,
+ "sol_usd": 100.44,
+ "mult": 1.008,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,11 +41,11 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.015143758872799961,
+   "last_usd": 0.014917711366881376,
    "sleeve": "picks",
    "from_plan": "agresivo",
-   "mult": 2.016,
-   "value_usd": 133.74
+   "mult": 1.986,
+   "value_usd": 131.75
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
@@ -64,7 +64,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994780444830385,
+   "last_usd": 0.9994909790168364,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
@@ -92,11 +92,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14282295039015358,
+   "last_usd": 0.14334389332696143,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.924,
-   "value_usd": 36.18
+   "mult": 0.927,
+   "value_usd": 36.32
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -120,11 +120,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3965388905303578,
+   "last_usd": 0.3956820664032139,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.949,
-   "value_usd": 23.06
+   "mult": 0.947,
+   "value_usd": 23.01
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
