@@ -270,7 +270,7 @@ function fill(u) {
   $("#auth").hidden = true; $("#dash").hidden = false; $("#logout").hidden = false;
   $("#hello").textContent = u.name ? `Hi, ${u.name.split(" ")[0]}` : "Your stool";
   const s = u.stool;
-  const st = !u.bot_wallet ? "On the waitlist" : !s || !s.started ? "Waiting for your deposit" : s.closed ? "Stopped, in cash" : s.halt ? "Stopped at the floor" : "Trading";
+  const st = !u.bot_wallet ? "On the waitlist" : !s || !s.started ? "Waiting for your deposit" : s.stopped ? "Stopped, in cash" : s.halt ? "Stopped at the floor" : "Trading";
   $("#d-status").textContent = st; $("#d-status").className = "badge" + (st === "Trading" ? " ok" : "");
   const holder = u.holder_status === "holder";
   $("#d-type").textContent = holder ? `Genesis holder · ${u.ducks} ${u.ducks == 1 ? "duck" : "ducks"}` : u.holder_status === "pending" ? "Holder check pending" : "Standard seat";
@@ -326,9 +326,9 @@ function fillMoney(u) {
   // journal
   $("#st-journal").innerHTML = ((s && s.journal) || []).slice(0, 5).map(j => `<li><time>${L.when(j.ts)}</time><b>${L.esc(j.title)}</b><p>${L.esc(j.text)}</p></li>`).join("") || `<li><p>${u.bot_wallet ? "Nothing yet. The first note appears when your deposit lands." : "Your stool's story starts when your seat opens."}</p></li>`;
   // actions
-  const can = !!u.bot_wallet && started && !s.closed && !s.halt;
+  const can = !!u.bot_wallet && started && !s.stopped && !s.halt;
   $("#act-stop").disabled = !can;
-  const stopped = !!u.bot_wallet && started && (s.closed || s.halt);
+  const stopped = !!u.bot_wallet && started && (s.stopped || s.halt);
   $("#act-stop").hidden = stopped; $("#act-stop").nextElementSibling.hidden = stopped; $("#act-resume").hidden = !stopped; $("#resume-p").hidden = !stopped; $("#act-wd").disabled = !(u.bot_wallet && s && (s.equity_usd || 0) > 1);
   $("#tip-amts").querySelectorAll("button").forEach(b => b.disabled = !(u.bot_wallet && s && (s.cash_sol || 0) > 0.06));
 }

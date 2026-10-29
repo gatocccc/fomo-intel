@@ -411,7 +411,7 @@ class Stool:
         if c.get("start_ts") and now - float(c.get("_last_eq") or 0) > 300:
             self.append("equity.jsonl", {"ts": now, "usd": round(eq, 2), "sol": round(eq / su, 4), "sol_usd": round(su, 2)}); c["_last_eq"] = now; self.save()
         s = {"now": now, "user_id": self.uid, "wallet": self.pub, "type": c.get("type"), "fee_pct": c.get("fee_pct"), "started": bool(c.get("start_ts")), "since": c.get("start_ts"),
-             "halt": bool(c.get("halt")), "closed": bool(c.get("closed")), "sol_usd": round(su, 2), "cash_sol": round(self.sol, 4),
+             "halt": bool(c.get("halt")), "stopped": bool(c.get("closed")), "sol_usd": round(su, 2), "cash_sol": round(self.sol, 4),
              "equity_usd": round(eq, 2), "deposited_usd": round(dep, 2), "withdrawn_usd": round(wd, 2), "pnl_usd": round(eq + wd + float(c.get("tipped_sol") or 0) * su - dep, 2) if dep else None,
              "pnl_pct": round((eq + wd + float(c.get("tipped_sol") or 0) * su) / dep - 1, 4) if dep else None, "fees_usd": round(float(c.get("fees_sol") or 0) * su, 2), "min_sol": MIN_SOL, "stray_usd": c.get("stray_usd") or 0,
              "positions": [{"token": p["symbol"], "mint": m, "sleeve": p.get("sleeve"), "multiple": round((p.get("last_usd") or p["entry_usd"]) / p["entry_usd"], 3) if p["entry_usd"] else None,
