@@ -270,9 +270,13 @@ def admin_seat(b: dict) -> tuple[int, dict]:
             c.execute("UPDATE users SET status='seated' WHERE id=?", (uid,))
         elif action == "unseat":
             c.execute("UPDATE users SET status='waitlist' WHERE id=?", (uid,))
+        elif action == "holder":      # marcado a mano (p. ej. patos de las colecciones viejas mientras Genesis no está minteada)
+            c.execute("UPDATE users SET holder_status='holder', ducks=COALESCE(NULLIF(ducks,0),1) WHERE id=?", (uid,))
+        elif action == "standard":
+            c.execute("UPDATE users SET holder_status='none', ducks=0 WHERE id=?", (uid,))
         else:
-            return 400, {"error": "seat or unseat"}
-    return 200, {"ok": True, "status": "seated" if action == "seat" else "waitlist"}
+            return 400, {"error": "seat, unseat, holder or standard"}
+    return 200, {"ok": True, "action": action}
 
 
 # ---------- holders (firma de Ethereum) ----------

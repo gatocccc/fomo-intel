@@ -184,14 +184,15 @@ function loadSummary() {
     h("ap", (d.detail || []).map(a => {
       const t = a.holder_status === "holder" ? `<span class="tag h">holder · ${esc(a.ducks)}</span>` : a.holder_status === "pending" ? `<span class="tag">holder pending</span>` : `<span class="tag">standard</span>`;
       const rule = a.profit_rule ? (RULE[a.profit_rule] || a.profit_rule) + (a.profit_rule === "lock" && a.profit_mult ? ` ${fx(a.profit_mult).replace(".00", "")}` : "") : "—";
-      return `<tr><td>${a.created ? new Date(a.created * 1000).toLocaleString("en-US") : "—"}</td><td>${esc(a.name)}</td><td>${esc(a.email)}</td><td>${t}</td><td class="n">${a.amount_usd ? usd(a.amount_usd) : "—"}</td><td>${a.risk_pct ? "−" + esc(a.risk_pct) + "%" : "—"}</td><td>${esc(rule)}</td><td>${a.bot_wallet ? `<code>${esc(String(a.bot_wallet).slice(0, 4) + "…" + String(a.bot_wallet).slice(-4))}</code>` : (a.sol_wallet ? "withdraw set" : "—")}</td><td>${esc(a.status)}</td><td>${a.status === "seated" || a.status === "closing" ? `<button class="mini" onclick="seat(${a.id},'unseat')">Unseat</button>` : `<button class="mini" onclick="seat(${a.id},'seat')">Give a seat</button>`}</td></tr>`;
+      return `<tr><td>${a.created ? new Date(a.created * 1000).toLocaleString("en-US") : "—"}</td><td>${esc(a.name)}</td><td>${esc(a.email)}</td><td>${t}</td><td class="n">${a.amount_usd ? usd(a.amount_usd) : "—"}</td><td>${a.risk_pct ? "−" + esc(a.risk_pct) + "%" : "—"}</td><td>${esc(rule)}</td><td>${a.bot_wallet ? `<code>${esc(String(a.bot_wallet).slice(0, 4) + "…" + String(a.bot_wallet).slice(-4))}</code>` : (a.sol_wallet ? "withdraw set" : "—")}</td><td>${esc(a.status)}</td><td style="white-space:nowrap">${a.status === "seated" || a.status === "closing" ? `<button class="mini" onclick="seat(${a.id},'unseat')">Unseat</button>` : `<button class="mini" onclick="seat(${a.id},'seat')">Give a seat</button>`} ${a.holder_status === "holder" ? `<button class="mini" style="background:var(--cream)" onclick="seat(${a.id},'standard')">Mark standard</button>` : `<button class="mini" style="background:var(--mint)" onclick="seat(${a.id},'holder')">Mark holder</button>`}</td></tr>`;
     }).join("") || `<tr><td colspan="10">No accounts yet.</td></tr>`);
     if (d.house_fee_wallet) k("k-fee", `${usd(d.fees_usd)} · house wallet ${d.house_fee_wallet.slice(0, 4)}…${d.house_fee_wallet.slice(-4)}`);
   }).catch(e => k("upd", `Could not load the summary (${e.message}).`));
 }
 
 async function seat(id, action) {
-  if (!confirm(action === "seat" ? "Give this user a stool? The mirror engine will create their wallet within a minute." : "Take the seat away? The engine stops following for them (money is not moved).")) return;
+  const msg = {seat: "Give this user a stool? The mirror engine will create their wallet within a minute.", unseat: "Take the seat away? The engine stops following for them (money is not moved).", holder: "Mark as a Nonco holder by hand (1% fee, nothing on profits)?", standard: "Mark as standard (1.5% + 15% of profits)?"}[action];
+  if (!confirm(msg)) return;
   try { await fetch("/api/admin/seat", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({id, action})}); loadSummary(); }
   catch (e) { alert(e.message); }
 }
