@@ -1,5 +1,5 @@
 {
- "ts": 1793113263.3747098,
+ "ts": 1793239500.453755,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -31,84 +31,59 @@
   }
  ],
  "rejections": {
-  "day": "2026-10-27",
-  "seen": 69,
+  "day": "2026-10-28",
+  "seen": 5,
   "bought": 0,
   "by_reason": {
-   "freno": 68,
-   "mcap_alto": 1
+   "freno": 5
   },
-  "note": "rechaza todo: revisar si el filtro est\u00e1 muy cerrado"
+  "note": ""
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 0.9833,
- "sol_usd": 100.61321104323449,
+ "wallet_sol": 0.3935,
+ "sol_usd": 99.8566733306972,
  "stream_connected": true,
- "stream_msgs": 25630,
- "tokens_seen": 24805,
- "tokens_tracked": 143,
+ "stream_msgs": 64,
+ "tokens_seen": 61,
+ "tokens_tracked": 61,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
  "factories": 0,
  "factory_pending": 0,
- "account_trades": 52,
+ "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 10136713,
-  "parsed": 763,
-  "skipped": 10132543,
-  "fast_creates": 7,
+  "notifications": 66168,
+  "parsed": 10,
+  "skipped": 66133,
+  "fast_creates": 0,
   "subs": 1,
-  "errors": [
-   "09:43:23 Connection to remote host was lost.",
-   "14:11:13 Connection to remote host was lost.",
-   "14:53:17 Connection to remote host was lost."
-  ]
+  "errors": []
  },
- "follow_buys_seen": 169,
+ "follow_buys_seen": 3,
  "guard": {
-  "alerts": [
-   "13:39:39 buy 5mAbrm3s fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
-   "13:45:29 buy 9PNK23MB fall\u00f3: tx fall\u00f3 en cadena: {'InstructionError': [3, {'Custom': 6063}]}",
-   "13:47:11 buy 78vqoxGG fall\u00f3: cotizaci\u00f3n: swap api 500: {\"error\":\"Failed to swap\"} | pumpportal: pumpportal 400: Bad Req",
-   "14:26:06 fuente de se\u00f1ales recuperada tras 2 s",
-   "08:34:03 fuente de se\u00f1ales recuperada tras 3 s",
-   "09:05:26 fuente de se\u00f1ales recuperada tras 2 s",
-   "09:38:43 fuente de se\u00f1ales recuperada tras 3 s",
-   "09:43:26 fuente de se\u00f1ales recuperada tras 2 s"
-  ],
+  "alerts": [],
   "bench": 1,
   "bench_by_reason": {
    "mcap_alto": 1
   },
   "source_down_s": 0,
-  "exec_fails_recent": 1
+  "exec_fails_recent": 0
  },
- "st_requests": 308,
- "stream_errors": [
-  "23:48:05 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Mon, 26 Oct 2026 23:48:05 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
-  "04:35:02 Connection to remote host was lost.",
-  "04:35:04 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Tue, 27 Oct 2026 04:35:04 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
-  "11:45:05 Connection to remote host was lost.",
-  "11:45:07 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Tue, 27 Oct 2026 11:45:07 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
- ],
+ "st_requests": 1,
+ "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
-  "otros": 14,
-  "create": 25390,
-  "sell": 102,
-  "buy": 124
+  "otros": 2,
+  "create": 62
  },
  "stream_samples": [
-  "{\"message\":\"Successfully subscribed to keys.\"}",
-  "{\"message\":\"Successfully subscribed to token creation events.\"}",
-  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 174,
- "stream_cost_sol_est": 0.0002,
+ "stream_trades": 0,
+ "stream_cost_sol_est": 0.0,
  "pumpportal_wallet_sol": 0.0999,
  "params": {
   "mode": "real",

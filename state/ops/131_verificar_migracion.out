@@ -1,0 +1,7 @@
+== 131_verificar_migracion 2026-10-29T02:02:03Z ==
+Traceback (most recent call last):
+  File "<stdin>", line 3, in <module>
+  File "<frozen os>", line 685, in __getitem__
+KeyError: 'SOLANA_RPC_URL'
+Oct 29 01:56:03 simplai-prod systemd[1]: Started fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+== exit 0 ==
