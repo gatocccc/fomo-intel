@@ -214,6 +214,32 @@ SEED = [
 REPO_LEDGER = Path(__file__).resolve().parents[2] / "research" / "ledger.json"   # versionado en el repo: lo editan las sesiones de investigación
 
 
+STATUS_PUBLIC = {"queued": "Up next", "testing": "Testing now", "watch": "Promising, collecting data", "adopted": "Learned, in use", "rejected": "Tested, discarded"}
+
+
+def lab_public() -> dict:
+    """Lo que Lloyd está aprendiendo: hipótesis, estado, conclusión y eficacia (para /lab/ y la landing), más la billetera de laboratorio."""
+    d = jl(REPO_LEDGER, None) or {}
+    out = []
+    for e in d.get("experiments", []):
+        st = e.get("verdict") or "queued"
+        out.append({"date": e.get("date"), "title": e.get("public_title") or e.get("name"), "hypothesis": e.get("hypothesis") or e.get("question"),
+                    "status": st, "status_label": STATUS_PUBLIC.get(st, st), "conclusion": e.get("efficacy") if st != "queued" else None,
+                    "pocket": e.get("sleeve"), "priority": e.get("priority")})
+    order = {"testing": 0, "watch": 1, "adopted": 2, "queued": 3, "rejected": 4}
+    out.sort(key=lambda x: (order.get(x["status"], 9), x.get("priority") or 99, "" if not x["date"] else "~" + x["date"]))
+    counts = {k: sum(1 for x in out if x["status"] == k) for k in order}
+    lab = jl(STATE / "plan_lab_summary.json") or {}
+    wallet = None
+    if lab.get("start_ts"):
+        wallet = {"wallet": lab.get("wallet"), "equity_usd": lab.get("equity_usd"), "start_usd": lab.get("start_usd"),
+                  "pnl_pct": round(lab["equity_usd"] / lab["start_usd"] - 1, 4) if lab.get("start_usd") else None,
+                  "since": lab.get("start_ts"), "live_tests": [{"token": p.get("symbol"), "multiple": p.get("mult"), "test": p.get("thesis")} for p in lab.get("positions") or [] if p.get("mint") not in STABLES]}
+    return {"experiments": out, "counts": counts, "total": len(out), "lab_wallet": wallet,
+            "lab_note": (d.get("lab") or {}).get("note"), "cadence": "New ideas are tested every Monday, Wednesday and Friday. Every Sunday, each rule in use is re-checked against the latest week.",
+            "updated": time.time()}
+
+
 def research() -> dict:
     d = jl(REPO_LEDGER, None) or jl(RESEARCH, None)
     if not d:

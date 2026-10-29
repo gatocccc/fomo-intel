@@ -33,7 +33,7 @@ from urllib.parse import parse_qs, urlparse
 
 import requests
 
-from fomo_intel.app.book import PROFIT_RULES, RISK_LEVELS, book_view, expect, research
+from fomo_intel.app.book import PROFIT_RULES, RISK_LEVELS, book_view, expect, lab_public, research
 from fomo_intel.app.semaforo import PLANS, semaforo
 
 STATE = Path(os.getenv("FOMO_STATE_DIR", "state"))
@@ -449,6 +449,8 @@ class H(BaseHTTPRequestHandler):
             if u.path == "/api/book":
                 b = book_view(full=True)
                 return self._send(200, b) if b else self._send(404, {"error": "The book is not open yet."})
+            if u.path == "/api/lab":
+                return self._send(200, lab_public())
             if u.path == "/api/expect":
                 return self._send(200, expect(int(q.get("risk", 35))))
             if u.path == "/api/admin/book":

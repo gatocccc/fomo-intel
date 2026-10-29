@@ -26,7 +26,7 @@ if [ -n "$REMOTE" ] && [ "$LOCAL" != "$REMOTE" ]; then
   fi
   if echo "$CHANGED" | grep -q '^fomo_intel/app/'; then systemctl restart fomo-app 2>/dev/null && echo "$(date -u +%FT%TZ) fomo-app reiniciado" >> logs/sync.log; fi
   if echo "$CHANGED" | grep -q '^fomo_intel/live/control_server.py'; then systemctl restart fomo-control 2>/dev/null || true; fi
-  if echo "$CHANGED" | grep -Eq '^fomo_intel/(desk/|live/executor.py|live/wallet.py|live/signals.py)'; then systemctl restart fomo-desk 2>/dev/null && echo "$(date -u +%FT%TZ) fomo-desk reiniciado" >> logs/sync.log; for p in lloyd agresivo equilibrado tradicional; do systemctl is-enabled -q fomo-desk@$p 2>/dev/null && systemctl restart fomo-desk@$p; done; systemctl is-enabled -q fomo-brain 2>/dev/null && systemctl restart fomo-brain; fi
+  if echo "$CHANGED" | grep -Eq '^fomo_intel/(desk/|live/executor.py|live/wallet.py|live/signals.py)'; then systemctl restart fomo-desk 2>/dev/null && echo "$(date -u +%FT%TZ) fomo-desk reiniciado" >> logs/sync.log; for p in lloyd lab agresivo equilibrado tradicional; do systemctl is-enabled -q fomo-desk@$p 2>/dev/null && systemctl restart fomo-desk@$p; done; systemctl is-enabled -q fomo-brain 2>/dev/null && systemctl restart fomo-brain; fi
 fi
 
 # ---- 2) mantenimiento: scripts de una sola vez ----
@@ -61,7 +61,7 @@ if [ ! -d "$STATE_WT/.git" ]; then
 fi
 rm -rf "$STATE_WT"/state "$STATE_WT"/logs; mkdir -p "$STATE_WT/state" "$STATE_WT/logs"
 cp state/*.json "$STATE_WT/state/" 2>/dev/null
-for p in lloyd agresivo equilibrado tradicional; do [ -d state/plan_$p ] && mkdir -p "$STATE_WT/state/plan_$p" && cp state/plan_$p/*.json* "$STATE_WT/state/plan_$p/" 2>/dev/null; done
+for p in lloyd lab agresivo equilibrado tradicional; do [ -d state/plan_$p ] && mkdir -p "$STATE_WT/state/plan_$p" && cp state/plan_$p/*.json* "$STATE_WT/state/plan_$p/" 2>/dev/null; done
 [ -f state/app/aplicaciones.jsonl ] && mkdir -p "$STATE_WT/state/app" && python3 -c "
 import json,sys
 for l in open('state/app/aplicaciones.jsonl'):
