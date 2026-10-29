@@ -1,17 +1,17 @@
 {
- "now": 1793308781.9267118,
+ "now": 1793309139.301827,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 552.47,
- "equity_sol": 5.6618,
- "cash_sol": 0.5087,
- "positions_usd": 502.83,
- "sol_usd": 97.58,
- "mult": 1.009,
+ "equity_usd": 551.51,
+ "equity_sol": 5.6599,
+ "cash_sol": 0.084,
+ "positions_usd": 543.32,
+ "sol_usd": 97.44,
+ "mult": 1.007,
  "halt": false,
  "pause": false,
  "positions": [
@@ -19,10 +19,10 @@
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
    "symbol": "USDC",
    "opened_ts": 1793204947.898395,
-   "entry_usd": 1.009327142690128,
-   "tokens": 446.397317,
-   "tokens_initial": 717.333543,
-   "sol_in": 7.164454398,
+   "entry_usd": 1.0093889857557417,
+   "tokens": 487.36792599999995,
+   "tokens_initial": 758.3041519999999,
+   "sol_in": 7.589148338,
    "sol_out": 2.657660148,
    "peak_usd": 1.0075943560922527,
    "stop": 0.05,
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 1.0010551052722991,
+   "last_usd": 0.9999910989054107,
    "sleeve": "cash",
    "from_plan": "equilibrado",
-   "mult": 0.992,
-   "value_usd": 446.87
+   "mult": 0.991,
+   "value_usd": 487.36
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -60,11 +60,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.13593195628980909,
+   "last_usd": 0.1354883684953468,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.879,
-   "value_usd": 34.44
+   "mult": 0.876,
+   "value_usd": 34.33
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -88,11 +88,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3701438883694685,
+   "last_usd": 0.3719766406638774,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.886,
-   "value_usd": 21.53
+   "mult": 0.89,
+   "value_usd": 21.63
   }
  ],
  "equity": [
@@ -1495,6 +1495,14 @@
   [
    1793308684,
    552.1
+  ],
+  [
+   1793308996,
+   551.94
+  ],
+  [
+   1793309044,
+   552.1
   ]
  ],
  "closed": [
@@ -1641,6 +1649,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793309062.662934,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.42469394,
+   "tokens": 40.97060899999997,
+   "price_usd": 1.010062799966,
+   "slip": 1.0,
+   "sig": "2Kxr8PvKx2rDnwwtGCu1iwS4gJLpgorV582Z2gaxs4KmdMkCD7WHpq2P4zot3aa6yZzemSFaYR3EaM4fiDRq1jam",
+   "error": "",
+   "id": "auto-lloyd-20261029-2124"
+  },
   {
    "ts": 1793308690.0801644,
    "side": "sell",
@@ -2183,6 +2205,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793309062.6654112,
+   "title": "Execution",
+   "text": "buy USDC: bought 41 USDC for 0.4247 SOL at $1.01006 (slippage +1.0%)",
+   "kind": "execution",
+   "id": "auto-lloyd-20261029-2124"
+  },
+  {
+   "ts": 1793309062.6651888,
+   "title": "Automatic brain: rebalance",
+   "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -5.1%, 4h -3.5%): no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-20261029-2124"
+  },
   {
    "ts": 1793308705.3950694,
    "title": "Radar: market shock detected",
@@ -3051,13 +3087,13 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793308685.715261,
+  "last_run": 1793309043.9385257,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
-   "ts": 1793302143.0042427,
-   "title": "Automatic brain: new position",
-   "orders": 2,
+   "ts": 1793309043.9413676,
+   "title": "Automatic brain: rebalance",
+   "orders": 1,
    "mode": "live"
   },
   "last_note": {
@@ -3065,7 +3101,7 @@
    "text": "[Picks] Idle cash (61%), but SOL and BTC are below their 20-day averages and only 3 of 22 large memecoins are above theirs: bear market: no new memecoins until it improves."
   },
   "trad_status": "SOL -7.7%, BTC -3.4%, ETH -6.5%, JUP -16.9%",
-  "sol_ch24h": -4.9,
-  "sol_vs_ma20": -0.0685
+  "sol_ch24h": -5.1,
+  "sol_vs_ma20": -0.0701
  }
 }

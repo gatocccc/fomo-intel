@@ -1,0 +1,24 @@
+== 144_radar_live_limpio 2026-10-29T21:24:03Z ==
+posición shadow descartada: 97.686
+Oct 29 21:18:17 simplai-prod systemd[1]: Started fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 29 21:24:03 simplai-prod systemd[1]: Stopping fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps)...
+Oct 29 21:24:03 simplai-prod systemd[1]: fomo-radar.service: Deactivated successfully.
+Oct 29 21:24:03 simplai-prod systemd[1]: Stopped fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 29 21:24:03 simplai-prod systemd[1]: fomo-radar.service: Consumed 1.675s CPU time.
+Oct 29 21:24:03 simplai-prod systemd[1]: Started fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 29 21:24:18 simplai-prod systemd[1]: Stopping fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps)...
+Oct 29 21:24:18 simplai-prod systemd[1]: fomo-radar.service: Deactivated successfully.
+Oct 29 21:24:18 simplai-prod systemd[1]: Stopped fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 29 21:24:18 simplai-prod systemd[1]: Started fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 29 21:24:20 simplai-prod python3[2005394]: 2026-10-29 21:24:20,632 INFO radar: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 29 21:24:20 simplai-prod python3[2005394]: 2026-10-29 21:24:20,718 INFO radar: perps submit: sent 5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD, waiting up to 90s
+Oct 29 21:24:22 simplai-prod python3[2005394]: 2026-10-29 21:24:22,474 INFO radar: perps submit: confirmed 5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD (finalized)
+Oct 29 21:24:22 simplai-prod python3[2005394]: 2026-10-29 21:24:22,584 WARNING radar: SHORT SOL abierto (live): colateral 18.59, 2x, entrada 97.53
+--- radar.json
+shock True pos {"ts": 1793309060.2848802, "symbol": "SOL", "side": "short", "entry": 97.53, "collateral_usd": 18.59, "lev": 2.0, "size_usd": 37.18, "mode": "live", "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%", "headlines": ["Polymarket suspended trading amid reports of user funds being drained", "Your fridge could one day stake Ether, launch memecoins: CFTC chair", "Fed\u2019s hawkish rate hold keeps pressure on Bitcoin: Analysts"], "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PF
+--- lab
+eq 52.93
+   Radar: SOL short opened | Bearish news shock with price confirmation (bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%). Lloyd opens a small SOL short on Jupiter Perps: $19 collateral at 2x ($37 notional), 
+   Radar: SOL short opened (shadow) | Bearish news shock with price confirmation (bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%). Lloyd opens a small SOL short on Jupiter Perps: $19 collateral at 2x ($37 notional), 
+   Execution | buy USDC: bought 29 USDC for 0.3055 SOL at $1.01809 (slippage +1.7%)
+== exit 0 ==
