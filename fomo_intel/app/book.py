@@ -124,15 +124,113 @@ def book_view(full: bool = True, admin: bool = False) -> dict | None:
                      "worst": {"token": min(rets, key=lambda x: x[1])[0], "result": min(rets, key=lambda x: x[1])[1]} if rets else None},
            "brain": {"last_run": br.get("last_run"), "every_min": 10, "last_action": br.get("last_action"), "next_review": "09:39 / 21:39 ART",
                      "live": br.get("mode") == "live"}}
+    try:
+        out["track"] = track_record()
+    except Exception:  # noqa: BLE001
+        out["track"] = {}
     if full:
         out["closed_list"] = [{"ts": c.get("ts"), "token": c.get("symbol"), "sleeve": c.get("sleeve") or "picks", "result": c.get("ret"), "pnl_usd": c.get("pnl_usd"),
                                "why": c.get("why"), "hold_h": c.get("hold_h")} for c in closed[:40]]
-        out["journal"] = [{"ts": j.get("ts"), "title": j.get("title"), "text": j.get("text"), "kind": j.get("kind")} for j in (s.get("journal") or [])[:60]]
+        kinds = {"decisión": "decision", "decision": "decision", "automatic": "auto", "system": "system"}
+        jr = s.get("journal") or []
+        if not admin:   # en lo público, sin los registros crudos del motor ("set 4kjruq: ajustó…"): las decisiones ya los explican
+            jr = [j for j in jr if j.get("kind") != "execution" and (j.get("text") or j.get("title"))]
+        out["journal"] = [{"ts": j.get("ts"), "title": j.get("title"), "text": j.get("text"), "kind": kinds.get(j.get("kind"), j.get("kind")) if not admin else j.get("kind")}
+                          for j in jr[:60]]
         out["equity"] = (s.get("equity") or [])[-500:]
     if admin:
         out["sleeve_budgets"] = budgets
         out["brain_detail"] = {k: v for k, v in br.items()} | {"book_ts": bk.get("ts"), "liquid_usd": bk.get("liquid_usd"), "trad_status": bk.get("trad_status")}
         out["wallet_sol"] = s.get("cash_sol")
+    return out
+
+
+# ---------------------------------------------------------------- historial en % (sin depósitos ni retiros)
+def _eq_file(d: str) -> list[tuple[float, float]]:
+    out = []
+    f = STATE / d / "equity.jsonl"
+    if f.exists():
+        for line in f.read_text().splitlines():
+            try:
+                e = json.loads(line); out.append((float(e["ts"]), float(e["usd"])))
+            except Exception:  # noqa: BLE001
+                pass
+    return out
+
+
+def _twr(points: list[tuple[float, float]], flows: list[tuple[float, float]]) -> list[tuple[float, float]]:
+    """Rendimiento ponderado en el tiempo: cada tramo rinde (valor − flujo) / valor anterior. Así una plata que entra o sale
+    (migración, fondeo del laboratorio) no se ve como ganancia ni como pérdida. Devuelve [(ts, multiplicador acumulado)]."""
+    if not points:
+        return []
+    out = [(points[0][0], 1.0)]; m = 1.0
+    at: dict[int, float] = {}                 # cada flujo va al tramo cuyo cierre está más cerca de su hora (los relojes no coinciden al segundo)
+    for ts, a in flows:
+        i = min(range(1, len(points)), key=lambda k: abs(points[k][0] - ts), default=None)
+        if i is not None:
+            at[i] = at.get(i, 0.0) + a
+    for i, ((t0, v0), (t1, v1)) in enumerate(zip(points, points[1:]), start=1):
+        f = at.get(i, 0.0)
+        if v0 > 0:
+            m *= (v1 - f) / v0
+        out.append((t1, m))
+    return out
+
+
+def _thin(s: list[tuple[float, float]], n: int = 240) -> list[list[float]]:
+    if len(s) > n:
+        step = len(s) / n
+        s = [s[int(i * step)] for i in range(n)] + [s[-1]]
+    return [[int(t), round((m - 1) * 100, 2)] for t, m in s]
+
+
+def _book_points() -> list[tuple[float, float]]:
+    """El libro antes de la migración = los tres planes sumados; después, la billetera de Lloyd."""
+    lloyd = _eq_file("plan_lloyd")
+    mig = (jl(STATE / "plan_lloyd" / "migration.json", {}) or {}).get("ts")
+    if not mig:
+        return lloyd
+    legs = [_eq_file(f"plan_{k}") for k, _ in LEGACY]
+    if not all(legs):
+        return [p for p in lloyd if p[0] >= mig]
+    base = [p for p in legs[0] if p[0] < mig]
+    pre = []
+    for t, v in base:
+        tot = v
+        for other in legs[1:]:
+            near = min(other, key=lambda p: abs(p[0] - t))
+            if abs(near[0] - t) > 900:
+                tot = None; break
+            tot += near[1]
+        if tot is not None:
+            pre.append((t, tot))
+    return pre + [p for p in lloyd if p[0] >= mig]
+
+
+def track_record() -> dict:
+    """Desde el primer día: la mesa original (27/10, US$99, una sola billetera sin depósitos ni retiros) y el libro (28/10)."""
+    out = {}
+    d = jl(STATE / "desk_summary.json") or {}
+    pts = _eq_file("desk") or [(float(t), float(v)) for t, v in d.get("equity") or []]
+    if d.get("equity_usd") and d.get("now"):
+        pts.append((float(d["now"]), float(d["equity_usd"])))
+    if pts:
+        s = _twr(pts, [])
+        out["first_table"] = {"name": "The first table", "since": d.get("start_ts") or pts[0][0], "start_usd": d.get("start_usd") or pts[0][1],
+                              "equity_usd": d.get("equity_usd") or pts[-1][1], "pct": round((s[-1][1] - 1) * 100, 1),
+                              "peak_pct": round((max(m for _, m in s) - 1) * 100, 1), "wallet": d.get("wallet"), "series": _thin(s)}
+    bp = _book_points()
+    sm = jl(STATE / "plan_lloyd_summary.json") or {}
+    if sm.get("equity_usd") and sm.get("now"):
+        bp.append((float(sm["now"]), float(sm["equity_usd"])))
+    if bp:
+        flows = [(float(f["ts"]), float(f["usd"])) for f in (jl(STATE / "plan_lloyd" / "flows.json", []) or [])]
+        lab = jl(STATE / "plan_lab_summary.json") or {}
+        if lab.get("start_ts") and lab.get("start_usd"):
+            flows.append((float(lab["start_ts"]), -float(lab["start_usd"])))
+        s = _twr(bp, flows)
+        out["book"] = {"name": "The book", "since": bp[0][0], "pct": round((s[-1][1] - 1) * 100, 1),
+                       "peak_pct": round((max(m for _, m in s) - 1) * 100, 1), "series": _thin(s)}
     return out
 
 

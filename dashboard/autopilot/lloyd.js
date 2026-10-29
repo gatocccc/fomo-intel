@@ -150,5 +150,86 @@ window.Lloyd = (() => {
     </article>`;
   }
 
-  return {ORDER, POCKETS, REGIME, REGIME_HINT, esc, num, usd, usdS, fmtX, frac, pct, when, day, ago, hours, get, post, sleeves, drawBar, pill, pocketName, regimeBadge, dialCards, LAB_LABEL, labTested, labCounts, labCard};
+  // ----- performance chart in % (no deposits or withdrawals in it) -----
+  // pctChart(svg, tip, [{name, color, points: [[ts, pct], ...]}], {height})
+  const signed = (v, d = 1) => { v = num(v); return v == null ? "—" : (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(d) + "%"; };
+  function pctChart(svg, tip, series, opts = {}) {
+    series = (series || []).filter(s => s && Array.isArray(s.points) && s.points.length >= 2);
+    const box = svg.parentNode, old = box.querySelector(".none"); if (old) old.remove();
+    if (!series.length) {
+      svg.innerHTML = ""; svg.style.display = "none";
+      const p = document.createElement("p"); p.className = "none"; p.textContent = "Not enough points to draw yet."; box.appendChild(p);
+      return;
+    }
+    svg.style.display = "";
+    const narrow = (svg.clientWidth || 700) < 480;
+    const W = Math.max(300, svg.clientWidth || 700), H = svg.clientHeight || opts.height || 220;
+    const pl = narrow ? 44 : 52, pr = 10, pt = 14, pb = 24;
+    const all = series.flatMap(s => s.points);
+    const x0 = Math.min(...all.map(p => p[0])), x1 = Math.max(...all.map(p => p[0]), x0 + 1);
+    let ymin = Math.min(0, ...all.map(p => p[1])), ymax = Math.max(0, ...all.map(p => p[1]));
+    const pad = (ymax - ymin || 10) * .08; ymin -= pad; ymax += pad;
+    const X = t => pl + (t - x0) / (x1 - x0) * (W - pl - pr), Y = v => pt + (1 - (v - ymin) / (ymax - ymin)) * (H - pt - pb);
+    const step = (() => { const r = (ymax - ymin) / 4, m = Math.pow(10, Math.floor(Math.log10(r))); return [1, 2, 2.5, 5, 10].map(k => k * m).find(k => k >= r) || r; })();
+    const mono = `font-size="${narrow ? 10 : 11}" font-family="Space Mono, monospace"`;
+    let g = "";
+    for (let v = Math.ceil(ymin / step) * step; v <= ymax; v += step) {
+      const y = Y(v).toFixed(1), zero = Math.abs(v) < step / 1000;
+      g += `<line x1="${pl}" x2="${W - pr}" y1="${y}" y2="${y}" stroke="${zero ? "#1A1814" : "rgba(26,24,20,.13)"}" ${zero ? 'stroke-width="1.5" stroke-dasharray="5 5"' : ""}/>`;
+      g += `<text x="${pl - 6}" y="${(+y + 4).toFixed(1)}" fill="${zero ? "#1A1814" : "#6E6A60"}" ${mono} text-anchor="end">${zero ? "0%" : (v > 0 ? "+" : "−") + Math.abs(Math.round(v)) + "%"}</text>`;
+    }
+    const fmt = t => new Date(t * 1000).toLocaleDateString("en-US", {month: "short", day: "numeric"});
+    g += `<text x="${pl}" y="${H - 6}" fill="#6E6A60" ${mono}>${fmt(x0)}</text><text x="${W - pr}" y="${H - 6}" fill="#6E6A60" ${mono} text-anchor="end">${fmt(x1)}</text>`;
+    series.forEach((s, i) => {
+      const d = s.points.map((p, k) => (k ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1)).join(" ");
+      if (i === 0) {
+        const last = s.points[s.points.length - 1];
+        g += `<path d="${d} L${X(last[0]).toFixed(1)} ${Y(0).toFixed(1)} L${X(s.points[0][0]).toFixed(1)} ${Y(0).toFixed(1)} Z" fill="${s.color}" opacity=".13"/>`;
+      }
+      g += `<path d="${d}" fill="none" stroke="${s.color}" stroke-width="${i === 0 ? 3.5 : 3}" stroke-linejoin="round" stroke-linecap="round"/>`;
+      const last = s.points[s.points.length - 1];
+      g += `<circle cx="${X(last[0]).toFixed(1)}" cy="${Y(last[1]).toFixed(1)}" r="5" fill="${s.color}" stroke="#FFFDF7" stroke-width="2.5"/>`;
+    });
+    g += `<line class="cross" y1="${pt}" y2="${H - pb}" stroke="#1A1814" stroke-width="1" style="display:none"/><rect class="hit" x="${pl}" y="0" width="${W - pl - pr}" height="${H}" fill="transparent"/>`;
+    svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.innerHTML = g;
+    if (!tip) return;
+    const hit = svg.querySelector(".hit"), cross = svg.querySelector(".cross");
+    const near = (pts, t) => { let b = null; for (const p of pts) if (p[0] <= t + 600 && (!b || Math.abs(p[0] - t) < Math.abs(b[0] - t))) b = p; return b && b[0] >= pts[0][0] - 1 ? b : null; };
+    const move = e => {
+      const r = svg.getBoundingClientRect(), cx = ((e.touches ? e.touches[0].clientX : e.clientX) - r.left) * W / r.width;
+      const t = x0 + (Math.min(Math.max(cx, pl), W - pr) - pl) / (W - pl - pr) * (x1 - x0);
+      cross.setAttribute("x1", X(t)); cross.setAttribute("x2", X(t)); cross.style.display = "";
+      const rows = series.map(s => { const p = near(s.points, t); return p && t >= s.points[0][0] - 600 ? `<span><i style="background:${s.color}"></i>${esc(s.short || s.name)} <b>${signed(p[1])}</b></span>` : ""; }).filter(Boolean);
+      tip.innerHTML = `<time>${when(t)}</time>${rows.join("")}`; tip.style.display = "block";
+      const px = X(t) * r.width / W; tip.style.left = Math.min(Math.max(px, 80), r.width - 80) + "px";
+    };
+    const leave = () => { cross.style.display = "none"; tip.style.display = "none"; };
+    hit.onmousemove = move; hit.onmouseleave = leave;
+    hit.ontouchstart = hit.ontouchmove = e => { move(e); };
+    hit.ontouchend = () => setTimeout(leave, 1800);
+  }
+
+  // Series for the track record from /api/book.track: the first table (Oct 27) and the book (Oct 28).
+  function trackSeries(tr) {
+    tr = tr || {}; const out = [];
+    if (tr.first_table && tr.first_table.series) out.push({name: "First table · since " + day(tr.first_table.since), short: "First table", color: "#1D6A4B", points: tr.first_table.series, pct: tr.first_table.pct});
+    if (tr.book && tr.book.series) out.push({name: "The book · since " + day(tr.book.since), short: "The book", color: "#C8323B", points: tr.book.series, pct: tr.book.pct});
+    return out;
+  }
+
+  // ----- bottom tab bar on phones (the top nav hides under 900px) -----
+  const TABS = [["home", "/", "Home", "M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"],
+                ["book", "/book/", "Live book", "M4 19V9m6 10V5m6 14v-7m4 7H2"],
+                ["lab", "/lab/", "Notebook", "M6 3h11a2 2 0 0 1 2 2v16l-4-2-4 2-4-2-3 2V5a2 2 0 0 1 2-2zM9 8h6M9 12h6"],
+                ["app", "/app/", "My stool", "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-8 9a8 8 0 0 1 16 0"]];
+  function tabbar() {
+    if (document.querySelector(".tabbar")) return;
+    const cur = document.body.dataset.tab || "";
+    const nav = document.createElement("nav"); nav.className = "tabbar"; nav.setAttribute("aria-label", "Main");
+    nav.innerHTML = TABS.map(([k, href, label, d]) => `<a href="${href}"${k === cur ? ' aria-current="page"' : ""}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg><span>${label}</span></a>`).join("");
+    document.body.appendChild(nav); document.body.classList.add("has-tabbar");
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tabbar); else tabbar();
+
+  return {ORDER, POCKETS, REGIME, REGIME_HINT, esc, num, usd, usdS, fmtX, frac, pct, signed, when, day, ago, hours, get, post, sleeves, drawBar, pill, pocketName, regimeBadge, dialCards, LAB_LABEL, labTested, labCounts, labCard, pctChart, trackSeries, tabbar};
 })();

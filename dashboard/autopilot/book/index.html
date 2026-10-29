@@ -31,10 +31,7 @@
 .box{padding:22px}
 .box h2{font-size:24px;margin:0 0 14px;display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
 .box h2 small{font:700 12px var(--m);color:var(--dim)}
-.chart{position:relative}
-.chart svg{width:100%;height:220px;display:block}
-.chart .tip{position:absolute;display:none;transform:translate(-50%,-130%);background:var(--ink);color:var(--white);font:700 12px var(--m);padding:5px 9px;border-radius:999px;white-space:nowrap;pointer-events:none}
-.chart .none{font:13px var(--m);color:var(--dim);margin:0;padding:40px 0;text-align:center}
+.box .note{margin:12px 0 0;font-size:13.5px;color:var(--dim)}
 .reg{display:grid;gap:14px}
 .reg .regime{justify-self:start;font-size:14px;padding:9px 18px 9px 13px}
 .reg dl{display:grid;grid-template-columns:1fr auto;gap:8px 14px;margin:0}
@@ -53,10 +50,18 @@
 .more{margin-top:12px}
 footer{color:var(--cream)}
 @media (max-width:900px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.stats{grid-template-columns:1fr}.box{padding:16px}.chart svg{height:180px}}
+@media (max-width:560px){
+  .head{margin:10px 0 14px}.head h1{font-size:clamp(34px,10vw,44px)}
+  .stats{gap:10px;margin-bottom:12px}.stat{padding:14px}.stat strong{font-size:clamp(24px,7.4vw,32px)}.stat span{font-size:10px;letter-spacing:.08em}.stat small{font-size:11px}
+  .box{padding:16px}.grid{gap:12px;margin-bottom:12px}
+  .brain{border-radius:18px;font-size:12px;padding:12px 14px}
+  .pk-table{display:none}
+  .sect > h2{margin:22px 0 10px}
+  .reg dd{font-size:17px}
+}
 </style>
 </head>
-<body>
+<body data-tab="book">
 <div class="wrap">
 <header class="top"><div class="bar">
   <a class="mark" href="/" aria-label="Lloyd's Tavern, home"><img src="/assets/lloyd-head.png" alt=""><span>Lloyd's <b>Tavern</b></span></a>
@@ -72,18 +77,20 @@ footer{color:var(--cream)}
 </div>
 
 <div class="stats">
-  <div class="panel stat y"><span>Holding now</span><strong id="s-eq">—</strong><small id="s-pnl">—</small></div>
-  <div class="panel stat"><span>Since start</span><strong id="s-pct">—</strong><small id="s-since">—</small></div>
+  <div class="panel stat y"><span>Since day one</span><strong id="s-day1">—</strong><small id="s-day1d">—</small></div>
+  <div class="panel stat"><span>The book</span><strong id="s-pct">—</strong><small id="s-since">—</small></div>
+  <div class="panel stat"><span>Holding now</span><strong id="s-eq">—</strong><small id="s-cashd">—</small></div>
   <div class="panel stat"><span>Market mood</span><div style="margin-top:10px"><span class="regime" id="regime2">—</span></div><small id="s-mood">—</small></div>
-  <div class="panel stat"><span>In cash</span><strong id="s-cash">—</strong><small id="s-cashd">—</small></div>
 </div>
 
 <p class="brain" id="brain">Lloyd checks the book every 10 minutes.</p>
 
 <div class="grid">
   <div class="panel box">
-    <h2>Equity <small id="c-note">US$, since the first trade</small></h2>
-    <div class="chart" id="chartbox"><svg id="chart" role="img" aria-label="Equity of the house book in US dollars over time"></svg><div class="tip" id="tip"></div></div>
+    <h2>Performance <small>% gained, since day one</small></h2>
+    <ul class="track-legend" id="t-legend"></ul>
+    <div class="pchart"><svg id="chart" role="img" aria-label="Performance in percent since day one"></svg><div class="tip" id="tip"></div></div>
+    <p class="note">Percent return only. Money moved in or out (merging the plans into one book, funding the lab) is taken out, so it never shows up as a gain or a loss.</p>
   </div>
   <div class="panel box reg">
     <h2>The room</h2>
@@ -109,21 +116,22 @@ footer{color:var(--cream)}
 
 <div class="sect" id="positions">
   <h2>Open positions <small id="pos-n"></small></h2>
-  <div class="scroll"><table class="tbl">
+  <div class="scroll"><table class="tbl stack">
     <thead><tr><th>Token</th><th>Pocket</th><th class="n">Multiple</th><th class="n">Value</th><th class="n">Stop</th><th class="n">Age</th><th>Thesis</th></tr></thead>
     <tbody id="pos"><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
   </table></div>
 </div>
 
 <div class="sect" id="notes">
-  <h2>Lloyd's reasoning <small>newest first · up to 60 notes</small></h2>
-  <ul class="feed" id="journal"><li><p>Loading…</p></li></ul>
+  <h2>Lloyd's reasoning <small>newest first</small></h2>
+  <ul class="feed clip" id="journal"><li><p>Loading…</p></li></ul>
+  <button class="btn more" id="j-more" type="button" hidden>Show every note</button>
 </div>
 
 <div class="sect" id="closed">
   <h2>Closed trades <small>one line per trade, wins and losses</small></h2>
-  <div class="scroll"><table class="tbl">
-    <thead><tr><th>When</th><th>Token</th><th>Pocket</th><th>Won?</th><th class="n">Result</th><th class="n">P&amp;L</th><th class="n">Held</th><th>Why</th></tr></thead>
+  <div class="scroll"><table class="tbl stack">
+    <thead><tr><th>Token</th><th class="n">Result</th><th>Pocket</th><th>When</th><th class="n">P&amp;L</th><th class="n">Held</th><th>Why</th></tr></thead>
     <tbody id="cl"><tr><td colspan="8" class="empty">Loading…</td></tr></tbody>
   </table></div>
 </div>
@@ -141,60 +149,24 @@ const L = window.Lloyd;
 let lastBook = null;
 
 function chart(b) {
-  const svg = $("#chart"), box = $("#chartbox"), tip = $("#tip");
-  const W = Math.max(320, svg.clientWidth || 700), H = svg.clientHeight || 220, pl = 54, pr = 12, pt = 12, pb = 24;
-  let pts = (Array.isArray(b.equity) ? b.equity : []).filter(p => Array.isArray(p) && p.length >= 2 && L.num(p[0]) != null && L.num(p[1]) != null);
-  if (!pts.length && b.equity_usd != null && b.updated) pts = [[b.updated, b.equity_usd]];
-  if (pts.length === 1 && b.since && b.start_usd != null) pts.unshift([b.since, b.start_usd]);
-  const old = box.querySelector(".none"); if (old) old.remove();
-  if (pts.length < 2) {
-    svg.innerHTML = ""; svg.style.display = "none";
-    const p = document.createElement("p"); p.className = "none"; p.textContent = "Not enough points to draw yet. Come back after a few checks."; box.appendChild(p);
-    return;
-  }
-  svg.style.display = "";
-  const start = L.num(b.start_usd);
-  const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]).concat(start != null ? [start] : []);
-  const x0 = Math.min(...xs), x1 = Math.max(...xs, x0 + 1);
-  const ymin = Math.min(...ys), ymax = Math.max(...ys), pad = (ymax - ymin || ymax || 1) * .06;
-  const y0 = ymin - pad, y1 = ymax + pad;
-  const X = t => pl + (t - x0) / (x1 - x0) * (W - pl - pr), Y = v => pt + (1 - (v - y0) / (y1 - y0)) * (H - pt - pb);
-  let g = "";
-  for (let i = 0; i <= 3; i++) { const v = y0 + (y1 - y0) * i / 3; g += `<line x1="${pl}" x2="${W - pr}" y1="${Y(v).toFixed(1)}" y2="${Y(v).toFixed(1)}" stroke="rgba(26,24,20,.15)"/><text x="${pl - 8}" y="${(Y(v) + 4).toFixed(1)}" fill="#6E6A60" font-size="11" font-family="Space Mono, monospace" text-anchor="end">${Math.round(v)}</text>`; }
-  const t0 = new Date(x0 * 1000), t1 = new Date(x1 * 1000), fmt = d => d.toLocaleDateString("en-US", {month: "short", day: "numeric"});
-  g += `<text x="${pl}" y="${H - 6}" fill="#6E6A60" font-size="11" font-family="Space Mono, monospace">${fmt(t0)}</text><text x="${W - pr}" y="${H - 6}" fill="#6E6A60" font-size="11" font-family="Space Mono, monospace" text-anchor="end">${fmt(t1)}</text>`;
-  if (start != null) g += `<line x1="${pl}" x2="${W - pr}" y1="${Y(start).toFixed(1)}" y2="${Y(start).toFixed(1)}" stroke="#1A1814" stroke-dasharray="5 5" stroke-width="1.5"/><text x="${W - pr}" y="${(Y(start) - 6).toFixed(1)}" fill="#1A1814" font-size="11" font-family="Space Mono, monospace" text-anchor="end">start</text>`;
-  const last = pts[pts.length - 1], up = start == null || last[1] >= start, col = up ? "#1D6A4B" : "#C8323B";
-  const path = pts.map((p, i) => (i ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1)).join(" ");
-  const area = path + ` L${X(last[0]).toFixed(1)} ${(H - pb).toFixed(1)} L${X(pts[0][0]).toFixed(1)} ${(H - pb).toFixed(1)} Z`;
-  g += `<path d="${area}" fill="${col}" opacity=".12"/><path d="${path}" fill="none" stroke="${col}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>`;
-  g += `<circle cx="${X(last[0]).toFixed(1)}" cy="${Y(last[1]).toFixed(1)}" r="5" fill="${col}" stroke="#FFFDF7" stroke-width="2.5"/>`;
-  g += `<line id="cross" y1="${pt}" y2="${H - pb}" stroke="#1A1814" stroke-width="1" style="display:none"/><rect x="${pl}" y="0" width="${W - pl - pr}" height="${H}" fill="transparent" id="hit"/>`;
-  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.innerHTML = g;
-  const hit = svg.querySelector("#hit"), cross = svg.querySelector("#cross");
-  const move = e => {
-    const r = svg.getBoundingClientRect(), cx = ((e.touches ? e.touches[0].clientX : e.clientX) - r.left) * W / r.width;
-    let best = pts[0]; for (const p of pts) if (Math.abs(X(p[0]) - cx) < Math.abs(X(best[0]) - cx)) best = p;
-    cross.setAttribute("x1", X(best[0])); cross.setAttribute("x2", X(best[0])); cross.style.display = "";
-    tip.style.display = "block"; tip.style.left = (X(best[0]) * r.width / W) + "px"; tip.style.top = (Y(best[1]) * r.height / H) + "px";
-    tip.textContent = `${L.usd(best[1], 2)} · ${L.when(best[0])}`;
-  };
-  hit.onmousemove = move; hit.ontouchmove = e => { move(e); e.preventDefault(); };
-  hit.onmouseleave = () => { cross.style.display = "none"; tip.style.display = "none"; };
+  const ser = L.trackSeries(b.track);
+  $("#t-legend").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${L.esc(x.name)} <b class="${x.pct >= 0 ? "up" : "down"}">${L.signed(x.pct)}</b></li>`).join("");
+  L.pctChart($("#chart"), $("#tip"), ser);
 }
 
 function render(b) {
   lastBook = b;
   const br = b.brain || {}, r = b.regime || {};
-  $("#s-eq").textContent = L.usd(b.equity_usd, 2);
-  const pnl = $("#s-pnl"); pnl.textContent = b.pnl_usd != null ? `${L.usdS(b.pnl_usd, 2)} since start` : "—";
-  pnl.className = (b.pnl_usd || 0) >= 0 ? "up" : "down";
-  const pc = $("#s-pct"); pc.textContent = L.frac(b.pnl_pct); pc.style.color = (b.pnl_pct || 0) >= 0 ? "var(--felt-dk)" : "var(--hellred)";
-  $("#s-since").textContent = b.since ? `walked in with ${L.usd(b.start_usd)} on ${L.day(b.since)}` : "—";
+  const tr = b.track || {}, ft = tr.first_table, bk = tr.book;
+  $("#s-day1").textContent = ft ? L.signed(ft.pct) : "—";
+  $("#s-day1d").textContent = ft ? `first table: ${L.usd(ft.start_usd)} → ${L.usd(ft.equity_usd)} since ${L.day(ft.since)}` : "—";
+  const bp = bk ? bk.pct : (b.pnl_pct != null ? b.pnl_pct * 100 : null);
+  const pc = $("#s-pct"); pc.textContent = L.signed(bp); pc.style.color = (bp || 0) >= 0 ? "var(--felt-dk)" : "var(--hellred)";
+  $("#s-since").textContent = bk ? `all pockets, since ${L.day(bk.since)}` : (b.since ? `since ${L.day(b.since)}` : "—");
+  $("#s-eq").textContent = L.usd(b.equity_usd);
   $("#s-mood").textContent = r.sol_vs_ma20 != null ? `SOL ${L.frac(r.sol_vs_ma20)} vs its 20-day average` : "—";
   const cashPct = b.cash_usd != null && b.equity_usd ? b.cash_usd / b.equity_usd * 100 : null;
-  $("#s-cash").textContent = cashPct != null ? L.pct(cashPct) : "—";
-  $("#s-cashd").textContent = b.cash_usd != null ? `${L.usd(b.cash_usd)} in USDC, waiting` : "—";
+  $("#s-cashd").textContent = cashPct != null ? `in the book · ${L.pct(cashPct)} in cash` : "in the book";
 
   const state = L.regimeBadge($("#regime2"), b.regime);
   $("#r-sol").textContent = L.frac(r.sol_vs_ma20); $("#r-btc").textContent = L.frac(r.btc_vs_ma20);
@@ -221,18 +193,20 @@ function render(b) {
   $("#pos").innerHTML = pos.map(x => {
     const age = x.opened ? L.hours((Date.now() / 1000 - x.opened) / 3600) : "—";
     const stop = x.stop_mult != null ? `${L.fmtX(x.stop_mult)}${x.multiple != null && x.stop_mult >= 1 ? " · profit locked" : ""}` : "—";
-    return `<tr><th scope="row">${L.esc(x.token)}</th><td>${L.pill(x.sleeve)}</td><td class="n ${x.multiple != null ? (x.multiple >= 1 ? "up" : "down") : ""}">${L.fmtX(x.multiple)}</td><td class="n">${L.usd(x.value_usd, 2)}</td><td class="n">${stop}</td><td class="n">${age}</td><td class="why">${L.esc(x.thesis)}</td></tr>`;
+    return `<tr><th scope="row">${L.esc(x.token)}</th><td class="tagc">${L.pill(x.sleeve)}</td><td class="n lead ${x.multiple != null ? (x.multiple >= 1 ? "up" : "down") : ""}" data-label="Multiple">${L.fmtX(x.multiple)}</td><td class="n" data-label="Value">${L.usd(x.value_usd, 2)}</td><td class="n" data-label="Stop">${stop}</td><td class="n" data-label="Held">${age}</td><td class="why">${L.esc(x.thesis)}</td></tr>`;
   }).join("") || `<tr><td colspan="7" class="empty">Nothing open. Lloyd is holding cash, and the notes below say why.</td></tr>`;
 
   const cl = Array.isArray(b.closed_list) ? b.closed_list : [];
   $("#cl").innerHTML = cl.map(x => {
     const won = (x.result || 0) >= 0;
-    return `<tr><td>${L.when(x.ts)}</td><th scope="row">${L.esc(x.token)}</th><td>${L.pill(x.sleeve)}</td><td><span class="pill ${won ? "" : "c"}">${won ? "Won" : "Lost"}</span></td><td class="n ${won ? "up" : "down"}">${L.frac(x.result)}</td><td class="n ${won ? "up" : "down"}">${L.usdS(x.pnl_usd, 2)}</td><td class="n">${L.hours(x.hold_h)}</td><td class="why">${L.esc(x.why)}</td></tr>`;
-  }).join("") || `<tr><td colspan="8" class="empty">No closed trades yet.</td></tr>`;
+    return `<tr><th scope="row">${L.esc(x.token)}</th><td class="n lead ${won ? "up" : "down"}" data-label="Result">${L.frac(x.result)}</td><td class="tagc">${L.pill(x.sleeve)} <span class="pill ${won ? "" : "c"}">${won ? "Won" : "Lost"}</span></td><td data-label="Closed">${L.when(x.ts)}</td><td class="n ${won ? "up" : "down"}" data-label="P&amp;L">${L.usdS(x.pnl_usd, 2)}</td><td class="n" data-label="Held">${L.hours(x.hold_h)}</td><td class="why">${L.esc(x.why)}</td></tr>`;
+  }).join("") || `<tr><td colspan="7" class="empty">No closed trades yet.</td></tr>`;
 
   const jr = Array.isArray(b.journal) ? b.journal.slice(0, 60) : [];
   $("#journal").innerHTML = jr.map(j => `<li>${j.kind ? `<span class="pill c kind">${L.esc(j.kind)}</span>` : ""}<time>${L.when(j.ts)}</time><b>${L.esc(j.title)}</b><p>${L.esc(j.text)}</p></li>`).join("") || `<li><p>No notes yet.</p></li>`;
 
+  const more = $("#j-more"); more.hidden = !(jr.length > 10 && $("#journal").classList.contains("clip"));
+  more.onclick = () => { $("#journal").classList.remove("clip"); more.hidden = true; };
   $("#wallet").innerHTML = b.wallet ? `Wallet: <a href="https://solscan.io/account/${encodeURIComponent(b.wallet)}" target="_blank" rel="noopener">${L.esc(b.wallet)}</a> · open on Solscan` : "Wallet: —";
   chart(b);
 }

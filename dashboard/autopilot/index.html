@@ -23,6 +23,9 @@
 .hero h1 em{font-style:normal;color:var(--beak)}
 .hero-note{margin-top:18px;font:13px var(--m);color:var(--cream)}
 .hero .lede{color:var(--white)}
+.proof{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 20px;padding:8px 16px 8px 10px;background:var(--beak);border:var(--b);border-radius:999px;box-shadow:var(--sh-s);text-decoration:none;font:700 12.5px var(--m)}
+.proof b{font:400 24px/1 var(--t)}
+.proof i{font-style:normal;background:var(--ink);color:var(--beak);border-radius:999px;padding:3px 9px;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 .frame{position:relative;justify-self:center;width:min(460px,100%)}
 .pic{position:relative}
 .photo{position:relative;z-index:1;aspect-ratio:5/6;background:var(--white);border:var(--b);border-radius:26px;box-shadow:0 8px 0 var(--ink);overflow:hidden;transform:rotate(-3deg)}
@@ -64,6 +67,12 @@
 .stat strong{font:400 clamp(44px,5vw,64px)/1 var(--t);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
 .stat small{font:700 13px var(--m);color:var(--dim)}
 .stat.y{background:var(--beak)}
+.stat .sub2{display:flex;flex-wrap:wrap;gap:6px 14px;font:700 12.5px var(--m);margin-top:6px}
+.stat .sub2 b{font:400 18px/1 var(--t)}
+.perf{padding:20px 22px 16px;margin-top:18px}
+.perf h3{font-size:22px;margin:0 0 10px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
+.perf h3 small{font:700 12px var(--m);color:var(--dim)}
+.perf .note{margin:10px 0 0;font-size:13px;color:var(--dim)}
 .stat .regime{justify-self:start;margin-top:4px}
 .pockets-box{padding:22px 24px;display:grid;gap:12px;align-content:start}
 .pockets-box h3{font-size:22px;margin:0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
@@ -123,12 +132,33 @@ table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--
 @media (max-width:1100px){.pk-cards{grid-template-columns:1fr 1fr}}
 @media (max-width:900px){
   .hero-grid,.doors,.board,.risk-wrap{grid-template-columns:1fr}
-  .frame{order:-1;width:min(360px,88%)}
+  .frame{width:min(340px,86%)}
+  .hero-grid{gap:28px;padding-bottom:44px}
+  .doors{padding:22px}
+  .doors .btn{justify-self:start}
 }
 @media (max-width:360px){.mark span{display:none}}
 @media (max-width:560px){
+  .hero{padding-top:18px}
+  .hero h1{font-size:clamp(40px,12vw,54px);margin:16px 0 16px;text-shadow:0 4px 0 var(--ink)}
+  .hero .cta .btn{flex:1 1 140px}
+  .frame{width:min(290px,80%)}
+  .chips li{font-size:10.5px;padding:3px 9px}
+  .ticker{font-size:15px;padding:9px 0}
+  .stat,.pockets-box{padding:18px}
+  .stat strong{font-size:clamp(46px,15vw,60px)}
+  .perf{padding:16px 14px 12px}
+  .slate{padding:4px 16px}
+  .slate b{font-size:19px}
+  .board-foot{font-size:11.5px}
+  .steps{gap:26px}
+  .steps>li{padding:22px 18px 18px}
+  .pk-card header{padding:12px 16px 10px}
+  .pk-card p{padding:12px 16px 16px}
+  .moods{font-size:14px;gap:8px 14px}
   .steps,.pk-cards{grid-template-columns:1fr}
-  .sec{padding:60px 0}
+  .sec{padding:52px 0}
+  .sec-head{margin-bottom:24px}
   .sticker{font-size:20px;bottom:-14px;left:-8px}
   .sticker small{display:none}
   .slate li{grid-template-columns:1fr auto}
@@ -138,11 +168,11 @@ table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--
 }
 </style>
 </head>
-<body>
+<body data-tab="home">
 
 <header class="top"><div class="wrap bar">
   <a class="mark" href="/" aria-label="Lloyd's Tavern, home"><img src="/assets/lloyd-head.png" alt=""><span>Lloyd's <b>Tavern</b></span></a>
-  <nav class="navl" aria-label="Sections"><a href="#how">How it works</a><a href="#pockets">The pockets</a><a href="#notebook">Notebook</a><a href="#risk">Your risk</a><a href="#tab">The tab</a><a href="/book/">Live book</a></nav>
+  <nav class="navl" aria-label="Sections"><a href="#how">How it works</a><a href="#pockets">The pockets</a><a href="/lab/">Notebook</a><a href="#risk">Your risk</a><a href="#tab">The tab</a><a href="/book/">Live book</a></nav>
   <a class="btn" href="/app/#login">Log in</a>
 </div></header>
 
@@ -150,8 +180,9 @@ table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--
   <div>
     <span class="tag">A Nonconformist Ducks joint</span>
     <h1>Auto-trade shitcoins <em>with an edge.</em></h1>
+    <a class="proof" id="proof" href="#board" hidden><i>Live</i><span>Since day one</span><b id="proof-n">—</b></a>
     <p class="lede">Lloyd's Tavern is the pond's trading bar. One bot works the counter: it checks who is behind every token before it buys, moves money between four pockets as the market turns, and writes down why it made every move. You pick how much and how much risk. Lloyd does the rest.</p>
-    <div class="cta" style="margin-top:28px"><a class="btn y" href="#board">See the board</a><a class="btn" href="/book/">Watch the live book</a></div>
+    <div class="cta" style="margin-top:28px"><a class="btn y" href="#board">See the results</a><a class="btn" href="/book/">Watch the live book</a></div>
     <p class="hero-note">Doors are not open yet. Nonco Genesis holders get the first stools.</p>
   </div>
   <div class="frame">
@@ -170,13 +201,14 @@ table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--
   <div class="wrap">
     <div class="sec-head">
       <h2 class="ttl" id="board-t">On the board tonight</h2>
-      <p class="lede">Lloyd trades the house wallet in public, with real money, since October 27, 2026. <a href="/book/">Open the full book</a>.</p>
+      <p class="lede">Lloyd has traded real money in public since October 27, 2026. The first table walked in with $99 and was never topped up. <a href="/book/">Open the full book</a>.</p>
     </div>
     <div class="board">
       <div class="panel stat y">
-        <span class="k">Holding now</span>
-        <strong id="l-eq">—</strong>
-        <small id="l-pnl">—</small>
+        <span class="k">Since day one</span>
+        <strong id="l-day1">—</strong>
+        <small id="l-day1d">—</small>
+        <div class="sub2" id="l-sub2"></div>
         <span class="regime" id="l-regime">Reading the room</span>
       </div>
       <div class="panel pockets-box">
@@ -184,6 +216,11 @@ table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--
         <div class="pbar" id="l-bar"><span class="pk-cash" style="width:100%"></span></div>
         <ul class="plegend" id="l-legend" style="margin:0"></ul>
       </div>
+    </div>
+    <div class="panel perf">
+      <h3>How it got there <small>% gained, deposits and withdrawals left out</small></h3>
+      <ul class="track-legend" id="l-legend2"></ul>
+      <div class="pchart"><svg id="l-chart" role="img" aria-label="Performance in percent since day one"></svg><div class="tip" id="l-tip"></div></div>
     </div>
     <ul class="panel slate" id="l-pos" aria-label="Open positions"><li class="empty">Wiping the board…</li></ul>
     <p class="board-foot"><span id="l-brain">Lloyd checks the book every 10 minutes.</span><a href="/book/">Chart, closed trades and every reason →</a></p>
@@ -308,10 +345,15 @@ L.get("/api/config").then(c => {
 
 L.get("/api/book").then(b => {
   const br = b.brain || {};
-  $("#l-eq").textContent = L.usd(b.equity_usd);
-  const pnl = $("#l-pnl");
-  pnl.textContent = b.pnl_pct != null ? `${L.frac(b.pnl_pct)} since ${L.day(b.since)}` : (b.since ? `since ${L.day(b.since)}` : "—");
-  pnl.style.color = (b.pnl_pct || 0) >= 0 ? "var(--felt-dk)" : "var(--hellred)";
+  const tr = b.track || {}, ft = tr.first_table, bk = tr.book;
+  $("#l-day1").textContent = ft ? L.signed(ft.pct) : L.frac(b.pnl_pct);
+  if (ft) { $("#proof-n").textContent = L.signed(ft.pct, 0); $("#proof").hidden = false; }
+  $("#l-day1d").textContent = ft ? `The first table: ${L.usd(ft.start_usd)} on ${L.day(ft.since)}, ${L.usd(ft.equity_usd)} today` : "";
+  $("#l-sub2").innerHTML = (bk ? `<span>The book <b class="${bk.pct >= 0 ? "up" : "down"}">${L.signed(bk.pct)}</b></span>` : "") + `<span>Holding <b>${L.usd(b.equity_usd)}</b></span>`;
+  const ser = L.trackSeries(tr);
+  $("#l-legend2").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${L.esc(x.name)} <b class="${x.pct >= 0 ? "up" : "down"}">${L.signed(x.pct)}</b></li>`).join("");
+  L.pctChart($("#l-chart"), $("#l-tip"), ser);
+  window.__lb = b;
   const state = L.regimeBadge($("#l-regime"), b.regime);
   $("#l-upd").textContent = b.updated ? `updated ${L.ago(b.updated)}` : "";
   L.drawBar($("#l-bar"), $("#l-legend"), b);
@@ -333,6 +375,7 @@ L.get("/api/book").then(b => {
   if (br.last_run) parts.push(`last check ${L.ago(br.last_run)}`);
   $("#l-brain").textContent = parts.join(" · ") + ".";
 
+  if (ft) tick.push(`<span class="g">Since day one ${L.signed(ft.pct)}</span><span><i>●</i></span>`);
   if (b.equity_usd != null) tick.push(`<span class="w">Holding ${L.usd(b.equity_usd)}</span><span><i>●</i></span>`);
   if (state) tick.push(`<span class="w">Mood: ${L.REGIME[state]}</span><span><i>●</i></span>`);
   $("#tick").innerHTML = tick.join("").repeat(2);
@@ -340,6 +383,8 @@ L.get("/api/book").then(b => {
   $("#l-pos").innerHTML = "<li class='empty'>Could not load the board right now. Try again in a minute.</li>";
   $("#l-regime").textContent = "Could not load";
 });
+
+let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => window.__lb && L.pctChart($("#l-chart"), $("#l-tip"), L.trackSeries(window.__lb.track)), 150); });
 
 L.get("/api/lab").then(d => {
   L.labCounts($("#nb-strip"), d);
