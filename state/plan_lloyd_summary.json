@@ -1,17 +1,17 @@
 {
- "now": 1793242485.127522,
+ "now": 1793242792.859905,
  "start_ts": 1793203599.7169404,
  "start_usd": 602.95,
  "start_sol": 5.9708,
  "goal_usd": 1205.9,
  "days": 365,
  "day": 1,
- "equity_usd": 576.8,
- "equity_sol": 5.7749,
+ "equity_usd": 569.68,
+ "equity_sol": 5.6979,
  "cash_sol": 0.1416,
- "positions_usd": 562.66,
- "sol_usd": 99.88,
- "mult": 0.957,
+ "positions_usd": 555.53,
+ "sol_usd": 99.98,
+ "mult": 0.945,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,11 +41,11 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.011398085943716734,
+   "last_usd": 0.010575124993275014,
    "sleeve": "picks",
    "from_plan": "agresivo",
-   "mult": 1.517,
-   "value_usd": 100.66
+   "mult": 1.408,
+   "value_usd": 93.4
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
@@ -64,11 +64,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994752547165173,
+   "last_usd": 0.9994490936141838,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 402.9
+   "value_usd": 402.89
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -92,11 +92,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14338387434596497,
+   "last_usd": 0.14384089091018606,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.927,
-   "value_usd": 36.33
+   "mult": 0.93,
+   "value_usd": 36.44
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -120,11 +120,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3913919470187473,
+   "last_usd": 0.39191712013298496,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.937,
-   "value_usd": 22.76
+   "mult": 0.938,
+   "value_usd": 22.79
   }
  ],
  "equity": [
@@ -655,6 +655,10 @@
   [
    1793242392,
    579.38
+  ],
+  [
+   1793242700,
+   569.65
   ]
  ],
  "closed": [
@@ -1105,6 +1109,13 @@
  ],
  "journal": [
   {
+   "ts": 1793242700.107612,
+   "title": "Automatic brain: status",
+   "text": "[Majors] Still in USDC on purpose. Versus their 20-day averages: SOL -4.6%, BTC -2.4%, ETH -4.4%, JUP -13.5%. The plan buys each asset the hour it closes 1% above its average; until then, cash is the position. Checked every hour.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261029-0258"
+  },
+  {
    "ts": 1793239565.8152182,
    "title": "Automatic brain: status",
    "text": "Market is neutral. Pockets: Cash 70% (target 30%), Majors 0% (target 25%), Established memes 10% (target 25%), Picks 18% (target 20%). Nothing to change this hour: every open position is inside its rules and no new candidate passed the filters.",
@@ -1371,7 +1382,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793242085.6278121,
+  "last_run": 1793242683.98059,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
@@ -1381,10 +1392,10 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793239563.6115115,
-   "text": "Market is neutral. Pockets: Cash 70% (target 30%), Majors 0% (target 25%), Established memes 10% (target 25%), Picks 18% (target 20%). Nothing to change this hour: every open position is inside its rules and no new candidate passed the filters."
+   "ts": 1793242685.5128784,
+   "text": "[Majors] Still in USDC on purpose. Versus their 20-day averages: SOL -4.6%, BTC -2.4%, ETH -4.4%, JUP -13.5%. The plan buys each asset the hour it closes 1% above its average; until then, cash is the position. Checked every hour."
   },
-  "trad_status": "SOL -4.5%, BTC -2.1%, ETH -4.1%, JUP -12.4%",
+  "trad_status": "SOL -4.6%, BTC -2.4%, ETH -4.4%, JUP -13.5%",
   "sol_ch24h": -2.0,
   "sol_vs_ma20": -0.0498
  }
