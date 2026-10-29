@@ -1,5 +1,5 @@
 {
- "ts": 1793293624.6572495,
+ "ts": 1793294223.74154,
  "regime": {
   "state": "risk_off",
   "ts": 1793293624.6498249,
@@ -25,8 +25,8 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 485.97,
-   "pct": 86.1,
+   "value_usd": 485.98,
+   "pct": 86.3,
    "positions": 0
   },
   {
@@ -41,19 +41,19 @@
    "key": "established",
    "name": "Established memes",
    "target_pct": 10,
-   "value_usd": 60.71,
-   "pct": 10.8,
+   "value_usd": 60.09,
+   "pct": 10.7,
    "positions": 2
   },
   {
    "key": "picks",
    "name": "Picks",
    "target_pct": 20,
-   "value_usd": 9.72,
-   "pct": 1.7,
+   "value_usd": 9.26,
+   "pct": 1.6,
    "positions": 1
   }
  ],
- "liquid_usd": 485.97,
+ "liquid_usd": 485.98,
  "trad_status": "SOL -2.9%, BTC -0.9%, ETH -2.8%, JUP -10.1%"
 }
