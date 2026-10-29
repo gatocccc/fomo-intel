@@ -1,0 +1,58 @@
+== 145_safu 2026-10-29T21:33:03Z ==
+
+=== $SAFU Bu8RyPaB3DDkDwPprp3Lj5SQcfru19KGFoXtKaCnpump → LIMPIO
+top 20: billeteras 0% · pools/curva 0% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': 0, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': ['Bonding curve not complete']}
+creador: {'creator': '7qnQTL9qYGVWEvVPMDygS8cfAxfmg2CvDpcKR3BiSEb6', 'lanzamientos': 74, 'muertos_<US$10K': 71, 'graduados_aprox': 0, 'muestra': 74}
+sin grupos con fondeador común
+detalle: []
+       $SAFU | SAFU                         | Bu8RyPaB3DDkDwPprp3Lj5SQcfru19KGFoXtKaCnpump | mcap     28,487 | liq    59,251 | vol24          0 | holders 1 | age 5921.2h | 24h None | market pumpfun
+        SAFU | Funds Are Safu               | A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it | mcap     25,681 | liq    43,583 | vol24     13,791 | holders 409 | age 0.1h | 24h None | market pumpfun-amm
+        SAFU | This coin is safu            | 9dafyc5vXhHJHa1LBKcJM35R5oMy2QxskQkKgqhoWcNp | mcap     20,230 | liq    20,232 | vol24          0 | holders 2 | age 9084.9h | 24h None | market meteora-curve
+     BINANCE | SafuPikachu4444Build         | A45sGEUrJjY6PXkqn6f8LSiAXZjVsKhURi2Vu61mfgiD | mcap     19,319 | liq    19,318 | vol24          0 | holders 20 | age 9359.9h | 24h None | market meteora-curve
+        SAFU | SAFU - Asset Recovery        | Xihdz69Q539Vry3knBA36od3rz177qe8Lxynu3GnBLV | mcap     18,225 | liq    18,225 | vol24          0 | holders 1 | age Noneh | 24h None | market meteora-curve
+     safufun | safufun                      | 8Mkr75pKGaMTRvk6ETsNWbSJ7UNjJ67A8aatumDQpump | mcap      7,491 | liq    15,904 | vol24          0 | holders 2 | age 264.0h | 24h None | market pumpfun
+     ZeroDay | Stay Safu by CZ              | GD5ePmLKBCyE1XwwRBQyv2Ksygj2Jycb2cbeECW3pump | mcap      7,111 | liq    15,261 | vol24          0 | holders 3 | age Noneh | 24h None | market pumpfun
+        SAFU | "S.A.F.U Dog"                | 8fKHBxxL7pwd9fevt34XYqGkmxiQjjXH4Vs8KMiLpump | mcap      7,157 | liq    13,988 | vol24          0 | holders 1 | age 4912.4h | 24h None | market pumpfun
+        Safu | Safu DOG                     | DZ7FCJTtghNRDehCxmuntN7XGaQ9PfGnZ3xbttMATt2k | mcap      6,138 | liq    13,172 | vol24          0 | holders None | age Noneh | 24h None | market pumpfun
+        SAFU | SAFU                         | 6yPxCwvyx5XZ9aKoB3VJj2dJtvYBCJPTtddHjZyUuBLV | mcap     12,155 | liq    11,911 | vol24          0 | holders 1 | age 11924.8h | 24h None | market meteora-curve
+--- detalle del mejor por liquidez
+{
+ "name": "SAFU",
+ "symbol": "$SAFU",
+ "mint": "Bu8RyPaB3DDkDwPprp3Lj5SQcfru19KGFoXtKaCnpump",
+ "created": {
+  "creator": "7qnQTL9qYGVWEvVPMDygS8cfAxfmg2CvDpcKR3BiSEb6",
+  "created_tx": "5eZwZ31p4jHJYzYh64SRtnL2JB5QE4pbF7WLRcj8r1LNm6DwLGiNyM7a1pMBjkUhBduYHxUgcNAMJNhQDdkMfbPx",
+  "created_time": 1771993198
+ },
+ "twitter": "https://x.com/Safunetwork",
+ "website": "https://t.co/bx7LaSjbap",
+ "telegram": "https://t.me/Safunetwork",
+ "mcap": 28487.29718372456,
+ "liq": 59251.201279587076,
+ "market": "pumpfun",
+ "lpBurn": 100,
+ "risk": {
+  "score": 3,
+  "rugged": false,
+  "top10": 0.0058,
+  "snipers": 0,
+  "insiders": 0,
+  "bundlers": 0,
+  "risks": [
+   "Bonding curve not complete"
+  ]
+ },
+ "holders": 1,
+ "buys24": 38,
+ "sells24": 21,
+ "txns": 59,
+ "events": {
+  "1h": 0,
+  "6h": 0,
+  "24h": 0
+ }
+}
+--- anti-rug (dd)
+== exit 0 ==

@@ -14,6 +14,17 @@
  },
  "events": [
   {
+   "ts": 1793309479.385678,
+   "src": "cointelegraph",
+   "title": "Binance investigates potential multibillion-dollar hack",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793308685.169305,
    "src": "cointelegraph",
    "title": "Polymarket suspended trading amid reports of user funds being drained",
@@ -105,21 +116,21 @@
    ]
   }
  ],
- "ts": 1793309360.1872814,
- "bear_score": 9,
+ "ts": 1793309660.1316452,
+ "bear_score": 11,
  "bull_score": 1,
  "price": {
   "SOL": {
-   "px": 97.421,
-   "ch15m": 0.005573848329393893,
-   "ch1h": -0.020136185792019923,
-   "ch4h": -0.041320606179885866
+   "px": 97.628,
+   "ch15m": 0.00013317625364961394,
+   "ch1h": -0.01067074715497407,
+   "ch4h": -0.03909448818897632
   },
   "BTC": {
-   "px": 79359.0,
-   "ch15m": 0.0016660986784808873,
-   "ch1h": -0.012640746500777622,
-   "ch4h": -0.021165587419056386
+   "px": 79517.0,
+   "ch15m": -0.0006535208435446416,
+   "ch1h": -0.005565143443135523,
+   "ch4h": -0.0197125104788205
   }
  },
  "mode": "live",
@@ -140,9 +151,9 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 97.421,
-  "ret_px": 0.0011,
-  "pnl_usd_est": 0.04,
-  "age_h": 0.08
+  "mark": 97.628,
+  "ret_px": -0.001,
+  "pnl_usd_est": -0.04,
+  "age_h": 0.17
  }
 }
