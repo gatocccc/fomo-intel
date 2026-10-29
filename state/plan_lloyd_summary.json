@@ -1,17 +1,17 @@
 {
- "now": 1793256275.4595444,
+ "now": 1793256584.7705734,
  "start_ts": 1793203599.7169404,
  "start_usd": 602.95,
  "start_sol": 5.9708,
  "goal_usd": 1205.9,
  "days": 365,
  "day": 1,
- "equity_usd": 589.67,
- "equity_sol": 5.8938,
+ "equity_usd": 590.4,
+ "equity_sol": 5.9128,
  "cash_sol": 0.0762,
- "positions_usd": 582.05,
- "sol_usd": 100.05,
- "mult": 0.978,
+ "positions_usd": 582.79,
+ "sol_usd": 99.85,
+ "mult": 0.979,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,11 +41,11 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.012940402026185838,
+   "last_usd": 0.013028357190949382,
    "sleeve": "picks",
    "from_plan": "agresivo",
-   "mult": 1.723,
-   "value_usd": 114.28
+   "mult": 1.734,
+   "value_usd": 115.06
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
@@ -64,11 +64,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.99941313010742,
+   "last_usd": 0.9994407535080021,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 399.42
+   "value_usd": 399.43
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -92,11 +92,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14003151853007434,
+   "last_usd": 0.13972886976473908,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.906,
-   "value_usd": 35.48
+   "mult": 0.904,
+   "value_usd": 35.4
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -120,11 +120,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3937607047792355,
+   "last_usd": 0.3933056566341837,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.942,
-   "value_usd": 22.9
+   "mult": 0.941,
+   "value_usd": 22.88
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -135,7 +135,7 @@
    "tokens_initial": 4903.463974,
    "sol_in": 0.10038678,
    "sol_out": 0.0,
-   "peak_usd": 0.0020422637836622114,
+   "peak_usd": 0.002047611119829968,
    "stop": 0.35,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -153,9 +153,9 @@
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-lloyd-20261029-0319",
    "sleeve": "picks",
-   "last_usd": 0.0020312884133195184,
-   "mult": 0.995,
-   "value_usd": 9.96
+   "last_usd": 0.002044340726125399,
+   "mult": 1.001,
+   "value_usd": 10.02
   }
  ],
  "equity": [
@@ -862,6 +862,10 @@
   [
    1793255997,
    597.3
+  ],
+  [
+   1793256306,
+   589.83
   ]
  ],
  "closed": [
@@ -1704,7 +1708,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793255883.9832313,
+  "last_run": 1793256485.11818,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -1718,7 +1722,7 @@
    "text": "[Established] Holding mostly USDC on purpose: 2 of 18 established memecoins above their 20-day average (best: SPX +6%, STONK +8%). This plan buys established memecoins only when they are trending up; today most are falling, and USDC has protected the balance. Checked every hour."
   },
   "trad_status": "SOL -4.7%, BTC -2.2%, ETH -4.3%, JUP -13.5%",
-  "sol_ch24h": -1.8,
-  "sol_vs_ma20": -0.0456
+  "sol_ch24h": -2.0,
+  "sol_vs_ma20": -0.0473
  }
 }
