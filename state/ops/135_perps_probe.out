@@ -1,0 +1,161 @@
+== 135_perps_probe 2026-10-29T02:34:03Z ==
+GET https://perps-api.jup.ag/v1/docs -> 200 (482919 bytes)
+spec saved to state/ops/perps_openapi.json (openapi 3.1.0, title=Jupiter Perpetuals API Specification)
+
+== paths ==
+  GET    /jlp-info   
+  POST   /jlp/burn   
+  POST   /jlp/mint   
+  POST   /loans/deposit-borrow   
+  GET    /loans/history   
+  GET    /loans/info   
+  GET    /loans/positions   
+  POST   /loans/repay-withdraw   
+  GET    /market-stats   
+  GET    /orders/expired   
+  DELETE /orders/limit   
+  GET    /orders/limit   
+  POST   /orders/limit   
+  PATCH  /orders/limit   
+  GET    /pool-info   
+  GET    /positions   
+  POST   /positions/close-all   
+  GET    /positions/collateral-limits   
+  POST   /positions/decrease   
+  POST   /positions/increase   
+  GET    /top-traders   
+  DELETE /tpsl   
+  POST   /tpsl   
+  PATCH  /tpsl   
+  GET    /trader-stats   
+  GET    /trades   
+  POST   /transaction/execute   
+
+== POST /positions/increase ==
+  request (application/json):
+    object
+      asset*: string enum=['BTC', 'ETH', 'SOL']  -- The asset or market to trade against
+      inputToken*: string enum=['BTC', 'ETH', 'SOL', 'USDC']  -- The token symbol for the input token used to fund the position
+      inputTokenAmount*: string  -- The amount of tokens for the input token to open the position or deposit collateral. NOTE: The token amount needs to be 
+      leverage: string  -- Leverage of the increase position, up to 1 decimal place. Either provide 'leverage' or 'sizeUsdDelta' to open a trade. M
+      maxSlippageBps*: string  -- The maximum slippage in (BPS) for the asset's price when executing trade
+      priorityFeeMicroLamports: string  -- Custom priority fee in microlamports for the transaction (1,000,000 microlamports = 1 lamport). If not set, the API will
+      side*: string enum=['long', 'short']  -- Side for the trade
+      sizeUsdDelta: string  -- The amount in USD to increase the position size by. Must be an integer representing the USD amount multiplied by 10^6 (1
+      tpsl: ['array', 'null']  -- TPSL requests to set. TPSL requests can only be set for positions that 150x leverage or below. Only 2 TPSLs can be set a
+        [items]: object
+          receiveToken*: string enum=['BTC', 'ETH', 'SOL', 'USDC']  -- The token to receive when the TPSL is executed.
+          triggerPrice*: string  -- Trigger price at which the TP / SL request will be executed. The value must be an integer corresponding to 6 decimal pla
+          requestType*: string enum=['tp', 'sl']  -- Pass in `tp` to set a take profit request or `sl` to set a stop loss request
+      walletAddress: string  -- The wallet address / public key for the trader, Required when opening a new position.
+  response 200 (application/json):
+    object
+      positionPubkey*: ['string', 'null']  -- The unique identifier (i.e. a program derived address) for the position account. Use this address to find the position a
+      quote*: object
+        averagePriceUsd*: string  -- The average price for the position in USD (raw value with 6 decimal places)
+        collateralUsdDelta*: string  -- The change in collateral amount in USD (raw value with 6 decimal places)
+        leverage*: string  -- The leverage amount for the position
+        liquidationPriceUsd*: string  -- The liquidation price in USD (raw value with 6 decimal places)
+        openFeeUsd*: string  -- The total fee in USD for opening the position or depositing collateral including base fees, borrowing fees, and price im
+        outstandingBorrowFeeUsd*: string  -- The outstanding borrow fees due / to be paid on depositing collateral to the position (raw value with 6 decimal places)
+        positionCollateralUsd*: string  -- The total position collateral size in USD after the increase (raw value with 6 decimal places)
+        positionSizeUsd*: string  -- The total position size in USD including leverage after the increase (raw value with 6 decimal places)
+        priceImpactFeeBps*: string  -- The price impact fee bps for opening the position based on the position size. For more info on how the price impact fee 
+        priceImpactFeeUsd*: string  -- The price impact fee in USD for opening the position based on the position size (raw value with 6 decimal places). For m
+        side*: string enum=['long', 'short']  -- The position side
+        sizeUsdDelta*: string  -- The change in position size in USD (raw value with 6 decimal places)
+        sizeTokenDelta*: string  -- The change in the position's size in the token amount for the position's collateral token.
+      serializedTxBase64*: ['string', 'null']  -- The serialized transaction (base64 encoded) containing the instructions and given parameters for the increase position r
+      tpsl*: array  -- TPSL requests created with the increase position
+        [items]: object
+          hasProfit*: boolean  -- Whether the TPSL request is profitable
+          pnlUsd*: string  -- The estimated PNL (USD) delta for the TPSL request
+          pnlPercent*: string  -- The estimated PNL percentage for the TPSL request
+          pubkey*: string  -- The pubkey for the TPSL. Use this address to find the TPSL account onchain
+          requestType*: string enum=['tp', 'sl']  -- The type of TPSL request
+      txMetadata*: ['object', 'null']  -- Contains relevant metadata for the serialized transaction. Null if no wallet address passed in.
+        blockhash*: string  -- The blockhash used for the serialized transaction. This blockhash must be used when submitting the signed increase posit
+        lastValidBlockHeight*: string  -- The block height used for the serialized transaction. This block height must be used when submitting the signed increase
+        transactionFeeLamports*: string  -- The transaction fee in lamports (1 SOL = 1,000,000,000 lamports)
+        accountRentLamports*: string  -- The account rent in lamports for creating the position account (1 SOL = 1,000,000,000 lamports)
+  response 400 (application/json):
+    object  -- Error object
+      code*: string
+      message*: string
+  response 404 (application/json):
+    object  -- Error object
+      code*: string
+      message*: string
+  response 422 (application/json):
+    object  -- Error object
+      code*: string
+      message*: string
+  response 500 (application/json):
+    object  -- Error object
+      code*: string
+      message*: string
+
+== POST /positions/decrease ==
+  request (application/json):
+    object
+      collateralUsdDelta: ['string', 'null']  -- The amount of collateral to withdraw in USD from the position. Must be an integer representing the USD amount multiplied
+      entirePosition: boolean  -- When set to `true`, this will close the position and transfer the remaining collateral and realised profits (if the posi
+      maxSlippageBps: string  -- The maximum slippage in (BPS) for the asset's price when executing the trade
+      positionPubkey*: string  -- The public key for the open position. Use the `GET positions` endpoint to fetch the public key for the trader's open pos
+      priorityFeeMicroLamports: string  -- Custom priority fee in microlamports for the transaction (1,000,000 microlamports = 1 lamport). If not set, the API will
+      receiveToken*: string enum=['BTC', 'ETH', 'SOL', 'USDC']  -- The token to receive.
+      sizeUsdDelta: ['string', 'null']  -- The amount in USD to decrease the position size by. Must be an integer representing the USD amount multiplied by 10^6 (1
+  response 200 (application/json):
+    object
+      positionPubkey*: string  -- The unique identifier (i.e. a program derived address) for the position account. Use this address to find the position a
+      quote*: object
+        closeFeeUsd*: string  -- The base close fee for closing the position or withdrawing collateral (raw value with 6 decimal places)
+        collateralUsdDelta*: string  -- The change in collateral amount in USD (raw value with 6 decimal places)
+        leverage*: string  -- The leverage amount for the position after the decrease
+        liquidationPriceUsd*: string  -- The liquidation price in USD (raw value with 6 decimal places)
+        outstandingBorrowFeeUsd*: string  -- The outstanding borrow fees due / to be paid on closing the position (raw value with 6 decimal places)
+        pnlAfterFeesUsd*: string  -- The position PNL after fees (raw value with 6 decimal places)
+        pnlAfterFeesPercent*: string  -- The PNL change (%) from closing the position after fees
+        pnlBeforeFeesUsd*: string  -- The position PNL before fees (raw value with 6 decimal places)
+        pnlBeforeFeesPercent*: string  -- The PNL change (%) from closing the position before fees
+        positionCollateralUsd*: string  -- The total position collateral size in USD after the decrease (raw value with 6 decimal places)
+        positionSizeUsd*: string  -- The total position size in USD including leverage after the decrease (raw value with 6 decimal places)
+        priceImpactFeeBps*: string  -- The price impact fee bps for closing the position based on the position size. For more info on how the price impact fee 
+        priceImpactFeeUsd*: string  -- The price impact fee for closing the position based on the position size (raw value with 6 decimal places). For more inf
+        side*: string enum=['long', 'short']  -- The position side
+        sizeUsdDelta*: string  -- The change in position size in USD (raw value with 6 decimal places)
+        totalFeeUsd*: string  -- The total fee in USD for closing or withdrawing collateral including base fees, borrowing fees, and price impact fees (r
+        transferAmountToken*: string  -- The collateral token amount to transfer to the owner after withdrawing collateral or closing the position (raw value)
+        transferAmountUsd*: string  -- The collateral token amount in USD to transfer to the owner (raw value with 6 decimal places)
+        transferTokenMint*: string  -- The mint address for the token used to transfer the collateral withdrawal or closing position amount
+      serializedTxBase64*: string  -- The serialized transaction (base64 encoded) containing the instructions and given parameters for the decrease position r
+      txMetadata*: object  -- Contains relevant metadata for the serialized transaction.
+        blockhash*: string  -- The blockhash used for the serialized transaction. This blockhash must be used when submitting the signed decrease posit
+        lastValidBlockHeight*: string  -- The block height used for the serialized transaction. This block height must be used when submitting the signed decrease
+        transactionFeeLamports*: string  -- The transaction fee in lamports (1 SOL = 1,000,000,000 lamports)
+        accountRentLamports*: string  -- The account rent in lamports for the transaction (1 SOL = 1,000,000,000 lamports)
+  response 400 (application/json):
+    object  -- Error object
+      code*: string
+      message*: string
+  response 404 (application/json):
+    object  -- Error object
+      code*: string
+      message*: string
+  response 422 (application/json):
+    object  -- Error object
+      code*: string
+      message*: string
+  response 500 (application/json):
+    object  -- Error object
+      code*: string
+=== positions
+2026-10-29 02:34:04,166 INFO perps: wallet G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek rpc https://mainnet.helius-rpc.com/
+{"wallet":"G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek","count":0,"positions":[]}
+=== quote SOL short 10 USDC 2x
+2026-10-29 02:34:04,364 INFO perps: wallet G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek rpc https://mainnet.helius-rpc.com/
+{"symbol":"SOL","side":"short","collateral_usdc":10.0,"leverage":2.0,"quote":{"collateralLessThanFees":false,"entryPriceUsd":"99.50","leverage":"1.99","liquidationPriceUsd":"148.98","openFeeUsd":"0.0120","outstandingBorrowFeeUsd":"0.0000","positionCollateralSizeUsd":"9.98","positionSizeTokenAmount":"19971998","positionSizeUsd":"19.97","priceImpactFeeBps":"1","priceImpactFeeUsd":"0.0020","quoteOutAmount":null,"quotePriceSlippagePct":null,"quoteSlippageBps":null,"side":"short","sizeTokenDelta":"200664996","expectedSizeUsdDelta":"19994412","expectedSizeUsdDeltaDiffPct":"0.14","sizeUsdDelta":"19.97","sizeUsdDeltaRaw":"19966418"},"position_pubkey":"7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx"}
+=== open SOL short 10 2 --dry (legacy → instant)
+2026-10-29 02:34:04,565 INFO perps: wallet G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek rpc https://mainnet.helius-rpc.com/
+{"ok":true,"sig":null,"position_pubkey":"7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx","quote":{"collateralLessThanFees":false,"entryPriceUsd":"99.49","leverage":"1.99","liquidationPriceUsd":"148.96","openFeeUsd":"0.0120","outstandingBorrowFeeUsd":"0.0000","positionCollateralSizeUsd":"9.98","positionSizeTokenAmount":"19971998","positionSizeUsd":"19.97","priceImpactFeeBps":"1","priceImpactFeeUsd":"0.0020","quoteOutAmount":null,"quotePriceSlippagePct":null,"quoteSlippageBps":null,"side":"short","sizeTokenDelta":"200689697","expectedSizeUsdDelta":"19994372","expectedSizeUsdDeltaDiffPct":"0.14","sizeUsdDelta":"19.97","sizeUsdDeltaRaw":"19966378"},"error":"dry run: not sent","path_used":"legacy","attempts":[{"path":"legacy","transaction_type":"legacy","require_keeper":false,"position_request":"3V7gcHJYKLQt9uFYZgsG8fVXL44m1mcU2YY4XgT1dYyJ","tx_metadata":{"blockhash":"J4nmnpgnMqsn7mhEdFSPGvkmGwgDq3sWDGb3yQ9Y3FFe","lastValidBlockHeight":"440737852","transactionFeeLamports":"5707","accountRentLamports":"5471160"},"sign_info":{"num_required":1,"signers":["G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek"],"ours_index":0,"missing":[]}}]}
+== exit 0 ==

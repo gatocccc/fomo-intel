@@ -1,0 +1,60 @@
+{
+ "experiments": [
+  {
+   "date": "2026-10-23",
+   "name": "Copying FOMO app traders",
+   "question": "Can we front-run or copy the best FOMO app wallets?",
+   "method": "On-chain audit of 60+ wallets, 7-day forward test",
+   "result": "Winners churn; copying after the fact loses to fees and slippage.",
+   "verdict": "rejected"
+  },
+  {
+   "date": "2026-10-25",
+   "name": "Technical signals on liquid memecoins",
+   "question": "Does any TA entry beat random in 27 liquid memecoins?",
+   "method": "90 days, out-of-sample half, random-entry control",
+   "result": "Every strategy lost 2–5% per trade; none beat random.",
+   "verdict": "rejected"
+  },
+  {
+   "date": "2026-10-26",
+   "name": "Tweet sniper on fresh launches",
+   "question": "Do influencer tweets predict pumps early enough to buy?",
+   "method": "Dataset of tweets vs. 6h outcomes, shadow run",
+   "result": "Signals arrive after the move; snipers own the first minutes.",
+   "verdict": "rejected"
+  },
+  {
+   "date": "2026-10-27",
+   "name": "Anti-rug: common-funder clustering",
+   "question": "Can we detect rugs by tracing who funded the top holders?",
+   "method": "Helius funded-by on top-20 holders + deployer history, applied live",
+   "result": "Caught 3 concentrated tokens before buying (CHICO, tSpaceX, LMAO!).",
+   "verdict": "adopted"
+  },
+  {
+   "date": "2026-10-28",
+   "name": "Perps signals on Hyperliquid",
+   "question": "Any short-term long/short edge in perps (funding, cascades, breakouts, pairs)?",
+   "method": "34 markets, 90 days, real funding, out-of-sample, random control",
+   "result": "None passed (t ≥ 2.5 and beat random). Volume breakouts lose clearly (−1.5%/trade).",
+   "verdict": "rejected"
+  },
+  {
+   "date": "2026-10-28",
+   "name": "Fast momentum in $300K–3M memecoins",
+   "question": "Does buying small caps already up 100%+ 'on a pullback' work with 12h time stops?",
+   "method": "Live, two trades",
+   "result": "Both stopped out within an hour (−26%, −28%). Turned off the same night.",
+   "verdict": "rejected"
+  },
+  {
+   "date": "2026-10-28",
+   "name": "Stops that only move up",
+   "question": "Does ratcheting the stop with the peak keep more of the winners?",
+   "method": "Live on GTA6/REMUS; rules 1.3x→entry, 1.6x→75% of peak",
+   "result": "REMUS closed +14% instead of round-tripping; GTA6 protected at 1.3x.",
+   "verdict": "adopted"
+  }
+ ]
+}
