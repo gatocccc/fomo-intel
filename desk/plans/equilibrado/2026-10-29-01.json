@@ -1,0 +1,8 @@
+{
+ "id": "equilibrado-2026-10-29-01",
+ "title": "Selling USELESS: one wallet funded holders with 15% of the supply",
+ "journal": "Tonight's anti-rug check looks at who funded the 20 largest holders of each coin. USELESS came back CONCENTRATED: four of its biggest holders, together 15.3% of all tokens, were set up and paid for by the same wallet (D89hHJT5…), and I could not confirm that wallet belongs to an exchange. A single hidden owner of 15% can sell into everyone else at any moment, so under this plan's rules the coin goes. The position was bought a few hours ago by the automatic trend rule, which does not run this check before buying; it is down about 2%, so the exit costs little. The money stays in the plan's cash for the next coin that passes the check. STONK also showed a 4-wallet group (4.2%), but those wallets were funded by a Binance hot wallet, which is normal for coins traded on exchanges, so it stays. SPX is clean.",
+ "orders": [
+  {"action": "sell", "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk", "frac": 1.0, "why": "anti-rug check: 4 top holders (15.3%) funded by the same non-exchange wallet"}
+ ]
+}
