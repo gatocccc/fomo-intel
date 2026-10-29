@@ -1,17 +1,17 @@
 {
- "now": 1793233177.5102184,
+ "now": 1793233488.5947099,
  "start_ts": 1793203690.827375,
  "start_usd": 200.16,
  "start_sol": 1.981514,
  "goal_usd": 400.32,
  "days": 30,
  "day": 1,
- "equity_usd": 193.55,
- "equity_sol": 1.8916,
+ "equity_usd": 193.15,
+ "equity_sol": 1.8898,
  "cash_sol": 0.493,
- "positions_usd": 143.11,
- "sol_usd": 102.32,
- "mult": 0.967,
+ "positions_usd": 142.77,
+ "sol_usd": 102.21,
+ "mult": 0.965,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,7 +32,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9995112736117833,
+   "last_usd": 0.999496558690613,
    "mult": 0.991,
    "value_usd": 42.42
   },
@@ -58,9 +58,9 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.15177186657434177,
-   "mult": 0.982,
-   "value_usd": 38.45
+   "last_usd": 0.15094704784233653,
+   "mult": 0.976,
+   "value_usd": 38.24
   },
   {
    "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
@@ -84,9 +84,9 @@
    "tp_done": [],
    "thesis": "USELESS: established memecoin back in an uptrend (+2% vs 20-day average, +13% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.16924700300384266,
-   "mult": 0.985,
-   "value_usd": 38.43
+   "last_usd": 0.1688719082612469,
+   "mult": 0.983,
+   "value_usd": 38.34
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -110,9 +110,9 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.40927078219951757,
-   "mult": 0.979,
-   "value_usd": 23.8
+   "last_usd": 0.40844261530097875,
+   "mult": 0.977,
+   "value_usd": 23.76
   }
  ],
  "equity": [
@@ -515,6 +515,10 @@
   [
    1793233084,
    193.67
+  ],
+  [
+   1793233395,
+   192.7
   ]
  ],
  "closed": [
