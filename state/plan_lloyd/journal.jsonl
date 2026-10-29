@@ -71,3 +71,5 @@
 {"ts": 1793283456.7038512, "title": "Profit taken", "text": "GTA6: sold 25% of GTA6 (take profit at 3x) for 0.4865 SOL", "kind": "automatic", "id": null}
 {"ts": 1793284034.5765975, "title": "Automatic brain: rebalance", "text": "", "kind": "decisión", "id": "auto-lloyd-20261029-1427"}
 {"ts": 1793284034.5767255, "title": "Execution", "text": "buy USDC: bought 48 USDC for 0.4848 SOL at $1.01083 (slippage +1.1%)", "kind": "execution", "id": "auto-lloyd-20261029-1427"}
+{"ts": 1793284637.8362923, "title": "Automatic brain: stops raised", "text": "GTA6: peaked at 3.38x; stop raised to 2.37x (was 2.23x).", "kind": "decisión", "id": "auto-lloyd-20261029-1437"}
+{"ts": 1793284637.836557, "title": "Execution", "text": "set 4kjruq: ajustó GTA6: stop=-1.368", "kind": "execution", "id": "auto-lloyd-20261029-1437"}
