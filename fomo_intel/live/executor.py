@@ -6,12 +6,17 @@ envía por el RPC de Helius. Después lee la transacción confirmada para regist
 (lo que de verdad entró y salió de la billetera), que es lo que se compara con el esperado para
 medir el slippage verdadero.
 
+Pases de efectivo (SOL<->USDC/USDT): primero por la Swap API de Jupiter, que no cobra comisión de plataforma
+(Solana Tracker cobra 0,5% por lado y en plomería interna era puro costo); si Jupiter falla, Solana Tracker como siempre.
+Se apaga con JUP_STABLE_SWAPS=0.
+
 PaperExecutor: mismas interfaces; simula el fill al precio del stream con slippage y fee fijos.
 """
 from __future__ import annotations
 
 import base64
 import logging
+import os
 import time
 from dataclasses import dataclass, field
 
@@ -22,6 +27,28 @@ from .config import SOL_MINT, LiveParams
 log = logging.getLogger("live.exec")
 SWAP_URL = "https://swap-v2.solanatracker.io/swap"
 PUMPPORTAL_LOCAL = "https://pumpportal.fun/api/trade-local"   # segunda vía: transacción directa contra pump.fun/PumpSwap (0,5% fee)
+# Pases SOL<->USDC/USDT por la Swap API de Jupiter: sin comisión de plataforma (Solana Tracker cobra 0,5% por lado, que en
+# plomería interna del libro —estacionar y desestacionar efectivo— era puro costo). Con JUPITER_API_KEY va a api.jup.ag; sin clave, lite-api.
+STABLE_MINTS = {"EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 6, "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": 6}
+JUP_SWAP_ON = os.getenv("JUP_STABLE_SWAPS", "1") == "1"
+JUP_KEY = os.getenv("JUPITER_API_KEY", "")
+JUP_BASE = "https://api.jup.ag/swap/v1" if JUP_KEY else "https://lite-api.jup.ag/swap/v1"
+
+
+def jup_swap_tx(frm: str, to: str, amount_raw: int, slippage_pct: float, payer: str, priority_fee_sol: float) -> tuple[str, dict]:
+    """Cotiza y arma (sin firmar) un swap por Jupiter. Devuelve (transacción base64 v0, cotización)."""
+    h = {"x-api-key": JUP_KEY} if JUP_KEY else {}
+    q = requests.get(f"{JUP_BASE}/quote", params={"inputMint": frm, "outputMint": to, "amount": int(amount_raw), "slippageBps": int(slippage_pct * 100),
+                                                   "restrictIntermediateTokens": "true"}, headers=h, timeout=15)
+    if q.status_code >= 400:
+        raise RuntimeError(f"jup quote {q.status_code}: {q.text[:160]}")
+    quote = q.json()
+    body = {"quoteResponse": quote, "userPublicKey": payer, "wrapAndUnwrapSol": True, "dynamicComputeUnitLimit": True,
+            "prioritizationFeeLamports": {"priorityLevelWithMaxLamports": {"maxLamports": int(max(priority_fee_sol, 0.0001) * 1e9), "priorityLevel": "medium"}}}
+    s = requests.post(f"{JUP_BASE}/swap", json=body, headers=h, timeout=20)
+    if s.status_code >= 400 or not (s.json() or {}).get("swapTransaction"):
+        raise RuntimeError(f"jup swap {s.status_code}: {s.text[:160]}")
+    return s.json()["swapTransaction"], quote
 
 
 @dataclass
@@ -163,32 +190,54 @@ class RealExecutor:
         t0 = time.time()
         f = Fill(False, side, mint, expected_price=ref_price)
         txn_b64, version, via = None, "v0", "solanatracker"
-        try:
-            if fast:
-                raise RuntimeError("modo rápido: directo a PumpPortal")
-            q = self.quote(frm, to, amount, self.p.swap_slippage_pct)
-            rate = q.get("rate") or {}
-            f.quote_impact_pct = round(impact_pct(rate), 2)
-            f.raw = {"rate": rate, "type": q.get("type") or q.get("txVersion"), "via": via}
-            # guardia real: precio efectivo de la cotización contra el precio de referencia fresco
+        if JUP_SWAP_ON and mint in STABLE_MINTS and not fast:
+            # pase de efectivo (SOL<->stable): Jupiter, sin comisión de plataforma; slippage corto porque el par es profundo
             try:
-                ai = float(rate.get("amountIn") or 0); ao = float(rate.get("amountOut") or 0)
-                if side == "buy" and ai > 0 and ao > 0 and ref_price > 0:
-                    eff = ai / ao
-                    f.quote_impact_pct = round((eff / ref_price - 1) * 100, 2)
-            except (TypeError, ValueError):
-                pass
-            if side == "buy" and f.quote_impact_pct > self.p.max_slippage_pct:
-                f.error = f"precio cotizado {f.quote_impact_pct:+.1f}% vs referencia (máx {self.p.max_slippage_pct}%)"; return f
-            txn_b64, version = q["txn"], (q.get("type") or q.get("txVersion") or "v0")
-        except Exception as e:  # noqa: BLE001
-            # segunda vía: PumpPortal arma la transacción directo contra la curva / PumpSwap
+                dec = STABLE_MINTS[mint]
+                if side == "buy":
+                    raw_amt = int(round(float(amount) * 1e9))
+                elif amount == "auto":
+                    raw_amt, _ = self.rpc.token_balance(self.pub, mint)
+                else:
+                    raw_amt = int(round(float(amount) * 10 ** dec))
+                if raw_amt <= 0:
+                    raise RuntimeError("monto cero")
+                txn_b64, quote = jup_swap_tx(frm, to, raw_amt, 1.0, self.pub, self.p.priority_fee_sol)
+                via = "jupiter"
+                ai = float(quote.get("inAmount") or 0); ao = float(quote.get("outAmount") or 0)
+                f.quote_impact_pct = round(float(quote.get("priceImpactPct") or 0) * 100, 3)
+                f.raw = {"via": via, "rate": {"amountIn": ai / (1e9 if side == "buy" else 10 ** dec), "amountOut": ao / (10 ** dec if side == "buy" else 1e9),
+                                              "priceImpact": quote.get("priceImpactPct"), "route": [r.get("swapInfo", {}).get("label") for r in quote.get("routePlan") or []]}}
+            except Exception as e:  # noqa: BLE001
+                log.warning("jupiter %s %s: %s; voy por Solana Tracker", side, mint[:6], e)
+                txn_b64, via = None, "solanatracker"; f.raw = {"jup_error": str(e)[:160]}
+        if not txn_b64:
             try:
-                pp_amount = amount if side == "buy" else ("100%" if amount == "auto" else amount)
-                txn_b64 = self._pumpportal_tx(side, mint, pp_amount, max(self.p.swap_slippage_pct, 15))
-                via = "pumpportal"; f.raw = {"via": via, "st_error": str(e)[:160]}
-            except Exception as e2:  # noqa: BLE001
-                f.error = f"cotización: {str(e)[:120]} | pumpportal: {str(e2)[:120]}"; return f
+                if fast:
+                    raise RuntimeError("modo rápido: directo a PumpPortal")
+                q = self.quote(frm, to, amount, self.p.swap_slippage_pct)
+                rate = q.get("rate") or {}
+                f.quote_impact_pct = round(impact_pct(rate), 2)
+                f.raw = {"rate": rate, "type": q.get("type") or q.get("txVersion"), "via": via}
+                # guardia real: precio efectivo de la cotización contra el precio de referencia fresco
+                try:
+                    ai = float(rate.get("amountIn") or 0); ao = float(rate.get("amountOut") or 0)
+                    if side == "buy" and ai > 0 and ao > 0 and ref_price > 0:
+                        eff = ai / ao
+                        f.quote_impact_pct = round((eff / ref_price - 1) * 100, 2)
+                except (TypeError, ValueError):
+                    pass
+                if side == "buy" and f.quote_impact_pct > self.p.max_slippage_pct:
+                    f.error = f"precio cotizado {f.quote_impact_pct:+.1f}% vs referencia (máx {self.p.max_slippage_pct}%)"; return f
+                txn_b64, version = q["txn"], (q.get("type") or q.get("txVersion") or "v0")
+            except Exception as e:  # noqa: BLE001
+                # segunda vía: PumpPortal arma la transacción directo contra la curva / PumpSwap
+                try:
+                    pp_amount = amount if side == "buy" else ("100%" if amount == "auto" else amount)
+                    txn_b64 = self._pumpportal_tx(side, mint, pp_amount, max(self.p.swap_slippage_pct, 15))
+                    via = "pumpportal"; f.raw = {"via": via, "st_error": str(e)[:160]}
+                except Exception as e2:  # noqa: BLE001
+                    f.error = f"cotización: {str(e)[:120]} | pumpportal: {str(e2)[:120]}"; return f
         try:
             signed = self._sign(txn_b64, version)
             # además del RPC, mandar la misma transacción firmada al block engine de Jito (en paralelo, sin esperar)

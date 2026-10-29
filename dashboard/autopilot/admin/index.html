@@ -164,7 +164,7 @@ function loadWallets() {
     k("tw-sum", `${live.length} wallets trading · ${usd(cap)} under the bot · ${cap >= st ? "+" : ""}${usd(cap - st)} (${pct(st ? cap / st - 1 : null)}) since start · ${live.filter(w => (w.pnl_usd || 0) >= 0).length} up, ${live.filter(w => (w.pnl_usd || 0) < 0).length} down`);
     h("tw", ws.map(w => {
       const cls = (w.pnl_usd || 0) >= 0 ? "up" : "down";
-      const status = !w.started ? "waiting for funds" : w.halted ? "stopped" : "trading";
+      const status = (!w.started ? "waiting for funds" : w.halted ? "stopped at floor" : w.closed_out ? "stopped (user)" : "trading") + (w.stray_usd > 1 ? ` · <span class="err">⚠ ${usd(w.stray_usd)} USDC sent by mistake</span>` : "");
       const who = w.book ? `book: ${w.book}` : w.risk_pct ? `risk ${w.risk_pct}%${w.profit_rule ? " · " + (RULE[w.profit_rule] || w.profit_rule) : ""}` : (w.plan || "—");
       const wal = w.wallet ? `<a href="https://solscan.io/account/${esc(w.wallet)}" target="_blank" rel="noopener"><code>${esc(w.wallet.slice(0, 4) + "…" + w.wallet.slice(-4))}</code></a>` : "—";
       return `<tr><td>${esc(w.owner)}${w.holder ? ' <span class="tag h">holder</span>' : ""}</td><td>${esc(who)}</td><td>${wal}</td><td>${when(w.since)}</td><td class="n">${usd(w.start_usd)}</td><td class="n">${usd(w.equity_usd)}</td><td class="n ${cls}">${w.pnl_usd == null ? "—" : usd(w.pnl_usd) + " (" + pct(w.pnl_pct) + ")"}</td><td class="n">${w.open ?? "—"}</td><td class="n">${w.closed ?? "—"} (${w.wins || 0})</td><td>${when(w.last_trade)}</td><td>${status}</td></tr>`;

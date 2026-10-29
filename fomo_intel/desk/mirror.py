@@ -39,7 +39,9 @@ HOUSE = Path("secrets/house_fees.json")
 USDC = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
 STABLES = {USDC, "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"}
 MIN_SOL = float(os.getenv("MIRROR_MIN_SOL", "0.2"))          # con esto arranca (la app pide US$300 al público; en la prueba, menos)
-MIN_LEG_USD = float(os.getenv("MIRROR_MIN_LEG_USD", "10"))
+MIN_LEG_USD = float(os.getenv("MIRROR_MIN_LEG_USD", "10"))      # tope del mínimo por operación; en billeteras chicas baja hasta MIN_LEG_FLOOR
+MIN_LEG_FLOOR = float(os.getenv("MIRROR_MIN_LEG_FLOOR", "3"))
+MIN_LEG_PCT = float(os.getenv("MIRROR_MIN_LEG_PCT", "2")) / 100   # 2% del patrimonio: en US$55 replica desde US$3; en US$1.000 desde US$10
 RESERVE_SOL = float(os.getenv("MIRROR_RESERVE_SOL", "0.02"))
 FEE_HOLDER = float(os.getenv("FEE_TRADE_HOLDER_PCT", "1")) / 100
 FEE_EXTERNAL = float(os.getenv("FEE_TRADE_EXTERNAL_PCT", "1.5")) / 100
@@ -126,9 +128,40 @@ class Stool:
             self.cfg["expected_sol"] = self.sol
             self.append("flows.jsonl", {"ts": time.time(), "kind": "deposit", "sol": round(diff, 6), "usd": round(usd, 2)})
             self.journal("Deposit received", f"{diff:.4f} SOL (${usd:.2f}) arrived in your stool.", kind="system")
+            if self.cfg.get("start_ts") and not self.cfg.get("halt") and not self.cfg.get("closed"):
+                self.cfg["floor_usd"] = round(float(self.cfg.get("floor_usd") or 0) + usd * FLOOR_FRAC, 2)
+                self.save()
+                self.sync_to_book(usd, title="New money put to work")
             self.save()
             return diff
         return 0.0
+
+    def min_leg(self) -> float:
+        """Mínimo por operación replicada, proporcional a la billetera (si no, una billetera chica no copiaría casi nada)."""
+        eq, _ = self.equity()
+        return max(MIN_LEG_FLOOR, min(MIN_LEG_USD, eq * MIN_LEG_PCT))
+
+    def check_stray_stables(self):
+        """USDC/USDT que llegó por transferencia (no por un pase nuestro): no cuenta como depósito y Lloyd no lo puede usar.
+        Se avisa una vez al usuario y queda marcado para el admin."""
+        if time.time() - float(self.cfg.get("_stray_ts") or 0) < 300:
+            return
+        self.cfg["_stray_ts"] = time.time()
+        stray = 0.0
+        for m in STABLES:
+            try:
+                raw, dec = self.svc.rpc.token_balance(self.pub, m)
+            except Exception:  # noqa: BLE001
+                continue
+            have = raw / (10 ** dec); ours = float((self.pos.get(m) or {}).get("tokens") or 0)
+            if have - ours > 1.0:
+                stray += have - ours
+        self.cfg["stray_usd"] = round(stray, 2)
+        if stray > 1.0 and not self.cfg.get("_stray_warned"):
+            self.cfg["_stray_warned"] = True
+            self.journal("Stablecoins do not count yet", f"${stray:,.2f} in USDC/USDT landed in your stool by transfer. Lloyd only works with SOL for now, so that money "
+                         "is parked and does not start or grow your stool. We will move it for you; ping us.", kind="system")
+        self.save()
 
     def equity(self):
         tokens_usd = 0.0
@@ -180,7 +213,7 @@ class Stool:
         if not f.ok:
             return f"buy failed: {f.error[:120]}"
         if fee:
-            self.take_fee(sol, "buy", symbol)
+            self.take_fee(f.sol, "buy", symbol)      # sobre lo que de verdad se gastó (el pedido puede haberse recortado)
         self.resync_expected()
         entry = f.price * self.svc.sol_usd
         cur = self.pos.get(mint)
@@ -192,6 +225,8 @@ class Stool:
             self.pos[mint] = {"mint": mint, "symbol": symbol, "opened_ts": time.time(), "entry_usd": entry, "tokens": f.tokens, "sol_in": f.sol, "sol_out": 0.0,
                               "sleeve": (meta or {}).get("sleeve") or ("cash" if not is_token else "picks"), "thesis": (meta or {}).get("thesis", "")}
         self.save()
+        if not is_token:
+            return f"parked {f.sol:.4f} SOL as {f.tokens:,.2f} USDC (Lloyd keeps idle cash in dollars)"
         return f"bought {f.tokens:,.2f} {symbol} for {f.sol:.4f} SOL"
 
     def sell(self, mint: str, frac: float, why: str) -> str:
@@ -222,6 +257,8 @@ class Stool:
                                          "hold_h": round((time.time() - p["opened_ts"]) / 3600, 1), "why": why, "sleeve": p.get("sleeve")})
             self.pos.pop(mint, None)
         self.save()
+        if not is_token:
+            return f"moved {f.tokens:,.2f} USDC back to SOL ({f.sol:.4f}) to pay for a buy"
         return f"sold {frac:.0%} of {p['symbol']} for {f.sol:.4f} SOL"
 
     # ---------- seguir al libro ----------
@@ -241,17 +278,19 @@ class Stool:
         self.save()
         self.sync_to_book()
 
-    def sync_to_book(self):
-        """Copia la composición actual del libro: cada posición (tokens y USDC) en la misma proporción."""
-        r = self.ratio()
+    def sync_to_book(self, usd: float | None = None, title="Matched the book"):
+        """Copia la composición actual del libro: cada posición (tokens y USDC) en la misma proporción.
+        Con `usd` copia solo esa plata nueva (depósito posterior al arranque), sin tocar lo que ya tiene."""
+        book = float(self.svc.book.get("equity_usd") or 0)
+        r = (usd / book if book > 0 else 0.0) if usd else self.ratio()
         res = []
         for bp in self.svc.book.get("positions") or []:
             val = float(bp.get("value_usd") or 0) * r
-            if val < MIN_LEG_USD:
+            if val < self.min_leg():
                 continue
             res.append(f"{bp.get('symbol')}: " + self.buy(bp["mint"], bp.get("symbol") or bp["mint"][:6], val / self.svc.sol_usd, "copying the book", {"sleeve": bp.get("sleeve"), "thesis": bp.get("thesis")}))
         if res:
-            self.journal("Matched the book", "Your stool now holds what Lloyd holds, in proportion:\n" + "\n".join(res), kind="auto")
+            self.journal(title, "Your stool now holds what Lloyd holds, in proportion:\n" + "\n".join(res), kind="auto")
 
     def follow(self):
         if not self.cfg.get("start_ts") or self.cfg.get("halt") or self.cfg.get("closed"):
@@ -270,7 +309,7 @@ class Stool:
             try:
                 if t["side"] == "buy":
                     sol = float(t["sol"]) * r
-                    if sol * self.svc.sol_usd < MIN_LEG_USD:
+                    if sol * self.svc.sol_usd < self.min_leg():
                         self.append("skipped.jsonl", {"ts": time.time(), "sig": sig, "symbol": sym, "usd": round(sol * self.svc.sol_usd, 2), "why": "too small"}); continue
                     lp = lloyd_pos.get(mint) or {}
                     res = self.buy(mint, sym, sol, why, {"sleeve": lp.get("sleeve"), "thesis": lp.get("thesis")})
@@ -280,7 +319,7 @@ class Stool:
                     lp = lloyd_pos.get(mint)
                     frac = 1.0 if not lp or lp.get("tokens", 0) <= 0 else min(1.0, float(t["tokens"]) / (float(lp["tokens"]) + float(t["tokens"])))
                     val = self.pos[mint]["tokens"] * frac * (self.svc.price(mint) or self.pos[mint].get("last_usd") or 0)
-                    if frac < 0.98 and val < MIN_LEG_USD:
+                    if frac < 0.98 and val < self.min_leg():
                         self.append("skipped.jsonl", {"ts": time.time(), "sig": sig, "symbol": sym, "usd": round(val, 2), "why": "too small"}); continue
                     res = self.sell(mint, frac, why)
                 self.journal("Lloyd moved, so did you", f"{sym}: {res}", kind="auto")
@@ -313,8 +352,22 @@ class Stool:
         self.cfg["closed"] = True; self.save()
         self.journal("Everything to SOL", "\n".join(res) or "Nothing to sell.", kind="system")
 
+    def resume(self):
+        """Vuelve a arrancar una billetera parada (Stop o piso): nuevo punto de partida con lo que hay, y copia el libro otra vez."""
+        self.cfg["halt"] = False; self.cfg["closed"] = False; self.cfg.pop("_missing", None)
+        self.balance(); eq, _ = self.equity()
+        self.cfg["start_ts"] = time.time(); self.cfg["start_usd"] = round(eq, 2); self.cfg["floor_usd"] = round(eq * FLOOR_FRAC, 2)
+        self.seen = [t.get("sig") for t in tail(LLOYD / "trades.jsonl", 500) if t.get("sig")]
+        self.journal("Back on the stool", f"Lloyd is trading for you again with ${eq:.2f}. New hard floor: ${self.cfg['floor_usd']:.0f}.", kind="system")
+        self.save()
+        self.sync_to_book(title="Matched the book again")
+
     def requests(self):
-        c = UDIR / f"{self.uid}_CLOSE"; w = UDIR / f"{self.uid}_WITHDRAW"; t = UDIR / f"{self.uid}_TIP"
+        c = UDIR / f"{self.uid}_CLOSE"; w = UDIR / f"{self.uid}_WITHDRAW"; t = UDIR / f"{self.uid}_TIP"; rs = UDIR / f"{self.uid}_RESUME"
+        if rs.exists():
+            rs.unlink()
+            if self.cfg.get("start_ts") and (self.cfg.get("closed") or self.cfg.get("halt")):
+                self.resume()
         if t.exists():
             try: sol = float((jl(t, {}) or {}).get("sol") or 0)
             except Exception: sol = 0.0  # noqa: BLE001
@@ -360,7 +413,7 @@ class Stool:
         s = {"now": now, "user_id": self.uid, "wallet": self.pub, "type": c.get("type"), "fee_pct": c.get("fee_pct"), "started": bool(c.get("start_ts")), "since": c.get("start_ts"),
              "halt": bool(c.get("halt")), "closed": bool(c.get("closed")), "sol_usd": round(su, 2), "cash_sol": round(self.sol, 4),
              "equity_usd": round(eq, 2), "deposited_usd": round(dep, 2), "withdrawn_usd": round(wd, 2), "pnl_usd": round(eq + wd + float(c.get("tipped_sol") or 0) * su - dep, 2) if dep else None,
-             "pnl_pct": round((eq + wd + float(c.get("tipped_sol") or 0) * su) / dep - 1, 4) if dep else None, "fees_usd": round(float(c.get("fees_sol") or 0) * su, 2), "min_sol": MIN_SOL,
+             "pnl_pct": round((eq + wd + float(c.get("tipped_sol") or 0) * su) / dep - 1, 4) if dep else None, "fees_usd": round(float(c.get("fees_sol") or 0) * su, 2), "min_sol": MIN_SOL, "stray_usd": c.get("stray_usd") or 0,
              "positions": [{"token": p["symbol"], "mint": m, "sleeve": p.get("sleeve"), "multiple": round((p.get("last_usd") or p["entry_usd"]) / p["entry_usd"], 3) if p["entry_usd"] else None,
                             "value_usd": round(p["tokens"] * (p.get("last_usd") or p["entry_usd"]), 2), "opened": p.get("opened_ts"), "thesis": p.get("thesis")} for m, p in self.pos.items() if m not in STABLES],
              "cash_usd": round(self.sol * su + sum(p["tokens"] * (p.get("last_usd") or 1) for m, p in self.pos.items() if m in STABLES), 2),
@@ -453,7 +506,7 @@ class Mirror:
                 allp = []
                 for s in list(self.stools.values()):
                     try:
-                        s.balance(); s.detect_deposit(); s.start(); s.requests(); s.follow()
+                        s.balance(); s.detect_deposit(); s.check_stray_stables(); s.start(); s.requests(); s.follow()
                         eq, tu = s.equity(); s.floor_check(eq); s.sweep_fees()
                         if now - last_pub > 30:
                             allp.append({k: v for k, v in s.publish(eq, tu).items() if k not in ("equity", "closed", "trades", "journal", "positions")} | {"email": s.row["email"], "name": s.row["name"]})

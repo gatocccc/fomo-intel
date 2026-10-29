@@ -236,6 +236,17 @@ def close_all(u: sqlite3.Row) -> tuple[int, dict]:
     return 200, {"ok": True}
 
 
+def resume(u: sqlite3.Row) -> tuple[int, dict]:
+    """Vuelve a poner a Lloyd a trabajar en una billetera parada (Stop o piso). El motor de seguidores la rearranca con lo que hay."""
+    if not u["bot_wallet"]:
+        return 409, {"error": "You do not have a stool yet."}
+    with db() as c:
+        c.execute("UPDATE users SET status='seated', close_requested=NULL WHERE id=?", (u["id"],))
+    (STATE / "users").mkdir(parents=True, exist_ok=True)
+    (STATE / "users" / f"{u['id']}_RESUME").write_text(str(time.time()))
+    return 200, {"ok": True}
+
+
 def withdraw(u: sqlite3.Row) -> tuple[int, dict]:
     if not u["bot_wallet"]:
         return 409, {"error": "You do not have a stool yet."}
@@ -381,7 +392,7 @@ def wallet_view(d: dict, full: bool = False) -> dict:
            "start_usd": start, "equity_usd": eq, "pnl_usd": round(eq - start, 2) if start and eq is not None else None,
            "pnl_pct": round(eq / start - 1, 4) if start and eq else None, "cash_sol": d.get("cash_sol"),
            "open": len(d.get("positions") or []), "closed": d.get("n_closed", len(closed)), "wins": d.get("wins"),
-           "realized_usd": d.get("realized_usd"), "halted": d.get("halt"), "closed_out": d.get("closed") if isinstance(d.get("closed"), bool) else None, "updated": d.get("now"),
+           "realized_usd": d.get("realized_usd"), "halted": d.get("halt"), "closed_out": d.get("closed") if isinstance(d.get("closed"), bool) else None, "updated": d.get("now"), "stray_usd": d.get("stray_usd") or 0,
            "fees_usd": d.get("fees_usd"),
            "last_trade": (d.get("trades") or [{}])[0].get("ts") if d.get("trades") else None,
            "positions": [{"token": x.get("symbol"), "mint": x.get("mint"), "multiple": x.get("mult"), "value_usd": x.get("value_usd"),
@@ -587,6 +598,8 @@ class H(BaseHTTPRequestHandler):
             code, out = close_all(usr); return self._send(code, out)
         if path == "/api/me/withdraw":
             code, out = withdraw(usr); return self._send(code, out)
+        if path == "/api/me/resume":
+            code, out = resume(usr); return self._send(code, out)
         if path == "/api/me/tip":
             code, out = tip_lab(usr, b); return self._send(code, out)
         if path == "/api/holder/verify":

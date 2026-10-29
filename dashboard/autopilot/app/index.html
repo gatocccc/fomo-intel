@@ -119,7 +119,7 @@ details.settings .in{padding:0 22px 22px;display:grid;gap:22px}
       <div class="kv3"><div><b>You put in</b><span id="m-dep">—</span></div><div><b>Fees so far</b><span id="m-fees">—</span></div><div><b>Since</b><span id="m-since">—</span></div></div>
       <div class="deposit" id="deposit" hidden>
         <h3 id="dep-t">Fund your stool</h3>
-        <p id="dep-p">Send SOL to this address from any wallet or exchange. Lloyd starts trading for you the moment it lands.</p>
+        <p id="dep-p">Send <b>SOL only</b> (not USDC or any other token) to this address from any wallet or exchange. Lloyd starts trading for you the moment it lands.</p>
         <div class="addr"><code id="dep-addr">—</code><button class="btn sm" type="button" id="dep-copy">Copy</button></div>
       </div>
       <div class="where" id="where">
@@ -138,6 +138,8 @@ details.settings .in{padding:0 22px 22px;display:grid;gap:22px}
           <p><b>Sure?</b> Everything is sold at market and Lloyd stops trading for you. You can withdraw afterwards, or ask us to start again.</p>
           <div class="cta"><button class="btn danger" type="button" id="stop-yes">Yes, stop</button><button class="btn ghost" type="button" id="stop-no">Keep going</button></div>
         </div>
+        <button class="btn" type="button" id="act-resume" hidden>Start again</button>
+        <p id="resume-p" hidden>Puts Lloyd back to work with whatever is in your stool right now. New floor from here.</p>
         <button class="btn" type="button" id="act-wd">Withdraw everything</button>
         <p>Sells to SOL and sends it all to a wallet of yours. Takes a couple of minutes.</p>
         <div class="confirm" id="c-wd" hidden>
@@ -325,7 +327,9 @@ function fillMoney(u) {
   $("#st-journal").innerHTML = ((s && s.journal) || []).slice(0, 5).map(j => `<li><time>${L.when(j.ts)}</time><b>${L.esc(j.title)}</b><p>${L.esc(j.text)}</p></li>`).join("") || `<li><p>${u.bot_wallet ? "Nothing yet. The first note appears when your deposit lands." : "Your stool's story starts when your seat opens."}</p></li>`;
   // actions
   const can = !!u.bot_wallet && started && !s.closed && !s.halt;
-  $("#act-stop").disabled = !can; $("#act-wd").disabled = !(u.bot_wallet && s && (s.equity_usd || 0) > 1);
+  $("#act-stop").disabled = !can;
+  const stopped = !!u.bot_wallet && started && (s.closed || s.halt);
+  $("#act-stop").hidden = stopped; $("#act-stop").nextElementSibling.hidden = stopped; $("#act-resume").hidden = !stopped; $("#resume-p").hidden = !stopped; $("#act-wd").disabled = !(u.bot_wallet && s && (s.equity_usd || 0) > 1);
   $("#tip-amts").querySelectorAll("button").forEach(b => b.disabled = !(u.bot_wallet && s && (s.cash_sol || 0) > 0.06));
 }
 
@@ -340,6 +344,13 @@ $("#stop-yes").onclick = async () => {
   try { await post("/api/me/close_all"); $("#c-stop").hidden = true; st.className = "status ok"; st.textContent = "Done. Lloyd is selling everything to SOL; your money shows up here within a few minutes."; setTimeout(load, 20000); }
   catch (e) { st.className = "status err"; st.textContent = e.message; }
   finally { $("#stop-yes").disabled = false; }
+};
+// resume
+$("#act-resume").onclick = async () => {
+  const st = $("#act-st"); $("#act-resume").disabled = true;
+  try { await post("/api/me/resume"); st.className = "status ok"; st.textContent = "Lloyd is getting back on your stool; give it a minute."; setTimeout(load, 20000); }
+  catch (e) { st.className = "status err"; st.textContent = e.message; }
+  finally { $("#act-resume").disabled = false; }
 };
 // withdraw
 $("#act-wd").onclick = () => { $("#c-wd").hidden = false; $("#c-stop").hidden = true; $("#act-st").textContent = ""; $("#wd-addr").focus(); };
