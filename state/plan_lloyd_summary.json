@@ -1,16 +1,16 @@
 {
- "now": 1793296776.3963568,
+ "now": 1793297084.0986176,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 562.98,
- "equity_sol": 5.5813,
+ "equity_usd": 563.2,
+ "equity_sol": 5.5771,
  "cash_sol": 0.0862,
- "positions_usd": 554.28,
- "sol_usd": 100.87,
+ "positions_usd": 554.49,
+ "sol_usd": 100.98,
  "mult": 1.028,
  "halt": false,
  "pause": false,
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9995310093849389,
+   "last_usd": 0.9995259263302696,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.99,
-   "value_usd": 485.34
+   "value_usd": 485.33
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -60,11 +60,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14768797167396194,
+   "last_usd": 0.14814364895372098,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.955,
-   "value_usd": 37.42
+   "mult": 0.958,
+   "value_usd": 37.53
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -88,11 +88,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.38482664066611233,
+   "last_usd": 0.3838800700103536,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.921,
-   "value_usd": 22.38
+   "mult": 0.919,
+   "value_usd": 22.33
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -121,9 +121,9 @@
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-lloyd-20261029-0319",
    "sleeve": "picks",
-   "last_usd": 0.0018648382190849105,
-   "mult": 0.913,
-   "value_usd": 9.14
+   "last_usd": 0.0018968451360578612,
+   "mult": 0.929,
+   "value_usd": 9.3
   }
  ],
  "equity": [
@@ -1362,6 +1362,10 @@
   [
    1793296528,
    562.71
+  ],
+  [
+   1793296837,
+   563.15
   ]
  ],
  "closed": [
