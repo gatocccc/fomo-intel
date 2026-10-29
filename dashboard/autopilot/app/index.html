@@ -81,7 +81,7 @@
 
     <div class="card">
       <h2 class="big" style="font-size:26px">Nonco Genesis holder?</h2>
-      <p class="hint">Holders pay no fee on profits and get priority seats. Sign a message with the Ethereum wallet that holds your Canvas or Legacy duck. It moves no funds and costs no gas. One person, one account, however many ducks you hold.</p>
+      <p class="hint">Holders never pay a cent on their profits and get the first seats. Sign a message with the Ethereum wallet that holds your Canvas or Legacy duck. It moves no funds and costs no gas. One person, one account, however many ducks you hold.</p>
       <div class="duck" style="margin-top:16px"><button class="btn ghost" type="button" id="eth-btn">Verify with my Ethereum wallet</button><span class="status" id="eth-st" role="status"></span></div>
     </div>
 
@@ -98,8 +98,8 @@
       <div class="dial-block">
         <h3><span class="n">1</span>How much</h3>
         <div class="amt">
-          <div class="f"><label for="s-amount">Amount you plan to fund (USD)</label><input id="s-amount" name="amount_usd" type="number" min="20" max="100000" step="10" value="300" inputmode="decimal"></div>
-          <p class="hint" style="margin:0">From US$20. Add or withdraw whenever you like.</p>
+          <div class="f"><label for="s-amount">Amount you plan to fund (USD)</label><input id="s-amount" name="amount_usd" type="number" min="300" max="100000" step="10" value="300" inputmode="decimal"></div>
+          <p class="hint" style="margin:0" id="s-min">From US$300. Add or withdraw whenever you like.</p>
         </div>
       </div>
 
@@ -141,7 +141,7 @@
 <script>
 const $ = s => document.querySelector(s);
 const L = window.Lloyd, post = L.post;
-let fees = {trade_pct_holder: 1, trade_pct_external: 2, success_pct_external: 10};
+let fees = {trade_pct_holder: 1, trade_pct_external: 1, success_pct_external: 15, min_deposit_usd: 300};
 let LEVELS = null;
 let RULES = [{key: "run", name: "Let it run"}, {key: "lock", name: "Lock in at a multiple"}, {key: "sweep", name: "Sweep monthly"}];
 const RULE_BLURB = {
@@ -204,7 +204,7 @@ function fill(u) {
   const holder = u.holder_status === "holder";
   $("#d-type").innerHTML = holder ? `<span class="badge ok">Genesis holder · ${L.esc(u.ducks)} ducks</span>`
     : u.holder_status === "pending" ? `<span class="badge">Holder check pending</span>` : `<span class="badge">Standard</span>`;
-  $("#d-fees").textContent = holder || u.holder_status === "pending" ? `${fees.trade_pct_holder}% per trade, nothing on profits` : `${fees.trade_pct_external}% per trade + ${fees.success_pct_external}% of every winning trade`;
+  $("#d-fees").textContent = holder || u.holder_status === "pending" ? `${fees.trade_pct_holder}% on each token trade, included in the price. Nothing on profits.` : `${fees.trade_pct_external}% on each token trade, included in the price, plus ${fees.success_pct_external}% of your net monthly profit.`;
   if (u.eth) { $("#eth-st").className = "status ok"; $("#eth-st").textContent = `Linked: ${u.eth.slice(0, 6)}…${u.eth.slice(-4)}`; }
   const f = $("#f-set");
   if (u.amount_usd) f.amount_usd.value = u.amount_usd;
@@ -284,7 +284,7 @@ function load() {
     .catch(() => showAuth(location.hash === "#login" ? "login" : "signup"));
 }
 L.get("/api/config").then(c => {
-  if (c.fees) fees = c.fees;
+  if (c.fees) { fees = c.fees; if (fees.min_deposit_usd) { $("#s-amount").min = fees.min_deposit_usd; $("#s-min").textContent = `From US$${fees.min_deposit_usd}. Add or withdraw whenever you like.`; } }
   if (Array.isArray(c.risk_levels) && c.risk_levels.length) LEVELS = c.risk_levels;
   if (Array.isArray(c.profit_rules) && c.profit_rules.length) RULES = c.profit_rules;
 }).catch(() => {}).finally(load);

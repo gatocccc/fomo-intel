@@ -174,7 +174,7 @@ function loadWallets() {
 function loadSummary() {
   get("/api/admin/resumen").then(d => {
     const f = d.fees || {};
-    k("upd", `Updated ${new Date().toLocaleTimeString("en-US")} · refreshes every minute · fees ${f.trade_pct_holder ?? f.trade_pct ?? "—"}% / ${f.trade_pct_external ?? "—"}% per trade, ${f.success_pct_external ?? "—"}% of winning trades for non-holders`);
+    k("upd", `Updated ${new Date().toLocaleTimeString("en-US")} · refreshes every minute · fees: ${f.trade_pct_holder ?? "—"}% on token trades (all), ${f.success_pct_external ?? "—"}% of net monthly profit (non-holders), min deposit $${f.min_deposit_usd ?? "—"}`);
     k("k-ap", d.users ?? "—"); k("k-24", d.new_24h ?? "—"); k("k-li", d.logins_24h ?? "—"); k("k-h", `${d.holders ?? "—"} / ${d.holders_pending ?? "—"}`);
     k("k-m", usd(d.pledged_usd)); k("k-act", d.active_wallets ?? "—"); k("k-cap", usd(d.capital_under_bot_usd)); k("k-fee", usd(d.fees_usd));
     const by = d.by_risk || d.by_plan || {};

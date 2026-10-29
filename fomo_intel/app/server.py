@@ -42,8 +42,12 @@ APP.mkdir(parents=True, exist_ok=True)
 DB = APP / "app.db"
 PORT = int(os.getenv("APP_PORT", "8770"))
 ETH_RPC = os.getenv("ETH_RPC_URL", "https://ethereum-rpc.publicnode.com")
-FEES = {"trade_pct_holder": float(os.getenv("FEE_TRADE_HOLDER_PCT", "1")), "trade_pct_external": float(os.getenv("FEE_TRADE_EXTERNAL_PCT", "2")),
-        "success_pct_external": float(os.getenv("FEE_SUCCESS_PCT", "10"))}
+# Pricing (decisión de Gastón, 29/10/2026): 1% embebido en cada compra/venta de tokens para todos (no en los pases a USDC/SOL);
+# holders nada más; externos además 15% de la ganancia neta mensual con marca de agua; mínimo US$300; sin cuota de ingreso.
+FEES = {"trade_pct_holder": float(os.getenv("FEE_TRADE_HOLDER_PCT", "1")), "trade_pct_external": float(os.getenv("FEE_TRADE_EXTERNAL_PCT", "1")),
+        "success_pct_external": float(os.getenv("FEE_SUCCESS_PCT", "15")), "success_pct_holder": 0.0,
+        "trade_fee_on": "token trades only", "success_basis": "net monthly profit above the previous high (high-water mark)",
+        "min_deposit_usd": float(os.getenv("MIN_DEPOSIT_USD", "300"))}
 SOL_RPC = os.getenv("SOLANA_RPC_URL") or f"https://mainnet.helius-rpc.com/?api-key={os.getenv('HELIUS_API_KEY', '')}"
 SESSION_DAYS = 30
 EMAIL = re.compile(r"^[^@\s]{1,64}@[^@\s]{1,190}\.[^@\s]{2,}$")
@@ -171,7 +175,7 @@ def save_settings(u: sqlite3.Row, b: dict) -> tuple[int, dict]:
     plan = str(b.get("plan") or "")
     at_goal = str(b.get("at_goal") or "lock")
     sol = str(b.get("sol_wallet") or "").strip()
-    if not (20 <= amount <= 100000): return 400, {"error": "Amount must be between $20 and $100,000."}
+    if not (FEES["min_deposit_usd"] <= amount <= 100000): return 400, {"error": f"Amount must be between ${FEES['min_deposit_usd']:.0f} and $100,000."}
     if not (1.01 <= goal <= 100): return 400, {"error": "Goal must be between x1.01 and x100."}
     if not (7 <= days <= 120): return 400, {"error": "Timeframe must be between 7 and 120 days."}
     if not (5 <= stop <= 95): return 400, {"error": "Your stop must be between 5% and 95%."}
@@ -193,7 +197,7 @@ def save_dials(u: sqlite3.Row, b: dict) -> tuple[int, dict]:
     except (TypeError, ValueError):
         return 400, {"error": "Check the numbers."}
     rule = str(b.get("profit_rule") or "run"); sol = str(b.get("sol_wallet") or "").strip()
-    if not (20 <= amount <= 100000): return 400, {"error": "Amount must be between $20 and $100,000."}
+    if not (FEES["min_deposit_usd"] <= amount <= 100000): return 400, {"error": f"Amount must be between ${FEES['min_deposit_usd']:.0f} and $100,000."}
     if risk not in {r["pct"] for r in RISK_LEVELS}: return 400, {"error": "Pick a risk level."}
     if rule not in {r["key"] for r in PROFIT_RULES}: return 400, {"error": "Pick what happens with profits."}
     if rule == "lock" and (mult is None or not (1.2 <= mult <= 10)): return 400, {"error": "Pick a multiple between x1.2 and x10 to lock in at."}
