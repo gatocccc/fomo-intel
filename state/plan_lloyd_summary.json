@@ -1,16 +1,16 @@
 {
- "now": 1793270999.7469535,
+ "now": 1793271340.1908066,
  "start_ts": 1793203599.7169404,
- "start_usd": 602.95,
- "start_sol": 5.9708,
- "goal_usd": 1205.9,
+ "start_usd": 547.6,
+ "start_sol": 5.4208,
+ "goal_usd": 1095.2,
  "days": 365,
  "day": 1,
- "equity_usd": 609.5,
- "equity_sol": 6.063,
- "cash_sol": 0.0762,
- "positions_usd": 601.84,
- "sol_usd": 100.53,
+ "equity_usd": 553.69,
+ "equity_sol": 5.501,
+ "cash_sol": 0.3404,
+ "positions_usd": 519.43,
+ "sol_usd": 100.65,
  "mult": 1.011,
  "halt": false,
  "pause": false,
@@ -41,7 +41,7 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.015143407718286367,
+   "last_usd": 0.015143758872799961,
    "sleeve": "picks",
    "from_plan": "agresivo",
    "mult": 2.016,
@@ -52,10 +52,10 @@
    "symbol": "USDC",
    "opened_ts": 1793204947.898395,
    "entry_usd": 1.0083260823242841,
-   "tokens": 399.656392,
+   "tokens": 317.296452,
    "tokens_initial": 549.0662669999999,
    "sol_in": 5.47924614,
-   "sol_out": 1.453846492,
+   "sol_out": 2.268072527,
    "peak_usd": 1.0075943560922527,
    "stop": 0.05,
    "trail": 0.5,
@@ -64,11 +64,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994755558908119,
+   "last_usd": 0.9994780444830385,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 399.45
+   "value_usd": 317.13
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -92,11 +92,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14258290111007438,
+   "last_usd": 0.14282295039015358,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.922,
-   "value_usd": 36.12
+   "mult": 0.924,
+   "value_usd": 36.18
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -120,7 +120,7 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3964548210763819,
+   "last_usd": 0.3965388905303578,
    "sleeve": "established",
    "from_plan": "equilibrado",
    "mult": 0.949,
@@ -153,9 +153,9 @@
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-lloyd-20261029-0319",
    "sleeve": "picks",
-   "last_usd": 0.001930737977678951,
-   "mult": 0.945,
-   "value_usd": 9.47
+   "last_usd": 0.0018983127998414453,
+   "mult": 0.93,
+   "value_usd": 9.31
   }
  ],
  "equity": [
@@ -1054,6 +1054,18 @@
   [
    1793270845,
    609.31
+  ],
+  [
+   1793271155,
+   607.49
+  ],
+  [
+   1793271244,
+   607.04
+  ],
+  [
+   1793271309,
+   552.51
   ]
  ],
  "closed": [
@@ -1157,6 +1169,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793271246.95222,
+   "side": "sell",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.814226035,
+   "tokens": 82.35994,
+   "price_usd": 0.994951613562,
+   "why": "fund the research lab",
+   "sig": "2jGNHTwGKYKcGCE1j496idqJgAQhs7NKb24rVSJAzPsN7xsjQdoRTGc4roKmr1xvaZ2EckR1CJT922M69S9R3UUB",
+   "error": "",
+   "id": "lloyd-2026-10-29-01"
+  },
   {
    "ts": 1793243967.0211153,
    "side": "buy",
@@ -1531,6 +1557,26 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793271308.2244046,
+   "title": "A tenth of the book moves to the lab",
+   "kind": "system",
+   "text": "0.55 SOL ($55.35) moved to Lloyd's lab wallet (AXbTdJLRephZMSAMoiRwfbCBWXFYtfHeLmbPj9TZk69M), where new ideas are tested live with small size before they touch the main book. The book's starting balance was lowered by the same amount, so this is not shown as a loss."
+  },
+  {
+   "ts": 1793271246.9544528,
+   "title": "Execution",
+   "text": "sell EPjFWd: sold 15% of USDC (fund the research lab) for 0.8142 SOL",
+   "kind": "execution",
+   "id": "lloyd-2026-10-29-01"
+  },
+  {
+   "ts": 1793271246.9542532,
+   "title": "Funding the lab",
+   "text": "About a tenth of the book (roughly $60) is being set aside for Lloyd's lab: a separate wallet where new trading ideas are tested live with small size before they are allowed into the main book. This sale turns part of the Cash pocket (USDC) into SOL to send there.",
+   "kind": "decisión",
+   "id": "lloyd-2026-10-29-01"
+  },
   {
    "ts": 1793266697.0550525,
    "title": "Execution",
@@ -1959,7 +2005,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793270885.351523,
+  "last_run": 1793271245.7721236,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -1973,7 +2019,7 @@
    "text": "Market is defensive. Pockets: Cash 67% (target 60%), Majors 0% (target 10%), Established memes 10% (target 10%), Picks 22% (target 20%). Nothing to change this hour: every open position is inside its rules and no new candidate passed the filters."
   },
   "trad_status": "SOL -4.6%, BTC -2.2%, ETH -4.2%, JUP -14.0%",
-  "sol_ch24h": -2.3,
-  "sol_vs_ma20": -0.0414
+  "sol_ch24h": -2.1,
+  "sol_vs_ma20": -0.0397
  }
 }

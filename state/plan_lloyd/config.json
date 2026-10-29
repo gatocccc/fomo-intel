@@ -1,10 +1,10 @@
 {
  "start_ts": 1793203599.7169404,
- "start_usd": 602.95,
- "start_sol": 5.9708,
+ "start_usd": 547.6,
+ "start_sol": 5.4208,
  "goal_mult": 2,
  "days": 365,
- "floor_usd": 241.18,
+ "floor_usd": 219.04,
  "reserve_sol": 0.03,
  "max_slippage_pct": 8.0,
  "swap_slippage_pct": 12.0,
@@ -15,5 +15,14 @@
   "agresivo",
   "equilibrado",
   "tradicional"
+ ],
+ "transfers": [
+  {
+   "ts": 1793271308.2241497,
+   "to": "lab",
+   "sol": 0.55,
+   "usd": 55.35,
+   "sig": "5F3nB6hJFvKzuFsYfHBxQRUYVWQwLijBxfwHVXi87dbLhEG5GDEnzKaCjGrQPHDMCMmSbaqNbHckTF23ND7PrzSE"
+  }
  ]
 }
