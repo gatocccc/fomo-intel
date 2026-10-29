@@ -48,7 +48,10 @@ TRAD = {"SOL": SOL_MINT, "BTC": "cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij", "
 
 DESKS = {
     "mesa": {"name": "", "profile": "aggressive", "lang": "es"},
-    "agresivo": {"name": "agresivo", "profile": "fast", "lang": "en"},
+    # 28/10 22:10: el perfil "fast" (momentum en US$300K–3M) perdió sus dos primeras operaciones en menos de 1 h (INVERSE −26%, STONKLANA −28%,
+    # −US$31). Confirma el backtest del 25/10: comprar lo que ya subió 100% pierde. Vuelve al criterio de la mesa (selección, catalizador,
+    # retroceso, anti-rug) con salidas más cortas. El código de "fast" queda para no repetirlo.
+    "agresivo": {"name": "agresivo", "profile": "aggressive", "lang": "en"},
     "equilibrado": {"name": "equilibrado", "profile": "balanced", "lang": "en"},
     "tradicional": {"name": "tradicional", "profile": "traditional", "lang": "en"},
 }
