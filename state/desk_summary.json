@@ -1,16 +1,16 @@
 {
- "now": 1793299488.3459344,
+ "now": 1793299792.1513126,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 182.48,
- "equity_sol": 1.8182,
+ "equity_usd": 182.52,
+ "equity_sol": 1.818,
  "cash_sol": 1.6522,
- "positions_usd": 16.66,
- "sol_usd": 100.36,
+ "positions_usd": 16.64,
+ "sol_usd": 100.39,
  "mult": 1.842,
  "halt": false,
  "pause": false,
@@ -42,9 +42,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.0018942248617669806,
-   "mult": 0.945,
-   "value_usd": 16.66
+   "last_usd": 0.0018925478350249319,
+   "mult": 0.944,
+   "value_usd": 16.64
   }
  ],
  "equity": [
@@ -2507,6 +2507,10 @@
   [
    1793299305,
    182.38
+  ],
+  [
+   1793299610,
+   182.56
   ]
  ],
  "closed": [
@@ -2802,6 +2806,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793299639.9967484,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (88%), pero SOL y BTC están debajo de su promedio de 20 días y solo 5 de 20 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261029-1847"
+  },
   {
    "ts": 1793299032.4166555,
    "title": "Cerebro automático: estado",
@@ -3657,7 +3668,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793299023.7421372,
+  "last_run": 1793299625.4568253,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -3667,11 +3678,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793299023.7441247,
+   "ts": 1793299625.458527,
    "text": "Efectivo ocioso (88%), pero SOL y BTC están debajo de su promedio de 20 días y solo 5 de 20 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -1.3,
-  "sol_vs_ma20": -0.0387
+  "sol_ch24h": -1.7,
+  "sol_vs_ma20": -0.0427
  }
 }
