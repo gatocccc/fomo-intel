@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="/style.css">
 <style>
 .head{display:flex;gap:18px;align-items:end;justify-content:space-between;flex-wrap:wrap;margin:18px 0 20px}
-.head h1{margin:0}
+.head h1{margin:0;font-size:clamp(40px,6vw,64px);color:#fff;text-shadow:0 5px 0 var(--ink)}
 .head .sub{color:var(--cream);font:700 13px var(--m);margin:6px 0 0}
 .head .sub a{color:var(--white)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px}
@@ -60,7 +60,7 @@ footer{color:var(--cream)}
 <div class="wrap">
 <header class="top"><div class="bar">
   <a class="mark" href="/" aria-label="Lloyd's Tavern, home"><img src="/assets/lloyd-head.png" alt=""><span>Lloyd's <b>Tavern</b></span></a>
-  <nav class="navl" aria-label="Sections"><a href="#positions">Open</a><a href="#notes">Notes</a><a href="#closed">Closed</a><a href="/#risk">Your risk</a></nav>
+  <nav class="navl" aria-label="Sections"><a href="#positions">Open</a><a href="#notes">Notes</a><a href="#closed">Closed</a><a href="/lab/">Notebook</a></nav>
   <a class="btn ghost" href="/app/">My stool</a>
 </div></header>
 
@@ -128,7 +128,8 @@ footer{color:var(--cream)}
   </table></div>
 </div>
 
-<p class="wallet" id="wallet">Wallet: —</p>
+<p class="wallet" id="wallet" style="margin-bottom:6px">Wallet: —</p>
+<p class="wallet"><a href="/lab/">What Lloyd is testing next: open the notebook →</a></p>
 
 <footer>Not financial advice. Past results do not predict future results. Trading crypto assets carries the risk of total loss. The bot is young and changes weekly.</footer>
 </div>

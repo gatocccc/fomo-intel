@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lloyd's notebook · Lloyd's Tavern</title>
+<meta name="description" content="What Lloyd is testing, what he learned, and what he threw out. Every week the bot tests new ideas against real data and keeps only what works.">
+<meta property="og:title" content="Lloyd's notebook · Lloyd's Tavern">
+<meta property="og:description" content="The ideas Lloyd is testing, the ones he kept, and the ones he threw out.">
+<meta property="og:image" content="https://app.nonconformistducks.com/assets/og.jpg">
+<meta name="theme-color" content="#1D6A4B">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+.head{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;margin:18px 0 26px}
+.head h1{margin:0 0 12px;font-size:clamp(40px,6vw,64px);color:#fff;text-shadow:0 5px 0 var(--ink)}
+.head .lede{color:var(--white)}
+.head img{width:120px;height:120px;border-radius:50%;border:var(--b);box-shadow:var(--sh);background:var(--peach)}
+.sect{margin:42px 0 0}
+.sect > h2{color:var(--white);font-size:clamp(28px,3.6vw,40px);text-shadow:0 4px 0 var(--ink);margin:0 0 6px}
+.sect > p.sub{color:var(--cream);margin:0 0 18px;font-weight:500;max-width:62ch}
+.mini{list-style:none;margin:0;padding:6px 22px}
+.mini li{display:grid;grid-template-columns:1fr auto;gap:4px 14px;padding:14px 0;border-bottom:2px dashed rgba(26,24,20,.25)}
+.mini li:last-child{border-bottom:0}
+.mini b{font:400 19px/1.15 var(--t)}
+.mini p{grid-column:1/-1;margin:0;font-size:14.5px;color:var(--dim)}
+.mini .lab-pill{align-self:start}
+.mini .empty{display:block;font:13px var(--m);color:var(--dim)}
+.wallet-box{display:grid;grid-template-columns:auto 1fr;gap:24px;padding:22px 24px;background:var(--beak)}
+.wallet-box .eq{font:400 clamp(36px,4vw,48px)/1 var(--t);font-variant-numeric:tabular-nums}
+.wallet-box .eq small{display:block;font:700 13px var(--m);margin-top:6px}
+.wallet-box h3{font-size:22px;margin:0 0 8px}
+.wallet-box p{margin:8px 0 0;font-size:14.5px}
+.wallet-box ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.wallet-box li{display:flex;justify-content:space-between;gap:12px;font-size:15px;padding:6px 0;border-bottom:2px dashed rgba(26,24,20,.25)}
+.wallet-box li b{font:400 18px/1.1 var(--t)}
+.wallet-box li span{font:700 13px var(--m);text-align:right}
+.wallet-box a{font:700 12px var(--m)}
+.wallet-box .up{color:var(--felt-dk)} .wallet-box .down{color:var(--hellred)}
+.foot-line{margin:36px 0 10px;font:700 12.5px var(--m);color:var(--cream)}
+footer{color:var(--cream)}
+@media (max-width:700px){.head{grid-template-columns:1fr}.head img{display:none}.wallet-box{grid-template-columns:1fr}}
+@media (max-width:560px){.mini{padding:4px 16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="bar">
+  <a class="mark" href="/" aria-label="Lloyd's Tavern, home"><img src="/assets/lloyd-head.png" alt=""><span>Lloyd's <b>Tavern</b></span></a>
+  <nav class="navl" aria-label="Sections"><a href="#now">Testing</a><a href="#learned">Learned</a><a href="#next">Up next</a><a href="#discarded">Discarded</a><a href="/book/">Live book</a></nav>
+  <a class="btn ghost" href="/app/">My stool</a>
+</div></header>
+
+<div class="head">
+  <div>
+    <h1>Lloyd's notebook</h1>
+    <p class="lede">Lloyd never stops learning. Every week he tests new ideas against real data and keeps only what works. This is the notebook: what he is trying, what he kept, and what he threw out.</p>
+  </div>
+  <img src="/assets/lloyd-head.png" alt="">
+</div>
+
+<ul class="lab-strip" id="strip" aria-label="Notebook counts"><li><b>—</b><span>ideas tested</span></li><li><b>—</b><span>in use</span></li><li><b>—</b><span>up next</span></li></ul>
+
+<section class="sect" id="now" aria-labelledby="now-t">
+  <h2 id="now-t">On the table</h2>
+  <p class="sub">Ideas Lloyd is testing right now, and the promising ones still collecting data. None of them touches your money until it proves itself.</p>
+  <div class="lab-cards" id="c-now"><p class="sub">Opening the notebook…</p></div>
+</section>
+
+<section class="sect" id="wallet-sect" hidden aria-labelledby="w-t">
+  <div class="panel wallet-box">
+    <div>
+      <h3 id="w-t">The lab wallet</h3>
+      <div class="eq" id="w-eq">—<small id="w-pnl"></small></div>
+      <p id="w-note"></p>
+      <p id="w-link"></p>
+    </div>
+    <div>
+      <h3>Live tests</h3>
+      <ul id="w-tests"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="sect" id="learned" aria-labelledby="l-t">
+  <h2 id="l-t">Learned, in use</h2>
+  <p class="sub">Ideas that passed. They are part of how Lloyd trades the book today.</p>
+  <div class="lab-cards" id="c-learned"></div>
+</section>
+
+<section class="sect" id="next" aria-labelledby="n-t">
+  <h2 id="n-t">Up next</h2>
+  <p class="sub">The queue. Each one gets a fair test before it gets a vote.</p>
+  <ul class="panel mini" id="c-next"></ul>
+</section>
+
+<section class="sect" id="discarded" aria-labelledby="d-t">
+  <h2 id="d-t">Tested and discarded</h2>
+  <p class="sub">Lloyd tried it so you don't have to. A bad idea thrown out is an edge too.</p>
+  <ul class="panel mini" id="c-discarded"></ul>
+</section>
+
+<p class="foot-line" id="cadence"></p>
+<footer>Not financial advice. Test results come from small samples and can change as more data comes in. Trading crypto assets carries the risk of total loss.</footer>
+</div>
+
+<script src="/lloyd.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const L = window.Lloyd;
+
+function miniRow(x, text) {
+  const st = L.LAB_LABEL[x.status] ? x.status : "queued";
+  return `<li><b>${L.esc(x.title)}</b><span class="lab-pill st-${st}">${L.esc(x.status_label || L.LAB_LABEL[st])}</span>${text ? `<p>${L.esc(text)}</p>` : ""}</li>`;
+}
+
+function render(d) {
+  const ex = Array.isArray(d.experiments) ? d.experiments : [];
+  const by = s => ex.filter(x => s.includes(x.status));
+  L.labCounts($("#strip"), d);
+
+  const now = by(["testing", "watch"]);
+  $("#c-now").innerHTML = now.map(L.labCard).join("") || `<p class="sub">Nothing on the table this minute. The next idea is being set up.</p>`;
+  const learned = by(["adopted"]);
+  $("#c-learned").innerHTML = learned.map(L.labCard).join("") || `<p class="sub">Nothing adopted yet.</p>`;
+  const next = by(["queued"]);
+  $("#c-next").innerHTML = next.map(x => miniRow(x, x.hypothesis)).join("") || `<li class="empty">The queue is empty.</li>`;
+  const gone = by(["rejected"]);
+  $("#c-discarded").innerHTML = gone.map(x => miniRow(x, x.conclusion || x.hypothesis)).join("") || `<li class="empty">Nothing discarded yet.</li>`;
+
+  const w = d.lab_wallet;
+  if (w && (w.equity_usd != null || (w.live_tests || []).length)) {
+    $("#wallet-sect").hidden = false;
+    $("#w-eq").firstChild.textContent = L.usd(w.equity_usd, 2);
+    const p = $("#w-pnl");
+    p.textContent = w.pnl_pct != null ? `${L.frac(w.pnl_pct)} since ${L.day(w.since)}` : (w.start_usd != null ? `from ${L.usd(w.start_usd)}` : "");
+    p.className = (w.pnl_pct || 0) >= 0 ? "up" : "down";
+    $("#w-note").textContent = d.lab_note || "A separate wallet with real money, where new ideas are tested before they reach the book.";
+    $("#w-link").innerHTML = w.wallet ? `<a href="https://solscan.io/account/${encodeURIComponent(w.wallet)}" target="_blank" rel="noopener">See the lab wallet on Solscan →</a>` : "";
+    $("#w-tests").innerHTML = (w.live_tests || []).map(t => `<li><b>${L.esc(t.token)}</b><span><span class="${(t.multiple || 0) >= 1 ? "up" : "down"}">${L.fmtX(t.multiple)}</span><br><small style="font-weight:400">${L.esc(t.test)}</small></span></li>`).join("") || `<li>No live tests right now.</li>`;
+  } else {
+    $("#wallet-sect").hidden = true;
+  }
+
+  const bits = [];
+  if (d.cadence) bits.push(d.cadence);
+  if (d.updated) bits.push(`updated ${L.ago(d.updated)}`);
+  $("#cadence").textContent = bits.join(" · ");
+}
+
+function load() {
+  L.get("/api/lab").then(render).catch(() => {
+    if ($("#c-now").querySelector(".lab-card")) return;
+    $("#c-now").innerHTML = `<p class="sub">Could not open the notebook right now. Try again in a minute.</p>`;
+    ["#c-learned"].forEach(s => $(s).innerHTML = "");
+    ["#c-next", "#c-discarded"].forEach(s => $(s).innerHTML = `<li class="empty">Could not load.</li>`);
+  });
+}
+load(); setInterval(load, 300000);
+</script>
+</body>
+</html>

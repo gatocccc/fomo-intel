@@ -142,7 +142,7 @@ table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--
 
 <header class="top"><div class="wrap bar">
   <a class="mark" href="/" aria-label="Lloyd's Tavern, home"><img src="/assets/lloyd-head.png" alt=""><span>Lloyd's <b>Tavern</b></span></a>
-  <nav class="navl" aria-label="Sections"><a href="#how">How it works</a><a href="#pockets">The pockets</a><a href="#risk">Your risk</a><a href="#tab">The tab</a><a href="/book/">Live book</a></nav>
+  <nav class="navl" aria-label="Sections"><a href="#how">How it works</a><a href="#pockets">The pockets</a><a href="#notebook">Notebook</a><a href="#risk">Your risk</a><a href="#tab">The tab</a><a href="/book/">Live book</a></nav>
   <a class="btn" href="/app/#login">Log in</a>
 </div></header>
 
@@ -222,6 +222,18 @@ table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--
       <span class="regime neutral">Neutral</span><span>selective, more cash</span>
       <span class="regime risk_off">Defensive</span><span>SOL falling hard: mostly cash</span>
     </div>
+  </div>
+</section>
+
+<section class="sec sec-sky" id="notebook" aria-labelledby="nb-t">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="ttl" id="nb-t">Lloyd keeps learning</h2>
+      <p class="lede">Every week Lloyd tests new ideas against real data. What works goes into the book. What doesn't goes in the bin, and you can read both.</p>
+    </div>
+    <ul class="lab-strip" id="nb-strip" aria-label="Notebook counts"><li><b>—</b><span>ideas tested</span></li><li><b>—</b><span>in use</span></li><li><b>—</b><span>up next</span></li></ul>
+    <div class="lab-cards" id="nb-cards" style="margin-top:22px"></div>
+    <p class="board-foot" style="color:var(--white)"><span id="nb-cadence"></span><a href="/lab/">Open Lloyd's notebook →</a></p>
   </div>
 </section>
 
@@ -328,6 +340,15 @@ L.get("/api/book").then(b => {
   $("#l-pos").innerHTML = "<li class='empty'>Could not load the board right now. Try again in a minute.</li>";
   $("#l-regime").textContent = "Could not load";
 });
+
+L.get("/api/lab").then(d => {
+  L.labCounts($("#nb-strip"), d);
+  const ex = Array.isArray(d.experiments) ? d.experiments : [];
+  const pick = ex.filter(x => x.status === "testing" || x.status === "watch").slice(0, 1)
+    .concat(ex.filter(x => x.status === "adopted")).slice(0, 3);
+  $("#nb-cards").innerHTML = pick.map(L.labCard).join("");
+  if (d.cadence) $("#nb-cadence").textContent = d.cadence;
+}).catch(() => { $("#nb-cards").innerHTML = "<p style='color:var(--cream);font:13px var(--m)'>Could not open the notebook right now.</p>"; });
 </script>
 </body>
 </html>

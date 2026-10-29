@@ -126,5 +126,29 @@ window.Lloyd = (() => {
     return box.querySelectorAll("input[type=radio]");
   }
 
-  return {ORDER, POCKETS, REGIME, REGIME_HINT, esc, num, usd, usdS, fmtX, frac, pct, when, day, ago, hours, get, post, sleeves, drawBar, pill, pocketName, regimeBadge, dialCards};
+  // ----- the notebook (/api/lab) -----
+  const LAB_LABEL = {testing: "Testing now", watch: "Promising", adopted: "Learned, in use", queued: "Up next", rejected: "Tested, discarded"};
+  const labTested = c => c ? (Number(c.adopted) || 0) + (Number(c.rejected) || 0) + (Number(c.watch) || 0) : null;
+  // Fills a counter strip: <ul> with three <li>s.
+  function labCounts(ul, d) {
+    let c = (d && d.counts) || null;
+    const ex = d && Array.isArray(d.experiments) ? d.experiments : [];
+    if (!c && ex.length) { c = {}; ex.forEach(x => { c[x.status] = (c[x.status] || 0) + 1; }); }
+    const items = [[labTested(c), "ideas tested"], [c ? Number(c.adopted) || 0 : null, "in use"], [c ? Number(c.queued) || 0 : null, "up next"]];
+    ul.innerHTML = items.map(([n, t]) => `<li><b>${n == null ? "—" : n}</b><span>${t}</span></li>`).join("");
+  }
+  // One experiment card. Pocket is optional.
+  function labCard(x) {
+    const st = LAB_LABEL[x.status] ? x.status : "queued";
+    const label = x.status_label || LAB_LABEL[st];
+    return `<article class="lab-card st-${st}">
+      <div class="lab-top"><span class="lab-pill st-${st}">${esc(label)}</span>${x.pocket ? pill(x.pocket) : ""}</div>
+      <h3>${esc(x.title)}</h3>
+      ${x.hypothesis ? `<p class="hyp"><b>The idea:</b> ${esc(x.hypothesis)}</p>` : ""}
+      ${x.conclusion ? `<p class="concl"><b>${st === "adopted" ? "What Lloyd learned:" : "So far:"}</b> ${esc(x.conclusion)}</p>` : ""}
+      ${x.date ? `<time>${esc(x.date)}</time>` : ""}
+    </article>`;
+  }
+
+  return {ORDER, POCKETS, REGIME, REGIME_HINT, esc, num, usd, usdS, fmtX, frac, pct, when, day, ago, hours, get, post, sleeves, drawBar, pill, pocketName, regimeBadge, dialCards, LAB_LABEL, labTested, labCounts, labCard};
 })();
