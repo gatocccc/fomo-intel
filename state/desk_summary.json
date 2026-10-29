@@ -1,17 +1,17 @@
 {
- "now": 1793285695.5655339,
+ "now": 1793286002.8171046,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 233.91,
- "equity_sol": 2.2987,
- "cash_sol": 0.6133,
- "positions_usd": 171.5,
- "sol_usd": 101.76,
- "mult": 2.361,
+ "equity_usd": 243.23,
+ "equity_sol": 2.392,
+ "cash_sol": 1.132,
+ "positions_usd": 128.12,
+ "sol_usd": 101.68,
+ "mult": 2.455,
  "halt": false,
  "pause": false,
  "positions": [
@@ -20,12 +20,12 @@
    "symbol": "GTA6",
    "opened_ts": 1793114467.6297858,
    "entry_usd": 0.00484132770803147,
-   "tokens": 5552.452113094,
+   "tokens": 3701.634742063,
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
-   "sol_out": 0.262346229,
-   "peak_usd": 0.027847966790601558,
-   "stop": -2.93,
+   "sol_out": 0.7810654079999999,
+   "peak_usd": 0.0315786982744198,
+   "stop": -3.321,
    "trail": 0.35,
    "trail_after": 1.6,
    "tp": [
@@ -39,13 +39,14 @@
     ]
    ],
    "tp_done": [
-    "3"
+    "3",
+    "6"
    ],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.027727458251188063,
-   "mult": 5.727,
-   "value_usd": 153.96
+   "last_usd": 0.02974208168970315,
+   "mult": 6.143,
+   "value_usd": 110.09
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -74,9 +75,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.0019954527500481416,
-   "mult": 0.996,
-   "value_usd": 17.55
+   "last_usd": 0.002049976862530171,
+   "mult": 1.023,
+   "value_usd": 18.03
   }
  ],
  "equity": [
@@ -2359,6 +2360,10 @@
   [
    1793285634,
    232.35
+  ],
+  [
+   1793285941,
+   248.06
   ]
  ],
  "closed": [
@@ -2429,6 +2434,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793285773.9499917,
+   "side": "sell",
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "ok": true,
+   "sol": 0.518719179,
+   "tokens": 1850.8173710310002,
+   "price_usd": 0.028518495759,
+   "why": "toma de ganancia 6x",
+   "sig": "exxc4kkDrHW274F1pZjDtsMr5DXhKz8bkmHtGJNXsiXWQpesZwKJWKLtWhCs6Rpbb2PxdMu3QtLiyT5sYVpqVQo",
+   "error": "",
+   "id": null
+  },
   {
    "ts": 1793279226.6556466,
    "side": "sell",
@@ -2613,6 +2632,27 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793285835.0319948,
+   "title": "Ejecución",
+   "text": "set 4kjruq: ajustó GTA6: stop=-3.321",
+   "kind": "ejecución",
+   "id": "auto-mesa-20261029-1457"
+  },
+  {
+   "ts": 1793285835.0318658,
+   "title": "Cerebro automático: ajuste de stops",
+   "text": "GTA6: llegó a 6.17x de pico; subo el stop a 4.32x (antes 3.93x).\n\nEfectivo ocioso (45%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-20261029-1457"
+  },
+  {
+   "ts": 1793285773.9520261,
+   "title": "Toma de ganancia",
+   "text": "GTA6: vendió 25% de GTA6 (toma de ganancia 6x) por 0.5187 SOL",
+   "kind": "automático",
+   "id": null
+  },
   {
    "ts": 1793285237.4971156,
    "title": "Ejecución",
@@ -3286,11 +3326,11 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793285224.693131,
+  "last_run": 1793285823.7378666,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
-   "ts": 1793285224.6958346,
+   "ts": 1793285823.7393079,
    "title": "Cerebro automático: ajuste de stops",
    "orders": 1,
    "mode": "live"
