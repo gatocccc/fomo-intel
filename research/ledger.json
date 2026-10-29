@@ -1,0 +1,141 @@
+{
+ "experiments": [
+  {
+   "date": "2026-10-23",
+   "name": "Copying FOMO app traders",
+   "question": "Can we front-run or copy the best FOMO app wallets?",
+   "method": "On-chain audit of 60+ wallets, 7-day forward test",
+   "result": "Winners churn; copying after the fact loses to fees and slippage.",
+   "verdict": "rejected"
+  },
+  {
+   "date": "2026-10-25",
+   "name": "Technical signals on liquid memecoins",
+   "question": "Does any TA entry beat random in 27 liquid memecoins?",
+   "method": "90 days, out-of-sample half, random-entry control",
+   "result": "Every strategy lost 2–5% per trade; none beat random.",
+   "verdict": "rejected"
+  },
+  {
+   "date": "2026-10-26",
+   "name": "Tweet sniper on fresh launches",
+   "question": "Do influencer tweets predict pumps early enough to buy?",
+   "method": "Dataset of tweets vs. 6h outcomes, shadow run",
+   "result": "Signals arrive after the move; snipers own the first minutes.",
+   "verdict": "rejected"
+  },
+  {
+   "date": "2026-10-27",
+   "name": "Anti-rug: common-funder clustering",
+   "question": "Can we detect rugs by tracing who funded the top holders?",
+   "method": "Helius funded-by on top-20 holders + deployer history, applied live",
+   "result": "Caught 3 concentrated tokens before buying (CHICO, tSpaceX, LMAO!).",
+   "verdict": "adopted"
+  },
+  {
+   "date": "2026-10-28",
+   "name": "Perps signals on Hyperliquid",
+   "question": "Any short-term long/short edge in perps (funding, cascades, breakouts, pairs)?",
+   "method": "34 markets, 90 days, real funding, out-of-sample, random control",
+   "result": "None passed (t ≥ 2.5 and beat random). Volume breakouts lose clearly (−1.5%/trade).",
+   "verdict": "rejected"
+  },
+  {
+   "date": "2026-10-28",
+   "name": "Fast momentum in $300K–3M memecoins",
+   "question": "Does buying small caps already up 100%+ 'on a pullback' work with 12h time stops?",
+   "method": "Live, two trades",
+   "result": "Both stopped out within an hour (−26%, −28%). Turned off the same night.",
+   "verdict": "rejected"
+  },
+  {
+   "date": "2026-10-28",
+   "name": "Stops that only move up",
+   "question": "Does ratcheting the stop with the peak keep more of the winners?",
+   "method": "Live on GTA6/REMUS; rules 1.3x→entry, 1.6x→75% of peak",
+   "result": "REMUS closed +14% instead of round-tripping; GTA6 protected at 1.3x.",
+   "verdict": "adopted"
+  },
+  {
+   "date": "2026-10-29",
+   "name": "Volatility targeting + drawdown throttle",
+   "question": "Does sizing each pocket to a fixed volatility (and cutting exposure after a drawdown) improve risk-adjusted results?",
+   "method": "Replay pocket signals fixed-size vs vol-targeted (10/20-day half-life); same costs; random-entry control",
+   "result": "Queued. Evidence: arXiv 2602.11708 (OOS 2022–25: Sharpe 0.65→1.83, maxDD 35%→16%); arXiv 2603.23480",
+   "verdict": "queued",
+   "sleeve": "all",
+   "priority": 1
+  },
+  {
+   "date": "2026-10-29",
+   "name": "Execution cost audit + MEV protection",
+   "question": "How much of our 2–5% round trip is fee vs impact vs sandwiches, and how much can tight slippage / Jito-protected sends recover?",
+   "method": "Decompose our own fills with Helius; then live A/B on alternating tickets (protected vs not)",
+   "result": "Queued. Evidence: Helius Solana MEV report: one program ~51.6K sandwiches/day, 16 of top-20 sandwiched tokens are Pump.fun",
+   "verdict": "queued",
+   "sleeve": "picks, established",
+   "priority": 2
+  },
+  {
+   "date": "2026-10-29",
+   "name": "Wash-trading / price-inflation filter",
+   "question": "Do the USENIX'26 manipulation flags cut drawdowns in picks without killing winners?",
+   "method": "Tag past candidates at entry; compare 7/30-day returns and >50% drawdown rate, flagged vs clean vs random same-bucket",
+   "result": "Queued. Evidence: arXiv 2507.01963: 82.6% of +100% memecoins showed artificial growth; 86.7% of dumped tokens had prior manipulation",
+   "verdict": "queued",
+   "sleeve": "picks, established",
+   "priority": 3
+  },
+  {
+   "date": "2026-10-29",
+   "name": "Token-unlock avoidance / short",
+   "question": "Do large team/investor unlocks (>1% supply) depress price from ~30 days before?",
+   "method": "Short day −30→−1 vs SOL/ETH hedge, vol-sized; control = same token, random 30-day windows",
+   "result": "Queued. Evidence: Keyrock (16K unlocks, ~90% negative, team unlocks ≈ −25%); Tokenomist (236 events)",
+   "verdict": "queued",
+   "sleeve": "majors (JUP), established",
+   "priority": 4
+  },
+  {
+   "date": "2026-10-29",
+   "name": "Short new perp listings after day 1",
+   "question": "Do newly listed perps drift down over 7–14 days?",
+   "method": "Short at day-1 close, exit d7/d14, 2x stop; pool Hyperliquid + Binance listings; control = random similar-cap perps same dates",
+   "result": "Queued. Evidence: The Tie 2026 (1,844 listings, mean-revert in 1–2 weeks); Four Pillars (Upbit/Bithumb 2025 day-1 buyers kept ~$0.31/$1)",
+   "verdict": "queued",
+   "sleeve": "majors (perps)",
+   "priority": 5
+  },
+  {
+   "date": "2026-10-29",
+   "name": "Multi-lookback trend ensemble + ATR trailing stop",
+   "question": "Is a 10/20/55/100-day breakout ensemble with ATR trail sturdier than the single 20-day MA?",
+   "method": "Walk-forward on years of Binance daily candles; same costs/sizing; random long/short control with matched holding time",
+   "result": "Queued. Evidence: Zarattini–Pagani–Barbon SSRN 5209907 (Sharpe >1.5 net, 2015+); AdaptiveTrend ablation (trail: maxDD 22%→13%)",
+   "verdict": "queued",
+   "sleeve": "majors, established",
+   "priority": 6
+  },
+  {
+   "date": "2026-10-29",
+   "name": "Smart-money breadth (not copy trading)",
+   "question": "Does the change in how many historically profitable wallets hold a token predict returns?",
+   "method": "Select wallets on months 1–3, test weekly rank on months 4–6; control = matched random portfolios",
+   "result": "Queued. Evidence: Nansen (ETH 2020–22, self-published, no costs) — weak",
+   "verdict": "queued",
+   "sleeve": "picks, established",
+   "priority": 7
+  },
+  {
+   "date": "2026-10-29",
+   "name": "CEX listing-announcement trade",
+   "question": "Buying a Solana token on-chain at a Coinbase/Upbit/Robinhood announcement and selling at listing — still alive after 2023?",
+   "method": "2024–26 announcements; entry at +1/5/15 min, exit at listing; control = random times same tokens prior week",
+   "result": "Queued. Evidence: The Tie (Coinbase n=10, +24% median day-1; shrinking since 2023); BONK/PENGU anecdotes",
+   "verdict": "queued",
+   "sleeve": "picks",
+   "priority": 8
+  }
+ ],
+ "protocol": "Out-of-sample half held out, entries at next bar open, real costs (memes ~3% round trip, perps 0.12% + funding), random-entry control x20; adopt only if test mean > 0, t ≥ 2.5, beats random by ≥ 0.3%/trade, design half also positive. Risk/cost changes are judged on drawdown and realized cost, not on win rate."
+}

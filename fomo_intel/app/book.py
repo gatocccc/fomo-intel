@@ -211,11 +211,14 @@ SEED = [
 ]
 
 
+REPO_LEDGER = Path(__file__).resolve().parents[2] / "research" / "ledger.json"   # versionado en el repo: lo editan las sesiones de investigación
+
+
 def research() -> dict:
-    d = jl(RESEARCH, None)
+    d = jl(REPO_LEDGER, None) or jl(RESEARCH, None)
     if not d:
         RESEARCH.parent.mkdir(parents=True, exist_ok=True)
         d = {"experiments": SEED}
         json.dump(d, open(RESEARCH, "w"), indent=1, ensure_ascii=False)
     exps = sorted(d.get("experiments", []), key=lambda e: e.get("date", ""), reverse=True)
-    return {"experiments": exps, "next_run": "Weekly: Sunday 09:39 ART review re-runs the backtests with the new week of data.", "updated": time.time()}
+    return {"experiments": exps, "protocol": d.get("protocol"), "next_run": "Research sessions Mon/Wed/Fri 16:17 ART test the next queued idea; Sunday 09:39 ART re-runs every adopted rule with the new week of data.", "updated": time.time()}
