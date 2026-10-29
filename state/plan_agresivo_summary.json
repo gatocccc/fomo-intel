@@ -1,17 +1,17 @@
 {
- "now": 1793234403.2214851,
+ "now": 1793234679.0620224,
  "start_ts": 1793203599.7169404,
  "start_usd": 200.84,
  "start_sol": 1.99,
  "goal_usd": 401.68,
  "days": 30,
  "day": 1,
- "equity_usd": 184.91,
- "equity_sol": 1.8121,
+ "equity_usd": 186.35,
+ "equity_sol": 1.827,
  "cash_sol": 0.0544,
- "positions_usd": 179.35,
- "sol_usd": 102.04,
- "mult": 0.921,
+ "positions_usd": 180.8,
+ "sol_usd": 102.0,
+ "mult": 0.928,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.008909500216705866,
-   "mult": 1.186,
-   "value_usd": 78.69
+   "last_usd": 0.009217972618331351,
+   "mult": 1.227,
+   "value_usd": 81.41
   },
   {
    "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
@@ -71,7 +71,7 @@
    "tp_done": [],
    "thesis": "Fast plan: $1.4M token moving (+102% 24h) bought on a pullback (77% of its 3-day high); clean anti-rug check. Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x.",
    "id": "auto-agresivo-20261028-2349",
-   "last_usd": 0.0011077523998195467,
+   "last_usd": 0.0011078379193430452,
    "mult": 0.835,
    "value_usd": 48.76
   },
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Fast plan: $0.6M token moving (+141% 24h) bought on a pullback (83% of its 3-day high); clean anti-rug check. Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x.",
    "id": "auto-agresivo-20261028-2349",
-   "last_usd": 0.00041557284178567595,
-   "mult": 0.882,
-   "value_usd": 51.91
+   "last_usd": 0.0004052912569826032,
+   "mult": 0.86,
+   "value_usd": 50.63
   }
  ],
  "equity": [
@@ -522,6 +522,10 @@
   [
    1793234311,
    184.73
+  ],
+  [
+   1793234617,
+   186.49
   ]
  ],
  "closed": [

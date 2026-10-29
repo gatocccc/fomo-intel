@@ -1,16 +1,16 @@
 {
- "now": 1793234389.9486976,
+ "now": 1793234696.3035092,
  "start_ts": 1793203780.9833093,
  "start_usd": 201.95,
  "start_sol": 1.999276,
  "goal_usd": 403.9,
  "days": 30,
  "day": 1,
- "equity_usd": 200.16,
- "equity_sol": 1.9615,
+ "equity_usd": 200.11,
+ "equity_sol": 1.9618,
  "cash_sol": 0.0556,
- "positions_usd": 194.48,
- "sol_usd": 102.04,
+ "positions_usd": 194.44,
+ "sol_usd": 102.01,
  "mult": 0.991,
  "halt": false,
  "pause": false,
@@ -32,9 +32,9 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "tradicional-2026-10-28-01",
-   "last_usd": 0.9989870360229722,
+   "last_usd": 0.9987777948049344,
    "mult": 0.991,
-   "value_usd": 194.48
+   "value_usd": 194.44
   }
  ],
  "equity": [
@@ -453,6 +453,10 @@
   [
    1793234298,
    200.26
+  ],
+  [
+   1793234604,
+   200.14
   ]
  ],
  "closed": [],
