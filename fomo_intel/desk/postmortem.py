@@ -42,7 +42,7 @@ IGNORE = {"USDC", "USDT"}
 NAMES = {"catalyst": ("Catalizador con fecha", "Dated catalyst"), "affiliation": ("Afiliación a un producto real", "Official token of a real product"),
          "narrative": ("Narrativa verificada", "Verified narrative"), "scan_pick": ("Pick del escáner (sin historia)", "Screener pick (no story)"),
          "trend": ("Tendencia 20 días en memes establecidas", "20-day trend, established memes"), "majors_trend": ("Tendencia en majors", "Majors trend"),
-         "news_shock_short": ("Corto por shock de noticias", "News-shock short"), "manual_other": ("Otro (manual)", "Other (manual)")}
+         "news_shock_short": ("Corto por shock de noticias", "News-shock short"), "flash_narrative": ("Meme flash de noticia (horas)", "Flash-news meme (hours)"), "manual_other": ("Otro (manual)", "Other (manual)")}
 OFF_N, OFF_MEAN = 8, 0.0
 
 

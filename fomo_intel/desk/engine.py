@@ -172,7 +172,8 @@ class Desk:
             self.pos[mint] = {"mint": mint, "symbol": o.get("symbol") or mint[:6], "opened_ts": time.time(), "entry_usd": entry_usd,
                               "tokens": f.tokens, "tokens_initial": f.tokens, "sol_in": f.sol, "sol_out": 0.0, "peak_usd": entry_usd,
                               "stop": float(o.get("stop", 0.3)), "trail": float(o.get("trail", 0.35)), "trail_after": float(o.get("trail_after", 1.5)),
-                              "tp": o.get("tp", []), "tp_done": [], "thesis": o.get("thesis", ""), "id": did, "sleeve": o.get("sleeve"), "reason": o.get("reason")}
+                              "tp": o.get("tp", []), "tp_done": [], "thesis": o.get("thesis", ""), "id": did, "sleeve": o.get("sleeve"), "reason": o.get("reason"),
+                              "max_h": o.get("max_h")}
         self.save()
         return T(f"compró {f.tokens:,.0f} {o.get('symbol')} por {f.sol:.4f} SOL a US${entry_usd:.6g} (slippage {f.slippage_pct:+.1f}%)", f"bought {f.tokens:,.0f} {o.get('symbol')} for {f.sol:.4f} SOL at ${entry_usd:.6g} (slippage {f.slippage_pct:+.1f}%)")
 
@@ -227,7 +228,7 @@ class Desk:
                     elif a == "set":
                         p = self.pos.get(o["mint"])
                         if p:
-                            for k in ("stop", "trail", "trail_after", "tp", "thesis", "brain", "sleeve", "reason"):
+                            for k in ("stop", "trail", "trail_after", "tp", "thesis", "brain", "sleeve", "reason", "max_h"):
                                 if k in o: p[k] = o[k]
                             self.save(); r = f"ajustó {p['symbol']}: " + ", ".join(f"{k}={o[k]}" for k in o if k not in ("action", "mint"))
                         else: r = "sin posición"
@@ -257,6 +258,8 @@ class Desk:
             why = None
             if m <= 1 - p["stop"]:
                 why = f"stop ({m:.2f}x)"
+            elif p.get("max_h") and time.time() - p["opened_ts"] > float(p["max_h"]) * 3600:
+                why = T(f"tiempo máximo ({p['max_h']} h, {m:.2f}x)", f"time stop ({p['max_h']}h, {m:.2f}x)")
             elif p["peak_usd"] >= p["entry_usd"] * p["trail_after"] and px <= p["peak_usd"] * (1 - p["trail"]):
                 why = T(f"trailing ({m:.2f}x, pico {p['peak_usd'] / p['entry_usd']:.2f}x)", f"trailing stop ({m:.2f}x, peak {p['peak_usd'] / p['entry_usd']:.2f}x)")
             if why:

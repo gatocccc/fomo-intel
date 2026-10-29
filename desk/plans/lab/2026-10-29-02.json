@@ -1,0 +1,26 @@
+{
+ "id": "lab-2026-10-29-02",
+ "title": "Lab test #2: flash-news meme (SAFU, Binance-outflow rumours)",
+ "journal": "Hypothesis under test (Gaston, Oct 29): a meme born from a big breaking story lives hours, not weeks. The edge, if any, is picking the leader among the many tokens launched on the same story within the first 10-30 minutes and selling the same day. Today's story: alleged abnormal Binance outflows / 'hack' rumours on X while SOL slid under $100. Of ten 'SAFU' tokens on Solana, only one has traction: 'Funds Are Safu' (A8aD...E9it), 6 minutes old at scan time, 409 holders, $14K traded, $43K liquidity. Tiny size ($5): this is a measurement, not a bet. Exit: sell half at 2x, trail 30% from the peak after 1.5x, stop -40%, and out after 6 hours no matter what (flash memes do not get a second day). Against: launches of minutes are the snipers' game; our tweet-sniper test (Oct 26) lost 10 of 10. This test differs in two ways - macro news instead of a random tweet, and choosing the crowd's leader at minute 10 instead of entering at second 3 - and only 15-20 such events will tell whether that matters.",
+ "orders": [
+  {
+   "action": "buy",
+   "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
+   "symbol": "SAFU",
+   "sol": 0.05,
+   "stop": 0.4,
+   "trail": 0.3,
+   "trail_after": 1.5,
+   "tp": [
+    [
+     2,
+     0.5
+    ]
+   ],
+   "sleeve": "picks",
+   "reason": "flash_narrative",
+   "thesis": "Flash-news meme: leader among the SAFU tokens launched on today's Binance-outflow rumours. Out within 6 hours.",
+   "max_h": 6
+  }
+ ]
+}
