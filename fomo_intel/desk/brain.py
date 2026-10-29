@@ -64,6 +64,16 @@ FAST = {"since": 1793229600, "max_pos": 2, "max_frac": 0.48, "min_buy_sol": 0.15
         "stale_h": 12, "stale_peak": 1.15, "day_brake": 0.12, "mcap_lo": 3e5, "mcap_hi": 3e6, "min_vol_mcap": 0.5, "min_holders": 500,
         "max_top10": 35, "min_ch24h": -0.3, "max_ch24h": 2.5, "min_ch6h": -0.15, "max_ch6h": 0.4, "min_from_hi": 0.6, "max_from_hi": 0.92,
         "min_ch1h": -0.10, "stop": 0.25, "trail": 0.25, "trail_after": 1.3, "tp": [[1.5, 0.4], [2.5, 0.3]]}
+# Plan equilibrado (desde 28/10 21:30 ART): memecoins establecidas (US$3M–500M). Antes solo subía stops y quedaba 75% en USDC
+# esperando que alguien comprara. Ahora revisa cada hora una lista de memecoins conocidas + el escaneo amplio, y compra las que
+# están en tendencia (arriba de su promedio de 20 días, 7 días positivos sin euforia, liquidez ≥ US$1M). Sale si pierden la
+# tendencia (−8% bajo el promedio) o por stop −20%. Hasta 4 posiciones de ~20%; ≥ 15% en USDC. En mercado bajista, se queda en USDC.
+BAL = {"watch": ["BONK", "WIF", "POPCAT", "FARTCOIN", "PENGU", "MEW", "GOAT", "PNUT", "MOODENG", "CHILLGUY", "GIGA", "USELESS", "SPX",
+                 "AI16Z", "ZEREBRO", "MOTHER", "MICHI", "BOME", "SLERF", "PONKE", "WEN", "TRUMP", "ANSEM", "STONK", "TROLL", "PUMP"],
+       "every_h": 1, "refresh_h": 3, "max_pos": 4, "slot": 0.20, "usdc_min": 0.15, "min_liq": 1e6, "mcap_lo": 3e6, "mcap_hi": 5e8,
+       "gap_lo": 0.0, "gap_hi": 0.25, "ch7_lo": 0.0, "ch7_hi": 0.6, "ch1_lo": -0.12, "exit_gap": -0.08, "max_buys_day": 3,
+       "stop": 0.2, "trail": 0.25, "trail_after": 1.4, "tp": [[2, 0.3]]}
+ST_API = "https://data.solanatracker.io"
 SCAN_FAST_ENV = {"SCAN_LO": "300000", "SCAN_HI": "3000000", "SCAN_LIQ": "60000", "SCAN_AGE_H": "6", "SCAN_VOLMCAP": "0.5",
                  "SCAN_TOP10": "35", "SCAN_MIN_CANDLES": "8", "SCAN_OUT": str(SCAN_FAST)}
 DD_DIR = Path("state/desk/dd")
@@ -407,6 +417,95 @@ class Brain:
             bstate["_noted_no_cands"] = now
         return orders, notes, new_buys
 
+    # ---------- plan equilibrado ----------
+    def bal_watch(self):
+        """Lista de memecoins establecidas con tendencia diaria (cache 3 h): mint, mcap, liquidez, distancia al promedio de 20 días."""
+        fp = Path("state/desk/watch_bal.json"); w = jload(fp, {})
+        if time.time() - w.get("ts", 0) < BAL["refresh_h"] * 3600:
+            return w.get("rows", {})
+        H = {"x-api-key": os.getenv("SOLANATRACKER_API_KEY", "")}; now = int(time.time()); rows = {}
+        def get(path, **q):
+            try:
+                r = requests.get(ST_API + path, headers=H, params=q, timeout=30); return r.json() if r.ok else {}
+            except Exception:  # noqa: BLE001
+                return {}
+        names = list(BAL["watch"]) + [ (v.get("sym") or "") for v in jload(SCAN_JSON, {}).get("ok", []) if (v.get("mcap") or 0) >= BAL["mcap_lo"]][:10]
+        for n in dict.fromkeys(names):
+            if not n:
+                continue
+            x = next((x for x in (get("/search", query=n, sortBy="liquidityUsd", sortOrder="desc", limit=3).get("data") or []) if (x.get("symbol") or "").upper() == n.upper()), None)
+            if not x:
+                continue
+            cs = get(f"/chart/{x['mint']}", type="1d", time_from=now - 40 * 86400, time_to=now).get("oclhv", [])
+            cl = [float(c["close"]) for c in cs]
+            if len(cl) < 21:
+                continue
+            ma = sum(cl[-21:-1]) / 20
+            rows[x["mint"]] = {"sym": n, "mint": x["mint"], "mcap": x.get("marketCapUsd") or 0, "liq": x.get("liquidityUsd") or 0, "px": cl[-1],
+                               "gap": cl[-1] / ma - 1, "ch1": cl[-1] / cl[-2] - 1, "ch7": cl[-1] / cl[-8] - 1, "ch30": cl[-1] / cl[0] - 1}
+            time.sleep(0.3)
+        jsave(fp, {"ts": time.time(), "rows": rows})
+        return rows
+
+    def balanced(self, d, s, regime, bstate):
+        if time.time() - bstate.get("bal_ts", 0) < BAL["every_h"] * 3600:
+            return [], []
+        bstate["bal_ts"] = time.time()
+        B = BAL; w = self.bal_watch()
+        if not w:
+            return [], []
+        now = time.time(); sol_usd = s.get("sol_usd") or 100; eq = s["equity_usd"]
+        pos = {p["mint"]: p for p in s.get("positions", [])}
+        usdc = pos.get(USDC); usdc_val = (usdc or {}).get("value_usd", 0)
+        up = sorted([r for r in w.values() if r["gap"] > 0], key=lambda r: -r["ch7"])
+        bstate["trad_status"] = f"{sum(1 for r in w.values() if r['gap'] > 0)} of {len(w)} established memecoins above their 20-day average" + (
+            f" (best: {', '.join(r['sym'] + ' ' + format(r['gap'], '+.0%') for r in up[:3])})" if up else "")
+        sells, buys, notes = [], [], []
+        # salidas: perdió la tendencia
+        for m, p in pos.items():
+            r = w.get(m)
+            if m in STABLES or not r or p.get("brain") is False:
+                continue
+            if r["gap"] < B["exit_gap"]:
+                sells.append({"action": "sell", "mint": m, "frac": 1.0, "why": "lost its trend (below 20-day average)"})
+                sells.append({"action": "buy", "mint": USDC, "symbol": "USDC", "sol": round(p["value_usd"] / sol_usd * 0.97, 4), "stop": 0.05, "trail": 0.5,
+                              "trail_after": 10, "tp": [], "thesis": "Cash parked in USDC."})
+                notes.append(f"{p['symbol']} is {r['gap']:+.0%} versus its 20-day average: the trend broke. Back to USDC.")
+        # entradas
+        today = time.strftime("%Y-%m-%d", time.localtime(now - 3 * 3600))
+        n_today = sum(1 for b in bstate.get("auto_buys", []) if b.get("day") == today)
+        held = [m for m in pos if m not in STABLES]
+        cooled = {c["mint"] for c in s.get("closed", []) if now - c.get("ts", 0) < LIM["cooldown_h"] * 3600}
+        slots = B["max_pos"] - len(held) + sum(1 for o in sells if o["action"] == "sell")
+        budget = max(0.0, usdc_val + max(0.0, s.get("cash_sol", 0) - 0.05) * sol_usd - eq * B["usdc_min"])
+        if regime != "risk_off":
+            for r in up:
+                if slots <= 0 or n_today + len(buys) >= B["max_buys_day"] or budget < eq * B["slot"] * 0.6:
+                    break
+                if r["mint"] in pos or r["mint"] in cooled or r["sym"].upper() in BLACK_SYMS:
+                    continue
+                if not (B["mcap_lo"] <= r["mcap"] <= B["mcap_hi"]) or r["liq"] < B["min_liq"]:
+                    continue
+                if not (B["gap_lo"] <= r["gap"] <= B["gap_hi"] and B["ch7_lo"] <= r["ch7"] <= B["ch7_hi"] and r["ch1"] >= B["ch1_lo"]):
+                    continue
+                amt = min(eq * B["slot"], budget)
+                buys.append({"action": "buy", "mint": r["mint"], "symbol": r["sym"], "sol": round(amt / sol_usd * 0.98, 4), "stop": B["stop"], "trail": B["trail"],
+                             "trail_after": B["trail_after"], "tp": B["tp"], "thesis": f"{r['sym']}: established memecoin back in an uptrend ({r['gap']:+.0%} vs 20-day average, {r['ch7']:+.0%} in 7 days)."})
+                notes.append(f"{r['sym']} (${r['mcap'] / 1e6:.0f}M, ${r['liq'] / 1e6:.1f}M liquidity) is back above its 20-day average ({r['gap']:+.0%}) and up {r['ch7']:+.0%} in 7 days "
+                             f"(30 days: {r['ch30']:+.0%}). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.")
+                budget -= amt; slots -= 1
+        orders = list(sells)
+        need = sum(b["sol"] * sol_usd / 0.98 for b in buys) - max(0.0, s.get("cash_sol", 0) - 0.05) * sol_usd
+        if buys and usdc and need > 2:
+            frac = min(1.0, need / usdc_val) * usdc["tokens"] / (usdc.get("tokens_initial") or usdc["tokens"])
+            orders.append({"action": "sell", "mint": USDC, "frac": round(frac, 4) if frac < 0.999 else 1.0, "why": "fund trend position"})
+        orders += buys
+        if not orders and now - bstate.get("_noted_bal", 0) > 12 * 3600:
+            notes.append(f"Holding mostly USDC on purpose: {bstate['trad_status']}. This plan buys established memecoins only when they are trending up; "
+                         "today most are falling, and USDC has protected the balance. Checked every hour.")
+            bstate["_noted_bal"] = now
+        return orders, notes
+
     def fast_buy(self, c, sol):
         F = FAST
         return {"action": "buy", "mint": c["mint"], "symbol": c["sym"], "sol": round(sol, 4), "stop": F["stop"], "trail": F["trail"], "trail_after": F["trail_after"],
@@ -467,6 +566,10 @@ class Brain:
                                   "trail_after": 10, "tp": [], "thesis": "Cash parked in USDC."})
                 notes.append(f"{coin} fell below its 20-day average ({gap:+.1%}): back to USDC.")
         bstate["trad_status"] = ", ".join(status)
+        if not sells and not buys and time.time() - bstate.get("_noted_trad", 0) > 12 * 3600:
+            notes.append(f"Still in USDC on purpose. Versus their 20-day averages: {bstate['trad_status']}. The plan buys each asset the hour it closes 1% above its "
+                         "average; until then, cash is the position. Checked every hour.")
+            bstate["_noted_trad"] = time.time()
         orders = list(sells)
         need = sum(b["_need_usd"] for b in buys)
         if buys and usdc and usdc_val > 5:
@@ -495,6 +598,10 @@ class Brain:
         elif d["profile"] == "fast":
             o2, n2, new_buys = self.fast(d, s, self.regime.get("state"), bstate)
             orders += o2; notes += n2
+        elif d["profile"] == "balanced":
+            o2, n2 = self.balanced(d, s, self.regime.get("state"), bstate)
+            orders += o2; notes += n2
+            new_buys = [o["symbol"] for o in o2 if o["action"] == "buy" and o["mint"] != USDC]
         elif d["profile"] == "traditional":
             o2, n2 = self.traditional(d, s, bstate)
             orders += o2; notes += n2
@@ -516,7 +623,12 @@ class Brain:
             bstate["last_action"] = {"ts": now, "title": title, "orders": len(orders), "mode": mode}
             log.info("[%s/%s] %s: %s", key, mode, title, [o["action"] + " " + (o.get("symbol") or o["mint"][:6]) for o in orders])
         elif notes:
+            # sin órdenes pero con algo para explicar (efectivo quieto, sin candidatos): va al registro del plan, con un tope de frecuencia por tipo
             bstate["last_note"] = {"ts": time.time(), "text": notes[-1]}
+            if mode == "live":
+                did = f"auto-{key}-note-{time.strftime('%Y%m%d-%H%M', time.gmtime())}"
+                jsave(st_dir / "auto" / f"{did}.json", {"id": did, "title": L(d, "Cerebro automático: estado", "Automatic brain: status"),
+                                                         "journal": "\n\n".join(notes), "orders": [], "auto": True})
         jsave(st_dir / "brain.json", bstate)
         return True
 
