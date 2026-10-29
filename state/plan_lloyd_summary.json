@@ -1,16 +1,16 @@
 {
- "now": 1793286885.9214313,
+ "now": 1793287194.1921165,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 1,
- "equity_usd": 565.77,
- "equity_sol": 5.5262,
+ "equity_usd": 565.49,
+ "equity_sol": 5.5441,
  "cash_sol": 0.0862,
- "positions_usd": 556.94,
- "sol_usd": 102.38,
+ "positions_usd": 556.69,
+ "sol_usd": 102.0,
  "mult": 1.033,
  "halt": false,
  "pause": false,
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9995126143940649,
+   "last_usd": 0.9995741539542005,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.99,
-   "value_usd": 485.33
+   "value_usd": 485.36
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -60,11 +60,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.15252990772380523,
+   "last_usd": 0.15258853507687387,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.986,
-   "value_usd": 38.64
+   "mult": 0.987,
+   "value_usd": 38.66
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -88,11 +88,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.4002865915401301,
+   "last_usd": 0.3985189780328729,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.958,
-   "value_usd": 23.28
+   "mult": 0.954,
+   "value_usd": 23.18
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -121,9 +121,9 @@
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-lloyd-20261029-0319",
    "sleeve": "picks",
-   "last_usd": 0.0019758774534219315,
-   "mult": 0.967,
-   "value_usd": 9.69
+   "last_usd": 0.0019365592566644096,
+   "mult": 0.948,
+   "value_usd": 9.5
   }
  ],
  "equity": [
@@ -1234,6 +1234,10 @@
   [
    1793286670,
    565.62
+  ],
+  [
+   1793286978,
+   565.75
   ]
  ],
  "closed": [
@@ -1836,6 +1840,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793287024.4190748,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (92%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261029-1517"
+  },
   {
    "ts": 1793286439.419858,
    "title": "Execution",
@@ -2445,7 +2456,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793286424.672469,
+  "last_run": 1793287023.742827,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -2455,8 +2466,8 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793283423.7438195,
-   "text": "Market is defensive. Pockets: Cash 63% (target 60%), Majors 0% (target 10%), Established memes 10% (target 10%), Picks 26% (target 20%). Nothing to change this hour: every open position is inside its rules and no new candidate passed the filters."
+   "ts": 1793287023.7450526,
+   "text": "[Picks] Idle cash (92%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves."
   },
   "trad_status": "SOL -3.0%, BTC -0.9%, ETH -3.1%, JUP -11.7%",
   "sol_ch24h": 0.7,
