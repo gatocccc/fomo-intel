@@ -1,17 +1,17 @@
 {
- "now": 1793300095.8312476,
+ "now": 1793300399.4228718,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 182.96,
- "equity_sol": 1.818,
+ "equity_usd": 182.04,
+ "equity_sol": 1.8103,
  "cash_sol": 1.6522,
- "positions_usd": 16.68,
- "sol_usd": 100.64,
- "mult": 1.846,
+ "positions_usd": 15.9,
+ "sol_usd": 100.55,
+ "mult": 1.837,
  "halt": false,
  "pause": false,
  "positions": [
@@ -42,9 +42,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.0018972085138891388,
-   "mult": 0.947,
-   "value_usd": 16.68
+   "last_usd": 0.0018079216453936048,
+   "mult": 0.902,
+   "value_usd": 15.9
   }
  ],
  "equity": [
@@ -2515,6 +2515,10 @@
   [
    1793299913,
    182.87
+  ],
+  [
+   1793300217,
+   182.78
   ]
  ],
  "closed": [
@@ -2810,6 +2814,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793300232.2248142,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (88%), pero SOL y BTC están debajo de su promedio de 20 días y solo 5 de 20 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261029-1857"
+  },
   {
    "ts": 1793299639.9967484,
    "title": "Cerebro automático: estado",
@@ -3672,7 +3683,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793299625.4568253,
+  "last_run": 1793300223.742221,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -3682,7 +3693,7 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793299625.458527,
+   "ts": 1793300223.744,
    "text": "Efectivo ocioso (88%), pero SOL y BTC están debajo de su promedio de 20 días y solo 5 de 20 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
