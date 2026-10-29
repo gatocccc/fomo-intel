@@ -1,17 +1,17 @@
 {
- "now": 1793232889.737795,
+ "now": 1793233177.5102184,
  "start_ts": 1793203690.827375,
  "start_usd": 200.16,
  "start_sol": 1.981514,
  "goal_usd": 400.32,
  "days": 30,
  "day": 1,
- "equity_usd": 193.9,
- "equity_sol": 1.8933,
+ "equity_usd": 193.55,
+ "equity_sol": 1.8916,
  "cash_sol": 0.493,
- "positions_usd": 143.42,
- "sol_usd": 102.41,
- "mult": 0.969,
+ "positions_usd": 143.11,
+ "sol_usd": 102.32,
+ "mult": 0.967,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,9 +32,9 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9995158496915079,
+   "last_usd": 0.9995112736117833,
    "mult": 0.991,
-   "value_usd": 42.43
+   "value_usd": 42.42
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -58,9 +58,9 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.15172700584151214,
-   "mult": 0.981,
-   "value_usd": 38.44
+   "last_usd": 0.15177186657434177,
+   "mult": 0.982,
+   "value_usd": 38.45
   },
   {
    "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
@@ -84,9 +84,9 @@
    "tp_done": [],
    "thesis": "USELESS: established memecoin back in an uptrend (+2% vs 20-day average, +13% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.170047447401959,
-   "mult": 0.989,
-   "value_usd": 38.61
+   "last_usd": 0.16924700300384266,
+   "mult": 0.985,
+   "value_usd": 38.43
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -110,9 +110,9 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.41160436985628984,
-   "mult": 0.985,
-   "value_usd": 23.94
+   "last_usd": 0.40927078219951757,
+   "mult": 0.979,
+   "value_usd": 23.8
   }
  ],
  "equity": [
@@ -511,6 +511,10 @@
   [
    1793232859,
    193.77
+  ],
+  [
+   1793233084,
+   193.67
   ]
  ],
  "closed": [
@@ -686,7 +690,7 @@
  "wallet": "8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82",
  "brain": {
   "mode": "live",
-  "last_run": 1793232544.596539,
+  "last_run": 1793233083.61546,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
@@ -698,6 +702,6 @@
   "last_note": null,
   "trad_status": "5 of 18 established memecoins above their 20-day average (best: STONK +13%, USELESS +2%, SPX +11%)",
   "sol_ch24h": 1.1,
-  "sol_vs_ma20": -0.0235
+  "sol_vs_ma20": -0.0238
  }
 }
