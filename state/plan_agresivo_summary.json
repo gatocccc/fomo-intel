@@ -1,17 +1,17 @@
 {
- "now": 1793232575.4454765,
+ "now": 1793232882.9382873,
  "start_ts": 1793203599.7169404,
  "start_usd": 200.84,
  "start_sol": 1.99,
  "goal_usd": 401.68,
  "days": 30,
  "day": 1,
- "equity_usd": 191.55,
- "equity_sol": 1.8717,
+ "equity_usd": 192.64,
+ "equity_sol": 1.881,
  "cash_sol": 0.0544,
- "positions_usd": 185.98,
- "sol_usd": 102.34,
- "mult": 0.954,
+ "positions_usd": 187.07,
+ "sol_usd": 102.41,
+ "mult": 0.959,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.008306717486532007,
-   "mult": 1.106,
-   "value_usd": 73.36
+   "last_usd": 0.00866643522486765,
+   "mult": 1.154,
+   "value_usd": 76.54
   },
   {
    "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Fast plan: $1.4M token moving (+102% 24h) bought on a pullback (77% of its 3-day high); clean anti-rug check. Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x.",
    "id": "auto-agresivo-20261028-2349",
-   "last_usd": 0.001293853623616481,
-   "mult": 0.975,
-   "value_usd": 56.95
+   "last_usd": 0.001232154950009536,
+   "mult": 0.929,
+   "value_usd": 54.23
   },
   {
    "mint": "GF74fBfcaeLjUiUwKpRiUbvMQtTvNyzMoo6KNyyqNyk6",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Fast plan: $0.6M token moving (+141% 24h) bought on a pullback (83% of its 3-day high); clean anti-rug check. Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x.",
    "id": "auto-agresivo-20261028-2349",
-   "last_usd": 0.0004456944747387372,
-   "mult": 0.946,
-   "value_usd": 55.67
+   "last_usd": 0.0004506772038380719,
+   "mult": 0.956,
+   "value_usd": 56.3
   }
  ],
  "equity": [
@@ -498,6 +498,10 @@
   [
    1793232544,
    192.85
+  ],
+  [
+   1793232852,
+   191.65
   ]
  ],
  "closed": [
