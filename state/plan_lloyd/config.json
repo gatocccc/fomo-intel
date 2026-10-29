@@ -1,0 +1,19 @@
+{
+ "start_ts": 1793203599.7169404,
+ "start_usd": 602.95,
+ "start_sol": 5.9708,
+ "goal_mult": 2,
+ "days": 365,
+ "floor_usd": 241.18,
+ "reserve_sol": 0.03,
+ "max_slippage_pct": 8.0,
+ "swap_slippage_pct": 12.0,
+ "priority_fee_sol": 0.001,
+ "plan": "lloyd",
+ "migrated_ts": 1793238963.0355487,
+ "migrated_from": [
+  "agresivo",
+  "equilibrado",
+  "tradicional"
+ ]
+}

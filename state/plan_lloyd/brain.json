@@ -1,0 +1,17 @@
+{
+ "mode": "live",
+ "last_run": 1793238965.239488,
+ "regime": "neutral",
+ "profile": "book",
+ "_noted_no_cands": 1793238965.2395556,
+ "bal_ts": 1793238965.2409782,
+ "trad_status": "SOL -4.5%, BTC -2.1%, ETH -4.1%, JUP -12.4%",
+ "trad_ts": 1793238965.2413614,
+ "status": "ok",
+ "last_action": {
+  "ts": 1793238967.816385,
+  "title": "Automatic brain: rebalance",
+  "orders": 1,
+  "mode": "live"
+ }
+}

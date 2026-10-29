@@ -1,0 +1,1329 @@
+{
+ "now": 1793239181.6315856,
+ "start_ts": 1793203599.7169404,
+ "start_usd": 602.95,
+ "start_sol": 5.9708,
+ "goal_usd": 1205.9,
+ "days": 365,
+ "day": 1,
+ "equity_usd": 568.93,
+ "equity_sol": 5.6935,
+ "cash_sol": 0.0907,
+ "positions_usd": 559.86,
+ "sol_usd": 99.93,
+ "mult": 0.944,
+ "halt": false,
+ "pause": false,
+ "positions": [
+  {
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "opened_ts": 1793204959.1775496,
+   "entry_usd": 0.007512487746237798,
+   "tokens": 8831.632745155,
+   "tokens_initial": 8831.632745155,
+   "sol_in": 0.65723188,
+   "sol_out": 0.0,
+   "peak_usd": 0.01166483422891647,
+   "stop": -0.05,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
+   "id": "agresivo-2026-10-28-01",
+   "last_usd": 0.011007932677325196,
+   "sleeve": "picks",
+   "from_plan": "agresivo",
+   "mult": 1.465,
+   "value_usd": 97.22
+  },
+  {
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "opened_ts": 1793204947.898395,
+   "entry_usd": 1.0083260823242841,
+   "tokens": 403.115509,
+   "tokens_initial": 549.0662669999999,
+   "sol_in": 5.47924614,
+   "sol_out": 1.418855868,
+   "peak_usd": 1.0075943560922527,
+   "stop": 0.05,
+   "trail": 0.5,
+   "trail_after": 10.0,
+   "tp": [],
+   "tp_done": [],
+   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
+   "id": "equilibrado-2026-10-28-01",
+   "last_usd": 0.999466994774513,
+   "sleeve": "cash",
+   "from_plan": "equilibrado",
+   "mult": 0.991,
+   "value_usd": 402.9
+  },
+  {
+   "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+   "symbol": "STONK",
+   "opened_ts": 1793232589.5218468,
+   "entry_usd": 0.1546247007364677,
+   "tokens": 253.347503727,
+   "tokens_initial": 253.347503727,
+   "sol_in": 0.38276638,
+   "sol_out": 0.0,
+   "peak_usd": 0.1546247007364677,
+   "stop": 0.2,
+   "trail": 0.25,
+   "trail_after": 1.4,
+   "tp": [
+    [
+     2,
+     0.3
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
+   "id": "auto-equilibrado-20261029-0009",
+   "last_usd": 0.14487840200311528,
+   "sleeve": "established",
+   "from_plan": "equilibrado",
+   "mult": 0.937,
+   "value_usd": 36.7
+  },
+  {
+   "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
+   "symbol": "SPX",
+   "opened_ts": 1793232594.201917,
+   "entry_usd": 0.41784525803528966,
+   "tokens": 58.16224545,
+   "tokens_initial": 58.16224545,
+   "sol_in": 0.23746244,
+   "sol_out": 0.0,
+   "peak_usd": 0.41784525803528966,
+   "stop": 0.2,
+   "trail": 0.25,
+   "trail_after": 1.4,
+   "tp": [
+    [
+     2,
+     0.3
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
+   "id": "auto-equilibrado-20261029-0009",
+   "last_usd": 0.39611007259255426,
+   "sleeve": "established",
+   "from_plan": "equilibrado",
+   "mult": 0.948,
+   "value_usd": 23.04
+  }
+ ],
+ "equity": [
+  [
+   1793203600,
+   200.84
+  ],
+  [
+   1793203901,
+   200.88
+  ],
+  [
+   1793204203,
+   200.81
+  ],
+  [
+   1793204504,
+   200.8
+  ],
+  [
+   1793204806,
+   200.63
+  ],
+  [
+   1793205114,
+   198.64
+  ],
+  [
+   1793205419,
+   194.84
+  ],
+  [
+   1793205724,
+   194.45
+  ],
+  [
+   1793206029,
+   197.98
+  ],
+  [
+   1793206334,
+   196.21
+  ],
+  [
+   1793206639,
+   196.86
+  ],
+  [
+   1793206944,
+   194.83
+  ],
+  [
+   1793207249,
+   194.62
+  ],
+  [
+   1793207554,
+   195.53
+  ],
+  [
+   1793207859,
+   194.48
+  ],
+  [
+   1793208164,
+   196.36
+  ],
+  [
+   1793208469,
+   196.21
+  ],
+  [
+   1793208774,
+   196.73
+  ],
+  [
+   1793209079,
+   197.22
+  ],
+  [
+   1793209383,
+   196.34
+  ],
+  [
+   1793209688,
+   198.8
+  ],
+  [
+   1793209993,
+   199.99
+  ],
+  [
+   1793210298,
+   202.47
+  ],
+  [
+   1793210603,
+   203.0
+  ],
+  [
+   1793210908,
+   198.02
+  ],
+  [
+   1793211213,
+   199.57
+  ],
+  [
+   1793211518,
+   201.06
+  ],
+  [
+   1793211823,
+   200.45
+  ],
+  [
+   1793212128,
+   199.97
+  ],
+  [
+   1793212433,
+   202.17
+  ],
+  [
+   1793212738,
+   206.08
+  ],
+  [
+   1793213043,
+   208.2
+  ],
+  [
+   1793213349,
+   210.75
+  ],
+  [
+   1793213523,
+   213.92
+  ],
+  [
+   1793213828,
+   212.77
+  ],
+  [
+   1793214132,
+   213.03
+  ],
+  [
+   1793214424,
+   202.09
+  ],
+  [
+   1793214733,
+   207.0
+  ],
+  [
+   1793214964,
+   207.47
+  ],
+  [
+   1793215273,
+   208.11
+  ],
+  [
+   1793215577,
+   209.41
+  ],
+  [
+   1793215882,
+   209.23
+  ],
+  [
+   1793216186,
+   208.2
+  ],
+  [
+   1793216491,
+   208.66
+  ],
+  [
+   1793216796,
+   209.07
+  ],
+  [
+   1793217101,
+   208.82
+  ],
+  [
+   1793217406,
+   204.97
+  ],
+  [
+   1793217711,
+   203.58
+  ],
+  [
+   1793218016,
+   204.12
+  ],
+  [
+   1793218321,
+   203.02
+  ],
+  [
+   1793218625,
+   204.43
+  ],
+  [
+   1793218930,
+   201.85
+  ],
+  [
+   1793219235,
+   203.62
+  ],
+  [
+   1793219540,
+   200.71
+  ],
+  [
+   1793219844,
+   202.03
+  ],
+  [
+   1793220149,
+   202.15
+  ],
+  [
+   1793220454,
+   202.53
+  ],
+  [
+   1793220758,
+   201.6
+  ],
+  [
+   1793221066,
+   201.03
+  ],
+  [
+   1793221372,
+   198.51
+  ],
+  [
+   1793221678,
+   198.84
+  ],
+  [
+   1793221984,
+   197.05
+  ],
+  [
+   1793222290,
+   198.67
+  ],
+  [
+   1793222596,
+   196.53
+  ],
+  [
+   1793222903,
+   197.23
+  ],
+  [
+   1793223209,
+   199.04
+  ],
+  [
+   1793223515,
+   200.34
+  ],
+  [
+   1793223822,
+   200.29
+  ],
+  [
+   1793224128,
+   197.73
+  ],
+  [
+   1793224434,
+   201.13
+  ],
+  [
+   1793224740,
+   202.14
+  ],
+  [
+   1793225047,
+   198.37
+  ],
+  [
+   1793225353,
+   197.53
+  ],
+  [
+   1793225659,
+   199.77
+  ],
+  [
+   1793225966,
+   204.11
+  ],
+  [
+   1793226272,
+   199.67
+  ],
+  [
+   1793226578,
+   196.19
+  ],
+  [
+   1793226884,
+   196.23
+  ],
+  [
+   1793227190,
+   197.77
+  ],
+  [
+   1793227496,
+   196.68
+  ],
+  [
+   1793227802,
+   191.84
+  ],
+  [
+   1793228108,
+   192.42
+  ],
+  [
+   1793228414,
+   191.71
+  ],
+  [
+   1793228720,
+   192.83
+  ],
+  [
+   1793229027,
+   192.71
+  ],
+  [
+   1793229333,
+   194.7
+  ],
+  [
+   1793229639,
+   196.39
+  ],
+  [
+   1793229724,
+   194.88
+  ],
+  [
+   1793230030,
+   193.69
+  ],
+  [
+   1793230336,
+   192.87
+  ],
+  [
+   1793230642,
+   190.23
+  ],
+  [
+   1793230948,
+   194.26
+  ],
+  [
+   1793231254,
+   192.66
+  ],
+  [
+   1793231344,
+   190.03
+  ],
+  [
+   1793231664,
+   188.34
+  ],
+  [
+   1793231970,
+   212.62
+  ],
+  [
+   1793232282,
+   201.22
+  ],
+  [
+   1793232544,
+   192.85
+  ],
+  [
+   1793232852,
+   191.65
+  ],
+  [
+   1793233083,
+   191.67
+  ],
+  [
+   1793233390,
+   195.4
+  ],
+  [
+   1793233697,
+   189.73
+  ],
+  [
+   1793234004,
+   180.59
+  ],
+  [
+   1793234311,
+   184.73
+  ],
+  [
+   1793234617,
+   186.49
+  ],
+  [
+   1793234923,
+   187.88
+  ],
+  [
+   1793235229,
+   182.64
+  ],
+  [
+   1793235537,
+   173.47
+  ],
+  [
+   1793235849,
+   174.23
+  ],
+  [
+   1793236152,
+   173.46
+  ],
+  [
+   1793236384,
+   173.04
+  ],
+  [
+   1793236687,
+   174.93
+  ],
+  [
+   1793236990,
+   174.42
+  ],
+  [
+   1793237294,
+   182.04
+  ],
+  [
+   1793237597,
+   180.74
+  ],
+  [
+   1793237900,
+   184.16
+  ],
+  [
+   1793238204,
+   180.48
+  ],
+  [
+   1793238508,
+   183.54
+  ],
+  [
+   1793238964,
+   566.34
+  ]
+ ],
+ "closed": [
+  {
+   "ts": 1793235773.5477037,
+   "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
+   "symbol": "INVERSE",
+   "sol_in": 0.57103,
+   "sol_out": 0.42405,
+   "pnl_sol": -0.14698,
+   "pnl_usd": -14.96,
+   "ret": -0.257,
+   "peak_mult": 1.03,
+   "hold_h": 1.2,
+   "why": "stop (0.75x)",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793235354.3623447,
+   "mint": "GF74fBfcaeLjUiUwKpRiUbvMQtTvNyzMoo6KNyyqNyk6",
+   "symbol": "STONKLANA",
+   "sol_in": 0.57565,
+   "sol_out": 0.41583,
+   "pnl_sol": -0.15982,
+   "pnl_usd": -16.28,
+   "ret": -0.278,
+   "peak_mult": 1.0,
+   "hold_h": 1.1,
+   "why": "stop (0.73x)",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793235137.00246,
+   "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+   "symbol": "USELESS",
+   "sol_in": 0.38128,
+   "sol_out": 0.37206,
+   "pnl_sol": -0.00922,
+   "pnl_usd": -0.94,
+   "ret": -0.024,
+   "peak_mult": 1.0,
+   "hold_h": 0.7,
+   "why": "anti-rug check: 4 top holders (15.3%) funded by the same non-exchange wallet",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793232577.4007885,
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "sol_in": 0.60707,
+   "sol_out": 0.57516,
+   "pnl_sol": -0.03191,
+   "pnl_usd": -3.27,
+   "ret": -0.053,
+   "peak_mult": 1.0,
+   "hold_h": 7.7,
+   "why": "lost its trend (below 20-day average)",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793231397.033491,
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "sol_in": 0.60558,
+   "sol_out": 0.58384,
+   "pnl_sol": -0.02174,
+   "pnl_usd": -2.22,
+   "ret": -0.036,
+   "peak_mult": 1.04,
+   "hold_h": 7.3,
+   "why": "rotation into the plan's own range",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793231392.496943,
+   "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+   "symbol": "SAPLING",
+   "sol_in": 0.67082,
+   "sol_out": 0.5746,
+   "pnl_sol": -0.09623,
+   "pnl_usd": -9.84,
+   "ret": -0.143,
+   "peak_mult": 1.0,
+   "hold_h": 2.9,
+   "why": "rotation into the plan's own range",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793214967.7721155,
+   "mint": "27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump",
+   "symbol": "DOAS",
+   "sol_in": 0.68445,
+   "sol_out": 0.67077,
+   "pnl_sol": -0.01368,
+   "pnl_usd": -1.4,
+   "ret": -0.02,
+   "peak_mult": 1.0,
+   "hold_h": 0.1,
+   "why": "fabricated-volume list; automatic buy by filter mistake",
+   "from_plan": "agresivo"
+  }
+ ],
+ "trades": [
+  {
+   "ts": 1793238981.590484,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.86468294,
+   "tokens": 85.75690599999999,
+   "price_usd": 1.009463688514,
+   "slip": 1.0,
+   "sig": "4ZRpoBra6pwTT8iMMYhzw9B94wPazf8AJ4x8kVupEfdrTUwapkhRn2P4QkYcxtikRN68en4KBDQPsk8NZbbeSq2S",
+   "error": "",
+   "id": "auto-lloyd-20261029-0156"
+  },
+  {
+   "ts": 1793236447.8885293,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.79694594,
+   "tokens": 80.237616,
+   "price_usd": 1.008185901143,
+   "slip": 0.87,
+   "sig": "5edGtpR35pB8PgdKqsG1ZbnFnJUiafoD3huuRoPWN88Yjscu7kDLeuLJgwdJ1jCjA7mTwcUN12czd8VCUnCvnBtT",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0114",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793235773.5467513,
+   "side": "sell",
+   "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
+   "symbol": "INVERSE",
+   "ok": true,
+   "sol": 0.424047304,
+   "tokens": 44013.92122,
+   "price_usd": 0.000980311844,
+   "why": "stop (0.75x)",
+   "sig": "9kxSv1kud8frjN6WvSM2VHVHxVrmzrWcN8MvuygRc4uaorZbLKtQf7qntxNhR5vTeBJRbr6wSgdbohYxZRMm7oX",
+   "error": "",
+   "id": null,
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793235354.361849,
+   "side": "sell",
+   "mint": "GF74fBfcaeLjUiUwKpRiUbvMQtTvNyzMoo6KNyyqNyk6",
+   "symbol": "STONKLANA",
+   "ok": true,
+   "sol": 0.415832255,
+   "tokens": 124913.185345,
+   "price_usd": 0.000339177908,
+   "why": "stop (0.73x)",
+   "sig": "2bNYdjccdNfNbzJVKbt21zps3WS8TejXjg59L92vraScy3KJszqjSmSjD3gQhD9q6pTTAaxyJqWS2zjdkKmoxs1E",
+   "error": "",
+   "id": null,
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793235137.0017984,
+   "side": "sell",
+   "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+   "symbol": "USELESS",
+   "ok": true,
+   "sol": 0.372056402,
+   "tokens": 227.062055,
+   "price_usd": 0.167026757354,
+   "why": "anti-rug check: 4 top holders (15.3%) funded by the same non-exchange wallet",
+   "sig": "1XgmxEF2aQ7SsQBqxNB3L6iKTcWRLZyBYWSTAfCCBase6brhQXQsBWRA5bEWVVCXGpvdETG4C71qWd97b8hWmgW",
+   "error": "",
+   "id": "equilibrado-2026-10-29-01",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793232594.2011442,
+   "side": "buy",
+   "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
+   "symbol": "SPX",
+   "ok": true,
+   "sol": 0.23746244,
+   "tokens": 58.16224545,
+   "price_usd": 0.417845258035,
+   "slip": 1.87,
+   "sig": "4TYLuU7NRb9HpacrpmptoSe4v6EYvCxxDqWPuYC8g7jm1RDNzkZwRn27jQAd87myLJaXE9csZUYxY5ZkhmDYcr6V",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793232591.9602692,
+   "side": "buy",
+   "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+   "symbol": "USELESS",
+   "ok": true,
+   "sol": 0.38127794,
+   "tokens": 227.062055,
+   "price_usd": 0.171853677964,
+   "slip": 1.22,
+   "sig": "65DpkeoTptZTWKFhDe5ERoYHPyEq42aHLvYtQvCRRpFGCpjZ1SdCBcxJKuV1avYsYqjmkckzBCxGn9kYw1MK1vDv",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793232589.5212219,
+   "side": "buy",
+   "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+   "symbol": "STONK",
+   "ok": true,
+   "sol": 0.38276638,
+   "tokens": 253.347503727,
+   "price_usd": 0.154624700736,
+   "slip": 1.44,
+   "sig": "21ocB9mnRmCgVjSrELZirnXL8ePy367EHCfkWz2i6W4ye7SgMmnwvP6LTMufEjeW3wEJKHCeNbJD1jh9QAv5rEsP",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793232587.2577653,
+   "side": "sell",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 1.418855868,
+   "tokens": 145.950758,
+   "price_usd": 0.994932557191,
+   "why": "fund trend position",
+   "sig": "2pQa5nvAmRk9AnNjcuPw9MVkpU6LDkp4q8574bkhjwwx6U4Jg6SHYLFBQsbz9bA14ujH8hynhLjnXfzrNSB8Q9Da",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793232580.130049,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.56499194,
+   "tokens": 57.24962500000001,
+   "price_usd": 1.010023137805,
+   "slip": 1.05,
+   "sig": "3rRh8LsQjB5WyAEvgVUz2WzuoumHCXTCZoxpwf1TAamzTxV8DeJpuHEPp4kPdiz69aUck7UqSp2zZEKK8KpcTLb9",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793232577.4002876,
+   "side": "sell",
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "ok": true,
+   "sol": 0.575162568,
+   "tokens": 4225.594161999999,
+   "price_usd": 0.013930430791,
+   "why": "lost its trend (below 20-day average)",
+   "sig": "242VpWPDxNU5Y5feHdwTnvezttkGhQCxQFSnasGqmsa6qMhoJGixmwy8SnMpGCmqJNgwHUhuF4XjdszFewFuCfus",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793231403.4408422,
+   "side": "buy",
+   "mint": "GF74fBfcaeLjUiUwKpRiUbvMQtTvNyzMoo6KNyyqNyk6",
+   "symbol": "STONKLANA",
+   "ok": true,
+   "sol": 0.575651279,
+   "tokens": 124913.185345,
+   "price_usd": 0.000471368798,
+   "slip": 3.98,
+   "sig": "3iFr5PN8dj6GUhBT4Vwx7NeS5sWmQk8SpbkES4QArnd89Suobp1ztVGTPH1N1Ldwc2zTU4uxhZyQkz2zgpRJg7DQ",
+   "error": "",
+   "id": "auto-agresivo-20261028-2349",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793231397.0327966,
+   "side": "sell",
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "ok": true,
+   "sol": 0.583840555,
+   "tokens": 4225.637077,
+   "price_usd": 0.014132262811,
+   "why": "rotation into the plan's own range",
+   "sig": "3LUc8qU5mdZFXyTG52u5Le4jHUyRdXFJ2XTWViigydMkaeBQH4RGVFBv6vstETx7gnpLN5HbyeF6tqnyYhXw54Uz",
+   "error": "",
+   "id": "auto-agresivo-20261028-2349",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793231394.7247248,
+   "side": "buy",
+   "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
+   "symbol": "INVERSE",
+   "ok": true,
+   "sol": 0.57102828,
+   "tokens": 44013.92122,
+   "price_usd": 0.001327019168,
+   "slip": 1.22,
+   "sig": "37sGXaQ6rc244RUtGLoPtZXgxjJtNKkGzuNcJ6ud3iQG8QSYiPsAJxGdiBeVdUPse8AWxWYyRVN1MfSaTv11bc7o",
+   "error": "",
+   "id": "auto-agresivo-20261028-2349",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793231392.4963613,
+   "side": "sell",
+   "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+   "symbol": "SAPLING",
+   "ok": true,
+   "sol": 0.574596645,
+   "tokens": 18351.331005,
+   "price_usd": 0.003202618131,
+   "why": "rotation into the plan's own range",
+   "sig": "3ED5fK74iowtEL3VS9SBPGYjf5y4BLMUKFJaxUwtWyekC9yzJNfC3z3LxVAQvTTUy3bgGWMicw4s1V86opvAdfex",
+   "error": "",
+   "id": "auto-agresivo-20261028-2349",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793221035.092635,
+   "side": "buy",
+   "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
+   "symbol": "SAPLING",
+   "ok": true,
+   "sol": 0.67082478,
+   "tokens": 18351.331005,
+   "price_usd": 0.003738808214,
+   "slip": 3.17,
+   "sig": "2ptkQfVZYFtbKwkGWgHtYzGPdFC8xfqyuHGaYbEU9L1Fgxazbbnu8HQx2EGxrFouJqczweKyzfsm4PY7T6UuG63j",
+   "error": "",
+   "id": "auto-agresivo-20261028-2057",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793214967.7718751,
+   "side": "sell",
+   "mint": "27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump",
+   "symbol": "DOAS",
+   "ok": true,
+   "sol": 0.670773382,
+   "tokens": 14326.846434,
+   "price_usd": 0.00478117801,
+   "why": "fabricated-volume list; automatic buy by filter mistake",
+   "sig": "2xHQXEJQnE3b7HjZ2msdWQX22z7ZjJxQBCDHbuZKZRXh1eDezqR2ToPjg6zZ6LvtNUsvE9hxNw2CCFx7ASuvqefh",
+   "error": "",
+   "id": "agresivo-2026-10-28-02",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793214457.0597723,
+   "side": "buy",
+   "mint": "27Fe2sET619et2hXBBJXdabBK7ScD5UNym64u6Dqpump",
+   "symbol": "DOAS",
+   "ok": true,
+   "sol": 0.68445104,
+   "tokens": 14326.846434,
+   "price_usd": 0.004873045586,
+   "slip": 1.47,
+   "sig": "3BwWnLbTmqYT7ouvwnkNVNkryoa7yDcgnkG2ZT1FDH5rWoyvA6ym85ty5rUL4VX74jtBzDsB3CzBzZkKUZUaT8jB",
+   "error": "",
+   "id": "auto-agresivo-20261028-1907",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793204961.3594608,
+   "side": "buy",
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "ok": true,
+   "sol": 0.6055798,
+   "tokens": 4225.637077,
+   "price_usd": 0.014467228537,
+   "slip": 3.43,
+   "sig": "3mg5V4tvMASvVn4iTb1gntUoyqgq4zCFsvXUzXjJFKrnVz2fxsbFrpNZBTJEK2ShuuSFhvit5M2GKx7EAZMdoL4y",
+   "error": "",
+   "id": "agresivo-2026-10-28-01",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793204959.9539106,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 1.94363188,
+   "tokens": 194.675259,
+   "price_usd": 1.007881349982,
+   "slip": 0.85,
+   "sig": "kCkzN5CE9YgYBXu22MzLTDnU79pM5BSrQs51enXrUaeJkucYayEKQxMnZSdrerrU1mDHArgSB8tyMWTtHJfhTWK",
+   "error": "",
+   "id": "tradicional-2026-10-28-01",
+   "from_plan": "tradicional"
+  },
+  {
+   "ts": 1793204959.176875,
+   "side": "buy",
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "ok": true,
+   "sol": 0.65723188,
+   "tokens": 8831.632745155,
+   "price_usd": 0.007512487746,
+   "slip": 4.31,
+   "sig": "5uVsgBwCqccJfKztrzN12tHAyHukKV89RZGvTtcppxFKfvVGo2UinfPfxpJdV6r7PoP79cjNzKEuA8uavakfRWUQ",
+   "error": "",
+   "id": "agresivo-2026-10-28-01",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793204947.8977249,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 1.30899344,
+   "tokens": 131.146861,
+   "price_usd": 1.007594356092,
+   "slip": 0.82,
+   "sig": "5G2CE4QSbDUujeWjzs7eWy9yVEsRoX7hmJVZLwoznuMJ9yQNtz4kQa7FHKyuFG9n8Mf1NyvxcYwGbDCCcBLTX1XA",
+   "error": "",
+   "id": "equilibrado-2026-10-28-01",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793204945.3411303,
+   "side": "buy",
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "ok": true,
+   "sol": 0.60706824,
+   "tokens": 4225.594163,
+   "price_usd": 0.014502934476,
+   "slip": 3.65,
+   "sig": "2uMucLayDNH4GeyRVqbAjYUx73eT591WKYniniWB7Bgh4YZLpaiRMnEyVJd8BLMpj39Jaz2AmfWBguDNJ7ZVxtVq",
+   "error": "",
+   "id": "equilibrado-2026-10-28-01",
+   "from_plan": "equilibrado"
+  }
+ ],
+ "journal": [
+  {
+   "ts": 1793238981.5925899,
+   "title": "Execution",
+   "text": "buy USDC: bought 86 USDC for 0.8647 SOL at $1.00946 (slippage +1.0%)",
+   "kind": "execution",
+   "id": "auto-lloyd-20261029-0156"
+  },
+  {
+   "ts": 1793238981.5924554,
+   "title": "Automatic brain: rebalance",
+   "text": "[Picks] Idle cash (17%) but no candidate passes the scan and the anti-rug check. Waiting beats buying something worse.\n\n[Majors] SOL fell below its 20-day average (-4.5%): back to USDC.",
+   "kind": "decisión",
+   "id": "auto-lloyd-20261029-0156"
+  },
+  {
+   "ts": 1793238963.0356915,
+   "title": "One book from here on",
+   "kind": "system",
+   "text": "The three house plans (Aggressive, Balanced, Core) were merged into a single book tonight. Everything they held moved into this wallet, with the same stops: GTA6 in the Picks pocket; STONK, USELESS and SPX in Established memes; USDC in Cash. Their closed trades and notes are kept above. From now on Lloyd decides how much goes to each pocket according to the market, instead of three fixed plans. Starting balance of the book: $602.95 (the sum of the three plans' starts)."
+  },
+  {
+   "ts": 1793236447.8904986,
+   "title": "Execution",
+   "text": "buy USDC: bought 80 USDC for 0.7969 SOL at $1.00819 (slippage +0.9%)",
+   "kind": "execution",
+   "id": "auto-equilibrado-20261029-0114",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793236447.890364,
+   "title": "Automatic brain: rebalance",
+   "text": "",
+   "kind": "decisión",
+   "id": "auto-equilibrado-20261029-0114",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793235773.5491707,
+   "title": "Automatic exit",
+   "text": "INVERSE: sold 100% of INVERSE (stop (0.75x)) for 0.4240 SOL — position closed",
+   "kind": "automatic",
+   "id": null,
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793235491.2949526,
+   "title": "Automatic brain: status",
+   "text": "Daily brake: the plan is down more than 12% today (from $196 to $172). No new positions until tomorrow; open ones keep their stops.",
+   "kind": "decisión",
+   "id": "auto-agresivo-note-20261029-0058",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793235354.363192,
+   "title": "Automatic exit",
+   "text": "STONKLANA: sold 100% of STONKLANA (stop (0.73x)) for 0.4158 SOL — position closed",
+   "kind": "automatic",
+   "id": null,
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793235137.0040095,
+   "title": "Execution",
+   "text": "sell Dz9mQ9: sold 100% of USELESS (anti-rug check: 4 top holders (15.3%) funded by the same non-exchange wallet) for 0.3721 SOL — position closed",
+   "kind": "execution",
+   "id": "equilibrado-2026-10-29-01",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793235137.003852,
+   "title": "Selling USELESS: one wallet funded holders with 15% of the supply",
+   "text": "Tonight's anti-rug check looks at who funded the 20 largest holders of each coin. USELESS came back CONCENTRATED: four of its biggest holders, together 15.3% of all tokens, were set up and paid for by the same wallet (D89hHJT5…), and I could not confirm that wallet belongs to an exchange. A single hidden owner of 15% can sell into everyone else at any moment, so under this plan's rules the coin goes. The position was bought a few hours ago by the automatic trend rule, which does not run this check before buying; it is down about 2%, so the exit costs little. The money stays in the plan's cash for the next coin that passes the check. STONK also showed a 4-wallet group (4.2%), but those wallets were funded by a Binance hot wallet, which is normal for coins traded on exchanges, so it stays. SPX is clean.",
+   "kind": "decisión",
+   "id": "equilibrado-2026-10-29-01",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793233099.0558267,
+   "title": "Automatic brain: status",
+   "text": "Still in USDC on purpose. Versus their 20-day averages: SOL -2.4%, BTC -0.8%, ETH -2.6%, JUP -9.7%. The plan buys each asset the hour it closes 1% above its average; until then, cash is the position. Checked every hour.",
+   "kind": "decisión",
+   "id": "auto-tradicional-note-20261029-0018",
+   "from_plan": "tradicional"
+  },
+  {
+   "ts": 1793232594.2040415,
+   "title": "Execution",
+   "text": "sell DEW9dS: sold 100% of SI (lost its trend (below 20-day average)) for 0.5752 SOL — position closed\nbuy USDC: bought 57 USDC for 0.5650 SOL at $1.01002 (slippage +1.1%)\nsell EPjFWd: sold 77% of USDC (fund trend position) for 1.4189 SOL\nbuy STONK: bought 253 STONK for 0.3828 SOL at $0.154625 (slippage +1.4%)\nbuy USELESS: bought 227 USELESS for 0.3813 SOL at $0.171854 (slippage +1.2%)\nbuy SPX: bought 58 SPX for 0.2375 SOL at $0.417845 (slippage +1.9%)",
+   "kind": "execution",
+   "id": "auto-equilibrado-20261029-0009",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793232594.2038522,
+   "title": "Automatic brain: new position",
+   "text": "SI is -14% versus its 20-day average: the trend broke. Back to USDC.\n\nSTONK ($119M, $2.8M liquidity) is back above its 20-day average (+13%) and up +37% in 7 days (30 days: -50%). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.\n\nUSELESS ($170M, $5.0M liquidity) is back above its 20-day average (+2%) and up +13% in 7 days (30 days: -35%). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.\n\nSPX ($34M, $2.2M liquidity) is back above its 20-day average (+11%) and up +12% in 7 days (30 days: -16%). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.",
+   "kind": "decisión",
+   "id": "auto-equilibrado-20261029-0009",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793231954.606974,
+   "title": "Execution",
+   "text": "set 4kjruq: ajustó GTA6: stop=-0.05",
+   "kind": "execution",
+   "id": "auto-agresivo-20261028-2359",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793231954.6068902,
+   "title": "Automatic brain: stops raised",
+   "text": "GTA6: peaked at 1.37x; stop raised to 1.05x (was 0.70x).",
+   "kind": "decisión",
+   "id": "auto-agresivo-20261028-2359",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793231403.4419048,
+   "title": "Execution",
+   "text": "sell BZFYNP: sold 100% of SAPLING (rotation into the plan's own range) for 0.5746 SOL — position closed\nbuy INVERSE: bought 44,014 INVERSE for 0.5710 SOL at $0.00132702 (slippage +1.2%)\nsell DEW9dS: sold 100% of SI (rotation into the plan's own range) for 0.5838 SOL — position closed\nbuy STONKLANA: bought 124,913 STONKLANA for 0.5757 SOL at $0.000471369 (slippage +4.0%)",
+   "kind": "execution",
+   "id": "auto-agresivo-20261028-2349",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793231403.4418013,
+   "title": "Automatic brain: new position",
+   "text": "Rotating SAPLING (0.87x) out: it is a larger, slower token than this plan is meant to hold. Capital moves to INVERSE.\n\nINVERSE: $1.4M market cap, $115K liquidity, 24h volume 3.6x its value, 4310 holders, top 10 hold 20%; 24h +102%, at 77% of its 3-day high. Anti-rug: clean (common-funder groups 0%). Against: bundlers 3%; a 25% stop can fill lower in a fast drop; small tokens can halve in an hour.\n\nRotating SI (0.98x) out: it is a larger, slower token than this plan is meant to hold. Capital moves to STONKLANA.\n\nSTONKLANA: $0.6M market cap, $188K liquidity, 24h volume 4.2x its value, 1591 holders, top 10 hold 14%; 24h +141%, at 83% of its 3-day high. Anti-rug: clean (common-funder groups 4.84%). Against: bundlers 1%; a 25% stop can fill lower in a fast drop; small tokens can halve in an hour.",
+   "kind": "decisión",
+   "id": "auto-agresivo-20261028-2349",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793221035.094733,
+   "title": "Execution",
+   "text": "buy SAPLING: bought 18,351 SAPLING for 0.6708 SOL at $0.00373881 (slippage +3.2%)",
+   "kind": "execution",
+   "id": "auto-agresivo-20261028-2057",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793221035.0945897,
+   "title": "Automatic brain: new position",
+   "text": "Idle cash: 0.663 SOL (34% of the plan). Putting it to work in SAPLING.\n\nSAPLING: $2.9M market cap, $364K liquidity, 24h volume 0.6x its value, 4799 holders, top 10 hold 19%; 24h +57%, at 66% of its 3-day high. Anti-rug: clean (common-funder groups 3.2%). Against: bundlers 2%; a 30–35% stop can fill lower in a fast drop.",
+   "kind": "decisión",
+   "id": "auto-agresivo-20261028-2057",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793214967.773669,
+   "title": "Execution",
+   "text": "sell 27Fe2s: sold 100% of DOAS (fabricated-volume list; automatic buy by filter mistake) for 0.6708 SOL — position closed",
+   "kind": "execution",
+   "id": "agresivo-2026-10-28-02",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793214967.7735238,
+   "title": "Selling DOAS: the automatic buy broke a rule",
+   "text": "The automatic brain bought DOAS at 16:07 ART with idle cash. That was a filter mistake, not a bet: DOAS has been on our fabricated-volume list since October 27 (bots trading the same amount every hour), and the scan data was inconsistent (−98% in 24 hours, 2% of its 3-day high). The filter blocked overheated tokens but not collapsed ones.\n\nSelling now, close to the entry price; the cost is the round-trip fee and slippage (about 3%, roughly $2). The brain is fixed: it now only buys a healthy pullback (55–90% of the 3-day high, between −40% and +60% in 24 hours), with daily volume of at least 30% of market cap, 1,000+ holders, a scan less than 2.5 hours old, and a fabricated-volume blacklist.",
+   "kind": "decisión",
+   "id": "agresivo-2026-10-28-02",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793214457.0645432,
+   "title": "Execution",
+   "text": "buy DOAS: bought 14,327 DOAS for 0.6845 SOL at $0.00487305 (slippage +1.5%)",
+   "kind": "execution",
+   "id": "auto-agresivo-20261028-1907",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793214457.064388,
+   "title": "Automatic brain: new position",
+   "text": "Idle cash: 0.677 SOL (34% of the plan). Putting it to work in DOAS.\n\nDOAS: $4.7M market cap, $184K liquidity, 24h volume 0.2x its value, 2815 holders, top 10 hold 1%; 24h -98%, at 2% of its 3-day high. Anti-rug: clean (common-funder groups 0%). Against: bundlers 0%; a 30–35% stop can fill lower in a fast drop.",
+   "kind": "decisión",
+   "id": "auto-agresivo-20261028-1907",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793204961.3617384,
+   "title": "Ejecución",
+   "text": "buy GTA6: compró 8,832 GTA6 por 0.6572 SOL a US$0.00751249 (slippage +4.3%)\nbuy SI: compró 4,226 SI por 0.6056 SOL a US$0.0144672 (slippage +3.4%)",
+   "kind": "ejecución",
+   "id": "agresivo-2026-10-28-01",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793204961.361558,
+   "title": "First positions: GTA6 and SI",
+   "text": "Plan started with 1.99 SOL ($201). Two positions, one third of the plan each, and the rest kept in SOL for the next good setup.\n\nGTA6 ($7.2M market cap, 25.8K holders, $401K liquidity): a meme built around the GTA VI release on November 19, after this plan's first review window, so the story should keep building. Our anti-rug check found no group of top holders funded by the same wallet. The same brain bought it for the live desk yesterday.\n\nSI ($14.3M, 52K holders, top 10 hold 11%): real, irregular trading volume worth 34% of its value per day, up 45% in three days and 20% below its weekly high. Anti-rug: clean (largest common-funder group holds 1.7%).\n\nDevil's advocate: GTA6 is up 56% in 24 hours, so we are buying after a run, not on a pullback; a 30% stop can fill lower if it drops fast. SI's creator has launched about 7,500 tokens, the profile of a token factory, even though the holders look spread out. We accept it with a 30% stop on each and modest size, so a worst case costs about a fifth of the plan.",
+   "kind": "decisión",
+   "id": "agresivo-2026-10-28-01",
+   "from_plan": "agresivo"
+  },
+  {
+   "ts": 1793204959.9554257,
+   "title": "Ejecución",
+   "text": "buy USDC: compró 195 USDC por 1.9436 SOL a US$1.00788 (slippage +0.8%)",
+   "kind": "ejecución",
+   "id": "tradicional-2026-10-28-01",
+   "from_plan": "tradicional"
+  },
+  {
+   "ts": 1793204959.955336,
+   "title": "Trend is down: holding USDC",
+   "text": "Plan started with 2.00 SOL ($202). This plan holds SOL, BTC, ETH and JUP only while each trades above its 20-day average. Today none does: SOL is 4.0% below, BTC 1.7% below, ETH 4.2% below and JUP 11.0% below.\n\nSo the plan moves to USDC and waits. Holding SOL as 'cash' would still lose money if SOL keeps falling (it is down 14.5% in 30 days). As soon as an asset closes back above its average, the plan buys it.\n\nDevil's advocate: trend rules buy late and sell late; if the market bounces tomorrow, we will miss the first few percent. We accept that, because this plan exists to avoid the big drops, not to catch every move.",
+   "kind": "decisión",
+   "id": "tradicional-2026-10-28-01",
+   "from_plan": "tradicional"
+  },
+  {
+   "ts": 1793204947.8999398,
+   "title": "Ejecución",
+   "text": "buy SI: compró 4,226 SI por 0.6071 SOL a US$0.0145029 (slippage +3.6%)\nbuy USDC: compró 131 USDC por 1.3090 SOL a US$1.00759 (slippage +0.8%)",
+   "kind": "ejecución",
+   "id": "equilibrado-2026-10-28-01",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793204947.8997867,
+   "title": "First position: SI, the rest in USDC",
+   "text": "Plan started with 1.98 SOL ($200). The memecoin market is weak today: of twelve large memecoins we checked (POPCAT, BONK peers, PNUT, MOODENG, TROLL, PUMP and others), ten trade below their 20-day average. Buying into that is how balanced plans lose money, so this plan starts small.\n\nOne position: SI ($14.3M market cap, 52K holders, top 10 hold 11%, $506K liquidity), the only mid-cap that passed every filter today: real trading volume, spread-out holders and a clean anti-rug check. About 30% of the plan.\n\nThe rest goes to USDC so it does not lose value if SOL keeps falling (SOL is 4% below its 20-day average). We will add positions as soon as candidates pass the filters; the next review is tonight.\n\nDevil's advocate: SI's creator has launched about 7,500 tokens, typical of a token factory, and SI is up 45% in three days. We accept it because the holders are spread out and the stop is 20%.",
+   "kind": "decisión",
+   "id": "equilibrado-2026-10-28-01",
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793203780.984311,
+   "title": "Plan started",
+   "text": "Starting balance 1.9993 SOL ($201.95 at SOL $101.01). Hard floor: $81 (stops everything if the plan loses 60%).",
+   "kind": "system",
+   "id": null,
+   "from_plan": "tradicional"
+  },
+  {
+   "ts": 1793203690.8277366,
+   "title": "Plan started",
+   "text": "Starting balance 1.9815 SOL ($200.16 at SOL $101.01). Hard floor: $80 (stops everything if the plan loses 60%).",
+   "kind": "system",
+   "id": null,
+   "from_plan": "equilibrado"
+  },
+  {
+   "ts": 1793203599.7174072,
+   "title": "Plan started",
+   "text": "Starting balance 1.9900 SOL ($200.84 at SOL $100.93). Hard floor: $80 (stops everything if the plan loses 60%).",
+   "kind": "system",
+   "id": null,
+   "from_plan": "agresivo"
+  }
+ ],
+ "wins": 0,
+ "n_closed": 7,
+ "realized_usd": -48.91,
+ "plan": "lloyd",
+ "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
+ "brain": {
+  "mode": "live",
+  "last_run": 1793238965.239488,
+  "regime": "neutral",
+  "status": "ok",
+  "last_action": {
+   "ts": 1793238967.816385,
+   "title": "Automatic brain: rebalance",
+   "orders": 1,
+   "mode": "live"
+  },
+  "last_note": null,
+  "trad_status": "SOL -4.5%, BTC -2.1%, ETH -4.1%, JUP -12.4%",
+  "sol_ch24h": -1.4,
+  "sol_vs_ma20": -0.0451
+ }
+}

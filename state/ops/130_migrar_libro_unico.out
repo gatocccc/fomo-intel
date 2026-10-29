@@ -1,0 +1,78 @@
+== 130_migrar_libro_unico 2026-10-29T01:51:04Z ==
+--- paro los motores de los planes y el cerebro (nadie opera mientras se mueve la plata)
+--- ensayo
+01:51:07 libro lloyd = G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek
+01:51:07 moviendo equilibrado (8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82) → lloyd
+01:51:07   [dry] 8UhBd1 → G9DYnz: 122.683 de EPjFWdd5
+01:51:07   [dry] 8UhBd1 → G9DYnz: 58.1622 de J3NKxxXZ
+01:51:07   [dry] 8UhBd1 → G9DYnz: 253.348 de 6GmAFSYs
+01:51:07   [dry] 8UhBd1 → G9DYnz: 1e-06 de DEW9dSN6
+01:51:07   [dry] SOL 0.065077
+01:51:07 moviendo tradicional (EgkDFMH5oaRrKjo3UWFhGG78hgzxxRMKVbvX9R6MM7o4) → lloyd
+01:51:07   [dry] EgkDFM → G9DYnz: 194.675 de EPjFWdd5
+01:51:07   [dry] SOL 0.052639
+01:51:07 posiciones ['4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz', 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', '6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx', 'J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr']; cierres 7; operaciones 22; diario 29; start_usd 602.95
+--- migración real
+01:51:08 libro lloyd = G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek
+01:51:08 moviendo equilibrado (8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82) → lloyd
+01:51:10   tokens EPjFWdd5 122.683: 4VpJdifu3dsXCx2M… ok
+01:51:13   tokens J3NKxxXZ 58.1622: 2tUFF7GJZYfoaRSm… ok
+01:52:46   tokens 6GmAFSYs 253.348: avyKvNEbFhuHv448… SIN CONFIRMAR
+01:52:50   tokens DEW9dSN6 1e-06: 2PChoMNDLXzitGGd… ok
+01:52:57   SOL 0.062085: 2rtSEdYdGx6gJEt8… ok
+01:52:57 moviendo tradicional (EgkDFMH5oaRrKjo3UWFhGG78hgzxxRMKVbvX9R6MM7o4) → lloyd
+01:54:29   tokens EPjFWdd5 194.675: 2rXNWhYvBwHPa74R… SIN CONFIRMAR
+01:56:03   SOL 0.052639: ZCuYPuzsPFNxKQg6… SIN CONFIRMAR
+01:56:03 posiciones ['4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz', 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', '6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx', 'J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr']; cierres 7; operaciones 22; diario 29; start_usd 602.95
+01:56:03 listo. Ahora: systemctl disable --now fomo-desk@agresivo fomo-desk@equilibrado fomo-desk@tradicional; systemctl enable --now fomo-desk@lloyd
+--- servicios
+fomo-desk@lloyd: active · fomo-brain: active · fomo-app: active
+Oct 29 01:56:03 simplai-prod systemd[1]: Started fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+Oct 29 01:56:21 simplai-prod python3[1621710]: 2026-10-29 01:56:21,592 INFO desk-lloyd: decisión auto-lloyd-20261029-0156 -> buy USDC: bought 86 USDC for 0.8647 SOL at $1.00946 (slippage +1.0%)
+libro 571.48 start 602.95 cash 0.0907
+  GTA6 picks 1.506 99.93
+  USDC cash 0.991 402.89
+  STONK established 0.935 36.63
+  SPX established 0.944 22.94
+--- saldos que quedaron en las billeteras viejas
+equilibrado 8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82 SOL=curl: (2) no URL specified
+curl: try 'curl --help' or 'curl --manual' for more information
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+tradicional EgkDFMH5oaRrKjo3UWFhGG78hgzxxRMKVbvX9R6MM7o4 SOL=curl: (2) no URL specified
+curl: try 'curl --help' or 'curl --manual' for more information
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+--- API
+{"name": "Lloyd", "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek", "since": 1793203599.7169404, "start_usd": 602.95, "equity_usd": 571.48, "pnl_usd": -31.47, "pnl_pct": -0.0522, "cash_usd": 403.96, "updated": 1793238997.2738702, "legacy": false, "regime": {"state": "neutral", "label": "neutral", "sol_vs_ma20": -0.0451, "btc_vs_ma20": -0.021, "breadth": {"above": 5, "total": 18}, "sol_24h": -1.4, "since": 1793238965.2331963}, "sleeves": [{"key": "cash", "name": "Cash", "target_pct": 30, "value_usd": 403.96, "pct": 70.7, "positions": 0}, {"key": "majors", "name": "Majors", "target_pct": 25, "value_usd": 0.0, "pct": 0.0, "positions": 0}, {"key": "established", "name": "Established meme
+{"risk": 35, "key": "regular", "name": "Regular's stool", "exposure_pct": 100, "horizons": [{"days": 30, "median_mult": 0.811, "p10_mult": 0.588, "p90_mult": 1.13, "prob_hit_limit": 0.341}, {"days": 90, "median_mult": 0.533, "p10_mult": 0.302, "p90_mult": 0.945, "prob_hit_limit": 0.91}], "based_on_trades": 17, "preliminary": true, "note": "Preliminary: built from 17 real trades of the house book p
+/ 200
+/book/ 200
+/app/ 200
+/admin/ 401
+/plans/ 200
+== exit 0 ==
