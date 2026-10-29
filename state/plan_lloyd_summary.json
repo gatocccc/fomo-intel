@@ -1,17 +1,17 @@
 {
- "now": 1793317784.9498308,
+ "now": 1793318080.7682655,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 546.26,
- "equity_sol": 5.7028,
- "cash_sol": 0.4091,
- "positions_usd": 507.07,
- "sol_usd": 95.79,
- "mult": 0.998,
+ "equity_usd": 545.96,
+ "equity_sol": 5.7178,
+ "cash_sol": 0.0866,
+ "positions_usd": 537.69,
+ "sol_usd": 95.48,
+ "mult": 0.997,
  "halt": false,
  "pause": false,
  "positions": [
@@ -19,10 +19,10 @@
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
    "symbol": "USDC",
    "opened_ts": 1793204947.898395,
-   "entry_usd": 1.0093889857557417,
-   "tokens": 487.36792599999995,
-   "tokens_initial": 758.3041519999999,
-   "sol_in": 7.589148338,
+   "entry_usd": 1.0088870352805355,
+   "tokens": 518.175316,
+   "tokens_initial": 789.1115419999999,
+   "sol_in": 7.911664104,
    "sol_out": 2.657660148,
    "peak_usd": 1.0075943560922527,
    "stop": 0.05,
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9990093995400954,
+   "last_usd": 0.998970636662582,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.99,
-   "value_usd": 486.89
+   "value_usd": 517.64
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -60,11 +60,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3470041183176728,
+   "last_usd": 0.3446854601292284,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.83,
-   "value_usd": 20.18
+   "mult": 0.825,
+   "value_usd": 20.05
   }
  ],
  "equity": [
@@ -1591,6 +1591,10 @@
   [
    1793317693,
    546.2
+  ],
+  [
+   1793317865,
+   546.16
   ]
  ],
  "closed": [
@@ -1752,6 +1756,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793317882.4518123,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.322515766,
+   "tokens": 30.807389999999998,
+   "price_usd": 1.000946259965,
+   "slip": 0.19,
+   "sig": "SsDuiikuRMjUuP5CjZg8ThwuYeXNBynGb9fTEd4kevPYiopqDbCTHdphvZM2xNZK6b7i7WBpXY1vLNrqFFLipRg",
+   "error": "",
+   "id": "auto-lloyd-20261029-2351"
+  },
   {
    "ts": 1793317647.673152,
    "side": "sell",
@@ -2322,6 +2340,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793317882.45378,
+   "title": "Execution",
+   "text": "buy USDC: bought 31 USDC for 0.3225 SOL at $1.00095 (slippage +0.2%)",
+   "kind": "execution",
+   "id": "auto-lloyd-20261029-2351"
+  },
+  {
+   "ts": 1793317882.4536378,
+   "title": "Automatic brain: rebalance",
+   "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -6.4%, 4h -4.0%): no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-20261029-2351"
+  },
   {
    "ts": 1793317647.674029,
    "title": "Automatic exit",
@@ -3323,11 +3355,11 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793317385.7603674,
+  "last_run": 1793317866.2029681,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
-   "ts": 1793309043.9413676,
+   "ts": 1793317866.2053742,
    "title": "Automatic brain: rebalance",
    "orders": 1,
    "mode": "live"
@@ -3337,7 +3369,7 @@
    "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -6.0%, 4h -3.6%): no new memecoins until it improves."
   },
   "trad_status": "SOL -7.3%, BTC -3.6%, ETH -5.9%, JUP -17.3%",
-  "sol_ch24h": -6.0,
-  "sol_vs_ma20": -0.0768
+  "sol_ch24h": -6.4,
+  "sol_vs_ma20": -0.0808
  }
 }

@@ -1,6 +1,6 @@
 {
- "ts": 1793317385.756745,
- "n_total": 18,
+ "ts": 1793317866.1941323,
+ "n_total": 19,
  "by_category": {
   "affiliation": {
    "n": 1,
@@ -64,17 +64,18 @@
    "last_ts": 1793308690.0807648
   },
   "trend": {
-   "n": 1,
+   "n": 2,
    "wins": 0,
-   "mean_ret": -0.024,
-   "median_ret": -0.024,
-   "pnl_usd": -0.94,
+   "mean_ret": -0.0885,
+   "median_ret": -0.0885,
+   "pnl_usd": -6.55,
    "best": -0.024,
-   "worst": -0.024,
+   "worst": -0.153,
    "symbols": [
+    "STONK",
     "USELESS"
    ],
-   "last_ts": 1793235137.00246
+   "last_ts": 1793317647.6735113
   }
  },
  "categories": {
@@ -83,7 +84,7 @@
    "n": 1,
    "mean_ret": 0.139,
    "pnl_usd": 4.26,
-   "ts": 1793317385.756745,
+   "ts": 1793317866.1941323,
    "name_es": "Afiliación a un producto real",
    "name_en": "Official token of a real product"
   },
@@ -92,7 +93,7 @@
    "n": 2,
    "mean_ret": 1.9175,
    "pnl_usd": 174.83,
-   "ts": 1793317385.756745,
+   "ts": 1793317866.1941323,
    "name_es": "Catalizador con fecha",
    "name_en": "Dated catalyst"
   },
@@ -101,7 +102,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793317385.756745,
+   "ts": 1793317866.1941323,
    "name_es": "Tendencia en majors",
    "name_en": "Majors trend"
   },
@@ -110,7 +111,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793317385.756745,
+   "ts": 1793317866.1941323,
    "name_es": "Otro (manual)",
    "name_en": "Other (manual)"
   },
@@ -119,7 +120,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793317385.756745,
+   "ts": 1793317866.1941323,
    "name_es": "Narrativa verificada",
    "name_en": "Verified narrative"
   },
@@ -128,7 +129,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793317385.756745,
+   "ts": 1793317866.1941323,
    "name_es": "Corto por shock de noticias",
    "name_en": "News-shock short"
   },
@@ -137,16 +138,16 @@
    "n": 14,
    "mean_ret": -0.1434,
    "pnl_usd": -79.0,
-   "ts": 1793317385.756745,
+   "ts": 1793317866.1941323,
    "name_es": "Pick del escáner (sin historia)",
    "name_en": "Screener pick (no story)"
   },
   "trend": {
    "status": "learning",
-   "n": 1,
-   "mean_ret": -0.024,
-   "pnl_usd": -0.94,
-   "ts": 1793317385.756745,
+   "n": 2,
+   "mean_ret": -0.0885,
+   "pnl_usd": -6.55,
+   "ts": 1793317866.1941323,
    "name_es": "Tendencia 20 días en memes establecidas",
    "name_en": "20-day trend, established memes"
   },
@@ -155,13 +156,24 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793317385.756745,
+   "ts": 1793317866.1941323,
    "name_es": "Meme flash de noticia (horas)",
    "name_en": "Flash-news meme (hours)"
   }
  },
  "changes": [],
  "rows": [
+  {
+   "src": "lloyd",
+   "ts": 1793317647.6735113,
+   "symbol": "STONK",
+   "ret": -0.153,
+   "pnl_usd": -5.61,
+   "cat": "trend",
+   "peak": 1.02,
+   "hold_h": 23.6,
+   "why": "stop (0.80x)"
+  },
   {
    "src": "lloyd",
    "ts": 1793308690.0807648,

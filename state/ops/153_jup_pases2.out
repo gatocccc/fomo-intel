@@ -1,0 +1,16 @@
+== 153_jup_pases2 2026-10-29T23:51:05Z ==
+--- servicios
+active active active 
+--- clave jupiter: presente
+billetera G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek SOL 0.0866 SOL/USD 95.47132530289498
+cotización ok: in 0.03 SOL -> out 2.863903 USDC; impacto 0 ; ruta ['TesseraV', 'ZeroFi'] ; tx 1088 bytes
+IDA  ok=True via=jupiter sol=0.030018 usdc=2.8642 err=
+VUELTA ok=True via=jupiter usdc=2.8642 sol=0.029988 err=
+costo del viaje completo: 0.000031 SOL = US$0.003 = 0.10% (incluye gas y prioridad; con Solana Tracker eran ~1% solo de comisión)
+--- últimos logs del mirror
+Oct 29 23:51:04 simplai-prod systemd[1]: Stopping fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book)...
+Oct 29 23:51:04 simplai-prod systemd[1]: fomo-mirror.service: Deactivated successfully.
+Oct 29 23:51:04 simplai-prod systemd[1]: Stopped fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 29 23:51:04 simplai-prod systemd[1]: fomo-mirror.service: Consumed 8.539s CPU time.
+Oct 29 23:51:04 simplai-prod systemd[1]: Started fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+== exit 0 ==

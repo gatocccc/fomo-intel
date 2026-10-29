@@ -136,3 +136,5 @@
 {"ts": 1793317325.7492359, "title": "Automatic brain: status", "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -5.9%, 4h -3.5%): no new memecoins until it improves.", "kind": "decisión", "id": "auto-lloyd-note-20261029-2342"}
 {"ts": 1793317400.231385, "title": "Automatic brain: status", "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -6.0%, 4h -3.6%): no new memecoins until it improves.", "kind": "decisión", "id": "auto-lloyd-note-20261029-2343"}
 {"ts": 1793317647.674029, "title": "Automatic exit", "text": "STONK: sold 100% of STONK (stop (0.80x)) for 0.3242 SOL — position closed", "kind": "automatic", "id": null}
+{"ts": 1793317882.4536378, "title": "Automatic brain: rebalance", "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -6.4%, 4h -4.0%): no new memecoins until it improves.", "kind": "decisión", "id": "auto-lloyd-20261029-2351"}
+{"ts": 1793317882.45378, "title": "Execution", "text": "buy USDC: bought 31 USDC for 0.3225 SOL at $1.00095 (slippage +0.2%)", "kind": "execution", "id": "auto-lloyd-20261029-2351"}
