@@ -1,0 +1,29 @@
+== 122_sondeo_perps 2026-10-29T00:37:03Z ==
+--- posiciones actuales de la billetera del plan tradicional
+{"dataList":[],"count":0}
+--- market-stats SOL
+{"price":"102.10417511","priceChange24H":"1.0033700644909371","priceHigh24H":"103.76081756","priceLow24H":"100.33201561","volume":"107223385.12"}
+--- increase: short SOL, 10 USDC de colateral, 2x, con transacción serializada
+quote {'entryPriceUsd': '102.07', 'leverage': '1.99', 'liquidationPriceUsd': '152.82', 'openFeeUsd': '0.0120', 'priceImpactFeeUsd': '0.0020', 'positionSizeUsd': '19.97', 'positionCollateralSizeUsd': '9.98', 'collateralLessThanFees': False}
+tx? True len 1244 keeper True type instant pos 9mWJvTKQ7WshpZvX5Se9YSV5vyMxEJqqdec7UqHJNt3i
+otros {'positionPubkey': '9mWJvTKQ7WshpZvX5Se9YSV5vyMxEJqqdec7UqHJNt3i', 'positionRequestPubkey': None, 'tpslRequests': [], 'requireKeeperSignature': True, 'transactionType': 'instant'}
+meta {'blockhash': 'D32LFhdmRaRxN3SS7nJ4dauDV6CJSeuLP2MnXuewixAE', 'lastValidBlockHeight': '440705316', 'transactionFeeLamports': '16766', 'accountRentLamports': '1747520'}
+--- increase: long BTC, 10 USDC, 2x (colateral = BTC, la API lo convierte)
+quote {'entryPriceUsd': '81090.80', 'leverage': '1.99', 'liquidationPriceUsd': '40764.26', 'openFeeUsd': '0.0120', 'priceImpactFeeUsd': '0.0020', 'positionSizeUsd': '19.95'} tx? True keeper True type instant
+--- decrease (no-gasless) existe?
+positions/decrease 400
+{"code":"invalid_argument","message":"Validation error: Required at \"collateralUsdDelta\"; Required at \"desiredMint\"; Required at \"positionPubkey\"; Required at \"sizeUsdDelta\""} positions-gasless/decrease 400
+
+--- velas de oráculo (SOL 1h, 3 últimas)
+
+--- saldo USDC de las billeteras de los planes
+Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'state/plan__summary.json'
+Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'state/plan__summary.json'
+Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+FileNotFoundError: [Errno 2] No such file or directory: 'state/plan__summary.json'
+== exit 1 ==
