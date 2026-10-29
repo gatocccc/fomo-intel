@@ -1,17 +1,17 @@
 {
- "now": 1793237700.6151528,
+ "now": 1793237976.3104167,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 135.53,
- "equity_sol": 1.3396,
+ "equity_usd": 138.27,
+ "equity_sol": 1.3707,
  "cash_sol": 0.2046,
- "positions_usd": 114.83,
- "sol_usd": 101.18,
- "mult": 1.368,
+ "positions_usd": 117.63,
+ "sol_usd": 100.88,
+ "mult": 1.395,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,7 +24,7 @@
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
    "sol_out": 0.0,
-   "peak_usd": 0.010807032045156406,
+   "peak_usd": 0.01126161136768074,
    "stop": -0.636,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.010807032045156406,
-   "mult": 2.232,
-   "value_usd": 80.01
+   "last_usd": 0.01126161136768074,
+   "mult": 2.326,
+   "value_usd": 83.37
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.0030260679493056847,
-   "mult": 0.742,
-   "value_usd": 20.08
+   "last_usd": 0.002934112721957499,
+   "mult": 0.719,
+   "value_usd": 19.47
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.013163109355612603,
-   "mult": 0.879,
-   "value_usd": 14.74
+   "last_usd": 0.013199881133565216,
+   "mult": 0.881,
+   "value_usd": 14.78
   }
  ],
  "equity": [
@@ -1742,6 +1742,10 @@
   [
    1793237608,
    131.9
+  ],
+  [
+   1793237915,
+   133.81
   ]
  ],
  "closed": [
