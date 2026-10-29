@@ -1,0 +1,5 @@
+== 128_perps_spec_raw_decode 2026-10-29T01:13:03Z ==
+Traceback (most recent call last):
+  File "<stdin>", line 8, in <module>
+AttributeError: 'str' object has no attribute 'get'
+== exit 1 ==

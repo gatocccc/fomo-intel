@@ -1,10 +1,10 @@
 {
  "mode": "live",
- "last_run": 1793236083.3019733,
+ "last_run": 1793236441.8860807,
  "regime": "neutral",
  "profile": "balanced",
  "status": "ok",
- "bal_ts": 1793232544.596546,
+ "bal_ts": 1793236441.8860917,
  "trad_status": "5 of 18 established memecoins above their 20-day average (best: STONK +13%, USELESS +2%, SPX +11%)",
  "auto_buys": [
   {
@@ -24,9 +24,9 @@
   }
  ],
  "last_action": {
-  "ts": 1793232564.615979,
-  "title": "Automatic brain: new position",
-  "orders": 6,
+  "ts": 1793236441.886308,
+  "title": "Automatic brain: rebalance",
+  "orders": 1,
   "mode": "live"
  }
 }
