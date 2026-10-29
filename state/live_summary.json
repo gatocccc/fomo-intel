@@ -1,5 +1,5 @@
 {
- "ts": 1793292601.7242281,
+ "ts": 1793292901.779482,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -43,11 +43,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.6522,
- "sol_usd": 101.79932620967847,
+ "sol_usd": 101.86632021032902,
  "stream_connected": true,
- "stream_msgs": 8849,
- "tokens_seen": 8338,
- "tokens_tracked": 129,
+ "stream_msgs": 8904,
+ "tokens_seen": 8390,
+ "tokens_tracked": 123,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -56,19 +56,21 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 3270639,
+  "notifications": 3293258,
   "parsed": 319,
-  "skipped": 3268920,
+  "skipped": 3291538,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
-   "10:36:08 Connection to remote host was lost."
+   "10:36:08 Connection to remote host was lost.",
+   "16:53:35 Connection to remote host was lost."
   ]
  },
  "follow_buys_seen": 54,
  "guard": {
   "alerts": [
-   "10:36:11 fuente de se\u00f1ales recuperada tras 3 s"
+   "10:36:11 fuente de se\u00f1ales recuperada tras 3 s",
+   "16:53:38 fuente de se\u00f1ales recuperada tras 2 s"
   ],
   "bench": 1,
   "bench_by_reason": {
@@ -77,7 +79,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 0
  },
- "st_requests": 176,
+ "st_requests": 177,
  "stream_errors": [
   "04:45:39 Connection to remote host was lost.",
   "04:45:46 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Thu, 29 Oct 2026 04:45:46 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
@@ -87,7 +89,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 6,
-  "create": 8843
+  "create": 8898
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",
