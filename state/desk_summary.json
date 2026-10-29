@@ -1,17 +1,17 @@
 {
- "now": 1793259876.2570987,
+ "now": 1793260182.6780808,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 153.43,
- "equity_sol": 1.538,
+ "equity_usd": 153.61,
+ "equity_sol": 1.5407,
  "cash_sol": 0.2168,
- "positions_usd": 131.81,
- "sol_usd": 99.76,
- "mult": 1.548,
+ "positions_usd": 131.99,
+ "sol_usd": 99.7,
+ "mult": 1.55,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.013531519750949144,
-   "mult": 2.795,
-   "value_usd": 100.18
+   "last_usd": 0.01352551006668926,
+   "mult": 2.794,
+   "value_usd": 100.13
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.012521596938803153,
-   "mult": 0.836,
-   "value_usd": 14.02
+   "last_usd": 0.012492126547978282,
+   "mult": 0.834,
+   "value_usd": 13.99
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -102,9 +102,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.0020021945484812276,
-   "mult": 0.999,
-   "value_usd": 17.61
+   "last_usd": 0.002032155445983518,
+   "mult": 1.014,
+   "value_usd": 17.87
   }
  ],
  "equity": [
@@ -2043,6 +2043,10 @@
   [
    1793259845,
    153.35
+  ],
+  [
+   1793260152,
+   151.7
   ]
  ],
  "closed": [
@@ -2572,7 +2576,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793259483.980588,
+  "last_run": 1793260085.1070416,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -2586,7 +2590,7 @@
    "text": "Efectivo ocioso (26%) sin candidato que pase el escaneo y el anti-rug. Prefiero esperar a comprar algo peor."
   },
   "trad_status": null,
-  "sol_ch24h": -2.6,
-  "sol_vs_ma20": -0.0498
+  "sol_ch24h": -2.5,
+  "sol_vs_ma20": -0.049
  }
 }
