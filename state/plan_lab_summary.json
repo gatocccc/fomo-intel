@@ -1,17 +1,17 @@
 {
- "now": 1793309983.6575925,
+ "now": 1793310894.5539403,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 1,
- "equity_usd": 53.01,
- "equity_sol": 0.5419,
- "cash_sol": 0.2428,
- "positions_usd": 29.26,
- "sol_usd": 97.82,
- "mult": 0.958,
+ "equity_usd": 52.66,
+ "equity_sol": 0.5423,
+ "cash_sol": 0.187,
+ "positions_usd": 34.5,
+ "sol_usd": 97.11,
+ "mult": 0.951,
  "halt": false,
  "pause": false,
  "positions": [
@@ -34,9 +34,38 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9994423958348853,
+   "last_usd": 0.9992710501495632,
    "mult": 0.982,
    "value_usd": 29.26
+  },
+  {
+   "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
+   "symbol": "SAFU",
+   "opened_ts": 1793310126.248107,
+   "entry_usd": 3.556292172099787e-05,
+   "tokens": 152993.972163,
+   "tokens_initial": 152993.972163,
+   "sol_in": 0.05579652,
+   "sol_out": 0.0,
+   "peak_usd": 3.556292172099787e-05,
+   "stop": 0.4,
+   "trail": 0.3,
+   "trail_after": 1.5,
+   "tp": [
+    [
+     2,
+     0.5
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "Flash-news meme: leader among the SAFU tokens launched on today's Binance-outflow rumours. Out within 6 hours.",
+   "id": "lab-2026-10-29-02",
+   "sleeve": "picks",
+   "reason": "flash_narrative",
+   "max_h": 6,
+   "last_usd": 3.4282290743839446e-05,
+   "mult": 0.964,
+   "value_usd": 5.24
   }
  ],
  "equity": [
@@ -567,10 +596,36 @@
   [
    1793309953,
    53.01
+  ],
+  [
+   1793310123,
+   52.35
+  ],
+  [
+   1793310432,
+   52.69
+  ],
+  [
+   1793310740,
+   52.67
   ]
  ],
  "closed": [],
  "trades": [
+  {
+   "ts": 1793310126.2472842,
+   "side": "buy",
+   "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
+   "symbol": "SAFU",
+   "ok": true,
+   "sol": 0.05579652,
+   "tokens": 152993.972163,
+   "price_usd": 3.5562922e-05,
+   "slip": 11.98,
+   "sig": "3CSgAeKjAqF1z8y3y2XHTqqSfViV3krR1LYFep5KQcbSFTHzBWJ7EBj8jqtVyMbLjfZkRFisZgyQYsN7XLQpy4fu",
+   "error": "",
+   "id": "lab-2026-10-29-02"
+  },
   {
    "ts": 1793308686.6175518,
    "side": "buy",
@@ -587,6 +642,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793310126.2497206,
+   "title": "Execution",
+   "text": "buy SAFU: bought 152,994 SAFU for 0.0558 SOL at $3.55629e-05 (slippage +12.0%)",
+   "kind": "execution",
+   "id": "lab-2026-10-29-02"
+  },
+  {
+   "ts": 1793310126.249545,
+   "title": "Lab test #2: flash-news meme (SAFU, Binance-outflow rumours)",
+   "text": "Hypothesis under test (Gaston, Oct 29): a meme born from a big breaking story lives hours, not weeks. The edge, if any, is picking the leader among the many tokens launched on the same story within the first 10-30 minutes and selling the same day. Today's story: alleged abnormal Binance outflows / 'hack' rumours on X while SOL slid under $100. Of ten 'SAFU' tokens on Solana, only one has traction: 'Funds Are Safu' (A8aD...E9it), 6 minutes old at scan time, 409 holders, $14K traded, $43K liquidity. Tiny size ($5): this is a measurement, not a bet. Exit: sell half at 2x, trail 30% from the peak after 1.5x, stop -40%, and out after 6 hours no matter what (flash memes do not get a second day). Against: launches of minutes are the snipers' game; our tweet-sniper test (Oct 26) lost 10 of 10. This test differs in two ways - macro news instead of a random tweet, and choosing the crowd's leader at minute 10 instead of entering at second 3 - and only 15-20 such events will tell whether that matters.",
+   "kind": "decisión",
+   "id": "lab-2026-10-29-02"
+  },
   {
    "ts": 1793309073.8851964,
    "title": "Radar: SOL short opened",

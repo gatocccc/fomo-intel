@@ -14,6 +14,18 @@
  },
  "events": [
   {
+   "ts": 1793310603.7570567,
+   "src": "theblock",
+   "title": "Binance investigating hack as suspicious outflows reach up to $5.8 billion",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "exchange_risk",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793309899.5880563,
    "src": "decrypt",
    "title": "Binance Drained of $5.5 Billion in Suspected Hack, Tether and Circle Freeze $1.8 Billion",
@@ -127,21 +139,21 @@
    ]
   }
  ],
- "ts": 1793309960.1277945,
- "bear_score": 13,
+ "ts": 1793310844.4068696,
+ "bear_score": 16,
  "bull_score": 1,
  "price": {
   "SOL": {
-   "px": 98.019,
-   "ch15m": 0.004169569315248145,
-   "ch1h": -0.004377856780091394,
-   "ch4h": -0.03353381975941627
+   "px": 97.241,
+   "ch15m": -0.008159851490702863,
+   "ch1h": 0.005313924757306632,
+   "ch4h": -0.03607256145915938
   },
   "BTC": {
-   "px": 79551.0,
-   "ch15m": 0.0006666834385771203,
-   "ch1h": -0.0038692712246430894,
-   "ch4h": -0.018070727643029083
+   "px": 79049.0,
+   "ch15m": -0.006635083001369724,
+   "ch1h": -0.0001770739789788145,
+   "ch4h": -0.020798236051927432
   }
  },
  "mode": "live",
@@ -162,9 +174,9 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 98.019,
-  "ret_px": -0.005,
-  "pnl_usd_est": -0.19,
-  "age_h": 0.25
+  "mark": 97.241,
+  "ret_px": 0.003,
+  "pnl_usd_est": 0.11,
+  "age_h": 0.5
  }
 }
