@@ -66,6 +66,26 @@ BOOK = {
     "reserve_sol": 0.08,      # SOL que queda siempre para comisiones
     "park_min_usd": 15.0,     # SOL sobrante por encima de esto se estaciona en USDC
 }
+# Capacidad (28/10 23:45, pedido de Gastón: "que las compras del token no afecten"): la exposición TOTAL del bot en un token (libro de la
+# casa + todas las billeteras de usuarios que repliquen el libro) no supera el 2% de la liquidez del pool. Hoy solo opera el libro de la
+# casa; cuando haya billeteras de usuarios, `aum_total()` suma todas y el tope se reparte. Con liquidez ≥ US$150K son ~US$3K por token.
+CAPACITY = {"liq_frac": 0.02, "vol24_frac": 0.005}
+
+def aum_total(eq_book: float) -> float:
+    """Plata total que sigue al libro: la casa + los usuarios (state/users/*_summary.json cuando existan)."""
+    tot = eq_book
+    for f in Path("state/users").glob("*_summary.json"):
+        tot += (jload(f, {}) or {}).get("equity_usd") or 0
+    return tot
+
+def cap_usd(liq_usd: float, vol24_usd: float | None, eq_book: float) -> float:
+    """Máximo en US$ que ESTE libro puede poner en un token sin mover el precio, descontando la parte que replicarán los usuarios."""
+    cap = max(0.0, (liq_usd or 0) * CAPACITY["liq_frac"])
+    if vol24_usd:
+        cap = min(cap, vol24_usd * CAPACITY["vol24_frac"]) if cap else vol24_usd * CAPACITY["vol24_frac"]
+    share = eq_book / aum_total(eq_book) if eq_book else 1.0
+    return cap * share
+
 MAJOR_MINTS = {"cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij", "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs", "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN"}
 DEFAULT_MODES = {"mesa": "shadow", "agresivo": "shadow", "equilibrado": "shadow", "tradicional": "shadow", "lloyd": "shadow"}
 CFG = Path("state/brain_config.json")
@@ -369,7 +389,7 @@ class Brain:
         if stale and cands:
             p = min(stale, key=lambda x: x.get("mult") or 1)
             c = cands.pop(0)
-            sol = min(p["value_usd"] / sol_usd * 0.97, eq_sol * LIM["max_frac"])
+            sol = min(p["value_usd"] / sol_usd * 0.97, eq_sol * LIM["max_frac"], cap_usd(c.get("liq"), c.get("vol24"), s["equity_usd"]) / sol_usd)
             orders.append({"action": "sell", "mint": p["mint"], "frac": 1.0, "why": L(d, "rotación: plata dormida", "rotation: dead money")})
             orders.append(self.buy_order(d, c, sol))
             notes.append(L(d, f"Roto {p['symbol']}: {(now - p['opened_ts']) / 3600:.0f} h quieto en {p.get('mult', 1):.2f}x (nunca pasó {p['peak_usd'] / p['entry_usd']:.2f}x). "
@@ -378,7 +398,7 @@ class Brain:
             notes.append(self.thesis_note(d, c)); new_buys.append(c["sym"])
         elif free > eq_sol * LIM["idle_frac"] and npos < LIM["max_pos"] and cands:
             c = cands.pop(0)
-            sol = min(free, eq_sol * LIM["max_frac"]) * (0.5 if c["factory"] else 1.0)
+            sol = min(free, eq_sol * LIM["max_frac"], cap_usd(c.get("liq"), c.get("vol24"), s["equity_usd"]) / sol_usd) * (0.5 if c["factory"] else 1.0)
             if sol >= LIM["min_buy_sol"]:
                 orders.append(self.buy_order(d, c, sol))
                 notes.append(L(d, f"Efectivo ocioso: {free:.3f} SOL ({free / eq_sol:.0%} del patrimonio). Lo pongo a trabajar en {c['sym']}.",
@@ -422,7 +442,7 @@ class Brain:
         # 2) efectivo (o lo que liberó el time stop) → mejor candidato de la franja
         while cands and slots > 0 and free >= F["min_buy_sol"] and len(new_buys) + len(buys_today) < F["max_auto_buys_day"]:
             c = cands.pop(0)
-            sol = min(free, eq_sol * F["max_frac"]) * (0.5 if c["factory"] else 1.0)
+            sol = min(free, eq_sol * F["max_frac"], cap_usd(c.get("liq"), c.get("vol24"), s["equity_usd"]) / sol_usd) * (0.5 if c["factory"] else 1.0)
             if sol < F["min_buy_sol"]:
                 break
             orders.append(self.fast_buy(c, sol)); notes.append(self.thesis_note(d, c)); new_buys.append(c["sym"])
@@ -511,7 +531,9 @@ class Brain:
                     continue
                 if not (B["gap_lo"] <= r["gap"] <= B["gap_hi"] and B["ch7_lo"] <= r["ch7"] <= B["ch7_hi"] and r["ch1"] >= B["ch1_lo"]):
                     continue
-                amt = min(eq * B["slot"], budget)
+                amt = min(eq * B["slot"], budget, cap_usd(r["liq"], None, eq))
+                if amt < 10:
+                    continue
                 buys.append({"action": "buy", "mint": r["mint"], "symbol": r["sym"], "sol": round(amt / sol_usd * 0.98, 4), "stop": B["stop"], "trail": B["trail"],
                              "trail_after": B["trail_after"], "tp": B["tp"], "thesis": f"{r['sym']}: established memecoin back in an uptrend ({r['gap']:+.0%} vs 20-day average, {r['ch7']:+.0%} in 7 days)."})
                 notes.append(f"{r['sym']} (${r['mcap'] / 1e6:.0f}M, ${r['liq'] / 1e6:.1f}M liquidity) is back above its 20-day average ({r['gap']:+.0%}) and up {r['ch7']:+.0%} in 7 days "
