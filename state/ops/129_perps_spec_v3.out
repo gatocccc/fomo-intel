@@ -1,0 +1,6 @@
+== 129_perps_spec_v3 2026-10-29T01:20:03Z ==
+tipo dict ['openapi', 'info', 'servers', 'paths', 'components']
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+AttributeError: 'str' object has no attribute 'get'
+== exit 1 ==
