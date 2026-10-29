@@ -77,3 +77,6 @@
 {"ts": 1793285226.43129, "title": "Execution", "text": "set 4kjruq: ajustó GTA6: stop=-1.568", "kind": "execution", "id": "auto-lloyd-20261029-1447"}
 {"ts": 1793285830.2466774, "title": "Automatic brain: stops raised", "text": "GTA6: peaked at 3.99x; stop raised to 2.80x (was 2.57x).", "kind": "decisión", "id": "auto-lloyd-20261029-1457"}
 {"ts": 1793285830.2468169, "title": "Execution", "text": "set 4kjruq: ajustó GTA6: stop=-1.795", "kind": "execution", "id": "auto-lloyd-20261029-1457"}
+{"ts": 1793286344.6747205, "title": "Automatic exit", "text": "GTA6: sold 100% of GTA6 (stop (2.14x)) for 0.5692 SOL — position closed", "kind": "automatic", "id": null}
+{"ts": 1793286439.419712, "title": "Automatic brain: rebalance", "text": "[Picks] Idle cash (91%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves.", "kind": "decisión", "id": "auto-lloyd-20261029-1507"}
+{"ts": 1793286439.419858, "title": "Execution", "text": "buy USDC: bought 57 USDC for 0.5678 SOL at $1.01055 (slippage +1.1%)", "kind": "execution", "id": "auto-lloyd-20261029-1507"}
