@@ -14,6 +14,17 @@
  },
  "events": [
   {
+   "ts": 1793313363.746426,
+   "src": "cointelegraph",
+   "title": "Binance hit by $5.8B hack as Tether and Circle freeze billions",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793312163.8012571,
    "src": "cointelegraph",
    "title": "Binance hacked for over $5.8B in massive crypto exploit",
@@ -150,21 +161,21 @@
    ]
   }
  ],
- "ts": 1793313244.5663772,
- "bear_score": 18,
+ "ts": 1793313544.660127,
+ "bear_score": 20,
  "bull_score": 1,
  "price": {
   "SOL": {
-   "px": 97.467,
-   "ch15m": 0.002334430275606758,
-   "ch1h": -0.0021601588894121226,
-   "ch4h": -0.03095048717438853
+   "px": 97.794,
+   "ch15m": 0.0038081356558512525,
+   "ch1h": -0.0025193541477545045,
+   "ch4h": -0.026731687898089218
   },
   "BTC": {
-   "px": 79013.0,
-   "ch15m": 0.001216467934665566,
-   "ch1h": -0.006375754527162991,
-   "ch4h": -0.02062545706954899
+   "px": 79189.0,
+   "ch15m": 0.0005053759365247767,
+   "ch1h": -0.004875780690400511,
+   "ch4h": -0.01776212153161083
   }
  },
  "mode": "live",
@@ -185,9 +196,9 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 97.467,
-  "ret_px": 0.0006,
-  "pnl_usd_est": 0.02,
-  "age_h": 1.16
+  "mark": 97.794,
+  "ret_px": -0.0027,
+  "pnl_usd_est": -0.1,
+  "age_h": 1.25
  }
 }
