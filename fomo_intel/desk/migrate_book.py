@@ -61,6 +61,20 @@ def transfer_all(rpc: Rpc, kp, dest: str, dry: bool):
     from solders.transaction import Transaction
 
     src = str(kp.pubkey()); done = []
+    CB = Pubkey.from_string("ComputeBudget111111111111111111111111111111")
+    prio = [Instruction(CB, bytes([2]) + (120_000).to_bytes(4, "little"), []),            # límite de cómputo
+            Instruction(CB, bytes([3]) + (300_000).to_bytes(8, "little"), [])]           # 300k microlamports/CU de prioridad: sin esto se caen en congestión
+
+    def send(ixs, label):
+        for i in range(3):
+            bh = rpc.call("getLatestBlockhash", [{"commitment": "finalized"}])["value"]["blockhash"]
+            tx = Transaction.new_signed_with_payer(prio + ixs, kp.pubkey(), [kp], Hash.from_string(bh))
+            sig = rpc.send_raw(base64.b64encode(bytes(tx)).decode())
+            st = rpc.wait_confirmed(sig, 75)
+            log(f"  {label}: {sig[:16]}… {'ok' if st else 'sin confirmar, reintento' if i < 2 else 'SIN CONFIRMAR'}")
+            if st:
+                return sig, True
+        return sig, False
     for t in token_accounts(rpc, src):
         mint, prog = t["mint"], t["program"]
         dest_ata = ata(dest, mint, prog)
@@ -75,25 +89,19 @@ def transfer_all(rpc: Rpc, kp, dest: str, dry: bool):
                             AccountMeta(dest_ata, False, True), AccountMeta(kp.pubkey(), True, False)])]
         if dry:
             log(f"  [dry] {src[:6]} → {dest[:6]}: {t['amount'] / 10 ** t['decimals']:.6g} de {mint[:8]}"); continue
-        bh = rpc.call("getLatestBlockhash", [{"commitment": "finalized"}])["value"]["blockhash"]
-        tx = Transaction.new_signed_with_payer(ixs, kp.pubkey(), [kp], Hash.from_string(bh))
-        sig = rpc.send_raw(base64.b64encode(bytes(tx)).decode())
-        st = rpc.wait_confirmed(sig, 150)
-        log(f"  tokens {mint[:8]} {t['amount'] / 10 ** t['decimals']:.6g}: {sig[:16]}… {'ok' if st else 'SIN CONFIRMAR'}")
-        done.append((mint, t["amount"] / 10 ** t["decimals"], sig, bool(st)))
+        sig, st = send(ixs, f"tokens {mint[:8]} {t['amount'] / 10 ** t['decimals']:.6g}")
+        done.append((mint, t["amount"] / 10 ** t["decimals"], sig, st))
         time.sleep(2)
     bal = rpc.sol_balance(src)
     lam = int((bal - SOL_KEEP) * 1e9) - 5000
-    if lam > 0:
+    if lam > 100_000:
         if dry:
             log(f"  [dry] SOL {lam / 1e9:.6f}")
         else:
-            bh = rpc.call("getLatestBlockhash", [{"commitment": "finalized"}])["value"]["blockhash"]
+            lam -= 60_000   # la prioridad también se paga
             ix = transfer(TransferParams(from_pubkey=kp.pubkey(), to_pubkey=Pubkey.from_string(dest), lamports=lam))
-            tx = Transaction.new_signed_with_payer([ix], kp.pubkey(), [kp], Hash.from_string(bh))
-            sig = rpc.send_raw(base64.b64encode(bytes(tx)).decode()); st = rpc.wait_confirmed(sig, 90)
-            log(f"  SOL {lam / 1e9:.6f}: {sig[:16]}… {'ok' if st else 'SIN CONFIRMAR'}")
-            done.append(("SOL", lam / 1e9, sig, bool(st)))
+            sig, st = send([ix], f"SOL {lam / 1e9:.6f}")
+            done.append(("SOL", lam / 1e9, sig, st))
     return done
 
 
