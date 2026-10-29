@@ -38,17 +38,26 @@ JUP_BASE = "https://api.jup.ag/swap/v1" if JUP_KEY else "https://lite-api.jup.ag
 def jup_swap_tx(frm: str, to: str, amount_raw: int, slippage_pct: float, payer: str, priority_fee_sol: float) -> tuple[str, dict]:
     """Cotiza y arma (sin firmar) un swap por Jupiter. Devuelve (transacción base64 v0, cotización)."""
     h = {"x-api-key": JUP_KEY} if JUP_KEY else {}
-    q = requests.get(f"{JUP_BASE}/quote", params={"inputMint": frm, "outputMint": to, "amount": int(amount_raw), "slippageBps": int(slippage_pct * 100),
-                                                   "restrictIntermediateTokens": "true"}, headers=h, timeout=15)
-    if q.status_code >= 400:
-        raise RuntimeError(f"jup quote {q.status_code}: {q.text[:160]}")
-    quote = q.json()
+
+    def call(fn, what):
+        # el gateway de Jupiter devuelve 429 si dos pedidos van muy seguidos (visto en la prueba de la op 152): esperar y reintentar
+        for i in range(4):
+            r = fn()
+            if r.status_code == 429 or r.status_code >= 500:
+                time.sleep(1.5 * (i + 1)); continue
+            if r.status_code >= 400:
+                raise RuntimeError(f"jup {what} {r.status_code}: {r.text[:160]}")
+            return r.json()
+        raise RuntimeError(f"jup {what} {r.status_code}: {r.text[:160]}")
+
+    quote = call(lambda: requests.get(f"{JUP_BASE}/quote", params={"inputMint": frm, "outputMint": to, "amount": int(amount_raw), "slippageBps": int(slippage_pct * 100),
+                                                                    "restrictIntermediateTokens": "true"}, headers=h, timeout=15), "quote")
     body = {"quoteResponse": quote, "userPublicKey": payer, "wrapAndUnwrapSol": True, "dynamicComputeUnitLimit": True,
             "prioritizationFeeLamports": {"priorityLevelWithMaxLamports": {"maxLamports": int(max(priority_fee_sol, 0.0001) * 1e9), "priorityLevel": "medium"}}}
-    s = requests.post(f"{JUP_BASE}/swap", json=body, headers=h, timeout=20)
-    if s.status_code >= 400 or not (s.json() or {}).get("swapTransaction"):
-        raise RuntimeError(f"jup swap {s.status_code}: {s.text[:160]}")
-    return s.json()["swapTransaction"], quote
+    sw = call(lambda: requests.post(f"{JUP_BASE}/swap", json=body, headers=h, timeout=20), "swap")
+    if not (sw or {}).get("swapTransaction"):
+        raise RuntimeError(f"jup swap sin transacción: {str(sw)[:160]}")
+    return sw["swapTransaction"], quote
 
 
 @dataclass
