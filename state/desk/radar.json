@@ -14,6 +14,17 @@
  },
  "events": [
   {
+   "ts": 1793316663.8186147,
+   "src": "cointelegraph",
+   "title": "Binance hack rattles crypto markets as BNB falls 7%, Bitcoin slides",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793315763.9776077,
    "src": "cointelegraph",
    "title": "Live Updates: Binance hit by largest crypto hack in history",
@@ -183,21 +194,21 @@
    ]
   }
  ],
- "ts": 1793316544.4257782,
- "bear_score": 8,
+ "ts": 1793316844.957453,
+ "bear_score": 10,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.598,
-   "ch15m": -0.0001138610274404872,
-   "ch1h": -0.006091161642144294,
-   "ch4h": -0.036236655691908704
+   "px": 96.69,
+   "ch15m": -0.0005685048322910946,
+   "ch1h": -0.008826152474090465,
+   "ch4h": -0.03560742070616407
   },
   "BTC": {
-   "px": 78730.0,
-   "ch15m": -0.0012938908057641418,
-   "ch1h": -0.0034177215189873378,
-   "ch4h": -0.02570321878055115
+   "px": 78806.0,
+   "ch15m": -0.00039321638317035834,
+   "ch1h": -0.0030362067656807268,
+   "ch4h": -0.025727249125322982
   }
  },
  "mode": "live",
@@ -218,9 +229,9 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 96.598,
-  "ret_px": 0.0096,
-  "pnl_usd_est": 0.36,
-  "age_h": 2.08
+  "mark": 96.69,
+  "ret_px": 0.0086,
+  "pnl_usd_est": 0.32,
+  "age_h": 2.16
  }
 }
