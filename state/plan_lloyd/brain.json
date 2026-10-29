@@ -1,12 +1,12 @@
 {
  "mode": "live",
- "last_run": 1793288825.1419568,
+ "last_run": 1793289423.7429774,
  "regime": "risk_off",
  "profile": "book",
  "_noted_no_cands": 1793238965.2395556,
- "bal_ts": 1793285823.742889,
- "trad_status": "SOL -3.0%, BTC -0.9%, ETH -3.1%, JUP -11.7%",
- "trad_ts": 1793285823.7431703,
+ "bal_ts": 1793289423.7445655,
+ "trad_status": "SOL -2.2%, BTC -0.2%, ETH -2.2%, JUP -9.8%",
+ "trad_ts": 1793289423.7449133,
  "status": "ok",
  "last_action": {
   "ts": 1793286424.6747892,
@@ -16,10 +16,10 @@
  },
  "_noted_book": 1793283423.7438111,
  "last_note": {
-  "ts": 1793288825.1444724,
-  "text": "[Picks] Idle cash (91%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves."
+  "ts": 1793289425.5365248,
+  "text": "[Majors] Still in USDC on purpose. Versus their 20-day averages: SOL -2.2%, BTC -0.2%, ETH -2.2%, JUP -9.8%. The plan buys each asset the hour it closes 1% above its average; until then, cash is the position. Checked every hour."
  },
- "_noted_trad": 1793242685.5124657,
+ "_noted_trad": 1793289425.5358365,
  "auto_buys": [
   {
    "day": "2026-10-29",
