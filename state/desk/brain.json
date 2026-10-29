@@ -1,12 +1,12 @@
 {
  "mode": "live",
- "last_run": 1793248683.977973,
+ "last_run": 1793249285.6167436,
  "regime": "risk_off",
  "profile": "aggressive",
  "status": "ok",
  "last_action": {
-  "ts": 1793243954.5945077,
-  "title": "Cerebro automático: compra",
+  "ts": 1793249285.6184437,
+  "title": "Cerebro automático: ajuste de stops",
   "orders": 1,
   "mode": "live"
  },

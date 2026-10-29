@@ -1,6 +1,6 @@
 {
  "mode": "live",
- "last_run": 1793248683.9812894,
+ "last_run": 1793249285.6205595,
  "regime": "risk_off",
  "profile": "book",
  "_noted_no_cands": 1793238965.2395556,
@@ -9,9 +9,9 @@
  "trad_ts": 1793246905.153908,
  "status": "ok",
  "last_action": {
-  "ts": 1793243954.599274,
-  "title": "Automatic brain: new position",
-  "orders": 2,
+  "ts": 1793249285.6229324,
+  "title": "Automatic brain: stops raised",
+  "orders": 1,
   "mode": "live"
  },
  "_noted_book": 1793239563.6115077,
