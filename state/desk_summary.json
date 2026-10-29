@@ -1,17 +1,17 @@
 {
- "now": 1793306985.0211341,
+ "now": 1793307277.9726808,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 166.47,
- "equity_sol": 1.7327,
+ "equity_usd": 162.14,
+ "equity_sol": 1.6772,
  "cash_sol": 1.0101,
- "positions_usd": 69.42,
- "sol_usd": 96.08,
- "mult": 1.68,
+ "positions_usd": 64.49,
+ "sol_usd": 96.67,
+ "mult": 1.636,
  "halt": false,
  "pause": false,
  "positions": [
@@ -42,9 +42,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.0015087803052512036,
-   "mult": 0.753,
-   "value_usd": 13.27
+   "last_usd": 0.0014906931787476993,
+   "mult": 0.744,
+   "value_usd": 13.11
   },
   {
    "mint": "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump",
@@ -73,9 +73,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-1929",
    "sleeve": null,
-   "last_usd": 0.0029755699388453005,
-   "mult": 0.872,
-   "value_usd": 56.16
+   "last_usd": 0.002722809323098999,
+   "mult": 0.798,
+   "value_usd": 51.39
   }
  ],
  "equity": [
@@ -2638,6 +2638,10 @@
   [
    1793306924,
    166.66
+  ],
+  [
+   1793307064,
+   168.67
   ]
  ],
  "closed": [
@@ -2947,6 +2951,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793307079.6243956,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (55%), pero SOL cayó fuerte (24 h -5.3%, 4 h -4.7%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261029-2051"
+  },
   {
    "ts": 1793306832.0166676,
    "title": "Cerebro automático: estado",
@@ -3851,7 +3862,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793306825.377023,
+  "last_run": 1793307065.6619184,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -3861,11 +3872,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793306825.3789127,
-   "text": "Efectivo ocioso (54%), pero SOL cayó fuerte (24 h -6.4%, 4 h -5.8%): no abro memecoins hasta que mejore."
+   "ts": 1793307065.663949,
+   "text": "Efectivo ocioso (55%), pero SOL cayó fuerte (24 h -5.3%, 4 h -4.7%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -6.4,
-  "sol_vs_ma20": -0.0854
+  "sol_ch24h": -5.3,
+  "sol_vs_ma20": -0.0747
  }
 }

@@ -1,0 +1,13 @@
+== 141_stools_mirror 2026-10-29T20:51:04Z ==
+active
+active
+Oct 29 20:51:04 simplai-prod systemd[1]: Started fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+-rw------- 1 root root  186 Oct 29 20:51 secrets/house_fees.json
+
+state/users/:
+total 12
+drwxr-xr-x  2 root root 4096 Oct 29 20:51 .
+drwxr-xr-x 16 root root 4096 Oct 29 20:51 ..
+-rw-r--r--  1 root root  109 Oct 29 20:51 _all.json
+users 0 fees 0 house GNUKaQqwMGDoGQRfEzCk28uTdeF6RkmYuchx6MesqiaZ
+== exit 0 ==
