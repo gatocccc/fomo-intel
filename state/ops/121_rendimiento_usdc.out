@@ -1,0 +1,13 @@
+== 121_rendimiento_usdc 2026-10-29T00:09:04Z ==
+--- https://api.jup.ag/lend/v1/earn/tokens
+filas 7
+{'id': 2, 'address': '9BEcn9aPEmhSPbPQeFGjidRiEKki46fVQDyPpSQXPA2D', 'name': 'jupiter  lend USDC', 'symbol': 'jlUSDC', 'uiSymbol': 'jlUSDC', 'decimals': 6, 'assetAddress': 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', 'asset': {'address': 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v', 'chainId': 'solana', 'name': 'USD Coin', 'symbol': 'USDC', 'uiSymbol': 'USDC', 'decimals': 6, 'logoUrl': 'https://coin-images.coingecko.com/coins/images/6319/large/USDC.png?1769615602', 'price': '0.99953609123', 'coingeckoId': 'usd-coin', 'updatedAt': '2026-10-29T00:06:06.000+00:00'}, 'totalAssets': '481689561199752', 'totalSupply': '451518975214799', 'convertToShares': '937365', 'convertToAssets': '1066820', 'rewardsRate': '24', 'supplyRate': '570'}
+--- https://lite-api.jup.ag/lend/v1/earn/tokens
+filas 0
+--- cotización Jupiter SOL -> jlUSDC (0,5 SOL) y USDC -> jlUSDC
+{"code":429,"message":"[API Gateway] Too many requests"}
+{"code":429,"message":"[API Gateway] Too many requests"}
+--- cotización por la vía del bot (Solana Tracker) SOL -> jlUSDC
+rate {'amountIn': 0.5, 'amountOut': 49.096401, 'minAmountOut': 48.605436, 'currentPrice': 98.192802, 'executionPrice': 97.210872, 'priceImpact': 0.09413894483432106, 'fee': 5e-06, 'baseCurrency': {'mint': 'So11111111111111111111111111111111111111112', 'decimals': 9}, 'quoteCurrency': {'mint': '9BEcn9aPEmhSPbPQeFGjidRiEKki46fVQDyPpSQXPA2D', 'decimals': 6}, 'platformFee': 2500000, 'platformFeeUI': 0.0025}
+{"code":429,"message":"[API Gateway] Too many requests"}
+== exit 0 ==

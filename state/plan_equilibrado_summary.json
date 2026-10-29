@@ -1,59 +1,29 @@
 {
- "now": 1793232293.13355,
+ "now": 1793232595.5203803,
  "start_ts": 1793203690.827375,
  "start_usd": 200.16,
  "start_sol": 1.981514,
  "goal_usd": 400.32,
  "days": 30,
  "day": 1,
- "equity_usd": 196.86,
- "equity_sol": 1.9236,
- "cash_sol": 0.0655,
- "positions_usd": 190.16,
+ "equity_usd": 193.98,
+ "equity_sol": 1.8954,
+ "cash_sol": 0.493,
+ "positions_usd": 143.53,
  "sol_usd": 102.34,
- "mult": 0.983,
+ "mult": 0.969,
  "halt": false,
  "pause": false,
  "positions": [
   {
-   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
-   "symbol": "SI",
-   "opened_ts": 1793204945.3420432,
-   "entry_usd": 0.014502934475541825,
-   "tokens": 4225.594163,
-   "tokens_initial": 4225.594163,
-   "sol_in": 0.60706824,
-   "sol_out": 0.0,
-   "peak_usd": 0.014502934475541825,
-   "stop": 0.2,
-   "trail": 0.25,
-   "trail_after": 1.3,
-   "tp": [
-    [
-     1.5,
-     0.25
-    ],
-    [
-     2,
-     0.25
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "Only mid-cap that passed every filter today: real volume, 52K holders, clean anti-rug check.",
-   "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.013980481639248877,
-   "mult": 0.964,
-   "value_usd": 59.08
-  },
-  {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
    "symbol": "USDC",
    "opened_ts": 1793204947.898395,
-   "entry_usd": 1.0075943560922527,
-   "tokens": 131.146861,
-   "tokens_initial": 131.146861,
-   "sol_in": 1.30899344,
-   "sol_out": 0.0,
+   "entry_usd": 1.008332410422437,
+   "tokens": 42.445728,
+   "tokens_initial": 188.396486,
+   "sol_in": 1.8739853800000001,
+   "sol_out": 1.418855868,
    "peak_usd": 1.0075943560922527,
    "stop": 0.05,
    "trail": 0.5,
@@ -62,9 +32,87 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9995020385520393,
-   "mult": 0.992,
-   "value_usd": 131.08
+   "last_usd": 1.0008147056197498,
+   "mult": 0.993,
+   "value_usd": 42.48
+  },
+  {
+   "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+   "symbol": "STONK",
+   "opened_ts": 1793232589.5218468,
+   "entry_usd": 0.1546247007364677,
+   "tokens": 253.347503727,
+   "tokens_initial": 253.347503727,
+   "sol_in": 0.38276638,
+   "sol_out": 0.0,
+   "peak_usd": 0.1546247007364677,
+   "stop": 0.2,
+   "trail": 0.25,
+   "trail_after": 1.4,
+   "tp": [
+    [
+     2,
+     0.3
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
+   "id": "auto-equilibrado-20261029-0009",
+   "last_usd": 0.15211774114224058,
+   "mult": 0.984,
+   "value_usd": 38.54
+  },
+  {
+   "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+   "symbol": "USELESS",
+   "opened_ts": 1793232591.9609036,
+   "entry_usd": 0.17185367796403173,
+   "tokens": 227.062055,
+   "tokens_initial": 227.062055,
+   "sol_in": 0.38127794,
+   "sol_out": 0.0,
+   "peak_usd": 0.17185367796403173,
+   "stop": 0.2,
+   "trail": 0.25,
+   "trail_after": 1.4,
+   "tp": [
+    [
+     2,
+     0.3
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "USELESS: established memecoin back in an uptrend (+2% vs 20-day average, +13% in 7 days).",
+   "id": "auto-equilibrado-20261029-0009",
+   "last_usd": 0.170087827534034,
+   "mult": 0.99,
+   "value_usd": 38.62
+  },
+  {
+   "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
+   "symbol": "SPX",
+   "opened_ts": 1793232594.201917,
+   "entry_usd": 0.41784525803528966,
+   "tokens": 58.16224545,
+   "tokens_initial": 58.16224545,
+   "sol_in": 0.23746244,
+   "sol_out": 0.0,
+   "peak_usd": 0.41784525803528966,
+   "stop": 0.2,
+   "trail": 0.25,
+   "trail_after": 1.4,
+   "tp": [
+    [
+     2,
+     0.3
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
+   "id": "auto-equilibrado-20261029-0009",
+   "last_usd": 0.41078159340621173,
+   "mult": 0.983,
+   "value_usd": 23.89
   }
  ],
  "equity": [
@@ -455,10 +503,112 @@
   [
    1793232263,
    196.86
+  ],
+  [
+   1793232544,
+   198.23
   ]
  ],
- "closed": [],
+ "closed": [
+  {
+   "ts": 1793232577.4007885,
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "sol_in": 0.60707,
+   "sol_out": 0.57516,
+   "pnl_sol": -0.03191,
+   "pnl_usd": -3.27,
+   "ret": -0.053,
+   "peak_mult": 1.0,
+   "hold_h": 7.7,
+   "why": "lost its trend (below 20-day average)"
+  }
+ ],
  "trades": [
+  {
+   "ts": 1793232594.2011442,
+   "side": "buy",
+   "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
+   "symbol": "SPX",
+   "ok": true,
+   "sol": 0.23746244,
+   "tokens": 58.16224545,
+   "price_usd": 0.417845258035,
+   "slip": 1.87,
+   "sig": "4TYLuU7NRb9HpacrpmptoSe4v6EYvCxxDqWPuYC8g7jm1RDNzkZwRn27jQAd87myLJaXE9csZUYxY5ZkhmDYcr6V",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009"
+  },
+  {
+   "ts": 1793232591.9602692,
+   "side": "buy",
+   "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+   "symbol": "USELESS",
+   "ok": true,
+   "sol": 0.38127794,
+   "tokens": 227.062055,
+   "price_usd": 0.171853677964,
+   "slip": 1.22,
+   "sig": "65DpkeoTptZTWKFhDe5ERoYHPyEq42aHLvYtQvCRRpFGCpjZ1SdCBcxJKuV1avYsYqjmkckzBCxGn9kYw1MK1vDv",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009"
+  },
+  {
+   "ts": 1793232589.5212219,
+   "side": "buy",
+   "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+   "symbol": "STONK",
+   "ok": true,
+   "sol": 0.38276638,
+   "tokens": 253.347503727,
+   "price_usd": 0.154624700736,
+   "slip": 1.44,
+   "sig": "21ocB9mnRmCgVjSrELZirnXL8ePy367EHCfkWz2i6W4ye7SgMmnwvP6LTMufEjeW3wEJKHCeNbJD1jh9QAv5rEsP",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009"
+  },
+  {
+   "ts": 1793232587.2577653,
+   "side": "sell",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 1.418855868,
+   "tokens": 145.950758,
+   "price_usd": 0.994932557191,
+   "why": "fund trend position",
+   "sig": "2pQa5nvAmRk9AnNjcuPw9MVkpU6LDkp4q8574bkhjwwx6U4Jg6SHYLFBQsbz9bA14ujH8hynhLjnXfzrNSB8Q9Da",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009"
+  },
+  {
+   "ts": 1793232580.130049,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.56499194,
+   "tokens": 57.24962500000001,
+   "price_usd": 1.010023137805,
+   "slip": 1.05,
+   "sig": "3rRh8LsQjB5WyAEvgVUz2WzuoumHCXTCZoxpwf1TAamzTxV8DeJpuHEPp4kPdiz69aUck7UqSp2zZEKK8KpcTLb9",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009"
+  },
+  {
+   "ts": 1793232577.4002876,
+   "side": "sell",
+   "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
+   "symbol": "SI",
+   "ok": true,
+   "sol": 0.575162568,
+   "tokens": 4225.594161999999,
+   "price_usd": 0.013930430791,
+   "why": "lost its trend (below 20-day average)",
+   "sig": "242VpWPDxNU5Y5feHdwTnvezttkGhQCxQFSnasGqmsa6qMhoJGixmwy8SnMpGCmqJNgwHUhuF4XjdszFewFuCfus",
+   "error": "",
+   "id": "auto-equilibrado-20261029-0009"
+  },
   {
    "ts": 1793204947.8977249,
    "side": "buy",
@@ -490,6 +640,20 @@
  ],
  "journal": [
   {
+   "ts": 1793232594.2040415,
+   "title": "Execution",
+   "text": "sell DEW9dS: sold 100% of SI (lost its trend (below 20-day average)) for 0.5752 SOL — position closed\nbuy USDC: bought 57 USDC for 0.5650 SOL at $1.01002 (slippage +1.1%)\nsell EPjFWd: sold 77% of USDC (fund trend position) for 1.4189 SOL\nbuy STONK: bought 253 STONK for 0.3828 SOL at $0.154625 (slippage +1.4%)\nbuy USELESS: bought 227 USELESS for 0.3813 SOL at $0.171854 (slippage +1.2%)\nbuy SPX: bought 58 SPX for 0.2375 SOL at $0.417845 (slippage +1.9%)",
+   "kind": "execution",
+   "id": "auto-equilibrado-20261029-0009"
+  },
+  {
+   "ts": 1793232594.2038522,
+   "title": "Automatic brain: new position",
+   "text": "SI is -14% versus its 20-day average: the trend broke. Back to USDC.\n\nSTONK ($119M, $2.8M liquidity) is back above its 20-day average (+13%) and up +37% in 7 days (30 days: -50%). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.\n\nUSELESS ($170M, $5.0M liquidity) is back above its 20-day average (+2%) and up +13% in 7 days (30 days: -35%). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.\n\nSPX ($34M, $2.2M liquidity) is back above its 20-day average (+11%) and up +12% in 7 days (30 days: -16%). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.",
+   "kind": "decisión",
+   "id": "auto-equilibrado-20261029-0009"
+  },
+  {
    "ts": 1793204947.8999398,
    "title": "Ejecución",
    "text": "buy SI: compró 4,226 SI por 0.6071 SOL a US$0.0145029 (slippage +3.6%)\nbuy USDC: compró 131 USDC por 1.3090 SOL a US$1.00759 (slippage +0.8%)",
@@ -512,19 +676,24 @@
   }
  ],
  "wins": 0,
- "n_closed": 0,
- "realized_usd": 0,
+ "n_closed": 1,
+ "realized_usd": -3.27,
  "plan": "equilibrado",
  "wallet": "8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82",
  "brain": {
   "mode": "live",
-  "last_run": 1793231944.075923,
+  "last_run": 1793232544.596539,
   "regime": "neutral",
   "status": "ok",
-  "last_action": null,
+  "last_action": {
+   "ts": 1793232564.615979,
+   "title": "Automatic brain: new position",
+   "orders": 6,
+   "mode": "live"
+  },
   "last_note": null,
-  "trad_status": null,
-  "sol_ch24h": 1.0,
-  "sol_vs_ma20": -0.0245
+  "trad_status": "5 of 18 established memecoins above their 20-day average (best: STONK +13%, USELESS +2%, SPX +11%)",
+  "sol_ch24h": 1.1,
+  "sol_vs_ma20": -0.0235
  }
 }
