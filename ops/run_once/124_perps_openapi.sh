@@ -3,7 +3,7 @@
 cd /root/fomo_intel
 for u in "https://perps-api.jup.ag/v1/docs/openapi.json" "https://perps-api.jup.ag/v1/openapi.json" "https://perps-api.jup.ag/v1/docs/json" "https://perps-api.jup.ag/v1/docs"; do
   curl -s -m 20 "$u" -o /tmp/pdoc -w "$u [%{http_code}] "; head -c 120 /tmp/pdoc | tr '\n' ' '; echo
-  python3 -c "import json;json.load(open('/tmp/pdoc'))" 2>/dev/null && cp /tmp/pdoc state/ops/perps_openapi.json && break
+  python3 -c "import json;d=json.load(open('/tmp/pdoc'));assert d.get('paths')" 2>/dev/null && cp /tmp/pdoc state/ops/perps_openapi.json && break
 done
 grep -o 'https://[^"]*openapi[^"]*\|url: *"[^"]*"\|spec-url="[^"]*"' /tmp/pdoc | head -5
 python3 - <<'PY'
