@@ -1,17 +1,17 @@
 {
- "now": 1793301886.8266044,
+ "now": 1793302195.2627082,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 181.88,
- "equity_sol": 1.8137,
- "cash_sol": 1.6522,
- "positions_usd": 16.19,
- "sol_usd": 100.28,
- "mult": 1.836,
+ "equity_usd": 180.94,
+ "equity_sol": 1.8042,
+ "cash_sol": 1.0101,
+ "positions_usd": 79.64,
+ "sol_usd": 100.29,
+ "mult": 1.826,
  "halt": false,
  "pause": false,
  "positions": [
@@ -42,9 +42,40 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.0018415118628261438,
-   "mult": 0.919,
-   "value_usd": 16.19
+   "last_usd": 0.0018483134460391825,
+   "mult": 0.922,
+   "value_usd": 16.25
+  },
+  {
+   "mint": "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump",
+   "symbol": "JOB",
+   "opened_ts": 1793302149.4408026,
+   "entry_usd": 0.003412457510111043,
+   "tokens": 18872.517379,
+   "tokens_initial": 18872.517379,
+   "sol_in": 0.64218228,
+   "sol_out": 0.0,
+   "peak_usd": 0.003412457510111043,
+   "stop": 0.3,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     3,
+     0.25
+    ],
+    [
+     6,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
+   "id": "auto-mesa-20261029-1929",
+   "sleeve": null,
+   "last_usd": 0.0033588563391888445,
+   "mult": 0.984,
+   "value_usd": 63.39
   }
  ],
  "equity": [
@@ -2539,6 +2570,10 @@
   [
    1793301735,
    182.18
+  ],
+  [
+   1793302038,
+   181.7
   ]
  ],
  "closed": [
@@ -2622,6 +2657,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793302149.4401534,
+   "side": "buy",
+   "mint": "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump",
+   "symbol": "JOB",
+   "ok": true,
+   "sol": 0.64218228,
+   "tokens": 18872.517379,
+   "price_usd": 0.00341245751,
+   "slip": 1.38,
+   "sig": "4kXyX8r37j9SieXAF151r2EsvwbugG56Rp22SGjYn9CZicmpRpZFMcMgt6yQUYKuXTnhfLpgt9wi3qU96NNEuuuZ",
+   "error": "",
+   "id": "auto-mesa-20261029-1929"
+  },
   {
    "ts": 1793286342.371731,
    "side": "sell",
@@ -2834,6 +2883,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793302149.442236,
+   "title": "Ejecución",
+   "text": "buy JOB: compró 18,873 JOB por 0.6422 SOL a US$0.00341246 (slippage +1.4%)",
+   "kind": "ejecución",
+   "id": "auto-mesa-20261029-1929"
+  },
+  {
+   "ts": 1793302149.4420757,
+   "title": "Cerebro automático: compra",
+   "text": "Efectivo ocioso: 1.602 SOL (88% del patrimonio). Lo pongo a trabajar en JOB.\n\nJOB: US$3.3M, liquidez US$162K, volumen 24 h 0.5x su valor, 1466 holders, top 10 7%; 24 h +51%, 83% del máximo de 3 días. Anti-rug LIMPIO (grupos con fondeador común 2.86%). En contra: bundlers 0%; un stop de 30–35% puede ejecutarse más abajo en una caída rápida.",
+   "kind": "decisión",
+   "id": "auto-mesa-20261029-1929"
+  },
   {
    "ts": 1793301431.219461,
    "title": "Cerebro automático: estado",
@@ -3717,12 +3780,12 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793301423.7409685,
-  "regime": "risk_off",
+  "last_run": 1793302142.995813,
+  "regime": "neutral",
   "status": "ok",
   "last_action": {
-   "ts": 1793285823.7393079,
-   "title": "Cerebro automático: ajuste de stops",
+   "ts": 1793302142.998195,
+   "title": "Cerebro automático: compra",
    "orders": 1,
    "mode": "live"
   },
@@ -3731,7 +3794,7 @@
    "text": "Efectivo ocioso (88%), pero SOL y BTC están debajo de su promedio de 20 días y solo 5 de 20 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -2.5,
-  "sol_vs_ma20": -0.042
+  "sol_ch24h": -2.6,
+  "sol_vs_ma20": -0.0435
  }
 }

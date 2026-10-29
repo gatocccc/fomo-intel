@@ -1,14 +1,14 @@
 {
- "state": "risk_off",
- "ts": 1793300824.861041,
- "since": 1793279225.3578277,
- "sol": 100.48,
+ "state": "neutral",
+ "ts": 1793302025.6347823,
+ "since": 1793302025.6347818,
+ "sol": 100.33,
  "sol_ma20": 104.89,
- "sol_ch4h": -2.1,
- "sol_ch24h": -2.5,
- "btc_vs_ma20": -0.0132,
+ "sol_ch4h": -2.3,
+ "sol_ch24h": -2.6,
+ "btc_vs_ma20": -0.0129,
  "breadth_above": 5,
  "breadth_total": 20,
- "why": "bear",
- "label": "defensive"
+ "why": null,
+ "label": "neutral"
 }

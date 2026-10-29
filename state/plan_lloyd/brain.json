@@ -1,7 +1,7 @@
 {
  "mode": "live",
- "last_run": 1793301423.7426813,
- "regime": "risk_off",
+ "last_run": 1793302143.0014956,
+ "regime": "neutral",
  "profile": "book",
  "_noted_no_cands": 1793238965.2395556,
  "bal_ts": 1793300223.7484682,
@@ -9,9 +9,9 @@
  "trad_ts": 1793300824.8697295,
  "status": "ok",
  "last_action": {
-  "ts": 1793286424.6747892,
-  "title": "Automatic brain: rebalance",
-  "orders": 1,
+  "ts": 1793302143.0042427,
+  "title": "Automatic brain: new position",
+  "orders": 2,
   "mode": "live"
  },
  "_noted_book": 1793283423.7438111,
@@ -25,6 +25,11 @@
    "day": "2026-10-29",
    "sym": "DOPE",
    "ts": 1793243954.599274
+  },
+  {
+   "day": "2026-10-29",
+   "sym": "JOB",
+   "ts": 1793302143.0042427
   }
  ],
  "_noted_bal": 1793296623.7469401

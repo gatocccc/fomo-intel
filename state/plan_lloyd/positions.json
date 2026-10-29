@@ -4,10 +4,10 @@
   "symbol": "USDC",
   "opened_ts": 1793204947.898395,
   "entry_usd": 1.009327142690128,
-  "tokens": 485.56372799999997,
+  "tokens": 446.397317,
   "tokens_initial": 717.333543,
   "sol_in": 7.164454398,
-  "sol_out": 2.268072527,
+  "sol_out": 2.657660148,
   "peak_usd": 1.0075943560922527,
   "stop": 0.05,
   "trail": 0.5,
@@ -16,7 +16,7 @@
   "tp_done": [],
   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
   "id": "equilibrado-2026-10-28-01",
-  "last_usd": 0.999492489329364,
+  "last_usd": 0.9994750309716669,
   "sleeve": "cash",
   "from_plan": "equilibrado"
  },
@@ -42,7 +42,7 @@
   "tp_done": [],
   "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.1462121173920143,
+  "last_usd": 0.14688314468481944,
   "sleeve": "established",
   "from_plan": "equilibrado"
  },
@@ -68,7 +68,7 @@
   "tp_done": [],
   "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.3835180020864211,
+  "last_usd": 0.3848503954208976,
   "sleeve": "established",
   "from_plan": "equilibrado"
  },
@@ -99,6 +99,34 @@
   "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
   "id": "auto-lloyd-20261029-0319",
   "sleeve": "picks",
-  "last_usd": 0.0018050094727636856
+  "last_usd": 0.0018494584995435014
+ },
+ "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
+  "mint": "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump",
+  "symbol": "JOB",
+  "opened_ts": 1793302157.8029668,
+  "entry_usd": 0.003435026594087858,
+  "tokens": 11638.525093,
+  "tokens_initial": 11638.525093,
+  "sol_in": 0.39897228,
+  "sol_out": 0.0,
+  "peak_usd": 0.003435026594087858,
+  "stop": 0.3,
+  "trail": 0.35,
+  "trail_after": 1.6,
+  "tp": [
+   [
+    3,
+    0.25
+   ],
+   [
+    6,
+    0.25
+   ]
+  ],
+  "tp_done": [],
+  "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
+  "id": "auto-lloyd-20261029-1929",
+  "sleeve": "picks"
  }
 }
