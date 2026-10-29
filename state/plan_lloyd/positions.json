@@ -8,8 +8,8 @@
   "tokens_initial": 8831.632745155,
   "sol_in": 0.65723188,
   "sol_out": 0.375321957,
-  "peak_usd": 0.01961158993358534,
-  "stop": -0.948,
+  "peak_usd": 0.022334495473469298,
+  "stop": -1.23,
   "trail": 0.35,
   "trail_after": 1.6,
   "tp": [
@@ -25,7 +25,7 @@
   "tp_done": [],
   "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
   "id": "agresivo-2026-10-28-01",
-  "last_usd": 0.01961158993358534,
+  "last_usd": 0.022030635097472988,
   "sleeve": "picks",
   "from_plan": "agresivo"
  },
@@ -46,7 +46,7 @@
   "tp_done": [],
   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
   "id": "equilibrado-2026-10-28-01",
-  "last_usd": 0.9994581646870176,
+  "last_usd": 0.9994551291749751,
   "sleeve": "cash",
   "from_plan": "equilibrado"
  },
@@ -72,7 +72,7 @@
   "tp_done": [],
   "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.14290760874275538,
+  "last_usd": 0.14335755234858408,
   "sleeve": "established",
   "from_plan": "equilibrado"
  },
@@ -98,7 +98,7 @@
   "tp_done": [],
   "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.39570270397030705,
+  "last_usd": 0.3955427441628978,
   "sleeve": "established",
   "from_plan": "equilibrado"
  },
@@ -129,6 +129,6 @@
   "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
   "id": "auto-lloyd-20261029-0319",
   "sleeve": "picks",
-  "last_usd": 0.002008543814489617
+  "last_usd": 0.002003172080382214
  }
 }

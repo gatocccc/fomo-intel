@@ -1,5 +1,5 @@
 {
- "ts": 1793282099.9093928,
+ "ts": 1793282399.9600434,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-29",
-  "seen": 17,
+  "seen": 18,
   "bought": 0,
   "by_reason": {
-   "freno": 17
+   "freno": 18
   },
   "note": ""
  },
@@ -43,9 +43,9 @@
  "wallet_sol": 0.6133,
  "sol_usd": 100.362927648355,
  "stream_connected": true,
- "stream_msgs": 6040,
- "tokens_seen": 5742,
- "tokens_tracked": 69,
+ "stream_msgs": 6102,
+ "tokens_seen": 5801,
+ "tokens_tracked": 77,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -54,16 +54,16 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 2144583,
-  "parsed": 69,
-  "skipped": 2143742,
+  "notifications": 2170329,
+  "parsed": 72,
+  "skipped": 2169480,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
    "10:36:08 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 11,
+ "follow_buys_seen": 12,
  "guard": {
   "alerts": [
    "10:36:11 fuente de se\u00f1ales recuperada tras 3 s"
@@ -85,7 +85,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 6,
-  "create": 6034
+  "create": 6096
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",
