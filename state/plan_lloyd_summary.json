@@ -1,16 +1,16 @@
 {
- "now": 1793273695.7229354,
+ "now": 1793273974.4888403,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 1,
- "equity_usd": 546.55,
- "equity_sol": 5.4497,
+ "equity_usd": 546.67,
+ "equity_sol": 5.4472,
  "cash_sol": 0.0815,
- "positions_usd": 538.38,
- "sol_usd": 100.29,
+ "positions_usd": 538.49,
+ "sol_usd": 100.36,
  "mult": 0.998,
  "halt": false,
  "pause": false,
@@ -41,11 +41,11 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.014323050628690123,
+   "last_usd": 0.014334993251922137,
    "sleeve": "picks",
    "from_plan": "agresivo",
-   "mult": 1.907,
-   "value_usd": 126.5
+   "mult": 1.908,
+   "value_usd": 126.6
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
@@ -64,11 +64,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994828497287337,
+   "last_usd": 0.9994811637045862,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 342.72
+   "value_usd": 342.71
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -92,11 +92,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.1449756466662722,
+   "last_usd": 0.14501088899484774,
    "sleeve": "established",
    "from_plan": "equilibrado",
    "mult": 0.938,
-   "value_usd": 36.73
+   "value_usd": 36.74
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -120,7 +120,7 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3966572832725521,
+   "last_usd": 0.3966578532598896,
    "sleeve": "established",
    "from_plan": "equilibrado",
    "mult": 0.949,
@@ -1094,6 +1094,10 @@
   [
    1793273479,
    543.83
+  ],
+  [
+   1793273788,
+   546.62
   ]
  ],
  "closed": [
