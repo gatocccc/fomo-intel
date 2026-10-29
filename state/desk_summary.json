@@ -1,17 +1,17 @@
 {
- "now": 1793243090.291403,
+ "now": 1793243394.8968027,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 131.62,
- "equity_sol": 1.316,
+ "equity_usd": 131.2,
+ "equity_sol": 1.3144,
  "cash_sol": 0.3935,
- "positions_usd": 92.27,
- "sol_usd": 100.01,
- "mult": 1.328,
+ "positions_usd": 91.93,
+ "sol_usd": 99.82,
+ "mult": 1.324,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.010591794776893822,
-   "mult": 2.188,
-   "value_usd": 78.41
+   "last_usd": 0.010548261044849397,
+   "mult": 2.179,
+   "value_usd": 78.09
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.012369767945163843,
-   "mult": 0.826,
-   "value_usd": 13.85
+   "last_usd": 0.012355735376260087,
+   "mult": 0.825,
+   "value_usd": 13.84
   }
  ],
  "equity": [
@@ -1792,6 +1792,10 @@
   [
    1793242998,
    131.35
+  ],
+  [
+   1793243303,
+   131.37
   ]
  ],
  "closed": [
@@ -1991,6 +1995,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793243287.9518375,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (26%) sin candidato que pase el escaneo y el anti-rug. Prefiero esperar a comprar algo peor.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261029-0308"
+  },
   {
    "ts": 1793241133.174982,
    "title": "Ejecución",
@@ -2216,7 +2227,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793242683.9774034,
+  "last_run": 1793243285.1055355,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
@@ -2225,9 +2236,12 @@
    "orders": 1,
    "mode": "live"
   },
-  "last_note": null,
+  "last_note": {
+   "ts": 1793243285.1061027,
+   "text": "Efectivo ocioso (26%) sin candidato que pase el escaneo y el anti-rug. Prefiero esperar a comprar algo peor."
+  },
   "trad_status": null,
-  "sol_ch24h": -2.0,
-  "sol_vs_ma20": -0.0498
+  "sol_ch24h": -2.1,
+  "sol_vs_ma20": -0.0482
  }
 }
