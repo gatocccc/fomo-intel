@@ -1,17 +1,17 @@
 {
- "now": 1793306693.888707,
+ "now": 1793307003.4943092,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 553.79,
- "equity_sol": 5.7223,
+ "equity_usd": 550.37,
+ "equity_sol": 5.73,
  "cash_sol": 0.0769,
- "positions_usd": 546.35,
- "sol_usd": 96.78,
- "mult": 1.011,
+ "positions_usd": 542.99,
+ "sol_usd": 96.05,
+ "mult": 1.005,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9995633168356951,
+   "last_usd": 0.9995306129376202,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.99,
-   "value_usd": 446.2
+   "value_usd": 446.19
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -60,11 +60,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.13765849282394071,
+   "last_usd": 0.1335907275779089,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.89,
-   "value_usd": 34.88
+   "mult": 0.864,
+   "value_usd": 33.84
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -88,11 +88,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.37185386390651504,
+   "last_usd": 0.3629983579660485,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.89,
-   "value_usd": 21.63
+   "mult": 0.869,
+   "value_usd": 21.11
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -121,9 +121,9 @@
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-lloyd-20261029-0319",
    "sleeve": "picks",
-   "last_usd": 0.0016224212885193941,
-   "mult": 0.794,
-   "value_usd": 7.96
+   "last_usd": 0.0015059798747106997,
+   "mult": 0.737,
+   "value_usd": 7.38
   },
   {
    "mint": "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump",
@@ -152,9 +152,9 @@
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-lloyd-20261029-1929",
    "sleeve": "picks",
-   "last_usd": 0.0030668250049182217,
-   "mult": 0.893,
-   "value_usd": 35.69
+   "last_usd": 0.0029604740675495374,
+   "mult": 0.862,
+   "value_usd": 34.46
   }
  ],
  "equity": [
@@ -1521,6 +1521,10 @@
   [
    1793306415,
    559.21
+  ],
+  [
+   1793306724,
+   553.96
   ]
  ],
  "closed": [
@@ -2151,6 +2155,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793306832.9243872,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (60%), but SOL fell hard (24h -6.4%, 4h -5.8%): no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261029-2047"
+  },
   {
    "ts": 1793305036.2104938,
    "title": "Automatic brain: status",
@@ -2956,8 +2967,8 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793306223.7536235,
-  "regime": "neutral",
+  "last_run": 1793306825.3815994,
+  "regime": "risk_off",
   "status": "ok",
   "last_action": {
    "ts": 1793302143.0042427,
@@ -2966,11 +2977,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793305023.7525752,
-   "text": "Market is neutral. Pockets: Cash 80% (target 30%), Majors 0% (target 25%), Established memes 10% (target 25%), Picks 9% (target 20%). Nothing to change this hour: every open position is inside its rules and no new candidate passed the filters."
+   "ts": 1793306825.3839624,
+   "text": "[Picks] Idle cash (60%), but SOL fell hard (24h -6.4%, 4h -5.8%): no new memecoins until it improves."
   },
   "trad_status": "SOL -6.1%, BTC -2.2%, ETH -4.8%, JUP -14.7%",
-  "sol_ch24h": -3.1,
-  "sol_vs_ma20": -0.053
+  "sol_ch24h": -6.4,
+  "sol_vs_ma20": -0.0854
  }
 }
