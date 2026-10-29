@@ -216,6 +216,30 @@
    "efficacy": "Hit rate up from 7% to 20%, still negative per trade. Discarded.",
    "verdict": "rejected",
    "sleeve": "picks"
+  },
+  {
+   "date": "2026-10-29",
+   "name": "News radar + news-shock short",
+   "public_title": "Read the news, short the shock",
+   "question": "When bearish news (exchange trouble, hacks, forced selling) is confirmed by a price drop within the hour, does a small SOL short opened within minutes and closed within hours beat its costs?",
+   "hypothesis": "Macro news moves the market for hours, not seconds, so a 5-minute reaction is fast enough to catch part of the move.",
+   "method": "Live in the lab wallet: fomo-radar reads RSS/CryptoPanic/X every minute, scores headlines, requires SOL -1.5% in 1h (or -2.5% in 4h, or BTC -1% in 1h), opens a 2x SOL short on Jupiter Perps (stop +3.5%, take profit -7%, 12h max). Every short is logged with entry, exit and result; shadow decisions logged too. Adopt into the book only after 20+ shocks and a result better than random timing after costs.",
+   "result": "Started Oct 29 evening after the Binance-outflow rumours; no closed trades yet.",
+   "efficacy": "Testing. First live shocks will show up here with their result.",
+   "verdict": "testing",
+   "sleeve": "majors"
+  },
+  {
+   "date": "2026-10-29",
+   "name": "Reason-tagged post-mortem (self-review)",
+   "public_title": "Lloyd grades its own reasons",
+   "question": "Which reasons for buying actually make money?",
+   "hypothesis": "Trades bought for a verifiable story (dated catalyst, real affiliation) behave differently from trades that merely passed a numeric screen.",
+   "method": "Every closed trade is tagged with the reason it was bought. An hourly review computes hit rate and average return per reason and switches off any reason with 8+ trades and a negative average until a human review re-enables it.",
+   "result": "Oct 27-29: story-based picks 3 of 3 winners (+$179); screener picks 0 of 14 (about -$78); 20-day-trend buys 0 of 3 so far. Screener picks are switched off.",
+   "efficacy": "Story picks: 3/3 winners. Screener picks: 0/14, -14% average. The screener is now a veto, not a trigger.",
+   "verdict": "adopted",
+   "sleeve": "picks"
   }
  ],
  "protocol": "Out-of-sample half held out, entries at next bar open, real costs (memes ~3% round trip, perps 0.12% + funding), random-entry control x20; adopt only if test mean > 0, t ≥ 2.5, beats random by ≥ 0.3%/trade, design half also positive. Risk/cost changes are judged on drawdown and realized cost, not on win rate.",

@@ -36,6 +36,8 @@ from pathlib import Path
 
 import requests
 
+from . import postmortem
+
 log = logging.getLogger("brain")
 HL = "https://api.hyperliquid.xyz/info"
 JUP_PRICE = "https://api.jup.ag/price/v3"
@@ -112,6 +114,14 @@ ST_API = "https://data.solanatracker.io"
 SCAN_FAST_ENV = {"SCAN_LO": "300000", "SCAN_HI": "3000000", "SCAN_LIQ": "60000", "SCAN_AGE_H": "6", "SCAN_VOLMCAP": "0.5",
                  "SCAN_TOP10": "35", "SCAN_MIN_CANDLES": "8", "SCAN_OUT": str(SCAN_FAST)}
 DD_DIR = Path("state/desk/dd")
+# 29/10: el escáner pasa a ser VETO, no gatillo. Una compra de picks necesita un MOTIVO escrito por una sesión en la lista de
+# seguimiento: {"items": [{"mint", "sym", "reason": "catalyst|affiliation|narrative", "note": "...", "until": ts, "max_frac": 0.35}]}.
+# Sin motivo no se compra, aunque haya 90% de efectivo. Las categorías con 8+ operaciones y retorno medio negativo las apaga
+# postmortem.py (state/desk/categories.json) y el cerebro las respeta.
+WATCHLIST = Path("desk/watchlist.json")   # en el repo: las sesiones la editan con commit
+CATEGORIES = Path("state/desk/categories.json")
+RADAR = Path("state/desk/radar.json")
+REGIME_HYST_H = 2   # horas seguidas con condiciones de salida antes de dejar la defensa
 
 LIM = {"max_pos": 3, "max_frac": 0.35, "min_buy_sol": 0.08, "idle_frac": 0.15, "max_auto_buys_day": 2, "cooldown_h": 48,
        "stale_h": 36, "scan_every_h": 2, "dd_max_age_h": 6, "mcap_lo": 3e5, "mcap_hi": 3e7, "max_ch24h": 0.6, "min_ch24h": -0.4, "max_ch6h": 0.3,
@@ -204,21 +214,46 @@ class Brain:
         above = sum(1 for r in w.values() if r.get("gap", 0) > 0); total = len(w)
         breadth = above / total if total else None
         sol_up, btc_up = t["px"] > t["ma20"], (b.get("px", 0) > b.get("ma20", 1)) if b else sol_up
+        radar = jload(RADAR, {}); shock = radar.get("shock") if time.time() - radar.get("ts", 0) < 900 else None
         state, why = "neutral", None
-        if t["ch24h"] <= -0.06 or t["ch4h"] <= -0.04:
+        if shock:
+            state, why = "risk_off", "news"                        # el radar vio noticias bajistas confirmadas por precio
+        elif t["ch24h"] <= -0.06 or t["ch4h"] <= -0.04:
             state, why = "risk_off", "crash"                       # SOL cae fuerte: defensa
-        elif prev.get("state") == "risk_off" and time.time() - prev.get("since", 0) < 6 * 3600:
+        elif prev.get("state") == "risk_off" and time.time() - prev.get("since", 0) < 6 * 3600 and prev.get("why") in ("crash", "news"):
             state, why = "risk_off", prev.get("why") or "hold"     # se queda 6 h en defensa
         elif not sol_up and not btc_up and (breadth is None or breadth < 0.25):
             state, why = "risk_off", "bear"                        # todo abajo de su promedio: mercado bajista
         elif sol_up and btc_up and (breadth is None or breadth >= 0.4):
             state = "risk_on"
+        # histéresis (29/10): salir de la defensa exige que las condiciones de salida duren REGIME_HYST_H horas seguidas. El 29/10 el
+        # cerebro compró JOB (euforia, +1.329% en 72 h) porque el régimen pasó de bajista a neutral 10 minutos por 5 de 20 memes.
+        if prev.get("state") == "risk_off" and state != "risk_off":
+            cand_since = prev.get("exit_since") or time.time()
+            if time.time() - cand_since < REGIME_HYST_H * 3600:
+                state, why = "risk_off", prev.get("why") or "bear"
+                exit_since = cand_since
+            else:
+                exit_since = None
+        else:
+            exit_since = None
         since = prev.get("since", time.time()) if state == prev.get("state") else time.time()
-        self.regime = {"state": state, "ts": time.time(), "since": since, "sol": round(t["px"], 2), "sol_ma20": round(t["ma20"], 2),
+        self.regime = {"state": state, "ts": time.time(), "since": since, "exit_since": exit_since, "sol": round(t["px"], 2), "sol_ma20": round(t["ma20"], 2),
                        "sol_ch4h": round(t["ch4h"] * 100, 1), "sol_ch24h": round(t["ch24h"] * 100, 1),
                        "btc_vs_ma20": round(b["px"] / b["ma20"] - 1, 4) if b else None, "breadth_above": above, "breadth_total": total, "why": why,
-                       "label": {"risk_on": "constructive", "neutral": "neutral", "risk_off": "defensive"}[state]}
+                       "shock": bool(shock), "label": {"risk_on": "constructive", "neutral": "neutral", "risk_off": "defensive"}[state]}
         jsave(Path("state/desk/regime.json"), self.regime)
+
+    # ---------- categorías y lista de seguimiento ----------
+    @staticmethod
+    def category_on(cat):
+        c = jload(CATEGORIES, {}).get(cat, {})
+        return c.get("status") != "off"
+
+    @staticmethod
+    def watchlist():
+        now = time.time()
+        return {x["mint"]: x for x in jload(WATCHLIST, {}).get("items", []) if x.get("mint") and (not x.get("until") or x["until"] > now)}
 
     # ---------- candidatos (escaneo + anti-rug) ----------
     def refresh_candidates(self, need):
@@ -299,10 +334,14 @@ class Brain:
         bl = jload(Path("state/desk/blacklist.json"), {})
         bmints = BLACK_MINTS | set(bl.get("mints", [])); bsyms = BLACK_SYMS | {x.upper() for x in bl.get("symbols", [])}
         out = []
-        for v in sc.get("ok", [])[:8]:
+        wl = self.watchlist()
+        for v in sc.get("ok", [])[:40]:
             m = v["mint"]
             if m in held or m in cooled or m in bmints or (v.get("sym") or "").upper() in bsyms:
                 continue
+            w = wl.get(m)
+            if not w or not self.category_on(w.get("reason") or "scan_pick"):
+                continue      # sin motivo escrito por una sesión (catalizador / afiliación / narrativa), no se compra
             if (v.get("vol_mcap") or 0) < LIM["min_vol_mcap"] or (v.get("holders") or 0) < LIM["min_holders"]:
                 continue
             if not (LIM["mcap_lo"] <= (v.get("mcap") or 0) <= LIM["mcap_hi"]):
@@ -320,7 +359,7 @@ class Brain:
             if bund and bund > LIM["max_bundlers"]:
                 continue
             factory = ((dd.get("deployer") or {}).get("lanzamientos") or 0) > 200
-            out.append({**v, "dd": dd, "factory": factory})
+            out.append({**v, "dd": dd, "factory": factory, "reason": w.get("reason"), "note": w.get("note", ""), "max_frac": w.get("max_frac")})
         return out
 
     # ---------- reglas ----------
@@ -414,8 +453,10 @@ class Brain:
                                f"Idle cash: {free:.3f} SOL ({free / eq_sol:.0%} of the plan). Putting it to work in {c['sym']}."))
                 notes.append(self.thesis_note(d, c)); new_buys.append(c["sym"])
         elif free > eq_sol * LIM["idle_frac"] and npos < LIM["max_pos"] and now - bstate.get("_noted_no_cands", 0) > 12 * 3600:
-            notes.append(L(d, f"Efectivo ocioso ({free / eq_sol:.0%}) sin candidato que pase el escaneo y el anti-rug. Prefiero esperar a comprar algo peor.",
-                           f"Idle cash ({free / eq_sol:.0%}) but no candidate passes the scan and the anti-rug check. Waiting beats buying something worse."))
+            notes.append(L(d, f"Efectivo ocioso ({free / eq_sol:.0%}) sin candidato CON MOTIVO (catalizador con fecha, afiliación o narrativa verificada) que pase el escaneo y el anti-rug. "
+                              "Desde el 29/10 el escáner solo veta: no compro un token sin historia. El efectivo espera en USDC.",
+                           f"Idle cash ({free / eq_sol:.0%}) but no candidate WITH A REASON (dated catalyst, real affiliation or verified narrative) passes the scan and the anti-rug check. "
+                           "Since Oct 29 the screener only vetoes: Lloyd does not buy a token without a story. Cash waits in USDC."))
             bstate["_noted_no_cands"] = now
         return orders, notes, new_buys
 
@@ -530,7 +571,7 @@ class Brain:
         cooled = {c["mint"] for c in s.get("closed", []) if now - c.get("ts", 0) < LIM["cooldown_h"] * 3600}
         slots = B["max_pos"] - len(held) + sum(1 for o in sells if o["action"] == "sell")
         budget = max(0.0, usdc_val + max(0.0, s.get("cash_sol", 0) - 0.05) * sol_usd - eq * B["usdc_min"])
-        if regime != "risk_off":
+        if regime != "risk_off" and self.category_on("trend"):
             for r in up:
                 if slots <= 0 or n_today + len(buys) >= B["max_buys_day"] or budget < eq * B["slot"] * 0.6:
                     break
@@ -544,7 +585,7 @@ class Brain:
                 if amt < 10:
                     continue
                 buys.append({"action": "buy", "mint": r["mint"], "symbol": r["sym"], "sol": round(amt / sol_usd * 0.98, 4), "stop": B["stop"], "trail": B["trail"],
-                             "trail_after": B["trail_after"], "tp": B["tp"], "thesis": f"{r['sym']}: established memecoin back in an uptrend ({r['gap']:+.0%} vs 20-day average, {r['ch7']:+.0%} in 7 days)."})
+                             "trail_after": B["trail_after"], "tp": B["tp"], "reason": "trend", "thesis": f"{r['sym']}: established memecoin back in an uptrend ({r['gap']:+.0%} vs 20-day average, {r['ch7']:+.0%} in 7 days)."})
                 notes.append(f"{r['sym']} (${r['mcap'] / 1e6:.0f}M, ${r['liq'] / 1e6:.1f}M liquidity) is back above its 20-day average ({r['gap']:+.0%}) and up {r['ch7']:+.0%} in 7 days "
                              f"(30 days: {r['ch30']:+.0%}). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.")
                 budget -= amt; slots -= 1
@@ -647,8 +688,14 @@ class Brain:
 
     def buy_order(self, d, c, sol):
         stop = 0.30 if (c.get("mcap") or 0) >= 2e6 else 0.35
+        if c.get("max_frac"):
+            sol = min(sol, sol * float(c["max_frac"]) / LIM["max_frac"])
+        reason = c.get("reason") or "scan_pick"
+        note = c.get("note") or ""
         return {"action": "buy", "mint": c["mint"], "symbol": c["sym"], "sol": round(sol, 4), "stop": stop, "trail": 0.35, "trail_after": 1.6,
-                "tp": [[3, 0.25], [6, 0.25]], "thesis": L(d, "Compra automática del cerebro: escaneo + anti-rug LIMPIO.", "Automatic buy: passed the scan and a clean anti-rug check.")}
+                "tp": [[3, 0.25], [6, 0.25]], "reason": reason,
+                "thesis": L(d, f"Motivo: {reason}. {note} Pasó escaneo, retroceso sano y anti-rug LIMPIO.".strip(),
+                            f"Reason: {reason}. {note} Passed the scan, a healthy pullback and a clean anti-rug check.".strip())}
 
     def thesis_note(self, d, c):
         dd = c["dd"]; r = dd.get("risk") or {}
@@ -684,7 +731,7 @@ class Brain:
                 held = mint in pos
             if gap > 0.01 and not held:
                 if coin != "SOL":
-                    buys.append({"action": "buy", "mint": mint, "symbol": coin, "sol": round(slot / sol_usd * 0.98, 4), "stop": 0.5, "trail": 0.5, "trail_after": 50, "tp": [],
+                    buys.append({"action": "buy", "mint": mint, "symbol": coin, "sol": round(slot / sol_usd * 0.98, 4), "stop": 0.5, "trail": 0.5, "trail_after": 50, "tp": [], "reason": "majors_trend",
                                  "thesis": f"{coin} is {gap:+.1%} above its 20-day average.", "_need_usd": slot})
                 else:
                     buys.append({"_sol_slot": True, "_need_usd": slot})
@@ -783,6 +830,14 @@ class Brain:
     def cycle(self):
         modes = self.modes()
         self.update_regime()
+        if time.time() - getattr(self, "_pm_ts", 0) > 3600:
+            self._pm_ts = time.time()
+            try:
+                pm = postmortem.run()
+                if pm.get("changes"):
+                    log.warning("post-mortem: cambios de categoría %s", pm["changes"])
+            except Exception as e:  # noqa: BLE001
+                log.warning("post-mortem falló: %s", e)
         if self.regime.get("state") != "risk_off":
             self.refresh_candidates(self.needs_candidates(modes))
             self.refresh_fast(modes.get("agresivo", "off") != "off")

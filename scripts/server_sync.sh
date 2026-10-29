@@ -27,7 +27,7 @@ if [ -n "$REMOTE" ] && [ "$LOCAL" != "$REMOTE" ]; then
   if echo "$CHANGED" | grep -q '^fomo_intel/app/'; then systemctl restart fomo-app 2>/dev/null && echo "$(date -u +%FT%TZ) fomo-app reiniciado" >> logs/sync.log; fi
   if echo "$CHANGED" | grep -q '^fomo_intel/live/control_server.py'; then systemctl restart fomo-control 2>/dev/null || true; fi
   if echo "$CHANGED" | grep -Eq '^fomo_intel/(desk/mirror.py|live/executor.py|live/wallet.py|live/signals.py)'; then systemctl is-enabled -q fomo-mirror 2>/dev/null && systemctl restart fomo-mirror && echo "$(date -u +%FT%TZ) fomo-mirror reiniciado" >> logs/sync.log; fi
-  if echo "$CHANGED" | grep -Eq '^fomo_intel/(desk/|live/executor.py|live/wallet.py|live/signals.py)'; then systemctl restart fomo-desk 2>/dev/null && echo "$(date -u +%FT%TZ) fomo-desk reiniciado" >> logs/sync.log; for p in lloyd lab agresivo equilibrado tradicional; do systemctl is-enabled -q fomo-desk@$p 2>/dev/null && systemctl restart fomo-desk@$p; done; systemctl is-enabled -q fomo-brain 2>/dev/null && systemctl restart fomo-brain; fi
+  if echo "$CHANGED" | grep -Eq '^fomo_intel/(desk/|live/executor.py|live/wallet.py|live/signals.py)'; then systemctl restart fomo-desk 2>/dev/null && echo "$(date -u +%FT%TZ) fomo-desk reiniciado" >> logs/sync.log; for p in lloyd lab agresivo equilibrado tradicional; do systemctl is-enabled -q fomo-desk@$p 2>/dev/null && systemctl restart fomo-desk@$p; done; systemctl is-enabled -q fomo-brain 2>/dev/null && systemctl restart fomo-brain; systemctl is-enabled -q fomo-radar 2>/dev/null && systemctl restart fomo-radar; fi
 fi
 
 # ---- 2) mantenimiento: scripts de una sola vez ----
@@ -72,7 +72,7 @@ for f in trades closed signals outcomes; do [ -f state/$f.jsonl ] && tail -n 150
 cp -r state/ops "$STATE_WT/state/" 2>/dev/null
 [ -d state/research ] && cp -r state/research "$STATE_WT/state/" 2>/dev/null
 [ -d state/plan_lloyd ] && cp state/plan_lloyd/brain.json state/plan_lloyd/positions.json "$STATE_WT/state/plan_lloyd/" 2>/dev/null
-mkdir -p "$STATE_WT/state/desk"; cp state/desk/brain.json state/desk/regime.json "$STATE_WT/state/desk/" 2>/dev/null; tail -n 50 state/desk/brain_shadow.jsonl > "$STATE_WT/state/desk/brain_shadow.jsonl" 2>/dev/null
+mkdir -p "$STATE_WT/state/desk"; cp state/desk/brain.json state/desk/regime.json state/desk/radar.json state/desk/radar_pos.json state/desk/categories.json state/desk/postmortem.json "$STATE_WT/state/desk/" 2>/dev/null; tail -n 200 state/desk/radar_log.jsonl > "$STATE_WT/state/desk/radar_log.jsonl" 2>/dev/null; cp state/desk/radar_closed.jsonl "$STATE_WT/state/desk/" 2>/dev/null; tail -n 50 state/desk/brain_shadow.jsonl > "$STATE_WT/state/desk/brain_shadow.jsonl" 2>/dev/null
 [ -f state/desk/scan4.json ] && python3 -c "import json;d=json.load(open('state/desk/scan4.json'));d.pop('all',None);json.dump(d,open('$STATE_WT/state/desk/scan4.json','w'))" 2>/dev/null
 [ -f state/STOP ] && cp state/STOP "$STATE_WT/state/"
 journalctl -u fomo-live --no-pager -n 300 > "$STATE_WT/logs/fomo-live.log" 2>/dev/null

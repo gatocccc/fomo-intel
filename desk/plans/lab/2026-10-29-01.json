@@ -1,0 +1,6 @@
+{"id": "lab-2026-10-29-01", "title": "Lab test #1: news-shock short (USDC collateral ready)",
+ "journal": "Hypothesis under test: when bearish news (exchange trouble, hacks, forced selling) is confirmed by price, a small SOL short opened within minutes and closed within hours earns more than it costs. Trigger today: X alleged abnormal Binance outflows and a 'hack' (unconfirmed, Binance denies it) while SOL slid under $100. The lab swaps part of its SOL into USDC to use as perps collateral; the news radar (fomo-radar) opens and manages the short automatically: 2x, stop if SOL rises 3.5%, take profit at -7%, 12h max. Each short is logged with its result; the idea is adopted into the book only if, after 20+ shocks, it beats random timing after costs.",
+ "orders": [
+  {"action": "buy", "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", "symbol": "USDC", "sol": 0.30, "stop": 0.05, "trail": 0.5, "trail_after": 10, "tp": [], "sleeve": "cash", "reason": "collateral",
+   "thesis": "USDC collateral for the news-shock short test (perps need USDC)."}
+ ]}
