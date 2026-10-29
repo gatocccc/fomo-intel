@@ -14,3 +14,4 @@
 {"ts": 1793309479.385678, "kind": "event", "src": "cointelegraph", "title": "Binance investigates potential multibillion-dollar hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
 {"ts": 1793309899.5880563, "kind": "event", "src": "decrypt", "title": "Binance Drained of $5.5 Billion in Suspected Hack, Tether and Circle Freeze $1.8 Billion", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
 {"ts": 1793310603.7570567, "kind": "event", "src": "theblock", "title": "Binance investigating hack as suspicious outflows reach up to $5.8 billion", "cls": {"types": ["exchange", "exchange_risk", "hack"], "dir": -1, "sev": 3, "by": "kw"}}
+{"ts": 1793312163.8012571, "kind": "event", "src": "cointelegraph", "title": "Binance hacked for over $5.8B in massive crypto exploit", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}

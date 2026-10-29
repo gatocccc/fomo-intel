@@ -14,6 +14,17 @@
  },
  "events": [
   {
+   "ts": 1793312163.8012571,
+   "src": "cointelegraph",
+   "title": "Binance hacked for over $5.8B in massive crypto exploit",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793310603.7570567,
    "src": "theblock",
    "title": "Binance investigating hack as suspicious outflows reach up to $5.8 billion",
@@ -139,21 +150,21 @@
    ]
   }
  ],
- "ts": 1793311744.4440508,
- "bear_score": 16,
+ "ts": 1793312344.3938746,
+ "bear_score": 18,
  "bull_score": 1,
  "price": {
   "SOL": {
-   "px": 97.101,
-   "ch15m": -0.002568027036188636,
-   "ch1h": 0.0038873093822693328,
-   "ch4h": -0.039269813000890386
+   "px": 97.345,
+   "ch15m": 0.003598086519031707,
+   "ch1h": -0.0027659683450288464,
+   "ch4h": -0.0366650173181593
   },
   "BTC": {
-   "px": 78810.0,
-   "ch15m": -0.003918099089989857,
-   "ch1h": -0.004408848014755162,
-   "ch4h": -0.0247373436127164
+   "px": 78958.0,
+   "ch15m": 0.001992360503039192,
+   "ch1h": -0.007678869911649011,
+   "ch4h": -0.023280554181098423
   }
  },
  "mode": "live",
@@ -174,9 +185,9 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 97.101,
-  "ret_px": 0.0044,
-  "pnl_usd_est": 0.16,
-  "age_h": 0.75
+  "mark": 97.345,
+  "ret_px": 0.0019,
+  "pnl_usd_est": 0.07,
+  "age_h": 0.91
  }
 }
