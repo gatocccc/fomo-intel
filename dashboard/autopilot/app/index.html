@@ -10,9 +10,9 @@
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="/style.css">
 <style>
-.now{display:grid;gap:12px}
-.now .eq{font:400 36px/1 var(--t);font-variant-numeric:tabular-nums}
-.now .eq small{display:block;font:700 12.5px var(--m);margin-top:4px}
+.now{display:grid;gap:12px;align-content:start}
+.now .eq{font:400 40px/1 var(--t);font-variant-numeric:tabular-nums}
+.now .eq small{display:block;font:700 12.5px var(--m);margin-top:6px}
 .now .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between}
 .dial-block{display:grid;gap:14px}
 .dial-block h3{font-size:22px;margin:0;display:flex;gap:10px;align-items:center}
@@ -20,15 +20,11 @@
 .dial-block > p{margin:0;font-size:15px}
 .sub-f{display:grid;gap:12px;padding:16px;border:2px dashed var(--ink);border-radius:16px;background:var(--cream)}
 .sub-f p{margin:0;font-size:14.5px}
-.amt{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:16px;align-items:end}
-.amt .hint{align-self:center}
+.amt{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:16px;align-items:center}
 .danger-card{background:var(--cream)}
 .danger-card h2{color:var(--card-red)}
 .danger-card p{font-size:15px}
 .danger-card .cta{margin-top:14px}
-.expect-box{padding:18px;border:var(--b);border-radius:18px;background:var(--cream)}
-.expect-box h4{margin:0 0 4px;font:400 20px var(--t)}
-.expect-box .sub{margin:0 0 12px;font-size:14px}
 @media (max-width:560px){.amt{grid-template-columns:1fr}}
 </style>
 </head>
@@ -72,52 +68,45 @@
         <dt>Account type</dt><dd id="d-type">—</dd>
         <dt>Fees</dt><dd id="d-fees">—</dd>
       </dl>
-      <p class="hint" style="margin-top:16px">When your seat opens you will create your bot wallet here, fund it, and Lloyd starts mirroring the house book at your risk level. We will email you. Meanwhile, <a href="/book/">watch the book trade live</a>.</p>
+      <p class="hint" style="margin-top:16px">When your seat opens you will create your bot wallet here, fund it, and Lloyd starts trading it at your risk level. We will email you.</p>
     </div>
 
-    <div class="card now" id="now-card">
+    <div class="card now">
       <h2 class="big" style="font-size:26px;margin:0">Lloyd right now</h2>
       <div class="row"><div class="eq" id="n-eq">—<small id="n-pnl">loading the book…</small></div><span class="regime" id="n-regime">Reading the room</span></div>
       <div class="pbar mini" id="n-bar"><span class="pk-cash" style="width:100%"></span></div>
       <ul class="plegend" id="n-legend" style="margin-top:4px"></ul>
-      <p class="hint" id="n-brain" style="margin:0"></p>
       <a class="btn ghost" href="/book/" style="justify-self:start">Open the full book</a>
     </div>
 
     <div class="card">
       <h2 class="big" style="font-size:26px">Nonco Genesis holder?</h2>
-      <p class="hint" id="h-text">Holders pay no fee on profits and get priority seats. Sign a message with the Ethereum wallet that holds your Canvas or Legacy duck. It moves no funds and costs no gas. One person, one account, however many ducks you hold.</p>
+      <p class="hint">Holders pay no fee on profits and get priority seats. Sign a message with the Ethereum wallet that holds your Canvas or Legacy duck. It moves no funds and costs no gas. One person, one account, however many ducks you hold.</p>
       <div class="duck" style="margin-top:16px"><button class="btn ghost" type="button" id="eth-btn">Verify with my Ethereum wallet</button><span class="status" id="eth-st" role="status"></span></div>
     </div>
 
     <div class="card danger-card">
       <h2 class="big" style="font-size:26px">The red button</h2>
-      <p>"Close everything" sells every position in your bot wallet to USDC and stops Lloyd on it. It asks once, here, then does it. You can set your dials and start again later.</p>
+      <p>Sells every position in your bot wallet to USDC and stops Lloyd on it. It asks once, here, then does it.</p>
       <div class="cta"><button class="btn danger" type="button" id="close-btn">Close everything</button><span class="status" id="close-st" role="status"></span></div>
     </div>
 
     <form class="card wide" id="f-set" novalidate>
-      <h2 class="big" style="font-size:26px;margin:0">Your three dials</h2>
-      <p class="hint" style="margin:-10px 0 0">You do not pick tokens, timeframes or a plan. Lloyd decides markets, sizes and when to do nothing, and explains every move. You decide these three things.</p>
+      <h2 class="big" style="font-size:26px;margin:0">Your dials</h2>
+      <p class="hint" style="margin:-10px 0 0">Lloyd picks the tokens, the sizes and the timing. You decide these three things.</p>
 
       <div class="dial-block">
         <h3><span class="n">1</span>How much</h3>
         <div class="amt">
           <div class="f"><label for="s-amount">Amount you plan to fund (USD)</label><input id="s-amount" name="amount_usd" type="number" min="20" max="100000" step="10" value="300" inputmode="decimal"></div>
-          <p class="hint">From US$20. Your wallet mirrors the house book's split, scaled to your risk level. Add or withdraw whenever you like.</p>
+          <p class="hint" style="margin:0">From US$20. Add or withdraw whenever you like.</p>
         </div>
       </div>
 
       <div class="dial-block">
-        <h3><span class="n">2</span>How loud: the biggest drop you accept</h3>
-        <p>Pick the worst drawdown you are willing to see. It sets how much of your money follows the book and how tight Lloyd cuts. If your wallet gets there, everything moves to USDC and Lloyd stops on it.</p>
+        <h3><span class="n">2</span>Your risk: the biggest drop you accept</h3>
+        <p>It sets how much of your money follows the book and how tight Lloyd cuts. If your wallet gets there, everything moves to USDC and Lloyd stops on it.</p>
         <div class="dials" id="s-dials" role="radiogroup" aria-label="Risk level"></div>
-        <div class="expect-box">
-          <h4>What to expect at this level</h4>
-          <p class="sub">Where your money most likely lands, the usual range, and the chance of touching your limit on the way. Estimates from a young book, not promises.</p>
-          <div class="expect" id="s-expect" aria-live="polite"><p class="ex-empty">Loading…</p></div>
-          <p class="note" id="s-expect-note"></p>
-        </div>
       </div>
 
       <div class="dial-block">
@@ -125,10 +114,10 @@
         <div class="opts" id="s-rules" role="radiogroup" aria-label="Profit rule"></div>
         <div class="sub-f" id="lock-box" hidden>
           <div class="f" style="max-width:260px"><label for="s-mult">Lock in when my wallet reaches</label><select id="s-mult" name="profit_mult"><option value="1.5">x1.5</option><option value="2" selected>x2</option><option value="3">x3</option></select></div>
-          <p>When your wallet hits that multiple, Lloyd moves your original stake to USDC and keeps trading only with the profit. Your downside from then on is house money.</p>
+          <p>At that multiple Lloyd moves your original stake to USDC and keeps trading only with the profit.</p>
         </div>
         <div class="sub-f" id="sweep-box" hidden>
-          <p>Once a month, any profit above your stake is sent to the Solana wallet below. The stake keeps working. A month with no profit sends nothing. This needs a withdrawal wallet.</p>
+          <p>Once a month, any profit above your stake is sent to the Solana wallet below. The stake keeps working. This needs a withdrawal wallet.</p>
         </div>
       </div>
 
@@ -149,23 +138,17 @@
 </dialog>
 
 <script src="/lloyd.js"></script>
-<script src="/expect.js"></script>
 <script>
 const $ = s => document.querySelector(s);
 const L = window.Lloyd, post = L.post;
 let fees = {trade_pct_holder: 1, trade_pct_external: 2, success_pct_external: 10};
-let LEVELS = [
-  {pct: 20, key: "quiet", name: "Quiet corner", exposure_pct: null, blurb: "You would rather sleep than win big. Small share of the book, tight cuts."},
-  {pct: 35, key: "regular", name: "Regular's stool", exposure_pct: null, blurb: "The house setting. Most of the book, cuts where Lloyd cuts."},
-  {pct: 50, key: "loud", name: "Loud table", exposure_pct: null, blurb: "You accept losing half for the full ride. All pockets, full size."},
-];
+let LEVELS = null;
 let RULES = [{key: "run", name: "Let it run"}, {key: "lock", name: "Lock in at a multiple"}, {key: "sweep", name: "Sweep monthly"}];
 const RULE_BLURB = {
-  run: "Profits stay in the book and keep working. The most compounding and the most volatile.",
-  lock: "When your wallet reaches x1.5, x2 or x3, your stake goes to USDC and only the profit keeps trading.",
-  sweep: "Once a month, profit above your stake is sent to your own Solana wallet. The stake keeps working.",
+  run: "Profits stay in the book and keep working.",
+  lock: "At x1.5, x2 or x3 your stake goes to USDC; only the profit keeps trading.",
+  sweep: "Once a month, profit above your stake goes to your own Solana wallet.",
 };
-let expect = null, me = null;
 
 function showAuth(which) {
   $("#auth").hidden = false; $("#dash").hidden = true; $("#logout").hidden = true;
@@ -190,18 +173,7 @@ $("#logout").onclick = () => post("/api/logout").catch(() => {}).then(() => { lo
 
 // ----- dials -----
 function buildDials() {
-  const box = $("#s-dials"); box.innerHTML = "";
-  LEVELS.forEach(l => {
-    const lab = document.createElement("label"); lab.className = "dial";
-    const inp = document.createElement("input"); inp.type = "radio"; inp.name = "risk_pct"; inp.value = l.pct;
-    const inn = document.createElement("div"); inn.className = "in";
-    const b = document.createElement("b"); b.textContent = l.name || l.key || `${l.pct}%`;
-    const dd = document.createElement("div"); dd.className = "dd"; dd.textContent = `−${l.pct}%`;
-    const sm = document.createElement("small"); sm.textContent = "biggest drop you accept"; dd.appendChild(sm);
-    const xp = document.createElement("div"); xp.className = "xp"; xp.textContent = l.exposure_pct != null ? `${Math.round(l.exposure_pct)}% of your money follows the book` : "exposure set by the house";
-    const p = document.createElement("p"); p.textContent = l.blurb || "";
-    inn.append(b, dd, xp, p); lab.append(inp, inn); box.appendChild(lab);
-  });
+  L.dialCards(LEVELS, $("#s-dials"), "risk_pct", null);
   const rb = $("#s-rules"); rb.innerHTML = "";
   RULES.forEach(r => {
     const lab = document.createElement("label"); lab.className = "dial";
@@ -225,7 +197,6 @@ function ruleUI() {
 
 // ----- fill from /api/me -----
 function fill(u) {
-  me = u;
   $("#auth").hidden = true; $("#dash").hidden = false; $("#logout").hidden = false;
   $("#hello").textContent = u.name ? `Welcome, ${u.name.split(" ")[0]}` : "Your stool";
   $("#d-status").textContent = {waitlist: "On the waitlist", active: "Trading", paused: "Paused", closed: "Closed, holding USDC"}[u.status] || u.status || "—";
@@ -243,8 +214,6 @@ function fill(u) {
   setRadio("profit_rule", u.profit_rule || "run");
   if (u.profit_mult) f.profit_mult.value = String(Number(u.profit_mult));
   ruleUI();
-  if (!expect) expect = Expect.mount({radios: document.querySelectorAll("input[name=risk_pct]"), box: $("#s-expect"), note: $("#s-expect-note")});
-  else expect.refresh();
 }
 
 $("#f-set").onsubmit = async ev => {
@@ -275,7 +244,7 @@ $("#close-yes").onclick = async () => {
   btn.disabled = true; btn.textContent = "Closing…";
   try {
     await post("/api/me/close_all");
-    shutDlg(); st.className = "status ok"; st.textContent = "Done. Everything is being sold to USDC; it shows up in the book within a few minutes.";
+    shutDlg(); st.className = "status ok"; st.textContent = "Done. Everything is being sold to USDC; it shows in the book within a few minutes.";
     load();
   } catch (e) {
     shutDlg(); st.className = "status err"; st.textContent = e.message;
@@ -303,15 +272,10 @@ function loadBook() {
   L.get("/api/book").then(b => {
     $("#n-eq").firstChild.textContent = L.usd(b.equity_usd);
     const p = $("#n-pnl");
-    p.textContent = b.pnl_usd != null ? `${L.usdS(b.pnl_usd)} · ${L.frac(b.pnl_pct)} since ${L.day(b.since)}` : (b.since ? `since ${L.day(b.since)}` : "");
-    p.className = (b.pnl_usd || 0) >= 0 ? "up" : "down";
+    p.textContent = b.pnl_pct != null ? `${L.frac(b.pnl_pct)} since ${L.day(b.since)}` : (b.since ? `since ${L.day(b.since)}` : "");
+    p.className = (b.pnl_pct || 0) >= 0 ? "up" : "down";
     L.regimeBadge($("#n-regime"), b.regime);
     L.drawBar($("#n-bar"), $("#n-legend"), b, {short: true});
-    const br = b.brain || {}, parts = [];
-    if (br.last_run) parts.push(`Last check ${L.ago(br.last_run)}`);
-    if (br.last_action && br.last_action.title) parts.push(`last move: ${br.last_action.title}`);
-    if (b.stats && b.stats.closed != null) parts.push(`${b.stats.closed} closed, ${b.stats.wins || 0} won`);
-    $("#n-brain").textContent = parts.join(" · ");
   }).catch(() => { $("#n-pnl").textContent = "Could not load the book right now."; $("#n-regime").textContent = "Could not load"; });
 }
 
@@ -324,6 +288,7 @@ L.get("/api/config").then(c => {
   if (Array.isArray(c.risk_levels) && c.risk_levels.length) LEVELS = c.risk_levels;
   if (Array.isArray(c.profit_rules) && c.profit_rules.length) RULES = c.profit_rules;
 }).catch(() => {}).finally(load);
+setInterval(() => { if (!$("#dash").hidden) loadBook(); }, 60000);
 </script>
 </body>
 </html>

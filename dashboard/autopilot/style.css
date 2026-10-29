@@ -151,6 +151,7 @@ footer img{width:36px;height:36px;border-radius:50%;border:2px solid var(--ink)}
 /* risk dial cards (radio cards) */
 .dials{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .dial{position:relative;display:block;cursor:pointer;margin:0}
+.dial:has(input:disabled){cursor:default}
 .dial input{position:absolute;opacity:0;width:1px;height:1px;margin:0;pointer-events:none}
 .dial .in{display:grid;gap:6px;align-content:start;height:100%;padding:18px;border:var(--b);border-radius:18px;background:var(--cream);box-shadow:var(--sh-s);transition:transform .1s ease,background .1s ease}
 .dial:hover .in{transform:translateY(-2px)}
@@ -165,19 +166,6 @@ footer img{width:36px;height:36px;border-radius:50%;border:2px solid var(--ink)}
 .opts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .opts .dial .in{padding:14px 16px}
 .opts .dial b{font-size:18px}
-
-/* what to expect widget */
-.expect{display:grid;gap:12px}
-.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.ex{border:var(--b);border-radius:16px;padding:14px 16px;background:var(--white)}
-.ex h4{margin:0 0 6px;font:700 11.5px var(--m);letter-spacing:.1em;text-transform:uppercase}
-.ex .med{font:400 38px/1 var(--t);font-variant-numeric:tabular-nums}
-.ex .med small{font:700 11px var(--m);display:block;margin-top:4px;letter-spacing:.06em;text-transform:uppercase}
-.ex .rng{font:700 12.5px var(--m);color:var(--dim);margin-top:8px}
-.ex .lim{margin-top:10px;font-size:14px;padding-top:10px;border-top:2px dashed rgba(26,24,20,.25)}
-.ex .lim b{font-family:var(--m)}
-.ex-line{font:700 12.5px var(--m);margin:0}
-.ex-empty{font:13px var(--m);color:var(--dim);margin:0}
 
 /* tables shared by /book/ and the landing */
 table.tbl{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:var(--b);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden;font-size:15px}

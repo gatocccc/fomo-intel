@@ -101,5 +101,30 @@ window.Lloyd = (() => {
     return state;
   }
 
-  return {ORDER, POCKETS, REGIME, REGIME_HINT, esc, num, usd, usdS, fmtX, frac, pct, when, day, ago, hours, get, post, sleeves, drawBar, pill, pocketName, regimeBadge};
+  // Risk dial cards. Names, exposure and blurbs come from /api/config.risk_levels; these are the fallbacks.
+  const FALLBACK_LEVELS = [
+    {pct: 20, key: "quiet", name: "Quiet corner", exposure_pct: null, blurb: "You would rather sleep than win big."},
+    {pct: 35, key: "regular", name: "Regular's stool", exposure_pct: null, blurb: "The house setting."},
+    {pct: 50, key: "loud", name: "Loud table", exposure_pct: null, blurb: "You accept losing half for the full ride."},
+  ];
+  // dialCards(levels, box, inputName, checkedPct, {static}) -> NodeList of the radios. static: display only, not a form control.
+  function dialCards(levels, box, name, checked, opts = {}) {
+    const list = Array.isArray(levels) && levels.length ? levels : FALLBACK_LEVELS;
+    box.innerHTML = "";
+    list.forEach(l => {
+      const lab = document.createElement(opts.static ? "div" : "label"); lab.className = "dial";
+      const inp = document.createElement("input"); inp.type = "radio"; inp.name = name; inp.value = l.pct;
+      inp.checked = String(l.pct) === String(checked); if (opts.static) { inp.disabled = true; inp.tabIndex = -1; }
+      const inn = document.createElement("div"); inn.className = "in";
+      const b = document.createElement("b"); b.textContent = l.name || l.key || `${l.pct}%`;
+      const dd = document.createElement("div"); dd.className = "dd"; dd.textContent = `−${l.pct}%`;
+      const sm = document.createElement("small"); sm.textContent = "biggest drop you accept"; dd.appendChild(sm);
+      const xp = document.createElement("div"); xp.className = "xp"; xp.textContent = l.exposure_pct != null ? `${Math.round(l.exposure_pct)}% of your money follows the book` : "exposure set by the house";
+      const p = document.createElement("p"); p.textContent = l.blurb || "";
+      inn.append(b, dd, xp, p); lab.append(inp, inn); box.appendChild(lab);
+    });
+    return box.querySelectorAll("input[type=radio]");
+  }
+
+  return {ORDER, POCKETS, REGIME, REGIME_HINT, esc, num, usd, usdS, fmtX, frac, pct, when, day, ago, hours, get, post, sleeves, drawBar, pill, pocketName, regimeBadge, dialCards};
 })();
