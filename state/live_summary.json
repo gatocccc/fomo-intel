@@ -1,5 +1,5 @@
 {
- "ts": 1793262602.0010455,
+ "ts": 1793262902.5228806,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -41,11 +41,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.4791,
- "sol_usd": 99.89148776517169,
+ "sol_usd": 99.96292360918007,
  "stream_connected": true,
- "stream_msgs": 2876,
- "tokens_seen": 2728,
- "tokens_tracked": 32,
+ "stream_msgs": 2883,
+ "tokens_seen": 2735,
+ "tokens_tracked": 17,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -54,9 +54,9 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 1547577,
+  "notifications": 1552680,
   "parsed": 62,
-  "skipped": 1546919,
+  "skipped": 1552019,
   "fast_creates": 0,
   "subs": 1,
   "errors": []
@@ -71,7 +71,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 0
  },
- "st_requests": 77,
+ "st_requests": 78,
  "stream_errors": [
   "04:45:39 Connection to remote host was lost.",
   "04:45:46 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Thu, 29 Oct 2026 04:45:46 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
@@ -79,7 +79,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 4,
-  "create": 2872
+  "create": 2879
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
