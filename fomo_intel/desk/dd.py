@@ -15,6 +15,13 @@ SYSTEM = "11111111111111111111111111111111"
 TOP_N = 20
 
 
+
+# Fondeadores que son hot wallets de exchanges y que la vía RPC devuelve sin etiqueta.
+# 5tzFkiKs… (Binance) disparó CONCENTRADO falso en STONK (28/10 y 29/10) y en JOB (29/10) por "grupo de ≥4 billeteras".
+KNOWN_CEX = {
+    "5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9": "Binance hot wallet",
+}
+
 def st(path, **p):
     for i in range(3):
         try:
@@ -139,7 +146,9 @@ def analyze(mint):
         if len(mem) >= 2:
             label = mem[0].get("name") or ""
             typ = (mem[0].get("type") or "").lower()
-            cex = any(w in (label + typ).lower() for w in ("exchange", "binance", "coinbase", "okx", "bybit", "kraken", "kucoin", "mexc", "gate", "bitget", "cex"))
+            cex = f in KNOWN_CEX or any(w in (label + typ).lower() for w in ("exchange", "binance", "coinbase", "okx", "bybit", "kraken", "kucoin", "mexc", "gate", "bitget", "cex"))
+            if f in KNOWN_CEX and not label:
+                label = KNOWN_CEX[f]
             clusters.append({"funder": f, "label": label, "cex": cex, "n": len(mem), "pct": round(sum(m["pct"] for m in mem), 2), "wallets": [m["address"] for m in mem]})
     clusters.sort(key=lambda c: -c["pct"])
     funded_by_creator = [h for h in wallets if creator and h.get("funder") == creator]

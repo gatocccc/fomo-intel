@@ -204,19 +204,19 @@ class Brain:
         above = sum(1 for r in w.values() if r.get("gap", 0) > 0); total = len(w)
         breadth = above / total if total else None
         sol_up, btc_up = t["px"] > t["ma20"], (b.get("px", 0) > b.get("ma20", 1)) if b else sol_up
-        state = "neutral"
+        state, why = "neutral", None
         if t["ch24h"] <= -0.06 or t["ch4h"] <= -0.04:
-            state = "risk_off"                                     # SOL cae fuerte: defensa
+            state, why = "risk_off", "crash"                       # SOL cae fuerte: defensa
         elif prev.get("state") == "risk_off" and time.time() - prev.get("since", 0) < 6 * 3600:
-            state = "risk_off"                                     # se queda 6 h en defensa
+            state, why = "risk_off", prev.get("why") or "hold"     # se queda 6 h en defensa
         elif not sol_up and not btc_up and (breadth is None or breadth < 0.25):
-            state = "risk_off"                                     # todo abajo de su promedio: mercado bajista
+            state, why = "risk_off", "bear"                        # todo abajo de su promedio: mercado bajista
         elif sol_up and btc_up and (breadth is None or breadth >= 0.4):
             state = "risk_on"
         since = prev.get("since", time.time()) if state == prev.get("state") else time.time()
         self.regime = {"state": state, "ts": time.time(), "since": since, "sol": round(t["px"], 2), "sol_ma20": round(t["ma20"], 2),
                        "sol_ch4h": round(t["ch4h"] * 100, 1), "sol_ch24h": round(t["ch24h"] * 100, 1),
-                       "btc_vs_ma20": round(b["px"] / b["ma20"] - 1, 4) if b else None, "breadth_above": above, "breadth_total": total,
+                       "btc_vs_ma20": round(b["px"] / b["ma20"] - 1, 4) if b else None, "breadth_above": above, "breadth_total": total, "why": why,
                        "label": {"risk_on": "constructive", "neutral": "neutral", "risk_off": "defensive"}[state]}
         jsave(Path("state/desk/regime.json"), self.regime)
 
@@ -380,8 +380,17 @@ class Brain:
                 stale.append(p)
         if regime == "risk_off":
             if free > eq_sol * LIM["idle_frac"]:
-                notes.append(L(d, f"Efectivo ocioso ({free / eq_sol:.0%}), pero SOL cae fuerte ({self.regime.get('sol_ch24h')}% en 24 h): no abro memecoins hasta que se calme.",
-                               f"Idle cash ({free / eq_sol:.0%}), but SOL is falling hard ({self.regime.get('sol_ch24h')}% in 24h): no new memecoins until it calms down."))
+                rg = self.regime
+                if rg.get("why") == "bear":   # el motivo real de la defensa, no siempre es una caída fuerte de SOL
+                    es = (f"SOL y BTC están debajo de su promedio de 20 días y solo {rg.get('breadth_above')} de {rg.get('breadth_total')} memecoins grandes "
+                          f"están arriba del suyo: mercado bajista")
+                    en = (f"SOL and BTC are below their 20-day averages and only {rg.get('breadth_above')} of {rg.get('breadth_total')} large memecoins "
+                          f"are above theirs: bear market")
+                else:
+                    es = f"SOL cayó fuerte (24 h {rg.get('sol_ch24h')}%, 4 h {rg.get('sol_ch4h')}%)"
+                    en = f"SOL fell hard (24h {rg.get('sol_ch24h')}%, 4h {rg.get('sol_ch4h')}%)"
+                notes.append(L(d, f"Efectivo ocioso ({free / eq_sol:.0%}), pero {es}: no abro memecoins hasta que mejore.",
+                               f"Idle cash ({free / eq_sol:.0%}), but {en}: no new memecoins until it improves."))
             return orders, notes, []
         if len(buys_today) >= LIM["max_auto_buys_day"]:
             return orders, notes, []
