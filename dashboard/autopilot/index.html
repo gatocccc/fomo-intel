@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Lloyd's Tavern · Auto-trade shitcoins with an edge · Nonconformist Ducks</title>
-<meta name="description" content="One bot, one public book. Lloyd splits the money across cash, majors, established memes and small picks, checks who is behind every token, and writes down why it made every move.">
-<meta property="og:title" content="Lloyd's Tavern · Auto-trade shitcoins with an edge">
-<meta property="og:description" content="The Nonconformist Ducks trading bot. One public book, four pockets, every move on the board.">
+<title>Lloyd's Tavern · The crypto bot that trades for you · Nonconformist Ducks</title>
+<meta name="description" content="Tell Lloyd how much to put in and how much you are willing to lose. He trades memecoins and majors for you around the clock, shows you everything live, and has been trading real money in public since day one.">
+<meta property="og:title" content="Lloyd's Tavern · The crypto bot that trades for you">
+<meta property="og:description" content="Two dials. One bot that never sleeps. Real results, in public, since day one.">
 <meta property="og:image" content="https://app.nonconformistducks.com/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1D6A4B">
@@ -16,17 +16,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 <style>
-/* hero */
-.hero{padding:34px 0 0;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;padding-bottom:64px}
-.hero h1{font-size:clamp(50px,7.2vw,98px);line-height:.98;margin:22px 0 24px;color:var(--white);text-shadow:0 6px 0 var(--ink)}
+/* ---------- hero ---------- */
+.hero{padding:28px 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;padding-bottom:56px}
+.hero h1{font-size:clamp(46px,7vw,92px);line-height:.98;margin:18px 0 20px;color:var(--white);text-shadow:0 6px 0 var(--ink)}
 .hero h1 em{font-style:normal;color:var(--beak)}
-.hero-note{margin-top:18px;font:13px var(--m);color:var(--cream)}
-.hero .lede{color:var(--white)}
-.proof{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 20px;padding:8px 16px 8px 10px;background:var(--beak);border:var(--b);border-radius:999px;box-shadow:var(--sh-s);text-decoration:none;font:700 12.5px var(--m)}
+.hero .lede{color:var(--white);font-size:clamp(18px,1.6vw,21px)}
+.hero-note{margin-top:16px;font:13px var(--m);color:var(--cream)}
+.proof{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0;padding:8px 16px 8px 10px;background:var(--beak);border:var(--b);border-radius:999px;box-shadow:var(--sh-s);text-decoration:none;font:700 12.5px var(--m)}
 .proof b{font:400 24px/1 var(--t)}
 .proof i{font-style:normal;background:var(--ink);color:var(--beak);border-radius:999px;padding:3px 9px;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.frame{position:relative;justify-self:center;width:min(460px,100%)}
+.frame{position:relative;justify-self:center;width:min(440px,100%)}
 .pic{position:relative}
 .photo{position:relative;z-index:1;aspect-ratio:5/6;background:var(--white);border:var(--b);border-radius:26px;box-shadow:0 8px 0 var(--ink);overflow:hidden;transform:rotate(-3deg)}
 .photo::before{content:"";position:absolute;inset:16px;border:2px solid var(--ink);border-radius:14px;background:var(--peach)}
@@ -38,11 +38,8 @@
 .photo img{position:absolute;left:18px;bottom:18px;width:calc(100% - 36px);height:auto;border-radius:0 0 12px 12px}
 .sticker{position:absolute;z-index:4;left:-22px;bottom:48px;background:var(--beak);border:var(--b);border-radius:16px;padding:9px 14px;box-shadow:var(--sh-s);transform:rotate(-5deg);font:400 24px/1 var(--t)}
 .sticker small{display:block;font:700 11px var(--m);margin-top:4px;text-transform:none}
-.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;list-style:none;margin:12px 0 0;padding:0}
-.chips-t{color:var(--white);text-align:center;font:700 11.5px var(--m);letter-spacing:.12em;text-transform:uppercase;margin:30px 0 0}
-.chips li{background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:3px 11px;font:700 11.5px var(--m);box-shadow:0 3px 0 var(--ink)}
 
-/* ticker */
+/* ---------- ticker ---------- */
 .ticker{background:var(--card-red);color:var(--white);border-block:var(--b);overflow:hidden;white-space:nowrap;font:400 18px var(--t);letter-spacing:.02em;padding:11px 0}
 .ticker div{display:inline-block;animation:tick 40s linear infinite;padding-left:100%}
 .ticker span{margin:0 18px}
@@ -51,8 +48,11 @@
 .ticker .g{color:var(--beak)}
 @keyframes tick{to{transform:translateX(-100%)}}
 
-.sec{padding:88px 0}
-.sec-head{display:grid;gap:14px;margin-bottom:34px;max-width:780px}
+/* ---------- sections ---------- */
+.sec{padding:84px 0}
+.sec-head{display:grid;gap:14px;margin-bottom:32px;max-width:780px}
+.sec-head .kicker{font:700 12px var(--m);letter-spacing:.14em;text-transform:uppercase;color:var(--beak)}
+.sec-cream .sec-head .kicker{color:var(--card-red)}
 .sec-sky{background:var(--felt-dk);border-top:var(--b)}
 .sec-sky .lede,.sec-water .lede{color:var(--white)}
 .sec-cream{background:var(--cream);border-top:var(--b)}
@@ -60,267 +60,316 @@
 .sec-water{border-top:var(--b)}
 .sec-head .lede a{color:inherit}
 
-/* board */
-.board{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
-.stat{padding:22px 24px;min-width:0;display:grid;gap:6px;align-content:start}
-.stat span.k{font:700 11.5px var(--m);letter-spacing:.12em;text-transform:uppercase}
-.stat strong{font:400 clamp(44px,5vw,64px)/1 var(--t);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
-.stat small{font:700 13px var(--m);color:var(--dim)}
-.stat.y{background:var(--beak)}
-.stat .sub2{display:flex;flex-wrap:wrap;gap:6px 14px;font:700 12.5px var(--m);margin-top:6px}
-.stat .sub2 b{font:400 18px/1 var(--t)}
-.perf{padding:20px 22px 16px;margin-top:18px}
+/* the problem: three ways to lose */
+.ways{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.way{padding:24px;display:grid;gap:10px;align-content:start}
+.way .who{font:700 12px var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.way h3{font-size:24px}
+.way p{margin:0;font-size:15.5px}
+.way .vs{margin-top:6px;padding:12px 14px;border-radius:14px;background:var(--mint);border:2px solid var(--ink);font-size:14.5px}
+.way .vs b{font-family:var(--m);font-size:12px;letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:3px}
+
+/* how: two dials */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.dialc{padding:26px;display:grid;gap:10px;align-content:start;position:relative}
+.dialc .n{position:absolute;top:-16px;left:18px;width:42px;height:42px;display:grid;place-items:center;background:var(--card-red);color:var(--white);outline:2px dashed var(--white);outline-offset:-8px;border:var(--b);border-radius:50%;font:400 22px/1 var(--t);box-shadow:var(--sh-s)}
+.dialc h3{font-size:28px;margin-top:10px}
+.dialc p{margin:0;font-size:16px}
+.dialc .ex{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.dialc .ex span{font:700 12px var(--m);border:2px solid var(--ink);border-radius:999px;padding:4px 12px;background:var(--cream)}
+.dialc .ex span.on{background:var(--beak)}
+.then{margin:22px 0 0;padding:26px;background:var(--ink);color:var(--white);display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+.then img{width:76px;height:76px;border-radius:50%;border:3px solid var(--beak);background:var(--peach)}
+.then h3{color:var(--beak);font-size:26px;margin-bottom:6px}
+.then p{margin:0;font-size:16px}
+.then ul{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.then li{font:700 12px var(--m);border:2px solid var(--beak);border-radius:999px;padding:4px 12px;color:var(--beak)}
+
+/* proof */
+.proof-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}
+.big-stat{padding:26px;display:grid;gap:8px;align-content:start;background:var(--beak)}
+.big-stat .k{font:700 12px var(--m);letter-spacing:.12em;text-transform:uppercase}
+.big-stat strong{font:400 clamp(56px,7vw,92px)/1 var(--t);font-variant-numeric:tabular-nums}
+.big-stat p{margin:0;font-size:15.5px}
+.big-stat .row{display:grid;gap:4px;margin-top:10px;padding-top:12px;border-top:2px dashed rgba(26,24,20,.3);font:700 13px var(--m)}
+.big-stat .row b{font:400 20px/1 var(--t)}
+.perf{padding:22px 22px 18px}
 .perf h3{font-size:22px;margin:0 0 10px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
 .perf h3 small{font:700 12px var(--m);color:var(--dim)}
 .perf .note{margin:10px 0 0;font-size:13px;color:var(--dim)}
-.stat .regime{justify-self:start;margin-top:4px}
-.pockets-box{padding:22px 24px;display:grid;gap:12px;align-content:start}
-.pockets-box h3{font-size:22px;margin:0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
-.pockets-box h3 small{font:700 12px var(--m);color:var(--dim)}
-.slate{list-style:none;margin:18px 0 0;padding:8px 24px}
-.slate li{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:12px 0;border-bottom:2px dashed rgba(26,24,20,.25)}
-.slate li:last-child{border-bottom:0}
-.slate li.hd{display:block;border-bottom:0;padding:6px 0 0}
-.slate li.hd h3{font-size:20px;margin:0}
-.slate b{font:400 22px/1 var(--t);overflow-wrap:anywhere}
-.slate b small{display:block;font:400 12.5px/1.35 var(--f);color:var(--dim);margin-top:4px}
-.slate .x{font:400 22px/1 var(--t);font-variant-numeric:tabular-nums;white-space:nowrap}
-.slate .x small{display:block;font:700 11px var(--m);color:var(--dim);text-align:right}
-.slate .empty{display:block;font:13px var(--m);color:var(--dim);border:0}
-.board-foot{margin-top:16px;font:700 12.5px var(--m);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.live-strip{margin-top:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.live-strip .c{padding:16px 18px;display:grid;gap:4px}
+.live-strip .k{font:700 11px var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.live-strip b{font:400 26px/1 var(--t)}
+.live-strip small{font:700 12px var(--m);color:var(--dim)}
+.proof-foot{margin-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;font:700 13px var(--m)}
 
-/* steps */
-.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;counter-reset:n}
-.steps>li{counter-increment:n;padding:24px;position:relative}
-.steps>li::before{content:counter(n);position:absolute;top:-16px;left:18px;width:42px;height:42px;display:grid;place-items:center;background:var(--card-red);color:var(--white);outline:2px dashed var(--white);outline-offset:-8px;border:var(--b);border-radius:50%;font:400 22px/1 var(--t);box-shadow:var(--sh-s)}
-.steps h3{font-size:22px;margin:12px 0 8px}
-.steps p{margin:0;font-size:15.5px}
-.steps ul{margin:10px 0 0;padding:0 0 0 18px;font-size:14.5px;display:grid;gap:6px;list-style:disc}
+/* what Lloyd does */
+.does{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.does .d{padding:22px;display:grid;gap:8px;align-content:start}
+.does h3{font-size:22px}
+.does p{margin:0;font-size:15px}
+.does .tag2{justify-self:start;font:700 11px var(--m);letter-spacing:.06em;text-transform:uppercase;border:2px solid var(--ink);border-radius:999px;padding:3px 10px;background:var(--mint)}
 
-/* pockets cards */
-.pk-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.pk-card{padding:0;overflow:hidden}
-.pk-card header{padding:16px 20px 12px;border-bottom:var(--b)}
-.pk-card header h3{font-size:24px}
-.pk-card p{margin:0;padding:16px 20px 20px;font-size:15px}
-.pk-card p small{display:block;margin-top:8px;font:700 12px var(--m);color:var(--dim)}
-.moods{margin-top:18px;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center;color:var(--white);font-size:15px}
-.moods .regime{background:var(--white);color:var(--ink)}
+/* ducks */
+.ducks{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.duckc{padding:26px;display:grid;gap:10px;align-content:start}
+.duckc.h{background:var(--beak)}
+.duckc h3{font-size:28px}
+.duckc ul{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:15.5px}
+.duckc li{display:flex;gap:10px;align-items:flex-start}
+.duckc li::before{content:"";flex:none;width:14px;height:14px;margin-top:6px;border-radius:50%;border:2px solid var(--ink);background:var(--felt-lt)}
+.duckc.h li::before{background:var(--card-red)}
+.duckc .pr{font:400 44px/1 var(--t);margin-top:6px}
+.duckc .pr small{display:block;font:700 12px var(--m);margin-top:4px}
 
-/* risk */
-.risk-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:start}
-.risk-wrap .lede{max-width:none}
-
-table.tab{width:100%;border-collapse:separate;border-spacing:0;background:var(--white);border:var(--b);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
-.tab th,.tab td{text-align:left;padding:16px 20px;border-bottom:2px solid var(--ink);vertical-align:top}
-.tab thead th{font:400 19px/1.15 var(--t);background:var(--ink);color:var(--white)}
-.tab thead th.h{background:var(--beak);color:var(--ink)}
-.tab tbody th{font:700 13px var(--m)}
-.tab td{font-weight:500}
-.tab tr:last-child th,.tab tr:last-child td{border-bottom:0}
-
+/* honest */
 .risks{list-style:none;margin:0;padding:24px 28px;display:grid;gap:12px;max-width:820px}
 .risks li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px}
 .risks li::before{content:"";flex:none;width:16px;height:16px;margin-top:5px;border-radius:50%;border:2px solid var(--ink);background:var(--card-red)}
 .risks b{font-family:var(--m);font-size:14px}
 
+/* faq */
+.faq{display:grid;gap:12px;max-width:820px}
+.faq details{background:var(--white);border:var(--b);border-radius:18px;box-shadow:var(--sh-s);padding:0 20px}
+.faq summary{cursor:pointer;font:400 20px/1.2 var(--t);padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 26px/1 var(--t);color:var(--card-red);flex:none}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:0 0 16px;font-size:15.5px}
+
+/* doors */
 .doors{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:var(--ink);color:var(--white);padding:30px}
 .doors h2{color:var(--beak);font-size:clamp(32px,4.4vw,52px)}
 .doors p{margin:10px 0 0;max-width:62ch}
 .doors .btn{box-shadow:0 4px 0 var(--beak)}
 
-@media (max-width:1100px){.pk-cards{grid-template-columns:1fr 1fr}}
 @media (max-width:900px){
-  .hero-grid,.doors,.board,.risk-wrap{grid-template-columns:1fr}
-  .frame{width:min(340px,86%)}
-  .hero-grid{gap:28px;padding-bottom:44px}
-  .doors{padding:22px}
-  .doors .btn{justify-self:start}
+  .hero-grid,.doors,.ways,.two,.proof-grid,.does,.ducks{grid-template-columns:1fr}
+  .frame{width:min(320px,84%)}
+  .hero-grid{gap:28px;padding-bottom:40px}
+  .doors{padding:22px}.doors .btn{justify-self:start}
+  .then{grid-template-columns:1fr}.then img{width:60px;height:60px}
+}
+@media (max-width:560px){
+  .hero{padding-top:14px}
+  .hero h1{font-size:clamp(40px,12vw,54px);margin:14px 0 14px;text-shadow:0 4px 0 var(--ink)}
+  .hero .cta .btn{flex:1 1 140px}
+  .frame{width:min(270px,78%)}
+  .sticker{font-size:20px;bottom:-14px;left:-8px}.sticker small{display:none}
+  .ticker{font-size:15px;padding:9px 0}
+  .sec{padding:50px 0}.sec-head{margin-bottom:22px}
+  .way,.dialc,.duckc,.big-stat{padding:20px 18px}
+  .dialc h3{font-size:24px}
+  .then{padding:20px 18px}
+  .big-stat strong{font-size:clamp(52px,17vw,70px)}
+  .perf{padding:16px 14px 12px}
+  .live-strip{grid-template-columns:1fr 1fr;gap:10px}.live-strip .c{padding:12px 14px}.live-strip b{font-size:22px}
+  .live-strip .c:first-child{grid-column:1/-1}
+  .does .d{padding:18px}
+  .risks{padding:18px}
+  .faq details{padding:0 16px}.faq summary{font-size:18px}
 }
 @media (max-width:360px){.mark span{display:none}}
-@media (max-width:560px){
-  .hero{padding-top:18px}
-  .hero h1{font-size:clamp(40px,12vw,54px);margin:16px 0 16px;text-shadow:0 4px 0 var(--ink)}
-  .hero .cta .btn{flex:1 1 140px}
-  .frame{width:min(290px,80%)}
-  .chips li{font-size:10.5px;padding:3px 9px}
-  .ticker{font-size:15px;padding:9px 0}
-  .stat,.pockets-box{padding:18px}
-  .stat strong{font-size:clamp(46px,15vw,60px)}
-  .perf{padding:16px 14px 12px}
-  .slate{padding:4px 16px}
-  .slate b{font-size:19px}
-  .board-foot{font-size:11.5px}
-  .steps{gap:26px}
-  .steps>li{padding:22px 18px 18px}
-  .pk-card header{padding:12px 16px 10px}
-  .pk-card p{padding:12px 16px 16px}
-  .moods{font-size:14px;gap:8px 14px}
-  .steps,.pk-cards{grid-template-columns:1fr}
-  .sec{padding:52px 0}
-  .sec-head{margin-bottom:24px}
-  .sticker{font-size:20px;bottom:-14px;left:-8px}
-  .sticker small{display:none}
-  .slate li{grid-template-columns:1fr auto}
-  .slate li .pill{grid-column:1/-1;justify-self:start}
-  .tab th,.tab td{padding:12px 14px;font-size:14px}
-  .risks{padding:18px}
-}
 </style>
 </head>
 <body data-tab="home">
 
 <header class="top"><div class="wrap bar">
   <a class="mark" href="/" aria-label="Lloyd's Tavern, home"><img src="/assets/lloyd-head.png" alt=""><span>Lloyd's <b>Tavern</b></span></a>
-  <nav class="navl" aria-label="Sections"><a href="#how">How it works</a><a href="#pockets">The pockets</a><a href="/lab/">Notebook</a><a href="#risk">Your risk</a><a href="#tab">The tab</a><a href="/book/">Live book</a></nav>
-  <a class="btn" href="/app/#login">Log in</a>
+  <nav class="navl" aria-label="Sections"><a href="#why">Why Lloyd</a><a href="#how">How it works</a><a href="#proof">Results</a><a href="#ducks">Duck perks</a><a href="#faq">Questions</a><a href="/book/">Live book</a></nav>
+  <a class="btn y" href="/app/">Get a seat</a>
 </div></header>
 
+<!-- 1. THE PROMISE -->
 <div class="hero"><div class="wrap hero-grid">
   <div>
-    <span class="tag">A Nonconformist Ducks joint</span>
-    <h1>Auto-trade shitcoins <em>with an edge.</em></h1>
-    <a class="proof" id="proof" href="#board" hidden><i>Live</i><span>Since day one</span><b id="proof-n">—</b></a>
-    <p class="lede">Lloyd's Tavern is the pond's trading bar. One bot works the counter: it checks who is behind every token before it buys, moves money between four pockets as the market turns, and writes down why it made every move. You pick how much and how much risk. Lloyd does the rest.</p>
-    <div class="cta" style="margin-top:28px"><a class="btn y" href="#board">See the results</a><a class="btn" href="/book/">Watch the live book</a></div>
-    <p class="hero-note">Doors are not open yet. Nonco Genesis holders get the first stools.</p>
+    <a class="proof" id="proof" href="#proof" hidden><i>Live</i><span>Real money, since day one</span><b id="proof-n">—</b></a>
+    <h1>Crypto that works <em>while you don't.</em></h1>
+    <p class="lede">Lloyd is a trading bot built by the Nonconformist Ducks. You tell him two things: how much to put in, and how much you are willing to lose. He does everything else, around the clock, and shows you every move live.</p>
+    <div class="cta" style="margin-top:26px"><a class="btn y" href="/app/">Get a seat</a><a class="btn" href="#proof">See the results</a></div>
+    <p class="hero-note">Opening soon. Nonco Genesis holders get in first, with half the fees.</p>
   </div>
   <div class="frame">
     <div class="pic">
       <div class="photo"><img src="/assets/lloyd.webp" width="1000" height="1000" alt="Lloyd, an OG Nonconformist Duck with a bowl cut, round bookkeeper glasses, a goatee and a red card shark vest"></div>
       <span class="idx tl" aria-hidden="true">L<small>♠</small></span><span class="idx br" aria-hidden="true">L<small>♠</small></span>
-      <div class="sticker">Lloyd<small>Regular. Reads the chart, not the hype.</small></div>
+      <div class="sticker">Lloyd<small>Never sleeps. Never panics. Never forgets a rule.</small></div>
     </div>
-    <p class="chips-t" id="chips-t">Unlike a human trader, Lloyd</p><ul class="chips" aria-labelledby="chips-t"><li>Never sleeps</li><li>Never moves a stop down</li><li>Checks who funds every holder</li><li>No FOMO, no revenge trades</li><li>Is happy holding cash</li><li>Writes down every reason</li></ul>
   </div>
 </div></div>
 
-<div class="ticker" aria-hidden="true"><div id="tick"><span>Lloyd's Tavern</span><span><i>●</i></span><span class="w">Wiping the board</span></div></div>
+<div class="ticker" aria-hidden="true"><div id="tick"><span>Lloyd's Tavern</span><span><i>●</i></span><span class="w">Real money, traded in public</span></div></div>
 
-<section class="sec sec-cream" id="board" aria-labelledby="board-t">
+<!-- 2. WHY: the three ways people lose -->
+<section class="sec sec-cream" id="why" aria-labelledby="why-t">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="ttl" id="board-t">On the board tonight</h2>
-      <p class="lede">Lloyd has traded real money in public since October 27, 2026. The first table walked in with $99 and was never topped up. <a href="/book/">Open the full book</a>.</p>
+      <span class="kicker">Why Lloyd</span>
+      <h2 class="ttl" id="why-t">Most people lose in crypto for one of three reasons.</h2>
+      <p class="lede">Not because they are dumb. Because the market is open 24 hours, moves fast, and is full of traps. Lloyd was built to fix exactly that.</p>
     </div>
-    <div class="board">
-      <div class="panel stat y">
-        <span class="k">Since day one</span>
-        <strong id="l-day1">—</strong>
-        <small id="l-day1d">—</small>
-        <div class="sub2" id="l-sub2"></div>
-        <span class="regime" id="l-regime">Reading the room</span>
-      </div>
-      <div class="panel pockets-box">
-        <h3>Where the money sits <small id="l-upd">—</small></h3>
-        <div class="pbar" id="l-bar"><span class="pk-cash" style="width:100%"></span></div>
-        <ul class="plegend" id="l-legend" style="margin:0"></ul>
-      </div>
+    <div class="ways">
+      <article class="panel way">
+        <span class="who">Doing it by hand</span>
+        <h3>You buy late and sell at the worst moment.</h3>
+        <p>You hear about a coin when it is already up. You hold a loser hoping it comes back. You sell a winner too early because you got scared. Everyone does it. It is human.</p>
+        <div class="vs"><b>With Lloyd</b>He buys only what passes his checks, cuts losers by rule, and locks in profit as a winner climbs. No fear, no greed, no 3 a.m. decisions.</div>
+      </article>
+      <article class="panel way">
+        <span class="who">Following tips</span>
+        <h3>You invest when someone tells you to.</h3>
+        <p>A friend, a group chat, an influencer. By the time the tip reaches you, the people who gave it are selling to you. And nobody tells you when to get out.</p>
+        <div class="vs"><b>With Lloyd</b>Before buying a small coin he traces who funded its biggest holders. If it smells like a scam, he stays out. And he always has an exit rule before he enters.</div>
+      </article>
+      <article class="panel way">
+        <span class="who">Other trading bots</span>
+        <h3>You set up a bot you don't understand.</h3>
+        <p>Most bots make you choose strategies, indicators and parameters. They do one thing, in one market, until it stops working. And they never tell you why.</p>
+        <div class="vs"><b>With Lloyd</b>Two dials, nothing to configure. He reads the whole market and moves the money himself: cash when it is dangerous, coins when it is time. And he writes down why.</div>
+      </article>
     </div>
-    <div class="panel perf">
-      <h3>How it got there <small>% gained, deposits and withdrawals left out</small></h3>
-      <ul class="track-legend" id="l-legend2"></ul>
-      <div class="pchart"><svg id="l-chart" role="img" aria-label="Performance in percent since day one"></svg><div class="tip" id="l-tip"></div></div>
-    </div>
-    <ul class="panel slate" id="l-pos" aria-label="Open positions"><li class="empty">Wiping the board…</li></ul>
-    <p class="board-foot"><span id="l-brain">Lloyd checks the book every 10 minutes.</span><a href="/book/">Chart, closed trades and every reason →</a></p>
   </div>
 </section>
 
+<!-- 3. HOW: two dials -->
 <section class="sec sec-sky" id="how" aria-labelledby="how-t">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="ttl" id="how-t">How Lloyd works</h2>
-      <p class="lede">Three things to know. Everything else is on the <a href="/book/">live book</a>, move by move.</p>
+      <span class="kicker">How it works</span>
+      <h2 class="ttl" id="how-t">You set two dials. That's the whole job.</h2>
+      <p class="lede">No charts to read, no coins to pick, no strategies to choose. If you can order a drink, you can use Lloyd.</p>
     </div>
-    <ol class="steps">
-      <li class="panel"><h3>It reads the whole market</h3><p>Every 10 minutes Lloyd checks SOL, BTC and the rest, reads the mood, and splits the money across four pockets: cash, majors, established memes and picks. Nervous market, more cash. Strong market, more at work.</p></li>
-      <li class="panel"><h3>It only buys what passes its checks</h3><p>Then it holds itself to three rules:</p>
-        <ul><li>Before any small pick, it traces who funded the top holders and whether the creator is a token factory. If it smells like a rug, it stays out.</li><li>Stops only ever move up. Losers get cut, winners lock in profit.</li><li>Every buy, sell and "did nothing" gets a written reason you can read.</li></ul></li>
-      <li class="panel"><h3>You set two dials, it does the rest</h3><p>How much goes in, and the biggest drop you accept. Lloyd picks the tokens, the sizes and the timing. Withdraw to your own wallet, or close everything to USDC, whenever you like.</p></li>
-    </ol>
+    <div class="two">
+      <article class="panel dialc">
+        <span class="n">1</span>
+        <h3>How much goes in</h3>
+        <p>Any amount you are comfortable with. It stays in a wallet that is yours; you can take it out, or turn everything to dollars, whenever you want.</p>
+        <div class="ex"><span>$100</span><span class="on">$500</span><span>$2,000</span><span>$10,000</span></div>
+      </article>
+      <article class="panel dialc">
+        <span class="n">2</span>
+        <h3>How much you can stand to lose</h3>
+        <p>One number: the biggest drop you accept. Lloyd adjusts how hard he plays to it. If it is ever reached, he moves everything to dollars and stops.</p>
+        <div class="ex"><span>Quiet corner −20%</span><span class="on">Regular's stool −35%</span><span>Loud table −50%</span></div>
+      </article>
+    </div>
+    <div class="panel then">
+      <img src="/assets/lloyd-head.png" alt="">
+      <div>
+        <h3>Then Lloyd takes over.</h3>
+        <p>Every 10 minutes he reads the market and decides where your money should sit: in dollars when things look dangerous, in the big coins when they are trending, in memecoins when there is a real story behind them. He grows into new strategies every week, and you watch it all from your phone.</p>
+        <ul><li>Checks the market every 10 min</li><li>Moves to cash when it gets ugly</li><li>Takes profit on the way up</li><li>Explains every move</li><li>Learns new tricks weekly</li></ul>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="sec sec-water" id="pockets" aria-labelledby="pk-t">
+<!-- 4. PROOF -->
+<section class="sec sec-cream" id="proof" aria-labelledby="proof-t">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="ttl" id="pk-t">The four pockets</h2>
-      <p class="lede">The split is not fixed. It follows the market, and you can see it live on the board.</p>
+      <span class="kicker">The results</span>
+      <h2 class="ttl" id="proof-t">We tested it with our own money before asking for yours.</h2>
+      <p class="lede">Lloyd has been trading real money in public since October 27, 2026. The first table walked in with $99 and was never topped up. Every trade is on the blockchain for anyone to check. <a href="/book/">Open the live book</a>.</p>
     </div>
-    <div class="pk-cards">
-      <article class="panel pk-card"><header class="pk-cash"><h3>Cash</h3></header><p>USDC. Where the money waits when nothing is good enough, and where it all goes when you close.</p></article>
-      <article class="panel pk-card"><header class="pk-majors"><h3>Majors</h3></header><p>SOL, BTC, ETH and JUP, held while they trade above their 20-day average.<small>Coming next: shorting them when they fall.</small></p></article>
-      <article class="panel pk-card"><header class="pk-established"><h3>Established memes</h3></header><p>BONK, WIF, SPX, USELESS and company, bought when back in an uptrend, sold when the trend breaks.</p></article>
-      <article class="panel pk-card"><header class="pk-picks"><h3>Picks</h3></header><p>Small memecoins with a story, bought on a pullback after the anti-rug check, with profit taken at 3x and 6x.</p></article>
+    <div class="proof-grid">
+      <div class="panel big-stat">
+        <span class="k">Since day one</span>
+        <strong id="l-day1">—</strong>
+        <p id="l-day1d">Loading the board…</p>
+        <div class="row" id="l-sub2"></div>
+      </div>
+      <div class="panel perf">
+        <h3>How it got there <small>% gained, day by day</small></h3>
+        <ul class="track-legend" id="l-legend2"></ul>
+        <div class="pchart"><svg id="l-chart" role="img" aria-label="Performance in percent since day one"></svg><div class="tip" id="l-tip"></div></div>
+        <p class="note">Percent return only. Money moved in or out never shows up as a gain or a loss.</p>
+      </div>
     </div>
-    <div class="moods">
-      <span class="regime risk_on">Constructive</span><span>most of the book working</span>
-      <span class="regime neutral">Neutral</span><span>selective, more cash</span>
-      <span class="regime risk_off">Defensive</span><span>SOL falling hard: mostly cash</span>
+    <div class="live-strip" id="l-strip">
+      <div class="panel c"><span class="k">Best open trade right now</span><b id="l-best">—</b><small id="l-bestd"></small></div>
+      <div class="panel c"><span class="k">Market mood</span><b><span class="regime" id="l-regime" style="font-size:12px">Reading the room</span></b><small id="l-moodd">How Lloyd sees the market this minute</small></div>
+      <div class="panel c"><span class="k">In dollars, waiting</span><b id="l-cash">—</b><small>safe until something passes the filters</small></div>
     </div>
+    <p class="proof-foot"><span id="l-brain">Updated live.</span><a href="/book/">Every trade, every reason, on the live book →</a></p>
   </div>
 </section>
 
-<section class="sec sec-sky" id="notebook" aria-labelledby="nb-t">
+<!-- 5. WHAT HE DOES THAT YOU CAN'T -->
+<section class="sec sec-water" id="edge" aria-labelledby="edge-t">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="ttl" id="nb-t">Lloyd keeps learning</h2>
-      <p class="lede">Every week Lloyd tests new ideas against real data. What works goes into the book. What doesn't goes in the bin, and you can read both.</p>
+      <span class="kicker">The edge</span>
+      <h2 class="ttl" id="edge-t">Three things Lloyd does that no human can.</h2>
     </div>
-    <ul class="lab-strip" id="nb-strip" aria-label="Notebook counts"><li><b>—</b><span>ideas tested</span></li><li><b>—</b><span>in use</span></li><li><b>—</b><span>up next</span></li></ul>
-    <div class="lab-cards" id="nb-cards" style="margin-top:22px"></div>
-    <p class="board-foot" style="color:var(--white)"><span id="nb-cadence"></span><a href="/lab/">Open Lloyd's notebook →</a></p>
+    <div class="does">
+      <article class="panel d"><span class="tag2">Anti-scam</span><h3>He checks who is behind every coin.</h3><p>Before buying a small memecoin he traces who funded its top holders and whether the creator is a known token factory. If it looks like a rug pull, he passes. This week alone that kept him out of three traps.</p></article>
+      <article class="panel d"><span class="tag2">Discipline</span><h3>His stops only ever move up.</h3><p>When a coin climbs, the exit price climbs with it, so a win cannot turn back into a loss. When a coin falls, he is out at the line he set, every time, no matter how good the story sounds.</p></article>
+      <article class="panel d"><span class="tag2">Evolution</span><h3>He gets smarter every week.</h3><p>Three times a week he tests a new idea against real data. What works joins his playbook; what doesn't goes in the bin. You can read both in <a href="/lab/">his notebook</a>. Shorting the big coins when they fall is next.</p></article>
+    </div>
   </div>
 </section>
 
-<section class="sec sec-cream" id="risk" aria-labelledby="risk-t">
-  <div class="wrap risk-wrap">
-    <div class="sec-head" style="margin:0">
-      <h2 class="ttl" id="risk-t">Your risk</h2>
-      <p class="lede">One number: the biggest drop you are willing to see. It sets how much of your money follows the book and how tight Lloyd cuts. Reach it, and everything moves to USDC.</p>
-      <p class="lede">Profits? Let them run, lock in your stake at x1.5, x2 or x3, or sweep them to your own wallet monthly. You choose in your dashboard.</p>
-    </div>
-    <div class="dials" id="risk-dials" role="radiogroup" aria-label="Risk level"></div>
-  </div>
-</section>
-
-<section class="sec sec-sky" id="tab" aria-labelledby="tab-t">
+<!-- 6. DUCKS -->
+<section class="sec sec-sky" id="ducks" aria-labelledby="ducks-t">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="ttl" id="tab-t">The tab</h2>
-      <p class="lede">Nonco Genesis holders pay half the fee on every trade and nothing on their profits.</p>
+      <span class="kicker">For the pond</span>
+      <h2 class="ttl" id="ducks-t">Got a Duck? You get the best stool.</h2>
+      <p class="lede">Lloyd's Tavern is open to everyone, but Nonconformist Ducks built it, so Nonco Genesis holders drink first and pay less.</p>
     </div>
-    <table class="tab">
-      <thead><tr><th scope="col"><span hidden>Fee</span></th><th scope="col" class="h">Nonco Genesis holders</th><th scope="col">Everyone else</th></tr></thead>
-      <tbody>
-        <tr><th scope="row">Per trade</th><td id="fee-h">1%</td><td id="fee-x">2%</td></tr>
-        <tr><th scope="row">On profits</th><td>Nothing</td><td><span id="fee-succ">10%</span> of every winning trade</td></tr>
-        <tr><th scope="row">Seat</th><td>First in the door</td><td>Waitlist</td></tr>
-      </tbody>
-    </table>
+    <div class="ducks">
+      <article class="panel duckc h">
+        <h3>Nonco Genesis holders</h3>
+        <div class="pr"><span id="fee-h">1%</span> per trade<small>and nothing on your profits</small></div>
+        <ul><li>First in the door when seats open</li><li>Half the fee of everyone else</li><li>Keep 100% of what Lloyd earns you</li><li>A say in what Lloyd learns next</li></ul>
+      </article>
+      <article class="panel duckc">
+        <h3>Everyone else</h3>
+        <div class="pr"><span id="fee-x">2%</span> per trade<small>plus <span id="fee-succ">10%</span> of each winning trade</small></div>
+        <ul><li>Join the waitlist; seats open in order</li><li>Same bot, same book, same rules</li><li>Or <a href="https://nonconformistducks.com" target="_blank" rel="noopener">get a Duck</a> and skip the line</li></ul>
+      </article>
+    </div>
   </div>
 </section>
 
+<!-- 7. HONEST -->
 <section class="sec sec-cream" aria-labelledby="risks-t">
   <div class="wrap">
-    <div class="sec-head"><h2 class="ttl" id="risks-t">Before you pull up a stool</h2></div>
+    <div class="sec-head"><span class="kicker">Straight talk</span><h2 class="ttl" id="risks-t">Before you pull up a stool.</h2></div>
     <ul class="panel risks">
-      <li><span><b>You can lose.</b> Memecoins move hard both ways. Lloyd does not guarantee profits, and no honest tool can. Your limit is a target, not a promise: in a crash, a stop can fill lower.</span></li>
-      <li><span><b>It is young.</b> Lloyd started trading real money on October 27 and changes every week. Coming in early means riding with a system still finding its feet.</span></li>
-      <li><span><b>Shorting is not live yet.</b> In a falling market Lloyd leans on cash; majors shorts through perps are being built.</span></li>
+      <li><span><b>You can lose money.</b> Crypto moves hard both ways. Lloyd does not guarantee profits, and no honest tool can. Your limit is a target, not a promise: in a crash a stop can fill lower.</span></li>
+      <li><span><b>Only put in what you can afford to lose.</b> The results above are real, but they are days old, not years. Early means riding with a system still finding its feet.</span></li>
+      <li><span><b>It is not magic.</b> Lloyd is rules, data and discipline. Some weeks he will sit in dollars doing nothing, and that is him working.</span></li>
     </ul>
   </div>
 </section>
 
-<section class="sec sec-water" aria-labelledby="last-t">
+<!-- 8. FAQ -->
+<section class="sec sec-water" id="faq" aria-labelledby="faq-t">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker">Questions</span><h2 class="ttl" id="faq-t">What people ask before sitting down.</h2></div>
+    <div class="faq">
+      <details><summary>I have never bought crypto. Can I use this?</summary><p>Yes. That is who it is for. You fund your seat, set your two dials, and Lloyd handles the rest. You never have to pick a coin or read a chart.</p></details>
+      <details><summary>Is my money locked?</summary><p>No. You can turn everything into dollars with one button, or withdraw to your own wallet, any time. There is no minimum stay.</p></details>
+      <details><summary>What does Lloyd actually trade?</summary><p>Four pockets: dollars (USDC), the big coins (SOL, BTC, ETH), established memecoins with a track record, and a small slice of fresh picks with a real story. How much sits in each pocket depends on how the market looks that day.</p></details>
+      <details><summary>Can I see what he is doing right now?</summary><p>Always. The <a href="/book/">live book</a> shows every open position, every closed trade, and a note explaining every decision, refreshed every minute. The wallet is public on the blockchain too.</p></details>
+      <details><summary>What do I pay?</summary><p>A small fee on each trade: 1% for Nonco Genesis holders, 2% for everyone else. Non-holders also share 10% of each winning trade. There are no monthly fees and nothing to pay when Lloyd does nothing.</p></details>
+      <details><summary>Why should I trust a duck?</summary><p>Don't trust him; check him. Every move Lloyd makes is written down in public with its reason, and every trade is on-chain. We traded our own money first, and we still do.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 9. DOORS -->
+<section class="sec sec-sky" aria-labelledby="last-t" style="border-top:0">
   <div class="wrap">
     <div class="panel doors">
       <div>
-        <h2 id="last-t">The doors open soon</h2>
-        <p>Nonco Genesis holders, Canvas and Legacy, get the first stools; everyone else follows from the waitlist. Seats are limited so the bot never trades against its own customers. Until then, the house book trades in public.</p>
+        <h2 id="last-t">The doors open soon.</h2>
+        <p>Nonco Genesis holders get the first stools; everyone else follows from the waitlist. Seats are limited on purpose, so Lloyd never trades against his own customers. Until then, the house book trades in public.</p>
       </div>
-      <a class="btn y" href="/book/">Watch the live book</a>
+      <a class="btn y" href="/app/">Get a seat</a>
     </div>
   </div>
 </section>
@@ -340,60 +389,44 @@ L.get("/api/config").then(c => {
   if (f.trade_pct_holder != null) $("#fee-h").textContent = f.trade_pct_holder + "%";
   if (f.trade_pct_external != null) $("#fee-x").textContent = f.trade_pct_external + "%";
   if (f.success_pct_external != null) $("#fee-succ").textContent = f.success_pct_external + "%";
-  return c.risk_levels;
-}).catch(() => null).then(levels => L.dialCards(levels, $("#risk-dials"), "risk", 35, {static: true}));
+}).catch(() => {});
 
 L.get("/api/book").then(b => {
-  const br = b.brain || {};
-  const tr = b.track || {}, ft = tr.first_table, bk = tr.book;
+  const tr = b.track || {}, ft = tr.first_table, bk = tr.book, br = b.brain || {};
+  window.__lb = b;
   $("#l-day1").textContent = ft ? L.signed(ft.pct) : L.frac(b.pnl_pct);
+  $("#l-day1d").textContent = ft ? `The first table walked in with ${L.usd(ft.start_usd)} on ${L.day(ft.since)}. It holds ${L.usd(ft.equity_usd)} today. Nothing was added along the way.` : "";
+  $("#l-sub2").innerHTML = (bk ? `<span>The full book, since ${L.day(bk.since)}: <b class="${bk.pct >= 0 ? "up" : "down"}">${L.signed(bk.pct)}</b></span>` : "") + `<span>Lloyd holds <b>${L.usd(b.equity_usd)}</b> right now</span>`;
   if (ft) { $("#proof-n").textContent = L.signed(ft.pct, 0); $("#proof").hidden = false; }
-  $("#l-day1d").textContent = ft ? `The first table: ${L.usd(ft.start_usd)} on ${L.day(ft.since)}, ${L.usd(ft.equity_usd)} today` : "";
-  $("#l-sub2").innerHTML = (bk ? `<span>The book <b class="${bk.pct >= 0 ? "up" : "down"}">${L.signed(bk.pct)}</b></span>` : "") + `<span>Holding <b>${L.usd(b.equity_usd)}</b></span>`;
   const ser = L.trackSeries(tr);
   $("#l-legend2").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${L.esc(x.name)} <b class="${x.pct >= 0 ? "up" : "down"}">${L.signed(x.pct)}</b></li>`).join("");
   L.pctChart($("#l-chart"), $("#l-tip"), ser);
-  window.__lb = b;
+
+  const pos = (b.positions || []).filter(p => p.multiple != null);
+  const best = pos.length ? pos.reduce((a, p) => p.multiple > a.multiple ? p : a) : null;
+  $("#l-best").textContent = best ? `${best.token} ${L.fmtX(best.multiple)}` : "Nothing open";
+  $("#l-bestd").textContent = best ? (best.multiple >= 1 ? `up ${L.signed((best.multiple - 1) * 100, 0)} since Lloyd bought it` : `down ${L.signed((best.multiple - 1) * 100, 0)}, stop in place`) : "Lloyd is holding dollars";
   const state = L.regimeBadge($("#l-regime"), b.regime);
-  $("#l-upd").textContent = b.updated ? `updated ${L.ago(b.updated)}` : "";
-  L.drawBar($("#l-bar"), $("#l-legend"), b);
+  $("#l-moodd").textContent = state ? L.REGIME_HINT[state] : "How Lloyd sees the market this minute";
+  const cashPct = b.cash_usd != null && b.equity_usd ? b.cash_usd / b.equity_usd * 100 : null;
+  $("#l-cash").textContent = cashPct != null ? L.pct(cashPct) : "—";
 
-  const pos = $("#l-pos"); pos.innerHTML = "<li class='hd'><h3>Open now</h3></li>";
-  const tick = [`<span>Lloyd's Tavern</span><span><i>●</i></span>`];
-  (b.positions || []).slice(0, 10).forEach(x => {
-    const li = document.createElement("li");
-    li.innerHTML = `<b></b><span class="x"></span>${L.pill(x.sleeve)}`;
-    li.children[0].textContent = x.token || "—";
-    if (x.thesis) { const s = document.createElement("small"); s.textContent = x.thesis; li.children[0].appendChild(s); }
-    li.children[1].innerHTML = `<span class="${x.multiple != null && x.multiple < 1 ? "down" : "up"}">${L.fmtX(x.multiple)}</span><small>${L.usd(x.value_usd)}</small>`;
-    pos.appendChild(li);
-    tick.push(`<span class="g">${L.esc(x.token)} ${L.fmtX(x.multiple)}</span><span><i>●</i></span>`);
-  });
-  if (pos.children.length === 1) { const li = document.createElement("li"); li.className = "empty"; li.textContent = "Nothing open right now. Lloyd is holding cash."; pos.appendChild(li); }
-
-  const parts = [`Lloyd checks the book every ${br.every_min || 10} minutes`];
+  const parts = [`Lloyd checks the market every ${br.every_min || 10} minutes`];
   if (br.last_run) parts.push(`last check ${L.ago(br.last_run)}`);
   $("#l-brain").textContent = parts.join(" · ") + ".";
 
+  const tick = [`<span>Lloyd's Tavern</span><span><i>●</i></span>`];
   if (ft) tick.push(`<span class="g">Since day one ${L.signed(ft.pct)}</span><span><i>●</i></span>`);
+  pos.slice(0, 8).forEach(x => tick.push(`<span class="g">${L.esc(x.token)} ${L.fmtX(x.multiple)}</span><span><i>●</i></span>`));
   if (b.equity_usd != null) tick.push(`<span class="w">Holding ${L.usd(b.equity_usd)}</span><span><i>●</i></span>`);
   if (state) tick.push(`<span class="w">Mood: ${L.REGIME[state]}</span><span><i>●</i></span>`);
   $("#tick").innerHTML = tick.join("").repeat(2);
 }).catch(() => {
-  $("#l-pos").innerHTML = "<li class='empty'>Could not load the board right now. Try again in a minute.</li>";
+  $("#l-day1d").textContent = "Could not load the board right now. Try again in a minute.";
   $("#l-regime").textContent = "Could not load";
 });
 
 let rz; window.addEventListener("resize", () => { clearTimeout(rz); rz = setTimeout(() => window.__lb && L.pctChart($("#l-chart"), $("#l-tip"), L.trackSeries(window.__lb.track)), 150); });
-
-L.get("/api/lab").then(d => {
-  L.labCounts($("#nb-strip"), d);
-  const ex = Array.isArray(d.experiments) ? d.experiments : [];
-  const pick = ex.filter(x => x.status === "testing" || x.status === "watch").slice(0, 1)
-    .concat(ex.filter(x => x.status === "adopted")).slice(0, 3);
-  $("#nb-cards").innerHTML = pick.map(L.labCard).join("");
-  if (d.cadence) $("#nb-cadence").textContent = d.cadence;
-}).catch(() => { $("#nb-cards").innerHTML = "<p style='color:var(--cream);font:13px var(--m)'>Could not open the notebook right now.</p>"; });
 </script>
 </body>
 </html>
