@@ -1,17 +1,17 @@
 {
- "now": 1793235290.988668,
+ "now": 1793235598.1275847,
  "start_ts": 1793203599.7169404,
  "start_usd": 200.84,
  "start_sol": 1.99,
  "goal_usd": 401.68,
  "days": 30,
  "day": 1,
- "equity_usd": 184.91,
- "equity_sol": 1.8149,
- "cash_sol": 0.0544,
- "positions_usd": 179.36,
- "sol_usd": 101.89,
- "mult": 0.921,
+ "equity_usd": 177.05,
+ "equity_sol": 1.7384,
+ "cash_sol": 0.4703,
+ "positions_usd": 129.16,
+ "sol_usd": 101.85,
+ "mult": 0.882,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.009840438132202195,
-   "mult": 1.31,
-   "value_usd": 86.91
+   "last_usd": 0.009569623285881072,
+   "mult": 1.274,
+   "value_usd": 84.52
   },
   {
    "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
@@ -71,39 +71,9 @@
    "tp_done": [],
    "thesis": "Fast plan: $1.4M token moving (+102% 24h) bought on a pullback (77% of its 3-day high); clean anti-rug check. Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x.",
    "id": "auto-agresivo-20261028-2349",
-   "last_usd": 0.0010597054403521172,
-   "mult": 0.799,
-   "value_usd": 46.64
-  },
-  {
-   "mint": "GF74fBfcaeLjUiUwKpRiUbvMQtTvNyzMoo6KNyyqNyk6",
-   "symbol": "STONKLANA",
-   "opened_ts": 1793231403.4410374,
-   "entry_usd": 0.00047136879833829115,
-   "tokens": 124913.185345,
-   "tokens_initial": 124913.185345,
-   "sol_in": 0.575651279,
-   "sol_out": 0.0,
-   "peak_usd": 0.00047136879833829115,
-   "stop": 0.25,
-   "trail": 0.25,
-   "trail_after": 1.3,
-   "tp": [
-    [
-     1.5,
-     0.4
-    ],
-    [
-     2.5,
-     0.3
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "Fast plan: $0.6M token moving (+141% 24h) bought on a pullback (83% of its 3-day high); clean anti-rug check. Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x.",
-   "id": "auto-agresivo-20261028-2349",
-   "last_usd": 0.00036676176943961576,
-   "mult": 0.778,
-   "value_usd": 45.81
+   "last_usd": 0.0010142198864531505,
+   "mult": 0.764,
+   "value_usd": 44.64
   }
  ],
  "equity": [
@@ -534,9 +504,26 @@
   [
    1793235229,
    182.64
+  ],
+  [
+   1793235537,
+   173.47
   ]
  ],
  "closed": [
+  {
+   "ts": 1793235354.3623447,
+   "mint": "GF74fBfcaeLjUiUwKpRiUbvMQtTvNyzMoo6KNyyqNyk6",
+   "symbol": "STONKLANA",
+   "sol_in": 0.57565,
+   "sol_out": 0.41583,
+   "pnl_sol": -0.15982,
+   "pnl_usd": -16.28,
+   "ret": -0.278,
+   "peak_mult": 1.0,
+   "hold_h": 1.1,
+   "why": "stop (0.73x)"
+  },
   {
    "ts": 1793231397.033491,
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -578,6 +565,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793235354.361849,
+   "side": "sell",
+   "mint": "GF74fBfcaeLjUiUwKpRiUbvMQtTvNyzMoo6KNyyqNyk6",
+   "symbol": "STONKLANA",
+   "ok": true,
+   "sol": 0.415832255,
+   "tokens": 124913.185345,
+   "price_usd": 0.000339177908,
+   "why": "stop (0.73x)",
+   "sig": "2bNYdjccdNfNbzJVKbt21zps3WS8TejXjg59L92vraScy3KJszqjSmSjD3gQhD9q6pTTAaxyJqWS2zjdkKmoxs1E",
+   "error": "",
+   "id": null
+  },
   {
    "ts": 1793231403.4408422,
    "side": "buy",
@@ -707,6 +708,20 @@
  ],
  "journal": [
   {
+   "ts": 1793235491.2949526,
+   "title": "Automatic brain: status",
+   "text": "Daily brake: the plan is down more than 12% today (from $196 to $172). No new positions until tomorrow; open ones keep their stops.",
+   "kind": "decisión",
+   "id": "auto-agresivo-note-20261029-0058"
+  },
+  {
+   "ts": 1793235354.363192,
+   "title": "Automatic exit",
+   "text": "STONKLANA: sold 100% of STONKLANA (stop (0.73x)) for 0.4158 SOL — position closed",
+   "kind": "automatic",
+   "id": null
+  },
+  {
    "ts": 1793231954.606974,
    "title": "Execution",
    "text": "set 4kjruq: ajustó GTA6: stop=-0.05",
@@ -799,13 +814,13 @@
   }
  ],
  "wins": 0,
- "n_closed": 3,
- "realized_usd": -13.46,
+ "n_closed": 4,
+ "realized_usd": -29.74,
  "plan": "agresivo",
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793234883.3032982,
+  "last_run": 1793235483.7120805,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
@@ -815,11 +830,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793215563.4528604,
-   "text": "Idle cash (32%) but no candidate passes the scan and the anti-rug check. Waiting beats buying something worse."
+   "ts": 1793235483.7121336,
+   "text": "Daily brake: the plan is down more than 12% today (from $196 to $172). No new positions until tomorrow; open ones keep their stops."
   },
   "trad_status": null,
-  "sol_ch24h": 0.8,
-  "sol_vs_ma20": -0.027
+  "sol_ch24h": 0.6,
+  "sol_vs_ma20": -0.0284
  }
 }
