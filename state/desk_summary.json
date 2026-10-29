@@ -1,17 +1,17 @@
 {
- "now": 1793301583.093772,
+ "now": 1793301886.8266044,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 181.33,
- "equity_sol": 1.8107,
+ "equity_usd": 181.88,
+ "equity_sol": 1.8137,
  "cash_sol": 1.6522,
- "positions_usd": 15.87,
- "sol_usd": 100.15,
- "mult": 1.83,
+ "positions_usd": 16.19,
+ "sol_usd": 100.28,
+ "mult": 1.836,
  "halt": false,
  "pause": false,
  "positions": [
@@ -42,9 +42,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.0018043406227320625,
-   "mult": 0.9,
-   "value_usd": 15.87
+   "last_usd": 0.0018415118628261438,
+   "mult": 0.919,
+   "value_usd": 16.19
   }
  ],
  "equity": [
@@ -2535,6 +2535,10 @@
   [
    1793301431,
    181.46
+  ],
+  [
+   1793301735,
+   182.18
   ]
  ],
  "closed": [
