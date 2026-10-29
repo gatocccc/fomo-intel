@@ -1,17 +1,17 @@
 {
- "now": 1793236785.0271845,
+ "now": 1793237091.0358481,
  "start_ts": 1793203690.827375,
  "start_usd": 200.16,
  "start_sol": 1.981514,
  "goal_usd": 400.32,
  "days": 30,
  "day": 1,
- "equity_usd": 190.37,
- "equity_sol": 1.8755,
+ "equity_usd": 190.47,
+ "equity_sol": 1.877,
  "cash_sol": 0.0681,
- "positions_usd": 183.46,
- "sol_usd": 101.5,
- "mult": 0.951,
+ "positions_usd": 183.56,
+ "sol_usd": 101.47,
+ "mult": 0.952,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,7 +32,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994818134561874,
+   "last_usd": 0.9994873845615393,
    "mult": 0.991,
    "value_usd": 122.62
   },
@@ -58,9 +58,9 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14809412327558483,
-   "mult": 0.958,
-   "value_usd": 37.52
+   "last_usd": 0.14851831903945503,
+   "mult": 0.961,
+   "value_usd": 37.63
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -84,9 +84,9 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.40089306138751307,
+   "last_usd": 0.4007878855971546,
    "mult": 0.959,
-   "value_usd": 23.32
+   "value_usd": 23.31
   }
  ],
  "equity": [
@@ -537,6 +537,10 @@
   [
    1793236693,
    190.54
+  ],
+  [
+   1793236999,
+   190.43
   ]
  ],
  "closed": [
@@ -781,7 +785,7 @@
  "wallet": "8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82",
  "brain": {
   "mode": "live",
-  "last_run": 1793236441.8860807,
+  "last_run": 1793236983.4863985,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
