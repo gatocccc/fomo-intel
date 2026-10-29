@@ -6,6 +6,7 @@
 <title>Lloyd's Tavern · Admin</title>
 <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
+.mini{font:700 11px var(--m);padding:4px 10px;border:2px solid var(--ink);border-radius:999px;background:var(--beak);cursor:pointer}
 :root{--mist:#E8EEEF;--paper:#F6F8F8;--pond:#123236;--reed:#4A6E6D;--line:#C7D3D4;--go:#2E9B5F;--stop:#CF4A3A;--warn:#E89B00;
   --pk-cash:#F6EEDC;--pk-majors:#2A7F5C;--pk-established:#FFC226;--pk-picks:#C8323B}
 *{box-sizing:border-box}
@@ -101,7 +102,7 @@ pre{margin:0;background:var(--mist);border-radius:12px;padding:12px;font:12.5px/
   <div class="scroll"><table><thead><tr><th>Max drawdown</th><th class="n">Accounts</th><th class="n">Pledged</th></tr></thead><tbody id="pp"></tbody></table></div>
 
   <h2>Accounts</h2>
-  <div class="scroll"><table><thead><tr><th>Created</th><th>Name</th><th>Email</th><th>Type</th><th class="n">Amount</th><th>Risk</th><th>Profit rule</th><th>Wallet</th><th>Status</th></tr></thead><tbody id="ap"></tbody></table></div>
+  <div class="scroll"><table><thead><tr><th>Created</th><th>Name</th><th>Email</th><th>Type</th><th class="n">Amount</th><th>Risk</th><th>Profit rule</th><th>Wallet</th><th>Status</th><th>Seat</th></tr></thead><tbody id="ap"></tbody></table></div>
 </div>
 <script>
 const usd = v => v == null ? "—" : (v < 0 ? "-" : "") + "$" + Math.abs(Number(v)).toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -183,11 +184,17 @@ function loadSummary() {
     h("ap", (d.detail || []).map(a => {
       const t = a.holder_status === "holder" ? `<span class="tag h">holder · ${esc(a.ducks)}</span>` : a.holder_status === "pending" ? `<span class="tag">holder pending</span>` : `<span class="tag">standard</span>`;
       const rule = a.profit_rule ? (RULE[a.profit_rule] || a.profit_rule) + (a.profit_rule === "lock" && a.profit_mult ? ` ${fx(a.profit_mult).replace(".00", "")}` : "") : "—";
-      return `<tr><td>${a.created ? new Date(a.created * 1000).toLocaleString("en-US") : "—"}</td><td>${esc(a.name)}</td><td>${esc(a.email)}</td><td>${t}</td><td class="n">${a.amount_usd ? usd(a.amount_usd) : "—"}</td><td>${a.risk_pct ? "−" + esc(a.risk_pct) + "%" : "—"}</td><td>${esc(rule)}</td><td>${a.bot_wallet ? `<code>${esc(String(a.bot_wallet).slice(0, 4) + "…" + String(a.bot_wallet).slice(-4))}</code>` : (a.sol_wallet ? "withdraw set" : "—")}</td><td>${esc(a.status)}</td></tr>`;
-    }).join("") || `<tr><td colspan="9">No accounts yet.</td></tr>`);
+      return `<tr><td>${a.created ? new Date(a.created * 1000).toLocaleString("en-US") : "—"}</td><td>${esc(a.name)}</td><td>${esc(a.email)}</td><td>${t}</td><td class="n">${a.amount_usd ? usd(a.amount_usd) : "—"}</td><td>${a.risk_pct ? "−" + esc(a.risk_pct) + "%" : "—"}</td><td>${esc(rule)}</td><td>${a.bot_wallet ? `<code>${esc(String(a.bot_wallet).slice(0, 4) + "…" + String(a.bot_wallet).slice(-4))}</code>` : (a.sol_wallet ? "withdraw set" : "—")}</td><td>${esc(a.status)}</td><td>${a.status === "seated" || a.status === "closing" ? `<button class="mini" onclick="seat(${a.id},'unseat')">Unseat</button>` : `<button class="mini" onclick="seat(${a.id},'seat')">Give a seat</button>`}</td></tr>`;
+    }).join("") || `<tr><td colspan="10">No accounts yet.</td></tr>`);
+    if (d.house_fee_wallet) k("k-fee", `${usd(d.fees_usd)} · house wallet ${d.house_fee_wallet.slice(0, 4)}…${d.house_fee_wallet.slice(-4)}`);
   }).catch(e => k("upd", `Could not load the summary (${e.message}).`));
 }
 
+async function seat(id, action) {
+  if (!confirm(action === "seat" ? "Give this user a stool? The mirror engine will create their wallet within a minute." : "Take the seat away? The engine stops following for them (money is not moved).")) return;
+  try { await fetch("/api/admin/seat", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({id, action})}); loadSummary(); }
+  catch (e) { alert(e.message); }
+}
 function load() { loadSummary(); loadBook(); loadWallets(); loadResearch(); }
 load(); setInterval(load, 60000);
 </script>

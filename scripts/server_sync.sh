@@ -26,6 +26,7 @@ if [ -n "$REMOTE" ] && [ "$LOCAL" != "$REMOTE" ]; then
   fi
   if echo "$CHANGED" | grep -q '^fomo_intel/app/'; then systemctl restart fomo-app 2>/dev/null && echo "$(date -u +%FT%TZ) fomo-app reiniciado" >> logs/sync.log; fi
   if echo "$CHANGED" | grep -q '^fomo_intel/live/control_server.py'; then systemctl restart fomo-control 2>/dev/null || true; fi
+  if echo "$CHANGED" | grep -Eq '^fomo_intel/(desk/mirror.py|live/executor.py|live/wallet.py|live/signals.py)'; then systemctl is-enabled -q fomo-mirror 2>/dev/null && systemctl restart fomo-mirror && echo "$(date -u +%FT%TZ) fomo-mirror reiniciado" >> logs/sync.log; fi
   if echo "$CHANGED" | grep -Eq '^fomo_intel/(desk/|live/executor.py|live/wallet.py|live/signals.py)'; then systemctl restart fomo-desk 2>/dev/null && echo "$(date -u +%FT%TZ) fomo-desk reiniciado" >> logs/sync.log; for p in lloyd lab agresivo equilibrado tradicional; do systemctl is-enabled -q fomo-desk@$p 2>/dev/null && systemctl restart fomo-desk@$p; done; systemctl is-enabled -q fomo-brain 2>/dev/null && systemctl restart fomo-brain; fi
 fi
 

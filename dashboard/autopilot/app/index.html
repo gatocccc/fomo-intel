@@ -21,6 +21,18 @@
 .sub-f{display:grid;gap:12px;padding:16px;border:2px dashed var(--ink);border-radius:16px;background:var(--cream)}
 .sub-f p{margin:0;font-size:14.5px}
 .amt{display:grid;grid-template-columns:minmax(0,260px) 1fr;gap:16px;align-items:center}
+.stool{display:grid;gap:12px;align-content:start}
+.stool .eq{font:400 44px/1 var(--t);font-variant-numeric:tabular-nums}
+.stool .eq small{display:block;font:700 12.5px var(--m);margin-top:6px}
+.stool .addr{display:grid;gap:6px;padding:12px 14px;background:var(--cream);border:2px solid var(--ink);border-radius:14px}
+.stool .addr code{font:700 12px var(--m);overflow-wrap:anywhere}
+.stool .addr b{font:700 11px var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.stool .kv2{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font:700 12.5px var(--m)}
+.stool .kv2 span{display:block;font:400 18px/1.1 var(--t)}
+.stool .slate{margin:0;padding:0 4px}
+.stool .slate li{grid-template-columns:1fr auto;padding:9px 0}
+.stool .slate b{font-size:18px}
+.stool .slate .x{font-size:18px}
 .danger-card{background:var(--cream)}
 .danger-card h2{color:var(--card-red)}
 .danger-card p{font-size:15px}
@@ -71,6 +83,16 @@
       <p class="hint" style="margin-top:16px">When your seat opens you will create your bot wallet here, fund it, and Lloyd starts trading it at your risk level. We will email you.</p>
     </div>
 
+    <div class="card stool wide" id="stool-card" hidden>
+      <h2 class="big" style="font-size:26px;margin:0">Your stool</h2>
+      <div class="eq" id="st-eq">—<small id="st-pnl"></small></div>
+      <div class="addr"><b>Your deposit address (Solana)</b><code id="st-addr">—</code><span class="hint" id="st-hint" style="margin:0"></span></div>
+      <div class="kv2"><div>Deposited<span id="st-dep">—</span></div><div>In cash<span id="st-cash">—</span></div><div>Fees so far<span id="st-fees">—</span></div><div>Since<span id="st-since">—</span></div></div>
+      <ul class="slate" id="st-pos" aria-label="Your open positions"></ul>
+      <ul class="feed" id="st-journal" style="gap:8px"></ul>
+      <div class="cta" style="gap:10px"><button class="btn ghost" type="button" id="wd-btn">Withdraw to my wallet</button><span class="status" id="wd-st" role="status"></span></div>
+    </div>
+
     <div class="card now">
       <h2 class="big" style="font-size:26px;margin:0">Lloyd right now</h2>
       <div class="row"><div class="eq" id="n-eq">—<small id="n-pnl">loading the book…</small></div><span class="regime" id="n-regime">Reading the room</span></div>
@@ -87,7 +109,7 @@
 
     <div class="card danger-card">
       <h2 class="big" style="font-size:26px">The red button</h2>
-      <p>Sells every position in your bot wallet to USDC and stops Lloyd on it. It asks once, here, then does it.</p>
+      <p>Sells every position in your stool to SOL and stops Lloyd on it. It asks once, here, then does it. Withdraw afterwards from your stool card.</p>
       <div class="cta"><button class="btn danger" type="button" id="close-btn">Close everything</button><span class="status" id="close-st" role="status"></span></div>
     </div>
 
@@ -141,7 +163,7 @@
 <script>
 const $ = s => document.querySelector(s);
 const L = window.Lloyd, post = L.post;
-let fees = {trade_pct_holder: 1, trade_pct_external: 1, success_pct_external: 15, min_deposit_usd: 300};
+let fees = {trade_pct_holder: 1, trade_pct_external: 1.5, success_pct_external: 15, min_deposit_usd: 300};
 let LEVELS = null;
 let RULES = [{key: "run", name: "Let it run"}, {key: "lock", name: "Lock in at a multiple"}, {key: "sweep", name: "Sweep monthly"}];
 const RULE_BLURB = {
@@ -199,7 +221,8 @@ function ruleUI() {
 function fill(u) {
   $("#auth").hidden = true; $("#dash").hidden = false; $("#logout").hidden = false;
   $("#hello").textContent = u.name ? `Welcome, ${u.name.split(" ")[0]}` : "Your stool";
-  $("#d-status").textContent = {waitlist: "On the waitlist", active: "Trading", paused: "Paused", closed: "Closed, holding USDC"}[u.status] || u.status || "—";
+  $("#d-status").textContent = {waitlist: "On the waitlist", seated: "Seated", active: "Trading", paused: "Paused", closing: "Closing", closed: "Closed, holding SOL"}[u.status] || u.status || "—";
+  fillStool(u);
   $("#d-pos").textContent = u.position != null ? "#" + u.position : "—";
   const holder = u.holder_status === "holder";
   $("#d-type").innerHTML = holder ? `<span class="badge ok">Genesis holder · ${L.esc(u.ducks)} ducks</span>`
@@ -215,6 +238,44 @@ function fill(u) {
   if (u.profit_mult) f.profit_mult.value = String(Number(u.profit_mult));
   ruleUI();
 }
+
+function fillStool(u) {
+  const s = u.stool, card = $("#stool-card");
+  if (!s && !u.bot_wallet) { card.hidden = true; return; }
+  card.hidden = false;
+  const addr = (s && s.wallet) || u.bot_wallet;
+  $("#st-addr").textContent = addr;
+  if (!s || !s.started) {
+    $("#st-eq").firstChild.textContent = L.usd(s ? s.equity_usd : 0);
+    $("#st-pnl").textContent = "waiting for your deposit";
+    $("#st-hint").textContent = `Send SOL to this address from any wallet or exchange. Lloyd starts the moment it lands (at least ${s ? s.min_sol : 0.2} SOL; the public minimum is $${fees.min_deposit_usd}).`;
+  } else {
+    $("#st-eq").firstChild.textContent = L.usd(s.equity_usd, 2);
+    const p = $("#st-pnl"); p.textContent = s.pnl_pct != null ? `${L.frac(s.pnl_pct)} · ${L.usdS(s.pnl_usd, 2)} on what you put in` : "";
+    p.className = (s.pnl_pct || 0) >= 0 ? "up" : "down";
+    $("#st-hint").textContent = s.closed ? "Closed: everything is in SOL. Withdraw below, or ask us to reopen." : s.halt ? "Stopped at the hard floor. Everything is in SOL." : "You can add more SOL to this address any time.";
+  }
+  $("#st-dep").textContent = s ? L.usd(s.deposited_usd, 2) : "—";
+  $("#st-cash").textContent = s && s.equity_usd ? L.pct(s.cash_usd / s.equity_usd * 100) : "—";
+  $("#st-fees").textContent = s ? L.usd(s.fees_usd, 2) : "—";
+  $("#st-since").textContent = s && s.since ? L.day(s.since) : "—";
+  const pos = $("#st-pos"); pos.innerHTML = "";
+  ((s && s.positions) || []).forEach(x => {
+    const li = document.createElement("li"); li.innerHTML = `<b></b><span class="x"></span>`;
+    li.children[0].textContent = x.token || "—";
+    li.children[1].innerHTML = `<span class="${x.multiple != null && x.multiple < 1 ? "down" : "up"}">${L.fmtX(x.multiple)}</span><small>${L.usd(x.value_usd, 2)}</small>`;
+    pos.appendChild(li);
+  });
+  if (s && s.started && !pos.children.length) { const li = document.createElement("li"); li.className = "empty"; li.textContent = "Nothing open right now: your stool is in cash, like the book."; pos.appendChild(li); }
+  $("#st-journal").innerHTML = ((s && s.journal) || []).slice(0, 6).map(j => `<li><time>${L.when(j.ts)}</time><b>${L.esc(j.title)}</b><p>${L.esc(j.text)}</p></li>`).join("");
+}
+$("#wd-btn").onclick = async () => {
+  const st = $("#wd-st");
+  if (!confirm("Withdraw everything to the Solana wallet saved in your dials? Open positions are sold to SOL first.")) return;
+  st.className = "status"; st.textContent = "Asking Lloyd…";
+  try { await post("/api/me/withdraw"); st.className = "status ok"; st.textContent = "On its way. It can take a couple of minutes; this page refreshes on its own."; }
+  catch (e) { st.className = "status err"; st.textContent = e.message; }
+};
 
 $("#f-set").onsubmit = async ev => {
   ev.preventDefault();
@@ -288,7 +349,7 @@ L.get("/api/config").then(c => {
   if (Array.isArray(c.risk_levels) && c.risk_levels.length) LEVELS = c.risk_levels;
   if (Array.isArray(c.profit_rules) && c.profit_rules.length) RULES = c.profit_rules;
 }).catch(() => {}).finally(load);
-setInterval(() => { if (!$("#dash").hidden) loadBook(); }, 60000);
+setInterval(() => { if (!$("#dash").hidden) { loadBook(); L.get("/api/me").then(d => fillStool(d.user)).catch(() => {}); } }, 60000);
 </script>
 </body>
 </html>

@@ -43,8 +43,8 @@ DB = APP / "app.db"
 PORT = int(os.getenv("APP_PORT", "8770"))
 ETH_RPC = os.getenv("ETH_RPC_URL", "https://ethereum-rpc.publicnode.com")
 # Pricing (decisión de Gastón, 29/10/2026): 1% embebido en cada compra/venta de tokens para todos (no en los pases a USDC/SOL);
-# holders nada más; externos además 15% de la ganancia neta mensual con marca de agua; mínimo US$300; sin cuota de ingreso.
-FEES = {"trade_pct_holder": float(os.getenv("FEE_TRADE_HOLDER_PCT", "1")), "trade_pct_external": float(os.getenv("FEE_TRADE_EXTERNAL_PCT", "1")),
+# holders nada más; externos 1,5% por operación con tokens y además 15% de la ganancia neta mensual con marca de agua; mínimo US$300; sin cuota de ingreso.
+FEES = {"trade_pct_holder": float(os.getenv("FEE_TRADE_HOLDER_PCT", "1")), "trade_pct_external": float(os.getenv("FEE_TRADE_EXTERNAL_PCT", "1.5")),
         "success_pct_external": float(os.getenv("FEE_SUCCESS_PCT", "15")), "success_pct_holder": 0.0,
         "trade_fee_on": "token trades only", "success_basis": "net monthly profit above the previous high (high-water mark)",
         "min_deposit_usd": float(os.getenv("MIN_DEPOSIT_USD", "300"))}
@@ -120,7 +120,23 @@ def public_user(u: sqlite3.Row) -> dict:
     with db() as c:
         d["position"] = c.execute("SELECT COUNT(*) FROM users WHERE created<=?", (u["created"],)).fetchone()[0]
     d["type"] = "holder" if u["holder_status"] in ("holder", "pending") else "external"
+    d["stool"] = stool_view(u["id"])
     return d
+
+
+def stool_view(uid: int) -> dict | None:
+    """La billetera del usuario, como la publica el motor de seguidores (fomo_intel/desk/mirror.py)."""
+    s = _summary(STATE / "users" / f"{uid}_summary.json")
+    if not s:
+        return None
+    keep = ("wallet", "type", "fee_pct", "started", "since", "halt", "closed", "equity_usd", "deposited_usd", "withdrawn_usd", "pnl_usd", "pnl_pct", "fees_usd",
+            "cash_usd", "cash_sol", "min_sol", "sol_usd", "now")
+    out = {k: s.get(k) for k in keep}
+    out["positions"] = s.get("positions") or []
+    out["equity"] = (s.get("equity") or [])[-400:]
+    out["closed_list"] = [{"ts": c.get("ts"), "token": c.get("symbol"), "sleeve": c.get("sleeve"), "result": c.get("ret"), "pnl_usd": c.get("pnl_usd"), "why": c.get("why"), "hold_h": c.get("hold_h")} for c in (s.get("closed") or [])[:30]]
+    out["journal"] = [{"ts": j.get("ts"), "title": j.get("title"), "text": j.get("text"), "kind": j.get("kind")} for j in (s.get("journal") or [])[:40]]
+    return out
 
 
 def _rate_ok(key: str, limit: int, window: int = 3600) -> bool:
@@ -212,12 +228,39 @@ def save_dials(u: sqlite3.Row, b: dict) -> tuple[int, dict]:
 
 def close_all(u: sqlite3.Row) -> tuple[int, dict]:
     if not u["bot_wallet"]:
-        return 409, {"error": "You do not have a bot wallet yet, so there is nothing to close. Your seat is still on the waitlist."}
+        return 409, {"error": "You do not have a stool yet, so there is nothing to close. Your seat is still on the waitlist."}
     with db() as c:
         c.execute("UPDATE users SET close_requested=?, status='closing' WHERE id=?", (time.time(), u["id"]))
     (STATE / "users").mkdir(parents=True, exist_ok=True)
     (STATE / "users" / f"{u['id']}_CLOSE").write_text(str(time.time()))
     return 200, {"ok": True}
+
+
+def withdraw(u: sqlite3.Row) -> tuple[int, dict]:
+    if not u["bot_wallet"]:
+        return 409, {"error": "You do not have a stool yet."}
+    if not u["sol_wallet"]:
+        return 400, {"error": "Save the Solana wallet you want the money sent to first (in your dials)."}
+    (STATE / "users").mkdir(parents=True, exist_ok=True)
+    (STATE / "users" / f"{u['id']}_WITHDRAW").write_text(str(time.time()))
+    return 200, {"ok": True}
+
+
+def admin_seat(b: dict) -> tuple[int, dict]:
+    """Da asiento (status='seated'): el motor de seguidores le crea la billetera en su próximo ciclo. 'unseat' lo saca del motor (no toca la plata)."""
+    try: uid = int(b.get("id"))
+    except (TypeError, ValueError): return 400, {"error": "Which user?"}
+    action = b.get("action") or "seat"
+    with db() as c:
+        row = c.execute("SELECT * FROM users WHERE id=?", (uid,)).fetchone()
+        if not row: return 404, {"error": "No such user."}
+        if action == "seat":
+            c.execute("UPDATE users SET status='seated' WHERE id=?", (uid,))
+        elif action == "unseat":
+            c.execute("UPDATE users SET status='waitlist' WHERE id=?", (uid,))
+        else:
+            return 400, {"error": "seat or unseat"}
+    return 200, {"ok": True, "status": "seated" if action == "seat" else "waitlist"}
 
 
 # ---------- holders (firma de Ethereum) ----------
@@ -316,13 +359,14 @@ def _summary(path: Path) -> dict | None:
 
 def wallet_view(d: dict, full: bool = False) -> dict:
     """Vista de una billetera que opera (plan de la casa o, más adelante, la de un usuario)."""
-    start, eq = d.get("start_usd"), d.get("equity_usd")
+    start, eq = d.get("start_usd") if d.get("start_usd") is not None else d.get("deposited_usd"), d.get("equity_usd")
     closed = d.get("closed") or []
     out = {"wallet": d.get("wallet"), "started": d.get("started", True) and bool(d.get("start_ts")), "since": d.get("start_ts"),
            "start_usd": start, "equity_usd": eq, "pnl_usd": round(eq - start, 2) if start and eq is not None else None,
            "pnl_pct": round(eq / start - 1, 4) if start and eq else None, "cash_sol": d.get("cash_sol"),
            "open": len(d.get("positions") or []), "closed": d.get("n_closed", len(closed)), "wins": d.get("wins"),
-           "realized_usd": d.get("realized_usd"), "halted": d.get("halt"), "updated": d.get("now"),
+           "realized_usd": d.get("realized_usd"), "halted": d.get("halt"), "closed_out": d.get("closed") if isinstance(d.get("closed"), bool) else None, "updated": d.get("now"),
+           "fees_usd": d.get("fees_usd"),
            "last_trade": (d.get("trades") or [{}])[0].get("ts") if d.get("trades") else None,
            "positions": [{"token": x.get("symbol"), "mint": x.get("mint"), "multiple": x.get("mult"), "value_usd": x.get("value_usd"),
                           "stop": x.get("stop"), "thesis": x.get("thesis")} for x in d.get("positions") or []]}
@@ -393,7 +437,9 @@ def admin_resumen() -> dict:
             "holders_pending": sum(1 for u in users if u.get("holder_status") == "pending"),
             "pledged_usd": sum(u.get("amount_usd") or 0 for u in users), "by_plan": by_plan, "by_risk": by_risk,
             "active_wallets": sum(1 for w in tw if w.get("started")), "capital_under_bot_usd": round(sum(w.get("equity_usd") or 0 for w in tw if w.get("started")), 2),
-            "pnl_usd": round(sum(w.get("pnl_usd") or 0 for w in tw if w.get("started")), 2), "fees_usd": 0,
+            "pnl_usd": round(sum(w.get("pnl_usd") or 0 for w in tw if w.get("started")), 2),
+            "fees_usd": round(sum((s.get("fees_usd") or 0) for s in (_summary(STATE / "users" / "_all.json") or {}).get("stools", [])), 2),
+            "house_fee_wallet": (_summary(STATE / "users" / "_all.json") or {}).get("house_wallet"),
             "plan_wallets": {k: {"address": v, "sol": _sol_balance(v)} for k, v in wallets.items()},
             "detail": users[:500], "fees": FEES, "holder_contracts": nonco_contracts()}
 
@@ -514,6 +560,8 @@ class H(BaseHTTPRequestHandler):
             return self._send(200, {"ok": True}, clear=True)
         if path == "/api/admin/claves":
             code, out = claves_guardar(b); return self._send(code, out)
+        if path == "/api/admin/seat":
+            code, out = admin_seat(b); return self._send(code, out)
         usr = user_by_token(self._token())
         if not usr:
             return self._send(401, {"error": "Not logged in."})
@@ -521,6 +569,8 @@ class H(BaseHTTPRequestHandler):
             code, out = save_settings(usr, b); return self._send(code, out)
         if path == "/api/me/close_all":
             code, out = close_all(usr); return self._send(code, out)
+        if path == "/api/me/withdraw":
+            code, out = withdraw(usr); return self._send(code, out)
         if path == "/api/holder/verify":
             code, out = verify_holder(usr, b); return self._send(code, out)
         self._send(404, {"error": "Not found."})
