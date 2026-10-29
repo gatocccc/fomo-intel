@@ -54,8 +54,20 @@ DESKS = {
     "agresivo": {"name": "agresivo", "profile": "aggressive", "lang": "en"},
     "equilibrado": {"name": "equilibrado", "profile": "balanced", "lang": "en"},
     "tradicional": {"name": "tradicional", "profile": "traditional", "lang": "en"},
+    # 28/10 noche: un solo libro ("Lloyd") en vez de tres planes. Cuatro bolsillos cuyo presupuesto fija el régimen de mercado.
+    "lloyd": {"name": "lloyd", "profile": "book", "lang": "en"},
 }
-DEFAULT_MODES = {"mesa": "shadow", "agresivo": "shadow", "equilibrado": "shadow", "tradicional": "shadow"}
+BOOK = {
+    # presupuesto por bolsillo según régimen (fracción del patrimonio). Lo que no se usa de un bolsillo queda en efectivo.
+    "budgets": {"risk_on":  {"cash": 0.10, "majors": 0.30, "established": 0.30, "picks": 0.30},
+                "neutral":  {"cash": 0.30, "majors": 0.25, "established": 0.25, "picks": 0.20},
+                "risk_off": {"cash": 0.60, "majors": 0.10, "established": 0.10, "picks": 0.20}},
+    "names": {"cash": "Cash", "majors": "Majors", "established": "Established memes", "picks": "Picks"},
+    "reserve_sol": 0.08,      # SOL que queda siempre para comisiones
+    "park_min_usd": 15.0,     # SOL sobrante por encima de esto se estaciona en USDC
+}
+MAJOR_MINTS = {"cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij", "7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs", "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN"}
+DEFAULT_MODES = {"mesa": "shadow", "agresivo": "shadow", "equilibrado": "shadow", "tradicional": "shadow", "lloyd": "shadow"}
 CFG = Path("state/brain_config.json")
 SCAN_JSON = Path("state/desk/scan4.json")
 SCAN_FAST = Path("state/desk/scan_fast.json")
@@ -167,16 +179,25 @@ class Brain:
         if not t:
             return
         prev = self.regime
+        b = trend("BTC") or {}
+        w = jload(Path("state/desk/watch_bal.json"), {}).get("rows", {})
+        above = sum(1 for r in w.values() if r.get("gap", 0) > 0); total = len(w)
+        breadth = above / total if total else None
+        sol_up, btc_up = t["px"] > t["ma20"], (b.get("px", 0) > b.get("ma20", 1)) if b else sol_up
         state = "neutral"
         if t["ch24h"] <= -0.06 or t["ch4h"] <= -0.04:
-            state = "risk_off"
+            state = "risk_off"                                     # SOL cae fuerte: defensa
         elif prev.get("state") == "risk_off" and time.time() - prev.get("since", 0) < 6 * 3600:
             state = "risk_off"                                     # se queda 6 h en defensa
-        elif t["px"] > t["ma20"] and t["ch24h"] > 0:
+        elif not sol_up and not btc_up and (breadth is None or breadth < 0.25):
+            state = "risk_off"                                     # todo abajo de su promedio: mercado bajista
+        elif sol_up and btc_up and (breadth is None or breadth >= 0.4):
             state = "risk_on"
         since = prev.get("since", time.time()) if state == prev.get("state") else time.time()
         self.regime = {"state": state, "ts": time.time(), "since": since, "sol": round(t["px"], 2), "sol_ma20": round(t["ma20"], 2),
-                       "sol_ch4h": round(t["ch4h"] * 100, 1), "sol_ch24h": round(t["ch24h"] * 100, 1)}
+                       "sol_ch4h": round(t["ch4h"] * 100, 1), "sol_ch24h": round(t["ch24h"] * 100, 1),
+                       "btc_vs_ma20": round(b["px"] / b["ma20"] - 1, 4) if b else None, "breadth_above": above, "breadth_total": total,
+                       "label": {"risk_on": "constructive", "neutral": "neutral", "risk_off": "defensive"}[state]}
         jsave(Path("state/desk/regime.json"), self.regime)
 
     # ---------- candidatos (escaneo + anti-rug) ----------
@@ -304,10 +325,11 @@ class Brain:
     def ratchet(self, d, s, regime):
         orders, notes = [], []
         for p in s.get("positions", []):
-            if p["mint"] in STABLES or p.get("brain") is False or d["profile"] == "traditional":
+            if p["mint"] in STABLES or p.get("brain") is False or d["profile"] == "traditional" or p["mint"] in MAJOR_MINTS:
                 continue
             peak = p["peak_usd"] / p["entry_usd"]
-            lock = self.lock_for(d["profile"], peak, regime)
+            prof = d["profile"] if d["profile"] != "book" else ("balanced" if self.sleeve_of(p) == "established" else "aggressive")
+            lock = self.lock_for(prof, peak, regime)
             if not lock:
                 continue
             new_stop = round(1 - lock, 3)
@@ -515,6 +537,77 @@ class Brain:
             bstate["_noted_bal"] = now
         return orders, notes
 
+    # ---------- libro único (lloyd) ----------
+    @staticmethod
+    def sleeve_of(p):
+        if p.get("sleeve"): return p["sleeve"]
+        if p["mint"] in STABLES: return "cash"
+        if p["mint"] in MAJOR_MINTS: return "majors"
+        return "picks"
+
+    def book(self, d, s, regime, bstate):
+        """Un libro, cuatro bolsillos. Cada bolsillo corre su propia lógica sobre una vista del libro limitada a su presupuesto;
+        después una tesorería convierte USDC↔SOL para que las compras tengan con qué pagarse y el sobrante no quede en SOL."""
+        B = BOOK; bud = B["budgets"][regime or "neutral"]
+        sol_usd = s.get("sol_usd") or 100; eq = s["equity_usd"]
+        pos = s.get("positions", [])
+        by = {k: [p for p in pos if self.sleeve_of(p) == k] for k in bud}
+        val = {k: sum(p.get("value_usd", 0) for p in by[k]) for k in bud}
+        usdc = next((p for p in pos if p["mint"] == USDC), None); usdc_val = usdc["value_usd"] if usdc else 0.0
+        cash_sol = s.get("cash_sol", 0); free_sol = max(0.0, cash_sol - B["reserve_sol"])
+        liquid_usd = usdc_val + free_sol * sol_usd                      # lo que puede financiar compras
+        orders, notes = [], []
+        # presupuesto disponible por bolsillo = objetivo − lo que ya tiene, limitado por el efectivo líquido total
+        def view(k, extra_pos=None):
+            room = max(0.0, eq * bud[k] - val[k]); room = min(room, liquid_usd)
+            v = dict(s); v["positions"] = by[k] + (extra_pos or []); v["equity_usd"] = max(eq * bud[k], val[k] + 1); v["cash_sol"] = room / sol_usd + 0.05
+            return v, room
+        # picks (selección con catalizador, retroceso, anti-rug)
+        v, room = view("picks")
+        o, n, _ = self.aggressive(d, v, None, regime, bstate)
+        for x in o: x.setdefault("sleeve", "picks")
+        orders += o; notes += [f"[Picks] {t}" for t in n]
+        # established memes (tendencia)
+        v, room = view("established")
+        o, n = self.balanced(d, v, regime, bstate)
+        o = [x for x in o if x["mint"] != USDC]   # la tesorería decide el USDC (ni ventas ni estacionamientos por bolsillo)
+        for x in o:
+            if x["action"] == "buy": x["sleeve"] = "established"
+        orders += o; notes += [f"[Established] {t}" for t in n]
+        # majors (tendencia diaria, spot; cortos cuando esté la ejecución en perps)
+        v, room = view("majors")
+        v["cash_sol"] = cash_sol                     # aquí el SOL cuenta como posición en SOL
+        o, n = self.traditional(d, v, bstate)
+        o = [x for x in o if x["mint"] != USDC]
+        for x in o:
+            if x["action"] == "buy": x["sleeve"] = "majors"
+        orders += o; notes += [f"[Majors] {t}" for t in n]
+        # tesorería: SOL necesario para las compras vs. SOL que hay; el resto a USDC (el bolsillo de efectivo es USDC, no SOL)
+        buys_sol = sum(float(x.get("sol", 0)) for x in orders if x["action"] == "buy" and x["mint"] != USDC)
+        sells_sol = sum((p.get("value_usd", 0) / sol_usd * 0.97) for x in orders if x["action"] == "sell" and x["mint"] != USDC for p in pos if p["mint"] == x["mint"])
+        sol_major_slot = (eq * bud["majors"] / 4) / sol_usd if (bstate.get("trad_status") or "").startswith("SOL +") else 0.0
+        need = buys_sol + B["reserve_sol"] + sol_major_slot - cash_sol - sells_sol
+        if need > 0.02 and usdc and usdc_val > 2:
+            frac = min(1.0, need * sol_usd * 1.01 / usdc_val) * usdc["tokens"] / (usdc.get("tokens_initial") or usdc["tokens"])
+            orders.insert(0, {"action": "sell", "mint": USDC, "frac": round(frac, 4) if frac < 0.999 else 1.0, "why": "treasury: fund buys"})
+        elif need < 0 and (-need) * sol_usd > B["park_min_usd"]:
+            orders.append({"action": "buy", "mint": USDC, "symbol": "USDC", "sol": round(-need * 0.98, 4), "stop": 0.05, "trail": 0.5, "trail_after": 10, "tp": [],
+                           "thesis": "Cash pocket: parked in USDC.", "sleeve": "cash"})
+        # estado del libro para la página
+        sleeves = []
+        for k in bud:
+            vk = val[k] + (free_sol * sol_usd if k == "cash" else 0.0)
+            sleeves.append({"key": k, "name": B["names"][k], "target_pct": round(bud[k] * 100), "value_usd": round(vk, 2),
+                            "pct": round(vk / eq * 100, 1) if eq else 0, "positions": len([p for p in by[k] if p["mint"] not in STABLES])})
+        jsave(Path("state/plan_lloyd/book.json"), {"ts": time.time(), "regime": self.regime, "budgets": bud, "sleeves": sleeves,
+                                                   "liquid_usd": round(liquid_usd, 2), "trad_status": bstate.get("trad_status")})
+        if not orders and not notes and time.time() - bstate.get("_noted_book", 0) > 6 * 3600:
+            notes.append(f"Market is {self.regime.get('label', 'neutral')}. Pockets: " + ", ".join(f"{x['name']} {x['pct']:.0f}% (target {x['target_pct']}%)" for x in sleeves)
+                         + ". Nothing to change this hour: every open position is inside its rules and no new candidate passed the filters.")
+            bstate["_noted_book"] = time.time()
+        new_buys = [x.get("symbol") for x in orders if x["action"] == "buy" and x["mint"] != USDC]
+        return orders, notes, new_buys
+
     def fast_buy(self, c, sol):
         F = FAST
         return {"action": "buy", "mint": c["mint"], "symbol": c["sym"], "sol": round(sol, 4), "stop": F["stop"], "trail": F["trail"], "trail_after": F["trail_after"],
@@ -614,6 +707,9 @@ class Brain:
         elif d["profile"] == "traditional":
             o2, n2 = self.traditional(d, s, bstate)
             orders += o2; notes += n2
+        elif d["profile"] == "book":
+            o2, n2, new_buys = self.book(d, s, self.regime.get("state"), bstate)
+            orders += o2; notes += n2
         bstate["status"] = "ok"
         if orders:
             now = time.time()
@@ -643,7 +739,7 @@ class Brain:
 
     def needs_candidates(self, modes):
         for key, d in DESKS.items():
-            if d["profile"] != "aggressive" or modes.get(key) == "off":
+            if d["profile"] not in ("aggressive", "book") or modes.get(key) == "off":
                 continue
             s = jload(paths(d)[1], {})
             if not s.get("start_ts"):

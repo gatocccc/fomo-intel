@@ -33,6 +33,7 @@ from urllib.parse import parse_qs, urlparse
 
 import requests
 
+from fomo_intel.app.book import PROFIT_RULES, RISK_LEVELS, book_view, expect, research
 from fomo_intel.app.semaforo import PLANS, semaforo
 
 STATE = Path(os.getenv("FOMO_STATE_DIR", "state"))
@@ -74,6 +75,9 @@ def init_db() -> None:
           eth TEXT UNIQUE, ducks INTEGER, holder_status TEXT, status TEXT DEFAULT 'waitlist', bot_wallet TEXT, last_login REAL);
         CREATE TABLE IF NOT EXISTS sessions (token TEXT PRIMARY KEY, user_id INTEGER, expires REAL);
         """)
+        for col, typ in (("risk_pct", "INTEGER"), ("profit_rule", "TEXT"), ("profit_mult", "REAL"), ("close_requested", "REAL")):
+            try: c.execute(f"ALTER TABLE users ADD COLUMN {col} {typ}")
+            except sqlite3.OperationalError: pass
     os.chmod(DB, 0o600)
 
 
@@ -157,6 +161,8 @@ def login(b: dict) -> tuple[int, dict, str | None]:
 
 
 def save_settings(u: sqlite3.Row, b: dict) -> tuple[int, dict]:
+    if "risk_pct" in b or "profit_rule" in b:
+        return save_dials(u, b)
     try:
         amount = float(b.get("amount_usd") or 0); goal = float(b.get("goal") or 0)
         days = int(b.get("days") or 0); stop = float(b.get("stop_pct") or 0)
@@ -177,6 +183,37 @@ def save_settings(u: sqlite3.Row, b: dict) -> tuple[int, dict]:
                   (amount, goal, days, plan or None, stop, at_goal, sol or None, u["id"]))
         u2 = c.execute("SELECT * FROM users WHERE id=?", (u["id"],)).fetchone()
     return 200, {"ok": True, "user": public_user(u2)}
+
+
+def save_dials(u: sqlite3.Row, b: dict) -> tuple[int, dict]:
+    """Los tres diales del libro único: cuánto, cuánto riesgo, qué pasa con las ganancias."""
+    try:
+        amount = float(b.get("amount_usd") or 0); risk = int(b.get("risk_pct") or 0)
+        mult = float(b.get("profit_mult") or 0) if b.get("profit_mult") not in (None, "") else None
+    except (TypeError, ValueError):
+        return 400, {"error": "Check the numbers."}
+    rule = str(b.get("profit_rule") or "run"); sol = str(b.get("sol_wallet") or "").strip()
+    if not (20 <= amount <= 100000): return 400, {"error": "Amount must be between $20 and $100,000."}
+    if risk not in {r["pct"] for r in RISK_LEVELS}: return 400, {"error": "Pick a risk level."}
+    if rule not in {r["key"] for r in PROFIT_RULES}: return 400, {"error": "Pick what happens with profits."}
+    if rule == "lock" and (mult is None or not (1.2 <= mult <= 10)): return 400, {"error": "Pick a multiple between x1.2 and x10 to lock in at."}
+    if rule == "sweep" and not sol: return 400, {"error": "Monthly sweeps need your Solana wallet."}
+    if sol and not B58.match(sol): return 400, {"error": "That Solana address doesn't look right."}
+    with db() as c:
+        c.execute("UPDATE users SET amount_usd=?,risk_pct=?,profit_rule=?,profit_mult=?,sol_wallet=?,stop_pct=? WHERE id=?",
+                  (amount, risk, rule, mult if rule == "lock" else None, sol or None, risk, u["id"]))
+        u2 = c.execute("SELECT * FROM users WHERE id=?", (u["id"],)).fetchone()
+    return 200, {"ok": True, "user": public_user(u2)}
+
+
+def close_all(u: sqlite3.Row) -> tuple[int, dict]:
+    if not u["bot_wallet"]:
+        return 409, {"error": "You do not have a bot wallet yet, so there is nothing to close. Your seat is still on the waitlist."}
+    with db() as c:
+        c.execute("UPDATE users SET close_requested=?, status='closing' WHERE id=?", (time.time(), u["id"]))
+    (STATE / "users").mkdir(parents=True, exist_ok=True)
+    (STATE / "users" / f"{u['id']}_CLOSE").write_text(str(time.time()))
+    return 200, {"ok": True}
 
 
 # ---------- holders (firma de Ethereum) ----------
@@ -245,6 +282,11 @@ def recheck_pending() -> None:
 
 # ---------- datos públicos y admin ----------
 def publico() -> dict:
+    b = book_view(full=False)
+    if b:
+        return {"since": b["since"], "start_usd": b["start_usd"], "equity_usd": b["equity_usd"], "multiple": round(b["equity_usd"] / b["start_usd"], 3) if b["start_usd"] else None,
+                "closed_trades": b["stats"]["closed"], "wins": b["stats"]["wins"], "positions": [{"token": p["token"], "multiple": p["multiple"]} for p in b["positions"]],
+                "recent": [{"token": c["token"], "result": c["result"]} for c in book_view(full=True)["closed_list"][:8]], "updated": b["updated"]}
     try:
         d = json.load(open(STATE / "desk_summary.json"))
     except Exception:  # noqa: BLE001
@@ -301,15 +343,20 @@ def plans_public() -> dict:
 
 def trading_wallets() -> list[dict]:
     rows = []
-    for k in PLAN_KEYS:
-        d = _summary(STATE / f"plan_{k}_summary.json")
-        if d:
-            rows.append({"owner": "Tavern house plan", "email": None, "plan": k, **wallet_view(d)})
+    d = _summary(STATE / "plan_lloyd_summary.json")
+    if d and d.get("start_ts"):
+        rows.append({"owner": "The house book", "email": None, "plan": "lloyd", "book": "lloyd", **wallet_view(d)})
+    else:
+        for k in PLAN_KEYS:
+            d = _summary(STATE / f"plan_{k}_summary.json")
+            if d:
+                rows.append({"owner": "Tavern house plan", "email": None, "plan": k, **wallet_view(d)})
     with db() as c:
-        users = c.execute("SELECT id, email, name, plan, bot_wallet, holder_status FROM users WHERE bot_wallet IS NOT NULL").fetchall()
+        users = c.execute("SELECT id, email, name, plan, bot_wallet, holder_status, risk_pct, profit_rule FROM users WHERE bot_wallet IS NOT NULL").fetchall()
     for u in users:
         d = _summary(STATE / "users" / f"{u['id']}_summary.json") or {"wallet": u["bot_wallet"]}
-        rows.append({"owner": u["name"] or u["email"], "email": u["email"], "plan": u["plan"], "holder": u["holder_status"] == "holder", **wallet_view(d)})
+        rows.append({"owner": u["name"] or u["email"], "email": u["email"], "plan": u["plan"], "risk_pct": u["risk_pct"] if "risk_pct" in u.keys() else None,
+                     "profit_rule": u["profit_rule"] if "profit_rule" in u.keys() else None, "holder": u["holder_status"] == "holder", **wallet_view(d)})
     return rows
 
 
@@ -330,15 +377,17 @@ def admin_resumen() -> dict:
     except Exception: wallets = {}  # noqa: BLE001
     tw = trading_wallets()
     day = time.time() - 86400
-    by_plan: dict[str, dict] = {}
+    by_plan: dict[str, dict] = {}; by_risk: dict[str, dict] = {}
     for u in users:
         x = by_plan.setdefault(u.get("plan") or "not chosen", {"users": 0, "amount_usd": 0})
         x["users"] += 1; x["amount_usd"] += u.get("amount_usd") or 0
+        y = by_risk.setdefault(str(u.get("risk_pct") or "not chosen"), {"users": 0, "amount_usd": 0})
+        y["users"] += 1; y["amount_usd"] += u.get("amount_usd") or 0
     return {"users": len(users), "new_24h": sum(1 for u in users if (u.get("created") or 0) >= day),
             "logins_24h": sum(1 for u in users if (u.get("last_login") or 0) >= day),
             "holders": sum(1 for u in users if u.get("holder_status") == "holder"),
             "holders_pending": sum(1 for u in users if u.get("holder_status") == "pending"),
-            "pledged_usd": sum(u.get("amount_usd") or 0 for u in users), "by_plan": by_plan,
+            "pledged_usd": sum(u.get("amount_usd") or 0 for u in users), "by_plan": by_plan, "by_risk": by_risk,
             "active_wallets": sum(1 for w in tw if w.get("started")), "capital_under_bot_usd": round(sum(w.get("equity_usd") or 0 for w in tw if w.get("started")), 2),
             "pnl_usd": round(sum(w.get("pnl_usd") or 0 for w in tw if w.get("started")), 2), "fees_usd": 0,
             "plan_wallets": {k: {"address": v, "sol": _sol_balance(v)} for k, v in wallets.items()},
@@ -397,8 +446,19 @@ class H(BaseHTTPRequestHandler):
                 return self._send(200, semaforo(float(q.get("objetivo", 2)), int(q.get("dias", 30))))
             if u.path == "/api/publico":
                 return self._send(200, publico())
+            if u.path == "/api/book":
+                b = book_view(full=True)
+                return self._send(200, b) if b else self._send(404, {"error": "The book is not open yet."})
+            if u.path == "/api/expect":
+                return self._send(200, expect(int(q.get("risk", 35))))
+            if u.path == "/api/admin/book":
+                b = book_view(full=True, admin=True)
+                return self._send(200, b) if b else self._send(404, {"error": "The book is not open yet."})
+            if u.path == "/api/admin/research":
+                return self._send(200, research())
             if u.path == "/api/config":
-                return self._send(200, {"fees": FEES, "plans": {k: {"name": v["nombre"], "markets": v["mercados"]} for k, v in PLANS.items()}})
+                return self._send(200, {"fees": FEES, "risk_levels": RISK_LEVELS, "profit_rules": PROFIT_RULES,
+                                        "plans": {k: {"name": v["nombre"], "markets": v["mercados"]} for k, v in PLANS.items()}})
             if u.path == "/api/me":
                 usr = user_by_token(self._token())
                 return self._send(200, {"user": public_user(usr)}) if usr else self._send(401, {"error": "Not logged in."})
@@ -414,7 +474,7 @@ class H(BaseHTTPRequestHandler):
                 return self._send(200, {"wallets": trading_wallets()})
             if u.path == "/api/admin/wallet":
                 k = q.get("plan", "")
-                d = _summary(STATE / f"plan_{k}_summary.json") if k in PLAN_KEYS else None
+                d = _summary(STATE / f"plan_{k}_summary.json") if k in PLAN_KEYS + ("lloyd",) else None
                 return self._send(200, wallet_view(d, full=True)) if d else self._send(404, {"error": "Not found."})
             if u.path == "/api/admin/resumen":
                 return self._send(200, admin_resumen())
@@ -453,6 +513,8 @@ class H(BaseHTTPRequestHandler):
             return self._send(401, {"error": "Not logged in."})
         if path == "/api/me/settings":
             code, out = save_settings(usr, b); return self._send(code, out)
+        if path == "/api/me/close_all":
+            code, out = close_all(usr); return self._send(code, out)
         if path == "/api/holder/verify":
             code, out = verify_holder(usr, b); return self._send(code, out)
         self._send(404, {"error": "Not found."})

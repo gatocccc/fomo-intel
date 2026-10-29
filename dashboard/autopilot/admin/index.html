@@ -6,31 +6,44 @@
 <title>Lloyd's Tavern · Admin</title>
 <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root{--mist:#E8EEEF;--paper:#F6F8F8;--pond:#123236;--reed:#4A6E6D;--line:#C7D3D4;--go:#2E9B5F;--stop:#CF4A3A}
+:root{--mist:#E8EEEF;--paper:#F6F8F8;--pond:#123236;--reed:#4A6E6D;--line:#C7D3D4;--go:#2E9B5F;--stop:#CF4A3A;--warn:#E89B00;
+  --pk-cash:#F6EEDC;--pk-majors:#2A7F5C;--pk-established:#FFC226;--pk-picks:#C8323B}
 *{box-sizing:border-box}
 body{margin:0;background:var(--mist);color:var(--pond);font:15px/1.5 "Atkinson Hyperlegible",system-ui,sans-serif}
 .wrap{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
 h1{font:800 34px/1 "Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 80;margin:0 0 4px}
 h2{font:700 20px/1.2 "Bricolage Grotesque",sans-serif;margin:32px 0 12px}
+h3{font:700 15px/1.2 "Bricolage Grotesque",sans-serif;margin:18px 0 8px}
 .sub{color:var(--reed);margin:0 0 24px}
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.kpis div{background:var(--paper);border-radius:16px;padding:16px}
+.kpis div{background:var(--paper);border-radius:16px;padding:16px;min-width:0}
 .kpis span{display:block;color:var(--reed);font-size:13.5px}
-.kpis strong{font:800 30px/1.15 "Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 80;font-variant-numeric:tabular-nums}
+.kpis strong{font:800 30px/1.15 "Bricolage Grotesque",sans-serif;font-variation-settings:"wdth" 80;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.kpis small{display:block;color:var(--reed);font-size:12.5px}
 table{width:100%;border-collapse:collapse;background:var(--paper);border-radius:16px;overflow:hidden}
 th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 th{background:var(--pond);color:var(--paper);font-weight:700}
-td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 code{font-size:12.5px;word-break:break-all}
-.tag{display:inline-block;padding:2px 8px;border-radius:99px;background:var(--mist);font-size:12.5px}
+.tag{display:inline-block;padding:2px 8px;border-radius:99px;background:var(--mist);font-size:12.5px;white-space:nowrap}
 .tag.h{background:var(--go);color:#fff}
+.tag.adopted{background:var(--go);color:#fff}.tag.rejected{background:var(--stop);color:#fff}.tag.watch{background:var(--warn);color:#fff}
+.tag.risk_on{background:var(--go);color:#fff}.tag.neutral{background:var(--warn);color:#fff}.tag.risk_off{background:var(--stop);color:#fff}
+.pk{display:inline-block;width:12px;height:12px;border-radius:50%;border:1px solid rgba(0,0,0,.3);vertical-align:-1px;margin-right:6px}
 .scroll{overflow-x:auto}
 .up{color:var(--go);font-weight:700}.down{color:var(--stop);font-weight:700}
-tr.click{cursor:pointer} tr.click:hover td{background:#eef3f3}
-#detail{margin-top:16px}
-#detail .box{background:var(--paper);border-radius:16px;padding:16px}
-#detail p{margin:0 0 10px;white-space:pre-line;font-size:14px}
-@media (max-width:700px){.kpis{grid-template-columns:1fr 1fr}}
+.box{background:var(--paper);border-radius:16px;padding:16px;min-width:0}
+.grid2>*{min-width:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bar{display:flex;height:22px;border-radius:99px;overflow:hidden;background:var(--pk-cash);border:1px solid var(--line)}
+.bar span{display:block;height:100%}
+pre{margin:0;background:var(--mist);border-radius:12px;padding:12px;font:12.5px/1.45 "Space Mono",ui-monospace,monospace;white-space:pre-wrap;word-break:break-word;max-height:360px;overflow:auto}
+.jr p{margin:0 0 10px;white-space:pre-line;font-size:14px}
+.jr{max-height:420px;overflow:auto}
+.why{color:var(--reed);font-size:13.5px}
+.err{color:var(--stop)}
+@media (max-width:700px){.kpis,.grid2{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.kpis,.grid2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -48,62 +61,134 @@ tr.click{cursor:pointer} tr.click:hover td{background:#eef3f3}
     <div><span>Fees earned</span><strong id="k-fee">—</strong></div>
   </div>
 
+  <h2 id="book">The book · Lloyd</h2>
+  <p class="sub" id="b-err" style="margin:0 0 12px"></p>
+  <div class="kpis" style="margin-bottom:14px">
+    <div><span>Start → now</span><strong id="b-eq">—</strong><small id="b-since">—</small></div>
+    <div><span>P&amp;L</span><strong id="b-pnl">—</strong><small id="b-real">—</small></div>
+    <div><span>Closed / won · max DD</span><strong id="b-ops">—</strong><small id="b-bw">—</small></div>
+    <div><span>Regime</span><strong id="b-reg">—</strong><small id="b-regd">—</small></div>
+  </div>
+  <div class="grid2">
+    <div class="box">
+      <h3 style="margin-top:0">Pockets · target vs actual</h3>
+      <div class="bar" id="b-bar"></div>
+      <div class="scroll" style="margin-top:10px"><table><thead><tr><th>Pocket</th><th class="n">Actual</th><th class="n">Target</th><th class="n">Budget</th><th class="n">Value</th><th class="n">Pos.</th></tr></thead><tbody id="b-pk"></tbody></table></div>
+      <p class="sub" style="margin:10px 0 0;font-size:13px" id="b-wallet"></p>
+    </div>
+    <div class="box">
+      <h3 style="margin-top:0">Brain</h3>
+      <p id="b-brain" style="margin:0 0 10px"></p>
+      <pre id="b-detail">—</pre>
+    </div>
+  </div>
+  <h3>Open positions</h3>
+  <div class="scroll"><table><thead><tr><th>Token</th><th>Pocket</th><th class="n">Multiple</th><th class="n">Value</th><th class="n">Stop</th><th>Opened</th><th>Thesis</th></tr></thead><tbody id="b-pos"></tbody></table></div>
+  <h3>Closed trades</h3>
+  <div class="scroll"><table><thead><tr><th>When</th><th>Token</th><th>Pocket</th><th class="n">Result</th><th class="n">P&amp;L</th><th class="n">Held</th><th>Why</th></tr></thead><tbody id="b-cl"></tbody></table></div>
+  <h3>Journal</h3>
+  <div class="box jr" id="b-jr"></div>
+
+  <h2>Research ledger</h2>
+  <p class="sub" id="r-next" style="margin:0 0 12px"></p>
+  <div class="scroll"><table><thead><tr><th>Date</th><th>Experiment</th><th>Question</th><th>Method</th><th>Result</th><th>Verdict</th></tr></thead><tbody id="rl"><tr><td colspan="6">Loading…</td></tr></tbody></table></div>
+
   <h2>Trading wallets</h2>
   <p class="sub" id="tw-sum" style="margin:0 0 12px"></p>
-  <div class="scroll"><table><thead><tr><th>Owner</th><th>Plan</th><th>Wallet</th><th>Started</th><th>Start</th><th>Now</th><th>P&amp;L</th><th>Open</th><th>Closed (won)</th><th>Last trade</th><th>Status</th></tr></thead><tbody id="tw"></tbody></table></div>
-  <div id="detail"></div>
+  <div class="scroll"><table><thead><tr><th>Owner</th><th>Book / risk</th><th>Wallet</th><th>Started</th><th class="n">Start</th><th class="n">Now</th><th class="n">P&amp;L</th><th class="n">Open</th><th class="n">Closed (won)</th><th>Last trade</th><th>Status</th></tr></thead><tbody id="tw"></tbody></table></div>
 
-  <h2>By plan</h2>
-  <div class="scroll"><table><thead><tr><th>Plan</th><th>Accounts</th><th>Pledged</th></tr></thead><tbody id="pp"></tbody></table></div>
+  <h2>Accounts by risk level</h2>
+  <div class="scroll"><table><thead><tr><th>Max drawdown</th><th class="n">Accounts</th><th class="n">Pledged</th></tr></thead><tbody id="pp"></tbody></table></div>
 
   <h2>Accounts</h2>
-  <div class="scroll"><table><thead><tr><th>Created</th><th>Name</th><th>Email</th><th>Type</th><th>Amount</th><th>Goal</th><th>Plan</th><th>Stop</th><th>Status</th></tr></thead><tbody id="ap"></tbody></table></div>
+  <div class="scroll"><table><thead><tr><th>Created</th><th>Name</th><th>Email</th><th>Type</th><th class="n">Amount</th><th>Risk</th><th>Profit rule</th><th>Wallet</th><th>Status</th></tr></thead><tbody id="ap"></tbody></table></div>
 </div>
 <script>
 const usd = v => v == null ? "—" : (v < 0 ? "-" : "") + "$" + Math.abs(Number(v)).toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
-const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
 const k = (id, v) => document.getElementById(id).textContent = v;
+const h = (id, v) => document.getElementById(id).innerHTML = v;
 const pct = v => v == null ? "—" : (v >= 0 ? "+" : "") + (v * 100).toFixed(1) + "%";
+const pc = v => v == null ? "—" : Number(v).toFixed(0) + "%";
+const fx = v => v == null ? "—" : "x" + Number(v).toFixed(2);
 const when = ts => ts ? new Date(ts * 1000).toLocaleString("en-US", {month: "short", day: "numeric", hour: "2-digit", minute: "2-digit"}) : "—";
-function showDetail(plan){
-  fetch("/api/admin/wallet?plan=" + plan).then(r => r.json()).then(w => {
-    const pos = w.positions.map(x => `<tr><td>${esc(x.token)}</td><td class="n">${x.multiple ? "x" + Number(x.multiple).toFixed(2) : "—"}</td><td class="n">${usd(x.value_usd)}</td><td>${esc(x.thesis)}</td></tr>`).join("") || `<tr><td colspan="4">No open positions.</td></tr>`;
-    const cl = (w.closed_list || []).map(x => `<tr><td>${when(x.ts)}</td><td>${esc(x.token)}</td><td class="n ${(x.result||0)>=0?"up":"down"}">${pct(x.result)}</td><td class="n">${usd(x.pnl_usd)}</td><td>${esc(x.why)}</td></tr>`).join("") || `<tr><td colspan="5">No closed trades yet.</td></tr>`;
-    const jr = (w.journal || []).slice(0, 15).map(j => `<p><b>${esc(j.title)}</b> · ${when(j.ts)}<br>${esc(j.text)}</p>`).join("");
-    document.getElementById("detail").innerHTML = `<div class="box"><h2 style="margin-top:0">${esc(plan)} · detail</h2>
-      <h3>Open positions</h3><div class="scroll"><table><thead><tr><th>Token</th><th>Multiple</th><th>Value</th><th>Thesis</th></tr></thead><tbody>${pos}</tbody></table></div>
-      <h3>Closed trades</h3><div class="scroll"><table><thead><tr><th>When</th><th>Token</th><th>Result</th><th>P&amp;L</th><th>Why</th></tr></thead><tbody>${cl}</tbody></table></div>
-      <h3>Journal</h3>${jr}</div>`;
-    document.getElementById("detail").scrollIntoView({behavior: "smooth"});
-  });
+const ago = ts => { if (!ts) return "—"; const m = Math.round((Date.now() / 1000 - ts) / 60); return m < 60 ? `${m} min ago` : `${Math.floor(m / 60)} h ago`; };
+const hrs = v => v == null ? "—" : v < 1 ? `${Math.round(v * 60)} min` : v < 48 ? `${Number(v).toFixed(1)} h` : `${Math.floor(v / 24)} d`;
+const get = url => fetch(url).then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)));
+const PK = {cash: ["Cash", "var(--pk-cash)"], majors: ["Majors", "var(--pk-majors)"], established: ["Established memes", "var(--pk-established)"], picks: ["Picks", "var(--pk-picks)"]};
+const pk = key => { const p = PK[key] || [key || "—", "var(--mist)"]; return `<span class="pk" style="background:${p[1]}"></span>${esc(p[0])}`; };
+const REG = {risk_on: "Constructive", neutral: "Neutral", risk_off: "Defensive"};
+const RULE = {run: "let it run", lock: "lock in", sweep: "sweep monthly"};
+
+function loadBook() {
+  get("/api/admin/book").then(b => {
+    k("b-err", "");
+    const st = b.stats || {}, br = b.brain || {}, r = b.regime || {};
+    k("b-eq", `${usd(b.start_usd)} → ${usd(b.equity_usd)}`); k("b-since", b.since ? `since ${when(b.since)} · updated ${ago(b.updated)} · cash ${usd(b.cash_usd)}${b.wallet_sol != null ? ` · ${Number(b.wallet_sol).toFixed(3)} SOL for gas` : ""}` : "—");
+    const pe = document.getElementById("b-pnl"); pe.textContent = b.pnl_usd == null ? "—" : `${usd(b.pnl_usd)} (${pct(b.pnl_pct)})`; pe.className = (b.pnl_usd || 0) >= 0 ? "up" : "down";
+    k("b-real", st.realized_usd != null ? `realized ${usd(st.realized_usd)}` : "—");
+    k("b-ops", `${st.closed ?? "—"} / ${st.wins ?? "—"} · ${st.max_drawdown_pct != null ? "-" + Math.abs(st.max_drawdown_pct).toFixed(1) + "%" : "—"}`);
+    k("b-bw", [st.best && st.best.token ? `best ${st.best.token} ${pct(st.best.result)}` : "", st.worst && st.worst.token ? `worst ${st.worst.token} ${pct(st.worst.result)}` : ""].filter(Boolean).join(" · ") || "—");
+    h("b-reg", r.state ? `<span class="tag ${esc(r.state)}">${esc(r.label || REG[r.state] || r.state)}</span>` : "—");
+    k("b-regd", [r.sol_vs_ma20 != null ? `SOL ${pct(r.sol_vs_ma20)} vs MA20` : "", r.btc_vs_ma20 != null ? `BTC ${pct(r.btc_vs_ma20)}` : "", r.breadth && r.breadth.total ? `breadth ${r.breadth.above}/${r.breadth.total}` : "", r.sol_24h != null ? `SOL 24h ${r.sol_24h >= 0 ? "+" : ""}${Number(r.sol_24h).toFixed(1)}%` : ""].filter(Boolean).join(" · ") || "—");
+
+    const sl = Array.isArray(b.sleeves) ? b.sleeves : [], budgets = b.sleeve_budgets || {};
+    const total = sl.reduce((a, s) => a + (Number(s.value_usd) || 0), 0);
+    const order = ["cash", "majors", "established", "picks"], bykey = Object.fromEntries(sl.map(s => [s.key, s]));
+    const rows = order.map(key => { const s = bykey[key] || {}; const p = s.pct != null ? Number(s.pct) : (total && s.value_usd != null ? s.value_usd / total * 100 : null); return {key, name: s.name || PK[key][0], pct: p, target: s.target_pct, value: s.value_usd, n: s.positions, budget: budgets[key]}; });
+    h("b-bar", rows.filter(x => x.pct > 0).map(x => `<span style="width:${Math.min(100, x.pct)}%;background:${PK[x.key][1]}" title="${esc(x.name)} ${pc(x.pct)}"></span>`).join("") || `<span style="width:100%;background:var(--pk-cash)"></span>`);
+    h("b-pk", rows.map(x => { const bud = x.budget == null ? "—" : typeof x.budget === "object" ? esc(JSON.stringify(x.budget)) : (typeof x.budget === "number" && x.budget <= 1 ? pc(x.budget * 100) : esc(x.budget)); return `<tr><td>${pk(x.key)}</td><td class="n">${pc(x.pct)}</td><td class="n">${pc(x.target)}</td><td class="n">${bud}</td><td class="n">${usd(x.value)}</td><td class="n">${x.n ?? "—"}</td></tr>`; }).join(""));
+    h("b-wallet", b.wallet ? `Wallet <a href="https://solscan.io/account/${esc(b.wallet)}" target="_blank" rel="noopener"><code>${esc(b.wallet)}</code></a>` : "");
+
+    k("b-brain", `Checks every ${br.every_min || 10} min · last run ${ago(br.last_run)}${br.next_review ? ` · full review ${br.next_review}` : ""}${br.last_action && br.last_action.title ? ` · last action: ${br.last_action.title} (${ago(br.last_action.ts)})` : ""}`);
+    k("b-detail", b.brain_detail && Object.keys(b.brain_detail).length ? JSON.stringify(b.brain_detail, null, 2) : "No brain detail yet.");
+
+    h("b-pos", (b.positions || []).map(x => `<tr><td><b>${esc(x.token)}</b></td><td>${pk(x.sleeve)}</td><td class="n ${x.multiple >= 1 ? "up" : "down"}">${fx(x.multiple)}</td><td class="n">${usd(x.value_usd)}</td><td class="n">${fx(x.stop_mult)}</td><td>${when(x.opened)}</td><td class="why">${esc(x.thesis)}</td></tr>`).join("") || `<tr><td colspan="7">No open positions.</td></tr>`);
+    h("b-cl", (b.closed_list || []).map(x => `<tr><td>${when(x.ts)}</td><td><b>${esc(x.token)}</b></td><td>${pk(x.sleeve)}</td><td class="n ${(x.result || 0) >= 0 ? "up" : "down"}">${pct(x.result)}</td><td class="n">${usd(x.pnl_usd)}</td><td class="n">${hrs(x.hold_h)}</td><td class="why">${esc(x.why)}</td></tr>`).join("") || `<tr><td colspan="7">No closed trades yet.</td></tr>`);
+    h("b-jr", (b.journal || []).slice(0, 60).map(j => `<p><b>${esc(j.title)}</b> · ${when(j.ts)}${j.kind ? ` · <span class="tag">${esc(j.kind)}</span>` : ""}<br>${esc(j.text)}</p>`).join("") || "<p>No journal entries yet.</p>");
+  }).catch(e => k("b-err", `Could not load the book (${e.message}).`));
 }
-function loadWallets(){
-  fetch("/api/admin/wallets").then(r => r.json()).then(d => {
-    const ws = d.wallets, live = ws.filter(w => w.started);
+
+function loadResearch() {
+  get("/api/admin/research").then(d => {
+    k("r-next", d.next_run ? `Next scheduled run: ${d.next_run}` : "");
+    h("rl", (d.experiments || []).map(x => `<tr><td style="white-space:nowrap">${esc(x.date)}</td><td><b>${x.link ? `<a href="${esc(x.link)}" target="_blank" rel="noopener">${esc(x.name)}</a>` : esc(x.name)}</b></td><td>${esc(x.question)}</td><td class="why">${esc(x.method)}</td><td>${esc(x.result)}</td><td><span class="tag ${esc(x.verdict)}">${esc(x.verdict || "—")}</span></td></tr>`).join("") || `<tr><td colspan="6">No experiments logged yet.</td></tr>`);
+  }).catch(e => h("rl", `<tr><td colspan="6" class="err">Could not load the research ledger (${esc(e.message)}).</td></tr>`));
+}
+
+function loadWallets() {
+  get("/api/admin/wallets").then(d => {
+    const ws = d.wallets || [], live = ws.filter(w => w.started);
     const cap = live.reduce((a, w) => a + (w.equity_usd || 0), 0), st = live.reduce((a, w) => a + (w.start_usd || 0), 0);
     k("tw-sum", `${live.length} wallets trading · ${usd(cap)} under the bot · ${cap >= st ? "+" : ""}${usd(cap - st)} (${pct(st ? cap / st - 1 : null)}) since start · ${live.filter(w => (w.pnl_usd || 0) >= 0).length} up, ${live.filter(w => (w.pnl_usd || 0) < 0).length} down`);
-    document.getElementById("tw").innerHTML = ws.map(w => {
+    h("tw", ws.map(w => {
       const cls = (w.pnl_usd || 0) >= 0 ? "up" : "down";
       const status = !w.started ? "waiting for funds" : w.halted ? "stopped" : "trading";
-      return `<tr class="click" data-plan="${esc(w.plan)}"><td>${esc(w.owner)}</td><td>${esc(w.plan)}</td><td><a href="https://solscan.io/account/${esc(w.wallet)}" target="_blank" rel="noopener"><code>${esc((w.wallet || "").slice(0, 4) + "…" + (w.wallet || "").slice(-4))}</code></a></td><td>${when(w.since)}</td><td class="n">${usd(w.start_usd)}</td><td class="n">${usd(w.equity_usd)}</td><td class="n ${cls}">${w.pnl_usd == null ? "—" : usd(w.pnl_usd) + " (" + pct(w.pnl_pct) + ")"}</td><td class="n">${w.open}</td><td class="n">${w.closed} (${w.wins || 0})</td><td>${when(w.last_trade)}</td><td>${status}</td></tr>`;
-    }).join("") || `<tr><td colspan="11">No trading wallets yet.</td></tr>`;
-    document.querySelectorAll("tr.click").forEach(tr => tr.onclick = () => showDetail(tr.dataset.plan));
-  });
+      const who = w.book ? `book: ${w.book}` : w.risk_pct ? `risk ${w.risk_pct}%${w.profit_rule ? " · " + (RULE[w.profit_rule] || w.profit_rule) : ""}` : (w.plan || "—");
+      const wal = w.wallet ? `<a href="https://solscan.io/account/${esc(w.wallet)}" target="_blank" rel="noopener"><code>${esc(w.wallet.slice(0, 4) + "…" + w.wallet.slice(-4))}</code></a>` : "—";
+      return `<tr><td>${esc(w.owner)}${w.holder ? ' <span class="tag h">holder</span>' : ""}</td><td>${esc(who)}</td><td>${wal}</td><td>${when(w.since)}</td><td class="n">${usd(w.start_usd)}</td><td class="n">${usd(w.equity_usd)}</td><td class="n ${cls}">${w.pnl_usd == null ? "—" : usd(w.pnl_usd) + " (" + pct(w.pnl_pct) + ")"}</td><td class="n">${w.open ?? "—"}</td><td class="n">${w.closed ?? "—"} (${w.wins || 0})</td><td>${when(w.last_trade)}</td><td>${status}</td></tr>`;
+    }).join("") || `<tr><td colspan="11">No trading wallets yet.</td></tr>`);
+  }).catch(e => h("tw", `<tr><td colspan="11" class="err">Could not load (${esc(e.message)}).</td></tr>`));
 }
-function load(){
-  loadWallets();
-  fetch("/api/admin/resumen").then(r => r.json()).then(d => {
-    k("upd", "Updated " + new Date().toLocaleTimeString("en-US") + " · refreshes every minute · fees " + d.fees.trade_pct + "% per trade, " + d.fees.success_pct_external + "% of winning trades for non-holders");
-    k("k-ap", d.users); k("k-24", d.new_24h); k("k-li", d.logins_24h); k("k-h", `${d.holders} / ${d.holders_pending}`);
-    k("k-m", usd(d.pledged_usd)); k("k-act", d.active_wallets); k("k-cap", usd(d.capital_under_bot_usd)); k("k-fee", usd(d.fees_usd));
-    document.getElementById("pp").innerHTML = Object.entries(d.by_plan).map(([p, x]) =>
-      `<tr><td>${esc(p)}</td><td class="n">${x.users}</td><td class="n">${usd(x.amount_usd)}</td></tr>`).join("") || `<tr><td colspan="3">No accounts yet.</td></tr>`;
-    document.getElementById("ap").innerHTML = d.detail.map(a => {
-      const t = a.holder_status === "holder" ? `<span class="tag h">holder · ${a.ducks}</span>` : a.holder_status === "pending" ? `<span class="tag">holder pending</span>` : `<span class="tag">standard</span>`;
-      return `<tr><td>${new Date(a.created * 1000).toLocaleString("en-US")}</td><td>${esc(a.name)}</td><td>${esc(a.email)}</td><td>${t}</td><td class="n">${a.amount_usd ? usd(a.amount_usd) : "—"}</td><td>${a.goal ? "x" + esc(a.goal) + " in " + esc(a.days) + " d" : "—"}</td><td>${esc(a.plan || "—")}</td><td class="n">${a.stop_pct ? esc(a.stop_pct) + "%" : "—"}</td><td>${esc(a.status)}</td></tr>`;
-    }).join("") || `<tr><td colspan="9">No accounts yet.</td></tr>`;
-  }).catch(() => k("upd", "Could not load."));
+
+function loadSummary() {
+  get("/api/admin/resumen").then(d => {
+    const f = d.fees || {};
+    k("upd", `Updated ${new Date().toLocaleTimeString("en-US")} · refreshes every minute · fees ${f.trade_pct_holder ?? f.trade_pct ?? "—"}% / ${f.trade_pct_external ?? "—"}% per trade, ${f.success_pct_external ?? "—"}% of winning trades for non-holders`);
+    k("k-ap", d.users ?? "—"); k("k-24", d.new_24h ?? "—"); k("k-li", d.logins_24h ?? "—"); k("k-h", `${d.holders ?? "—"} / ${d.holders_pending ?? "—"}`);
+    k("k-m", usd(d.pledged_usd)); k("k-act", d.active_wallets ?? "—"); k("k-cap", usd(d.capital_under_bot_usd)); k("k-fee", usd(d.fees_usd));
+    const by = d.by_risk || d.by_plan || {};
+    h("pp", Object.entries(by).sort((a, b) => (parseFloat(a[0]) || 999) - (parseFloat(b[0]) || 999)).map(([p, x]) =>
+      `<tr><td>${/^\d+$/.test(p) ? "−" + esc(p) + "%" : esc(p)}</td><td class="n">${x.users ?? 0}</td><td class="n">${usd(x.amount_usd)}</td></tr>`).join("") || `<tr><td colspan="3">No accounts yet.</td></tr>`);
+    h("ap", (d.detail || []).map(a => {
+      const t = a.holder_status === "holder" ? `<span class="tag h">holder · ${esc(a.ducks)}</span>` : a.holder_status === "pending" ? `<span class="tag">holder pending</span>` : `<span class="tag">standard</span>`;
+      const rule = a.profit_rule ? (RULE[a.profit_rule] || a.profit_rule) + (a.profit_rule === "lock" && a.profit_mult ? ` ${fx(a.profit_mult).replace(".00", "")}` : "") : "—";
+      return `<tr><td>${a.created ? new Date(a.created * 1000).toLocaleString("en-US") : "—"}</td><td>${esc(a.name)}</td><td>${esc(a.email)}</td><td>${t}</td><td class="n">${a.amount_usd ? usd(a.amount_usd) : "—"}</td><td>${a.risk_pct ? "−" + esc(a.risk_pct) + "%" : "—"}</td><td>${esc(rule)}</td><td>${a.bot_wallet ? `<code>${esc(String(a.bot_wallet).slice(0, 4) + "…" + String(a.bot_wallet).slice(-4))}</code>` : (a.sol_wallet ? "withdraw set" : "—")}</td><td>${esc(a.status)}</td></tr>`;
+    }).join("") || `<tr><td colspan="9">No accounts yet.</td></tr>`);
+  }).catch(e => k("upd", `Could not load the summary (${e.message}).`));
 }
+
+function load() { loadSummary(); loadBook(); loadWallets(); loadResearch(); }
 load(); setInterval(load, 60000);
 </script>
 </body>

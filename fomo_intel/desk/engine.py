@@ -172,7 +172,7 @@ class Desk:
             self.pos[mint] = {"mint": mint, "symbol": o.get("symbol") or mint[:6], "opened_ts": time.time(), "entry_usd": entry_usd,
                               "tokens": f.tokens, "tokens_initial": f.tokens, "sol_in": f.sol, "sol_out": 0.0, "peak_usd": entry_usd,
                               "stop": float(o.get("stop", 0.3)), "trail": float(o.get("trail", 0.35)), "trail_after": float(o.get("trail_after", 1.5)),
-                              "tp": o.get("tp", []), "tp_done": [], "thesis": o.get("thesis", ""), "id": did}
+                              "tp": o.get("tp", []), "tp_done": [], "thesis": o.get("thesis", ""), "id": did, "sleeve": o.get("sleeve")}
         self.save()
         return T(f"compró {f.tokens:,.0f} {o.get('symbol')} por {f.sol:.4f} SOL a US${entry_usd:.6g} (slippage {f.slippage_pct:+.1f}%)", f"bought {f.tokens:,.0f} {o.get('symbol')} for {f.sol:.4f} SOL at ${entry_usd:.6g} (slippage {f.slippage_pct:+.1f}%)")
 
@@ -226,7 +226,7 @@ class Desk:
                     elif a == "set":
                         p = self.pos.get(o["mint"])
                         if p:
-                            for k in ("stop", "trail", "trail_after", "tp", "thesis", "brain"):
+                            for k in ("stop", "trail", "trail_after", "tp", "thesis", "brain", "sleeve"):
                                 if k in o: p[k] = o[k]
                             self.save(); r = f"ajustó {p['symbol']}: " + ", ".join(f"{k}={o[k]}" for k in o if k not in ("action", "mint"))
                         else: r = "sin posición"
