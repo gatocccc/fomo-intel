@@ -1,17 +1,17 @@
 {
- "now": 1793283895.5082073,
+ "now": 1793284200.196626,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 203.62,
- "equity_sol": 2.0226,
+ "equity_usd": 211.67,
+ "equity_sol": 2.1039,
  "cash_sol": 0.6133,
- "positions_usd": 141.88,
- "sol_usd": 100.67,
- "mult": 2.055,
+ "positions_usd": 149.97,
+ "sol_usd": 100.61,
+ "mult": 2.136,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,8 +24,8 @@
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
    "sol_out": 0.262346229,
-   "peak_usd": 0.022888992354454008,
-   "stop": -2.229,
+   "peak_usd": 0.02447700648021561,
+   "stop": -2.465,
    "trail": 0.35,
    "trail_after": 1.6,
    "tp": [
@@ -43,9 +43,9 @@
    ],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.0223502347039169,
-   "mult": 4.617,
-   "value_usd": 124.1
+   "last_usd": 0.023827008204751702,
+   "mult": 4.922,
+   "value_usd": 132.3
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -74,9 +74,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.002021986077784437,
-   "mult": 1.009,
-   "value_usd": 17.78
+   "last_usd": 0.002009749273701398,
+   "mult": 1.003,
+   "value_usd": 17.67
   }
  ],
  "equity": [
@@ -2335,6 +2335,10 @@
   [
    1793283804,
    203.16
+  ],
+  [
+   1793284108,
+   214.8
   ]
  ],
  "closed": [
@@ -2589,6 +2593,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793284032.4275448,
+   "title": "Ejecución",
+   "text": "set 4kjruq: ajustó GTA6: stop=-2.465",
+   "kind": "ejecución",
+   "id": "auto-mesa-20261029-1427"
+  },
+  {
+   "ts": 1793284032.4274118,
+   "title": "Cerebro automático: ajuste de stops",
+   "text": "GTA6: llegó a 4.95x de pico; subo el stop a 3.46x (antes 3.23x).\n\nEfectivo ocioso (27%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-20261029-1427"
+  },
   {
    "ts": 1793283436.755072,
    "title": "Cerebro automático: estado",
@@ -3220,11 +3238,11 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793283423.73757,
+  "last_run": 1793284024.621079,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
-   "ts": 1793282223.7392414,
+   "ts": 1793284024.622872,
    "title": "Cerebro automático: ajuste de stops",
    "orders": 1,
    "mode": "live"
@@ -3234,7 +3252,7 @@
    "text": "Efectivo ocioso (28%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -0.2,
-  "sol_vs_ma20": -0.0405
+  "sol_ch24h": -0.0,
+  "sol_vs_ma20": -0.0383
  }
 }
