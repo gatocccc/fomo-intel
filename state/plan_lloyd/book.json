@@ -1,14 +1,14 @@
 {
- "ts": 1793253483.9847636,
+ "ts": 1793254085.2583783,
  "regime": {
   "state": "risk_off",
-  "ts": 1793252885.347352,
+  "ts": 1793254085.2498302,
   "since": 1793248084.8662407,
-  "sol": 100.54,
+  "sol": 100.31,
   "sol_ma20": 104.89,
-  "sol_ch4h": 0.7,
-  "sol_ch24h": -1.2,
-  "btc_vs_ma20": -0.0195,
+  "sol_ch4h": 0.3,
+  "sol_ch24h": -1.6,
+  "btc_vs_ma20": -0.0203,
   "breadth_above": 2,
   "breadth_total": 18,
   "label": "defensive"
@@ -24,8 +24,8 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 399.43,
-   "pct": 67.3,
+   "value_usd": 399.44,
+   "pct": 66.6,
    "positions": 0
   },
   {
@@ -40,19 +40,19 @@
    "key": "established",
    "name": "Established memes",
    "target_pct": 10,
-   "value_usd": 59.28,
-   "pct": 10.0,
+   "value_usd": 59.15,
+   "pct": 9.9,
    "positions": 2
   },
   {
    "key": "picks",
    "name": "Picks",
    "target_pct": 20,
-   "value_usd": 127.27,
-   "pct": 21.4,
+   "value_usd": 133.12,
+   "pct": 22.2,
    "positions": 2
   }
  ],
- "liquid_usd": 399.43,
- "trad_status": "SOL -4.1%, BTC -1.8%, ETH -3.7%, JUP -12.5%"
+ "liquid_usd": 399.44,
+ "trad_status": "2 of 18 established memecoins above their 20-day average (best: SPX +6%, STONK +8%)"
 }
