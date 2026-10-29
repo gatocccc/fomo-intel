@@ -1,17 +1,17 @@
 {
- "now": 1793241293.6737602,
+ "now": 1793241601.1471522,
  "start_ts": 1793203599.7169404,
  "start_usd": 602.95,
  "start_sol": 5.9708,
  "goal_usd": 1205.9,
  "days": 365,
  "day": 1,
- "equity_usd": 576.73,
- "equity_sol": 5.7954,
- "cash_sol": 0.1434,
- "positions_usd": 562.47,
- "sol_usd": 99.52,
- "mult": 0.957,
+ "equity_usd": 572.46,
+ "equity_sol": 5.7627,
+ "cash_sol": 0.1416,
+ "positions_usd": 558.39,
+ "sol_usd": 99.34,
+ "mult": 0.949,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,11 +41,11 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.01139395490370027,
+   "last_usd": 0.010960139993414155,
    "sleeve": "picks",
    "from_plan": "agresivo",
-   "mult": 1.517,
-   "value_usd": 100.63
+   "mult": 1.459,
+   "value_usd": 96.8
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
@@ -64,11 +64,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994688349325681,
+   "last_usd": 0.9994488729062069,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 402.9
+   "value_usd": 402.89
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -92,11 +92,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.1428691062556592,
+   "last_usd": 0.1420925158908836,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.924,
-   "value_usd": 36.2
+   "mult": 0.919,
+   "value_usd": 36.0
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -120,11 +120,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3910172005371892,
+   "last_usd": 0.39035173805425427,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.936,
-   "value_usd": 22.74
+   "mult": 0.934,
+   "value_usd": 22.7
   }
  ],
  "equity": [
@@ -635,6 +635,10 @@
   [
    1793241139,
    576.66
+  ],
+  [
+   1793241447,
+   569.69
   ]
  ],
  "closed": [

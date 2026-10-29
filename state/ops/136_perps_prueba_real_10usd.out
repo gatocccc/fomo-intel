@@ -1,0 +1,17 @@
+== 136_perps_prueba_real_10usd 2026-10-29T02:37:03Z ==
+2026-10-29 02:37:03,989 INFO perps: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+2026-10-29 02:37:04,052 INFO perps: perps submit: sent 3FeTABto6MZw4YkvACHjTxR47cTkJp2b8KfscpTHJuJwYH1MK5r5tfDzzGwEJg7mZSr4wCnewWmtDwbAXsmCWykm, waiting up to 90s
+2026-10-29 02:37:05,717 INFO perps: perps submit: confirmed 3FeTABto6MZw4YkvACHjTxR47cTkJp2b8KfscpTHJuJwYH1MK5r5tfDzzGwEJg7mZSr4wCnewWmtDwbAXsmCWykm (finalized)
+2026-10-29 02:37:46,046 INFO perps: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+2026-10-29 02:37:46,131 INFO perps: perps submit: sent 4t5LScMuwwfYcK6SqHQfFKRComqF4Gz65ZBEEL4GGAnGmmczdVUN9wdNmarjqSPUiUdWNuPzYTwuyKhAsVneGpp, waiting up to 90s
+2026-10-29 02:37:47,803 INFO perps: perps submit: confirmed 4t5LScMuwwfYcK6SqHQfFKRComqF4Gz65ZBEEL4GGAnGmmczdVUN9wdNmarjqSPUiUdWNuPzYTwuyKhAsVneGpp (finalized)
+USDC antes: 403.116709 SOL: 0.1434
+OPEN: {"ok": true, "sig": "3FeTABto6MZw4YkvACHjTxR47cTkJp2b8KfscpTHJuJwYH1MK5r5tfDzzGwEJg7mZSr4wCnewWmtDwbAXsmCWykm", "position_pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx", "error": null, "path_used": "legacy"}
+attempts: [{"path": "legacy", "transaction_type": "legacy", "require_keeper": false, "position_request": "EKfBhvsAKkL86xngaVV8VNFehhBxu1tP795SCSRBQ6pq", "tx_metadata": {"blockhash": "GdFjL6X5jitomBt6q9xaWy9iW2P2duzyX4aAJK8WYFcu", "lastValidBlockHeight": "440738683", "transactionFeeLamports": "5985", "accountRentLamports": "5471160"}}]
+positions tras abrir: [{"pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx", "symbol": "SOL", "side": "short", "size_usd": 19.97, "collateral_usd": 9982989.0, "entry": 99.25, "mark": 99.25, "liq_price": 148.61, "pnl_usd": -0.02, "pnl_pct": -0.23, "leverage": 1.99, "opened_ts": 1793241425.0, "collateral_mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", "market_mint": "So11111111111111111111111111111111111111112", "raw": {"borrowFees": "1", "borrowFeesUsd": "0.00", "closeFees": "11980", "closeFeesUsd": "0.01", "collateral": "9.98", "collateralUsd": "9982989", "collateralMint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v", "createdTime": 1793241425, "entryPrice": "99.25", "leverage": "1.99", "liquidationPrice": "148.61", "marketMint": "So11111111111111111111111111111111111111112", "markPrice": "99.25",
+USDC después de abrir: 393.116709
+CLOSE: {"ok": true, "sig": "4t5LScMuwwfYcK6SqHQfFKRComqF4Gz65ZBEEL4GGAnGmmczdVUN9wdNmarjqSPUiUdWNuPzYTwuyKhAsVneGpp", "error": null, "path_used": "positions/decrease"}
+attempts: [{"path": "positions/decrease", "require_keeper": false, "position_request": "5G1JYg63R764gAeeLArXfXcmv6yM2QPJCKp4zhG9erq5", "transaction_type": null}]
+positions tras cerrar: []
+USDC final: 403.077572 SOL: 0.1416
+== exit 0 ==
