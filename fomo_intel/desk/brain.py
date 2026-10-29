@@ -467,9 +467,7 @@ class Brain:
             if m in STABLES or not r or p.get("brain") is False:
                 continue
             if r["gap"] < B["exit_gap"]:
-                sells.append({"action": "sell", "mint": m, "frac": 1.0, "why": "lost its trend (below 20-day average)"})
-                sells.append({"action": "buy", "mint": USDC, "symbol": "USDC", "sol": round(p["value_usd"] / sol_usd * 0.97, 4), "stop": 0.05, "trail": 0.5,
-                              "trail_after": 10, "tp": [], "thesis": "Cash parked in USDC."})
+                sells.append({"action": "sell", "mint": m, "frac": 1.0, "why": "lost its trend (below 20-day average)", "_usd": p["value_usd"]})
                 notes.append(f"{p['symbol']} is {r['gap']:+.0%} versus its 20-day average: the trend broke. Back to USDC.")
         # entradas
         today = time.strftime("%Y-%m-%d", time.localtime(now - 3 * 3600))
@@ -494,12 +492,20 @@ class Brain:
                 notes.append(f"{r['sym']} (${r['mcap'] / 1e6:.0f}M, ${r['liq'] / 1e6:.1f}M liquidity) is back above its 20-day average ({r['gap']:+.0%}) and up {r['ch7']:+.0%} in 7 days "
                              f"(30 days: {r['ch30']:+.0%}). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.")
                 budget -= amt; slots -= 1
+        # lo que liberan las ventas financia primero las compras (sin pasar por USDC: cada swap cuesta ~0,5%)
+        freed = sum(o.pop("_usd") for o in sells)
         orders = list(sells)
-        need = sum(b["sol"] * sol_usd / 0.98 for b in buys) - max(0.0, s.get("cash_sol", 0) - 0.05) * sol_usd
+        sol_free_usd = max(0.0, s.get("cash_sol", 0) - 0.05) * sol_usd
+        need = sum(b["sol"] * sol_usd / 0.98 for b in buys) - sol_free_usd - freed * 0.97
         if buys and usdc and need > 2:
             frac = min(1.0, need / usdc_val) * usdc["tokens"] / (usdc.get("tokens_initial") or usdc["tokens"])
             orders.append({"action": "sell", "mint": USDC, "frac": round(frac, 4) if frac < 0.999 else 1.0, "why": "fund trend position"})
         orders += buys
+        # SOL sobrante (ventas sin reemplazo o compras más chicas que lo liberado) → USDC: este plan no apuesta a SOL
+        left_usd = -need          # SOL que queda libre después de vender y comprar (si se vendió USDC para cubrir, ≈ 0)
+        if left_usd > eq * 0.05:
+            orders.append({"action": "buy", "mint": USDC, "symbol": "USDC", "sol": round(left_usd / sol_usd * 0.97, 4), "stop": 0.05, "trail": 0.5,
+                           "trail_after": 10, "tp": [], "thesis": "Cash parked in USDC."})
         if not orders and now - bstate.get("_noted_bal", 0) > 12 * 3600:
             notes.append(f"Holding mostly USDC on purpose: {bstate['trad_status']}. This plan buys established memecoins only when they are trending up; "
                          "today most are falling, and USDC has protected the balance. Checked every hour.")
