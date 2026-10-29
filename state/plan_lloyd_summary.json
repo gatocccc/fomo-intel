@@ -1,17 +1,17 @@
 {
- "now": 1793279079.829485,
+ "now": 1793279382.1648464,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 1,
- "equity_usd": 573.49,
- "equity_sol": 5.6977,
- "cash_sol": 0.0815,
- "positions_usd": 565.29,
- "sol_usd": 100.65,
- "mult": 1.047,
+ "equity_usd": 571.91,
+ "equity_sol": 5.6887,
+ "cash_sol": 0.4568,
+ "positions_usd": 525.99,
+ "sol_usd": 100.53,
+ "mult": 1.044,
  "halt": false,
  "pause": false,
  "positions": [
@@ -20,10 +20,10 @@
    "symbol": "GTA6",
    "opened_ts": 1793204959.1775496,
    "entry_usd": 0.007512487746237798,
-   "tokens": 8831.632745155,
+   "tokens": 6623.724558866,
    "tokens_initial": 8831.632745155,
    "sol_in": 0.65723188,
-   "sol_out": 0.0,
+   "sol_out": 0.375321957,
    "peak_usd": 0.018355943011417134,
    "stop": -0.833,
    "trail": 0.35,
@@ -41,11 +41,11 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.01732954724400523,
+   "last_usd": 0.01715284946160412,
    "sleeve": "picks",
    "from_plan": "agresivo",
-   "mult": 2.307,
-   "value_usd": 153.05
+   "mult": 2.283,
+   "value_usd": 113.62
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
@@ -64,11 +64,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994817148615127,
+   "last_usd": 0.9994488158137639,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 342.71
+   "value_usd": 342.7
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -92,11 +92,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.1457059342689464,
+   "last_usd": 0.1458916400803636,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.942,
-   "value_usd": 36.91
+   "mult": 0.944,
+   "value_usd": 36.96
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -120,11 +120,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3978814962997175,
+   "last_usd": 0.39626321703765116,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.952,
-   "value_usd": 23.14
+   "mult": 0.948,
+   "value_usd": 23.05
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -153,9 +153,9 @@
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-lloyd-20261029-0319",
    "sleeve": "picks",
-   "last_usd": 0.0019322356852042007,
-   "mult": 0.946,
-   "value_usd": 9.47
+   "last_usd": 0.001970050586682167,
+   "mult": 0.965,
+   "value_usd": 9.66
   }
  ],
  "equity": [
@@ -1166,6 +1166,10 @@
   [
    1793279049,
    571.9
+  ],
+  [
+   1793279224,
+   573.2
   ]
  ],
  "closed": [
@@ -1269,6 +1273,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793279226.355888,
+   "side": "sell",
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "ok": true,
+   "sol": 0.375321957,
+   "tokens": 2207.9081862890007,
+   "price_usd": 0.017100497276,
+   "why": "trim: single-name concentration (27% of the book) in a defensive market",
+   "sig": "56FB9LgrdxTzMn7Zf9Xjdzs1uK2YbtZr9H6YfKSu3NR7o4vEXXjniXgS47ePtwp3DvPiK8dTWdQSEzGKoHmP9FJH",
+   "error": "",
+   "id": "lloyd-2026-10-29-02"
+  },
   {
    "ts": 1793271855.0546403,
    "side": "buy",
@@ -1671,6 +1689,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793279226.3579066,
+   "title": "Execution",
+   "text": "sell 4kjruq: sold 25% of GTA6 (trim: single-name concentration (27% of the book) in a defensive market) for 0.3753 SOL",
+   "kind": "execution",
+   "id": "lloyd-2026-10-29-02"
+  },
+  {
+   "ts": 1793279226.3576682,
+   "title": "Taking a quarter of GTA6 off the table",
+   "text": "GTA6 is the book's best trade: 2.3x since we bought it, and the story is stronger than ever (Take-Two confirmed the November 19 release this week and the marketing campaign is about to start). But it has grown to 27% of the whole book, while the market is defensive: SOL dropped under $100, BTC and SOL sit below their 20-day averages and only 2 of 18 large memecoins are above theirs. One memecoin should not decide a quarter of the book, and a single delay rumour could knock it down 30% in minutes.\n\nSo Lloyd sells 25% now (roughly $38 of profit goes back to Cash) and lets the other 75% keep running with its automatic stop, which already locks in about 1.8x. The Picks pocket moves back toward its 20% target.\n\nAlso checked this morning: STONK, SPX and DOPE pass the anti-rug check (STONK's only wallet group was funded by a Binance hot wallet, which does not count). No new buys: the best candidate in today's scan had already risen more than 13x in three days, and buying the top is not an edge.",
+   "kind": "decisión",
+   "id": "lloyd-2026-10-29-02"
+  },
   {
    "ts": 1793271855.0569587,
    "title": "Execution",
@@ -2133,7 +2165,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793279044.1247168,
+  "last_run": 1793279225.36487,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -2147,7 +2179,7 @@
    "text": "Market is defensive. Pockets: Cash 67% (target 60%), Majors 0% (target 10%), Established memes 10% (target 10%), Picks 22% (target 20%). Nothing to change this hour: every open position is inside its rules and no new candidate passed the filters."
   },
   "trad_status": "SOL -4.1%, BTC -2.2%, ETH -4.0%, JUP -12.8%",
-  "sol_ch24h": -1.0,
-  "sol_vs_ma20": -0.0419
+  "sol_ch24h": -0.5,
+  "sol_vs_ma20": -0.0405
  }
 }
