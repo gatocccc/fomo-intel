@@ -1,5 +1,5 @@
 {
- "ts": 1793308502.6177218,
+ "ts": 1793308803.082004,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,22 +32,22 @@
  ],
  "rejections": {
   "day": "2026-10-29",
-  "seen": 224,
+  "seen": 225,
   "bought": 0,
   "by_reason": {
-   "freno": 219,
+   "freno": 220,
    "en_banco": 3,
    "mcap_alto": 2
   },
   "note": "rechaza todo: revisar si el filtro est\u00e1 muy cerrado"
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
- "wallet_sol": 1.0101,
- "sol_usd": 96.63191834191699,
+ "wallet_sol": 1.725,
+ "sol_usd": 96.91180365048274,
  "stream_connected": true,
- "stream_msgs": 12808,
- "tokens_seen": 12087,
- "tokens_tracked": 133,
+ "stream_msgs": 12920,
+ "tokens_seen": 12199,
+ "tokens_tracked": 150,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -56,22 +56,23 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 5744522,
-  "parsed": 529,
-  "skipped": 5741863,
+  "notifications": 5827285,
+  "parsed": 531,
+  "skipped": 5824607,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
-   "18:20:31 Connection to remote host was lost.",
    "19:22:56 Connection to remote host was lost.",
-   "19:56:13 Connection to remote host was lost."
+   "19:56:13 Connection to remote host was lost.",
+   "21:17:16 Connection to remote host was lost."
   ]
  },
  "follow_buys_seen": 94,
  "guard": {
   "alerts": [
    "10:36:11 fuente de se\u00f1ales recuperada tras 3 s",
-   "16:53:38 fuente de se\u00f1ales recuperada tras 2 s"
+   "16:53:38 fuente de se\u00f1ales recuperada tras 2 s",
+   "21:17:19 fuente de se\u00f1ales recuperada tras 3 s"
   ],
   "bench": 1,
   "bench_by_reason": {
@@ -80,7 +81,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 0
  },
- "st_requests": 227,
+ "st_requests": 228,
  "stream_errors": [
   "04:45:46 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Thu, 29 Oct 2026 04:45:46 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
   "12:16:56 Connection to remote host was lost.",
@@ -91,7 +92,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 8,
-  "create": 12800
+  "create": 12912
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",

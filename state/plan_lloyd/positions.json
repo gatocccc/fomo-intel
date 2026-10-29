@@ -16,7 +16,7 @@
   "tp_done": [],
   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
   "id": "equilibrado-2026-10-28-01",
-  "last_usd": 1.0000759877871295,
+  "last_usd": 1.0011144190867838,
   "sleeve": "cash",
   "from_plan": "equilibrado"
  },
@@ -42,7 +42,7 @@
   "tp_done": [],
   "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.13450998836062822,
+  "last_usd": 0.1345561540927282,
   "sleeve": "established",
   "from_plan": "equilibrado"
  },
@@ -68,66 +68,8 @@
   "tp_done": [],
   "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.3665843190976497,
+  "last_usd": 0.36937371542443287,
   "sleeve": "established",
   "from_plan": "equilibrado"
- },
- "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump": {
-  "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
-  "symbol": "DOPE",
-  "opened_ts": 1793243967.0217607,
-  "entry_usd": 0.0020422637836622114,
-  "tokens": 4903.463974,
-  "tokens_initial": 4903.463974,
-  "sol_in": 0.10038678,
-  "sol_out": 0.0,
-  "peak_usd": 0.0021554287577019416,
-  "stop": 0.35,
-  "trail": 0.35,
-  "trail_after": 1.6,
-  "tp": [
-   [
-    3,
-    0.25
-   ],
-   [
-    6,
-    0.25
-   ]
-  ],
-  "tp_done": [],
-  "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
-  "id": "auto-lloyd-20261029-0319",
-  "sleeve": "picks",
-  "last_usd": 0.0016542062072597158
- },
- "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump": {
-  "mint": "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump",
-  "symbol": "JOB",
-  "opened_ts": 1793302157.8029668,
-  "entry_usd": 0.003435026594087858,
-  "tokens": 11638.525093,
-  "tokens_initial": 11638.525093,
-  "sol_in": 0.39897228,
-  "sol_out": 0.0,
-  "peak_usd": 0.0035694425941231217,
-  "stop": 0.3,
-  "trail": 0.35,
-  "trail_after": 1.6,
-  "tp": [
-   [
-    3,
-    0.25
-   ],
-   [
-    6,
-    0.25
-   ]
-  ],
-  "tp_done": [],
-  "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
-  "id": "auto-lloyd-20261029-1929",
-  "sleeve": "picks",
-  "last_usd": 0.00294824543187409
  }
 }

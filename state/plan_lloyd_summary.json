@@ -1,17 +1,17 @@
 {
- "now": 1793308500.7163572,
+ "now": 1793308781.9267118,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 551.61,
- "equity_sol": 5.694,
- "cash_sol": 0.0769,
- "positions_usd": 544.16,
- "sol_usd": 96.88,
- "mult": 1.007,
+ "equity_usd": 552.47,
+ "equity_sol": 5.6618,
+ "cash_sol": 0.5087,
+ "positions_usd": 502.83,
+ "sol_usd": 97.58,
+ "mult": 1.009,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 1.0002607505961698,
+   "last_usd": 1.0010551052722991,
    "sleeve": "cash",
    "from_plan": "equilibrado",
-   "mult": 0.991,
-   "value_usd": 446.51
+   "mult": 0.992,
+   "value_usd": 446.87
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -60,11 +60,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.1345975950453786,
+   "last_usd": 0.13593195628980909,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.87,
-   "value_usd": 34.1
+   "mult": 0.879,
+   "value_usd": 34.44
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -88,73 +88,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.36864953611434187,
+   "last_usd": 0.3701438883694685,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.882,
-   "value_usd": 21.44
-  },
-  {
-   "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
-   "symbol": "DOPE",
-   "opened_ts": 1793243967.0217607,
-   "entry_usd": 0.0020422637836622114,
-   "tokens": 4903.463974,
-   "tokens_initial": 4903.463974,
-   "sol_in": 0.10038678,
-   "sol_out": 0.0,
-   "peak_usd": 0.0021554287577019416,
-   "stop": 0.35,
-   "trail": 0.35,
-   "trail_after": 1.6,
-   "tp": [
-    [
-     3,
-     0.25
-    ],
-    [
-     6,
-     0.25
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
-   "id": "auto-lloyd-20261029-0319",
-   "sleeve": "picks",
-   "last_usd": 0.0015996711011470005,
-   "mult": 0.783,
-   "value_usd": 7.84
-  },
-  {
-   "mint": "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump",
-   "symbol": "JOB",
-   "opened_ts": 1793302157.8029668,
-   "entry_usd": 0.003435026594087858,
-   "tokens": 11638.525093,
-   "tokens_initial": 11638.525093,
-   "sol_in": 0.39897228,
-   "sol_out": 0.0,
-   "peak_usd": 0.0035694425941231217,
-   "stop": 0.3,
-   "trail": 0.35,
-   "trail_after": 1.6,
-   "tp": [
-    [
-     3,
-     0.25
-    ],
-    [
-     6,
-     0.25
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
-   "id": "auto-lloyd-20261029-1929",
-   "sleeve": "picks",
-   "last_usd": 0.0029437811248755087,
-   "mult": 0.857,
-   "value_usd": 34.26
+   "mult": 0.886,
+   "value_usd": 21.53
   }
  ],
  "equity": [
@@ -1549,9 +1487,47 @@
   [
    1793308283,
    551.65
+  ],
+  [
+   1793308593,
+   552.16
+  ],
+  [
+   1793308684,
+   552.1
   ]
  ],
  "closed": [
+  {
+   "ts": 1793308690.0807648,
+   "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+   "symbol": "DOPE",
+   "sol_in": 0.10039,
+   "sol_out": 0.07906,
+   "pnl_sol": -0.02132,
+   "pnl_usd": -2.08,
+   "ret": -0.212,
+   "peak_mult": 1.06,
+   "hold_h": 18.0,
+   "why": "screener pick without a story (category switched off: 0 of 14)",
+   "reason": null,
+   "sleeve": "picks"
+  },
+  {
+   "ts": 1793308687.6821747,
+   "mint": "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump",
+   "symbol": "JOB",
+   "sol_in": 0.39897,
+   "sol_out": 0.35266,
+   "pnl_sol": -0.04631,
+   "pnl_usd": -4.52,
+   "ret": -0.116,
+   "peak_mult": 1.04,
+   "hold_h": 1.8,
+   "why": "screener pick without a story (category switched off: 0 of 14)",
+   "reason": null,
+   "sleeve": "picks"
+  },
   {
    "ts": 1793286344.6734087,
    "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
@@ -1665,6 +1641,34 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793308690.0801644,
+   "side": "sell",
+   "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
+   "symbol": "DOPE",
+   "ok": true,
+   "sol": 0.079064399,
+   "tokens": 4903.463974,
+   "price_usd": 0.001573375942,
+   "why": "screener pick without a story (category switched off: 0 of 14)",
+   "sig": "C9d3shk3UunDqLTsHbMMXCExmVTzwczgq1PS4SvW85eiYB3LuC7EvEhgzrhDThQejZziBgtngqC7AEJELpseZXy",
+   "error": "",
+   "id": "lloyd-2026-10-29-03"
+  },
+  {
+   "ts": 1793308687.681447,
+   "side": "sell",
+   "mint": "9Pq7aLAbhDG2tTnS22cm6kuysZVcZpLFE368HWuypump",
+   "symbol": "JOB",
+   "ok": true,
+   "sol": 0.352664484,
+   "tokens": 11638.525093,
+   "price_usd": 0.002956775138,
+   "why": "screener pick without a story (category switched off: 0 of 14)",
+   "sig": "2XnNko8XCh1E1GEhPrTrdwvDZLnSvxQo2qt5Mao9oups4Z4AeMTp931k6jjV2m4RJLP98tVhjYMVWNGyghczX7aJ",
+   "error": "",
+   "id": "lloyd-2026-10-29-03"
+  },
   {
    "ts": 1793302157.8024,
    "side": "buy",
@@ -2179,6 +2183,41 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793308705.3950694,
+   "title": "Radar: market shock detected",
+   "text": "Lloyd's news radar sees a bearish shock: bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%. Headlines: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair | Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts | Crypto PAC spending before midterms possibly obscured after reported FEC hack. The book goes defensive (no new memecoins) while it lasts.",
+   "kind": "decisión",
+   "id": "auto-plan_lloyd-radar-20261029-211817"
+  },
+  {
+   "ts": 1793308705.3939629,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (61%), but SOL and BTC are below their 20-day averages and only 3 of 22 large memecoins are above theirs: bear market: no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261029-2118"
+  },
+  {
+   "ts": 1793308690.0846062,
+   "title": "What Lloyd learned (automatic review)",
+   "text": "Automatic review of every closed trade, grouped by the reason it was bought. A category with 8+ trades and a negative average return switches itself off; Lloyd stops buying that kind of trade until a human review re-enables it with new evidence.\n\nDated catalyst: 2 trades, 2 winners, mean +192%, P&L $+175 → learning\nOfficial token of a real product: 1 trades, 1 winners, mean +14%, P&L $+4 → learning\n20-day trend, established memes: 1 trades, 0 winners, mean -2%, P&L $-1 → learning\nScreener pick (no story): 10 trades, 0 winners, mean -14%, P&L $-62 → off\n\nChanges: Official token of a real product None → learning; Dated catalyst None → learning; Majors trend None → learning; Other (manual) None → learning; Verified narrative None → learning; News-shock short None → learning; Screener pick (no story) None → off; 20-day trend, established memes None → learning",
+   "kind": "decisión",
+   "id": "auto-lloyd-learned-20261029-2118"
+  },
+  {
+   "ts": 1793308690.082481,
+   "title": "Execution",
+   "text": "sell 9Pq7aL: sold 100% of JOB (screener pick without a story (category switched off: 0 of 14)) for 0.3527 SOL — position closed\nsell 33jENU: sold 100% of DOPE (screener pick without a story (category switched off: 0 of 14)) for 0.0791 SOL — position closed",
+   "kind": "execution",
+   "id": "lloyd-2026-10-29-03"
+  },
+  {
+   "ts": 1793308690.0822752,
+   "title": "Closing JOB and DOPE: screener picks without a story",
+   "text": "Lloyd reviewed every trade since October 27 and grouped them by the real reason they were bought. Trades with a verifiable story (GTA6: the game ships November 19; REMUS: the official mascot of the FOMO app) won three times out of three. Trades that merely passed the numeric screen (liquidity, volume, holders, anti-rug) with no story behind them lost 14 out of 14. JOB and DOPE belong to the second group: JOB was bought automatically this afternoon the minute the market regime flipped from defensive to neutral on a marginal change, and it is a token that had already risen 13x in three days. Both are closed.\n\nWhat changes from today: the screener becomes a veto, not a trigger (no pick is bought without a written reason: a dated catalyst, a real affiliation or a verified narrative); an automatic hourly review groups closed trades by reason and switches off any category with 8+ trades and a negative average (screener picks are now off); leaving the defensive regime requires two hours of better conditions, not ten minutes; and a news radar with price confirmation moves the book to defense and can open a small SOL short when bearish news actually moves the market. Cash waits in USDC until a candidate with a reason shows up.",
+   "kind": "decisión",
+   "id": "lloyd-2026-10-29-03"
+  },
   {
    "ts": 1793308267.3481026,
    "title": "Automatic brain: status",
@@ -3006,13 +3045,13 @@
   }
  ],
  "wins": 1,
- "n_closed": 8,
- "realized_usd": 29.77,
+ "n_closed": 10,
+ "realized_usd": 23.17,
  "plan": "lloyd",
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793308263.3648067,
+  "last_run": 1793308685.715261,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -3022,11 +3061,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793308266.5342963,
-   "text": "[Picks] Idle cash (62%), but SOL fell hard (24h -6.3%, 4h -4.8%): no new memecoins until it improves."
+   "ts": 1793308685.7178354,
+   "text": "[Picks] Idle cash (61%), but SOL and BTC are below their 20-day averages and only 3 of 22 large memecoins are above theirs: bear market: no new memecoins until it improves."
   },
   "trad_status": "SOL -7.7%, BTC -3.4%, ETH -6.5%, JUP -16.9%",
-  "sol_ch24h": -6.3,
-  "sol_vs_ma20": -0.0823
+  "sol_ch24h": -4.9,
+  "sol_vs_ma20": -0.0685
  }
 }

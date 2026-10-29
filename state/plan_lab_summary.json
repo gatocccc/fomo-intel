@@ -1,20 +1,44 @@
 {
- "now": 1793308478.4491472,
+ "now": 1793308777.5012803,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 1,
- "equity_usd": 53.31,
- "equity_sol": 0.55,
- "cash_sol": 0.55,
- "positions_usd": 0,
- "sol_usd": 96.92,
- "mult": 0.963,
+ "equity_usd": 53.17,
+ "equity_sol": 0.5449,
+ "cash_sol": 0.2445,
+ "positions_usd": 29.31,
+ "sol_usd": 97.58,
+ "mult": 0.96,
  "halt": false,
  "pause": false,
- "positions": [],
+ "positions": [
+  {
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "opened_ts": 1793308686.6183815,
+   "entry_usd": 1.018092076638584,
+   "tokens": 29.278776,
+   "tokens_initial": 29.278776,
+   "sol_in": 0.30548188,
+   "sol_out": 0.0,
+   "peak_usd": 1.018092076638584,
+   "stop": 0.05,
+   "trail": 0.5,
+   "trail_after": 10.0,
+   "tp": [],
+   "tp_done": [],
+   "thesis": "USDC collateral for the news-shock short test (perps need USDC).",
+   "id": "lab-2026-10-29-01",
+   "sleeve": "cash",
+   "reason": "collateral",
+   "last_usd": 1.0010551052722991,
+   "mult": 0.983,
+   "value_usd": 29.31
+  }
+ ],
  "equity": [
   [
    1793271309,
@@ -515,11 +539,55 @@
   [
    1793308267,
    53.21
+  ],
+  [
+   1793308569,
+   53.24
+  ],
+  [
+   1793308684,
+   53.17
   ]
  ],
  "closed": [],
- "trades": [],
+ "trades": [
+  {
+   "ts": 1793308686.6175518,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.30548188,
+   "tokens": 29.278776,
+   "price_usd": 1.018092076639,
+   "slip": 1.68,
+   "sig": "4ovzhCnqNbdkUNVA7rgh4hjrUtrGZTLTmMnPfyLeShBVhSPyFstQKMwKGYZzgNCyMV45Tsratuo3tTaD6kbv8rnD",
+   "error": "",
+   "id": "lab-2026-10-29-01"
+  }
+ ],
  "journal": [
+  {
+   "ts": 1793308701.777044,
+   "title": "Radar: SOL short opened (shadow)",
+   "text": "Bearish news shock with price confirmation (bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%). Lloyd opens a small SOL short on Jupiter Perps: $19 collateral at 2x ($37 notional), entry $97.69. Exit: stop if SOL rises 3.5%, take profit at −7%, or 12h. Risk if stopped: about $1.3. Against: rumours get denied and squeeze shorts; the stop is tight for that reason.",
+   "kind": "decisión",
+   "id": "auto-plan_lab-radar-20261029-211817"
+  },
+  {
+   "ts": 1793308686.6196656,
+   "title": "Execution",
+   "text": "buy USDC: bought 29 USDC for 0.3055 SOL at $1.01809 (slippage +1.7%)",
+   "kind": "execution",
+   "id": "lab-2026-10-29-01"
+  },
+  {
+   "ts": 1793308686.6194906,
+   "title": "Lab test #1: news-shock short (USDC collateral ready)",
+   "text": "Hypothesis under test: when bearish news (exchange trouble, hacks, forced selling) is confirmed by price, a small SOL short opened within minutes and closed within hours earns more than it costs. Trigger today: X alleged abnormal Binance outflows and a 'hack' (unconfirmed, Binance denies it) while SOL slid under $100. The lab swaps part of its SOL into USDC to use as perps collateral; the news radar (fomo-radar) opens and manages the short automatically: 2x, stop if SOL rises 3.5%, take profit at -7%, 12h max. Each short is logged with its result; the idea is adopted into the book only if, after 20+ shocks, it beats random timing after costs.",
+   "kind": "decisión",
+   "id": "lab-2026-10-29-01"
+  },
   {
    "ts": 1793271309.0339975,
    "title": "Plan started",

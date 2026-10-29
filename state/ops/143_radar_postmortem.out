@@ -1,0 +1,82 @@
+== 143_radar_postmortem 2026-10-29T21:18:04Z ==
+--- claves disponibles: ANTHROPIC=si CRYPTOPANIC=no X=no
+--- post-mortem
+Revisión automática por motivo de compra. Una categoría con 8+ operaciones y retorno medio negativo se apaga sola.
+
+Catalizador con fecha: 2 ops, 2 ganadas, retorno medio +192%, P&L US$+175 (GTA6) → learning
+Afiliación a un producto real: 1 ops, 1 ganadas, retorno medio +14%, P&L US$+4 (REMUS) → learning
+Tendencia 20 días en memes establecidas: 1 ops, 0 ganadas, retorno medio -2%, P&L US$-1 (USELESS) → learning
+Pick del escáner (sin historia): 10 ops, 0 ganadas, retorno medio -14%, P&L US$-62 (DOAS, INVERSE, LMAO!, SAPLING, SI, STONKLANA) → off
+
+Cambios: Afiliación a un producto real None → learning; Catalizador con fecha None → learning; Tendencia en majors None → learning; Otro (manual) None → learning; Narrativa verificada None → learning; Corto por shock de noticias None → learning; Pick del escáner (sin historia) None → off; Tendencia 20 días en memes establecidas None → learning
+--- radar (una pasada, en sombra, para ver qué detecta ahora)
+2026-10-29 21:18:06,801 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-29 21:18:06,844 INFO radar: evento [cointelegraph] sev 1 dir -1: Polymarket suspended trading amid reports of user funds being drained
+2026-10-29 21:18:09,128 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-29 21:18:09,130 INFO radar: evento [cointelegraph] sev 1 dir 1: HYPE teases all-time high as NYSE owner ICE eyes US Hyperliquid perps
+2026-10-29 21:18:09,929 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-29 21:18:09,931 INFO radar: evento [cointelegraph] sev 1 dir -1: Your fridge could one day stake Ether, launch memecoins: CFTC chair
+2026-10-29 21:18:11,126 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-29 21:18:11,128 INFO radar: evento [cointelegraph] sev 1 dir -1: Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts
+2026-10-29 21:18:12,076 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-29 21:18:12,078 INFO radar: evento [cointelegraph] sev 1 dir -1: Crypto PAC spending before midterms possibly obscured after reported FEC hack
+2026-10-29 21:18:12,976 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-29 21:18:12,978 INFO radar: evento [theblock] sev 1 dir -1: Polymarket resumes trading after $2.65 million exploit, says third-party provider was compromised
+2026-10-29 21:18:13,922 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-29 21:18:13,924 INFO radar: evento [theblock] sev 1 dir -1: CFTC sues Utah as battle over prediction market regulation intensifies
+2026-10-29 21:18:15,817 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-29 21:18:15,818 INFO radar: evento [decrypt] sev 1 dir -1: Fed Stands Pat, Bitcoin Holds Steady—But a December Rate Hike Is in Play
+2026-10-29 21:18:16,656 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-10-29 21:18:16,657 INFO radar: evento [decrypt] sev 2 dir -1: Coinbase Customer Data Hit in Analytics Vendor Breach, Funds ‘Not Impacted’
+2026-10-29 21:18:17,290 WARNING radar: SHOCK ON: bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%
+2026-10-29 21:18:17,291 WARNING radar: SHORT SOL abierto (shadow): colateral 18.61, 2x, entrada 97.69
+shock: {"since": 1793308697.289756, "bear_score": 9, "sol_px": 97.686, "btc_px": 79602.0, "headlines": ["Polymarket suspended trading amid reports of user funds being drained", "Your fridge could one day stake Ether, launch memecoins: CFTC chair", "Fed\u2019s hawkish rate hold keeps pressure on Bitcoin: Analysts", "Crypto PAC spending before midterms possibly obscured after reported FEC hack"], "why": "b
+bear 9 bull 1
+price {"SOL": {"px": 97.686, "ch15m": 0.021820083682008606, "ch1h": -0.015013864381144382, "ch4h": -0.038996556812592176}, "BTC": {"px": 79602.0, "ch15m": 0.00942187955718432, "ch1h": -0.009568127807293658, "ch4h": -0.01776856444806396}}
+  1 -1 cointelegraph Polymarket suspended trading amid reports of user funds being drained
+  1 1 cointelegraph HYPE teases all-time high as NYSE owner ICE eyes US Hyperliquid perps
+  1 -1 cointelegraph Your fridge could one day stake Ether, launch memecoins: CFTC chair
+  1 -1 cointelegraph Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts
+  1 -1 cointelegraph Crypto PAC spending before midterms possibly obscured after reported FEC hack
+  1 -1 theblock Polymarket resumes trading after $2.65 million exploit, says third-party provider was comp
+  1 -1 theblock CFTC sues Utah as battle over prediction market regulation intensifies
+  1 -1 decrypt Fed Stands Pat, Bitcoin Holds Steady—But a December Rate Hike Is in Play
+  2 -1 decrypt Coinbase Customer Data Hit in Analytics Vendor Breach, Funds ‘Not Impacted’
+--- servicio fomo-radar (cortos reales desde el laboratorio)
+fomo-radar: active
+--- lab: USDC y SOL
+lab AXbTdJLRephZMSAMoiRwfbCBWXFYtfHeLmbPj9TZk69M SOL 0.2445 USDC 29.278776
+state/desk_summary.json eq 168.33 pos []
+    Cerebro automático: estado | Efectivo ocioso (55%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 22 memecoins grandes están arriba del suyo: mercado bajista: no abro me
+    Ejecución | sell 9Pq7aL: vendió 100% de JOB (pick sin motivo: comprado en euforia por un cambio marginal de régimen) por 0.5723 SOL — posición cerrada sell 33jENU: vendió 1
+    Cierro JOB y DOPE: picks sin motivo. El escáner deja de comprar solo | Revisé las 17 entradas de la mesa y el libro desde el 27/10 agrupadas por el motivo real de compra. Las que tenían una historia verificable (GTA6: GTA VI sale e
+    Cerebro automático: estado | Efectivo ocioso (55%), pero SOL cayó fuerte (24 h -6.3%, 4 h -4.8%): no abro memecoins hasta que mejore.
+state/plan_lloyd_summary.json eq 552.38 pos [('USDC', 0.992), ('STONK', 0.875), ('SPX', 0.889)]
+    Radar: market shock detected | Lloyd's news radar sees a bearish shock: bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%. Headlines: Polymarket suspended trading amid repo
+    Automatic brain: status | [Picks] Idle cash (61%), but SOL and BTC are below their 20-day averages and only 3 of 22 large memecoins are above theirs: bear market: no new memecoins until 
+    What Lloyd learned (automatic review) | Automatic review of every closed trade, grouped by the reason it was bought. A category with 8+ trades and a negative average return switches itself off; Lloyd 
+    Execution | sell 9Pq7aL: sold 100% of JOB (screener pick without a story (category switched off: 0 of 14)) for 0.3527 SOL — position closed sell 33jENU: sold 100% of DOPE (
+state/plan_lab_summary.json eq 53.17 pos [('USDC', 0.983)]
+    Radar: SOL short opened (shadow) | Bearish news shock with price confirmation (bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%). Lloyd opens a small SOL short on Jupiter Perp
+    Execution | buy USDC: bought 29 USDC for 0.3055 SOL at $1.01809 (slippage +1.7%)
+    Lab test #1: news-shock short (USDC collateral ready) | Hypothesis under test: when bearish news (exchange trouble, hacks, forced selling) is confirmed by price, a small SOL short opened within minutes and closed wit
+    Plan started | Starting balance 0.5500 SOL ($55.36 at SOL $100.65). Hard floor: $22 (stops everything if the plan loses 60%).
+--- regime / categorias
+{
+ "state": "risk_off",
+ "ts": 1793308685.703419,
+ "since": 1793308685.7034187,
+ "exit_since": null,
+ "sol": 97.7,
+ "sol_ma20": 104.89,
+ "sol_ch4h": -3.3,
+ "sol_ch24h": -4.9,
+ "btc_vs_ma20": -0.029,
+ "breadth_above": 3,
+ "breadth_total": 22,
+ "why": "bear",
+ "shock": false,
+ "label": "defensive"
+}{'affiliation': 'learning', 'catalyst': 'learning', 'majors_trend': 'learning', 'manual_other': 'learning', 'narrative': 'learning', 'news_shock_short': 'learning', 'scan_pick': 'off', 'trend': 'learning'}
+Oct 29 21:18:17 simplai-prod systemd[1]: Started fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+== exit 0 ==

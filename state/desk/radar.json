@@ -1,0 +1,148 @@
+{
+ "shock": {
+  "since": 1793308697.289756,
+  "bear_score": 9,
+  "sol_px": 97.686,
+  "btc_px": 79602.0,
+  "headlines": [
+   "Polymarket suspended trading amid reports of user funds being drained",
+   "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+   "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts",
+   "Crypto PAC spending before midterms possibly obscured after reported FEC hack"
+  ],
+  "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%"
+ },
+ "events": [
+  {
+   "ts": 1793308685.169305,
+   "src": "cointelegraph",
+   "title": "Polymarket suspended trading amid reports of user funds being drained",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793308685.169305,
+   "src": "cointelegraph",
+   "title": "HYPE teases all-time high as NYSE owner ICE eyes US Hyperliquid perps",
+   "sev": 1,
+   "dir": 1,
+   "types": [
+    "bullish"
+   ]
+  },
+  {
+   "ts": 1793308685.169305,
+   "src": "cointelegraph",
+   "title": "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "regulatory"
+   ]
+  },
+  {
+   "ts": 1793308685.169305,
+   "src": "cointelegraph",
+   "title": "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "macro"
+   ]
+  },
+  {
+   "ts": 1793308685.169305,
+   "src": "cointelegraph",
+   "title": "Crypto PAC spending before midterms possibly obscured after reported FEC hack",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793308685.169305,
+   "src": "theblock",
+   "title": "Polymarket resumes trading after $2.65 million exploit, says third-party provider was compromised",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793308685.169305,
+   "src": "theblock",
+   "title": "CFTC sues Utah as battle over prediction market regulation intensifies",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "regulatory"
+   ]
+  },
+  {
+   "ts": 1793308685.169305,
+   "src": "decrypt",
+   "title": "Fed Stands Pat, Bitcoin Holds Steady—But a December Rate Hike Is in Play",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "macro"
+   ]
+  },
+  {
+   "ts": 1793308685.169305,
+   "src": "decrypt",
+   "title": "Coinbase Customer Data Hit in Analytics Vendor Breach, Funds ‘Not Impacted’",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  }
+ ],
+ "ts": 1793308759.379606,
+ "bear_score": 9,
+ "bull_score": 1,
+ "price": {
+  "SOL": {
+   "px": 97.801,
+   "ch15m": 0.023023012552301436,
+   "ch1h": -0.013854297958154738,
+   "ch4h": -0.03786522380718149
+  },
+  "BTC": {
+   "px": 79775.0,
+   "ch15m": 0.011615668471575802,
+   "ch1h": -0.007415610108123527,
+   "ch4h": -0.0156338688581229
+  }
+ },
+ "mode": "live",
+ "position": {
+  "ts": 1793308697.2913723,
+  "symbol": "SOL",
+  "side": "short",
+  "entry": 97.686,
+  "collateral_usd": 18.61,
+  "lev": 2.0,
+  "size_usd": 37.22,
+  "mode": "shadow",
+  "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%",
+  "headlines": [
+   "Polymarket suspended trading amid reports of user funds being drained",
+   "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+   "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts"
+  ],
+  "pubkey": null,
+  "sig": null,
+  "mark": 97.801,
+  "ret_px": -0.0012,
+  "pnl_usd_est": -0.04,
+  "age_h": 0.02
+ }
+}

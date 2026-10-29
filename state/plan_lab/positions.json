@@ -1,0 +1,23 @@
+{
+ "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": {
+  "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  "symbol": "USDC",
+  "opened_ts": 1793308686.6183815,
+  "entry_usd": 1.018092076638584,
+  "tokens": 29.278776,
+  "tokens_initial": 29.278776,
+  "sol_in": 0.30548188,
+  "sol_out": 0.0,
+  "peak_usd": 1.018092076638584,
+  "stop": 0.05,
+  "trail": 0.5,
+  "trail_after": 10.0,
+  "tp": [],
+  "tp_done": [],
+  "thesis": "USDC collateral for the news-shock short test (perps need USDC).",
+  "id": "lab-2026-10-29-01",
+  "sleeve": "cash",
+  "reason": "collateral",
+  "last_usd": 1.0011144190867838
+ }
+}

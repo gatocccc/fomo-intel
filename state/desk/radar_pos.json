@@ -1,0 +1,22 @@
+{
+ "ts": 1793308697.2913723,
+ "symbol": "SOL",
+ "side": "short",
+ "entry": 97.686,
+ "collateral_usd": 18.61,
+ "lev": 2.0,
+ "size_usd": 37.22,
+ "mode": "shadow",
+ "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%",
+ "headlines": [
+  "Polymarket suspended trading amid reports of user funds being drained",
+  "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+  "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts"
+ ],
+ "pubkey": null,
+ "sig": null,
+ "mark": 97.801,
+ "ret_px": -0.0012,
+ "pnl_usd_est": -0.04,
+ "age_h": 0.02
+}

@@ -1,0 +1,306 @@
+{
+ "ts": 1793308685.7048526,
+ "n_total": 14,
+ "by_category": {
+  "affiliation": {
+   "n": 1,
+   "wins": 1,
+   "mean_ret": 0.139,
+   "median_ret": 0.139,
+   "pnl_usd": 4.26,
+   "best": 0.139,
+   "worst": 0.139,
+   "symbols": [
+    "REMUS"
+   ],
+   "last_ts": 1793206937.973388
+  },
+  "catalyst": {
+   "n": 2,
+   "wins": 2,
+   "mean_ret": 1.9175,
+   "median_ret": 1.9175,
+   "pnl_usd": 174.83,
+   "best": 2.658,
+   "worst": 1.177,
+   "symbols": [
+    "GTA6"
+   ],
+   "last_ts": 1793286344.6734087
+  },
+  "majors_trend": {
+   "n": 0
+  },
+  "manual_other": {
+   "n": 0
+  },
+  "narrative": {
+   "n": 0
+  },
+  "news_shock_short": {
+   "n": 0
+  },
+  "scan_pick": {
+   "n": 10,
+   "wins": 0,
+   "mean_ret": -0.1378,
+   "median_ret": -0.1155,
+   "pnl_usd": -62.25,
+   "best": -0.02,
+   "worst": -0.292,
+   "symbols": [
+    "DOAS",
+    "INVERSE",
+    "LMAO!",
+    "SAPLING",
+    "SI",
+    "STONKLANA"
+   ],
+   "last_ts": 1793279226.655928
+  },
+  "trend": {
+   "n": 1,
+   "wins": 0,
+   "mean_ret": -0.024,
+   "median_ret": -0.024,
+   "pnl_usd": -0.94,
+   "best": -0.024,
+   "worst": -0.024,
+   "symbols": [
+    "USELESS"
+   ],
+   "last_ts": 1793235137.00246
+  }
+ },
+ "categories": {
+  "affiliation": {
+   "status": "learning",
+   "n": 1,
+   "mean_ret": 0.139,
+   "pnl_usd": 4.26,
+   "ts": 1793308685.7048526,
+   "name_es": "Afiliación a un producto real",
+   "name_en": "Official token of a real product"
+  },
+  "catalyst": {
+   "status": "learning",
+   "n": 2,
+   "mean_ret": 1.9175,
+   "pnl_usd": 174.83,
+   "ts": 1793308685.7048526,
+   "name_es": "Catalizador con fecha",
+   "name_en": "Dated catalyst"
+  },
+  "majors_trend": {
+   "status": "learning",
+   "n": 0,
+   "mean_ret": null,
+   "pnl_usd": null,
+   "ts": 1793308685.7048526,
+   "name_es": "Tendencia en majors",
+   "name_en": "Majors trend"
+  },
+  "manual_other": {
+   "status": "learning",
+   "n": 0,
+   "mean_ret": null,
+   "pnl_usd": null,
+   "ts": 1793308685.7048526,
+   "name_es": "Otro (manual)",
+   "name_en": "Other (manual)"
+  },
+  "narrative": {
+   "status": "learning",
+   "n": 0,
+   "mean_ret": null,
+   "pnl_usd": null,
+   "ts": 1793308685.7048526,
+   "name_es": "Narrativa verificada",
+   "name_en": "Verified narrative"
+  },
+  "news_shock_short": {
+   "status": "learning",
+   "n": 0,
+   "mean_ret": null,
+   "pnl_usd": null,
+   "ts": 1793308685.7048526,
+   "name_es": "Corto por shock de noticias",
+   "name_en": "News-shock short"
+  },
+  "scan_pick": {
+   "status": "off",
+   "n": 10,
+   "mean_ret": -0.1378,
+   "pnl_usd": -62.25,
+   "ts": 1793308685.7048526,
+   "name_es": "Pick del escáner (sin historia)",
+   "name_en": "Screener pick (no story)"
+  },
+  "trend": {
+   "status": "learning",
+   "n": 1,
+   "mean_ret": -0.024,
+   "pnl_usd": -0.94,
+   "ts": 1793308685.7048526,
+   "name_es": "Tendencia 20 días en memes establecidas",
+   "name_en": "20-day trend, established memes"
+  }
+ },
+ "changes": [],
+ "rows": [
+  {
+   "src": "lloyd",
+   "ts": 1793286344.6734087,
+   "symbol": "GTA6",
+   "ret": 1.177,
+   "pnl_usd": 78.68,
+   "cat": "catalyst",
+   "peak": 4.2,
+   "hold_h": 22.6,
+   "why": "stop (2.14x)"
+  },
+  {
+   "src": "mesa",
+   "ts": 1793286342.3722293,
+   "symbol": "GTA6",
+   "ret": 2.658,
+   "pnl_usd": 96.15,
+   "cat": "catalyst",
+   "peak": 6.52,
+   "hold_h": 47.7,
+   "why": "stop (3.32x)"
+  },
+  {
+   "src": "mesa",
+   "ts": 1793279226.655928,
+   "symbol": "SI",
+   "ret": -0.184,
+   "pnl_usd": -3.04,
+   "cat": "scan_pick",
+   "peak": 1.0,
+   "hold_h": 17.7,
+   "why": "tesis rota: debajo del promedio de 20 días, −18% en 24 h, sin catalizador"
+  },
+  {
+   "src": "mesa",
+   "ts": 1793239141.3750663,
+   "symbol": "SAPLING",
+   "ret": -0.292,
+   "pnl_usd": -7.8,
+   "cat": "scan_pick",
+   "peak": 1.12,
+   "hold_h": 22.9,
+   "why": "stop (0.70x)"
+  },
+  {
+   "src": "lloyd",
+   "ts": 1793235773.5477037,
+   "symbol": "INVERSE",
+   "ret": -0.257,
+   "pnl_usd": -14.96,
+   "cat": "scan_pick",
+   "peak": 1.03,
+   "hold_h": 1.2,
+   "why": "stop (0.75x)"
+  },
+  {
+   "src": "lloyd",
+   "ts": 1793235354.3623447,
+   "symbol": "STONKLANA",
+   "ret": -0.278,
+   "pnl_usd": -16.28,
+   "cat": "scan_pick",
+   "peak": 1.0,
+   "hold_h": 1.1,
+   "why": "stop (0.73x)"
+  },
+  {
+   "src": "lloyd",
+   "ts": 1793235137.00246,
+   "symbol": "USELESS",
+   "ret": -0.024,
+   "pnl_usd": -0.94,
+   "cat": "trend",
+   "peak": 1.0,
+   "hold_h": 0.7,
+   "why": "anti-rug check: 4 top holders (15.3%) funded by the same non-exchange wallet"
+  },
+  {
+   "src": "lloyd",
+   "ts": 1793232577.4007885,
+   "symbol": "SI",
+   "ret": -0.053,
+   "pnl_usd": -3.27,
+   "cat": "scan_pick",
+   "peak": 1.0,
+   "hold_h": 7.7,
+   "why": "lost its trend (below 20-day average)"
+  },
+  {
+   "src": "lloyd",
+   "ts": 1793231397.033491,
+   "symbol": "SI",
+   "ret": -0.036,
+   "pnl_usd": -2.22,
+   "cat": "scan_pick",
+   "peak": 1.04,
+   "hold_h": 7.3,
+   "why": "rotation into the plan's own range"
+  },
+  {
+   "src": "lloyd",
+   "ts": 1793231392.496943,
+   "symbol": "SAPLING",
+   "ret": -0.143,
+   "pnl_usd": -9.84,
+   "cat": "scan_pick",
+   "peak": 1.0,
+   "hold_h": 2.9,
+   "why": "rotation into the plan's own range"
+  },
+  {
+   "src": "lloyd",
+   "ts": 1793214967.7721155,
+   "symbol": "DOAS",
+   "ret": -0.02,
+   "pnl_usd": -1.4,
+   "cat": "scan_pick",
+   "peak": 1.0,
+   "hold_h": 0.1,
+   "why": "fabricated-volume list; automatic buy by filter mistake"
+  },
+  {
+   "src": "mesa",
+   "ts": 1793214967.0149581,
+   "symbol": "DOAS",
+   "ret": -0.027,
+   "pnl_usd": -0.93,
+   "cat": "scan_pick",
+   "peak": 1.0,
+   "hold_h": 0.1,
+   "why": "lista de volumen fabricado; compra automática por error de filtro"
+  },
+  {
+   "src": "mesa",
+   "ts": 1793206937.973388,
+   "symbol": "REMUS",
+   "ret": 0.139,
+   "pnl_usd": 4.26,
+   "cat": "affiliation",
+   "peak": 1.52,
+   "hold_h": 24.2,
+   "why": "stop (1.15x)"
+  },
+  {
+   "src": "mesa",
+   "ts": 1793131281.5327451,
+   "symbol": "LMAO!",
+   "ret": -0.088,
+   "pnl_usd": -2.51,
+   "cat": "scan_pick",
+   "peak": 1.03,
+   "hold_h": 4.7,
+   "why": "chequeo anti-rug: 6 top holders (7,4%) fondeados por el creador, fábrica con 289"
+  }
+ ]
+}
