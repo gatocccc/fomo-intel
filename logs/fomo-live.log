@@ -1,4 +1,3 @@
-Oct 29 02:02:03 simplai-prod python3[1623361]: 2026-10-29 02:02:03,460 INFO live.stream: stream conectado
 Oct 29 02:02:03 simplai-prod python3[1623361]: 2026-10-29 02:02:03,638 INFO live: latido: stream=True tokens_vistos=0 seguidos=0 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$100
 Oct 29 02:03:24 simplai-prod python3[1623361]: 2026-10-29 02:03:24,991 INFO live.helius: HELIUS 4vw54B buy GmbLe2MG 3.0115 SOL @ 9.812e-08 (lat 0.9s)
 Oct 29 02:03:30 simplai-prod python3[1623361]: 2026-10-29 02:03:30,296 INFO live.helius: HELIUS 4vw54B buy GmbLe2MG 0.2600 SOL @ 1.643e-07 (lat 0.9s)
@@ -298,3 +297,4 @@ Oct 29 13:27:53 simplai-prod python3[1623361]: 2026-10-29 13:27:53,572 INFO live
 Oct 29 13:32:53 simplai-prod python3[1623361]: 2026-10-29 13:32:53,942 INFO live: latido: stream=True tokens_vistos=5517 seguidos=66 candidatos=0 abiertas=0 cerradas=1 st_requests=136 SOL=$101
 Oct 29 13:37:54 simplai-prod python3[1623361]: 2026-10-29 13:37:54,407 INFO live: latido: stream=True tokens_vistos=5576 seguidos=77 candidatos=0 abiertas=0 cerradas=1 st_requests=137 SOL=$100
 Oct 29 13:42:55 simplai-prod python3[1623361]: 2026-10-29 13:42:55,475 INFO live: latido: stream=True tokens_vistos=5633 seguidos=82 candidatos=0 abiertas=0 cerradas=1 st_requests=138 SOL=$100
+Oct 29 13:47:55 simplai-prod python3[1623361]: 2026-10-29 13:47:55,744 INFO live: latido: stream=True tokens_vistos=5673 seguidos=66 candidatos=0 abiertas=0 cerradas=1 st_requests=139 SOL=$100
