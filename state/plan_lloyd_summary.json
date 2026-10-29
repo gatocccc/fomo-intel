@@ -1,17 +1,17 @@
 {
- "now": 1793271589.0313625,
+ "now": 1793271901.8352606,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 1,
- "equity_usd": 551.71,
- "equity_sol": 5.4931,
- "cash_sol": 0.3404,
- "positions_usd": 517.52,
- "sol_usd": 100.44,
- "mult": 1.008,
+ "equity_usd": 553.06,
+ "equity_sol": 5.5067,
+ "cash_sol": 0.0815,
+ "positions_usd": 544.87,
+ "sol_usd": 100.43,
+ "mult": 1.01,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,20 +41,20 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.014917711366881376,
+   "last_usd": 0.015068883493227533,
    "sleeve": "picks",
    "from_plan": "agresivo",
-   "mult": 1.986,
-   "value_usd": 131.75
+   "mult": 2.006,
+   "value_usd": 133.08
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
    "symbol": "USDC",
    "opened_ts": 1793204947.898395,
-   "entry_usd": 1.0083260823242841,
-   "tokens": 317.296452,
-   "tokens_initial": 549.0662669999999,
-   "sol_in": 5.47924614,
+   "entry_usd": 1.0089091108155703,
+   "tokens": 342.89241899999996,
+   "tokens_initial": 574.6622339999999,
+   "sol_in": 5.738215578,
    "sol_out": 2.268072527,
    "peak_usd": 1.0075943560922527,
    "stop": 0.05,
@@ -64,11 +64,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994909790168364,
+   "last_usd": 0.999502303596985,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 317.13
+   "value_usd": 342.72
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -92,11 +92,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14334389332696143,
+   "last_usd": 0.14541879797819846,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.927,
-   "value_usd": 36.32
+   "mult": 0.94,
+   "value_usd": 36.84
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -120,11 +120,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3956820664032139,
+   "last_usd": 0.3944355823735177,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.947,
-   "value_usd": 23.01
+   "mult": 0.944,
+   "value_usd": 22.94
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -153,9 +153,9 @@
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-lloyd-20261029-0319",
    "sleeve": "picks",
-   "last_usd": 0.0018983127998414453,
-   "mult": 0.93,
-   "value_usd": 9.31
+   "last_usd": 0.0018940368876192632,
+   "mult": 0.927,
+   "value_usd": 9.29
   }
  ],
  "equity": [
@@ -1066,6 +1066,10 @@
   [
    1793271309,
    552.51
+  ],
+  [
+   1793271619,
+   551.66
   ]
  ],
  "closed": [
@@ -1169,6 +1173,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793271855.0546403,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.258969438,
+   "tokens": 25.595966999999973,
+   "price_usd": 1.016136533468,
+   "slip": 1.66,
+   "sig": "2HqELZ3nvySQ57ofFD9aHk89KYd3ioigNwE49q3xi9PEth1eRgbcbGiMdpPZYJ4hK2RtAQGWkub1frNNksBY5MLW",
+   "error": "",
+   "id": "auto-lloyd-20261029-1104"
+  },
   {
    "ts": 1793271246.95222,
    "side": "sell",
@@ -1557,6 +1575,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793271855.0569587,
+   "title": "Execution",
+   "text": "buy USDC: bought 26 USDC for 0.2590 SOL at $1.01614 (slippage +1.7%)",
+   "kind": "execution",
+   "id": "auto-lloyd-20261029-1104"
+  },
+  {
+   "ts": 1793271855.056815,
+   "title": "Automatic brain: rebalance",
+   "text": "",
+   "kind": "decisión",
+   "id": "auto-lloyd-20261029-1104"
+  },
   {
    "ts": 1793271308.2244046,
    "title": "A tenth of the book moves to the lab",
@@ -2005,12 +2037,12 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793271245.7721236,
+  "last_run": 1793271844.1224916,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
-   "ts": 1793266683.9888396,
-   "title": "Automatic brain: stops raised",
+   "ts": 1793271844.1247168,
+   "title": "Automatic brain: rebalance",
    "orders": 1,
    "mode": "live"
   },

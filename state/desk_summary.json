@@ -1,17 +1,17 @@
 {
- "now": 1793271581.646468,
+ "now": 1793271888.3686135,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 162.67,
- "equity_sol": 1.6199,
+ "equity_usd": 163.33,
+ "equity_sol": 1.6264,
  "cash_sol": 0.4791,
- "positions_usd": 114.56,
- "sol_usd": 100.42,
- "mult": 1.642,
+ "positions_usd": 115.22,
+ "sol_usd": 100.43,
+ "mult": 1.648,
  "halt": false,
  "pause": false,
  "positions": [
@@ -43,9 +43,9 @@
    ],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.015068691308232287,
-   "mult": 3.113,
-   "value_usd": 83.67
+   "last_usd": 0.015195423069191926,
+   "mult": 3.139,
+   "value_usd": 84.37
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -73,9 +73,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.012674817333428921,
+   "last_usd": 0.012669890448821806,
    "mult": 0.846,
-   "value_usd": 14.2
+   "value_usd": 14.19
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -104,9 +104,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.0018983127998414453,
-   "mult": 0.947,
-   "value_usd": 16.69
+   "last_usd": 0.0018940368876192632,
+   "mult": 0.945,
+   "value_usd": 16.66
   }
  ],
  "equity": [
@@ -2201,6 +2201,10 @@
   [
    1793271551,
    161.83
+  ],
+  [
+   1793271857,
+   163.1
   ]
  ],
  "closed": [
@@ -2428,6 +2432,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793271857.5249317,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (27%), pero SOL cae fuerte (-2.1% en 24 h): no abro memecoins hasta que se calme.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261029-1104"
+  },
   {
    "ts": 1793271259.707852,
    "title": "Cerebro automático: estado",
@@ -2870,7 +2881,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793271245.7685483,
+  "last_run": 1793271844.1183922,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -2880,7 +2891,7 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793271245.7700849,
+   "ts": 1793271844.1200767,
    "text": "Efectivo ocioso (27%), pero SOL cae fuerte (-2.1% en 24 h): no abro memecoins hasta que se calme."
   },
   "trad_status": null,
