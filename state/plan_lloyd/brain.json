@@ -1,11 +1,11 @@
 {
  "mode": "live",
- "last_run": 1793249883.9828184,
+ "last_run": 1793250484.8446987,
  "regime": "risk_off",
  "profile": "book",
  "_noted_no_cands": 1793238965.2395556,
- "bal_ts": 1793246884.6317782,
- "trad_status": "SOL -5.2%, BTC -2.6%, ETH -4.8%, JUP -14.7%",
+ "bal_ts": 1793250484.8462877,
+ "trad_status": "2 of 18 established memecoins above their 20-day average (best: SPX +6%, STONK +8%)",
  "trad_ts": 1793246905.153908,
  "status": "ok",
  "last_action": {
@@ -16,8 +16,8 @@
  },
  "_noted_book": 1793239563.6115077,
  "last_note": {
-  "ts": 1793242685.5128784,
-  "text": "[Majors] Still in USDC on purpose. Versus their 20-day averages: SOL -4.6%, BTC -2.4%, ETH -4.4%, JUP -13.5%. The plan buys each asset the hour it closes 1% above its average; until then, cash is the position. Checked every hour."
+  "ts": 1793250484.8472638,
+  "text": "[Established] Holding mostly USDC on purpose: 2 of 18 established memecoins above their 20-day average (best: SPX +6%, STONK +8%). This plan buys established memecoins only when they are trending up; today most are falling, and USDC has protected the balance. Checked every hour."
  },
  "_noted_trad": 1793242685.5124657,
  "auto_buys": [
@@ -26,5 +26,6 @@
    "sym": "DOPE",
    "ts": 1793243954.599274
   }
- ]
+ ],
+ "_noted_bal": 1793250484.8465545
 }
