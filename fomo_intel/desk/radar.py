@@ -261,8 +261,9 @@ class Radar:
         bull = sum(e["cls"]["sev"] for e in ev if e["cls"]["dir"] > 0)
         sol, btc = px.get("SOL") or {}, px.get("BTC") or {}
         price_conf = (sol.get("ch1h", 0) <= R["sol_1h"]) or (sol.get("ch4h", 0) <= R["sol_4h"]) or (btc.get("ch1h", 0) <= R["btc_1h"])
+        strong = any(e["cls"]["sev"] >= 2 for e in ev if e["cls"]["dir"] < 0)   # al menos una noticia bajista de peso, no solo ruido de sev 1
         sh = self.state.get("shock")
-        if not sh and bear >= R["min_bear_score"] and bear > bull and price_conf:
+        if not sh and bear >= R["min_bear_score"] and strong and bear > bull and price_conf:
             heads = [e["title"] for e in ev if e["cls"]["dir"] < 0][:4]
             sh = {"since": now, "bear_score": bear, "sol_px": sol.get("px"), "btc_px": btc.get("px"), "headlines": heads,
                   "why": f"bearish news score {bear} in {R['window_min']} min; SOL 1h {sol.get('ch1h', 0):+.1%}, 4h {sol.get('ch4h', 0):+.1%}; BTC 1h {btc.get('ch1h', 0):+.1%}"}
