@@ -1,17 +1,17 @@
 {
- "now": 1793245479.583118,
+ "now": 1793245785.751083,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 131.36,
- "equity_sol": 1.3192,
+ "equity_usd": 131.78,
+ "equity_sol": 1.3234,
  "cash_sol": 0.2168,
- "positions_usd": 109.77,
+ "positions_usd": 110.19,
  "sol_usd": 99.58,
- "mult": 1.326,
+ "mult": 1.33,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.01073049476443549,
-   "mult": 2.216,
-   "value_usd": 79.44
+   "last_usd": 0.010818957042599298,
+   "mult": 2.235,
+   "value_usd": 80.1
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.012184485272469622,
-   "mult": 0.814,
-   "value_usd": 13.65
+   "last_usd": 0.012073696765046856,
+   "mult": 0.806,
+   "value_usd": 13.52
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -102,9 +102,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.0018974184830718836,
-   "mult": 0.947,
-   "value_usd": 16.68
+   "last_usd": 0.0018850188034238626,
+   "mult": 0.941,
+   "value_usd": 16.58
   }
  ],
  "equity": [
@@ -1855,6 +1855,10 @@
   [
    1793245449,
    129.97
+  ],
+  [
+   1793245755,
+   131.27
   ]
  ],
  "closed": [
@@ -2314,7 +2318,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793245083.9771812,
+  "last_run": 1793245685.3604894,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
@@ -2329,6 +2333,6 @@
   },
   "trad_status": null,
   "sol_ch24h": -2.3,
-  "sol_vs_ma20": -0.0498
+  "sol_vs_ma20": -0.0501
  }
 }
