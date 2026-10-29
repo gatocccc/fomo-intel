@@ -1,17 +1,17 @@
 {
- "now": 1793232000.6872473,
+ "now": 1793232281.8265088,
  "start_ts": 1793203599.7169404,
  "start_usd": 200.84,
  "start_sol": 1.99,
  "goal_usd": 401.68,
  "days": 30,
  "day": 1,
- "equity_usd": 209.33,
- "equity_sol": 2.0455,
+ "equity_usd": 201.22,
+ "equity_sol": 1.9663,
  "cash_sol": 0.0544,
- "positions_usd": 203.75,
+ "positions_usd": 195.65,
  "sol_usd": 102.34,
- "mult": 1.042,
+ "mult": 1.002,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,7 +24,7 @@
    "tokens_initial": 8831.632745155,
    "sol_in": 0.65723188,
    "sol_out": 0.0,
-   "peak_usd": 0.010268887902913169,
+   "peak_usd": 0.010901964093140324,
    "stop": -0.05,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.009919811479588758,
-   "mult": 1.32,
-   "value_usd": 87.61
+   "last_usd": 0.008888919428015053,
+   "mult": 1.183,
+   "value_usd": 78.5
   },
   {
    "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Fast plan: $1.4M token moving (+102% 24h) bought on a pullback (77% of its 3-day high); clean anti-rug check. Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x.",
    "id": "auto-agresivo-20261028-2349",
-   "last_usd": 0.0013717642377163775,
-   "mult": 1.034,
-   "value_usd": 60.38
+   "last_usd": 0.0013657133645388212,
+   "mult": 1.029,
+   "value_usd": 60.11
   },
   {
    "mint": "GF74fBfcaeLjUiUwKpRiUbvMQtTvNyzMoo6KNyyqNyk6",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Fast plan: $0.6M token moving (+141% 24h) bought on a pullback (83% of its 3-day high); clean anti-rug check. Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x.",
    "id": "auto-agresivo-20261028-2349",
-   "last_usd": 0.00044646800568585516,
-   "mult": 0.947,
-   "value_usd": 55.77
+   "last_usd": 0.00045661613353591965,
+   "mult": 0.969,
+   "value_usd": 57.04
   }
  ],
  "equity": [
@@ -490,6 +490,10 @@
   [
    1793231970,
    212.62
+  ],
+  [
+   1793232282,
+   201.22
   ]
  ],
  "closed": [

@@ -1,17 +1,17 @@
 {
- "now": 1793231987.178308,
+ "now": 1793232296.7389624,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 134.81,
- "equity_sol": 1.3174,
+ "equity_usd": 124.53,
+ "equity_sol": 1.2169,
  "cash_sol": 0.2046,
- "positions_usd": 113.87,
+ "positions_usd": 103.59,
  "sol_usd": 102.34,
- "mult": 1.361,
+ "mult": 1.257,
  "halt": false,
  "pause": false,
  "positions": [
@@ -24,7 +24,7 @@
    "tokens_initial": 7403.269484125,
    "sol_in": 0.355731879,
    "sol_out": 0.0,
-   "peak_usd": 0.010268887998738405,
+   "peak_usd": 0.010901964093140324,
    "stop": -0.591,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -41,9 +41,9 @@
    "tp_done": [],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.010268887889685503,
-   "mult": 2.121,
-   "value_usd": 76.02
+   "last_usd": 0.008888919363970231,
+   "mult": 1.836,
+   "value_usd": 65.81
   },
   {
    "mint": "BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W",
@@ -71,9 +71,9 @@
    "tp_done": [],
    "thesis": "Token de sapling.cash, launchpad nativo de Zcash con comisiones reales (DefiLlama). US$3,1M, 32 días, volumen 42% de la mcap y acelerando, LIMPIO en anti-rug. Entrada 29% bajo el máximo.",
    "id": "2026-10-28-01",
-   "last_usd": 0.003298003897099224,
-   "mult": 0.808,
-   "value_usd": 21.89
+   "last_usd": 0.003334504416491547,
+   "mult": 0.817,
+   "value_usd": 22.13
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -101,9 +101,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.014253348375767562,
-   "mult": 0.952,
-   "value_usd": 15.96
+   "last_usd": 0.013980481639248877,
+   "mult": 0.933,
+   "value_usd": 15.66
   }
  ],
  "equity": [
@@ -1666,6 +1666,10 @@
   [
    1793231956,
    134.52
+  ],
+  [
+   1793232266,
+   127.77
   ]
  ],
  "closed": [
