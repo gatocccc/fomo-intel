@@ -1,14 +1,14 @@
 {
- "ts": 1793289425.5358834,
+ "ts": 1793290024.8964713,
  "regime": {
   "state": "risk_off",
-  "ts": 1793288825.1352148,
+  "ts": 1793290024.8870163,
   "since": 1793279225.3578277,
-  "sol": 102.58,
+  "sol": 102.83,
   "sol_ma20": 104.89,
-  "sol_ch4h": 2.2,
-  "sol_ch24h": 1.5,
-  "btc_vs_ma20": -0.001,
+  "sol_ch4h": 2.3,
+  "sol_ch24h": 1.6,
+  "btc_vs_ma20": -0.0012,
   "breadth_above": 3,
   "breadth_total": 21,
   "why": "bear",
@@ -41,15 +41,15 @@
    "key": "established",
    "name": "Established memes",
    "target_pct": 10,
-   "value_usd": 62.48,
-   "pct": 11.0,
+   "value_usd": 62.76,
+   "pct": 11.1,
    "positions": 2
   },
   {
    "key": "picks",
    "name": "Picks",
    "target_pct": 20,
-   "value_usd": 10.29,
+   "value_usd": 10.19,
    "pct": 1.8,
    "positions": 1
   }

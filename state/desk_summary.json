@@ -1,17 +1,17 @@
 {
- "now": 1793289893.4827876,
+ "now": 1793290197.2721114,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 187.9,
- "equity_sol": 1.8335,
+ "equity_usd": 188.35,
+ "equity_sol": 1.831,
  "cash_sol": 1.6522,
- "positions_usd": 18.58,
- "sol_usd": 102.48,
- "mult": 1.896,
+ "positions_usd": 18.39,
+ "sol_usd": 102.86,
+ "mult": 1.901,
  "halt": false,
  "pause": false,
  "positions": [
@@ -42,9 +42,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.00211264682680226,
-   "mult": 1.054,
-   "value_usd": 18.58
+   "last_usd": 0.002091448701657649,
+   "mult": 1.044,
+   "value_usd": 18.39
   }
  ],
  "equity": [
@@ -2383,6 +2383,10 @@
   [
    1793289893,
    187.9
+  ],
+  [
+   1793290197,
+   188.35
   ]
  ],
  "closed": [
@@ -2678,6 +2682,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793290029.87579,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (88%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261029-1607"
+  },
   {
    "ts": 1793289437.8806264,
    "title": "Cerebro automático: estado",
@@ -3421,7 +3432,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793289423.739045,
+  "last_run": 1793290024.890306,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -3431,11 +3442,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793289423.7407477,
-   "text": "Efectivo ocioso (87%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
+   "ts": 1793290024.8922493,
+   "text": "Efectivo ocioso (88%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": 1.5,
-  "sol_vs_ma20": -0.022
+  "sol_ch24h": 1.6,
+  "sol_vs_ma20": -0.0196
  }
 }
