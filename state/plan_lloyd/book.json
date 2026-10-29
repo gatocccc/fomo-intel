@@ -1,5 +1,5 @@
 {
- "ts": 1793246907.919243,
+ "ts": 1793247483.9855611,
  "regime": {
   "state": "neutral",
   "ts": 1793246884.6240704,
@@ -40,7 +40,7 @@
    "key": "established",
    "name": "Established memes",
    "target_pct": 25,
-   "value_usd": 58.4,
+   "value_usd": 58.37,
    "pct": 10.1,
    "positions": 2
   },
@@ -48,8 +48,8 @@
    "key": "picks",
    "name": "Picks",
    "target_pct": 20,
-   "value_usd": 110.0,
-   "pct": 19.1,
+   "value_usd": 110.25,
+   "pct": 19.2,
    "positions": 2
   }
  ],
