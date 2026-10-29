@@ -14,6 +14,17 @@
  },
  "events": [
   {
+   "ts": 1793317263.7510424,
+   "src": "cointelegraph",
+   "title": "Live Updates: Binance says $2.54 billion frozen after hack",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793316663.8186147,
    "src": "cointelegraph",
    "title": "Binance hack rattles crypto markets as BNB falls 7%, Bitcoin slides",
@@ -194,21 +205,21 @@
    ]
   }
  ],
- "ts": 1793317144.4435387,
- "bear_score": 10,
+ "ts": 1793317446.0861273,
+ "bear_score": 12,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.334,
-   "ch15m": -0.0060359681796138265,
-   "ch1h": -0.01222238172384793,
-   "ch4h": -0.03800679049330935
+   "px": 96.419,
+   "ch15m": -0.002359100644613976,
+   "ch1h": -0.00984822033724253,
+   "ch4h": -0.0367732267732267
   },
   "BTC": {
-   "px": 78551.0,
-   "ch15m": -0.003362261469752381,
-   "ch1h": -0.006940581542351443,
-   "ch4h": -0.02820699978968466
+   "px": 78400.0,
+   "ch15m": -0.003951163115701761,
+   "ch1h": -0.007506994290633395,
+   "ch4h": -0.03015908359929731
   }
  },
  "mode": "live",
@@ -229,9 +240,9 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 96.334,
-  "ret_px": 0.0123,
-  "pnl_usd_est": 0.46,
-  "age_h": 2.25
+  "mark": 96.419,
+  "ret_px": 0.0114,
+  "pnl_usd_est": 0.42,
+  "age_h": 2.33
  }
 }

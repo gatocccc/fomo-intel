@@ -1,0 +1,17 @@
+== 152_jup_pases 2026-10-29T23:43:04Z ==
+--- servicios
+active active active 
+--- clave jupiter: presente
+jupiter sell EPjFWd: jup swap 429: {"code":429,"message":"[API Gateway] Too many requests"}; voy por Solana Tracker
+billetera G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek SOL 0.084 SOL/USD 96.09623080452376
+cotización ok: in 0.03 SOL -> out 2.883087 USDC; impacto 0 ; ruta ['Kipseli'] ; tx 732 bytes
+IDA  ok=True via=jupiter sol=0.028535 usdc=2.8831 err=
+VUELTA ok=True via=solanatracker usdc=2.8831 sol=0.029530 err=
+costo del viaje completo: -0.000995 SOL = US$-0.096 = -3.49% (incluye gas y prioridad; con Solana Tracker eran ~1% solo de comisión)
+--- últimos logs del mirror
+Oct 29 23:43:04 simplai-prod systemd[1]: Stopping fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book)...
+Oct 29 23:43:04 simplai-prod systemd[1]: fomo-mirror.service: Deactivated successfully.
+Oct 29 23:43:04 simplai-prod systemd[1]: Stopped fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 29 23:43:04 simplai-prod systemd[1]: fomo-mirror.service: Consumed 49.194s CPU time, 23.4M memory peak, 0B memory swap peak.
+Oct 29 23:43:04 simplai-prod systemd[1]: Started fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+== exit 0 ==
