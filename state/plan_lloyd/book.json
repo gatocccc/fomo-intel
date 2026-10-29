@@ -1,5 +1,5 @@
 {
- "ts": 1793276045.0214581,
+ "ts": 1793276644.1216047,
  "regime": {
   "state": "risk_off",
   "ts": 1793276045.0130649,
@@ -25,7 +25,7 @@
    "name": "Cash",
    "target_pct": 60,
    "value_usd": 342.86,
-   "pct": 62.4,
+   "pct": 61.6,
    "positions": 0
   },
   {
@@ -40,16 +40,16 @@
    "key": "established",
    "name": "Established memes",
    "target_pct": 10,
-   "value_usd": 59.79,
-   "pct": 10.9,
+   "value_usd": 59.6,
+   "pct": 10.7,
    "positions": 2
   },
   {
    "key": "picks",
    "name": "Picks",
    "target_pct": 20,
-   "value_usd": 138.45,
-   "pct": 25.2,
+   "value_usd": 146.27,
+   "pct": 26.3,
    "positions": 2
   }
  ],
