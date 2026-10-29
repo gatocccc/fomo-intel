@@ -1,17 +1,17 @@
 {
- "now": 1793277594.9066007,
+ "now": 1793277873.5904984,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 1,
- "equity_usd": 569.23,
- "equity_sol": 5.6713,
+ "equity_usd": 567.57,
+ "equity_sol": 5.6481,
  "cash_sol": 0.0815,
- "positions_usd": 561.06,
- "sol_usd": 100.37,
- "mult": 1.04,
+ "positions_usd": 559.39,
+ "sol_usd": 100.49,
+ "mult": 1.036,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,11 +41,11 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.016913550238045097,
+   "last_usd": 0.016707916731659667,
    "sleeve": "picks",
    "from_plan": "agresivo",
-   "mult": 2.251,
-   "value_usd": 149.37
+   "mult": 2.224,
+   "value_usd": 147.56
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
@@ -64,11 +64,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.999464489179085,
+   "last_usd": 0.9994890007896408,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 342.71
+   "value_usd": 342.72
   },
   {
    "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
@@ -92,11 +92,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14498252678430099,
+   "last_usd": 0.14546797556302007,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.938,
-   "value_usd": 36.73
+   "mult": 0.941,
+   "value_usd": 36.85
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -120,11 +120,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.39404413361850454,
+   "last_usd": 0.3942672423755106,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.943,
-   "value_usd": 22.92
+   "mult": 0.944,
+   "value_usd": 22.93
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -153,9 +153,9 @@
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-lloyd-20261029-0319",
    "sleeve": "picks",
-   "last_usd": 0.0019015802989272846,
+   "last_usd": 0.0019023342252353572,
    "mult": 0.931,
-   "value_usd": 9.32
+   "value_usd": 9.33
   }
  ],
  "equity": [
@@ -1146,6 +1146,10 @@
   [
    1793277502,
    566.68
+  ],
+  [
+   1793277811,
+   573.34
   ]
  ],
  "closed": [
@@ -2113,7 +2117,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793277245.2482967,
+  "last_run": 1793277844.1237829,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -2126,7 +2130,7 @@
    "ts": 1793261284.8690205,
    "text": "Market is defensive. Pockets: Cash 67% (target 60%), Majors 0% (target 10%), Established memes 10% (target 10%), Picks 22% (target 20%). Nothing to change this hour: every open position is inside its rules and no new candidate passed the filters."
   },
-  "trad_status": "SOL -4.3%, BTC -2.2%, ETH -4.0%, JUP -13.3%",
+  "trad_status": "SOL -4.1%, BTC -2.2%, ETH -4.0%, JUP -12.8%",
   "sol_ch24h": -1.1,
   "sol_vs_ma20": -0.0428
  }
