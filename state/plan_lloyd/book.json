@@ -1,5 +1,5 @@
 {
- "ts": 1793314924.5967345,
+ "ts": 1793315523.1578627,
  "regime": {
   "state": "risk_off",
   "ts": 1793314924.587882,
@@ -27,8 +27,8 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 487.38,
-   "pct": 88.8,
+   "value_usd": 487.36,
+   "pct": 88.9,
    "positions": 0
   },
   {
@@ -43,7 +43,7 @@
    "key": "established",
    "name": "Established memes",
    "target_pct": 10,
-   "value_usd": 53.44,
+   "value_usd": 53.15,
    "pct": 9.7,
    "positions": 2
   },
@@ -56,6 +56,6 @@
    "positions": 0
   }
  ],
- "liquid_usd": 487.38,
- "trad_status": "SOL -7.1%, BTC -3.7%, ETH -6.3%, JUP -17.5%"
+ "liquid_usd": 487.36,
+ "trad_status": "3 of 22 established memecoins above their 20-day average (best: SAPLING +39%, SPX +0%, STONK +4%)"
 }
