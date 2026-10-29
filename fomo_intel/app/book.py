@@ -134,7 +134,7 @@ def book_view(full: bool = True, admin: bool = False) -> dict | None:
         kinds = {"decisión": "decision", "decision": "decision", "automatic": "auto", "system": "system"}
         jr = s.get("journal") or []
         if not admin:   # en lo público, sin los registros crudos del motor ("set 4kjruq: ajustó…"): las decisiones ya los explican
-            jr = [j for j in jr if j.get("kind") != "execution" and (j.get("text") or j.get("title"))]
+            jr = [j for j in jr if j.get("kind") not in ("execution", "ejecución") and (j.get("text") or j.get("title"))]
         out["journal"] = [{"ts": j.get("ts"), "title": j.get("title"), "text": j.get("text"), "kind": kinds.get(j.get("kind"), j.get("kind")) if not admin else j.get("kind")}
                           for j in jr[:60]]
         out["equity"] = (s.get("equity") or [])[-500:]
