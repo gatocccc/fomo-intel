@@ -1,5 +1,5 @@
 {
- "ts": 1793254085.2583783,
+ "ts": 1793254686.3307657,
  "regime": {
   "state": "risk_off",
   "ts": 1793254085.2498302,
@@ -24,8 +24,8 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 399.44,
-   "pct": 66.6,
+   "value_usd": 399.42,
+   "pct": 67.1,
    "positions": 0
   },
   {
@@ -40,7 +40,7 @@
    "key": "established",
    "name": "Established memes",
    "target_pct": 10,
-   "value_usd": 59.15,
+   "value_usd": 58.78,
    "pct": 9.9,
    "positions": 2
   },
@@ -48,11 +48,11 @@
    "key": "picks",
    "name": "Picks",
    "target_pct": 20,
-   "value_usd": 133.12,
-   "pct": 22.2,
+   "value_usd": 129.37,
+   "pct": 21.7,
    "positions": 2
   }
  ],
- "liquid_usd": 399.44,
- "trad_status": "2 of 18 established memecoins above their 20-day average (best: SPX +6%, STONK +8%)"
+ "liquid_usd": 399.42,
+ "trad_status": "SOL -4.7%, BTC -2.2%, ETH -4.3%, JUP -13.5%"
 }
