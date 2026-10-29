@@ -399,6 +399,37 @@ class Brain:
         return orders, notes
 
     def aggressive(self, d, s, st_dir, regime, bstate):
+        """29/10 21:40: la mesa decía "el efectivo espera en USDC" pero lo dejaba en SOL (100% en SOL mientras SOL caía 5–8% en el día: ~US$13
+        perdidos sin operar). Ahora, en la mesa, el efectivo sin candidato con motivo se estaciona en USDC y se vende USDC para pagar las compras.
+        Dentro del libro Lloyd esta lógica corre sobre una vista sin USDC y la tesorería del libro decide; ahí no cambia nada."""
+        orders, notes, new_buys = self._aggressive(d, s, st_dir, regime, bstate)
+        if d.get("profile") == "aggressive":
+            orders, notes = self.desk_treasury(d, s, orders, notes)
+        return orders, notes, new_buys
+
+    def desk_treasury(self, d, s, orders, notes):
+        B = BOOK; sol_usd = s.get("sol_usd") or 100
+        pos = s.get("positions", [])
+        usdc = next((p for p in pos if p["mint"] == USDC), None); usdc_val = (usdc or {}).get("value_usd", 0.0)
+        cash_sol = s.get("cash_sol", 0)
+        buys_sol = sum(float(x.get("sol", 0)) for x in orders if x["action"] == "buy" and x["mint"] != USDC)
+        sells_sol = sum(p.get("value_usd", 0) / sol_usd * 0.97 * float(x.get("frac", 1)) for x in orders
+                        if x["action"] == "sell" and x["mint"] != USDC for p in pos if p["mint"] == x["mint"])
+        need = buys_sol + B["reserve_sol"] - cash_sol - sells_sol
+        if need > 0.02 and usdc and usdc_val > 2:
+            frac = min(1.0, need * sol_usd * 1.02 / usdc_val) * usdc["tokens"] / (usdc.get("tokens_initial") or usdc["tokens"])
+            orders.insert(0, {"action": "sell", "mint": USDC, "frac": round(frac, 4) if frac < 0.999 else 1.0,
+                              "why": L(d, "tesorería: pagar la compra", "treasury: fund buys")})
+        elif need < 0 and (-need) * sol_usd > B["park_min_usd"]:
+            orders.append({"action": "buy", "mint": USDC, "symbol": "USDC", "sol": round(-need * 0.98, 4), "stop": 0.05, "trail": 0.5, "trail_after": 10,
+                           "tp": [], "reason": "cash",
+                           "thesis": L(d, "Efectivo estacionado en USDC: sin candidato con motivo, la mesa no apuesta a SOL.",
+                                       "Cash parked in USDC: no candidate with a reason, so the desk does not bet on SOL.")})
+            notes.append(L(d, f"Estaciono {-need * 0.98:.3f} SOL en USDC: sin candidato con motivo, el efectivo no queda expuesto a SOL.",
+                           f"Parking {-need * 0.98:.3f} SOL in USDC: with no candidate that has a reason, cash should not ride SOL."))
+        return orders, notes
+
+    def _aggressive(self, d, s, st_dir, regime, bstate):
         orders, notes = [], []
         sol_usd = s.get("sol_usd") or 100
         eq_sol = s["equity_usd"] / sol_usd
@@ -408,7 +439,8 @@ class Brain:
         today = time.strftime("%Y-%m-%d", time.localtime(now - 3 * 3600))
         buys_today = [b for b in bstate.get("auto_buys", []) if b.get("day") == today]
         cands = self.candidates(held, cooled)
-        free = s.get("cash_sol", 0) - 0.03 - 0.02
+        usdc_sol = sum(p.get("value_usd", 0) for p in s.get("positions", []) if p["mint"] == USDC) / sol_usd   # el USDC también es efectivo
+        free = s.get("cash_sol", 0) + usdc_sol * 0.99 - 0.03 - 0.02
         npos = len([p for p in s.get("positions", []) if p["mint"] not in STABLES])
         # rotación: plata dormida
         stale = []
@@ -823,7 +855,8 @@ class Brain:
             if not s.get("start_ts"):
                 continue
             eq_sol = s.get("equity_usd", 0) / (s.get("sol_usd") or 100)
-            if s.get("cash_sol", 0) - 0.05 > eq_sol * LIM["idle_frac"] or any(time.time() - p.get("opened_ts", 0) > LIM["stale_h"] * 3600 for p in s.get("positions", [])):
+            usdc_sol = sum(p.get("value_usd", 0) for p in s.get("positions", []) if p["mint"] == USDC) / (s.get("sol_usd") or 100) if d["profile"] == "aggressive" else 0
+            if s.get("cash_sol", 0) + usdc_sol - 0.05 > eq_sol * LIM["idle_frac"] or any(time.time() - p.get("opened_ts", 0) > LIM["stale_h"] * 3600 for p in s.get("positions", [])):
                 return True
         return False
 
