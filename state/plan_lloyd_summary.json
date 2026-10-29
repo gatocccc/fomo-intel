@@ -1,17 +1,17 @@
 {
- "now": 1793317476.8566215,
+ "now": 1793317784.9498308,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 546.91,
- "equity_sol": 5.6964,
- "cash_sol": 0.085,
- "positions_usd": 538.75,
- "sol_usd": 96.01,
- "mult": 0.999,
+ "equity_usd": 546.26,
+ "equity_sol": 5.7028,
+ "cash_sol": 0.4091,
+ "positions_usd": 507.07,
+ "sol_usd": 95.79,
+ "mult": 0.998,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,39 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9990134708537015,
+   "last_usd": 0.9990093995400954,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.99,
    "value_usd": 486.89
-  },
-  {
-   "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-   "symbol": "STONK",
-   "opened_ts": 1793232589.5218468,
-   "entry_usd": 0.1546247007364677,
-   "tokens": 253.347503727,
-   "tokens_initial": 253.347503727,
-   "sol_in": 0.38276638,
-   "sol_out": 0.0,
-   "peak_usd": 0.15764174520309387,
-   "stop": 0.2,
-   "trail": 0.25,
-   "trail_after": 1.4,
-   "tp": [
-    [
-     2,
-     0.3
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
-   "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.12511907129531435,
-   "sleeve": "established",
-   "from_plan": "equilibrado",
-   "mult": 0.809,
-   "value_usd": 31.7
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -88,11 +60,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.346739423374028,
+   "last_usd": 0.3470041183176728,
    "sleeve": "established",
    "from_plan": "equilibrado",
    "mult": 0.83,
-   "value_usd": 20.17
+   "value_usd": 20.18
   }
  ],
  "equity": [
@@ -1615,9 +1587,28 @@
   [
    1793317385,
    546.93
+  ],
+  [
+   1793317693,
+   546.2
   ]
  ],
  "closed": [
+  {
+   "ts": 1793317647.6735113,
+   "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+   "symbol": "STONK",
+   "sol_in": 0.38277,
+   "sol_out": 0.32416,
+   "pnl_sol": -0.05861,
+   "pnl_usd": -5.61,
+   "ret": -0.153,
+   "peak_mult": 1.02,
+   "hold_h": 23.6,
+   "why": "stop (0.80x)",
+   "reason": null,
+   "sleeve": "established"
+  },
   {
    "ts": 1793308690.0807648,
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -1761,6 +1752,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793317647.673152,
+   "side": "sell",
+   "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+   "symbol": "STONK",
+   "ok": true,
+   "sol": 0.324156189,
+   "tokens": 253.423606677,
+   "price_usd": 0.12233722081,
+   "why": "stop (0.80x)",
+   "sig": "3ggsb8rvp5Df1adzyDdm6HAUreTF9yNfHm7M1aa5xFRA4GZ3HVZi1baW5Q1TUFqwBjDfmzTLBL8qo3rsNy52oorx",
+   "error": "",
+   "id": null
+  },
   {
    "ts": 1793309062.662934,
    "side": "buy",
@@ -2317,6 +2322,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793317647.674029,
+   "title": "Automatic exit",
+   "text": "STONK: sold 100% of STONK (stop (0.80x)) for 0.3242 SOL — position closed",
+   "kind": "automatic",
+   "id": null
+  },
   {
    "ts": 1793317400.231385,
    "title": "Automatic brain: status",
@@ -3305,8 +3317,8 @@
   }
  ],
  "wins": 1,
- "n_closed": 10,
- "realized_usd": 23.17,
+ "n_closed": 11,
+ "realized_usd": 17.56,
  "plan": "lloyd",
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {

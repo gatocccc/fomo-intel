@@ -16,34 +16,8 @@
   "tp_done": [],
   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
   "id": "equilibrado-2026-10-28-01",
-  "last_usd": 0.9990645584942813,
+  "last_usd": 0.9990244188289962,
   "sleeve": "cash",
-  "from_plan": "equilibrado"
- },
- "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx": {
-  "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
-  "symbol": "STONK",
-  "opened_ts": 1793232589.5218468,
-  "entry_usd": 0.1546247007364677,
-  "tokens": 253.347503727,
-  "tokens_initial": 253.347503727,
-  "sol_in": 0.38276638,
-  "sol_out": 0.0,
-  "peak_usd": 0.15764174520309387,
-  "stop": 0.2,
-  "trail": 0.25,
-  "trail_after": 1.4,
-  "tp": [
-   [
-    2,
-    0.3
-   ]
-  ],
-  "tp_done": [],
-  "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
-  "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.12485321666005161,
-  "sleeve": "established",
   "from_plan": "equilibrado"
  },
  "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr": {
@@ -68,7 +42,7 @@
   "tp_done": [],
   "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.3493983808863139,
+  "last_usd": 0.34669982036807545,
   "sleeve": "established",
   "from_plan": "equilibrado"
  }
