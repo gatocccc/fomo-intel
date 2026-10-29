@@ -1,17 +1,17 @@
 {
- "now": 1793253277.4956145,
+ "now": 1793253586.6423688,
  "start_ts": 1793203599.7169404,
  "start_usd": 602.95,
  "start_sol": 5.9708,
  "goal_usd": 1205.9,
  "days": 365,
  "day": 1,
- "equity_usd": 593.52,
- "equity_sol": 5.9113,
+ "equity_usd": 591.11,
+ "equity_sol": 5.8968,
  "cash_sol": 0.0762,
- "positions_usd": 585.87,
- "sol_usd": 100.4,
- "mult": 0.984,
+ "positions_usd": 583.47,
+ "sol_usd": 100.24,
+ "mult": 0.98,
  "halt": false,
  "pause": false,
  "positions": [
@@ -25,7 +25,7 @@
    "sol_in": 0.65723188,
    "sol_out": 0.0,
    "peak_usd": 0.0134304218267148,
-   "stop": -0.319,
+   "stop": -0.341,
    "trail": 0.35,
    "trail_after": 1.6,
    "tp": [
@@ -41,11 +41,11 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.013324435293930875,
+   "last_usd": 0.013066303341733143,
    "sleeve": "picks",
    "from_plan": "agresivo",
-   "mult": 1.774,
-   "value_usd": 117.68
+   "mult": 1.739,
+   "value_usd": 115.4
   },
   {
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
@@ -64,7 +64,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994327061485607,
+   "last_usd": 0.999421095048139,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
@@ -92,11 +92,11 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14268794606104793,
+   "last_usd": 0.14240847168790344,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.923,
-   "value_usd": 36.15
+   "mult": 0.921,
+   "value_usd": 36.08
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -120,11 +120,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.3980254880616255,
+   "last_usd": 0.39741809397772615,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.953,
-   "value_usd": 23.15
+   "mult": 0.951,
+   "value_usd": 23.11
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -153,8 +153,8 @@
    "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
    "id": "auto-lloyd-20261029-0319",
    "sleeve": "picks",
-   "last_usd": 0.0019291508336036108,
-   "mult": 0.945,
+   "last_usd": 0.0019286445636503466,
+   "mult": 0.944,
    "value_usd": 9.46
   }
  ],
@@ -826,6 +826,10 @@
   [
    1793253215,
    594.09
+  ],
+  [
+   1793253524,
+   591.25
   ]
  ],
  "closed": [
@@ -1304,6 +1308,20 @@
  ],
  "journal": [
   {
+   "ts": 1793253493.3575795,
+   "title": "Execution",
+   "text": "set 4kjruq: ajustó GTA6: stop=-0.341",
+   "kind": "execution",
+   "id": "auto-lloyd-20261029-0558"
+  },
+  {
+   "ts": 1793253493.3574402,
+   "title": "Automatic brain: stops raised",
+   "text": "GTA6: peaked at 1.79x; stop raised to 1.34x (was 1.32x).",
+   "kind": "decisión",
+   "id": "auto-lloyd-20261029-0558"
+  },
+  {
    "ts": 1793252890.8267431,
    "title": "Execution",
    "text": "set 4kjruq: ajustó GTA6: stop=-0.319",
@@ -1640,11 +1658,11 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793252885.3527567,
+  "last_run": 1793253483.983157,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
-   "ts": 1793252885.3548806,
+   "ts": 1793253483.9852524,
    "title": "Automatic brain: stops raised",
    "orders": 1,
    "mode": "live"
