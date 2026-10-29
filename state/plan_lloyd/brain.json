@@ -1,15 +1,15 @@
 {
  "mode": "live",
- "last_run": 1793265483.9860852,
+ "last_run": 1793266085.442664,
  "regime": "risk_off",
  "profile": "book",
  "_noted_no_cands": 1793238965.2395556,
- "bal_ts": 1793262485.1332633,
- "trad_status": "SOL -4.7%, BTC -2.3%, ETH -4.3%, JUP -14.0%",
- "trad_ts": 1793262485.1336408,
+ "bal_ts": 1793266085.4442835,
+ "trad_status": "SOL -4.4%, BTC -2.1%, ETH -4.0%, JUP -13.7%",
+ "trad_ts": 1793266085.444743,
  "status": "ok",
  "last_action": {
-  "ts": 1793265483.9882576,
+  "ts": 1793266088.256379,
   "title": "Automatic brain: stops raised",
   "orders": 1,
   "mode": "live"
