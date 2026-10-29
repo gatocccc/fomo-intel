@@ -1,5 +1,5 @@
 {
- "ts": 1793300400.9558973,
+ "ts": 1793300702.0316663,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-29",
-  "seen": 173,
+  "seen": 175,
   "bought": 0,
   "by_reason": {
-   "freno": 169,
+   "freno": 171,
    "en_banco": 3,
    "mcap_alto": 1
   },
@@ -43,11 +43,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 1.6522,
- "sol_usd": 100.63824054103146,
+ "sol_usd": 100.37182344148299,
  "stream_connected": true,
- "stream_msgs": 10710,
- "tokens_seen": 10070,
- "tokens_tracked": 91,
+ "stream_msgs": 10782,
+ "tokens_seen": 10139,
+ "tokens_tracked": 90,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -56,9 +56,9 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 4378058,
-  "parsed": 405,
-  "skipped": 4375904,
+  "notifications": 4401457,
+  "parsed": 408,
+  "skipped": 4399288,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
@@ -67,7 +67,7 @@
    "18:20:31 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 72,
+ "follow_buys_seen": 73,
  "guard": {
   "alerts": [
    "10:36:11 fuente de se\u00f1ales recuperada tras 3 s",
@@ -80,7 +80,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 0
  },
- "st_requests": 201,
+ "st_requests": 202,
  "stream_errors": [
   "04:45:39 Connection to remote host was lost.",
   "04:45:46 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Thu, 29 Oct 2026 04:45:46 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n",
@@ -90,7 +90,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 6,
-  "create": 10704
+  "create": 10776
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",
