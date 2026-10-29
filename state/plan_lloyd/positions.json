@@ -16,7 +16,7 @@
   "tp_done": [],
   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
   "id": "equilibrado-2026-10-28-01",
-  "last_usd": 0.9995985314599904,
+  "last_usd": 0.9995663959212733,
   "sleeve": "cash",
   "from_plan": "equilibrado"
  },
@@ -29,7 +29,7 @@
   "tokens_initial": 253.347503727,
   "sol_in": 0.38276638,
   "sol_out": 0.0,
-  "peak_usd": 0.1546247007364677,
+  "peak_usd": 0.15674825093105843,
   "stop": 0.2,
   "trail": 0.25,
   "trail_after": 1.4,
@@ -42,7 +42,7 @@
   "tp_done": [],
   "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.15382720688366458,
+  "last_usd": 0.1535505879977488,
   "sleeve": "established",
   "from_plan": "equilibrado"
  },
@@ -68,7 +68,7 @@
   "tp_done": [],
   "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.39801737493099,
+  "last_usd": 0.40064562092545025,
   "sleeve": "established",
   "from_plan": "equilibrado"
  },
@@ -99,6 +99,6 @@
   "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
   "id": "auto-lloyd-20261029-0319",
   "sleeve": "picks",
-  "last_usd": 0.001988428419382062
+  "last_usd": 0.0020280222095491597
  }
 }
