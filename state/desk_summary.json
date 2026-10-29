@@ -1,17 +1,17 @@
 {
- "now": 1793268578.7871265,
+ "now": 1793268884.8981473,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 2,
- "equity_usd": 160.97,
- "equity_sol": 1.6059,
+ "equity_usd": 163.51,
+ "equity_sol": 1.6324,
  "cash_sol": 0.4791,
- "positions_usd": 112.95,
- "sol_usd": 100.24,
- "mult": 1.625,
+ "positions_usd": 115.52,
+ "sol_usd": 100.16,
+ "mult": 1.65,
  "halt": false,
  "pause": false,
  "positions": [
@@ -43,9 +43,9 @@
    ],
    "thesis": "Catalizador con fecha: GTA VI sale en noviembre 2026. 20,7K holders, volumen real 23% de la mcap, +63% en 72 h.",
    "id": "2026-10-27-01",
-   "last_usd": 0.014723615181969935,
-   "mult": 3.041,
-   "value_usd": 81.75
+   "last_usd": 0.015157405363700709,
+   "mult": 3.131,
+   "value_usd": 84.16
   },
   {
    "mint": "DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP",
@@ -73,9 +73,9 @@
    "tp_done": [],
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261028-1926",
-   "last_usd": 0.012649678223310543,
-   "mult": 0.845,
-   "value_usd": 14.17
+   "last_usd": 0.012753748480939688,
+   "mult": 0.852,
+   "value_usd": 14.28
   },
   {
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -104,9 +104,9 @@
    "thesis": "Compra automática del cerebro: escaneo + anti-rug LIMPIO.",
    "id": "auto-mesa-20261029-0319",
    "sleeve": null,
-   "last_usd": 0.0019363042680995378,
-   "mult": 0.966,
-   "value_usd": 17.03
+   "last_usd": 0.001941317381431284,
+   "mult": 0.969,
+   "value_usd": 17.07
   }
  ],
  "equity": [
@@ -2157,6 +2157,10 @@
   [
    1793268425,
    162.84
+  ],
+  [
+   1793268732,
+   161.64
   ]
  ],
  "closed": [
