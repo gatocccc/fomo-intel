@@ -8,8 +8,8 @@
   "tokens_initial": 8831.632745155,
   "sol_in": 0.65723188,
   "sol_out": 0.375321957,
-  "peak_usd": 0.018355943011417134,
-  "stop": -0.833,
+  "peak_usd": 0.018832371795270617,
+  "stop": -0.88,
   "trail": 0.35,
   "trail_after": 1.6,
   "tp": [
@@ -25,7 +25,7 @@
   "tp_done": [],
   "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
   "id": "agresivo-2026-10-28-01",
-  "last_usd": 0.014992605070282702,
+  "last_usd": 0.018823607288261063,
   "sleeve": "picks",
   "from_plan": "agresivo"
  },
@@ -33,10 +33,10 @@
   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
   "symbol": "USDC",
   "opened_ts": 1793204947.898395,
-  "entry_usd": 1.0089091108155703,
-  "tokens": 342.89241899999996,
-  "tokens_initial": 574.6622339999999,
-  "sol_in": 5.738215578,
+  "entry_usd": 1.008951977716957,
+  "tokens": 380.11663799999997,
+  "tokens_initial": 611.8864529999998,
+  "sol_in": 6.1118555180000005,
   "sol_out": 2.268072527,
   "peak_usd": 1.0075943560922527,
   "stop": 0.05,
@@ -46,7 +46,7 @@
   "tp_done": [],
   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
   "id": "equilibrado-2026-10-28-01",
-  "last_usd": 0.9994852562173695,
+  "last_usd": 0.9994662935785453,
   "sleeve": "cash",
   "from_plan": "equilibrado"
  },
@@ -72,7 +72,7 @@
   "tp_done": [],
   "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.14416061288608154,
+  "last_usd": 0.14649358035021984,
   "sleeve": "established",
   "from_plan": "equilibrado"
  },
@@ -98,7 +98,7 @@
   "tp_done": [],
   "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.3948331991676029,
+  "last_usd": 0.39453476141926386,
   "sleeve": "established",
   "from_plan": "equilibrado"
  },
@@ -129,6 +129,6 @@
   "thesis": "Automatic buy: passed the scan and a clean anti-rug check.",
   "id": "auto-lloyd-20261029-0319",
   "sleeve": "picks",
-  "last_usd": 0.0019003439135060432
+  "last_usd": 0.0020028920808197958
  }
 }
