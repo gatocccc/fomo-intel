@@ -14,6 +14,17 @@
  },
  "events": [
   {
+   "ts": 1793315763.9776077,
+   "src": "cointelegraph",
+   "title": "Live Updates: Binance hit by largest crypto hack in history",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793315223.7778623,
    "src": "bitcoinmagazine",
    "title": "Bitcoin Price Slides Below $79,000 as Binance Loses $5.8 Billion in Massive Hack",
@@ -172,21 +183,21 @@
    ]
   }
  ],
- "ts": 1793315644.6375847,
- "bear_score": 9,
+ "ts": 1793315944.4326954,
+ "bear_score": 11,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.696,
-   "ch15m": -0.003544929925803908,
-   "ch1h": -0.003791312948157821,
-   "ch4h": -0.035836075381393995
+   "px": 96.818,
+   "ch15m": 0.004221509993672878,
+   "ch1h": -0.004339777869189598,
+   "ch4h": -0.034330740075802946
   },
   "BTC": {
-   "px": 78822.0,
-   "ch15m": -0.0022910522385225507,
-   "ch1h": 0.0001649557791623124,
-   "ch4h": -0.02411786554413764
+   "px": 78866.0,
+   "ch15m": 0.0008375634517765462,
+   "ch1h": -0.0006462485902910542,
+   "ch4h": -0.024056428659819384
   }
  },
  "mode": "live",
@@ -207,9 +218,9 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 96.696,
-  "ret_px": 0.0086,
-  "pnl_usd_est": 0.32,
-  "age_h": 1.83
+  "mark": 96.818,
+  "ret_px": 0.0073,
+  "pnl_usd_est": 0.27,
+  "age_h": 1.91
  }
 }
