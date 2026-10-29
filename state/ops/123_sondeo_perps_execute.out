@@ -1,0 +1,25 @@
+== 123_sondeo_perps_execute 2026-10-29T00:46:03Z ==
+positions/execute                    {"error":"Invalid path /v1/positions/execute. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+positions/increase/execute           {"error":"Invalid path /v1/positions/increase/execute. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+positions-gasless/execute            {"error":"Invalid path /v1/positions-gasless/execute. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+execute                              {"error":"Invalid path /v1/execute. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+send                                 {"error":"Invalid path /v1/send. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+positions/send                       {"error":"Invalid path /v1/positions/send. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+transactions/execute                 {"error":"Invalid path /v1/transactions/execute. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+positions/increase/send              {"error":"Invalid path /v1/positions/increase/send. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+positions/submit                     {"error":"Invalid path /v1/positions/submit. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+submit                               {"error":"Invalid path /v1/submit. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+positions/increase/submit            {"error":"Invalid path /v1/positions/increase/submit. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+--- GET rutas informativas
+positions-gasless/status                                     {"error":"Invalid path /v1/positions-gasless/status. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+config                                                       {"error":"Invalid path /v1/config. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+markets                                                      {"error":"Invalid path /v1/markets. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+tpsl?walletAddress=EgkDFMH5oaRrKjo3UWFhGG78hgzxxRMKVbvX9R6MM7o4 {"error":"Invalid path /v1/tpsl. Valid paths start with /v1 or /v2. Consult the OpenAPI documentation: https://perps-api.jup.ag/v1/docs"} [404]
+trades?walletAddress=EgkDFMH5oaRrKjo3UWFhGG78hgzxxRMKVbvX9R6MM7o4 {"dataList":[],"count":0} [200]
+--- increase con includeSerializedTx y tipo no-instant? (probar campo transactionType)
+keeper None type None err Validation error: Invalid enum value. Expected 'legacy' | 'mixed' | 'instant', received 'market' at "transactionType"
+--- decodificar la tx instant: cuántas firmas pide y cuáles son los firmantes
+firmas requeridas 3 firmantes ['EgkDFMH5oaRrKjo3UWFhGG78hgzxxRMKVbvX9R6MM7o4', 'Ag28fGtwtpnqassHURUBsQ1WfiyaWWzDDNs4Q28qHRjv', 'perpSnt3NivMdD5DRFc7VmW6x7PuvQJGNyDTL74mEYx']
+firmas presentes ['111111111111', '111111111111', '5f2NQEfEwMiN']
+programas ['ComputeBudget111111111111111111111111111111', 'DoVEsk76QybCEHQGzkvYPWLQu9gzNoZZZt3TPiL597e', 'Ed25519SigVerify111111111111111111111111111', 'PERPHjGBqRHArX4DySjwM6UJHiR3sWAatqfdBS2qQJu']
+== exit 0 ==

@@ -1,17 +1,17 @@
 {
- "now": 1793234689.050194,
+ "now": 1793234996.4464831,
  "start_ts": 1793203690.827375,
  "start_usd": 200.16,
  "start_sol": 1.981514,
  "goal_usd": 400.32,
  "days": 30,
  "day": 1,
- "equity_usd": 192.09,
- "equity_sol": 1.8832,
+ "equity_usd": 192.0,
+ "equity_sol": 1.8835,
  "cash_sol": 0.493,
- "positions_usd": 141.8,
- "sol_usd": 102.0,
- "mult": 0.96,
+ "positions_usd": 141.75,
+ "sol_usd": 101.93,
+ "mult": 0.959,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,7 +32,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9994926980210423,
+   "last_usd": 0.999508285512654,
    "mult": 0.991,
    "value_usd": 42.42
   },
@@ -58,9 +58,9 @@
    "tp_done": [],
    "thesis": "STONK: established memecoin back in an uptrend (+13% vs 20-day average, +37% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.14969926694270197,
-   "mult": 0.968,
-   "value_usd": 37.93
+   "last_usd": 0.1493798437195868,
+   "mult": 0.966,
+   "value_usd": 37.85
   },
   {
    "mint": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
@@ -84,9 +84,9 @@
    "tp_done": [],
    "thesis": "USELESS: established memecoin back in an uptrend (+2% vs 20-day average, +13% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.16784880797656038,
-   "mult": 0.977,
-   "value_usd": 38.11
+   "last_usd": 0.16768860960738763,
+   "mult": 0.976,
+   "value_usd": 38.08
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -110,9 +110,9 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.4013216674360825,
-   "mult": 0.96,
-   "value_usd": 23.34
+   "last_usd": 0.40233138711568095,
+   "mult": 0.963,
+   "value_usd": 23.4
   }
  ],
  "equity": [
@@ -535,6 +535,10 @@
   [
    1793234627,
    192.16
+  ],
+  [
+   1793234934,
+   192.07
   ]
  ],
  "closed": [
@@ -710,7 +714,7 @@
  "wallet": "8UhBd1jB3MxVZam13UQnbV1EYL7eXhZbWBY5bA5x7Y82",
  "brain": {
   "mode": "live",
-  "last_run": 1793234283.606429,
+  "last_run": 1793234883.3049142,
   "regime": "neutral",
   "status": "ok",
   "last_action": {
