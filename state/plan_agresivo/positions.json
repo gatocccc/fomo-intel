@@ -25,34 +25,6 @@
   "tp_done": [],
   "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
   "id": "agresivo-2026-10-28-01",
-  "last_usd": 0.009016469252475937
- },
- "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw": {
-  "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
-  "symbol": "INVERSE",
-  "opened_ts": 1793231394.7251604,
-  "entry_usd": 0.0013270191683602255,
-  "tokens": 44013.92122,
-  "tokens_initial": 44013.92122,
-  "sol_in": 0.57102828,
-  "sol_out": 0.0,
-  "peak_usd": 0.0013715579899790005,
-  "stop": 0.25,
-  "trail": 0.25,
-  "trail_after": 1.3,
-  "tp": [
-   [
-    1.5,
-    0.4
-   ],
-   [
-    2.5,
-    0.3
-   ]
-  ],
-  "tp_done": [],
-  "thesis": "Fast plan: $1.4M token moving (+102% 24h) bought on a pullback (77% of its 3-day high); clean anti-rug check. Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x.",
-  "id": "auto-agresivo-20261028-2349",
-  "last_usd": 0.0010132810119527849
+  "last_usd": 0.009553061133848103
  }
 }

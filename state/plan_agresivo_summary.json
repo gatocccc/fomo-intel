@@ -1,17 +1,17 @@
 {
- "now": 1793235598.1275847,
+ "now": 1793235879.8294597,
  "start_ts": 1793203599.7169404,
  "start_usd": 200.84,
  "start_sol": 1.99,
  "goal_usd": 401.68,
  "days": 30,
  "day": 1,
- "equity_usd": 177.05,
- "equity_sol": 1.7384,
- "cash_sol": 0.4703,
- "positions_usd": 129.16,
- "sol_usd": 101.85,
- "mult": 0.882,
+ "equity_usd": 174.66,
+ "equity_sol": 1.718,
+ "cash_sol": 0.8933,
+ "positions_usd": 83.84,
+ "sol_usd": 101.66,
+ "mult": 0.87,
  "halt": false,
  "pause": false,
  "positions": [
@@ -41,39 +41,9 @@
    "tp_done": [],
    "thesis": "GTA VI releases November 19; meme with 25.8K holders, clean anti-rug check, real volume.",
    "id": "agresivo-2026-10-28-01",
-   "last_usd": 0.009569623285881072,
-   "mult": 1.274,
-   "value_usd": 84.52
-  },
-  {
-   "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
-   "symbol": "INVERSE",
-   "opened_ts": 1793231394.7251604,
-   "entry_usd": 0.0013270191683602255,
-   "tokens": 44013.92122,
-   "tokens_initial": 44013.92122,
-   "sol_in": 0.57102828,
-   "sol_out": 0.0,
-   "peak_usd": 0.0013715579899790005,
-   "stop": 0.25,
-   "trail": 0.25,
-   "trail_after": 1.3,
-   "tp": [
-    [
-     1.5,
-     0.4
-    ],
-    [
-     2.5,
-     0.3
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "Fast plan: $1.4M token moving (+102% 24h) bought on a pullback (77% of its 3-day high); clean anti-rug check. Exit plan: sell 40% at 1.5x, 30% at 2.5x, trail 25% after 1.3x, stop −25%, out at 12h if it never passes 1.15x.",
-   "id": "auto-agresivo-20261028-2349",
-   "last_usd": 0.0010142198864531505,
-   "mult": 0.764,
-   "value_usd": 44.64
+   "last_usd": 0.00949305355747004,
+   "mult": 1.264,
+   "value_usd": 83.84
   }
  ],
  "equity": [
@@ -508,9 +478,26 @@
   [
    1793235537,
    173.47
+  ],
+  [
+   1793235849,
+   174.23
   ]
  ],
  "closed": [
+  {
+   "ts": 1793235773.5477037,
+   "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
+   "symbol": "INVERSE",
+   "sol_in": 0.57103,
+   "sol_out": 0.42405,
+   "pnl_sol": -0.14698,
+   "pnl_usd": -14.96,
+   "ret": -0.257,
+   "peak_mult": 1.03,
+   "hold_h": 1.2,
+   "why": "stop (0.75x)"
+  },
   {
    "ts": 1793235354.3623447,
    "mint": "GF74fBfcaeLjUiUwKpRiUbvMQtTvNyzMoo6KNyyqNyk6",
@@ -565,6 +552,20 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793235773.5467513,
+   "side": "sell",
+   "mint": "2gLhk8p2KvUFeUXur2hiF4hxjdRM1vBcbgo9Q7DMZfiw",
+   "symbol": "INVERSE",
+   "ok": true,
+   "sol": 0.424047304,
+   "tokens": 44013.92122,
+   "price_usd": 0.000980311844,
+   "why": "stop (0.75x)",
+   "sig": "9kxSv1kud8frjN6WvSM2VHVHxVrmzrWcN8MvuygRc4uaorZbLKtQf7qntxNhR5vTeBJRbr6wSgdbohYxZRMm7oX",
+   "error": "",
+   "id": null
+  },
   {
    "ts": 1793235354.361849,
    "side": "sell",
@@ -708,6 +709,13 @@
  ],
  "journal": [
   {
+   "ts": 1793235773.5491707,
+   "title": "Automatic exit",
+   "text": "INVERSE: sold 100% of INVERSE (stop (0.75x)) for 0.4240 SOL — position closed",
+   "kind": "automatic",
+   "id": null
+  },
+  {
    "ts": 1793235491.2949526,
    "title": "Automatic brain: status",
    "text": "Daily brake: the plan is down more than 12% today (from $196 to $172). No new positions until tomorrow; open ones keep their stops.",
@@ -814,8 +822,8 @@
   }
  ],
  "wins": 0,
- "n_closed": 4,
- "realized_usd": -29.74,
+ "n_closed": 5,
+ "realized_usd": -44.7,
  "plan": "agresivo",
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
