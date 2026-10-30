@@ -70,9 +70,21 @@ KW = [
 ]
 NEG_STRONG = {"hack", "exchange_risk", "contagion"}
 
+# Dos piernas de cortos (29/10 21:40, pedido de Gastón ante el hack confirmado de Binance de US$5.800M):
+#  - lab:  cualquier shock (rumor + precio). Colateral 35% del lab. Es la prueba de la hipótesis.
+#  - book: solo "shock confirmado": al menos una noticia bajista de severidad 3 que el clasificador marque como hecho confirmado
+#          (no alegación) + precio. Colateral 15% del libro a 2x; con stop +3,5% la pérdida máxima es ~1% del libro (regla: ≤ 2%).
+LEGS = [
+    {"name": "lab", "wallet": Path(os.getenv("RADAR_WALLET", "secrets/plan_lab.json")), "plan": os.getenv("RADAR_PLAN", "lab"),
+     "coll_frac": float(os.getenv("RADAR_COLL_FRAC", "0.35")), "coll_min": 10.0, "coll_max": 60.0, "require_confirmed": False, "pos_file": ST / "radar_pos.json"},
+    {"name": "book", "wallet": Path("secrets/plan_lloyd.json"), "plan": "lloyd",
+     "coll_frac": float(os.getenv("RADAR_BOOK_COLL_FRAC", "0.15")), "coll_min": 20.0, "coll_max": 400.0, "require_confirmed": True, "pos_file": ST / "radar_pos_book.json"},
+]
 RULES = {"window_min": 90, "min_bear_score": 3, "sol_1h": -0.015, "sol_4h": -0.025, "btc_1h": -0.01,
          "clear_quiet_h": 3, "coll_frac": float(os.getenv("RADAR_COLL_FRAC", "0.35")), "coll_min": 10.0, "coll_max": 60.0, "lev": 2.0,
-         "stop_up": 0.035, "tp_down": 0.07, "max_h": 12, "max_opens_day": 2, "cooldown_h": 2, "min_profit_clear": 0.5}
+         "stop_up": 0.035, "tp_down": 0.12, "trail_arm": 0.04, "trail_gap": 0.02, "max_h": 12, "max_opens_day": 2, "cooldown_h": 2, "min_profit_clear": 0.5}
+# tp_down pasó de 7% a 12% y se agregó trailing (29/10 noche): con un hack confirmado la caída puede ser larga; en cuanto el corto gana
+# trail_arm (4% del precio) se protege trail_gap (2%) desde el mejor punto, en vez de cortar a un objetivo fijo.
 
 
 def jload(p, d):
@@ -216,9 +228,12 @@ class Radar:
     def __init__(self):
         self.seen = jload(SEEN, {})          # título normalizado → {ts, cls}
         self.state = jload(RADAR, {"shock": None, "events": []})
-        self.pos = jload(POS, None)
         self.mode = os.getenv("RADAR_PERPS", "shadow")
-        self._perps = None
+        self._perps = {}
+        for leg in LEGS:
+            leg["pos"] = jload(leg["pos_file"], None)
+        self.legs = LEGS
+        self.pos = self.legs[0]["pos"]   # compat: la pierna del lab es la "principal" en radar.json
 
     # ----- noticias -----
     def ingest(self):
@@ -265,7 +280,7 @@ class Radar:
         sh = self.state.get("shock")
         if not sh and bear >= R["min_bear_score"] and strong and bear > bull and price_conf:
             heads = [e["title"] for e in ev if e["cls"]["dir"] < 0][:4]
-            sh = {"since": now, "bear_score": bear, "sol_px": sol.get("px"), "btc_px": btc.get("px"), "headlines": heads,
+            sh = {"since": now, "bear_score": bear, "sol_px": sol.get("px"), "btc_px": btc.get("px"), "headlines": heads, "confirmed": self.confirmed_major(ev),
                   "why": f"bearish news score {bear} in {R['window_min']} min; SOL 1h {sol.get('ch1h', 0):+.1%}, 4h {sol.get('ch4h', 0):+.1%}; BTC 1h {btc.get('ch1h', 0):+.1%}"}
             self.state["shock"] = sh; logrow("shock_on", **sh)
             log.warning("SHOCK ON: %s", sh["why"])
@@ -273,6 +288,9 @@ class Radar:
                       f"Lloyd's news radar sees a bearish shock: {sh['why']}. Headlines: " + " | ".join(heads) +
                       ". The book goes defensive (no new memecoins) while it lasts" + (" and looks for a small SOL short." if self.mode == "live" else "."))
         elif sh:
+            if not sh.get("confirmed") and self.confirmed_major(ev):
+                sh["confirmed"] = True; sh["confirmed_ts"] = now; logrow("shock_confirmed", **{k: v for k, v in sh.items() if k != "headlines"})
+                log.warning("SHOCK CONFIRMADO (noticia de severidad 3 confirmada)")
             quiet = not [e for e in self.recent(R["clear_quiet_h"] * 60) if e["cls"]["dir"] < 0]
             recovered = sol.get("px") and sh.get("sol_px") and sol["px"] >= sh["sol_px"] * 1.01
             if (quiet and now - sh["since"] > 3600) or recovered:
@@ -284,101 +302,123 @@ class Radar:
                                       for e in sorted(self.recent(240), key=lambda x: -x["ts"])[:25]],
                            "position": self.pos})
 
+    @staticmethod
+    def confirmed_major(ev):
+        """Hecho confirmado, no alegación: una noticia bajista de severidad 3 marcada como confirmada por el clasificador, o bien
+        ≥ 4 noticias bajistas de severidad ≥ 2 en la ventana (varios medios publicando el mismo hecho = ya no es un rumor de X)."""
+        bear2 = [e for e in ev if e["cls"]["dir"] < 0 and e["cls"]["sev"] >= 2]
+        return any(e["cls"]["sev"] >= 3 and e["cls"].get("confirmed") for e in bear2) or len(bear2) >= 4
+
     # ----- perps -----
-    def perps(self):
-        if self._perps is None:
+    def perps(self, leg):
+        if leg["name"] not in self._perps:
             from ..live.config import Env
             from ..live.perps import JupPerps
             from ..live.wallet import Rpc, load_or_create
-            kp = load_or_create(WALLET); self._perps = JupPerps(kp, Rpc(Env().rpc_url), log)
-        return self._perps
+            kp = load_or_create(leg["wallet"]); self._perps[leg["name"]] = JupPerps(kp, Rpc(Env().rpc_url), log)
+        return self._perps[leg["name"]]
 
-    def book_equity(self):
-        return (jload(BOOK_SUMMARY, {}) or {}).get("equity_usd") or 0.0
+    @staticmethod
+    def plan_equity(plan):
+        return (jload(Path(f"state/plan_{plan}_summary.json"), {}) or {}).get("equity_usd") or 0.0
 
     def manage(self, px):
-        R = RULES; now = time.time(); sol = (px.get("SOL") or {}).get("px")
+        sol = (px.get("SOL") or {}).get("px")
         if not sol:
             return
+        for leg in self.legs:
+            try:
+                self.manage_leg(leg, sol)
+            except Exception as e:  # noqa: BLE001
+                log.exception("pierna %s: %s", leg["name"], e)
+        self.pos = self.legs[0]["pos"]
+
+    def manage_leg(self, leg, sol):
+        R = RULES; now = time.time()
         sh = self.state.get("shock")
-        p = self.pos
+        p = leg["pos"]
         if p:   # gestionar
             ret = 1 - sol / p["entry"]            # ganancia del corto como fracción del precio
+            p["best_ret"] = max(p.get("best_ret", 0.0), ret)
             p.update({"mark": sol, "ret_px": round(ret, 4), "pnl_usd_est": round(ret * p["size_usd"], 2), "age_h": round((now - p["ts"]) / 3600, 2)})
             why = None
             if sol >= p["entry"] * (1 + R["stop_up"]): why = f"stop: SOL +{R['stop_up']:.1%} above entry"
+            elif p["best_ret"] >= R["trail_arm"] and ret <= p["best_ret"] - R["trail_gap"]: why = f"trailing: locked {ret:.1%} after a best of {p['best_ret']:.1%}"
             elif sol <= p["entry"] * (1 - R["tp_down"]): why = f"take profit: SOL −{R['tp_down']:.0%}"
             elif now - p["ts"] > R["max_h"] * 3600: why = f"time stop ({R['max_h']}h)"
             elif not sh and ret * p["size_usd"] >= R["min_profit_clear"] and now - p["ts"] > 1800: why = "shock cleared with the short in profit"
             if why:
-                self.close(why, sol)
+                self.close(leg, why, sol)
             else:
-                jsave(POS, p)
+                jsave(leg["pos_file"], p)
             return
-        if not sh:
+        if not sh or (leg["require_confirmed"] and not sh.get("confirmed")):
             return
         today = time.strftime("%Y-%m-%d", time.gmtime(now - 3 * 3600))
-        opens = [c for c in self.closed_rows() if time.strftime("%Y-%m-%d", time.gmtime(c["ts_open"] - 3 * 3600)) == today]
-        last_close = max([c["ts"] for c in self.closed_rows()] or [0])
+        rows = [c for c in self.closed_rows() if c.get("leg", "lab") == leg["name"]]
+        opens = [c for c in rows if time.strftime("%Y-%m-%d", time.gmtime(c["ts_open"] - 3 * 3600)) == today]
+        last_close = max([c["ts"] for c in rows] or [0])
         if len(opens) >= R["max_opens_day"] or now - last_close < R["cooldown_h"] * 3600:
             return
-        eq = self.book_equity()
-        coll = max(R["coll_min"], min(R["coll_max"], eq * R["coll_frac"]))
-        self.open(coll, sol, sh)
+        eq = self.plan_equity(leg["plan"])
+        coll = max(leg["coll_min"], min(leg["coll_max"], eq * leg["coll_frac"]))
+        self.open(leg, coll, sol, sh)
 
     def closed_rows(self):
         if not CLOSED.exists():
             return []
         return [json.loads(l) for l in CLOSED.read_text().splitlines() if l.strip()]
 
-    def open(self, coll, sol, sh):
+    def open(self, leg, coll, sol, sh):
         R = RULES; now = time.time()
-        rec = {"ts": now, "symbol": "SOL", "side": "short", "entry": sol, "collateral_usd": round(coll, 2), "lev": R["lev"], "size_usd": round(coll * R["lev"], 2),
-               "mode": self.mode, "why": sh["why"], "headlines": sh.get("headlines", [])[:3], "pubkey": None, "sig": None}
+        rec = {"ts": now, "leg": leg["name"], "symbol": "SOL", "side": "short", "entry": sol, "collateral_usd": round(coll, 2), "lev": R["lev"], "size_usd": round(coll * R["lev"], 2),
+               "mode": self.mode, "why": sh["why"] + (" + confirmed major news" if sh.get("confirmed") else ""), "headlines": sh.get("headlines", [])[:3], "pubkey": None, "sig": None, "best_ret": 0.0}
         if self.mode == "live":
             try:
-                r = self.perps().open("SOL", "short", coll, R["lev"], dry=False)
+                r = self.perps(leg).open("SOL", "short", coll, R["lev"], dry=False)
             except Exception as e:  # noqa: BLE001
                 r = {"ok": False, "error": str(e)}
             if not r.get("ok"):
-                logrow("open_failed", error=str(r.get("error"))[:300], coll=coll); log.error("short no abrió: %s", r.get("error")); return
+                logrow("open_failed", leg=leg["name"], error=str(r.get("error"))[:300], coll=coll); log.error("[%s] short no abrió: %s", leg["name"], r.get("error")); return
             rec.update({"pubkey": r.get("position_pubkey"), "sig": r.get("sig")})
             try:
-                live = [q for q in self.perps().positions() if q.get("pubkey") == rec["pubkey"]]
+                live = [q for q in self.perps(leg).positions() if q.get("pubkey") == rec["pubkey"]]
                 if live and live[0].get("entry"): rec["entry"] = float(live[0]["entry"])
             except Exception:  # noqa: BLE001
                 pass
-        self.pos = rec; jsave(POS, rec); logrow("open", **rec)
-        log.warning("SHORT SOL abierto (%s): colateral %.2f, 2x, entrada %.2f", self.mode, coll, rec["entry"])
+        leg["pos"] = rec; jsave(leg["pos_file"], rec); logrow("open", **rec)
+        log.warning("[%s] SHORT SOL abierto (%s): colateral %.2f, 2x, entrada %.2f", leg["name"], self.mode, coll, rec["entry"])
+        where = Path(f"state/plan_{leg['plan']}/auto")
         book_note("Radar: SOL short opened" + ("" if self.mode == "live" else " (shadow)"),
-                  f"Bearish news shock with price confirmation ({sh['why']}). Lloyd opens a small SOL short on Jupiter Perps: ${coll:.0f} collateral at 2x "
-                  f"(${coll * R['lev']:.0f} notional), entry ${rec['entry']:.2f}. Exit: stop if SOL rises {R['stop_up']:.1%}, take profit at −{R['tp_down']:.0%}, "
-                  f"or {R['max_h']}h. Risk if stopped: about ${coll * R['lev'] * R['stop_up']:.1f}. Against: rumours get denied and squeeze shorts; the stop is tight for that reason.",
-                  where=TRADE_AUTO)
+                  f"{'Confirmed' if sh.get('confirmed') else 'Bearish'} news shock with price confirmation ({sh['why']}). Lloyd opens a SOL short on Jupiter Perps: ${coll:.0f} collateral at 2x "
+                  f"(${coll * R['lev']:.0f} notional), entry ${rec['entry']:.2f}. Exit: stop if SOL rises {R['stop_up']:.1%}; once the short is up {R['trail_arm']:.0%} it trails {R['trail_gap']:.0%} "
+                  f"from its best; take profit at −{R['tp_down']:.0%}; or {R['max_h']}h. Risk if stopped: about ${coll * R['lev'] * R['stop_up']:.1f}. Against: a denial or an exchange backstop can squeeze shorts fast; the stop is tight for that reason.",
+                  where=where)
 
-    def close(self, why, sol):
-        p = self.pos; now = time.time(); R = RULES
+    def close(self, leg, why, sol):
+        p = leg["pos"]; now = time.time()
         if p.get("mode") == "live" and p.get("pubkey"):
             try:
-                r = self.perps().close(p["pubkey"], dry=False)
+                r = self.perps(leg).close(p["pubkey"], dry=False)
             except Exception as e:  # noqa: BLE001
                 r = {"ok": False, "error": str(e)}
             if not r.get("ok"):
-                logrow("close_failed", error=str(r.get("error"))[:300]); log.error("cierre falló: %s", r.get("error"))
-                p["close_attempts"] = p.get("close_attempts", 0) + 1; jsave(POS, p)
+                logrow("close_failed", leg=leg["name"], error=str(r.get("error"))[:300]); log.error("[%s] cierre falló: %s", leg["name"], r.get("error"))
+                p["close_attempts"] = p.get("close_attempts", 0) + 1; jsave(leg["pos_file"], p)
                 if p["close_attempts"] < 5:
                     return
         ret = 1 - sol / p["entry"]; pnl = ret * p["size_usd"] - p["size_usd"] * 0.0012 * 2
-        row = {"ts": now, "ts_open": p["ts"], "symbol": "SOL", "side": "short", "entry": p["entry"], "exit": sol, "collateral_usd": p["collateral_usd"],
-               "size_usd": p["size_usd"], "ret_px": round(ret, 4), "pnl_usd": round(pnl, 2), "hold_h": round((now - p["ts"]) / 3600, 2), "why": why, "mode": p.get("mode"),
-               "reason": "news_shock_short"}
+        row = {"ts": now, "ts_open": p["ts"], "leg": leg["name"], "symbol": "SOL", "side": "short", "entry": p["entry"], "exit": sol, "collateral_usd": p["collateral_usd"],
+               "size_usd": p["size_usd"], "ret_px": round(ret, 4), "best_ret": round(p.get("best_ret", 0), 4), "pnl_usd": round(pnl, 2), "hold_h": round((now - p["ts"]) / 3600, 2), "why": why,
+               "mode": p.get("mode"), "reason": "news_shock_short"}
         with open(CLOSED, "a") as f:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
-        logrow("close", **row); log.warning("SHORT cerrado: %s → %+.2f US$ (%s)", why, pnl, p.get("mode"))
+        logrow("close", **row); log.warning("[%s] SHORT cerrado: %s → %+.2f US$ (%s)", leg["name"], why, pnl, p.get("mode"))
         book_note("Radar: SOL short closed" + ("" if p.get("mode") == "live" else " (shadow)"),
-                  f"Closed the SOL short: {why}. Entry ${p['entry']:.2f}, exit ${sol:.2f}, result about ${pnl:+.2f} on ${p['collateral_usd']:.0f} collateral.", where=TRADE_AUTO)
-        self.pos = None
-        if POS.exists(): POS.unlink()
+                  f"Closed the SOL short: {why}. Entry ${p['entry']:.2f}, exit ${sol:.2f}, result about ${pnl:+.2f} on ${p['collateral_usd']:.0f} collateral.",
+                  where=Path(f"state/plan_{leg['plan']}/auto"))
+        leg["pos"] = None
+        if leg["pos_file"].exists(): leg["pos_file"].unlink()
 
     # ----- ciclo -----
     def cycle(self):
@@ -390,6 +430,7 @@ class Radar:
         except Exception as e:  # noqa: BLE001
             log.exception("manage: %s", e)
         self.state["position"] = self.pos
+        self.state["positions"] = {leg["name"]: leg["pos"] for leg in self.legs}
         jsave(RADAR, self.state)
 
     def run(self, once=False):
