@@ -37,18 +37,24 @@ def st(path, **p):
 RPC_FALLBACK = "https://api.mainnet-beta.solana.com"
 
 
+_HELIUS_DOWN = {"rpc": False, "api": False}
+
+
 def rpc(method, params):
-    # 30/10: con Helius en 429 la respuesta no era JSON y el anti-rug entero caía con JSONDecodeError (ops 167: 6 de 6 tokens sin veredicto).
-    # Ahora: 3 intentos con espera creciente y, si sigue fallando, la RPC pública de Solana.
+    # 30/10: Helius llegó a su tope de uso ("max usage reached", 429) y el anti-rug entero colgaba o caía con JSONDecodeError
+    # (ops 167–169). Ahora: si Helius responde 429 una vez, el resto de la corrida usa la RPC pública de Solana.
     body = {"jsonrpc": "2.0", "id": 1, "method": method, "params": params}
-    for i, url in enumerate([RPC, RPC, RPC, RPC_FALLBACK]):
+    urls = [RPC_FALLBACK, RPC_FALLBACK] if _HELIUS_DOWN["rpc"] else [RPC, RPC, RPC_FALLBACK, RPC_FALLBACK]
+    for i, url in enumerate(urls):
         try:
-            r = requests.post(url, json=body, timeout=30)
+            r = requests.post(url, json=body, timeout=20)
             if r.status_code == 200:
                 return r.json().get("result")
+            if r.status_code == 429 and url == RPC:
+                _HELIUS_DOWN["rpc"] = True
         except Exception:
             pass
-        time.sleep(1.5 * (i + 1))
+        time.sleep(1.0 * (i + 1))
     return None
 
 
@@ -64,8 +70,12 @@ def is_wallet(addrs):
 
 
 def funder_helius(addr):
+    if _HELIUS_DOWN["api"]:
+        return None
     try:
         r = requests.get(f"https://api.helius.xyz/v1/wallet/{addr}/funded-by", params={"api-key": HK}, timeout=20)
+        if r.status_code == 429:
+            _HELIUS_DOWN["api"] = True
         if r.status_code == 200:
             j = r.json()
             f = j.get("funder") or j.get("funderAddress") or j.get("address")
@@ -174,6 +184,10 @@ def analyze(mint):
         verdict = "VIGILAR"
     else:
         verdict = "LIMPIO"
+    # 30/10: sin datos no hay LIMPIO. Si no se pudo identificar el fondeador de la mitad o más de los holders (API caída,
+    # sin claves, tope de uso), el veredicto es SIN_DATOS y el cerebro no compra (exige LIMPIO).
+    if verdict == "LIMPIO" and (not wallets or sum(1 for h in wallets if not h.get("funder")) * 2 >= len(wallets)):
+        verdict = "SIN_DATOS"
     res = {"mint": mint, "symbol": sym, "ts": int(time.time()), "verdict": verdict,
            "top_wallets_pct": round(sum(h["pct"] for h in wallets), 2), "pools_pct": round(sum(h["pct"] for h in pools), 2),
            "clusters_sospechosos_pct": sus_pct, "clusters": clusters,
