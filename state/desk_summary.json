@@ -1,17 +1,17 @@
 {
- "now": 1793377775.9994037,
+ "now": 1793378087.735801,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 4,
- "equity_usd": 166.63,
- "equity_sol": 1.7507,
- "cash_sol": 0.1009,
- "positions_usd": 157.03,
- "sol_usd": 95.18,
- "mult": 1.682,
+ "equity_usd": 165.92,
+ "equity_sol": 1.7452,
+ "cash_sol": 0.1131,
+ "positions_usd": 155.17,
+ "sol_usd": 95.07,
+ "mult": 1.674,
  "halt": false,
  "pause": false,
  "positions": [
@@ -20,10 +20,10 @@
    "symbol": "USDC",
    "opened_ts": 1793310140.668559,
    "entry_usd": 1.0082625317653804,
-   "tokens": 157.077909,
+   "tokens": 114.666874,
    "tokens_initial": 157.077909,
    "sol_in": 1.62414238,
-   "sol_out": 0.0,
+   "sol_out": 0.446851383,
    "peak_usd": 1.0082625317653804,
    "stop": 0.05,
    "trail": 0.5,
@@ -35,9 +35,42 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9997106844538235,
+   "last_usd": 0.9997458490696192,
    "mult": 0.992,
-   "value_usd": 157.03
+   "value_usd": 114.64
+  },
+  {
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "opened_ts": 1793377812.9129612,
+   "entry_usd": 0.01260487487143304,
+   "tokens": 3284.466721904,
+   "tokens_initial": 3284.466721904,
+   "sol_in": 0.43464344,
+   "sol_out": 0.0,
+   "peak_usd": 0.01260487487143304,
+   "stop": 0.3,
+   "trail": 0.35,
+   "trail_after": 1.6,
+   "tp": [
+    [
+     1.8,
+     0.25
+    ],
+    [
+     2.5,
+     0.25
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "GTA VI sale el 19/11/2026 (confirmado por Take-Two). Entrada en retroceso (−13% 24 h) con anti-rug LIMPIO. Escalera de venta desde el 12/11; salir antes del día del lanzamiento.",
+   "id": "2026-10-30-02",
+   "sleeve": null,
+   "reason": "catalyst",
+   "max_h": null,
+   "last_usd": 0.012340519237020888,
+   "mult": 0.979,
+   "value_usd": 40.53
   }
  ],
  "perps_pnl_usd": 0,
@@ -3561,6 +3594,10 @@
   [
    1793377563,
    166.63
+  ],
+  [
+   1793377874,
+   165.68
   ]
  ],
  "closed": [
@@ -3674,6 +3711,34 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793377812.912221,
+   "side": "buy",
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "ok": true,
+   "sol": 0.43464344,
+   "tokens": 3284.466721904,
+   "price_usd": 0.012604874871,
+   "slip": 1.2,
+   "sig": "2bJ4qTppuDGx6SJVi43M1XScDj5d1sRS7KmDK8yd2LgYuj2uSb9cPSVE6MGFoJYePZfFt7PCMRBH8SiWo4zaQt9C",
+   "error": "",
+   "id": "2026-10-30-02"
+  },
+  {
+   "ts": 1793377810.5629475,
+   "side": "sell",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.446851383,
+   "tokens": 42.411035,
+   "price_usd": 1.003585807011,
+   "why": "fondear GTA6 (catalizador con fecha)",
+   "sig": "5FbDcxUV1p7wd5PFfY2etxHJfTyo9Gcuwi8yABQeUzFqqarTxcn8PWNz4vGA4jHBnLNoKXSBRr34cfermNuur8e9",
+   "error": "",
+   "id": "2026-10-30-02"
+  },
   {
    "ts": 1793310140.667967,
    "side": "buy",
@@ -3942,6 +4007,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793377812.9147394,
+   "title": "Ejecución",
+   "text": "sell EPjFWd: vendió 27% de USDC (fondear GTA6 (catalizador con fecha)) por 0.4469 SOL\nbuy GTA6: compró 3,284 GTA6 por 0.4346 SOL a US$0.0126049 (slippage +1.2%)",
+   "kind": "ejecución",
+   "id": "2026-10-30-02"
+  },
+  {
+   "ts": 1793377812.9145288,
+   "title": "Tarde 30/10: vuelvo a GTA6 con 25% (catalizador 19/11, retroceso de −13%, anti-rug LIMPIO)",
+   "text": "Autocrítica: el cerebro no compró nada sin motivo (régimen defensivo por el hackeo de Binance, correcto). Encontré un defecto en el radar: el modelo que juzga la tesis del corto se quedaba sin tokens razonando y todo el shock se juzgó solo por palabras clave; lo corregí en el código (commit 3102a31) y lo reinicié.\n\nGTA6: único candidato con motivo en la lista. El juego sale el 19/11 (Take-Two lo sostuvo esta semana), quedan 20 días y la categoría 'catalizador' ganó 2 de 2. El token cayó 13% en 24 h y 11% en 6 h junto con todo el mercado (SOL −7%, BTC −5% por el hackeo), pero la última hora está estable (+2%): es un retroceso, no una vela de euforia. Anti-rug LIMPIO (ops 171, 15:34 UTC), 51.900 holders, top 10 17%, liquidez US$423K, volumen 24 h US$14M.\n\nCompro 25% de la mesa (~US$42), no más, porque el mercado sigue en shock. Stop −30%: arriesgo ~7,5% de la mesa. Venta en escalera: 25% a 1,8x, 25% a 2,5x; la escalera principal se arma desde el 12/11 (semana previa).\n\nAbogado del diablo: en un mercado bajista las memecoins caen todas juntas y GTA6 ya está a 40% de su máximo; un rumor de atraso del juego la puede tirar 30% en minutos. Lo acepto porque el tamaño es chico, el stop está puesto y es la única tesis con fecha que tenemos; el resto del efectivo (~70%) sigue en USDC.",
+   "kind": "decisión",
+   "id": "2026-10-30-02"
+  },
   {
    "ts": 1793377578.6054156,
    "title": "Cerebro automático: estado",
@@ -5327,20 +5406,6 @@
    "text": "Efectivo ocioso (27%), pero SOL cae fuerte (-2.1% en 24 h): no abro memecoins hasta que se calme.",
    "kind": "decisión",
    "id": "auto-mesa-note-20261029-1054"
-  },
-  {
-   "ts": 1793270891.4355273,
-   "title": "Cerebro automático: estado",
-   "text": "Efectivo ocioso (26%), pero SOL cae fuerte (-2.3% en 24 h): no abro memecoins hasta que se calme.",
-   "kind": "decisión",
-   "id": "auto-mesa-note-20261029-1048"
-  },
-  {
-   "ts": 1793270294.2683983,
-   "title": "Cerebro automático: estado",
-   "text": "Efectivo ocioso (26%), pero SOL cae fuerte (-2.8% en 24 h): no abro memecoins hasta que se calme.",
-   "kind": "decisión",
-   "id": "auto-mesa-note-20261029-1038"
   }
  ],
  "wins": 2,

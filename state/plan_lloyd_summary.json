@@ -1,17 +1,17 @@
 {
- "now": 1793377775.9825237,
+ "now": 1793378079.892261,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 540.94,
- "equity_sol": 5.6833,
+ "equity_usd": 541.33,
+ "equity_sol": 5.691,
  "cash_sol": 0.0826,
- "positions_usd": 533.08,
- "sol_usd": 95.18,
- "mult": 0.988,
+ "positions_usd": 533.48,
+ "sol_usd": 95.12,
+ "mult": 0.989,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9997106844538235,
+   "last_usd": 0.9997458490696192,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 435.57
+   "value_usd": 435.59
   },
   {
    "mint": "perps:7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "symbol": "SOL short 2x",
    "opened_ts": 1793367953.6543465,
    "entry_usd": 94.84,
-   "last_usd": 95.315,
+   "last_usd": 95.11,
    "peak_usd": 93.966,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.8541,
+   "sol_in": 0.8546,
    "sol_out": 0.0,
    "stop": 0.035,
    "trail": 0.02,
@@ -61,9 +61,9 @@
    "brain": false,
    "perps": true,
    "system": "News-shock short",
-   "mult": 0.99,
-   "value_usd": 80.48,
-   "pnl_usd": -0.81,
+   "mult": 0.994,
+   "value_usd": 80.83,
+   "pnl_usd": -0.46,
    "collateral_usd": 81.29,
    "side": "short"
   },
@@ -72,11 +72,11 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2235.95,
+   "last_usd": 2233.95,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1804,
+   "sol_in": 0.1805,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -91,14 +91,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 0.992,
-   "value_usd": 17.03,
-   "pnl_usd": -0.14,
+   "mult": 0.994,
+   "value_usd": 17.06,
+   "pnl_usd": -0.11,
    "collateral_usd": 17.17,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.95,
+ "perps_pnl_usd": -0.57,
  "equity": [
   [
    1793203600,
@@ -2427,6 +2427,10 @@
   [
    1793377563,
    541.26
+  ],
+  [
+   1793377867,
+   541.25
   ]
  ],
  "closed": [
@@ -3215,6 +3219,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793377806.428038,
+   "title": "Afternoon Oct 30: book stays defensive; shorts keep running",
+   "text": "Book ~$541 (0.99x), regime defensive since the $6.3B Binance hack. Cash ~80% in USDC; two hedges open: the radar's SOL short (entry $94.84, SOL ~$95, flat, stop at +3.5%) and the 55/20 breakout ETH short. SOL is −7% and BTC −5% on the day, and Bitcoin is heading for its worst October in 12 years, so no new memecoins in the book. Fix today: the model that judges the short's live thesis was running out of tokens and falling back to keywords; it now answers again (code fix + radar restart). Devil's advocate: Binance says it will cover all losses, so a relief bounce can hit the short; that is why its stop is tight and it closes within hours if the rebound comes.",
+   "kind": "decisión",
+   "id": "lloyd-2026-10-30-03"
+  },
   {
    "ts": 1793377578.5885484,
    "title": "Automatic brain: status",
@@ -4607,12 +4618,6 @@
    "text": "",
    "kind": "decisión",
    "id": "auto-lloyd-20261029-1104"
-  },
-  {
-   "ts": 1793271308.2244046,
-   "title": "A tenth of the book moves to the lab",
-   "kind": "system",
-   "text": "0.55 SOL ($55.35) moved to Lloyd's lab wallet (AXbTdJLRephZMSAMoiRwfbCBWXFYtfHeLmbPj9TZk69M), where new ideas are tested live with small size before they touch the main book. The book's starting balance was lowered by the same amount, so this is not shown as a loss."
   }
  ],
  "wins": 1,
