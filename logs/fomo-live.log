@@ -1,9 +1,3 @@
-Oct 30 04:57:53 simplai-prod python3[2052574]: <head><title>502 Bad Gateway</title></head>
-Oct 30 04:57:53 simplai-prod python3[2052574]: <body>
-Oct 30 04:57:53 simplai-prod python3[2052574]: <center><h1>502 Bad Gateway</h1></center>
-Oct 30 04:57:53 simplai-prod python3[2052574]: <hr><center>nginx/1.22.1</center>
-Oct 30 04:57:53 simplai-prod python3[2052574]: </body>
-Oct 30 04:57:53 simplai-prod python3[2052574]: </html>
 Oct 30 04:57:53 simplai-prod python3[2052574]: ; reconecto en 4s
 Oct 30 04:57:58 simplai-prod python3[2052574]: 2026-10-30 04:57:58,179 INFO live.stream: stream conectado
 Oct 30 05:01:30 simplai-prod python3[2052574]: 2026-10-30 05:01:30,743 INFO live: latido: stream=True tokens_vistos=2491 seguidos=47 candidatos=0 abiertas=0 cerradas=1 st_requests=61 SOL=$97
@@ -298,3 +292,9 @@ Oct 30 12:12:07 simplai-prod python3[2308353]: 2026-10-30 12:12:07,810 WARNING l
 Oct 30 12:13:07 simplai-prod python3[2308353]: 2026-10-30 12:13:07,875 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:13:07 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
 Oct 30 12:14:07 simplai-prod python3[2308353]: 2026-10-30 12:14:07,957 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:14:07 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
 Oct 30 12:14:23 simplai-prod python3[2308353]: 2026-10-30 12:14:23,063 INFO live: latido: stream=True tokens_vistos=147 seguidos=26 candidatos=0 abiertas=0 cerradas=1 st_requests=6 SOL=$97
+Oct 30 12:15:08 simplai-prod python3[2308353]: 2026-10-30 12:15:08,026 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:15:08 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
+Oct 30 12:16:08 simplai-prod python3[2308353]: 2026-10-30 12:16:08,091 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:16:08 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
+Oct 30 12:17:08 simplai-prod python3[2308353]: 2026-10-30 12:17:08,145 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:17:08 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
+Oct 30 12:18:08 simplai-prod python3[2308353]: 2026-10-30 12:18:08,200 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:18:08 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
+Oct 30 12:19:08 simplai-prod python3[2308353]: 2026-10-30 12:19:08,267 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:19:08 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
+Oct 30 12:19:39 simplai-prod python3[2308353]: 2026-10-30 12:19:39,028 INFO live: latido: stream=True tokens_vistos=178 seguidos=36 candidatos=0 abiertas=0 cerradas=1 st_requests=7 SOL=$97

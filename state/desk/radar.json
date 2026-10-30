@@ -2,6 +2,17 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793362582.242887,
+   "src": "cointelegraph",
+   "title": "Binance hit by $6.3B hack, the largest in cryptocurrency history",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793360225.2903755,
    "src": "cointelegraph",
    "title": "Bitcoin price metrics hint at rebound as $1.6B liquidations follow Binance hack",
@@ -124,21 +135,21 @@
    ]
   }
  ],
- "ts": 1793362478.1137154,
- "bear_score": 17,
+ "ts": 1793362762.8569725,
+ "bear_score": 20,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.666,
-   "ch15m": 0.001689066661139993,
-   "ch1h": -0.0024560389663996762,
-   "ch4h": -0.005473363649457719
+   "px": 96.645,
+   "ch15m": 0.0009217448941547524,
+   "ch1h": -0.00233299955611066,
+   "ch4h": -0.007537559432732044
   },
   "BTC": {
-   "px": 77498.0,
-   "ch15m": 0.0020558838360982268,
-   "ch1h": -0.002278725458641828,
-   "ch4h": -0.0074411813675892
+   "px": 77479.0,
+   "ch15m": 0.0005294558227226798,
+   "ch1h": -0.0021507869046699657,
+   "ch4h": -0.007849715719920103
   }
  },
  "mode": "live",

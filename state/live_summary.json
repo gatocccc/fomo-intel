@@ -1,5 +1,5 @@
 {
- "ts": 1793362489.5207813,
+ "ts": 1793362796.4110103,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -43,11 +43,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.1009,
- "sol_usd": 96.63477601000923,
+ "sol_usd": 96.59705401397028,
  "stream_connected": true,
- "stream_msgs": 159,
- "tokens_seen": 148,
- "tokens_tracked": 27,
+ "stream_msgs": 190,
+ "tokens_seen": 179,
+ "tokens_tracked": 36,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -62,9 +62,9 @@
   "fast_creates": 0,
   "subs": 0,
   "errors": [
-   "12:12:07 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:12:07 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
-   "12:13:07 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:13:07 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
-   "12:14:07 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:14:07 GMT', 'content-type': 'application/json', 'content-length': '71', 'co"
+   "12:17:08 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:17:08 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
+   "12:18:08 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:18:08 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
+   "12:19:08 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 12:19:08 GMT', 'content-type': 'application/json', 'content-length': '71', 'co"
   ]
  },
  "follow_buys_seen": 0,
@@ -74,15 +74,15 @@
   "bench_by_reason": {
    "mcap_alto": 1
   },
-  "source_down_s": 1898,
+  "source_down_s": 2196,
   "exec_fails_recent": 0
  },
- "st_requests": 7,
+ "st_requests": 8,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 2,
-  "create": 157
+  "create": 188
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
