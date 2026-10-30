@@ -3,10 +3,10 @@
   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
   "symbol": "USDC",
   "opened_ts": 1793204947.898395,
-  "entry_usd": 1.0088870352805355,
-  "tokens": 513.4992675735908,
-  "tokens_initial": 789.1115419999999,
-  "sol_in": 7.911664104,
+  "entry_usd": 1.0085494566713649,
+  "tokens": 534.1816045735908,
+  "tokens_initial": 809.7938789999998,
+  "sol_in": 8.124998901,
   "sol_out": 2.657660148,
   "peak_usd": 1.0075943560922527,
   "stop": 0.05,
@@ -16,7 +16,7 @@
   "tp_done": [],
   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
   "id": "equilibrado-2026-10-28-01",
-  "last_usd": 0.9992478004251899,
+  "last_usd": 0.9991495026056061,
   "sleeve": "cash",
   "from_plan": "equilibrado"
  }

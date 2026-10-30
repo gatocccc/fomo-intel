@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793332279.949953,
+   "src": "cointelegraph",
+   "title": "Binance hack could accelerate shift to DEXs: Standard Chartered",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793330720.497043,
    "src": "tg:WatcherGuru",
    "title": "JUST IN: Elon Musk says super intelligence AI agents will eventually hack financial systems to obtain money for themselves, not humans. @WatcherGuru",
@@ -270,34 +281,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: Binance issues statement following suspected crypto hack. Our teams are aware of reports of a potential security issue and are actively investigating. At this stage, we have not confirmed any",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793332145.5668466,
+ "ts": 1793332445.325223,
  "bear_score": 13,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 97.043,
-   "ch15m": 0.004388370817334231,
-   "ch1h": 0.019948499658416274,
-   "ch4h": 0.010685607756959925
+   "px": 97.096,
+   "ch15m": 0.0033688126485482695,
+   "ch1h": 0.020173152895688107,
+   "ch4h": 0.012070295399111863
   },
   "BTC": {
-   "px": 78038.0,
-   "ch15m": 0.0032525551198816505,
-   "ch1h": 0.008712062457990832,
-   "ch4h": -0.001484249046753816
+   "px": 78107.0,
+   "ch15m": 0.0014231499051233776,
+   "ch1h": 0.010034785532322177,
+   "ch4h": 0.0004995644822463063
   }
  },
  "mode": "live",
@@ -309,7 +309,7 @@
  "theses": {},
  "llm": {
   "key": true,
-  "last_error": null
+  "last_error": "ValueError: substring not found"
  },
  "sources": [
   "bitcoinmagazine",
