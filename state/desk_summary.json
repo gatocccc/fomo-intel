@@ -1,16 +1,16 @@
 {
- "now": 1793346888.1654873,
+ "now": 1793347191.2891886,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 166.77,
- "equity_sol": 1.7191,
+ "equity_usd": 166.79,
+ "equity_sol": 1.7161,
  "cash_sol": 0.1009,
- "positions_usd": 156.98,
- "sol_usd": 97.01,
+ "positions_usd": 156.99,
+ "sol_usd": 97.19,
  "mult": 1.683,
  "halt": false,
  "pause": false,
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9993736993206599,
+   "last_usd": 0.9994379502284131,
    "mult": 0.991,
-   "value_usd": 156.98
+   "value_usd": 156.99
   }
  ],
  "perps_pnl_usd": 0,
@@ -3161,6 +3161,10 @@
   [
    1793346766,
    166.77
+  ],
+  [
+   1793347070,
+   166.76
   ]
  ],
  "closed": [
