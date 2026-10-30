@@ -41,6 +41,10 @@ else:
     WALLET = None
 ST_DIR.mkdir(parents=True, exist_ok=True)
 JUP_PRICE = "https://api.jup.ag/price/v3"
+USDC_MINT = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+# Pierna del radar que usa esta billetera (ver radar.LEGS) y desde cuándo se contabiliza (los dos primeros cortos reales, 29/10).
+PERP_LEG = {"lloyd": ("book", "state/desk/radar_pos_book.json"), "lab": ("lab", "state/desk/radar_pos.json")}.get(NAME)
+PERPS_SINCE = 1793309000
 
 
 def T(es: str, en: str) -> str:
@@ -250,6 +254,11 @@ class Desk:
         for mint, p in list(self.pos.items()):
             px = self.price_usd(mint)
             if not px:
+                # 30/10: sin precio igual vale el tope de tiempo (SAFU en el lab llevaba horas "sin precio" y el max_h nunca iba a disparar)
+                if p.get("max_h") and time.time() - p["opened_ts"] > float(p["max_h"]) * 3600 and not p.get("_tstop_tried"):
+                    p["_tstop_tried"] = True
+                    r = self.sell(mint, 1.0, T(f"tiempo máximo ({p['max_h']} h, sin precio)", f"time stop ({p['max_h']}h, no price feed)"))
+                    self.journal(T("Salida automática", "Automatic exit"), f"{p['symbol']}: {r}", kind=T("automático", "automatic")); continue
                 if time.time() - self.no_price_since.get(mint, time.time()) > 600 and not p.get("_warned"):
                     p["_warned"] = True; self.journal(T("Alerta", "Alert"), T(f"{p['symbol']}: sin precio hace más de 10 min", f"{p['symbol']}: no price for over 10 minutes"), kind=T("alerta", "alert"))
                 continue
@@ -272,12 +281,51 @@ class Desk:
                     self.journal(T("Toma de ganancia", "Profit taken"), f"{p['symbol']}: {r}", kind=T("automático", "automatic"))
                     break
 
+    def perps_sync(self):
+        """Cortos del radar (fomo-radar) pagados con el USDC de esta billetera. El colateral sale del USDC on-chain, pero el libro lo
+        sigue contando como USDC (no cambia el patrimonio mientras está abierto). Lo que faltaba (30/10): sumar el resultado del corto.
+        - abierto: la ganancia/pérdida no realizada se suma al patrimonio (no se toca book.json);
+        - cerrado: el colateral vuelve como USDC con la ganancia o la pérdida → se ajustan los tokens de USDC del libro una sola vez."""
+        if not PERP_LEG:
+            return 0.0
+        leg, pos_file = PERP_LEG
+        applied_f = ST_DIR / "perps_applied.json"
+        applied = set(jload(applied_f, []))
+        try:
+            rows = [json.loads(l) for l in Path("state/desk/radar_closed.jsonl").read_text().splitlines() if l.strip()]
+        except Exception:  # noqa: BLE001
+            rows = []
+        changed = False
+        for r in rows:
+            key = f"{r.get('ts_open')}"
+            if r.get("leg", "lab") != leg or r.get("mode") != "live" or (r.get("ts_open") or 0) < PERPS_SINCE or key in applied:
+                continue
+            applied.add(key); changed = True
+            u = self.pos.get(USDC_MINT)
+            pnl = float(r.get("pnl_usd") or 0.0)
+            if u:
+                u["tokens"] = max(0.0, u["tokens"] + pnl / (u.get("last_usd") or 1.0)); self.save()
+            self.journal(T("Corto de SOL cerrado", "SOL short settled"),
+                         T(f"El corto de SOL del radar volvió a la billetera como USDC: resultado US${pnl:+.2f} ({r.get('why')}). El saldo de USDC del libro quedó ajustado.",
+                           f"The radar's SOL short settled back into USDC: result ${pnl:+.2f} ({r.get('why')}). The book's USDC balance was adjusted accordingly."),
+                         kind=T("automático", "automatic"))
+        if changed:
+            jsave(applied_f, sorted(applied))
+        p = jload(Path(pos_file), None)
+        if p and p.get("mode") == "live" and (p.get("ts") or 0) >= PERPS_SINCE and f"{p.get('ts')}" not in applied:
+            return float(p.get("pnl_usd_est") or 0.0)
+        return 0.0
+
     def equity(self):
         try:
             self.wallet_sol = self.rpc.sol_balance(self.pub)
         except Exception:  # noqa: BLE001
             pass
         pos_usd = sum(p["tokens"] * (self.prices.get(m) or p.get("last_usd") or p["entry_usd"]) for m, p in self.pos.items())
+        try:
+            pos_usd += self.perps_sync()
+        except Exception as e:  # noqa: BLE001
+            log.warning("perps_sync: %s", e)
         return self.wallet_sol * self.sol_usd + pos_usd, pos_usd
 
     def floor_check(self, eq):

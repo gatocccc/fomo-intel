@@ -289,7 +289,15 @@ class Radar:
                       ". The book goes defensive (no new memecoins) while it lasts" + (" and looks for a small SOL short." if self.mode == "live" else "."))
         elif sh:
             if not sh.get("confirmed") and self.confirmed_major(ev):
-                sh["confirmed"] = True; sh["confirmed_ts"] = now; logrow("shock_confirmed", **{k: v for k, v in sh.items() if k != "headlines"})
+                sh["confirmed"] = True; sh["confirmed_ts"] = now
+                # 30/10: al confirmar, los titulares y el "por qué" pasan a ser los del hecho confirmado y el precio de ahora (antes la nota
+                # del corto del libro citaba los titulares del arranque del shock — Polymarket, la CFTC — y no el hack de Binance).
+                hard = sorted([e for e in ev if e["cls"]["dir"] < 0 and e["cls"]["sev"] >= 2], key=lambda e: (-e["cls"]["sev"], -e["ts"]))
+                if hard:
+                    sh["headlines"] = [e["title"] for e in hard][:4]
+                sh["why"] = (f"confirmed: {len(hard)} major bearish reports in {R['window_min']} min; SOL 1h {sol.get('ch1h', 0):+.1%}, "
+                             f"4h {sol.get('ch4h', 0):+.1%}; BTC 1h {btc.get('ch1h', 0):+.1%}")
+                logrow("shock_confirmed", **{k: v for k, v in sh.items() if k != "headlines"})
                 log.warning("SHOCK CONFIRMADO (noticia de severidad 3 confirmada)")
             quiet = not [e for e in self.recent(R["clear_quiet_h"] * 60) if e["cls"]["dir"] < 0]
             recovered = sol.get("px") and sh.get("sol_px") and sol["px"] >= sh["sol_px"] * 1.01
