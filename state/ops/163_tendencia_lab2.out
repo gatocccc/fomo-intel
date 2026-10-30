@@ -1,0 +1,16 @@
+== 163_tendencia_lab2 2026-10-30T11:21:04Z ==
+--- trend.json
+{'BTC': (-0.3, 0.28), 'ETH': (-0.8, 0.356)} {'BTC': 77788.5, 'ETH': 2247.35} live
+null
+--- radar log trend
+{"ts": 1793358985.9116735, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+{"ts": 1793359282.4084878, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+{"ts": 1793359644.4042978, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+--- radar journal
+Oct 30 11:27:24 simplai-prod python3[2303771]: 2026-10-30 11:27:24,404 ERROR trend: trend: no abrió short ETH: 429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc
+--- posiciones perps del lab
+2026-10-30 11:28:04,177 INFO perps: wallet AXbTdJLRephZMSAMoiRwfbCBWXFYtfHeLmbPj9TZk69M rpc https://mainnet.helius-rpc.com/
+{"wallet":"AXbTdJLRephZMSAMoiRwfbCBWXFYtfHeLmbPj9TZk69M","count":0,"positions":[]}
+--- lab summary
+57.9 0
+== exit 0 ==

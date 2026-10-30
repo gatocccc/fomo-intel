@@ -2,6 +2,40 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793360225.2903755,
+   "src": "cointelegraph",
+   "title": "Bitcoin price metrics hint at rebound as $1.6B liquidations follow Binance hack",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack",
+    "selloff"
+   ]
+  },
+  {
+   "ts": 1793359868.3997004,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: 🇺🇸 Binance says it is working with the FBI and US Secret Service following 6.3 billion crypto hack. @WatcherGuru",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793359640.5424361,
+   "src": "cointelegraph",
+   "title": "Live updates: Binance says $6.34B set aside to cover hack losses",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793358785.1818795,
    "src": "tg:WatcherGuru",
    "title": "JUST IN: Binance reserves over 6.34 billion of company funds to cover losses from the hack. @WatcherGuru",
@@ -101,21 +135,21 @@
    ]
   }
  ],
- "ts": 1793359145.498348,
- "bear_score": 13,
+ "ts": 1793360360.871695,
+ "bear_score": 17,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.833,
-   "ch15m": -0.002194835438864118,
-   "ch1h": 0.005586998286515321,
-   "ch4h": -0.012291152410289885
+   "px": 96.828,
+   "ch15m": 1.032769785291876e-05,
+   "ch1h": -0.0028012358393407766,
+   "ch4h": -0.00849904769706522
   },
   "BTC": {
-   "px": 77631.0,
-   "ch15m": -0.0009908889689607125,
-   "ch1h": 0.004191082308199867,
-   "ch4h": -0.010528059956409264
+   "px": 77555.0,
+   "ch15m": -0.0016091658084449456,
+   "ch1h": -0.0014291968171400438,
+   "ch4h": -0.009577932443649795
   }
  },
  "mode": "live",

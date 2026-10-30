@@ -1,0 +1,17 @@
+== 164_tortuga 2026-10-30T11:29:03Z ==
+--- levels.json
+BTC px 77726.5 compra≥ 87471.0 (+12.5%) corto≤ 74903.0 (-3.6%) salidas 77856.0 84850.0 pos null
+ETH px 2248.45 compra≥ 2809.5 (+24.9%) corto≤ 2227.2 (-0.9%) salidas 2227.2 2578.1 pos null
+SOL px 96.9725 compra≥ 124.95 (+28.8%) corto≤ 94.81 (-2.2%) salidas 94.81 113.39 pos null
+--- trend.json
+{'BTC': -0.3, 'ETH': -0.8} null
+--- log
+{"ts": 1793358985.9116735, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+{"ts": 1793359282.4084878, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+{"ts": 1793359644.4042978, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+{"ts": 1793359746.8318472, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+Oct 30 11:29:06 simplai-prod python3[2304748]: 2026-10-30 11:29:06,831 ERROR trend: trend: no abrió short ETH: 429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc
+--- perps lab / libro
+lab 57.9
+lloyd 542.11
+== exit 0 ==
