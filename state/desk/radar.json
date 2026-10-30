@@ -2,6 +2,18 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793395041.008766,
+   "src": "decrypt",
+   "title": "Binance Hack Shows Why Offshore Exchanges Need US Oversight, CFTC Chair Says",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack",
+    "regulatory"
+   ]
+  },
+  {
    "ts": 1793394425.0858438,
    "src": "cointelegraph",
    "title": "FBI and Secret Service join response to Binance’s $6.3B hack",
@@ -68,21 +80,21 @@
    ]
   }
  ],
- "ts": 1793394863.1224499,
- "bear_score": 7,
+ "ts": 1793395146.6698306,
+ "bear_score": 8,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.12,
-   "ch15m": -0.0002732642465264057,
-   "ch1h": 0.002085923179031335,
-   "ch4h": 0.003058103975535298
+   "px": 95.266,
+   "ch15m": -6.297757998152687e-05,
+   "ch1h": 0.0036557485856363314,
+   "ch4h": 0.003222409435551965
   },
   "BTC": {
-   "px": 76671.0,
-   "ch15m": -0.0029649280224710584,
-   "ch1h": -0.003599833653896156,
-   "ch4h": -0.007135272331718956
+   "px": 76798.0,
+   "ch15m": -0.0015341411409849348,
+   "ch1h": -0.0022864863460388962,
+   "ch4h": -0.005670930654099071
   }
  },
  "mode": "live",
