@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793323564.8754742,
+   "src": "cointelegraph",
+   "title": "Binance hack rattles markets as BNB falls 8%, Bitcoin nears $77K",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793322664.4117434,
    "src": "cointelegraph",
    "title": "Live updates: Binance says $3B in crypto frozen in connection to hack",
@@ -149,21 +160,21 @@
    ]
   }
  ],
- "ts": 1793323444.8892503,
- "bear_score": 6,
+ "ts": 1793323745.5191512,
+ "bear_score": 8,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 93.863,
-   "ch15m": -0.004824105685023006,
-   "ch1h": 0.005560078848131811,
-   "ch4h": -0.038407163053722826
+   "px": 93.982,
+   "ch15m": -0.007791385135135109,
+   "ch1h": 0.01034186196516873,
+   "ch4h": -0.03538951041773586
   },
   "BTC": {
-   "px": 76944.0,
-   "ch15m": -0.0016866907128214592,
-   "ch1h": -0.0024761781292539364,
-   "ch4h": -0.032126594379732865
+   "px": 77039.0,
+   "ch15m": -0.0031830238726789917,
+   "ch1h": 0.0009744815758017111,
+   "ch4h": -0.02881815316734948
   }
  },
  "mode": "live",
@@ -184,10 +195,10 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 93.863,
-  "ret_px": 0.0376,
-  "pnl_usd_est": 1.4,
-  "age_h": 4.0,
+  "mark": 93.982,
+  "ret_px": 0.0364,
+  "pnl_usd_est": 1.35,
+  "age_h": 4.08,
   "best_ret": 0.04671383164154619
  },
  "positions": {
@@ -208,10 +219,10 @@
    ],
    "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
    "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-   "mark": 93.863,
-   "ret_px": 0.0376,
-   "pnl_usd_est": 1.4,
-   "age_h": 4.0,
+   "mark": 93.982,
+   "ret_px": 0.0364,
+   "pnl_usd_est": 1.35,
+   "age_h": 4.08,
    "best_ret": 0.04671383164154619
   },
   "book": {
@@ -233,10 +244,10 @@
    "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "sig": "52fnUTsu5TQh9dGoURqVntbYErKt566sgbn8AKFywmcR8vVs2GfMC9b3pp3MgZyJ3zbrvN7oDuUc44K8S6rxDM3K",
    "best_ret": 0.0,
-   "mark": 93.863,
-   "ret_px": -0.0107,
-   "pnl_usd_est": -1.75,
-   "age_h": 0.83
+   "mark": 93.982,
+   "ret_px": -0.012,
+   "pnl_usd_est": -1.96,
+   "age_h": 0.92
   }
  }
 }
