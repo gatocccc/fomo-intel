@@ -16,6 +16,28 @@
  },
  "events": [
   {
+   "ts": 1793337212.1035187,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: 🇰🇵 North Korea responsible for 6 billion Binance hack, CNN reports. @WatcherGuru",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793337092.176117,
+   "src": "cointelegraph",
+   "title": "Live updates: Binance $6.3B hack linked to North Korea’s TraderTraitor",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793335592.205787,
    "src": "cointelegraph",
    "title": "Live updates: Binance eyes withdrawal restart within 48 hours after $6.3B hack",
@@ -259,45 +281,23 @@
    "types": [
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:wublockchainenglish",
-   "title": "CZ: Binance May Have Been Hacked as Tether and Circle Freeze Over 2.3B in Stablecoins Breaking: Binance co-founder Changpeng Zhao (CZ) said the exchange appeared to have been hacked but that user fund",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:wublockchainenglish",
-   "title": "Arbitrum Security Council Takes Emergency Action to Transfer Binance-Related Stolen Funds to an Intermediary Frozen Wallet The Arbitrum Security Council announced that it has taken emergency action to",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793336957.8287323,
- "bear_score": 8,
+ "ts": 1793337272.65309,
+ "bear_score": 13,
  "bull_score": 1,
  "price": {
   "SOL": {
-   "px": 97.708,
-   "ch15m": 0.0041003401535315565,
-   "ch1h": 0.009296752334517766,
-   "ch4h": 0.03594223796094065
+   "px": 97.808,
+   "ch15m": 0.006234439620584009,
+   "ch1h": 0.005944667283760197,
+   "ch4h": 0.03260135135135145
   },
   "BTC": {
-   "px": 78504.0,
-   "ch15m": 0.0026309739712380154,
-   "ch1h": 0.006745492318346091,
-   "ch4h": 0.01855359784103583
+   "px": 78608.0,
+   "ch15m": 0.004883286886712801,
+   "ch1h": 0.005590308426398627,
+   "ch4h": 0.01711845765672515
   }
  },
  "mode": "live",
