@@ -1,16 +1,16 @@
 {
  "state": "risk_off",
- "ts": 1793353325.3552766,
+ "ts": 1793354524.839531,
  "since": 1793353325.3552763,
  "exit_since": null,
- "sol": 96.9,
+ "sol": 96.55,
  "sol_ma20": 104.21,
- "sol_ch4h": -1.1,
- "sol_ch24h": -3.3,
- "btc_vs_ma20": -0.049,
+ "sol_ch4h": -1.7,
+ "sol_ch24h": -4.0,
+ "btc_vs_ma20": -0.0503,
  "breadth_above": 3,
  "breadth_total": 20,
  "why": "news",
- "shock": true,
+ "shock": false,
  "label": "defensive"
 }

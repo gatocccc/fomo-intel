@@ -2,6 +2,17 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793354540.322614,
+   "src": "cointelegraph",
+   "title": "THORChain’s RUNE jumps 13% after Binance’s record $6.3B hack",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793354000.2790923,
    "src": "tg:WatcherGuru",
    "title": "JUST IN: CZ says Binance may use its over 1 billion stake in Elon Musk s SpaceX SPCX to cover losses following major hack. @WatcherGuru",
@@ -55,34 +66,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793340092.0653088,
-   "src": "cointelegraph",
-   "title": "North Korea’s TraderTraitor linked to $6.3B Binance hack",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793354360.906223,
- "bear_score": 10,
+ "ts": 1793354660.819354,
+ "bear_score": 13,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.837,
-   "ch15m": -0.0012170594605744878,
-   "ch1h": -0.004942559444296002,
-   "ch4h": -0.011272092382148435
+   "px": 96.358,
+   "ch15m": -0.0057473043388536205,
+   "ch1h": -0.010586411196336298,
+   "ch4h": -0.01503644113708602
   },
   "BTC": {
-   "px": 77652.0,
-   "ch15m": -0.0005277180698389783,
-   "ch1h": -0.0044232470479633745,
-   "ch4h": -0.01109229143053625
+   "px": 77469.0,
+   "ch15m": -0.002343820427296528,
+   "ch1h": -0.006603918752564608,
+   "ch4h": -0.01354844460290583
   }
  },
  "mode": "live",
