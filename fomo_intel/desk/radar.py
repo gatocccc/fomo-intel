@@ -18,6 +18,14 @@ Qué hace cada minuto:
      cierre a las 12 h, o cierre cuando el shock se despeja y la posición gana. Con RADAR_PERPS=shadow solo registra lo que haría.
   Registro: state/desk/radar_log.jsonl (eventos y acciones), state/desk/radar_closed.jsonl (cortos cerrados con resultado),
   y una nota en el diario del libro (state/plan_lloyd/auto/) por cada apertura/cierre, para que se vea en /book/.
+  6. TESIS VIVA (30/10, pedido de Gastón: "si Binance ya reconoció el hackeo, el stop tenía que cambiar solo"): cada corto lleva su
+     hipótesis con qué la confirma, qué la refuta y qué la vuelve mixta (el exchange cubre pérdidas → riesgo de rebote). Cada titular
+     nuevo que nombre a una entidad de la tesis se evalúa en el minuto (palabras clave + modelo si hay clave) y aplica la acción
+     predeclarada: refutada → cerrar ya; confirmada → trailing más temprano; mixta → stop +2,5%, tope 6 h, breakeven en cuanto gana 1%.
+     Las sesiones de Claude pueden inyectar hechos vistos en la web que los RSS no trajeron: desk/radar_facts.json (lista de
+     {"ts", "title", "src"}); el radar los trata como titulares.
+  7. Fuentes rápidas sin clave: canales públicos de Telegram vía t.me/s/<canal> (TreeNews, Wu Blockchain, Lookonchain, anuncios de
+     Binance, Watcher Guru), que suelen adelantarse 20–60 min a los RSS de los medios.
 Uso: python -m fomo_intel.desk.radar [--once]
 """
 from __future__ import annotations
@@ -132,6 +140,38 @@ def fetch_rss(name, url):
     return out[:40]
 
 
+TG_CHANNELS = ["TreeNewsFeed", "wublockchainenglish", "lookonchain", "binance_announcements", "WatcherGuru"]
+FACTS = Path("desk/radar_facts.json")
+
+
+def fetch_telegram():
+    """Canales públicos de Telegram por su vista web (t.me/s/<canal>), sin clave. Toma los últimos mensajes de texto."""
+    out = []
+    for ch in TG_CHANNELS:
+        try:
+            r = requests.get(f"https://t.me/s/{ch}", timeout=15, headers={"User-Agent": "Mozilla/5.0 (fomo-radar)"})
+            if not r.ok:
+                continue
+            msgs = re.findall(r'<div class="tgme_widget_message_text[^"]*"[^>]*>(.*?)</div>', r.text, flags=re.S)
+            for m in msgs[-15:]:
+                t = re.sub(r"<br\s*/?>", " ", m); t = re.sub(r"<[^>]+>", "", t)
+                t = re.sub(r"&[a-z#0-9]+;", " ", t); t = re.sub(r"\s+", " ", t).strip()
+                if len(t) > 25:
+                    out.append({"src": f"tg:{ch}", "title": t[:240], "link": None, "pub": None})
+        except Exception as e:  # noqa: BLE001
+            log.debug("telegram %s: %s", ch, e)
+    return out
+
+
+def fetch_facts():
+    """Hechos inyectados por las sesiones de Claude (vistos en la web, no en los RSS). Formato: [{"ts", "title", "src"}]."""
+    out = []
+    for f in (jload(FACTS, []) or []):
+        if time.time() - float(f.get("ts", 0)) < 24 * 3600 and f.get("title"):
+            out.append({"src": f.get("src", "claude"), "title": f["title"][:240], "link": None, "pub": None})
+    return out
+
+
 def fetch_cryptopanic():
     tok = os.getenv("CRYPTOPANIC_TOKEN", "")
     if not tok:
@@ -199,7 +239,67 @@ def classify_llm(title):
             return {"types": ["noise"], "dir": 0, "sev": 0, "by": "llm"}
         return {"types": [j.get("type")], "dir": int(j.get("dir", 0)), "sev": int(j.get("sev", 1)), "confirmed": bool(j.get("confirmed")), "by": "llm"}
     except Exception as e:  # noqa: BLE001
-        log.debug("llm: %s", e); return None
+        global _llm_err
+        _llm_err = f"{type(e).__name__}: {str(e)[:160]}"
+        log.warning("clasificador LLM falló (sigue por palabras clave): %s", _llm_err); return None
+
+
+_llm_err = None
+
+
+# ------------------------------------------------------------ tesis viva
+# Verdictos por palabras clave sobre un titular que nombra a una entidad de la tesis. Orden de prioridad: refuted > backstop > confirmed.
+THESIS_KW = [
+    ("refuted", r"\b(denies|denied|deny|debunk\w*|false alarm|not (been )?(hacked|exploited)|no (hack|exploit)|rumou?rs? (are |were )?(false|untrue)|was not a hack|not a hack)\b"),
+    ("backstop", r"\b(cover(s|ed|ing)? (all |the |all the |user |users'? |customer )?loss\w*|reimburs\w+|safu|fully (covered|backed|reimbursed)|funds? (are|remain|were) safe|resum\w+ withdrawals|withdrawals? (resumed|reopened|back)|1:1 backed|no user funds)\b"),
+    ("confirmed", r"\b(confirms?|confirmed|acknowledg\w+|admits?|says .*(hack|exploit|stolen|drained|frozen)|frozen|freez\w+|largest .*hack|losses? (reach|exceed|top))\b"),
+]
+# Acción predeclarada por verdicto (ajustes a RULES para esa posición).
+THESIS_ACTIONS = {
+    "confirmed": {"trail_arm": 0.02},                                        # la tesis vale: proteger ganancia antes
+    "backstop": {"stop_up": 0.025, "max_h": 6, "trail_gap": 0.015, "breakeven_if_ret": 0.01},   # riesgo de rebote: menos pérdida máxima, menos tiempo
+}
+ENTITY_RX = r"\b(binance|coinbase|okx|bybit|kraken|bitget|htx|kucoin|gate\.io|tether|usdt|circle|usdc|polymarket|hyperliquid|solana|ethereum|bitcoin|sec|cftc|fed)\b"
+
+
+def make_thesis(sh):
+    heads = sh.get("headlines", [])[:4]
+    ents = sorted({m for h in heads for m in re.findall(ENTITY_RX, h.lower())}) or ["binance", "solana"]
+    return {"claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: " + " | ".join(heads[:2]),
+            "entities": ents, "state": "confirmed" if sh.get("confirmed") else "open", "evidence": [], "rules": {}}
+
+
+def thesis_kw(title):
+    t = title.lower()
+    for verdict, pat in THESIS_KW:
+        if re.search(pat, t):
+            if verdict == "refuted" and not re.search(r"\b(hack\w*|exploit\w*|breach\w*|drain\w*|stolen|outflows?)\b", t):
+                continue   # "denies X" solo refuta si habla del hecho de la tesis (un desmentido de otra cosa no cierra el corto)
+            return verdict
+    return None
+
+
+def thesis_llm(thesis, title):
+    """Pregunta al modelo si el titular confirma, refuta o vuelve mixta la tesis. None si no hay clave o falla."""
+    global _llm
+    if not os.getenv("ANTHROPIC_API_KEY"):
+        return None
+    try:
+        if _llm is None:
+            import anthropic
+            _llm = anthropic.Anthropic()
+        msg = _llm.messages.create(
+            model=os.getenv("RADAR_LLM_MODEL", "claude-haiku-5-5"), max_tokens=80,
+            messages=[{"role": "user", "content": (
+                "We hold a SOL short on this thesis: " + thesis["claim"][:300] + "\nNew headline: " + title[:300] +
+                "\nReply JSON only: {\"verdict\": one of [refuted (the event did not happen / was denied), backstop (event is real but losses are covered, "
+                "funds safe, withdrawals resumed: rebound risk), confirmed (official confirmation or escalation of the event), none (unrelated or no new fact)], \"fact\": short reason}")}])
+        txt = msg.content[0].text
+        j = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
+        v = j.get("verdict")
+        return {"verdict": v if v in ("refuted", "backstop", "confirmed") else None, "fact": str(j.get("fact", ""))[:160], "by": "llm"}
+    except Exception as e:  # noqa: BLE001
+        log.warning("tesis LLM falló: %s", str(e)[:160]); return None
 
 
 # ------------------------------------------------------------ precio
@@ -240,7 +340,7 @@ class Radar:
         items = []
         for name, url in FEEDS:
             items += fetch_rss(name, url)
-        items += fetch_cryptopanic() + fetch_x()
+        items += fetch_telegram() + fetch_facts() + fetch_cryptopanic() + fetch_x()
         now = time.time(); new = []
         for it in items:
             key = re.sub(r"[^a-z0-9]+", " ", it["title"].lower()).strip()[:120]
@@ -346,11 +446,22 @@ class Radar:
         sh = self.state.get("shock")
         p = leg["pos"]
         if p:   # gestionar
+            if not p.get("thesis"):   # posiciones abiertas antes de la tesis viva: se les adosa una y se evalúan los titulares recientes
+                p["thesis"] = make_thesis(sh or self.state.get("last_shock") or {"headlines": p.get("headlines", [])})
+                for e in sorted(self.recent(6 * 60), key=lambda x: x["ts"]):
+                    self.judge(leg, e, sol, backfill=True)
+            R = {**RULES, **(p["thesis"].get("rules") or {})}
             ret = 1 - sol / p["entry"]            # ganancia del corto como fracción del precio
             p["best_ret"] = max(p.get("best_ret", 0.0), ret)
-            p.update({"mark": sol, "ret_px": round(ret, 4), "pnl_usd_est": round(ret * p["size_usd"], 2), "age_h": round((now - p["ts"]) / 3600, 2)})
+            if R.get("breakeven_if_ret") is not None and p["best_ret"] >= R["breakeven_if_ret"] and not p.get("be_armed"):
+                p["be_armed"] = True; logrow("breakeven_armed", leg=leg["name"], best_ret=round(p["best_ret"], 4))
+            stop_px = p["entry"] * (1 + R["stop_up"])
+            if p.get("be_armed"):
+                stop_px = min(stop_px, p["entry"] * 0.999)
+            p.update({"mark": sol, "ret_px": round(ret, 4), "pnl_usd_est": round(ret * p["size_usd"], 2), "age_h": round((now - p["ts"]) / 3600, 2),
+                      "stop_px": round(stop_px, 2), "rules": {k: R[k] for k in ("stop_up", "trail_arm", "trail_gap", "tp_down", "max_h")}})
             why = None
-            if sol >= p["entry"] * (1 + R["stop_up"]): why = f"stop: SOL +{R['stop_up']:.1%} above entry"
+            if sol >= stop_px: why = f"stop: SOL at {sol:.2f} ≥ stop {stop_px:.2f}" + (" (breakeven)" if p.get("be_armed") else f" (+{R['stop_up']:.1%} over entry)")
             elif p["best_ret"] >= R["trail_arm"] and ret <= p["best_ret"] - R["trail_gap"]: why = f"trailing: locked {ret:.1%} after a best of {p['best_ret']:.1%}"
             elif sol <= p["entry"] * (1 - R["tp_down"]): why = f"take profit: SOL −{R['tp_down']:.0%}"
             elif now - p["ts"] > R["max_h"] * 3600: why = f"time stop ({R['max_h']}h)"
@@ -372,6 +483,63 @@ class Radar:
         coll = max(leg["coll_min"], min(leg["coll_max"], eq * leg["coll_frac"]))
         self.open(leg, coll, sol, sh)
 
+    # ----- tesis viva -----
+    def judge(self, leg, e, sol, backfill=False):
+        """Evalúa un titular contra la tesis de la posición de esa pierna y aplica la acción predeclarada. Devuelve el verdicto o None."""
+        p = leg["pos"]
+        if not p or not p.get("thesis") or not e.get("cls"):
+            return None
+        th = p["thesis"]; title = e["title"]
+        if not re.search(r"\b(" + "|".join(re.escape(x) for x in th["entities"]) + r")\b", title.lower()):
+            return None
+        if any(ev.get("title") == title for ev in th["evidence"]):
+            return None
+        verdict, fact, by = thesis_kw(title), "", "kw"
+        if not backfill:
+            llm = thesis_llm(th, title)
+            if llm is not None:   # si el modelo respondió, manda el modelo (las palabras clave son el plan B sin clave o con error)
+                verdict, fact, by = llm["verdict"], llm.get("fact", ""), "llm"
+        if not verdict:
+            return None
+        th["evidence"].append({"ts": time.time(), "title": title[:200], "src": e.get("src"), "verdict": verdict, "fact": fact, "by": by})
+        th["evidence"] = th["evidence"][-12:]
+        prev = th["state"]
+        if verdict == "refuted":
+            th["state"] = "refuted"; logrow("thesis", leg=leg["name"], verdict=verdict, title=title[:200], by=by)
+            log.warning("[%s] TESIS REFUTADA por '%s' → cierro el corto", leg["name"], title[:80])
+            self.close(leg, f"thesis refuted: {title[:90]}", sol)
+            return verdict
+        if verdict == "backstop":
+            th["state"] = "mixed"
+        elif verdict == "confirmed" and th["state"] == "open":
+            th["state"] = "confirmed"
+        applied = THESIS_ACTIONS.get(verdict, {})
+        changed = {k: v for k, v in applied.items() if th["rules"].get(k) != v}
+        th["rules"].update(applied)
+        logrow("thesis", leg=leg["name"], verdict=verdict, state=th["state"], title=title[:200], by=by, rules=th["rules"], backfill=backfill)
+        jsave(leg["pos_file"], p)
+        if changed or prev != th["state"]:
+            log.warning("[%s] tesis %s → %s por '%s'; reglas %s", leg["name"], prev, th["state"], title[:80], th["rules"])
+            human = {"confirmed": "the event is confirmed, so the short trails profit earlier (from +2%)",
+                     "backstop": "the exchange is covering losses / funds are safe: rebound risk, so the stop tightens to +2.5% over entry, the short moves to breakeven once it is up 1%, and it closes within 6h"}
+            book_note(f"Radar: thesis update on the SOL short ({verdict})",
+                      f"New fact: \"{title[:160]}\" ({e.get('src')}). Thesis state {prev} → {th['state']}: {human.get(verdict, '')}. "
+                      f"Current rules: stop +{th['rules'].get('stop_up', RULES['stop_up']):.1%}, max {th['rules'].get('max_h', RULES['max_h'])}h.",
+                      where=Path(f"state/plan_{leg['plan']}/auto"))
+        return verdict
+
+    def judge_new(self, new, px):
+        sol = (px.get("SOL") or {}).get("px")
+        if not sol or not new:
+            return
+        for leg in self.legs:
+            for e in new:
+                try:
+                    if leg["pos"]:
+                        self.judge(leg, e, sol)
+                except Exception as ex:  # noqa: BLE001
+                    log.exception("tesis %s: %s", leg["name"], ex)
+
     def closed_rows(self):
         if not CLOSED.exists():
             return []
@@ -380,7 +548,8 @@ class Radar:
     def open(self, leg, coll, sol, sh):
         R = RULES; now = time.time()
         rec = {"ts": now, "leg": leg["name"], "plan": leg["plan"], "symbol": "SOL", "side": "short", "entry": sol, "collateral_usd": round(coll, 2), "lev": R["lev"], "size_usd": round(coll * R["lev"], 2),
-               "mode": self.mode, "why": sh["why"] + (" + confirmed major news" if sh.get("confirmed") else ""), "headlines": sh.get("headlines", [])[:3], "pubkey": None, "sig": None, "best_ret": 0.0}
+               "mode": self.mode, "why": sh["why"] + (" + confirmed major news" if sh.get("confirmed") else ""), "headlines": sh.get("headlines", [])[:3], "pubkey": None, "sig": None, "best_ret": 0.0,
+               "thesis": make_thesis(sh)}
         if self.mode == "live":
             try:
                 r = self.perps(leg).open("SOL", "short", coll, R["lev"], dry=False)
@@ -430,15 +599,19 @@ class Radar:
 
     # ----- ciclo -----
     def cycle(self):
-        self.ingest()
+        new = self.ingest()
         px = price_state()
         self.update_shock(px)
         try:
+            self.judge_new(new, px)
             self.manage(px)
         except Exception as e:  # noqa: BLE001
             log.exception("manage: %s", e)
         self.state["position"] = self.pos
         self.state["positions"] = {leg["name"]: leg["pos"] for leg in self.legs}
+        self.state["theses"] = {leg["name"]: (leg["pos"] or {}).get("thesis") for leg in self.legs if leg["pos"]}
+        self.state["llm"] = {"key": bool(os.getenv("ANTHROPIC_API_KEY")), "last_error": _llm_err}
+        self.state["sources"] = sorted({v.get("src") for v in self.seen.values() if v.get("src")})
         jsave(RADAR, self.state)
 
     def run(self, once=False):
