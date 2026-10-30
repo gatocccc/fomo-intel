@@ -1,0 +1,12 @@
+{
+ "id": "lab-2026-10-30-01",
+ "title": "SAFU written off: the flash-meme test lost its whole stake",
+ "journal": "Lab test #2 bought SAFU, the leading meme launched on the Binance-outflow rumours, with 0.0558 SOL (~$5.4). Within hours its pool liquidity went to zero: DexScreener shows $0 liquidity on PumpSwap and Jupiter quotes the whole balance at 0.00003 SOL. Every sale attempt failed. Until now the lab still showed SAFU at its entry price, which overstated the lab balance by about $5. It is written off at zero today. Lesson: a flash-news meme can die before the 6-hour exit even fires; the edge (if any) needs an exit you can actually take, so this test is closed as rejected.",
+ "orders": [
+  {
+   "action": "writeoff",
+   "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
+   "why": "dead token: $0 pool liquidity, Jupiter quote ~0, sale failed for hours"
+  }
+ ]
+}
