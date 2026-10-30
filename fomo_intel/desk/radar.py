@@ -447,11 +447,20 @@ class Radar:
         sh = self.state.get("shock")
         p = leg["pos"]
         if p:   # gestionar
-            if not p.get("thesis"):   # posiciones abiertas antes de la tesis viva: se les adosa una y se evalúan los titulares recientes
+            if not p.get("thesis") or leg["name"] not in self._booted:
+                # Al arrancar (y para posiciones abiertas antes de la tesis viva): adosar tesis si falta y re-evaluar los titulares de las
+                # últimas 6 h (los ya juzgados se saltan por título). Así un reinicio con reglas nuevas no deja hechos sin aplicar.
                 strong = [e["title"] for e in self.recent(6 * 60) if e["cls"]["dir"] < 0 and e["cls"]["sev"] >= 2]
-                p["thesis"] = make_thesis(sh or self.state.get("last_shock") or {"headlines": p.get("headlines", [])}, strong)
+                if not p.get("thesis"):
+                    p["thesis"] = make_thesis(sh or self.state.get("last_shock") or {"headlines": p.get("headlines", [])}, strong)
+                else:
+                    p["thesis"]["entities"] = sorted(set(p["thesis"]["entities"]) | set(make_thesis({"headlines": []}, strong)["entities"]))
+                self._booted.add(leg["name"])
                 for e in sorted(self.recent(6 * 60), key=lambda x: x["ts"]):
                     self.judge(leg, e, sol, backfill=True)
+                if leg["pos"] is None:   # la re-evaluación pudo cerrar la posición (tesis refutada)
+                    return
+                p = leg["pos"]
             R = {**RULES, **(p["thesis"].get("rules") or {})}
             ret = 1 - sol / p["entry"]            # ganancia del corto como fracción del precio
             p["best_ret"] = max(p.get("best_ret", 0.0), ret)
