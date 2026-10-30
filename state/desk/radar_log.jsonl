@@ -1,4 +1,3 @@
-{"ts": 1793349033.268762, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.217, "shock_px": 97.686, "ch1h": -0.007230022976767891, "ch4h": -0.0004523909891940292}
 {"ts": 1793349033.268866, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.217, "shock_px": 97.686, "ch1h": -0.007230022976767891, "ch4h": -0.0004523909891940292}
 {"ts": 1793349093.019757, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.152, "shock_px": 97.686, "ch1h": -0.007893796272657627, "ch4h": -0.0011206958595941785}
 {"ts": 1793349093.019928, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.152, "shock_px": 97.686, "ch1h": -0.007893796272657627, "ch4h": -0.0011206958595941785}
@@ -198,3 +197,4 @@
 {"ts": 1793376726.1520035, "kind": "event", "src": "cointelegraph", "title": "Bitcoin risks worst October in 12 years as tech sell-off spreads to gold", "cls": {"types": ["selloff"], "dir": -1, "sev": 2, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793376861.0860217, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: Binance founder CZ says 6.3 billion crypto hack is a major disaster for the industry. It hurts, but we survive. @WatcherGuru", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793376866.9049075, "kind": "thesis", "leg": "book", "verdict": "confirmed", "state": "mixed", "title": "JUST IN: Binance founder CZ says 6.3 billion crypto hack is a major disaster for the industry. It hurts, but we survive. @WatcherGuru", "by": "kw", "rules": {"stop_up": 0.025, "max_h": 6, "trail_gap": 0.015, "breakeven_if_ret": 0.01, "trail_arm": 0.02}, "backfill": false}
+{"ts": 1793377643.646388, "kind": "event", "src": "decrypt", "title": "Elon Musk, CZ Trade Blows Over SpaceX Shares After $6.4B Binance Hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw+llm", "confirmed": false}}

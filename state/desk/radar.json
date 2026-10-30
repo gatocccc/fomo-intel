@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793377643.646388,
+   "src": "decrypt",
+   "title": "Elon Musk, CZ Trade Blows Over SpaceX Shares After $6.4B Binance Hack",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793376861.0860217,
    "src": "tg:WatcherGuru",
    "title": "JUST IN: Binance founder CZ says 6.3 billion crypto hack is a major disaster for the industry. It hurts, but we survive. @WatcherGuru",
@@ -136,21 +147,21 @@
    ]
   }
  ],
- "ts": 1793377521.508196,
- "bear_score": 7,
+ "ts": 1793377762.2959576,
+ "bear_score": 9,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.138,
-   "ch15m": 0.00048374206032053557,
-   "ch1h": 0.002328350032133386,
-   "ch4h": -0.014981622405135231
+   "px": 95.315,
+   "ch15m": 0.0023450973793799346,
+   "ch1h": 0.004193137161941474,
+   "ch4h": -0.013149039705958487
   },
   "BTC": {
-   "px": 77486.0,
-   "ch15m": -0.0010185006123896168,
-   "ch1h": -0.0015205401783413564,
-   "ch4h": 0.0007361582869467309
+   "px": 77568.0,
+   "ch15m": 3.867723844508397e-05,
+   "ch1h": -0.0004638936137312255,
+   "ch4h": 0.0017951930155368778
   }
  },
  "mode": "live",
@@ -269,10 +280,10 @@
      "trail_arm": 0.02
     }
    },
-   "mark": 95.138,
-   "ret_px": -0.0031,
-   "pnl_usd_est": -0.51,
-   "age_h": 2.66,
+   "mark": 95.315,
+   "ret_px": -0.005,
+   "pnl_usd_est": -0.81,
+   "age_h": 2.72,
    "stop_px": 97.21,
    "rules": {
     "stop_up": 0.025,
@@ -379,7 +390,7 @@
  },
  "llm": {
   "key": true,
-  "last_error": "thesis ValueError: model reply without text block (stop_reason=max_tokens)"
+  "last_error": null
  },
  "sources": [
   "bitcoinmagazine",

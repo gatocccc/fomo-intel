@@ -1,0 +1,22 @@
+== 175_radar_modelo_sin_razonar 2026-10-30T16:26:03Z ==
+classify: {'types': ['hack'], 'dir': -1, 'sev': 3, 'confirmed': True, 'by': 'llm'}
+thesis: {'verdict': 'backstop', 'fact': 'Binance says it will cover all losses from the hack, so the event is real but user funds are protected. This undercuts the thesis that the hack drives SOL lower', 'by': 'llm'}
+err: None nothink_ok: True
+llm {'key': True, 'last_error': None}
+state mixed rules {'stop_up': 0.025, 'max_h': 6, 'trail_gap': 0.015, 'breakeven_if_ret': 0.01, 'trail_arm': 0.02}
+  confirmed kw Live updates: Binance says $6.34B set aside to cover hack losses
+  confirmed kw JUST IN: 🇺🇸 Binance says it is working with the FBI and US Secret Service following 6.3 bi
+  confirmed kw Binance says it holds $5B in matching tokens to cover hack losses
+  confirmed kw Binance says it has $6.34 billion ready to cover hack losses
+  confirmed kw JUST IN: 🇺🇸 US Secret Service is working with Circle to identify, freeze, and recover fund
+  confirmed kw JUST IN: Binance founder CZ says 6.3 billion crypto hack is a major disaster for the indus
+book pos abierta
+Oct 30 16:26:02 simplai-prod systemd[1]: Started fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 30 16:26:07 simplai-prod systemd[1]: Stopping fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps)...
+Oct 30 16:26:07 simplai-prod systemd[1]: fomo-radar.service: Deactivated successfully.
+Oct 30 16:26:07 simplai-prod systemd[1]: Stopped fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 30 16:26:07 simplai-prod systemd[1]: Started fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 30 16:27:24 simplai-prod python3[2408678]: 2026-10-30 16:27:24,901 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+Oct 30 16:27:24 simplai-prod python3[2408678]: 2026-10-30 16:27:24,956 INFO radar: evento [decrypt] sev 2 dir -1: Elon Musk, CZ Trade Blows Over SpaceX Shares After $6.4B Binance Hack
+Oct 30 16:27:27 simplai-prod python3[2408678]: 2026-10-30 16:27:27,059 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+== exit 0 ==
