@@ -1,0 +1,82 @@
+== 180_tygr_vinculos 2026-10-30T19:56:03Z ==
+trades sample [{"tx": "2KKeysYVLbSowXifVKTnnQ4GMK5T5J7Zo7rpBuCFQFK9dKLnsQ7ozbfX346CW1TPeY8TayKaJDNCEA1rSSgBNooV", "amount": 7714731.093536, "priceUsd": 8.84505956939917e-06, "volume": 68.23725608422191, "volumeSol": 0.722, "type": "buy", "wallet": "QLRZH3otrMqJEWtCR65CgrgiYJ9rdJoi1JLf88jFtLA", "time": 1793382349000, "program": "J7pourVwqP1VtRNBiFNqbdGxwkx7ta2LHAURURRRJqmd", "pools": ["3ucNos4NbumPLZNWztqGHNFFgk
+compradores primeros 20 min: 1812
+
+=== ENTRADA DE CADA PRINCIPAL ===
+Dior                 1ra compra + 39.8 min  mcap≈US$   320K  compras=15 US$   9847  ventas=1 US$   2086
+capexbt              1ra compra + 13.8 min  mcap≈US$   188K  compras=9 US$   5000  ventas=0 US$      0
+cooker               1ra compra + 18.8 min  mcap≈US$   325K  compras=1 US$   4706  ventas=0 US$      0
+marcell              1ra compra + 15.3 min  mcap≈US$   204K  compras=1 US$   3000  ventas=0 US$      0
+bob                  1ra compra + 11.9 min  mcap≈US$   109K  compras=1 US$   2064  ventas=0 US$      0
+HarryPaulDavies      1ra compra + 10.8 min  mcap≈US$    38K  compras=5 US$   1960  ventas=0 US$      0
+trenchwarior         1ra compra + 17.6 min  mcap≈US$   245K  compras=3 US$   3000  ventas=0 US$      0
+zenfishechoingg      1ra compra + 29.8 min  mcap≈US$   188K  compras=13 US$   3733  ventas=0 US$      0
+ohtwoo               1ra compra + 17.2 min  mcap≈US$   261K  compras=5 US$   2996  ventas=4 US$    437
+RoaringKitty(pump)   1ra compra + 83.1 min  mcap≈US$   238K  compras=2 US$   2000  ventas=0 US$      0
+ely                  1ra compra + 26.3 min  mcap≈US$   255K  compras=5 US$   2169  ventas=0 US$      0
+bonk_guy             1ra compra + 14.0 min  mcap≈US$   228K  compras=16 US$   8742  ventas=11 US$   5332
+sicktuna             1ra compra + 37.4 min  mcap≈US$   297K  compras=3 US$   2149  ventas=0 US$      0
+tvdj                 1ra compra + 13.5 min  mcap≈US$   144K  compras=4 US$   1538  ventas=2 US$   1276
+coreyape             1ra compra + 63.0 min  mcap≈US$   375K  compras=3 US$   2625  ventas=0 US$      0
+slang                1ra compra + 19.6 min  mcap≈US$   375K  compras=4 US$   2489  ventas=3 US$    669
+tAg911               1ra compra + 83.3 min  mcap≈US$   272K  compras=3 US$   1633  ventas=0 US$      0
+FaZeBlaze            1ra compra + 13.3 min  mcap≈US$   134K  compras=14 US$   4987  ventas=4 US$   2172
+NFTDefi              1ra compra + 19.3 min  mcap≈US$   355K  compras=1 US$   1992  ventas=0 US$      0
+80sCarpeDiem         1ra compra + 23.9 min  mcap≈US$   323K  compras=10 US$   1187  ventas=1 US$     63
+isock                1ra compra + 24.1 min  mcap≈US$   287K  compras=7 US$   1178  ventas=1 US$     28
+
+=== VÍNCULOS DE SOL principal ↔ compradores tempranos/top traders ===
+Dior: 12 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 15), ('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_out', 1)]; top: [('3Vsft5', 'in', 1367.4), ('3Vsft5', 'out', 105.2), ('3uveZ3', 'out', 80.4), ('3uveZ3', 'in', 16.2), ('CRuK58', 'TYGR_in', 15)]
+capexbt: 6 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 9), ('F7p3dFrjRTbtRp8FRF6qHLomXbKRBzpvBLjtQcfcgmNe', 'in', 554.63)]; top: [('F7p3dF', 'in', 554.6), ('7uTT8X', 'out', 331.2), ('Ea2fzb', 'out', 231.6), ('CRuK58', 'TYGR_in', 9), ('Ea2fzb', 'in', 5.9)]
+cooker: 13 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 1)]; top: [('7jy1Tb', 'out', 85.2), ('7jy1Tb', 'in', 15.7), ('Gfw4g6', 'out', 4.9), ('9NhkBR', 'out', 4.9), ('CRuK58', 'TYGR_in', 1)]
+marcell: 1 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 1)]; top: [('CRuK58', 'TYGR_in', 1)]
+bob: 12 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 1), ('F7p3dFrjRTbtRp8FRF6qHLomXbKRBzpvBLjtQcfcgmNe', 'in', 39.6)]; top: [('AwEcjf', 'in', 221.6), ('AwEcjf', 'out', 212.4), ('3HSAhq', 'out', 52.2), ('F7p3dF', 'in', 39.6), ('BALsqJ', 'in', 4.0)]
+HarryPaulDavies: 3 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 4), ('4d4pzSej8ZvbHR1HkBXh5RxpayDdU6W5dnr1h6oWQUWf', 'TYGR_in', 6), ('CkdLUh5Sg3EjA2JBL7smmW8YiPJXu5Zr6RL489LEeASZ', 'TYGR_in', 1)]; top: [('4d4pzS', 'TYGR_in', 6), ('CRuK58', 'TYGR_in', 4), ('CkdLUh', 'TYGR_in', 1)]
+trenchwarior: 6 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 3)]; top: [('FZLQRJ', 'in', 8.7), ('EFrmib', 'out', 4.5), ('6ua6Dx', 'out', 4.2), ('FZLQRJ', 'out', 3.6), ('CRuK58', 'TYGR_in', 3)]
+zenfishechoingg: 14 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 13)]; top: [('DDuBZG', 'out', 112.4), ('DDuBZG', 'in', 41.5), ('8JUEoH', 'in', 40.0), ('4NyK1A', 'in', 20.3), ('H8sMJS', 'in', 19.6)]
+ohtwoo: 12 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 5), ('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_out', 4), ('F7p3dFrjRTbtRp8FRF6qHLomXbKRBzpvBLjtQcfcgmNe', 'in', 1.77)]; top: [('GHeLda', 'out', 153.8), ('Ums3en', 'in', 126.9), ('GHeLda', 'in', 85.3), ('1WQvZ9', 'out', 46.4), ('7SUMez', 'out', 12.0)]
+RoaringKitty(pump): 2 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 2)]; top: [('CRuK58', 'TYGR_in', 2), ('7Kf53h', 'in', 0.1)]
+ely: 5 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 5)]; top: [('8TBZYw', 'out', 33.8), ('8TBZYw', 'in', 33.1), ('CRuK58', 'TYGR_in', 5), ('Fsz7o9', 'out', 3.0), ('7zm9tP', 'in', 0.1)]
+bonk_guy: 32 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_out', 11), ('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 16)]; top: [('9nEMsD', 'out', 305.6), ('9nEMsD', 'in', 201.3), ('CRuK58', 'TYGR_in', 16), ('CRuK58', 'TYGR_out', 11), ('AkWfu3', 'out', 10.0)]
+sicktuna: 4 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 3)]; top: [('8E6YaN', 'in', 21.1), ('8E6YaN', 'out', 20.8), ('CRuK58', 'TYGR_in', 3), ('AugfQK', 'out', 1.0)]
+tvdj: 17 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_out', 2), ('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 4), ('F7p3dFrjRTbtRp8FRF6qHLomXbKRBzpvBLjtQcfcgmNe', 'in', 0.28)]; top: [('afML7C', 'out', 144.5), ('afML7C', 'in', 90.5), ('Biw4ee', 'in', 39.7), ('Ums3en', 'in', 27.7), ('CRuK58', 'TYGR_in', 4)]
+coreyape: 8 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 3), ('F7p3dFrjRTbtRp8FRF6qHLomXbKRBzpvBLjtQcfcgmNe', 'in', 52.36)]; top: [('9Q27cw', 'out', 181.5), ('9Q27cw', 'in', 83.5), ('7uTT8X', 'out', 75.0), ('F7p3dF', 'in', 52.4), ('Ums3en', 'in', 37.2)]
+slang: 6 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_out', 3), ('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 4)]; top: [('HPDxyZ', 'out', 73.9), ('HPDxyZ', 'in', 65.1), ('CRuK58', 'TYGR_in', 4), ('CRuK58', 'TYGR_out', 3), ('KfHbT5', 'out', 0.1)]
+tAg911: 23 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 3)]; top: [('A2gC3t', 'out', 324.7), ('A2gC3t', 'in', 268.2), ('9KGv1v', 'in', 78.1), ('BUEdDS', 'out', 73.0), ('9Zvd8J', 'out', 45.5)]
+FaZeBlaze: 20 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 14), ('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_out', 4), ('4Z3qbvpHsyXPwxGSx3cN5p7NBrEEesW7TwP3epL9rMWU', 'in', 4.5)]; top: [('9Hy5Tq', 'out', 129.7), ('9Hy5Tq', 'in', 75.9), ('Hdw1fs', 'in', 33.4), ('CRuK58', 'TYGR_in', 14), ('Ums3en', 'in', 13.6)]
+NFTDefi: 1 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 1)]; top: [('CRuK58', 'TYGR_in', 1)]
+80sCarpeDiem: 5 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 10), ('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_out', 1)]; top: [('HFJ9ac', 'in', 30.0), ('HFJ9ac', 'out', 29.7), ('CRuK58', 'TYGR_in', 10), ('CRuK58', 'TYGR_out', 1), ('KfHbT5', 'out', 0.1)]
+isock: 9 contrapartes; vínculos: [('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_in', 7), ('CRuK58zxhmh5NFdSMcjVftE9B4AxGfUqWqET5SJjJajC', 'TYGR_out', 1)]; top: [('5zAf5K', 'out', 92.6), ('5zAf5K', 'in', 64.4), ('Cc3bpP', 'in', 29.6), ('CRuK58', 'TYGR_in', 7), ('BZjUcW', 'out', 2.5)]
+
+=== FONDEO de principales ===
+Dior ('JC63PrQtNyGLbHswF2RWK3S8yWsvpoPs1wzHSE8jgbrZ', None, None)
+capexbt ('5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9', 'Binance Hot Wallet 2', 'Centralized Exchange')
+cooker ('86fqkJ2chXGkMJZodAgiDUPe28jLFACoCDZJ2EU9Sqh9', None, None)
+marcell ('AaZkwhkiDStDcgrU37XAj9fpNLrD8Erz5PNkdm4k5hjy', 'ChangeHero Hot Wallet', 'Centralized Exchange')
+bob ('F7p3dFrjRTbtRp8FRF6qHLomXbKRBzpvBLjtQcfcgmNe', 'Relay Solver', 'Cross-chain Bridge')
+HarryPaulDavies ('AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51', 'FOMO Co-signer', 'Authority')
+trenchwarior ('AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51', 'FOMO Co-signer', 'Authority')
+zenfishechoingg ('GJRs4FwHtemZ5ZE9x3FNvJ8TMwitKTh21yxdRPqn7npE', 'Coinbase Hot Wallet 11', 'Centralized Exchange')
+ohtwoo ('6Y5HXiKGxx62bwsykF9eSttY4dr5Tw9Zg7eqaCVLKLSy', None, None)
+RoaringKitty(pump) ('2cJgDiNVEW6dQeXSTtaQB8qrWSge4nXdx4x6eY1ty9rP', None, None)
+ely ('AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51', 'FOMO Co-signer', 'Authority')
+bonk_guy ('5tzFkiKscXHK5ZXCGbXZxdw7gTjjD1mBwuoFbhUvuAi9', 'Binance Hot Wallet 2', 'Centralized Exchange')
+sicktuna ('GgthPkbU1DhKzMsvFi981UicvF3R3z3urw1pyzjHBvch', None, None)
+tvdj ('2ojv9BAiHUrvsm9gxDe7fJSzbNZSJcxZvf8dqmWGHG8S', 'Binance Hot Wallet 1', 'Centralized Exchange')
+coreyape ('9mhknuPaxKJf1YeFDS6TL4b9EDTPUWVAFPPhkPXUt4ak', None, None)
+slang ('DAqCpTpQN1JNCDYLXWir28q1J2eXSufiNNADsSnUQTBZ', None, None)
+tAg911 ('BY4StcU9Y2BpgH8quZzorg31EGE4L1rjomN8FNsCBEcx', 'HTX Hot Wallet 2', 'Centralized Exchange')
+FaZeBlaze ('8Yn6S5ofrsb4XUEHz6SqMq3oXSqgbKL9hTYA1RZu2GH2', None, None)
+NFTDefi ('9MsCdHnAb5PiHBCNkPXfvLYnNMppgdKknNr2RoYUdpVc', None, None)
+80sCarpeDiem ('ASTyfSima4LLAdDgoFGkgqoKowG1LZFDr9fAQrg7iaJZ', 'MEXC Exchange', 'Centralized Exchange')
+isock ('3P8iJ9b1wjz53pf69BiU4wh3iHNT8qsHXeYhornZ2RSY', '"carracrypt" on Pump.fun', 'Individual')
+
+=== GRUPOS TEMPRANOS (fondeo privado común) ===
+F7p3dF billeteras 5 invertido US$ 842 realizado 7203 no realizado 0 siguen holdeando 0 | fondeador del fondeador: Mayan Relayer
+B48kNV billeteras 4 invertido US$ 629 realizado 4800 no realizado 0 siguen holdeando 0 | fondeador del fondeador: GBFSP3
+u6PJ8D billeteras 3 invertido US$ 830 realizado 3721 no realizado 0 siguen holdeando 0 | fondeador del fondeador: Non-circulating Supply List 35
+is6MTR billeteras 3 invertido US$ 391 realizado 103 no realizado 1 siguen holdeando 1 | fondeador del fondeador: OKX Cold Wallet 11
+iGdFcQ billeteras 3 invertido US$ 291 realizado 2423 no realizado 0 siguen holdeando 0 | fondeador del fondeador: Bybit Hot Wallet 1
+8mowmV billeteras 3 invertido US$ 307 realizado 4437 no realizado 0 siguen holdeando 0 | fondeador del fondeador: 9FoTJw
+OK
+== exit 0 ==
