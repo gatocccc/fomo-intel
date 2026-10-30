@@ -716,6 +716,13 @@ class Radar:
             self.turtle.step()
         except Exception as e:  # noqa: BLE001
             log.exception("turtle: %s", e)
+        try:   # 30/10: consenso de KOLs en el lab (fomo_intel/desk/kols.py; lista en desk/kols.json)
+            if not hasattr(self, "kols"):
+                from .kols import KolConsensus
+                self.kols = KolConsensus()
+            self.kols.step()
+        except Exception as e:  # noqa: BLE001
+            log.exception("kols: %s", e)
         self.state["position"] = self.pos
         self.state["positions"] = {leg["name"]: leg["pos"] for leg in self.legs}
         self.state["theses"] = {leg["name"]: (leg["pos"] or {}).get("thesis") for leg in self.legs if leg["pos"]}
