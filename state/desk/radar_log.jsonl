@@ -1,5 +1,3 @@
-{"ts": 1793349153.1748874, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.278, "shock_px": 97.686, "ch1h": -0.006607097268317541, "ch4h": 0.0001747874276432082}
-{"ts": 1793349198.250558, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.33, "shock_px": 97.686, "ch1h": -0.0060760786316058635, "ch4h": 0.0007094313239632832}
 {"ts": 1793349198.2507296, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.33, "shock_px": 97.686, "ch1h": -0.0060760786316058635, "ch4h": 0.0007094313239632832}
 {"ts": 1793349258.4108744, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.289, "shock_px": 97.686, "ch1h": -0.006494766402859287, "ch4h": 0.0002878851749417155}
 {"ts": 1793349258.4110951, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.289, "shock_px": 97.686, "ch1h": -0.006494766402859287, "ch4h": 0.0002878851749417155}
@@ -198,3 +196,5 @@
 {"ts": 1793378125.2838485, "kind": "thesis", "leg": "book", "verdict": "backstop", "state": "mixed", "title": "Binance Sets Aside $6.34B to Cover Hack Losses, CEO Says 'Your Assets Are Safe'", "by": "llm", "rules": {"stop_up": 0.025, "max_h": 6, "trail_gap": 0.015, "breakeven_if_ret": 0.01, "trail_arm": 0.02}, "backfill": false}
 {"ts": 1793379441.5676334, "kind": "event", "src": "cointelegraph", "title": "As it happened: Binance’s record $6.3B crypto hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793379756.6689413, "kind": "event", "src": "cointelegraph", "title": "Recap: How Binance’s record $6.3B hack unfolded", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
+{"ts": 1793382741.645743, "kind": "event", "src": "cointelegraph", "title": "Coinbase leads crypto stock selloff following $6.3B Binance hack", "cls": {"types": ["exchange", "hack", "selloff"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
+{"ts": 1793382741.645743, "kind": "event", "src": "decrypt", "title": "Secret Service, FBI Join Binance Hack Probe as Circle Freezes $823 Million", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
