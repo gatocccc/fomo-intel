@@ -1,14 +1,3 @@
-{"ts": 1793346978.2139072, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.957, "shock_px": 97.686, "ch1h": -0.012858888210140584, "ch4h": -0.002192034578573754}
-{"ts": 1793346978.2140634, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.957, "shock_px": 97.686, "ch1h": -0.012858888210140584, "ch4h": -0.002192034578573754}
-{"ts": 1793347038.1628733, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.072, "shock_px": 97.686, "ch1h": -0.011688047240887789, "ch4h": -0.001008541730986967}
-{"ts": 1793347038.163069, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.072, "shock_px": 97.686, "ch1h": -0.011688047240887789, "ch4h": -0.001008541730986967}
-{"ts": 1793347113.1930852, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.3, "shock_px": 97.686, "ch1h": -0.009366727754021587, "ch4h": 0.0013378614798804644}
-{"ts": 1793347113.1932495, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.3, "shock_px": 97.686, "ch1h": -0.009366727754021587, "ch4h": 0.0013378614798804644}
-{"ts": 1793347158.1247315, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.237, "shock_px": 97.686, "ch1h": -0.01000814498065572, "ch4h": 0.0006895132242461521}
-{"ts": 1793347158.1249185, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.237, "shock_px": 97.686, "ch1h": -0.01000814498065572, "ch4h": 0.0006895132242461521}
-{"ts": 1793347218.5500138, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.23, "shock_px": 97.686, "ch1h": -0.008919015340706382, "ch4h": 0.004909307012557651}
-{"ts": 1793347218.5502303, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.23, "shock_px": 97.686, "ch1h": -0.008919015340706382, "ch4h": 0.004909307012557651}
-{"ts": 1793347278.220018, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.142, "shock_px": 97.686, "ch1h": -0.00981601345497185, "ch4h": 0.003999793292336351}
 {"ts": 1793347278.220183, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.142, "shock_px": 97.686, "ch1h": -0.00981601345497185, "ch4h": 0.003999793292336351}
 {"ts": 1793347338.1831894, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.182, "shock_px": 97.686, "ch1h": -0.009408287039396557, "ch4h": 0.00441320861970973}
 {"ts": 1793347338.183387, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.182, "shock_px": 97.686, "ch1h": -0.009408287039396557, "ch4h": 0.00441320861970973}
@@ -198,3 +187,14 @@
 {"ts": 1793352803.9773023, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.735, "shock_px": 97.686, "ch1h": -0.005091021289725495, "ch4h": -0.013874164084162532}
 {"ts": 1793352890.9950225, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.89, "shock_px": 97.686, "ch1h": -0.0034968631080942725, "ch4h": -0.012294079269287272}
 {"ts": 1793352890.9951856, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.89, "shock_px": 97.686, "ch1h": -0.0034968631080942725, "ch4h": -0.012294079269287272}
+{"ts": 1793352921.0111368, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.94, "shock_px": 97.686, "ch1h": -0.0027672334866113424, "ch4h": -0.01263992014748272}
+{"ts": 1793352921.011296, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.94, "shock_px": 97.686, "ch1h": -0.0027672334866113424, "ch4h": -0.01263992014748272}
+{"ts": 1793352980.3201873, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: Binance founder CZ tells Elon Musk to please stop trolling following major hack. Show a little support. @WatcherGuru", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
+{"ts": 1793352983.7437158, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.939, "shock_px": 97.686, "ch1h": -0.0027775205999445163, "ch4h": -0.012650105417545188}
+{"ts": 1793352983.7438745, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.939, "shock_px": 97.686, "ch1h": -0.0027775205999445163, "ch4h": -0.012650105417545188}
+{"ts": 1793353040.9304137, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.926, "shock_px": 97.686, "ch1h": -0.0029112530732751107, "ch4h": -0.01278251392835672}
+{"ts": 1793353040.930588, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.926, "shock_px": 97.686, "ch1h": -0.0029112530732751107, "ch4h": -0.01278251392835672}
+{"ts": 1793353115.990795, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.952, "shock_px": 97.686, "ch1h": -0.002643788126613811, "ch4h": -0.012517696906733433}
+{"ts": 1793353115.9909863, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.952, "shock_px": 97.686, "ch1h": -0.002643788126613811, "ch4h": -0.012517696906733433}
+{"ts": 1793353176.0931551, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.958, "shock_px": 97.686, "ch1h": -0.0025820654466151005, "ch4h": -0.012456585286358846}
+{"ts": 1793353176.0933132, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.958, "shock_px": 97.686, "ch1h": -0.0025820654466151005, "ch4h": -0.012456585286358846}

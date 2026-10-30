@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793352980.3201873,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Binance founder CZ tells Elon Musk to please stop trolling following major hack. Show a little support. @WatcherGuru",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793352800.376974,
    "src": "decrypt",
    "title": "Binance Finds 'Additional Points of Breach' in $6.3B Hack",
@@ -71,21 +82,21 @@
    ]
   }
  ],
- "ts": 1793352890.9946127,
- "bear_score": 6,
+ "ts": 1793353176.0924547,
+ "bear_score": 8,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.89,
-   "ch15m": -0.000804389076808909,
-   "ch1h": -0.0034968631080942725,
-   "ch4h": -0.012294079269287272
+   "px": 96.958,
+   "ch15m": 0.00109445339280545,
+   "ch1h": -0.0025820654466151005,
+   "ch4h": -0.012456585286358846
   },
   "BTC": {
-   "px": 77614.0,
-   "ch15m": -0.0010039643721361236,
-   "ch1h": -0.004999743602892126,
-   "ch4h": -0.013573625479779361
+   "px": 77668.0,
+   "ch15m": 0.0008246997577443516,
+   "ch1h": -0.004141503506814859,
+   "ch4h": -0.01281203924958052
   }
  },
  "mode": "live",
@@ -97,7 +108,7 @@
  "theses": {},
  "llm": {
   "key": true,
-  "last_error": null
+  "last_error": "ValueError: model reply without JSON: {\"type\": \"noise\", \"dir\": 0, \"sev\": 1, \"confirm"
  },
  "sources": [
   "bitcoinmagazine",
