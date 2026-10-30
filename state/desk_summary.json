@@ -1,17 +1,17 @@
 {
- "now": 1793365787.1249611,
+ "now": 1793366689.6237366,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 166.75,
- "equity_sol": 1.7278,
+ "equity_usd": 166.7,
+ "equity_sol": 1.7365,
  "cash_sol": 0.1009,
- "positions_usd": 157.02,
- "sol_usd": 96.51,
- "mult": 1.683,
+ "positions_usd": 157.01,
+ "sol_usd": 95.99,
+ "mult": 1.682,
  "halt": false,
  "pause": false,
  "positions": [
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9996151106571362,
+   "last_usd": 0.9995966122144011,
    "mult": 0.991,
-   "value_usd": 157.02
+   "value_usd": 157.01
   }
  ],
  "perps_pnl_usd": 0,
@@ -3389,6 +3389,22 @@
   [
    1793365511,
    166.77
+  ],
+  [
+   1793365818,
+   166.75
+  ],
+  [
+   1793365872,
+   166.75
+  ],
+  [
+   1793366180,
+   166.73
+  ],
+  [
+   1793366490,
+   166.71
   ]
  ],
  "closed": [
@@ -3770,6 +3786,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793366475.0892568,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-1321"
+  },
+  {
+   "ts": 1793365871.7218533,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-1311"
+  },
   {
    "ts": 1793365397.0710468,
    "title": "Cerebro automático: estado",
@@ -5155,20 +5185,6 @@
    "text": "set 4kjruq: ajustó GTA6: stop=-1.0",
    "kind": "ejecución",
    "id": "auto-mesa-20261029-0528"
-  },
-  {
-   "ts": 1793251697.758013,
-   "title": "Cerebro automático: ajuste de stops",
-   "text": "GTA6: llegó a 2.67x de pico; subo el stop a 2.00x (antes 1.91x).",
-   "kind": "decisión",
-   "id": "auto-mesa-20261029-0528"
-  },
-  {
-   "ts": 1793249292.2436965,
-   "title": "Ejecución",
-   "text": "set 4kjruq: ajustó GTA6: stop=-0.911",
-   "kind": "ejecución",
-   "id": "auto-mesa-20261029-0448"
   }
  ],
  "wins": 2,
@@ -5178,7 +5194,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793365384.4294224,
+  "last_run": 1793366463.626305,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -5188,11 +5204,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793365384.4316502,
+   "ts": 1793366463.6271536,
    "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -3.8,
-  "sol_vs_ma20": -0.0714
+  "sol_ch24h": -4.0,
+  "sol_vs_ma20": -0.0731
  }
 }

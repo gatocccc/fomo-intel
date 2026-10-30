@@ -1,17 +1,17 @@
 {
- "now": 1793365801.678441,
+ "now": 1793366685.7152889,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 542.11,
- "equity_sol": 5.6169,
- "cash_sol": 0.0843,
- "positions_usd": 533.98,
- "sol_usd": 96.51,
- "mult": 0.99,
+ "equity_usd": 541.82,
+ "equity_sol": 5.6443,
+ "cash_sol": 0.0826,
+ "positions_usd": 533.9,
+ "sol_usd": 95.99,
+ "mult": 0.989,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9996151106571362,
+   "last_usd": 0.9995966122144011,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 533.98
+   "value_usd": 533.97
   }
  ],
  "perps_pnl_usd": 0,
@@ -2196,6 +2196,22 @@
   [
    1793365526,
    542.11
+  ],
+  [
+   1793365832,
+   542.12
+  ],
+  [
+   1793365872,
+   542.12
+  ],
+  [
+   1793366179,
+   541.86
+  ],
+  [
+   1793366486,
+   541.83
   ]
  ],
  "closed": [
@@ -2984,6 +3000,27 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793366471.009377,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-1321"
+  },
+  {
+   "ts": 1793365986.1566021,
+   "title": "Breakout: short ETH",
+   "text": "ETH touched its 55-day low ($2,227.20), a level Lloyd had on file. Turtle rule (55/20): open a short on Jupiter Perps at 2x, $17 collateral ($34 exposure), entry $2,226.72. The exit is pre-set at the 20-day high ($2,578.10); if it is hit, the loss is about $5.4 (1% of the book). Why: in 2024–26 this rule made +7% per trade on average across 8 crypto markets (t 2.0, beats random entries). Against: most breakouts fail (55–65% of trades lose); the system lives on the few big moves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-turtle-20261030-131253"
+  },
+  {
+   "ts": 1793365871.8325386,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-1311"
+  },
   {
    "ts": 1793365396.072998,
    "title": "Automatic brain: status",
@@ -4361,27 +4398,6 @@
    "text": "[Picks] Idle cash: 0.192 SOL (17% of the plan). Putting it to work in DOPE.\n\n[Picks] DOPE: $1.9M market cap, $197K liquidity, 24h volume 0.4x its value, 9010 holders, top 10 hold 19%; 24h -19%, at 61% of its 3-day high. Anti-rug: clean (common-funder groups 0%). Against: bundlers 0%, creator launched many tokens (half size); a 30–35% stop can fill lower in a fast drop.",
    "kind": "decisión",
    "id": "auto-lloyd-20261029-0319"
-  },
-  {
-   "ts": 1793242700.107612,
-   "title": "Automatic brain: status",
-   "text": "[Majors] Still in USDC on purpose. Versus their 20-day averages: SOL -4.6%, BTC -2.4%, ETH -4.4%, JUP -13.5%. The plan buys each asset the hour it closes 1% above its average; until then, cash is the position. Checked every hour.",
-   "kind": "decisión",
-   "id": "auto-lloyd-note-20261029-0258"
-  },
-  {
-   "ts": 1793239565.8152182,
-   "title": "Automatic brain: status",
-   "text": "Market is neutral. Pockets: Cash 70% (target 30%), Majors 0% (target 25%), Established memes 10% (target 25%), Picks 18% (target 20%). Nothing to change this hour: every open position is inside its rules and no new candidate passed the filters.",
-   "kind": "decisión",
-   "id": "auto-lloyd-note-20261029-0206"
-  },
-  {
-   "ts": 1793238981.5925899,
-   "title": "Execution",
-   "text": "buy USDC: bought 86 USDC for 0.8647 SOL at $1.00946 (slippage +1.0%)",
-   "kind": "execution",
-   "id": "auto-lloyd-20261029-0156"
   }
  ],
  "wins": 1,
@@ -4391,7 +4407,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793365384.4344842,
+  "last_run": 1793366463.6287065,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4401,11 +4417,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793365384.4376223,
+   "ts": 1793366463.6298196,
    "text": "[Picks] Idle cash (100%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves."
   },
-  "trad_status": "3 of 21 established memecoins above their 20-day average (best: SAPLING +106%, STONK +7%, OTC +2%)",
-  "sol_ch24h": -3.8,
-  "sol_vs_ma20": -0.0714
+  "trad_status": "SOL -7.3%, BTC -5.4%, ETH -7.5%, JUP -16.5%",
+  "sol_ch24h": -4.0,
+  "sol_vs_ma20": -0.0731
  }
 }
