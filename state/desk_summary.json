@@ -1,16 +1,16 @@
 {
- "now": 1793343579.107186,
+ "now": 1793343882.7392652,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 166.88,
- "equity_sol": 1.6992,
+ "equity_usd": 166.87,
+ "equity_sol": 1.7011,
  "cash_sol": 0.1009,
- "positions_usd": 156.98,
- "sol_usd": 98.21,
+ "positions_usd": 156.97,
+ "sol_usd": 98.09,
  "mult": 1.684,
  "halt": false,
  "pause": false,
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9993471131905582,
+   "last_usd": 0.9993293040463618,
    "mult": 0.991,
-   "value_usd": 156.98
+   "value_usd": 156.97
   }
  ],
  "perps_pnl_usd": 0,
@@ -3117,6 +3117,10 @@
   [
    1793343427,
    166.87
+  ],
+  [
+   1793343731,
+   166.88
   ]
  ],
  "closed": [
@@ -3498,6 +3502,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793343730.8730505,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h 2.8%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-0702"
+  },
   {
    "ts": 1793343138.9764192,
    "title": "Cerebro automático: estado",
@@ -4899,7 +4910,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793343124.890377,
+  "last_run": 1793343723.6314366,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4909,7 +4920,7 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793343124.892229,
+   "ts": 1793343723.6334224,
    "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h 2.8%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
