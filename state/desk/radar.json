@@ -16,6 +16,16 @@
  },
  "events": [
   {
+   "ts": 1793392085.0850108,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: 🇺🇸 CFTC proposes new regulations for crypto exchanges to strengthen security against cyberattacks. @WatcherGuru",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "regulatory"
+   ]
+  },
+  {
    "ts": 1793390525.5457249,
    "src": "tg:TreeNewsFeed",
    "title": "*TRUMP: LOOKING AT BINANCE HACK: BBG",
@@ -82,34 +92,23 @@
     "exchange_risk",
     "hack"
    ]
-  },
-  {
-   "ts": 1793377643.646388,
-   "src": "decrypt",
-   "title": "Elon Musk, CZ Trade Blows Over SpaceX Shares After $6.4B Binance Hack",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793391845.882952,
- "bear_score": 1,
+ "ts": 1793392145.7171643,
+ "bear_score": 2,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.802,
-   "ch15m": -0.0006641016180887194,
-   "ch1h": 0.00402448581898307,
-   "ch4h": -0.0031020957548606454
+   "px": 94.971,
+   "ch15m": 0.000516213311982483,
+   "ch1h": 0.0064432033742038985,
+   "ch4h": -0.0038076656806596
   },
   "BTC": {
-   "px": 76856.0,
-   "ch15m": -0.0015070415215923116,
-   "ch1h": 0.003984271923292981,
-   "ch4h": -0.007733522690594574
+   "px": 76959.0,
+   "ch15m": 0.00014295368300665245,
+   "ch1h": 0.005356046453905305,
+   "ch4h": -0.007991853465499688
   }
  },
  "mode": "live",
