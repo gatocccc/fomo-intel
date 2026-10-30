@@ -16,6 +16,27 @@
  },
  "events": [
   {
+   "ts": 1793376861.0860217,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Binance founder CZ says 6.3 billion crypto hack is a major disaster for the industry. It hurts, but we survive. @WatcherGuru",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793376726.1520035,
+   "src": "cointelegraph",
+   "title": "Bitcoin risks worst October in 12 years as tech sell-off spreads to gold",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "selloff"
+   ]
+  },
+  {
    "ts": 1793375405.744995,
    "src": "tg:WatcherGuru",
    "title": "JUST IN: 🇺🇸 US Secret Service is working with Circle to identify, freeze, and recover funds stolen from Binance. @WatcherGuru",
@@ -137,21 +158,21 @@
    ]
   }
  ],
- "ts": 1793376562.138834,
- "bear_score": 2,
+ "ts": 1793376864.4737053,
+ "bear_score": 7,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.01,
-   "ch15m": 0.004822641030522323,
-   "ch1h": -0.004150682347022205,
-   "ch4h": -0.018177308848908225
+   "px": 95.094,
+   "ch15m": 0.0025302043139983077,
+   "ch1h": -0.0018997638415115814,
+   "ch4h": -0.015905868717078442
   },
   "BTC": {
-   "px": 77523.0,
-   "ch15m": 0.0004516828412142182,
-   "ch1h": -0.002457729624005922,
-   "ch4h": -7.73903958518618e-05
+   "px": 77570.0,
+   "ch15m": -0.00015467505349175958,
+   "ch1h": -0.001968529264181784,
+   "ch4h": 0.0007482712354216492
   }
  },
  "mode": "live",
@@ -252,6 +273,14 @@
       "verdict": "confirmed",
       "fact": "",
       "by": "kw"
+     },
+     {
+      "ts": 1793376866.9048383,
+      "title": "JUST IN: Binance founder CZ says 6.3 billion crypto hack is a major disaster for the industry. It hurts, but we survive. @WatcherGuru",
+      "src": "tg:WatcherGuru",
+      "verdict": "confirmed",
+      "fact": "",
+      "by": "kw"
      }
     ],
     "rules": {
@@ -262,10 +291,10 @@
      "trail_arm": 0.02
     }
    },
-   "mark": 95.01,
-   "ret_px": -0.0018,
-   "pnl_usd_est": -0.29,
-   "age_h": 2.39,
+   "mark": 95.094,
+   "ret_px": -0.0027,
+   "pnl_usd_est": -0.44,
+   "age_h": 2.48,
    "stop_px": 97.21,
    "rules": {
     "stop_up": 0.025,
@@ -351,6 +380,14 @@
      "verdict": "confirmed",
      "fact": "",
      "by": "kw"
+    },
+    {
+     "ts": 1793376866.9048383,
+     "title": "JUST IN: Binance founder CZ says 6.3 billion crypto hack is a major disaster for the industry. It hurts, but we survive. @WatcherGuru",
+     "src": "tg:WatcherGuru",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
     }
    ],
    "rules": {
@@ -364,7 +401,7 @@
  },
  "llm": {
   "key": true,
-  "last_error": null
+  "last_error": "thesis ValueError: model reply without text block (stop_reason=max_tokens)"
  },
  "sources": [
   "bitcoinmagazine",
