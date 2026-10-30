@@ -1,16 +1,16 @@
 {
- "now": 1793377184.9675393,
+ "now": 1793377549.1839225,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 540.99,
- "equity_sol": 5.6862,
+ "equity_usd": 541.26,
+ "equity_sol": 5.6934,
  "cash_sol": 0.0826,
- "positions_usd": 533.13,
- "sol_usd": 95.14,
+ "positions_usd": 533.41,
+ "sol_usd": 95.07,
  "mult": 0.988,
  "halt": false,
  "pause": false,
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9997972473098362,
+   "last_usd": 0.9997090709315881,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 435.61
+   "value_usd": 435.57
   },
   {
    "mint": "perps:7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "symbol": "SOL short 2x",
    "opened_ts": 1793367953.6543465,
    "entry_usd": 94.84,
-   "last_usd": 95.305,
+   "last_usd": 95.138,
    "peak_usd": 93.966,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.8544,
+   "sol_in": 0.8551,
    "sol_out": 0.0,
    "stop": 0.035,
    "trail": 0.02,
@@ -61,9 +61,9 @@
    "brain": false,
    "perps": true,
    "system": "News-shock short",
-   "mult": 0.99,
-   "value_usd": 80.49,
-   "pnl_usd": -0.8,
+   "mult": 0.994,
+   "value_usd": 80.79,
+   "pnl_usd": -0.5,
    "collateral_usd": 81.29,
    "side": "short"
   },
@@ -72,11 +72,11 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2236.05,
+   "last_usd": 2234.35,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1805,
+   "sol_in": 0.1806,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -91,14 +91,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 0.992,
-   "value_usd": 17.03,
-   "pnl_usd": -0.14,
+   "mult": 0.993,
+   "value_usd": 17.05,
+   "pnl_usd": -0.12,
    "collateral_usd": 17.17,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.94,
+ "perps_pnl_usd": -0.62,
  "equity": [
   [
    1793203600,
@@ -2415,6 +2415,14 @@
   [
    1793376911,
    541.41
+  ],
+  [
+   1793377215,
+   541.07
+  ],
+  [
+   1793377518,
+   541.47
   ]
  ],
  "closed": [
@@ -3203,6 +3211,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793377518.7445965,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -1.8%): no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-1625"
+  },
   {
    "ts": 1793376911.4539938,
    "title": "Automatic brain: status",
@@ -4594,13 +4609,6 @@
    "text": "sell EPjFWd: sold 15% of USDC (fund the research lab) for 0.8142 SOL",
    "kind": "execution",
    "id": "lloyd-2026-10-29-01"
-  },
-  {
-   "ts": 1793271246.9542532,
-   "title": "Funding the lab",
-   "text": "About a tenth of the book (roughly $60) is being set aside for Lloyd's lab: a separate wallet where new trading ideas are tested live with small size before they are allowed into the main book. This sale turns part of the Cash pocket (USDC) into SOL to send there.",
-   "kind": "decisión",
-   "id": "lloyd-2026-10-29-01"
   }
  ],
  "wins": 1,
@@ -4610,7 +4618,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793376904.3628423,
+  "last_run": 1793377505.4917014,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4620,11 +4628,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793376904.3660586,
-   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -2.2%): no new memecoins until it improves."
+   "ts": 1793377508.0125954,
+   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -1.8%): no new memecoins until it improves."
   },
-  "trad_status": "2 of 19 established memecoins above their 20-day average (best: SAPLING +97%, STONK +2%)",
-  "sol_ch24h": -7.1,
-  "sol_vs_ma20": -0.0915
+  "trad_status": "SOL -8.7%, BTC -5.2%, ETH -7.2%, JUP -16.4%",
+  "sol_ch24h": -6.7,
+  "sol_vs_ma20": -0.0874
  }
 }

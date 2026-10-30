@@ -1,0 +1,26 @@
+== 174_mercado_tarde 2026-10-30T16:25:03Z ==
+=== precios (dexscreener) ===
+TTWO 196.58 mcap 84 liq 432661.25 chg {'h1': 6.37, 'h6': -2.2, 'h24': 0.97} vol {'h24': 1020636.79, 'h6': 158110.43, 'h1': 18317.92, 'm5': 0}
+SOL 94.94 mcap 1194029738 liq 25456798.6 chg {'m5': -0.2, 'h1': -0.16, 'h6': -1.65, 'h24': -7.09} vol {'h24': 178086164.89, 'h6': 37008703.64, 'h1': 6494154.92, 'm5': 372925.41}
+{"solana":{"usd":94.92,"usd_24h_change":-7.092036418876381},"bitcoin":{"usd":77508,"usd_24h_change":-4.732426766062158},"ethereum":{"usd":2229.86,"usd_24h_change":-5.345056815892636}}
+=== scan4 (veto, top) ===
+  http 400 /tokens/graduated {} {"error":"Invalid token address"}
+en rankings: 340
+  campos /search: ['bundlers', 'buys', 'communityMessages', 'createdAt', 'decimals', 'deployer', 'dev', 'fees', 'freezeAuthority', 'graduatedAt', 'hasCoinCommunity', 'hasSocials', 'holders', 'id', 'image', 'insiders', 'lastUpdated', 'launchpad', 'liquidityUsd', 'lpBurn', 'market', 'marketCapUsd', 'migrationSeconds', 'mint', 'mintAuthority', 'name', 'poolAddress', 'priceUsd', 'quoteToken', 'riskScore', 'sells', 'snipers', 'socials', 'status', 'symbol', 'tokenDetails', 'top10', 'totalTransactions', 'volume', 'volume_12h']
+sumados por /search: 893 | total: 1233
+pasan liquidez/mcap/edad: 859
+con velas: 96
+PASAN TODOS LOS FILTROS: 11
+
+GTA6       mcap $12.29M liq $ 423K edad 2037h vol24 $ 14294K (1.16x) acel 0.7 CV 0.97 | 1h +2% 6h -11% 24h -13% 72h +159% | 40% del máx | hold 51915 top10 17% | 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz |  GTA VI was launched on StonkFun.
+tSpaceX    mcap $ 0.65M liq $ 538K edad 6276h vol24 $   631K (0.96x) acel 1.5 CV 0.78 | 1h +0% 6h -1% 24h -1% 72h -2% | 98% del máx | hold 971 top10 8% | TSPXcLV76s6V2zDiZQ18kBfcbnjaE2ZzNT3ga2Pd99v |  
+FLOAT      mcap $ 0.79M liq $ 179K edad   42h vol24 $  2452K (3.11x) acel 0.7 CV 1.09 | 1h +28% 6h -2% 24h -48% 72h -53% | 30% del máx | hold 3716 top10 21% | Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr |  
+SAPLING    mcap $ 3.55M liq $ 402K edad  837h vol24 $  1356K (0.38x) acel 0.3 CV 1.01 | 1h +5% 6h +0% 24h +3% 72h +256% | 84% del máx | hold 4868 top10 18% | BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W | https://x.com/saplingdotcash/status the rootstock of sapling.cash, the zcash
+DESSA      mcap $ 9.00M liq $ 269K edad   99h vol24 $  2261K (0.25x) acel 0.5 CV 1.21 | 1h +5% 6h +2% 24h +17% 72h +1793% | 93% del máx | hold 10397 top10 2% | npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump | https://x.com/jack/status/211369790 Zero books. All yap.
+baton      mcap $ 4.12M liq $ 380K edad 1220h vol24 $  2453K (0.59x) acel 0.5 CV 1.09 | 1h +2% 6h +5% 24h -35% 72h -23% | 57% del máx | hold 22490 top10 16% | Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump | https://x.com/connortrenches/status Created on https://rapidlaunch.io
+three      mcap $ 0.56M liq $ 155K edad 4427h vol24 $   276K (0.50x) acel 0.2 CV 2.17 | 1h -0% 6h -12% 24h +18% 72h +96% | 71% del máx | hold 15293 top10 13% | FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump | https://x.com/dorklon_must/status/2 give your ai model a life. fees directed
+SI         mcap $11.13M liq $ 454K edad  937h vol24 $  2946K (0.26x) acel 0.8 CV 0.93 | 1h +2% 6h +2% 24h -12% 72h -13% | 62% del máx | hold 51317 top10 11% | DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP | https://truthsocial.com/@realdonald 
+DOPE       mcap $ 1.59M liq $ 166K edad  459h vol24 $   736K (0.46x) acel 0.5 CV 0.92 | 1h +2% 6h +1% 24h -21% 72h -34% | 61% del máx | hold 8736 top10 20% | 33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump | https://x.com/essencepnl/status/210 
+PAID       mcap $ 2.75M liq $ 379K edad 1077h vol24 $  1297K (0.47x) acel 0.2 CV 1.48 | 1h +0% 6h -1% 24h +4% 72h +7% | 74% del máx | hold 38205 top10 15% | 98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump | https://x.com/UsePaid 
+CX         mcap $ 0.46M liq $ 609K edad 15023h vol24 $   133K (0.29x) acel 0.3 CV 0.93 | 1h -0% 6h -2% 24h -12% 72h -12% | 85% del máx | hold 323 top10 17% | CortexFv3fRcLKTgACr7aLqckGh5eP7TP3z9JHoKqMc6 |  
+== exit 0 ==
