@@ -860,7 +860,16 @@ class Brain:
             log.info("[%s/%s] %s: %s", key, mode, title, [o["action"] + " " + (o.get("symbol") or o["mint"][:6]) for o in orders])
         elif notes:
             # sin órdenes pero con algo para explicar (efectivo quieto, sin candidatos): va al registro del plan, con un tope de frecuencia por tipo
-            bstate["last_note"] = {"ts": time.time(), "text": notes[-1]}
+            # 30/10 15:40 (autocrítica): la nota "efectivo ocioso, pero el radar sigue viendo un shock" se escribía CADA 10 MIN en el diario
+            # público del libro (18 notas idénticas en 3 h, solo cambiaba el % de SOL). Ahora: misma nota (ignorando números) → como mucho
+            # una cada 3 h; si el contenido cambia de verdad, sale enseguida.
+            import re as _re
+            nkey = _re.sub(r"[-+]?\d[\d.,]*%?", "#", "\n\n".join(notes))
+            prev = bstate.get("last_note") or {}
+            if prev.get("key") == nkey and time.time() - prev.get("ts", 0) < 3 * 3600:
+                jsave(st_dir / "brain.json", bstate)
+                return True
+            bstate["last_note"] = {"ts": time.time(), "text": notes[-1], "key": nkey}
             if mode == "live":
                 did = f"auto-{key}-note-{time.strftime('%Y%m%d-%H%M', time.gmtime())}"
                 jsave(st_dir / "auto" / f"{did}.json", {"id": did, "title": L(d, "Cerebro automático: estado", "Automatic brain: status"),
