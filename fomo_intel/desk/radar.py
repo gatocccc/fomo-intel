@@ -333,6 +333,7 @@ class Radar:
         for leg in LEGS:
             leg["pos"] = jload(leg["pos_file"], None)
         self.legs = LEGS
+        self._booted = set()
         self.pos = self.legs[0]["pos"]   # compat: la pierna del lab es la "principal" en radar.json
 
     # ----- noticias -----
