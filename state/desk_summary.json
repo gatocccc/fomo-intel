@@ -1,16 +1,16 @@
 {
- "now": 1793348375.0226777,
+ "now": 1793348678.579297,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 166.8,
- "equity_sol": 1.7153,
+ "equity_usd": 166.81,
+ "equity_sol": 1.7134,
  "cash_sol": 0.1009,
  "positions_usd": 156.99,
- "sol_usd": 97.24,
+ "sol_usd": 97.36,
  "mult": 1.683,
  "halt": false,
  "pause": false,
@@ -35,7 +35,7 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9994554299671852,
+   "last_usd": 0.9994483083350156,
    "mult": 0.991,
    "value_usd": 156.99
   }
@@ -3181,6 +3181,10 @@
   [
    1793348284,
    166.8
+  ],
+  [
+   1793348587,
+   166.81
   ]
  ],
  "closed": [
@@ -3562,6 +3566,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793348526.6736057,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h -0.2%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-0822"
+  },
   {
    "ts": 1793347934.6929526,
    "title": "Cerebro automático: estado",
@@ -4954,13 +4965,6 @@
    "text": "set CA8q2m: ajustó REMUS: stop=0.1",
    "kind": "ejecución",
    "id": "2026-10-27-04"
-  },
-  {
-   "ts": 1793148375.7327445,
-   "title": "Noche día 1: nada de compras; acorto el stop de REMUS",
-   "text": "Chequeo anti-rug nocturno: GTA6 y REMUS siguen LIMPIOS (ningún grupo de holders fondeado por la misma billetera supera el 2,5%, y ninguno ligado al creador). Pero en REMUS los 'bundlers' (billeteras que compraron en paquete al lanzamiento) subieron de 13,5% a 17% del total en seis horas: alguien está acumulando en bloque. Puede ser una ballena que cree en el token, o alguien preparando una venta grande. Como REMUS ya está +24% sobre mi entrada, no quiero devolver esa ganancia y además perder: subo su stop de −35% a −10% desde la entrada. Sigue teniendo ~27% de margen sobre el precio actual para moverse, pero si se desarma, salgo casi sin pérdida. GTA6 queda igual (+16%, catalizador con fecha, holders limpios).\n\nCompras: no. El escaneo de 274 tokens dejó dos. 'Nothing' subió 611% en 24 h con liquidez de US$132K (debajo de mi mínimo de US$150K) y está en plena euforia: comprar ahí es ser la salida de otro. USOE ya lo descarté ayer por volumen de bots. Prefiero tener 27% en efectivo esperando un buen candidato que forzar una entrada mala.",
-   "kind": "decisión",
-   "id": "2026-10-27-04"
   }
  ],
  "wins": 2,
@@ -4970,7 +4974,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793347924.7461417,
+  "last_run": 1793348523.6316304,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4980,7 +4984,7 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793347924.7472696,
+   "ts": 1793348523.6324732,
    "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h -0.2%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
