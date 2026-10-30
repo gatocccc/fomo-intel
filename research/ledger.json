@@ -91,17 +91,17 @@
    "efficacy": "Adopted: the lab's daily-trend test sizes leverage as 60% / 30-day volatility."
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-10-30",
    "name": "Execution cost audit + MEV protection",
    "question": "How much of our 2–5% round trip is fee vs impact vs sandwiches, and how much can tight slippage / Jito-protected sends recover?",
-   "method": "Decompose our own fills with Helius; then live A/B on alternating tickets (protected vs not)",
-   "result": "Queued. Evidence: Helius Solana MEV report: one program ~51.6K sandwiches/day, 16 of top-20 sandwiched tokens are Pump.fun",
-   "verdict": "queued",
+   "method": "Our own 29 real memecoin fills (Oct 27–30, all plans) + 17 cash swaps: fill price vs the 1-minute market price just before (Solana Tracker candles); every memecoin fill's block read from Helius to look for a wallet trading the same pool right before AND right after us (sandwich). Then a quote-only A/B (no money): Jupiter vs Solana Tracker for 10 tokens × 3 sizes, buy and sell back (exec_cost.py, route_ab.py; ops 176–179).",
+   "result": "Realized cost per side: memecoin buys median 2.5% (mean 3.4%, worst 12.7% on SAFU), sells median 1.5% (mean skewed by one GTA6 stop in a crash) → ~4% round trip median, above the 3% the protocol assumes. Sandwiches: 0 of 14 buys; 2 of 15 sells with a same-pool wallet on both sides of us, both during fast moves (GTA6 stop in a crash block with 8 traders) — ambiguous, not a systematic leak. Quotes: Jupiter and Solana Tracker give the same output (median difference 0.00%); pool round-trip cost at quote time median 1.6%. So of ~4% realized, ~1.6% is the pool, the rest is the 0.5%/side platform fee, priority fees and price drift between decision and fill. Cash swaps SOL↔USDC: ~1.0% via Solana Tracker before Oct 29 → 0.1–0.2% via Jupiter after (already live). Recommendation: use 4% round trip for memecoin backtests.",
+   "verdict": "rejected",
    "sleeve": "picks, established",
    "priority": 2,
    "public_title": "Stop paying the sandwich bots",
    "hypothesis": "A big part of every memecoin trade's cost goes to bots that front-run it. Protected orders can win it back.",
-   "efficacy": null
+   "efficacy": "Checked 29 real trades block by block: 0 of 14 buys sandwiched, 2 of 15 sells possibly (both in crash minutes). The bots are not where our money goes. Real cost is about 4% per round trip: ~1.6% is the pool itself, the rest is fees and the price moving while the order travels. Moving cash swaps to Jupiter already cut them from ~1% to ~0.15%."
   },
   {
    "date": "2026-10-29",
@@ -224,8 +224,8 @@
    "question": "When bearish news (exchange trouble, hacks, forced selling) is confirmed by a price drop within the hour, does a small SOL short opened within minutes and closed within hours beat its costs?",
    "hypothesis": "Macro news moves the market for hours, not seconds, so a 5-minute reaction is fast enough to catch part of the move.",
    "method": "Live in the lab wallet: fomo-radar reads RSS/CryptoPanic/X every minute, scores headlines, requires SOL -1.5% in 1h (or -2.5% in 4h, or BTC -1% in 1h), opens a 2x SOL short on Jupiter Perps (stop +3.5%, take profit -7%, 12h max). Every short is logged with entry, exit and result; shadow decisions logged too. Adopt into the book only after 20+ shocks and a result better than random timing after costs.",
-   "result": "Started Oct 29 evening after the Binance-outflow rumours; no closed trades yet.",
-   "efficacy": "Testing. First live shocks will show up here with their result.",
+   "result": "2 live shorts closed (Oct 29–30): +$0.86 (trailing stop locked +2.5% after a best of +4.7%) and −$0.07 (breakeven stop). Needs 20+.",
+   "efficacy": "2 shocks so far: 1 win (+$0.86), 1 flat (−$0.07). Net +$0.79 on ~$20 collateral. Too early to call; needs 20+.",
    "verdict": "testing",
    "sleeve": "majors"
   },
@@ -288,6 +288,19 @@
    "efficacy": "No lag to exploit: by the time Wall Street's move is visible, crypto has priced it. Chasing it loses after costs.",
    "verdict": "rejected",
    "sleeve": "majors"
+  },
+  {
+   "date": "2026-10-30",
+   "name": "Memecoin swaps via Jupiter without platform fee + fill-drift log",
+   "public_title": "Pay the pool, not the middleman",
+   "question": "Routing memecoin buys/sells through Jupiter (no 0.5% platform fee, same pool price) and logging decision→fill drift: does realized round-trip cost drop from ~4% toward ~2.5%?",
+   "hypothesis": "Our quotes are identical on both routers, so dropping the 0.5% per-side fee and trimming the delay between decision and fill should cut about 1–1.5% from every round trip.",
+   "method": "Live A/B in the lab and book on alternating tickets (Jupiter vs Solana Tracker), same sizes; judge by realized cost vs the 1-minute price before (exec_cost.py) and by failure rate. Sells now log slippage, quoted impact and route (engine change Oct 30).",
+   "result": "Queued. Evidence: our audit (median ~4% realized vs 1.6% pool cost at quote; quotes identical across routers); cash swaps already dropped from ~1% to ~0.15% after moving to Jupiter.",
+   "efficacy": null,
+   "verdict": "queued",
+   "sleeve": "picks, established",
+   "priority": 2
   }
  ],
  "protocol": "Out-of-sample half held out, entries at next bar open, real costs (memes ~3% round trip, perps 0.12% + funding), random-entry control x20; adopt only if test mean > 0, t ≥ 2.5, beats random by ≥ 0.3%/trade, design half also positive. Risk/cost changes are judged on drawdown and realized cost, not on win rate.",
