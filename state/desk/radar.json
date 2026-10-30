@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793351777.6119096,
+   "src": "cointelegraph",
+   "title": "Live updates: Binance uncovers more breach points in $6.3B hack",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793346092.5937626,
    "src": "cointelegraph",
    "title": "Binance investigates multibillion-dollar security breach",
@@ -71,21 +82,21 @@
    ]
   }
  ],
- "ts": 1793351658.4359007,
- "bear_score": 0,
+ "ts": 1793351958.2644074,
+ "bear_score": 3,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 97.084,
-   "ch15m": -0.002404488378306091,
-   "ch1h": -0.0011728636391694636,
-   "ch4h": -0.006610048091681198
+   "px": 97.04,
+   "ch15m": -0.003583566932610305,
+   "ch1h": -0.003481243389231725,
+   "ch4h": -0.008379317392192887
   },
   "BTC": {
-   "px": 77785.0,
-   "ch15m": -0.0027180532584586414,
-   "ch1h": -0.0037654170775752727,
-   "ch4h": -0.009549882218119254
+   "px": 77746.0,
+   "ch15m": -0.003051908083709476,
+   "ch1h": -0.0044306715156482435,
+   "ch4h": -0.010613387630440285
   }
  },
  "mode": "live",
