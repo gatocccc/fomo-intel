@@ -1,5 +1,3 @@
-{"ts": 1793349438.247171, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.135, "shock_px": 97.686, "ch1h": -0.005355424030801359, "ch4h": -0.0009976139542536844}
-{"ts": 1793349438.2474635, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.135, "shock_px": 97.686, "ch1h": -0.005355424030801359, "ch4h": -0.0009976139542536844}
 {"ts": 1793349498.681936, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.274, "shock_px": 97.686, "ch1h": -0.003932089536955452, "ch4h": 0.0004319565575119366}
 {"ts": 1793349498.682045, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.274, "shock_px": 97.686, "ch1h": -0.003932089536955452, "ch4h": 0.0004319565575119366}
 {"ts": 1793349558.3191113, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.274, "shock_px": 97.686, "ch1h": -0.003932089536955452, "ch4h": 0.0004319565575119366}
@@ -198,3 +196,5 @@
 {"ts": 1793390525.5457249, "kind": "event", "src": "tg:TreeNewsFeed", "title": "*TRUMP: LOOKING AT BINANCE HACK: BBG", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 1, "by": "kw+llm", "confirmed": false}}
 {"ts": 1793392085.0850108, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: 🇺🇸 CFTC proposes new regulations for crypto exchanges to strengthen security against cyberattacks. @WatcherGuru", "cls": {"types": ["regulatory"], "dir": -1, "sev": 1, "by": "kw+llm", "confirmed": false}}
 {"ts": 1793394065.86551, "kind": "shock_off", "since": 1793367920.8620214, "quiet": false, "recovered": false, "stale": true}
+{"ts": 1793394425.0858438, "kind": "event", "src": "cointelegraph", "title": "FBI and Secret Service join response to Binance’s $6.3B hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
+{"ts": 1793394425.0858438, "kind": "event", "src": "theblock", "title": "President Trump says they’re looking into Binance hack as calls grow for crypto rules", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw+llm", "confirmed": false}}

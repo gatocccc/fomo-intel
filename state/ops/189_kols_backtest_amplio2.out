@@ -1,0 +1,58 @@
+== 189_kols_backtest_amplio2 2026-10-30T21:07:03Z ==
+
+=== KOLSCAN 86 k=4: eventos 2415, muestra con velas 220 ===
+  TP2/SL30/6h              todo      n=220 acierto= 20% prom= -3.6% mediana=-30.0%
+  TP2/SL30/6h              1.ª mitad n=110 acierto= 17% prom= -7.1% mediana=-30.0%
+  TP2/SL30/6h              2.ª mitad n=110 acierto= 23% prom= -0.2% mediana=-30.0%
+  50% a 2x, resto 30min    todo      n=220 acierto= 34% prom=-26.7% mediana=-49.5%
+  50% a 2x, resto 30min    1.ª mitad n=110 acierto= 33% prom=-27.6% mediana=-50.2%
+  50% a 2x, resto 30min    2.ª mitad n=110 acierto= 35% prom=-25.7% mediana=-49.1%
+  50% a 2x, SL50, 30min    todo      n=220 acierto= 26% prom=-18.6% mediana=-50.0%
+  50% a 2x, SL50, 30min    1.ª mitad n=110 acierto= 25% prom=-20.2% mediana=-50.0%
+  50% a 2x, SL50, 30min    2.ª mitad n=110 acierto= 28% prom=-17.1% mediana=-50.0%
+
+=== KOLSCAN 86 k=6: eventos 553, muestra con velas 218 ===
+  TP2/SL30/6h              todo      n=218 acierto= 16% prom= -8.7% mediana=-30.0%
+  TP2/SL30/6h              1.ª mitad n=109 acierto= 16% prom= -9.3% mediana=-30.0%
+  TP2/SL30/6h              2.ª mitad n=109 acierto= 17% prom= -8.1% mediana=-30.0%
+  50% a 2x, resto 30min    todo      n=218 acierto= 30% prom=-28.9% mediana=-50.9%
+  50% a 2x, resto 30min    1.ª mitad n=109 acierto= 31% prom=-28.8% mediana=-49.7%
+  50% a 2x, resto 30min    2.ª mitad n=109 acierto= 28% prom=-28.9% mediana=-51.8%
+  50% a 2x, SL50, 30min    todo      n=218 acierto= 25% prom=-22.7% mediana=-50.0%
+  50% a 2x, SL50, 30min    1.ª mitad n=109 acierto= 25% prom=-24.7% mediana=-50.0%
+  50% a 2x, SL50, 30min    2.ª mitad n=109 acierto= 25% prom=-20.8% mediana=-50.0%
+
+=== TODOS 107 k=4: eventos 3153, muestra con velas 220 ===
+  TP2/SL30/6h              todo      n=220 acierto= 18% prom= -6.6% mediana=-30.0%
+  TP2/SL30/6h              1.ª mitad n=110 acierto= 17% prom= -7.3% mediana=-30.0%
+  TP2/SL30/6h              2.ª mitad n=110 acierto= 18% prom= -5.9% mediana=-30.0%
+  50% a 2x, resto 30min    todo      n=220 acierto= 33% prom=-17.8% mediana=-45.1%
+  50% a 2x, resto 30min    1.ª mitad n=110 acierto= 31% prom=-24.3% mediana=-51.9%
+  50% a 2x, resto 30min    2.ª mitad n=110 acierto= 35% prom=-11.2% mediana=-41.4%
+  50% a 2x, SL50, 30min    todo      n=220 acierto= 28% prom= -9.7% mediana=-50.0%
+  50% a 2x, SL50, 30min    1.ª mitad n=110 acierto= 26% prom=-14.0% mediana=-50.0%
+  50% a 2x, SL50, 30min    2.ª mitad n=110 acierto= 29% prom= -5.4% mediana=-50.0%
+
+=== TODOS 107 k=6: eventos 831, muestra con velas 220 ===
+  TP2/SL30/6h              todo      n=220 acierto= 15% prom= -9.5% mediana=-30.0%
+  TP2/SL30/6h              1.ª mitad n=110 acierto= 15% prom=-10.6% mediana=-30.0%
+  TP2/SL30/6h              2.ª mitad n=110 acierto= 16% prom= -8.3% mediana=-30.0%
+  50% a 2x, resto 30min    todo      n=220 acierto= 29% prom=-27.3% mediana=-55.7%
+  50% a 2x, resto 30min    1.ª mitad n=110 acierto= 32% prom=-20.7% mediana=-52.3%
+  50% a 2x, resto 30min    2.ª mitad n=110 acierto= 26% prom=-34.0% mediana=-57.8%
+  50% a 2x, SL50, 30min    todo      n=220 acierto= 24% prom=-18.2% mediana=-50.0%
+  50% a 2x, SL50, 30min    1.ª mitad n=110 acierto= 26% prom=-13.6% mediana=-50.0%
+  50% a 2x, SL50, 30min    2.ª mitad n=110 acierto= 22% prom=-22.8% mediana=-50.0%
+
+=== TODOS, >=2 del grupo TYGR k=4 (>=2 TYGR): eventos 508, muestra con velas 220 ===
+  TP2/SL30/6h              todo      n=220 acierto= 16% prom= -8.5% mediana=-30.0%
+  TP2/SL30/6h              1.ª mitad n=110 acierto= 14% prom=-11.8% mediana=-30.0%
+  TP2/SL30/6h              2.ª mitad n=110 acierto= 19% prom= -5.1% mediana=-30.0%
+  50% a 2x, resto 30min    todo      n=220 acierto= 35% prom=-15.3% mediana=-34.9%
+  50% a 2x, resto 30min    1.ª mitad n=110 acierto= 32% prom=-23.5% mediana=-47.2%
+  50% a 2x, resto 30min    2.ª mitad n=110 acierto= 37% prom= -7.1% mediana=-24.7%
+  50% a 2x, SL50, 30min    todo      n=220 acierto= 30% prom=-10.1% mediana=-50.0%
+  50% a 2x, SL50, 30min    1.ª mitad n=110 acierto= 28% prom=-15.1% mediana=-50.0%
+  50% a 2x, SL50, 30min    2.ª mitad n=110 acierto= 33% prom= -5.1% mediana=-50.0%
+OK
+== exit 0 ==
