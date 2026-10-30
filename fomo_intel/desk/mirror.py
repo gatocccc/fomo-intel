@@ -405,10 +405,34 @@ class Stool:
                 self.journal("Withdrawal failed", "The transfer did not confirm. It will not be retried automatically; ask again.", kind="system")
 
     # ---------- publicar ----------
+    def pct_series(self) -> list:
+        """Rendimiento en % ponderado en el tiempo: los depósitos, retiros y propinas no cuentan como ganancia ni pérdida
+        (mismo criterio que el gráfico del libro). Puntos cada 5 min desde equity.jsonl."""
+        flows = sorted(tail(self.dir / "flows.jsonl", 2000), key=lambda f: f.get("ts", 0))
+        start = float(self.cfg.get("start_ts") or 0)
+        pts = [h for h in tail(self.dir / "equity.jsonl", 2000) if h.get("ts", 0) >= start - 1]
+        if not start or not pts:
+            return []
+        out = [[round(start), 0.0]]
+        idx, prev_eq, growth = 0, float(self.cfg.get("start_usd") or 0), 1.0
+        while idx < len(flows) and flows[idx].get("ts", 0) <= start + 1:   # el depósito que abrió el stool ya está en start_usd
+            idx += 1
+        prev_ts = start
+        for h in pts:
+            net = 0.0
+            while idx < len(flows) and flows[idx].get("ts", 0) <= h["ts"]:
+                f = flows[idx]; idx += 1
+                net += float(f.get("usd") or 0) * (1 if f.get("kind") == "deposit" else -1)
+            if prev_eq > 0:
+                growth *= (h["usd"] - net) / prev_eq
+            prev_eq = h["usd"]; prev_ts = h["ts"]
+            out.append([round(h["ts"]), round((growth - 1) * 100, 2)])
+        return out[-600:]
+
     def publish(self, eq, tokens_usd):
         now = time.time(); c = self.cfg; su = self.svc.sol_usd
         dep = float(c.get("deposited_usd") or 0); wd = float(c.get("withdrawn_sol") or 0) * su
-        if c.get("start_ts") and now - float(c.get("_last_eq") or 0) > 300:
+        if c.get("start_ts") and now - float(c.get("_last_eq") or 0) > (60 if now - float(c["start_ts"]) < 3600 else 300):   # la primera hora, cada minuto (así el gráfico arranca enseguida)
             self.append("equity.jsonl", {"ts": now, "usd": round(eq, 2), "sol": round(eq / su, 4), "sol_usd": round(su, 2)}); c["_last_eq"] = now; self.save()
         s = {"now": now, "user_id": self.uid, "wallet": self.pub, "type": c.get("type"), "fee_pct": c.get("fee_pct"), "started": bool(c.get("start_ts")), "since": c.get("start_ts"),
              "halt": bool(c.get("halt")), "stopped": bool(c.get("closed")), "sol_usd": round(su, 2), "cash_sol": round(self.sol, 4),
@@ -417,7 +441,7 @@ class Stool:
              "positions": [{"token": p["symbol"], "mint": m, "sleeve": p.get("sleeve"), "multiple": round((p.get("last_usd") or p["entry_usd"]) / p["entry_usd"], 3) if p["entry_usd"] else None,
                             "value_usd": round(p["tokens"] * (p.get("last_usd") or p["entry_usd"]), 2), "opened": p.get("opened_ts"), "thesis": p.get("thesis")} for m, p in self.pos.items() if m not in STABLES],
              "cash_usd": round(self.sol * su + sum(p["tokens"] * (p.get("last_usd") or 1) for m, p in self.pos.items() if m in STABLES), 2),
-             "equity": [[round(h["ts"]), h["usd"]] for h in tail(self.dir / "equity.jsonl", 2000)],
+             "equity": [[round(h["ts"]), h["usd"]] for h in tail(self.dir / "equity.jsonl", 2000)], "pct_series": self.pct_series(),
              "closed": tail(self.dir / "closed.jsonl", 100)[::-1], "trades": tail(self.dir / "trades.jsonl", 60)[::-1], "journal": tail(self.dir / "journal.jsonl", 100)[::-1]}
         js(UDIR / f"{self.uid}_summary.json", s)
         return s
@@ -509,7 +533,7 @@ class Mirror:
                         s.balance(); s.detect_deposit(); s.check_stray_stables(); s.start(); s.requests(); s.follow()
                         eq, tu = s.equity(); s.floor_check(eq); s.sweep_fees()
                         if now - last_pub > 30:
-                            allp.append({k: v for k, v in s.publish(eq, tu).items() if k not in ("equity", "closed", "trades", "journal", "positions")} | {"email": s.row["email"], "name": s.row["name"]})
+                            allp.append({k: v for k, v in s.publish(eq, tu).items() if k not in ("equity", "pct_series", "closed", "trades", "journal", "positions")} | {"email": s.row["email"], "name": s.row["name"]})
                     except Exception as e:  # noqa: BLE001
                         log.exception("stool %s: %s", s.uid, e)
                 if now - last_pub > 30:

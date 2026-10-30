@@ -10,6 +10,14 @@
 <link rel="icon" href="/assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="/style.css">
 <style>
+.mchart{margin-top:14px}
+.mchart .pchart svg{height:190px}
+.mlegend{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px;font:700 12px var(--m)}
+.mlegend li{display:flex;align-items:center;gap:6px} .mlegend i{width:11px;height:11px;border-radius:50%;border:2px solid var(--ink);display:inline-block}
+.mlegend .up{color:var(--felt)} .mlegend .down{color:var(--hellred)}
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+.share .sh-usd{font:700 12px var(--m);display:inline-flex;align-items:center;gap:5px;cursor:pointer}
+.share .status{flex-basis:100%;font:12px var(--m)}
 .top .bar .live{display:inline-flex;align-items:center;gap:7px;margin-right:auto;margin-left:12px;padding:4px 11px;border:2px solid var(--ink);border-radius:999px;background:var(--mint);font:700 11px var(--m);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
 .top .bar .live i{width:9px;height:9px;border-radius:50%;background:#E5322D;box-shadow:0 0 0 0 rgba(229,50,45,.6);animation:lpulse 1.6s infinite}
 .top .bar .live.off{background:var(--cream)} .top .bar .live.off i{background:#999;animation:none}
@@ -125,6 +133,16 @@ details.settings .in{padding:0 22px 22px;display:grid;gap:22px}
       <h2>Your money</h2>
       <div class="eq" id="m-eq">—</div>
       <div class="pnl" id="m-pnl">—</div>
+      <div class="mchart" id="m-chart-wrap" hidden>
+        <div class="pchart"><svg id="m-chart" role="img" aria-label="Your stool in percent, next to Lloyd's book"></svg><div class="tip" id="m-tip"></div></div>
+        <ul class="mlegend" id="m-legend"></ul>
+        <div class="share">
+          <button class="btn sm y" type="button" id="sh-go">Share my P&amp;L</button>
+          <button class="btn sm" type="button" id="sh-copy">Copy image</button>
+          <label class="sh-usd"><input type="checkbox" id="sh-usd"> show $</label>
+          <span class="status" id="sh-st" role="status"></span>
+        </div>
+      </div>
       <div class="kv3"><div><b>You put in</b><span id="m-dep">—</span></div><div><b>Fees so far</b><span id="m-fees">—</span></div><div><b>Since</b><span id="m-since">—</span></div></div>
       <div class="deposit" id="deposit" hidden>
         <h3 id="dep-t">Fund your stool</h3>
@@ -317,6 +335,7 @@ function fillMoney(u) {
   const pnl = $("#m-pnl");
   if (started && s.pnl_pct != null) { pnl.textContent = `${L.frac(s.pnl_pct)} · ${L.usdS(s.pnl_usd, 2)} on what you put in`; pnl.className = "pnl " + ((s.pnl_pct || 0) >= 0 ? "up" : "down"); }
   else { pnl.textContent = u.bot_wallet ? "Nothing in yet." : "Your stool opens with your seat."; pnl.className = "pnl"; }
+  drawMine();
   $("#m-dep").textContent = s ? L.usd(s.deposited_usd, 2) : "—"; $("#m-fees").textContent = s ? L.usd(s.fees_usd, 2) : "—"; $("#m-since").textContent = s && s.since ? L.day(s.since) : "—";
   // where
   const where = $("#where"); where.hidden = !started;
@@ -414,8 +433,98 @@ $("#eth-btn").onclick = async () => {
 };
 
 // ----- Lloyd right now -----
+let TRACK = null;
+// ---- your stool in %, next to the book rebased to the day you sat down ----
+function mineSeries(s) {
+  const mine = (s && s.pct_series) || [];
+  const out = [];
+  if (mine.length >= 2) out.push({name: "Your stool", short: "You", color: "#1A1814", points: mine, pct: mine[mine.length - 1][1]});
+  const bk = TRACK && TRACK.book && TRACK.book.series;
+  if (bk && s && s.since) {
+    let base = null; for (const p of bk) { if (p[0] <= s.since) base = p[1]; else break; }
+    if (base == null && bk.length && bk[0][0] > s.since) base = 0;
+    if (base != null) {
+      const pts = [[s.since, 0]].concat(bk.filter(p => p[0] > s.since).map(p => [p[0], +(((1 + p[1] / 100) / (1 + base / 100) - 1) * 100).toFixed(2)]));
+      if (pts.length >= 2) out.push({name: "Lloyd's book, same days", short: "Book", color: "#1D6A4B", points: pts, pct: pts[pts.length - 1][1]});
+    }
+  }
+  return out;
+}
+function drawMine() {
+  const s = ME && ME.stool, wrap = $("#m-chart-wrap");
+  if (!s || !s.started) { wrap.hidden = true; return; }
+  const ser = mineSeries(s);
+  wrap.hidden = false;
+  $("#m-legend").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${L.esc(x.name)} <b class="${x.pct >= 0 ? "up" : "down"}">${L.signed(x.pct)}</b></li>`).join("");
+  L.pctChart($("#m-chart"), $("#m-tip"), ser, {height: 190});
+  const pc = $("#m-chart").parentNode.querySelector(".none"); if (pc) pc.textContent = "Your chart starts filling in a few minutes after your deposit.";
+}
+
+// ---- share card: a 1200x675 PNG made right here (nothing leaves the phone until you share it) ----
+async function cardBlob() {
+  const s = ME.stool, ser = mineSeries(s), mine = ser.find(x => x.short === "You");
+  const pct = s.pnl_pct != null ? s.pnl_pct * 100 : (mine ? mine.pct : 0), up = pct >= 0;
+  try { await Promise.all(['64px "Bowlby One"', '700 28px "Space Mono"', '500 28px "Space Grotesk"'].map(f => document.fonts.load(f))); } catch (_) {}
+  const W = 1200, H = 675, c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
+  const INK = "#1A1814", CREAM = "#FFFDF7", FELT = "#1D6A4B", RED = "#C8323B";
+  g.fillStyle = FELT; g.fillRect(0, 0, W, H);
+  g.fillStyle = "rgba(255,255,255,.035)"; for (let y = 0; y < H; y += 6) for (let x = (y / 6) % 2 ? 3 : 0; x < W; x += 6) g.fillRect(x, y, 2, 2);
+  const rr = (x, y, w, h, r) => { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); };
+  g.fillStyle = INK; rr(48, 58, W - 96, H - 106, 40); g.fill();
+  g.fillStyle = CREAM; rr(48, 48, W - 96, H - 106, 40); g.fill(); g.lineWidth = 5; g.strokeStyle = INK; g.stroke();
+  try { const img = new Image(); img.src = "/assets/lloyd-head.png"; await img.decode(); g.save(); g.beginPath(); g.arc(128, 128, 44, 0, 7); g.clip(); g.drawImage(img, 84, 84, 88, 88); g.restore(); g.beginPath(); g.arc(128, 128, 44, 0, 7); g.lineWidth = 4; g.stroke(); } catch (_) {}
+  g.fillStyle = INK; g.font = '40px "Bowlby One", "Arial Black", sans-serif'; g.fillText("Lloyd's", 190, 142); const lw = g.measureText("Lloyd's ").width;
+  g.fillStyle = RED; g.fillText("Tavern", 190 + lw, 142);
+  g.fillStyle = INK; g.font = '700 22px "Space Mono", monospace'; g.textAlign = "right"; g.fillText("MY STOOL", W - 96, 112);
+  g.font = '400 22px "Space Mono", monospace'; g.fillStyle = "#6E6A60"; g.fillText("since " + L.day(s.since), W - 96, 144); g.textAlign = "left";
+  g.fillStyle = up ? FELT : RED; g.font = '150px "Bowlby One", "Arial Black", sans-serif';
+  g.fillText((up ? "+" : "−") + Math.abs(pct).toFixed(1) + "%", 92, 335);
+  if ($("#sh-usd").checked && s.pnl_usd != null) { g.fillStyle = INK; g.font = '700 34px "Space Mono", monospace'; g.fillText(`${s.pnl_usd >= 0 ? "+" : "−"}$${Math.abs(s.pnl_usd).toFixed(2)}`, 98, 392); }
+  // sparkline
+  if (mine && mine.points.length >= 2) {
+    const P = mine.points, x0 = P[0][0], x1 = P[P.length - 1][0] || x0 + 1, vs = P.map(p => p[1]);
+    const lo = Math.min(0, ...vs), hi = Math.max(0, ...vs), sp = (hi - lo) || 1;
+    const X = t => 640 + (t - x0) / ((x1 - x0) || 1) * 450, Y = v => 380 - (v - lo) / sp * 190;
+    g.setLineDash([8, 8]); g.strokeStyle = "rgba(26,24,20,.35)"; g.lineWidth = 2; g.beginPath(); g.moveTo(640, Y(0)); g.lineTo(1090, Y(0)); g.stroke(); g.setLineDash([]);
+    g.beginPath(); P.forEach((p, i) => i ? g.lineTo(X(p[0]), Y(p[1])) : g.moveTo(X(p[0]), Y(p[1])));
+    g.strokeStyle = up ? FELT : RED; g.lineWidth = 7; g.lineJoin = g.lineCap = "round"; g.stroke();
+    const l = P[P.length - 1]; g.beginPath(); g.arc(X(l[0]), Y(l[1]), 10, 0, 7); g.fillStyle = up ? FELT : RED; g.fill(); g.lineWidth = 4; g.strokeStyle = CREAM; g.stroke();
+  }
+  g.fillStyle = INK; g.fillRect(92, 455, W - 184, 4);
+  g.font = '500 30px "Space Grotesk", sans-serif'; g.fillStyle = INK; g.fillText("Auto-trade shitcoins with an edge.", 92, 515);
+  g.font = '700 24px "Space Mono", monospace'; g.fillStyle = RED; g.fillText(location.host, 92, 560);
+  g.textAlign = "right"; g.fillStyle = "#6E6A60"; g.font = '400 20px "Space Mono", monospace'; g.fillText("Lloyd trades, I watch.", W - 96, 560);
+  return await new Promise(r => c.toBlob(r, "image/png"));
+}
+function shareText() {
+  const s = ME.stool, pct = (s.pnl_pct || 0) * 100;
+  return `My stool at Lloyd's Tavern is ${pct >= 0 ? "+" : "−"}${Math.abs(pct).toFixed(1)}% since ${L.day(s.since)} 🦆 Lloyd trades, I watch.`;
+}
+$("#sh-go").onclick = async () => {
+  const st = $("#sh-st"); st.className = "status"; st.textContent = "Making your card…";
+  try {
+    const blob = await cardBlob(), file = new File([blob], "lloyds-tavern-pnl.png", {type: "image/png"}), url = location.origin + "/";
+    if (navigator.canShare && navigator.canShare({files: [file]})) {
+      await navigator.share({files: [file], text: shareText() + " " + url}); st.textContent = "";
+    } else {
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = file.name; a.click();
+      window.open("https://x.com/intent/post?text=" + encodeURIComponent(shareText()) + "&url=" + encodeURIComponent(url), "_blank", "noopener");
+      st.className = "status ok"; st.textContent = "Card saved. Attach it to the post that just opened on X.";
+    }
+  } catch (e) { if (e && e.name === "AbortError") { st.textContent = ""; return; } st.className = "status err"; st.textContent = "Could not make the card: " + (e.message || e); }
+};
+$("#sh-copy").onclick = async () => {
+  const st = $("#sh-st"); st.className = "status"; st.textContent = "Making your card…";
+  try {
+    const blob = await cardBlob();
+    if (navigator.clipboard && window.ClipboardItem) { await navigator.clipboard.write([new ClipboardItem({"image/png": blob})]); st.className = "status ok"; st.textContent = "Copied. Paste it anywhere."; }
+    else { const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "lloyds-tavern-pnl.png"; a.click(); st.className = "status ok"; st.textContent = "Saved to your downloads."; }
+  } catch (e) { st.className = "status err"; st.textContent = "Could not copy: " + (e.message || e); }
+};
+
 function loadBook() {
   L.get("/api/book").then(b => {
+    TRACK = b.track || null; drawMine();
     $("#n-eq").firstChild.textContent = L.usd(b.equity_usd);
     const p = $("#n-pnl"), t = (b.track || {}).first_table;
     p.textContent = t ? `${L.signed(t.pct)} since day one` : (b.pnl_pct != null ? `${L.frac(b.pnl_pct)} since ${L.day(b.since)}` : "");

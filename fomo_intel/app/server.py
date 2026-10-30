@@ -129,11 +129,12 @@ def stool_view(uid: int) -> dict | None:
     s = _summary(STATE / "users" / f"{uid}_summary.json")
     if not s:
         return None
-    keep = ("wallet", "type", "fee_pct", "started", "since", "halt", "closed", "equity_usd", "deposited_usd", "withdrawn_usd", "pnl_usd", "pnl_pct", "fees_usd",
+    keep = ("wallet", "type", "fee_pct", "started", "since", "halt", "stopped", "stray_usd", "equity_usd", "deposited_usd", "withdrawn_usd", "pnl_usd", "pnl_pct", "fees_usd",
             "cash_usd", "cash_sol", "min_sol", "sol_usd", "now")
     out = {k: s.get(k) for k in keep}
     out["positions"] = s.get("positions") or []
     out["equity"] = (s.get("equity") or [])[-400:]
+    out["pct_series"] = (s.get("pct_series") or [])[-400:]
     out["closed_list"] = [{"ts": c.get("ts"), "token": c.get("symbol"), "sleeve": c.get("sleeve"), "result": c.get("ret"), "pnl_usd": c.get("pnl_usd"), "why": c.get("why"), "hold_h": c.get("hold_h")} for c in (s.get("closed") or [])[:30]]
     out["journal"] = [{"ts": j.get("ts"), "title": j.get("title"), "text": j.get("text"), "kind": j.get("kind")} for j in (s.get("journal") or [])[:40]]
     return out
