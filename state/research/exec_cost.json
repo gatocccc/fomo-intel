@@ -10,8 +10,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": null,
    "cost_vs_same_min_close": null,
-   "checked": false,
-   "slot": 461685942
+   "checked": true,
+   "slot": 461685942,
+   "idx": 408,
+   "n_block": 482,
+   "same_pool_before": 10,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793022379,
@@ -23,8 +29,16 @@
    "slip_logged": null,
    "cost_vs_1m_mid": null,
    "cost_vs_same_min_close": null,
-   "checked": false,
-   "slot": 461685977
+   "checked": true,
+   "slot": 461685977,
+   "idx": 574,
+   "n_block": 877,
+   "same_pool_before": 10,
+   "same_pool_after": 1,
+   "sandwich_signers": [
+    "3MHgGwdLnNayxYZ2eggq2AZFYydXjzBepyTMKzVsyNLq"
+   ],
+   "front_run_close": 0
   },
   {
    "ts": 1793204945,
@@ -36,8 +50,14 @@
    "slip_logged": 3.65,
    "cost_vs_1m_mid": 2.51,
    "cost_vs_same_min_close": 2.49,
-   "checked": false,
-   "slot": 462544163
+   "checked": true,
+   "slot": 462544163,
+   "idx": 48,
+   "n_block": 471,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793204947,
@@ -61,8 +81,14 @@
    "slip_logged": 4.31,
    "cost_vs_1m_mid": 2.68,
    "cost_vs_same_min_close": 1.67,
-   "checked": false,
-   "slot": 462544227
+   "checked": true,
+   "slot": 462544227,
+   "idx": 319,
+   "n_block": 496,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793204959,
@@ -86,8 +112,14 @@
    "slip_logged": 3.43,
    "cost_vs_1m_mid": 2.26,
    "cost_vs_same_min_close": 2.24,
-   "checked": false,
-   "slot": 462544237
+   "checked": true,
+   "slot": 462544237,
+   "idx": 408,
+   "n_block": 551,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793214457,
@@ -99,8 +131,14 @@
    "slip_logged": 1.47,
    "cost_vs_1m_mid": 1.83,
    "cost_vs_same_min_close": 1.37,
-   "checked": false,
-   "slot": 462588805
+   "checked": true,
+   "slot": 462588805,
+   "idx": 225,
+   "n_block": 561,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793214967,
@@ -112,8 +150,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 1.15,
    "cost_vs_same_min_close": 1.12,
-   "checked": false,
-   "slot": 462591183
+   "checked": true,
+   "slot": 462591183,
+   "idx": 367,
+   "n_block": 549,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793221035,
@@ -125,8 +169,14 @@
    "slip_logged": 3.17,
    "cost_vs_1m_mid": 2.08,
    "cost_vs_same_min_close": 2.08,
-   "checked": false,
-   "slot": 462619531
+   "checked": true,
+   "slot": 462619531,
+   "idx": 51,
+   "n_block": 455,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793231392,
@@ -138,8 +188,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 2.79,
    "cost_vs_same_min_close": 2.8,
-   "checked": false,
-   "slot": 462668017
+   "checked": true,
+   "slot": 462668017,
+   "idx": 112,
+   "n_block": 309,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793231394,
@@ -151,8 +207,14 @@
    "slip_logged": 1.22,
    "cost_vs_1m_mid": 4.11,
    "cost_vs_same_min_close": 1.57,
-   "checked": false,
-   "slot": 462668028
+   "checked": true,
+   "slot": 462668028,
+   "idx": 3,
+   "n_block": 252,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793231397,
@@ -164,8 +226,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 0.91,
    "cost_vs_same_min_close": null,
-   "checked": false,
-   "slot": 462668037
+   "checked": true,
+   "slot": 462668037,
+   "idx": 98,
+   "n_block": 250,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793231403,
@@ -177,8 +245,14 @@
    "slip_logged": 3.98,
    "cost_vs_1m_mid": 2.9,
    "cost_vs_same_min_close": 2.49,
-   "checked": false,
-   "slot": 462668067
+   "checked": true,
+   "slot": 462668067,
+   "idx": 366,
+   "n_block": 415,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793232577,
@@ -190,8 +264,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 1.71,
    "cost_vs_same_min_close": 1.71,
-   "checked": false,
-   "slot": 462673577
+   "checked": true,
+   "slot": 462673577,
+   "idx": 2,
+   "n_block": 1470,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793232580,
@@ -227,8 +307,14 @@
    "slip_logged": 1.44,
    "cost_vs_1m_mid": 1.65,
    "cost_vs_same_min_close": 1.85,
-   "checked": false,
-   "slot": 462673635
+   "checked": true,
+   "slot": 462673635,
+   "idx": 272,
+   "n_block": 411,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793232591,
@@ -240,8 +326,14 @@
    "slip_logged": 1.22,
    "cost_vs_1m_mid": 1.42,
    "cost_vs_same_min_close": 1.36,
-   "checked": false,
-   "slot": 462673643
+   "checked": true,
+   "slot": 462673643,
+   "idx": 233,
+   "n_block": 507,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793232594,
@@ -253,8 +345,14 @@
    "slip_logged": 1.87,
    "cost_vs_1m_mid": 1.77,
    "cost_vs_same_min_close": 1.72,
-   "checked": false,
-   "slot": 462673655
+   "checked": true,
+   "slot": 462673655,
+   "idx": 368,
+   "n_block": 569,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793235137,
@@ -266,8 +364,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 0.62,
    "cost_vs_same_min_close": 0.55,
-   "checked": false,
-   "slot": 462685541
+   "checked": true,
+   "slot": 462685541,
+   "idx": 28,
+   "n_block": 338,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793235354,
@@ -279,8 +383,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 8.17,
    "cost_vs_same_min_close": 1.86,
-   "checked": false,
-   "slot": 462686569
+   "checked": true,
+   "slot": 462686569,
+   "idx": 46,
+   "n_block": 397,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793235773,
@@ -292,8 +402,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 3.18,
    "cost_vs_same_min_close": 2.0,
-   "checked": false,
-   "slot": 462688525
+   "checked": true,
+   "slot": 462688525,
+   "idx": 96,
+   "n_block": 285,
+   "same_pool_before": 0,
+   "same_pool_after": 2,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793236447,
@@ -341,8 +457,14 @@
    "slip_logged": 5.74,
    "cost_vs_1m_mid": 5.63,
    "cost_vs_same_min_close": 5.61,
-   "checked": false,
-   "slot": 462726802
+   "checked": true,
+   "slot": 462726802,
+   "idx": 232,
+   "n_block": 248,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793271246,
@@ -378,8 +500,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 0.31,
    "cost_vs_same_min_close": 0.28,
-   "checked": false,
-   "slot": 462891900
+   "checked": true,
+   "slot": 462891900,
+   "idx": 163,
+   "n_block": 440,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793279833,
@@ -403,8 +531,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": -0.6,
    "cost_vs_same_min_close": 0.74,
-   "checked": false,
-   "slot": 462911667
+   "checked": true,
+   "slot": 462911667,
+   "idx": 284,
+   "n_block": 462,
+   "same_pool_before": 2,
+   "same_pool_after": 1,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793284034,
@@ -428,8 +562,16 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 49.89,
    "cost_vs_same_min_close": -30.37,
-   "checked": false,
-   "slot": 462925142
+   "checked": true,
+   "slot": 462925142,
+   "idx": 171,
+   "n_block": 202,
+   "same_pool_before": 8,
+   "same_pool_after": 2,
+   "sandwich_signers": [
+    "AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51"
+   ],
+   "front_run_close": 1
   },
   {
    "ts": 1793286439,
@@ -465,8 +607,14 @@
    "slip_logged": 1.7,
    "cost_vs_1m_mid": 3.28,
    "cost_vs_same_min_close": 1.74,
-   "checked": false,
-   "slot": 462999050
+   "checked": true,
+   "slot": 462999050,
+   "idx": 24,
+   "n_block": 264,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793308686,
@@ -490,8 +638,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 1.29,
    "cost_vs_same_min_close": 1.05,
-   "checked": false,
-   "slot": 463029493
+   "checked": true,
+   "slot": 463029493,
+   "idx": 45,
+   "n_block": 551,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793308690,
@@ -503,8 +657,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 2.55,
    "cost_vs_same_min_close": 2.66,
-   "checked": false,
-   "slot": 463029509
+   "checked": true,
+   "slot": 463029509,
+   "idx": 429,
+   "n_block": 573,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793309062,
@@ -528,8 +688,14 @@
    "slip_logged": 11.98,
    "cost_vs_1m_mid": 12.65,
    "cost_vs_same_min_close": 12.52,
-   "checked": false,
-   "slot": 463036214
+   "checked": true,
+   "slot": 463036214,
+   "idx": 525,
+   "n_block": 566,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793317647,
@@ -541,8 +707,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 1.77,
    "cost_vs_same_min_close": 0.63,
-   "checked": false,
-   "slot": 463071330
+   "checked": true,
+   "slot": 463071330,
+   "idx": 510,
+   "n_block": 769,
+   "same_pool_before": 2,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793317882,
@@ -566,8 +738,14 @@
    "slip_logged": null,
    "cost_vs_1m_mid": 1.14,
    "cost_vs_same_min_close": 1.21,
-   "checked": false,
-   "slot": 463137515
+   "checked": true,
+   "slot": 463137515,
+   "idx": 140,
+   "n_block": 286,
+   "same_pool_before": 0,
+   "same_pool_after": 0,
+   "sandwich_signers": [],
+   "front_run_close": 0
   },
   {
    "ts": 1793332335,
@@ -588,7 +766,7 @@
    "cost_mean": 3.44,
    "cost_median": 2.51,
    "slip_logged_mean": 3.48,
-   "checked_blocks": 0,
+   "checked_blocks": 14,
    "sandwiched": 0,
    "front_run_close": 0
   },
@@ -597,9 +775,9 @@
    "cost_mean": 5.35,
    "cost_median": 1.5,
    "slip_logged_mean": null,
-   "checked_blocks": 0,
-   "sandwiched": 0,
-   "front_run_close": 0
+   "checked_blocks": 15,
+   "sandwiched": 2,
+   "front_run_close": 1
   },
   "stable_buy": {
    "n": 13,
@@ -620,5 +798,5 @@
    "front_run_close": 0
   }
  },
- "ts": 1793388266
+ "ts": 1793389409
 }

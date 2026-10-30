@@ -1,17 +1,17 @@
 {
- "now": 1793388887.1828656,
+ "now": 1793389498.6868134,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 4,
- "equity_usd": 167.29,
- "equity_sol": 1.7758,
+ "equity_usd": 167.74,
+ "equity_sol": 1.7763,
  "cash_sol": 0.1131,
- "positions_usd": 156.64,
- "sol_usd": 94.21,
- "mult": 1.688,
+ "positions_usd": 157.06,
+ "sol_usd": 94.44,
+ "mult": 1.693,
  "halt": false,
  "pause": false,
  "positions": [
@@ -35,7 +35,7 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9996652025446185,
+   "last_usd": 0.9996654672350265,
    "mult": 0.991,
    "value_usd": 114.63
   },
@@ -68,9 +68,9 @@
    "sleeve": null,
    "reason": "catalyst",
    "max_h": null,
-   "last_usd": 0.012789860562537626,
-   "mult": 1.015,
-   "value_usd": 42.01
+   "last_usd": 0.012919974074116275,
+   "mult": 1.025,
+   "value_usd": 42.44
   }
  ],
  "perps_pnl_usd": 0,
@@ -3746,6 +3746,14 @@
   [
    1793388856,
    167.16
+  ],
+  [
+   1793389162,
+   167.14
+  ],
+  [
+   1793389468,
+   167.74
   ]
  ],
  "closed": [
@@ -5563,7 +5571,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793388843.6340573,
+  "last_run": 1793389445.035461,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -5578,7 +5586,7 @@
    "key": "Efectivo ocioso (#), pero el radar de noticias sigue viendo un shock bajista: Binance hit by $#B hack, the largest in cryptocurrency history (SOL # h #): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -5.5,
-  "sol_vs_ma20": -0.0944
+  "sol_ch24h": -5.3,
+  "sol_vs_ma20": -0.0929
  }
 }
