@@ -229,21 +229,21 @@
    ]
   }
  ],
- "ts": 1793322244.9964497,
+ "ts": 1793322544.938497,
  "bear_score": 6,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.5,
-   "ch15m": 0.002609968807689711,
-   "ch1h": -0.008613002381426926,
-   "ch4h": -0.011506276150627603
+   "px": 94.436,
+   "ch15m": -0.0015014062466958134,
+   "ch1h": -0.009222053192047275,
+   "ch4h": -0.023665029723442643
   },
   "BTC": {
-   "px": 76995.0,
-   "ch15m": 0.00023383608090732366,
-   "ch1h": -0.0123781426372499,
-   "ch4h": -0.023637124488010253
+   "px": 77112.0,
+   "ch15m": -0.0004925469863901188,
+   "ch1h": -0.009594266558779374,
+   "ch4h": -0.025859346378807158
   }
  },
  "mode": "live",
@@ -264,10 +264,10 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 94.5,
-  "ret_px": 0.0311,
-  "pnl_usd_est": 1.16,
-  "age_h": 3.66,
+  "mark": 94.436,
+  "ret_px": 0.0317,
+  "pnl_usd_est": 1.18,
+  "age_h": 3.75,
   "best_ret": 0.04671383164154619
  },
  "positions": {
@@ -288,10 +288,10 @@
    ],
    "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
    "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-   "mark": 94.5,
-   "ret_px": 0.0311,
-   "pnl_usd_est": 1.16,
-   "age_h": 3.66,
+   "mark": 94.436,
+   "ret_px": 0.0317,
+   "pnl_usd_est": 1.18,
+   "age_h": 3.75,
    "best_ret": 0.04671383164154619
   },
   "book": {
@@ -313,10 +313,10 @@
    "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "sig": "52fnUTsu5TQh9dGoURqVntbYErKt566sgbn8AKFywmcR8vVs2GfMC9b3pp3MgZyJ3zbrvN7oDuUc44K8S6rxDM3K",
    "best_ret": 0.0,
-   "mark": 94.5,
-   "ret_px": -0.0176,
-   "pnl_usd_est": -2.87,
-   "age_h": 0.5
+   "mark": 94.436,
+   "ret_px": -0.0169,
+   "pnl_usd_est": -2.76,
+   "age_h": 0.58
   }
  }
 }
