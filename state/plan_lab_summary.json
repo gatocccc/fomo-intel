@@ -1,17 +1,17 @@
 {
- "now": 1793344791.2153115,
+ "now": 1793345094.5444405,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 1,
- "equity_usd": 58.23,
- "equity_sol": 0.5945,
+ "equity_usd": 58.2,
+ "equity_sol": 0.5948,
  "cash_sol": 0.287,
  "positions_usd": 30.12,
- "sol_usd": 97.95,
- "mult": 1.052,
+ "sol_usd": 97.86,
+ "mult": 1.051,
  "halt": false,
  "pause": false,
  "positions": [
@@ -34,7 +34,7 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9993587165769233,
+   "last_usd": 0.999392899319745,
    "mult": 0.982,
    "value_usd": 30.12
   }
@@ -1048,6 +1048,10 @@
   [
    1793344640,
    58.2
+  ],
+  [
+   1793344942,
+   58.21
   ]
  ],
  "closed": [
