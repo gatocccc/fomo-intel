@@ -1,16 +1,16 @@
 {
- "now": 1793318677.812507,
+ "now": 1793318981.6814566,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 166.54,
- "equity_sol": 1.7465,
+ "equity_usd": 166.55,
+ "equity_sol": 1.7438,
  "cash_sol": 0.1009,
- "positions_usd": 156.92,
- "sol_usd": 95.35,
+ "positions_usd": 156.91,
+ "sol_usd": 95.51,
  "mult": 1.681,
  "halt": false,
  "pause": false,
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9989889821760363,
+   "last_usd": 0.9989544689494652,
    "mult": 0.991,
-   "value_usd": 156.92
+   "value_usd": 156.91
   }
  ],
  "equity": [
@@ -2768,6 +2768,10 @@
   [
    1793318647,
    166.54
+  ],
+  [
+   1793318951,
+   166.55
   ]
  ],
  "closed": [
@@ -3149,6 +3153,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793318951.2466383,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero SOL cayó fuerte (24 h -6.6%, 4 h -4.2%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-0009"
+  },
   {
    "ts": 1793318359.2788248,
    "title": "Cerebro automático: estado",
@@ -4228,7 +4239,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793318344.9230938,
+  "last_run": 1793318943.7808874,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4238,7 +4249,7 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793318344.9251733,
+   "ts": 1793318943.7826774,
    "text": "Efectivo ocioso (96%), pero SOL cayó fuerte (24 h -6.6%, 4 h -4.2%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
