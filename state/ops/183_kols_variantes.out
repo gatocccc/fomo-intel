@@ -1,0 +1,45 @@
+== 183_kols_variantes 2026-10-30T20:11:03Z ==
+
+CONSENSO >=3 (todos) n=126  mejores 4 salidas (prom, acierto, mediana, TP, SL, horas, mitad):
+    -0.7% 23% -30.0% (2, 0.3, 0.5, False)
+    -1.1% 22% -30.0% (2, 0.3, 6, False)
+    -1.9% 22% -30.0% (2, 0.3, 1, False)
+    -3.5% 33% -30.0% (1.5, 0.3, 0.5, False)
+    peor: -40.1% (3, None, 6, True)
+
+CONSENSO, 1.ª mitad n=63  mejores 4 salidas (prom, acierto, mediana, TP, SL, horas, mitad):
+    -0.6% 17% -20.0% (2, 0.2, 0.5, False)
+    -1.0% 16% -20.0% (2, 0.2, 6, False)
+    -1.0% 16% -20.0% (2, 0.2, 1, False)
+    -1.9% 27% -20.0% (1.5, 0.2, 0.5, False)
+    peor: -44.8% (3, None, 6, True)
+
+CONSENSO, 2.ª mitad n=63  mejores 4 salidas (prom, acierto, mediana, TP, SL, horas, mitad):
+    +2.6% 37% -24.3% (3, None, 0.5, False)
+    +1.2% 17% -30.0% (3, 0.3, 1, False)
+    +1.2% 24% -30.0% (2, 0.3, 0.5, False)
+    +1.0% 24% -30.0% (2, 0.3, 6, False)
+    peor: -36.5% (1.5, None, 6, True)
+
+>=4 KOLs en total n=50  mejores 4 salidas (prom, acierto, mediana, TP, SL, horas, mitad):
+    +23.1% 48% -2.8% (3, None, 0.5, False)
+    +21.2% 42% -23.9% (3, None, 1, False)
+    +21.2% 48% -2.8% (3, None, 0.5, True)
+    +18.8% 50% -1.0% (2, None, 0.5, True)
+    peor: -14.0% (1.5, None, 6, True)
+
+mcap gatillo < US$150K n=92  mejores 4 salidas (prom, acierto, mediana, TP, SL, horas, mitad):
+    +2.7% 26% -30.0% (2, 0.3, 0.5, False)
+    +2.5% 25% -30.0% (2, 0.3, 6, False)
+    +1.5% 25% -30.0% (2, 0.3, 1, False)
+    +0.3% 16% -30.0% (3, 0.3, 1, False)
+    peor: -32.4% (3, None, 6, True)
+
+mcap gatillo >= US$150K n=34  mejores 4 salidas (prom, acierto, mediana, TP, SL, horas, mitad):
+    -0.5% 62% +30.0% (1.3, None, 0.5, False)
+    -0.6% 62% +30.0% (1.3, 0.5, 6, False)
+    -0.6% 62% +30.0% (1.3, 0.5, 1, False)
+    -1.5% 59% +30.0% (1.3, 0.5, 0.5, False)
+    peor: -61.0% (3, None, 6, True)
+OK
+== exit 0 ==

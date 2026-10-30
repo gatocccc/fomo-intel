@@ -93,44 +93,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793376861.0860217,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: Binance founder CZ says 6.3 billion crypto hack is a major disaster for the industry. It hurts, but we survive. @WatcherGuru",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793376726.1520035,
-   "src": "cointelegraph",
-   "title": "Bitcoin risks worst October in 12 years as tech sell-off spreads to gold",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "selloff"
-   ]
   }
  ],
- "ts": 1793390945.905093,
+ "ts": 1793391261.116427,
  "bear_score": 1,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.824,
-   "ch15m": -0.0008008429926238403,
-   "ch1h": 0.0046405187209968,
-   "ch4h": -0.0013164962242888656
+   "px": 94.957,
+   "ch15m": 0.0033707390266064508,
+   "ch1h": 0.007127326722172089,
+   "ch4h": -0.0014196777857233833
   },
   "BTC": {
-   "px": 76913.0,
-   "ch15m": -0.0002729612395040437,
-   "ch1h": 0.0037847643657908936,
-   "ch4h": -0.007843036080545929
+   "px": 76960.0,
+   "ch15m": 0.000376961172999124,
+   "ch1h": 0.006078828681613135,
+   "ch4h": -0.00779990975311029
   }
  },
  "mode": "live",
