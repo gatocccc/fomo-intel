@@ -1,12 +1,12 @@
 {
  "mode": "live",
- "last_run": 1793380563.079134,
+ "last_run": 1793381163.9611745,
  "regime": "risk_off",
  "profile": "book",
  "_noted_no_cands": 1793238965.2395556,
  "bal_ts": 1793380563.0816581,
- "trad_status": "2 of 19 established memecoins above their 20-day average (best: SAPLING +97%, STONK +5%)",
- "trad_ts": 1793377505.4946227,
+ "trad_status": "SOL -9.0%, BTC -5.4%, ETH -6.9%, JUP -16.8%",
+ "trad_ts": 1793381163.9637177,
  "status": "ok",
  "last_action": {
   "ts": 1793332323.208853,
@@ -16,10 +16,10 @@
  },
  "_noted_book": 1793305023.752567,
  "last_note": {
-  "ts": 1793380586.044927,
-  "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -0.3%): no new memecoins until it improves."
+  "ts": 1793381167.2964194,
+  "text": "[Majors] Still in USDC on purpose. Versus their 20-day averages: SOL -9.0%, BTC -5.4%, ETH -6.9%, JUP -16.8%. The plan buys each asset the hour it closes 1% above its average; until then, cash is the position. Checked every hour."
  },
- "_noted_trad": 1793335326.9450073,
+ "_noted_trad": 1793381167.2955415,
  "auto_buys": [
   {
    "day": "2026-10-29",
