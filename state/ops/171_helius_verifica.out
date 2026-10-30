@@ -1,0 +1,25 @@
+== 171_helius_verifica 2026-10-30T15:34:03Z ==
+helius rpc:
+{"jsonrpc":"2.0","result":"ok","id":1} 200
+helius funded-by:
+{"funder":"7f48V4tLoXM4E9onwNRZzssnxrMcQ7W7FuRWxHDHVC6T","funderName":null,"funderType":null,"mint":"So11111111111111111111111111111111111111111","symbol":"SOL","amount":1.99,"amountRaw":"1990000000","decimals":9,"signature":"5wnpotWP4cdiCCH1zWNfyrURFs2M2FmtSetmRExxEccmdUNBwZ2U4bbDKkXHCGBV4xEH5gY2UA
+=== anti-rug GTA6 + AGAIN ===
+
+=== GTA6 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz → LIMPIO
+top 20: billeteras 20.46% · pools/curva 0.97% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': 5.2518, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': ['No social media', 'Top 10 Holders', 'Bundler Holdings']}
+creador: {'creator': 'vPczFpjUEeMfYTtPkwqNYdJXvFBB1dDVBUA4sbMocQe', 'lanzamientos': 1993, 'muertos_<US$10K': 16, 'graduados_aprox': 0, 'muestra': 500}
+  grupo fondeador H8sMJSCQ… Coinbase Hot Wallet 12 (exchange): 2 billeteras, 2.64%
+
+=== AGAIN 7GWBnuU5ps1ZduiAsuKaYCehspfWWKZw69NF2E1xrZAA → CONCENTRADO
+top 20: billeteras 27.27% · pools/curva 0% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': 0.5497, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': ['No social media', 'Top 10 Holders']}
+creador: None
+  grupo fondeador F7p3dFrj… Relay Solver : 4 billeteras, 4.23%
+  grupo fondeador BieeZkdn…  : 2 billeteras, 3.39%
+  grupo fondeador 5tzFkiKs… Binance Hot Wallet 2 (exchange): 2 billeteras, 3.29%
+
+real	0m19.150s
+user	0m2.067s
+sys	0m0.101s
+== exit 0 ==

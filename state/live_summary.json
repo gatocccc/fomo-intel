@@ -1,5 +1,5 @@
 {
- "ts": 1793374198.3311682,
+ "ts": 1793374499.952421,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -43,11 +43,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.1009,
- "sol_usd": 94.889256631071,
+ "sol_usd": 94.38957484815501,
  "stream_connected": true,
- "stream_msgs": 2038,
- "tokens_seen": 1983,
- "tokens_tracked": 79,
+ "stream_msgs": 2109,
+ "tokens_seen": 2053,
+ "tokens_tracked": 91,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -55,34 +55,36 @@
  "factory_pending": 0,
  "account_trades": 1,
  "helius": {
-  "connected": false,
-  "notifications": 0,
+  "connected": true,
+  "notifications": 15284,
   "parsed": 0,
-  "skipped": 0,
+  "skipped": 15283,
   "fast_creates": 0,
-  "subs": 0,
+  "subs": 1,
   "errors": [
-   "15:27:20 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:27:20 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
-   "15:28:21 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:28:21 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
-   "15:29:21 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:29:21 GMT', 'content-type': 'application/json', 'content-length': '71', 'co"
+   "15:30:21 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:30:21 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
+   "15:31:21 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:31:21 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
+   "15:32:21 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:32:21 GMT', 'content-type': 'application/json', 'content-length': '71', 'co"
   ]
  },
  "follow_buys_seen": 0,
  "guard": {
-  "alerts": [],
+  "alerts": [
+   "15:33:21 fuente de se\u00f1ales recuperada tras 13818 s"
+  ],
   "bench": 1,
   "bench_by_reason": {
    "mcap_alto": 1
   },
-  "source_down_s": 13599,
+  "source_down_s": 0,
   "exec_fails_recent": 0
  },
- "st_requests": 44,
+ "st_requests": 45,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 2,
-  "create": 2035,
+  "create": 2106,
   "buy": 1
  },
  "stream_samples": [

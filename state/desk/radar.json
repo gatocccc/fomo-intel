@@ -136,34 +136,23 @@
     "hack",
     "selloff"
    ]
-  },
-  {
-   "ts": 1793359868.3997004,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: 🇺🇸 Binance says it is working with the FBI and US Secret Service following 6.3 billion crypto hack. @WatcherGuru",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793374176.5073917,
+ "ts": 1793374446.621834,
  "bear_score": 9,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.926,
-   "ch15m": -0.0036630805562845037,
-   "ch1h": 0.004061686869327952,
-   "ch4h": -0.02160334769433736
+   "px": 94.6,
+   "ch15m": -0.012835229051445296,
+   "ch1h": 0.004758263233919591,
+   "ch4h": -0.024007758416127678
   },
   "BTC": {
-   "px": 77584.0,
-   "ch15m": -0.0017884024034069412,
-   "ch1h": 0.00941972417382253,
-   "ch4h": -0.002507103459802762
+   "px": 77440.0,
+   "ch15m": -0.0075484755667764025,
+   "ch1h": 0.008412115529859099,
+   "ch4h": -0.003051096206084125
   }
  },
  "mode": "live",
@@ -264,10 +253,10 @@
      "trail_arm": 0.02
     }
    },
-   "mark": 94.926,
-   "ret_px": -0.0009,
-   "pnl_usd_est": -0.15,
-   "age_h": 1.73,
+   "mark": 94.6,
+   "ret_px": 0.0025,
+   "pnl_usd_est": 0.41,
+   "age_h": 1.8,
    "stop_px": 97.21,
    "rules": {
     "stop_up": 0.025,
