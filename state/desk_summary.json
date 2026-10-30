@@ -1,17 +1,17 @@
 {
- "now": 1793387402.8373008,
+ "now": 1793387677.2365496,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 4,
- "equity_usd": 168.1,
- "equity_sol": 1.7835,
+ "equity_usd": 168.34,
+ "equity_sol": 1.789,
  "cash_sol": 0.1131,
- "positions_usd": 157.44,
- "sol_usd": 94.25,
- "mult": 1.696,
+ "positions_usd": 157.69,
+ "sol_usd": 94.1,
+ "mult": 1.699,
  "halt": false,
  "pause": false,
  "positions": [
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9996413541747935,
+   "last_usd": 0.999570246340167,
    "mult": 0.991,
-   "value_usd": 114.63
+   "value_usd": 114.62
   },
   {
    "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
@@ -48,7 +48,7 @@
    "tokens_initial": 3284.466721904,
    "sol_in": 0.43464344,
    "sol_out": 0.0,
-   "peak_usd": 0.013176650116191093,
+   "peak_usd": 0.013321413306245262,
    "stop": 0.3,
    "trail": 0.35,
    "trail_after": 1.6,
@@ -68,9 +68,9 @@
    "sleeve": null,
    "reason": "catalyst",
    "max_h": null,
-   "last_usd": 0.013036733313930456,
-   "mult": 1.034,
-   "value_usd": 42.82
+   "last_usd": 0.013115195639155197,
+   "mult": 1.04,
+   "value_usd": 43.08
   }
  ],
  "perps_pnl_usd": 0,
@@ -3722,6 +3722,10 @@
   [
    1793387189,
    166.82
+  ],
+  [
+   1793387494,
+   168.55
   ]
  ],
  "closed": [
@@ -5539,7 +5543,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793386864.559176,
+  "last_run": 1793387463.1455069,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
