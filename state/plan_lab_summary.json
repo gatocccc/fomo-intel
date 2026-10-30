@@ -1,5 +1,5 @@
 {
- "now": 1793325291.108201,
+ "now": 1793325598.969985,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
@@ -7,10 +7,10 @@
  "days": 30,
  "day": 1,
  "equity_usd": 64.39,
- "equity_sol": 0.6872,
+ "equity_sol": 0.6875,
  "cash_sol": 0.287,
- "positions_usd": 37.5,
- "sol_usd": 93.7,
+ "positions_usd": 37.51,
+ "sol_usd": 93.65,
  "mult": 1.163,
  "halt": false,
  "pause": false,
@@ -34,7 +34,7 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.999120524551789,
+   "last_usd": 0.999122238134372,
    "mult": 0.981,
    "value_usd": 10.66
   },
@@ -71,11 +71,11 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793309060.2848802,
    "entry_usd": 97.53,
-   "last_usd": 93.848,
+   "last_usd": 93.837,
    "peak_usd": 92.974,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1984,
+   "sol_in": 0.1985,
    "sol_out": 0.0,
    "stop": 0.035,
    "trail": 0.02,
@@ -836,6 +836,10 @@
   [
    1793325105,
    63.0
+  ],
+  [
+   1793325414,
+   62.92
   ]
  ],
  "closed": [],
