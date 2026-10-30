@@ -90,7 +90,8 @@ LEGS = [
 ]
 RULES = {"window_min": 90, "min_bear_score": 3, "sol_1h": -0.015, "sol_4h": -0.025, "btc_1h": -0.01,
          "clear_quiet_h": 3, "coll_frac": float(os.getenv("RADAR_COLL_FRAC", "0.35")), "coll_min": 10.0, "coll_max": 60.0, "lev": 2.0,
-         "stop_up": 0.035, "tp_down": 0.12, "trail_arm": 0.04, "trail_gap": 0.02, "max_h": 12, "max_opens_day": 2, "cooldown_h": 2, "min_profit_clear": 0.5}
+         "stop_up": 0.035, "tp_down": 0.12, "trail_arm": 0.04, "trail_gap": 0.02, "max_h": 12, "max_opens_day": 2, "cooldown_h": 2, "min_profit_clear": 0.5,
+         "chase_max": 0.035}
 # tp_down pasó de 7% a 12% y se agregó trailing (29/10 noche): con un hack confirmado la caída puede ser larga; en cuanto el corto gana
 # trail_arm (4% del precio) se protege trail_gap (2%) desde el mejor punto, en vez de cortar a un objetivo fijo.
 
@@ -218,6 +219,16 @@ def classify_kw(title):
 _llm = None
 
 
+def _msg_text(msg):
+    """Texto de la respuesta del modelo: algunos modelos devuelven primero un bloque de razonamiento
+    (ThinkingBlock, sin .text); antes tomábamos content[0].text y el radar quedaba sin modelo."""
+    parts = [getattr(b, "text", "") for b in (msg.content or []) if getattr(b, "type", "") == "text"]
+    txt = "".join(p for p in parts if p)
+    if not txt:
+        raise ValueError("model reply without text block (stop_reason=%s)" % getattr(msg, "stop_reason", "?"))
+    return txt
+
+
 def classify_llm(title):
     """Confirmación con un modelo rápido (opcional). Devuelve None si no hay clave o falla."""
     global _llm
@@ -228,12 +239,12 @@ def classify_llm(title):
             import anthropic
             _llm = anthropic.Anthropic()
         msg = _llm.messages.create(
-            model=os.getenv("RADAR_LLM_MODEL", "claude-haiku-5-5"), max_tokens=80,
+            model=os.getenv("RADAR_LLM_MODEL", "claude-haiku-5-5"), max_tokens=400,
             messages=[{"role": "user", "content": (
                 "Crypto market headline. Reply with JSON only: {\"type\": one of [hack, exchange_risk, regulatory, macro, selloff, bullish, noise], "
                 "\"dir\": -1 bearish for SOL/BTC in the next hours, 0 neutral, 1 bullish, \"sev\": 1 minor, 2 significant, 3 major/confirmed, "
                 "\"confirmed\": true if the headline states a confirmed event rather than a rumour or allegation}. Headline: " + title[:300])}])
-        txt = msg.content[0].text
+        txt = _msg_text(msg)
         j = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
         if j.get("type") == "noise":
             return {"types": ["noise"], "dir": 0, "sev": 0, "by": "llm"}
@@ -289,12 +300,12 @@ def thesis_llm(thesis, title):
             import anthropic
             _llm = anthropic.Anthropic()
         msg = _llm.messages.create(
-            model=os.getenv("RADAR_LLM_MODEL", "claude-haiku-5-5"), max_tokens=80,
+            model=os.getenv("RADAR_LLM_MODEL", "claude-haiku-5-5"), max_tokens=400,
             messages=[{"role": "user", "content": (
                 "We hold a SOL short on this thesis: " + thesis["claim"][:300] + "\nNew headline: " + title[:300] +
                 "\nReply JSON only: {\"verdict\": one of [refuted (the event did not happen / was denied), backstop (event is real but losses are covered, "
                 "funds safe, withdrawals resumed: rebound risk), confirmed (official confirmation or escalation of the event), none (unrelated or no new fact)], \"fact\": short reason}")}])
-        txt = msg.content[0].text
+        txt = _msg_text(msg)
         j = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
         v = j.get("verdict")
         return {"verdict": v if v in ("refuted", "backstop", "confirmed") else None, "fact": str(j.get("fact", ""))[:160], "by": "llm"}
@@ -432,6 +443,7 @@ class Radar:
         return (jload(Path(f"state/plan_{plan}_summary.json"), {}) or {}).get("equity_usd") or 0.0
 
     def manage(self, px):
+        self._sol_px = px.get("SOL") or {}
         sol = (px.get("SOL") or {}).get("px")
         if not sol:
             return
@@ -484,6 +496,23 @@ class Radar:
             return
         if not sh or (leg["require_confirmed"] and not sh.get("confirmed")):
             return
+        # 30/10 03:40 (autocrítica): el corto del libro abrió a $92,87 cuando el shock había arrancado en $97,69 (SOL ya −4,9%) y
+        # se comió el rebote (stop, −$4,67); el del lab, que entró cerca del arranque ($97,53), ganó. Además el precio solo se miraba
+        # al detectar el shock: horas después (y tras un cierre) se podía volver a cortar con SOL rebotando. Dos frenos al abrir:
+        #  - precio que confirma AHORA (mismos umbrales que el shock), no el de hace horas;
+        #  - no perseguir: si SOL ya cayó más de chase_max desde el arranque del shock, el movimiento está hecho → no se abre.
+        sp = getattr(self, "_sol_px", {}) or {}
+        px_now = sol; base = sh.get("sol_px")
+        fresh = (sp.get("ch1h", 0) <= R["sol_1h"]) or (sp.get("ch4h", 0) <= R["sol_4h"])
+        chased = bool(px_now and base and px_now < base * (1 - R["chase_max"]))
+        if not fresh or chased:
+            key = ("chased" if chased else "stale") + ":" + leg["name"]
+            if self.state.get("_skip_note") != key:
+                self.state["_skip_note"] = key
+                logrow("skip_open", leg=leg["name"], reason=key.split(":")[0], sol_px=px_now, shock_px=base,
+                       ch1h=sp.get("ch1h"), ch4h=sp.get("ch4h"))
+            return
+        self.state["_skip_note"] = None
         today = time.strftime("%Y-%m-%d", time.gmtime(now - 3 * 3600))
         rows = [c for c in self.closed_rows() if c.get("leg", "lab") == leg["name"]]
         opens = [c for c in rows if time.strftime("%Y-%m-%d", time.gmtime(c["ts_open"] - 3 * 3600)) == today]
