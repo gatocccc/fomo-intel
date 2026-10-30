@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793328980.7954857,
+   "src": "cointelegraph",
+   "title": "Live updates: Binance estimates $6.3B of crypto stolen in major hack",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793328620.500931,
    "src": "tg:WatcherGuru",
    "title": "JUST IN: Binance says 6,300,000,000 worth of crypto was impacted following major hack. @WatcherGuru",
@@ -271,34 +282,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: Elon Musk says everyday is zeroday following Binance hack. @WatcherGuru",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793328861.2092686,
+ "ts": 1793329145.9917083,
  "bear_score": 55,
  "bull_score": 2,
  "price": {
   "SOL": {
-   "px": 95.099,
-   "ch15m": -0.0023708366115918755,
-   "ch1h": 0.013092574837541227,
-   "ch4h": -0.0191226676843419
+   "px": 95.292,
+   "ch15m": -0.0011425456756217756,
+   "ch1h": 0.014824281150159768,
+   "ch4h": -0.01801319043693328
   },
   "BTC": {
-   "px": 77309.0,
-   "ch15m": -0.0024645161290323125,
-   "ch1h": 0.005658610193303382,
-   "ch4h": -0.020921720849533365
+   "px": 77345.0,
+   "ch15m": -0.002540558664981596,
+   "ch1h": 0.007253737563160945,
+   "ch4h": -0.020986544814753816
   }
  },
  "mode": "live",
