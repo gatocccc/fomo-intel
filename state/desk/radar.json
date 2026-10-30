@@ -16,6 +16,16 @@
  },
  "events": [
   {
+   "ts": 1793330720.497043,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Elon Musk says super intelligence AI agents will eventually hack financial systems to obtain money for themselves, not humans. @WatcherGuru",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "hack"
+   ]
+  },
+  {
    "ts": 1793329865.3013551,
    "src": "cointelegraph",
    "title": "Live updates: Binance says $6.3B hack involved compromised engineer’s laptop",
@@ -271,34 +281,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: Tether has now frozen 1.5 billion in USDT linked to suspected Binance hack. @WatcherGuru",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793330661.1241353,
- "bear_score": 59,
+ "ts": 1793330946.2007887,
+ "bear_score": 60,
  "bull_score": 2,
  "price": {
   "SOL": {
-   "px": 95.889,
-   "ch15m": -0.0004065549161871296,
-   "ch1h": 0.008933080808080751,
-   "ch4h": -0.01062743115385012
+   "px": 96.099,
+   "ch15m": 0.00506196726455066,
+   "ch1h": 0.010101116273203203,
+   "ch4h": -0.005670119093194814
   },
   "BTC": {
-   "px": 77472.0,
-   "ch15m": -0.000335492528839465,
-   "ch1h": 0.0037183390555159956,
-   "ch4h": -0.01705237515225333
+   "px": 77579.0,
+   "ch15m": 0.0030513427200911103,
+   "ch1h": 0.003518439468612078,
+   "ch4h": -0.014381725552972235
   }
  },
  "mode": "live",
