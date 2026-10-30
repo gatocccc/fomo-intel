@@ -1,6 +1,3 @@
-{"ts": 1793308685.169305, "kind": "event", "src": "cointelegraph", "title": "Polymarket suspended trading amid reports of user funds being drained", "cls": {"types": ["hack"], "dir": -1, "sev": 1, "by": "kw"}}
-{"ts": 1793308685.169305, "kind": "event", "src": "cointelegraph", "title": "HYPE teases all-time high as NYSE owner ICE eyes US Hyperliquid perps", "cls": {"types": ["bullish"], "dir": 1, "sev": 1, "by": "kw"}}
-{"ts": 1793308685.169305, "kind": "event", "src": "cointelegraph", "title": "Your fridge could one day stake Ether, launch memecoins: CFTC chair", "cls": {"types": ["regulatory"], "dir": -1, "sev": 1, "by": "kw"}}
 {"ts": 1793308685.169305, "kind": "event", "src": "cointelegraph", "title": "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts", "cls": {"types": ["macro"], "dir": -1, "sev": 1, "by": "kw"}}
 {"ts": 1793308685.169305, "kind": "event", "src": "cointelegraph", "title": "Crypto PAC spending before midterms possibly obscured after reported FEC hack", "cls": {"types": ["hack"], "dir": -1, "sev": 1, "by": "kw"}}
 {"ts": 1793308685.169305, "kind": "event", "src": "theblock", "title": "Polymarket resumes trading after $2.65 million exploit, says third-party provider was compromised", "cls": {"types": ["hack"], "dir": -1, "sev": 1, "by": "kw"}}
@@ -191,3 +188,13 @@
 {"ts": 1793334797.8229907, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.374, "shock_px": 97.686, "ch1h": 0.007814198035583031, "ch4h": 0.04335247728441627}
 {"ts": 1793334872.6105347, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.291, "shock_px": 97.686, "ch1h": 0.006955153748227527, "ch4h": 0.042463140750899964}
 {"ts": 1793334872.6107106, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.291, "shock_px": 97.686, "ch1h": 0.006955153748227527, "ch4h": 0.042463140750899964}
+{"ts": 1793334917.6921828, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.352, "shock_px": 97.686, "ch1h": 0.0060142606179602875, "ch4h": 0.0363100243770027}
+{"ts": 1793334917.6923845, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.352, "shock_px": 97.686, "ch1h": 0.0060142606179602875, "ch4h": 0.0363100243770027}
+{"ts": 1793334977.9744189, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.273, "shock_px": 97.686, "ch1h": 0.005197891908649277, "ch4h": 0.03546907101265684}
+{"ts": 1793334977.9745958, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.273, "shock_px": 97.686, "ch1h": 0.005197891908649277, "ch4h": 0.03546907101265684}
+{"ts": 1793335037.7036242, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.318, "shock_px": 97.686, "ch1h": 0.005662912059522629, "ch4h": 0.03594809508095498}
+{"ts": 1793335037.7038069, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.318, "shock_px": 97.686, "ch1h": 0.005662912059522629, "ch4h": 0.03594809508095498}
+{"ts": 1793335097.7002852, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.224, "shock_px": 97.686, "ch1h": 0.0046915366332542785, "ch4h": 0.03494746702717655}
+{"ts": 1793335097.700501, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.224, "shock_px": 97.686, "ch1h": 0.0046915366332542785, "ch4h": 0.03494746702717655}
+{"ts": 1793335157.817661, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.234, "shock_px": 97.686, "ch1h": 0.004794874444559172, "ch4h": 0.03505391682013159}
+{"ts": 1793335157.8178954, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.234, "shock_px": 97.686, "ch1h": 0.004794874444559172, "ch4h": 0.03505391682013159}
