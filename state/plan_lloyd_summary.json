@@ -1,15 +1,15 @@
 {
- "now": 1793335795.4335742,
+ "now": 1793336098.9160726,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 541.92,
- "equity_sol": 5.5799,
+ "equity_usd": 541.93,
+ "equity_sol": 5.5798,
  "cash_sol": 0.0843,
- "positions_usd": 533.73,
+ "positions_usd": 533.74,
  "sol_usd": 97.12,
  "mult": 0.99,
  "halt": false,
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.999160240654152,
+   "last_usd": 0.9991658355538641,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 533.73
+   "value_usd": 533.74
   }
  ],
  "perps_pnl_usd": 0,
@@ -1820,6 +1820,10 @@
   [
    1793335674,
    541.92
+  ],
+  [
+   1793335977,
+   541.92
   ]
  ],
  "closed": [
@@ -2608,6 +2612,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793335931.8151886,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -2.9%, 4h 2.5%): no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-0452"
+  },
   {
    "ts": 1793335339.9620607,
    "title": "Automatic brain: status",
@@ -3910,7 +3921,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793335323.9066901,
+  "last_run": 1793335923.2072449,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -3920,8 +3931,8 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793335326.945827,
-   "text": "[Majors] Still in USDC on purpose. Versus their 20-day averages: SOL -6.7%, BTC -4.1%, ETH -6.7%, JUP -17.1%. The plan buys each asset the hour it closes 1% above its average; until then, cash is the position. Checked every hour."
+   "ts": 1793335923.2096548,
+   "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -2.9%, 4h 2.5%): no new memecoins until it improves."
   },
   "trad_status": "SOL -6.7%, BTC -4.1%, ETH -6.7%, JUP -17.1%",
   "sol_ch24h": -2.9,

@@ -1,13 +1,3 @@
-{"ts": 1793322064.274168, "kind": "event", "src": "cointelegraph", "title": "Live Updates: Estimated losses in Binance hack reach $5.9B", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
-{"ts": 1793322664.4117434, "kind": "event", "src": "cointelegraph", "title": "Live updates: Binance says $3B in crypto frozen in connection to hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
-{"ts": 1793323564.8754742, "kind": "event", "src": "cointelegraph", "title": "Binance hack rattles markets as BNB falls 8%, Bitcoin nears $77K", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
-{"ts": 1793326264.8864737, "kind": "event", "src": "cointelegraph", "title": "Binance hack drained billions through private key ‘misuse’: Blockaid CEO", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
-{"ts": 1793326580.4845843, "kind": "event", "src": "tg:TreeNewsFeed", "title": "*SEC POISED TO UNVEIL MAJOR CRYPTO PLANS AS CLARITY ACT STALLS: BBG", "cls": {"types": ["regulatory"], "dir": -1, "sev": 1, "by": "kw"}}
-{"ts": 1793326580.4845843, "kind": "event", "src": "tg:TreeNewsFeed", "title": "U.S. CPI: +3.4% YEAR-OVER-YEAR (EST. +3.4%) U.S. CORE CPI: +2.5% YEAR-OVER-YEAR (EST. +2.5%)", "cls": {"types": ["macro"], "dir": -1, "sev": 1, "by": "kw"}}
-{"ts": 1793326580.4845843, "kind": "event", "src": "tg:TreeNewsFeed", "title": "TRUMP: SEC CHAIR WORKING TO BRING HYPERLIQUID INTO US", "cls": {"types": ["regulatory"], "dir": -1, "sev": 1, "by": "kw"}}
-{"ts": 1793326580.4845843, "kind": "event", "src": "tg:TreeNewsFeed", "title": "U.S. CPI: +3.4% YEAR-OVER-YEAR (EST. +3.4%) U.S. CORE CPI: +2.4% YEAR-OVER-YEAR (EST. +2.4%)", "cls": {"types": ["macro"], "dir": -1, "sev": 1, "by": "kw"}}
-{"ts": 1793326580.4845843, "kind": "event", "src": "tg:TreeNewsFeed", "title": "BITGET CONFIRMS HACK WITH LOSSES APPROX. 350M, CLAIMS USER FUNDS ARE SAFE: BITGET CEO", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
-{"ts": 1793326580.4845843, "kind": "event", "src": "tg:TreeNewsFeed", "title": "U.S. CPI: +3.7% YEAR-OVER-YEAR (EST. +3.6%) U.S. CORE CPI: +2.6% YEAR-OVER-YEAR (EST. +2.5%)", "cls": {"types": ["macro"], "dir": -1, "sev": 1, "by": "kw"}}
 {"ts": 1793326580.4845843, "kind": "event", "src": "tg:TreeNewsFeed", "title": "Potential Binance Hack Ongoing - Onchain", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
 {"ts": 1793326580.4845843, "kind": "event", "src": "tg:TreeNewsFeed", "title": "TETHER FREEZES 971M USDT IN LIKELY BINANCE HACK, WITH NO UPDATE FROM BINANCE STILL", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
 {"ts": 1793326580.4845843, "kind": "event", "src": "tg:wublockchainenglish", "title": "Bithumb Details Internal System Breach: 6,444 Customers and 715 Employees Compromised South Korea s second-largest crypto exchange, Bithumb, disclosed that an unauthorized external intrusion into its ", "cls": {"types": ["hack"], "dir": -1, "sev": 1, "by": "kw"}}
@@ -198,3 +188,13 @@
 {"ts": 1793335712.861216, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.33, "shock_px": 97.686, "ch1h": 0.0019353111939224288, "ch4h": 0.032635219725422715}
 {"ts": 1793335772.813457, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.32, "shock_px": 97.686, "ch1h": 0.001832369109139087, "ch4h": 0.0325291234324272}
 {"ts": 1793335772.8136249, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.32, "shock_px": 97.686, "ch1h": 0.001832369109139087, "ch4h": 0.0325291234324272}
+{"ts": 1793335832.8537078, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.258, "shock_px": 97.686, "ch1h": 0.002091597547781987, "ch4h": 0.02833639958552725}
+{"ts": 1793335832.8538876, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.258, "shock_px": 97.686, "ch1h": 0.002091597547781987, "ch4h": 0.02833639958552725}
+{"ts": 1793335877.8790858, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.39, "shock_px": 97.686, "ch1h": 0.003451651125650379, "ch4h": 0.029732072997948666}
+{"ts": 1793335877.879252, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.39, "shock_px": 97.686, "ch1h": 0.003451651125650379, "ch4h": 0.029732072997948666}
+{"ts": 1793335952.7066727, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.289, "shock_px": 97.686, "ch1h": 0.002411004069857281, "ch4h": 0.02866417137177768}
+{"ts": 1793335952.7068288, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.289, "shock_px": 97.686, "ch1h": 0.002411004069857281, "ch4h": 0.02866417137177768}
+{"ts": 1793336012.5957112, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.31, "shock_px": 97.686, "ch1h": 0.0026273762299726666, "ch4h": 0.028886210323753936}
+{"ts": 1793336012.5959113, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.31, "shock_px": 97.686, "ch1h": 0.0026273762299726666, "ch4h": 0.028886210323753936}
+{"ts": 1793336057.615991, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.309, "shock_px": 97.686, "ch1h": 0.0026170727937766536, "ch4h": 0.028875637040326474}
+{"ts": 1793336057.6161652, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.309, "shock_px": 97.686, "ch1h": 0.0026170727937766536, "ch4h": 0.028875637040326474}
