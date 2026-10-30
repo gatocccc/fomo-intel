@@ -136,34 +136,23 @@
     "exchange_risk",
     "hack"
    ]
-  },
-  {
-   "ts": 1793309899.5880563,
-   "src": "decrypt",
-   "title": "Binance Drained of $5.5 Billion in Suspected Hack, Tether and Circle Freeze $1.8 Billion",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793324045.4399607,
+ "ts": 1793324345.3232882,
  "bear_score": 8,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.103,
-   "ch15m": 0.0002551047523888794,
-   "ch1h": 0.008304045945482397,
-   "ch4h": -0.03659984848174613
+   "px": 93.802,
+   "ch15m": -0.0006924691318567211,
+   "ch1h": -0.001479652122076569,
+   "ch4h": -0.04323701308636174
   },
   "BTC": {
-   "px": 76980.0,
-   "ch15m": 0.0001818985006365459,
-   "ch1h": -0.002332814930015581,
-   "ch4h": -0.03194164989939641
+   "px": 77002.0,
+   "ch15m": 0.0014436019820265322,
+   "ch1h": -0.004627714581178943,
+   "ch4h": -0.03235859607675584
   }
  },
  "mode": "live",
@@ -184,10 +173,10 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 94.103,
-  "ret_px": 0.0351,
-  "pnl_usd_est": 1.31,
-  "age_h": 4.16,
+  "mark": 93.802,
+  "ret_px": 0.0382,
+  "pnl_usd_est": 1.42,
+  "age_h": 4.25,
   "best_ret": 0.04671383164154619
  },
  "positions": {
@@ -208,10 +197,10 @@
    ],
    "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
    "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-   "mark": 94.103,
-   "ret_px": 0.0351,
-   "pnl_usd_est": 1.31,
-   "age_h": 4.16,
+   "mark": 93.802,
+   "ret_px": 0.0382,
+   "pnl_usd_est": 1.42,
+   "age_h": 4.25,
    "best_ret": 0.04671383164154619
   },
   "book": {
@@ -233,10 +222,10 @@
    "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "sig": "52fnUTsu5TQh9dGoURqVntbYErKt566sgbn8AKFywmcR8vVs2GfMC9b3pp3MgZyJ3zbrvN7oDuUc44K8S6rxDM3K",
    "best_ret": 0.0,
-   "mark": 94.103,
-   "ret_px": -0.0133,
-   "pnl_usd_est": -2.17,
-   "age_h": 1.0
+   "mark": 93.802,
+   "ret_px": -0.01,
+   "pnl_usd_est": -1.64,
+   "age_h": 1.08
   }
  }
 }
