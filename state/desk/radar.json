@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793375405.744995,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: 🇺🇸 US Secret Service is working with Circle to identify, freeze, and recover funds stolen from Binance. @WatcherGuru",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793371160.5934377,
    "src": "bitcoinmagazine",
    "title": "SEC Charges Two Companies in $130 Million Crypto Trading Scheme",
@@ -126,21 +137,21 @@
    ]
   }
  ],
- "ts": 1793375361.3784518,
- "bear_score": 3,
+ "ts": 1793375646.4542205,
+ "bear_score": 5,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.332,
-   "ch15m": -0.0005297620308958306,
-   "ch1h": -0.006550540261600402,
-   "ch4h": -0.022709377978533896
+   "px": 94.618,
+   "ch15m": -0.0002747136638351355,
+   "ch1h": -0.000264150544678432,
+   "ch4h": -0.01883153244706226
   },
   "BTC": {
-   "px": 77383.0,
-   "ch15m": -0.0001292106521261216,
-   "ch1h": 0.0022666044969432697,
-   "ch4h": -0.0002325551349465771
+   "px": 77548.0,
+   "ch15m": -0.00014182751195868093,
+   "ch1h": 0.0047420382990852605,
+   "ch4h": 0.0026505307526214494
   }
  },
  "mode": "live",
@@ -231,6 +242,14 @@
       "verdict": "confirmed",
       "fact": "",
       "by": "kw"
+     },
+     {
+      "ts": 1793375410.6746135,
+      "title": "JUST IN: 🇺🇸 US Secret Service is working with Circle to identify, freeze, and recover funds stolen from Binance. @WatcherGuru",
+      "src": "tg:WatcherGuru",
+      "verdict": "confirmed",
+      "fact": "",
+      "by": "kw"
      }
     ],
     "rules": {
@@ -241,10 +260,10 @@
      "trail_arm": 0.02
     }
    },
-   "mark": 94.332,
-   "ret_px": 0.0054,
-   "pnl_usd_est": 0.87,
-   "age_h": 2.06,
+   "mark": 94.618,
+   "ret_px": 0.0023,
+   "pnl_usd_est": 0.38,
+   "age_h": 2.14,
    "stop_px": 97.21,
    "rules": {
     "stop_up": 0.025,
@@ -320,6 +339,14 @@
      "verdict": "confirmed",
      "fact": "",
      "by": "kw"
+    },
+    {
+     "ts": 1793375410.6746135,
+     "title": "JUST IN: 🇺🇸 US Secret Service is working with Circle to identify, freeze, and recover funds stolen from Binance. @WatcherGuru",
+     "src": "tg:WatcherGuru",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
     }
    ],
    "rules": {
@@ -333,7 +360,7 @@
  },
  "llm": {
   "key": true,
-  "last_error": "thesis ValueError: model reply without JSON: {"
+  "last_error": "thesis ValueError: model reply without JSON: {\"verdict\": \"confirmed\", \"fact\": \"US Secret Service is working with"
  },
  "sources": [
   "bitcoinmagazine",

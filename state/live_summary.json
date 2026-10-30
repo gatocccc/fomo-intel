@@ -1,5 +1,5 @@
 {
- "ts": 1793375401.3525112,
+ "ts": 1793375702.196998,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-30",
-  "seen": 38,
+  "seen": 41,
   "bought": 0,
   "by_reason": {
-   "freno": 23,
+   "freno": 26,
    "en_banco": 13,
    "mcap_alto": 2
   },
@@ -43,11 +43,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.1009,
- "sol_usd": 94.3728126669732,
+ "sol_usd": 94.42872599768754,
  "stream_connected": true,
- "stream_msgs": 2315,
- "tokens_seen": 2258,
- "tokens_tracked": 91,
+ "stream_msgs": 2378,
+ "tokens_seen": 2321,
+ "tokens_tracked": 90,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -56,9 +56,9 @@
  "account_trades": 1,
  "helius": {
   "connected": true,
-  "notifications": 203701,
-  "parsed": 13,
-  "skipped": 203654,
+  "notifications": 240315,
+  "parsed": 18,
+  "skipped": 240253,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
@@ -67,7 +67,7 @@
    "15:32:21 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:32:21 GMT', 'content-type': 'application/json', 'content-length': '71', 'co"
   ]
  },
- "follow_buys_seen": 4,
+ "follow_buys_seen": 6,
  "guard": {
   "alerts": [
    "15:33:21 fuente de se\u00f1ales recuperada tras 13818 s"
@@ -79,12 +79,12 @@
   "source_down_s": 0,
   "exec_fails_recent": 0
  },
- "st_requests": 47,
+ "st_requests": 48,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 2,
-  "create": 2312,
+  "create": 2375,
   "buy": 1
  },
  "stream_samples": [
