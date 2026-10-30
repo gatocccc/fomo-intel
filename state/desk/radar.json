@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793340092.0653088,
+   "src": "cointelegraph",
+   "title": "North Korea’s TraderTraitor linked to $6.3B Binance hack",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793339777.2515848,
    "src": "cointelegraph",
    "title": "North Korea linked to $6.3B Binance hack by crypto investigators",
@@ -272,33 +283,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:wublockchainenglish",
-   "title": "Bithumb Details Internal System Breach: 6,444 Customers and 715 Employees Compromised South Korea s second-largest crypto exchange, Bithumb, disclosed that an unauthorized external intrusion into its ",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "hack"
-   ]
   }
  ],
- "ts": 1793339957.5911834,
- "bear_score": 17,
+ "ts": 1793340257.7872121,
+ "bear_score": 20,
  "bull_score": 1,
  "price": {
   "SOL": {
-   "px": 97.91,
-   "ch15m": -0.004068762079137533,
-   "ch1h": 0.007283800744840585,
-   "ch4h": 0.04270500532481347
+   "px": 97.825,
+   "ch15m": -0.005489757535708795,
+   "ch1h": 0.003992364218563971,
+   "ch4h": 0.046446947573355546
   },
   "BTC": {
-   "px": 78488.0,
-   "ch15m": -0.0027951415358031806,
-   "ch1h": 0.0033492700636617023,
-   "ch4h": 0.022138875866020813
+   "px": 78574.0,
+   "ch15m": -0.001106011873736712,
+   "ch1h": 0.0016189274287097266,
+   "ch4h": 0.026440235140431145
   }
  },
  "mode": "live",
