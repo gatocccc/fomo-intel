@@ -2,6 +2,17 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793363017.2771683,
+   "src": "decrypt",
+   "title": "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793362582.242887,
    "src": "cointelegraph",
    "title": "Binance hit by $6.3B hack, the largest in cryptocurrency history",
@@ -135,21 +146,21 @@
    ]
   }
  ],
- "ts": 1793362762.8569725,
- "bear_score": 20,
+ "ts": 1793363063.0618474,
+ "bear_score": 23,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.645,
-   "ch15m": 0.0009217448941547524,
-   "ch1h": -0.00233299955611066,
-   "ch4h": -0.007537559432732044
+   "px": 96.661,
+   "ch15m": -0.0011160598952144607,
+   "ch1h": -0.0017143978435766316,
+   "ch4h": -0.008767791952089987
   },
   "BTC": {
-   "px": 77479.0,
-   "ch15m": 0.0005294558227226798,
-   "ch1h": -0.0021507869046699657,
-   "ch4h": -0.007849715719920103
+   "px": 77500.0,
+   "ch15m": -0.0003740535799506839,
+   "ch1h": -0.0023171987641606995,
+   "ch4h": -0.007885708433611582
   }
  },
  "mode": "live",

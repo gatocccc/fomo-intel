@@ -1,4 +1,3 @@
-{"ts": 1793347968.2670357, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.131, "shock_px": 97.686, "ch1h": -0.007540692149710315, "ch4h": -0.0010182042579450767}
 {"ts": 1793347968.267201, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.131, "shock_px": 97.686, "ch1h": -0.007540692149710315, "ch4h": -0.0010182042579450767}
 {"ts": 1793347998.2923634, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.08, "shock_px": 97.686, "ch1h": -0.00806179689176345, "ch4h": -0.001542733724159251}
 {"ts": 1793347998.2925591, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.08, "shock_px": 97.686, "ch1h": -0.00806179689176345, "ch4h": -0.001542733724159251}
@@ -198,3 +197,4 @@
 {"ts": 1793360467.2475638, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
 {"ts": 1793360616.3171363, "kind": "trend_open", "leg": "lab", "plan": "lab", "symbol": "ETH", "side": "short", "entry": 2237.16, "collateral_usd": 10.0, "lev": 1.69, "size_usd": 16.9, "mode": "live", "signal": -0.8, "vol": 0.356, "pubkey": "FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy", "reason": "majors_trend", "sig": "uvhxBQYK3AE5LXEsFDNryeNgrPEjTZ243D9auuD5sSkJXi1SJ8yaxybsBzbdKr9gjNHQE4XdmgFJioD2hHvGpi1"}
 {"ts": 1793362582.242887, "kind": "event", "src": "cointelegraph", "title": "Binance hit by $6.3B hack, the largest in cryptocurrency history", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
+{"ts": 1793363017.2771683, "kind": "event", "src": "decrypt", "title": "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
