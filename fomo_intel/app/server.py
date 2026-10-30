@@ -401,7 +401,7 @@ def wallet_view(d: dict, full: bool = False) -> dict:
            "realized_usd": d.get("realized_usd"), "halted": d.get("halt"), "closed_out": d.get("stopped") if "stopped" in d else (d.get("closed") if isinstance(d.get("closed"), bool) else None), "updated": d.get("now"), "stray_usd": d.get("stray_usd") or 0,
            "fees_usd": d.get("fees_usd"),
            "last_trade": (d.get("trades") or [{}])[0].get("ts") if d.get("trades") else None,
-           "positions": [{"token": x.get("symbol"), "mint": x.get("mint"), "multiple": x.get("mult"), "value_usd": x.get("value_usd"),
+           "positions": [{"token": x.get("symbol") or x.get("token"), "mint": x.get("mint"), "multiple": x.get("mult") if x.get("mult") is not None else x.get("multiple"), "value_usd": x.get("value_usd"),
                           "stop": x.get("stop"), "thesis": x.get("thesis"),
                           "chart": (f"https://dexscreener.com/solana/{x.get('mint')}" if x.get("mint") and x.get("mint") not in ("EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",) else None)}
                          for x in d.get("positions") or []]}

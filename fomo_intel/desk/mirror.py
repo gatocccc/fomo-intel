@@ -107,6 +107,9 @@ class Stool:
         self.pos: dict = jl(self.dir / "positions.json", {}) or {}
         self.seen: list = jl(self.dir / "processed.json", []) or []
         self.perps: dict = jl(self.dir / "perps.json", {}) or {}      # clave "COIN:side" → posición copiada en Jupiter Perps
+        for p in self.perps.values():                                   # 30/10 16:00: un parser leyó el colateral en unidades crudas (×1e6); se repara al cargar
+            if float(p.get("collateral_usd") or 0) > 1e5:
+                p["collateral_usd"] = round(float(p["collateral_usd"]) / 1e6, 2); p["size_usd"] = round(p["collateral_usd"] * float(p.get("lev") or 2), 2)
         self._jp = None; self._perps_live: list | None = None; self._perps_live_ts = 0.0; self._perps_retry: dict = {}
         self.sol = 0.0
         self.refresh_type()
@@ -495,7 +498,8 @@ class Stool:
         try:
             live = [q for q in (self.perps_live(force=True) or []) if q.get("pubkey") == rec["pubkey"]]
             if live and live[0].get("entry"): rec["entry"] = float(live[0]["entry"])
-            if live and live[0].get("collateral_usd"): rec["collateral_usd"] = float(live[0]["collateral_usd"])
+            lc = float((live[0].get("collateral_usd") if live else 0) or 0)
+            if live and 0 < lc < coll * 1.5: rec["collateral_usd"] = lc     # lo que quedó en cadena neto de comisión; nunca un dato en unidades crudas
         except Exception:  # noqa: BLE001
             pass
         self.perps[k] = rec; self.cfg.get("_perp_fail", {}).pop(k, None); self.save()

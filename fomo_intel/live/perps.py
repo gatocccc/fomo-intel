@@ -182,8 +182,14 @@ class JupPerps:
     @classmethod
     def parse_position(cls, p: dict) -> dict:
         """Normaliza una posición de la API a un dict chico y estable. Conserva `raw`."""
-        size = _f(_first(p, "sizeUsd", "size", "positionSizeUsd", "sizeUsdDelta"))
-        coll = _f(_first(p, "collateralUsd", "collateral", "collateralSizeUsd", "positionCollateralSizeUsd"))
+        # La API devuelve "size"/"collateral" en dólares y "sizeUsdDelta"/"collateralUsd" en unidades crudas (6 decimales):
+        # p.ej. {"collateral": "81.17", "collateralUsd": "81165365"}. Primero los campos en dólares; lo crudo se normaliza.
+        size = _f(_first(p, "size", "sizeUsd", "positionSizeUsd", "sizeUsdDelta"))
+        coll = _f(_first(p, "collateral", "collateralSizeUsd", "positionCollateralSizeUsd", "collateralUsd"))
+        if size is not None and size > 1e7:
+            size = size / 10 ** USDC_DECIMALS
+        if coll is not None and coll > 1e7:
+            coll = coll / 10 ** USDC_DECIMALS
         pnl = _f(_first(p, "pnlAfterFeesUsd", "pnlAfterFees", "pnlUsd", "pnl", "pnlBeforeFeesUsd"))
         pnl_pct = _f(_first(p, "pnlChangePctAfterFees", "pnlChangePctBeforeFees", "pnlPct", "pnlPercent"))
         lev = _f(_first(p, "leverage"))
