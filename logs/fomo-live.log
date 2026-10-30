@@ -1,4 +1,3 @@
-Oct 29 23:44:07 simplai-prod python3[2049653]: 2026-10-29 23:44:07,862 INFO live.helius: HELIUS 4vw54B buy Dn6DzgXk 0.2600 SOL @ 7.878e-08 (lat 0.9s)
 Oct 29 23:44:21 simplai-prod python3[2049653]: 2026-10-29 23:44:21,065 INFO live.helius: HELIUS 4vw54B buy Dn6DzgXk 0.0350 SOL @ 8.682e-08 (lat 0.9s)
 Oct 29 23:45:31 simplai-prod python3[2049653]: 2026-10-29 23:45:31,446 INFO live.helius: HELIUS 4vw54B buy Dn6DzgXk 0.0350 SOL @ 1.973e-07 (lat 0.9s)
 Oct 29 23:48:04 simplai-prod python3[2049653]: 2026-10-29 23:48:04,756 INFO live: latido: stream=True tokens_vistos=38 seguidos=38 candidatos=0 abiertas=0 cerradas=1 st_requests=1 SOL=$96
@@ -298,3 +297,4 @@ Oct 30 04:57:53 simplai-prod python3[2052574]: </html>
 Oct 30 04:57:53 simplai-prod python3[2052574]: ; reconecto en 4s
 Oct 30 04:57:58 simplai-prod python3[2052574]: 2026-10-30 04:57:58,179 INFO live.stream: stream conectado
 Oct 30 05:01:30 simplai-prod python3[2052574]: 2026-10-30 05:01:30,743 INFO live: latido: stream=True tokens_vistos=2491 seguidos=47 candidatos=0 abiertas=0 cerradas=1 st_requests=61 SOL=$97
+Oct 30 05:06:30 simplai-prod python3[2052574]: 2026-10-30 05:06:30,894 INFO live: latido: stream=True tokens_vistos=2516 seguidos=38 candidatos=0 abiertas=0 cerradas=1 st_requests=62 SOL=$97
