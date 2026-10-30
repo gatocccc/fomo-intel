@@ -242,22 +242,45 @@ def _json_reply(txt):
     raise ValueError("model reply without JSON: " + t.strip().replace("\n", " ")[:120])
 
 
+_llm_nothink_ok = True
+
+
+def _ask(prompt):
+    """Una consulta corta al modelo. 30/10 16:30 (autocrítica): radar.json mostraba
+    "thesis ValueError: model reply without text block (stop_reason=max_tokens)": el modelo gastaba los 400 tokens
+    razonando y no llegaba a escribir el JSON, así que la tesis viva se juzgaba solo por palabras clave (by: kw)
+    durante todo el shock de Binance. Ahora pide sin razonamiento extendido (si la API no acepta el parámetro, se
+    reintenta sin él) y con margen de 1.500 tokens."""
+    global _llm, _llm_nothink_ok, _llm_err
+    if _llm is None:
+        import anthropic
+        _llm = anthropic.Anthropic()
+    kw = dict(model=os.getenv("RADAR_LLM_MODEL", "claude-haiku-5-5"), max_tokens=1500,
+              messages=[{"role": "user", "content": prompt}])
+    if _llm_nothink_ok:
+        try:
+            txt = _msg_text(_llm.messages.create(thinking={"type": "disabled"}, **kw))
+            _llm_err = None   # el último error ya no describe el estado actual
+            return txt
+        except Exception as e:  # noqa: BLE001
+            if "thinking" not in str(e).lower():
+                raise
+            _llm_nothink_ok = False
+    txt = _msg_text(_llm.messages.create(**kw))
+    _llm_err = None
+    return txt
+
+
 def classify_llm(title):
     """Confirmación con un modelo rápido (opcional). Devuelve None si no hay clave o falla."""
     global _llm
     if not os.getenv("ANTHROPIC_API_KEY"):
         return None
     try:
-        if _llm is None:
-            import anthropic
-            _llm = anthropic.Anthropic()
-        msg = _llm.messages.create(
-            model=os.getenv("RADAR_LLM_MODEL", "claude-haiku-5-5"), max_tokens=400,
-            messages=[{"role": "user", "content": (
+        txt = _ask((
                 "Crypto market headline. Reply with JSON only: {\"type\": one of [hack, exchange_risk, regulatory, macro, selloff, bullish, noise], "
                 "\"dir\": -1 bearish for SOL/BTC in the next hours, 0 neutral, 1 bullish, \"sev\": 1 minor, 2 significant, 3 major/confirmed, "
-                "\"confirmed\": true if the headline states a confirmed event rather than a rumour or allegation}. Headline: " + title[:300])}])
-        txt = _msg_text(msg)
+                "\"confirmed\": true if the headline states a confirmed event rather than a rumour or allegation}. Headline: " + title[:300]))
         j = _json_reply(txt)
         if j.get("type") == "noise":
             return {"types": ["noise"], "dir": 0, "sev": 0, "by": "llm"}
@@ -309,16 +332,10 @@ def thesis_llm(thesis, title):
     if not os.getenv("ANTHROPIC_API_KEY"):
         return None
     try:
-        if _llm is None:
-            import anthropic
-            _llm = anthropic.Anthropic()
-        msg = _llm.messages.create(
-            model=os.getenv("RADAR_LLM_MODEL", "claude-haiku-5-5"), max_tokens=400,
-            messages=[{"role": "user", "content": (
+        txt = _ask((
                 "We hold a SOL short on this thesis: " + thesis["claim"][:300] + "\nNew headline: " + title[:300] +
                 "\nReply JSON only: {\"verdict\": one of [refuted (the event did not happen / was denied), backstop (event is real but losses are covered, "
-                "funds safe, withdrawals resumed: rebound risk), confirmed (official confirmation or escalation of the event), none (unrelated or no new fact)], \"fact\": short reason}")}])
-        txt = _msg_text(msg)
+                "funds safe, withdrawals resumed: rebound risk), confirmed (official confirmation or escalation of the event), none (unrelated or no new fact)], \"fact\": short reason}"))
         j = _json_reply(txt)
         v = j.get("verdict")
         return {"verdict": v if v in ("refuted", "backstop", "confirmed") else None, "fact": str(j.get("fact", ""))[:160], "by": "llm"}
