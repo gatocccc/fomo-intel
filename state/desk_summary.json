@@ -1,16 +1,16 @@
 {
- "now": 1793351379.9400344,
+ "now": 1793351683.267059,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 166.79,
- "equity_sol": 1.7179,
+ "equity_usd": 166.8,
+ "equity_sol": 1.7187,
  "cash_sol": 0.1009,
- "positions_usd": 157.0,
- "sol_usd": 97.09,
+ "positions_usd": 157.01,
+ "sol_usd": 97.05,
  "mult": 1.683,
  "halt": false,
  "pause": false,
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9994787735695715,
+   "last_usd": 0.9995389923373594,
    "mult": 0.991,
-   "value_usd": 157.0
+   "value_usd": 157.01
   }
  ],
  "perps_pnl_usd": 0,
@@ -3221,6 +3221,10 @@
   [
    1793351319,
    166.79
+  ],
+  [
+   1793351622,
+   166.79
   ]
  ],
  "closed": [
@@ -3602,6 +3606,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793351531.4020386,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h -0.9%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-0912"
+  },
   {
    "ts": 1793350924.513577,
    "title": "Cerebro automático: estado",
@@ -4994,13 +5005,6 @@
    "text": "REMUS: vendió 100% de REMUS (stop (1.15x)) por 0.3462 SOL — posición cerrada",
    "kind": "automático",
    "id": null
-  },
-  {
-   "ts": 1793191923.5040987,
-   "title": "Ejecución",
-   "text": "set 4kjruq: ajustó GTA6: stop=-0.05\nset CA8q2m: ajustó REMUS: stop=-0.15",
-   "kind": "ejecución",
-   "id": "2026-10-28-02"
   }
  ],
  "wins": 2,
@@ -5010,7 +5014,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793350923.6337368,
+  "last_run": 1793351525.2641928,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -5020,11 +5024,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793350923.635255,
-   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h -0.0%): no abro memecoins hasta que mejore."
+   "ts": 1793351525.2660823,
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h -0.9%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -3.0,
-  "sol_vs_ma20": -0.0677
+  "sol_ch24h": -3.2,
+  "sol_vs_ma20": -0.0687
  }
 }

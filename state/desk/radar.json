@@ -69,45 +69,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793337212.1035187,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: 🇰🇵 North Korea responsible for 6 billion Binance hack, CNN reports. @WatcherGuru",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793337092.176117,
-   "src": "cointelegraph",
-   "title": "Live updates: Binance $6.3B hack linked to North Korea’s TraderTraitor",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793351388.4810348,
- "bear_score": 3,
+ "ts": 1793351658.4359007,
+ "bear_score": 0,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 97.177,
-   "ch15m": -0.003169685903616881,
-   "ch1h": 0.0018144142843887767,
-   "ch4h": -0.005719489236310049
+   "px": 97.084,
+   "ch15m": -0.002404488378306091,
+   "ch1h": -0.0011728636391694636,
+   "ch4h": -0.006610048091681198
   },
   "BTC": {
-   "px": 77786.0,
-   "ch15m": -0.0034462878739350833,
-   "ch1h": -0.0025901420731394564,
-   "ch4h": -0.009183894429796058
+   "px": 77785.0,
+   "ch15m": -0.0027180532584586414,
+   "ch1h": -0.0037654170775752727,
+   "ch4h": -0.009549882218119254
   }
  },
  "mode": "live",
