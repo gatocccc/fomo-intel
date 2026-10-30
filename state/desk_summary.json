@@ -1,16 +1,16 @@
 {
- "now": 1793352593.767758,
+ "now": 1793352896.9720747,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 166.77,
- "equity_sol": 1.7228,
+ "equity_usd": 166.76,
+ "equity_sol": 1.7242,
  "cash_sol": 0.1009,
- "positions_usd": 157.0,
- "sol_usd": 96.8,
+ "positions_usd": 157.01,
+ "sol_usd": 96.72,
  "mult": 1.683,
  "halt": false,
  "pause": false,
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9995258182873387,
+   "last_usd": 0.9995429125839959,
    "mult": 0.991,
-   "value_usd": 157.0
+   "value_usd": 157.01
   }
  ],
  "perps_pnl_usd": 0,
@@ -3237,6 +3237,10 @@
   [
    1793352533,
    166.76
+  ],
+  [
+   1793352836,
+   166.76
   ]
  ],
  "closed": [
@@ -3618,6 +3622,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793352730.1605048,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h -1.1%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-0932"
+  },
   {
    "ts": 1793352138.2526162,
    "title": "Cerebro automático: estado",
@@ -5010,13 +5021,6 @@
    "text": "set 4kjruq: ajustó GTA6: stop=-0.224\nbuy DOAS: compró 6,949 DOAS por 0.3351 SOL a US$0.00491881 (slippage +2.4%)",
    "kind": "ejecución",
    "id": "auto-mesa-20261028-1907"
-  },
-  {
-   "ts": 1793214457.0512261,
-   "title": "Cerebro automático: compra",
-   "text": "GTA6: llegó a 1.63x de pico; subo el stop a 1.22x (antes 1.05x).\n\nEfectivo ocioso: 0.328 SOL (28% del patrimonio). Lo pongo a trabajar en DOAS.\n\nDOAS: US$4.7M, liquidez US$184K, volumen 24 h 0.2x su valor, 2815 holders, top 10 1%; 24 h -98%, 2% del máximo de 3 días. Anti-rug LIMPIO (grupos con fondeador común 0%). En contra: bundlers 0%; un stop de 30–35% puede ejecutarse más abajo en una caída rápida.",
-   "kind": "decisión",
-   "id": "auto-mesa-20261028-1907"
   }
  ],
  "wins": 2,
@@ -5026,7 +5030,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793352123.6345925,
+  "last_run": 1793352724.7406287,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -5036,11 +5040,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793352123.6370542,
-   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h -0.9%): no abro memecoins hasta que mejore."
+   "ts": 1793352724.7424524,
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h -1.1%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -3.2,
-  "sol_vs_ma20": -0.0687
+  "sol_ch24h": -3.4,
+  "sol_vs_ma20": -0.0709
  }
 }

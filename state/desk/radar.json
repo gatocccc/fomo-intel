@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793352800.376974,
+   "src": "decrypt",
+   "title": "Binance Finds 'Additional Points of Breach' in $6.3B Hack",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793351777.6119096,
    "src": "cointelegraph",
    "title": "Live updates: Binance uncovers more breach points in $6.3B hack",
@@ -58,34 +69,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793338246.45789,
-   "src": "tg:wublockchainenglish",
-   "title": "ZachXBT: Stolen Funds from the 6.3B Binance Exploit and 388M Bitget Exploit Commingled at Same Address, Suspected Same North Korea-Linked Attacker ZachXBT posted that stolen funds from the 6.3 billion",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793352576.0991566,
- "bear_score": 3,
+ "ts": 1793352890.9946127,
+ "bear_score": 6,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.891,
-   "ch15m": -0.0015868926786541948,
-   "ch1h": -0.0031277329080712235,
-   "ch4h": -0.011185157214732455
+   "px": 96.89,
+   "ch15m": -0.000804389076808909,
+   "ch1h": -0.0034968631080942725,
+   "ch4h": -0.012294079269287272
   },
   "BTC": {
-   "px": 77721.0,
-   "ch15m": -0.0003344180482848236,
-   "ch1h": -0.0031935359753751946,
-   "ch4h": -0.011786695148001236
+   "px": 77614.0,
+   "ch15m": -0.0010039643721361236,
+   "ch1h": -0.004999743602892126,
+   "ch4h": -0.013573625479779361
   }
  },
  "mode": "live",

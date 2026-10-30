@@ -1,14 +1,3 @@
-{"ts": 1793346633.2242146, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.273, "shock_px": 97.686, "ch1h": -0.009238134039519341, "ch4h": 0.0022461490907217385}
-{"ts": 1793346678.4079914, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.301, "shock_px": 97.686, "ch1h": -0.008952943573029226, "ch4h": 0.0025346453042089934}
-{"ts": 1793346678.4081676, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.301, "shock_px": 97.686, "ch1h": -0.008952943573029226, "ch4h": 0.0025346453042089934}
-{"ts": 1793346738.2572925, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.144, "shock_px": 97.686, "ch1h": -0.010552047260134478, "ch4h": 0.0009170058214413856}
-{"ts": 1793346738.2574956, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.144, "shock_px": 97.686, "ch1h": -0.010552047260134478, "ch4h": 0.0009170058214413856}
-{"ts": 1793346798.3509073, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.077, "shock_px": 97.686, "ch1h": -0.011234467304950146, "ch4h": 0.00022667559631117662}
-{"ts": 1793346798.351062, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.077, "shock_px": 97.686, "ch1h": -0.011234467304950146, "ch4h": 0.00022667559631117662}
-{"ts": 1793346858.4273098, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.046, "shock_px": 97.686, "ch1h": -0.011550213892849825, "ch4h": -9.273092576378428e-05}
-{"ts": 1793346858.4275808, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.046, "shock_px": 97.686, "ch1h": -0.011550213892849825, "ch4h": -9.273092576378428e-05}
-{"ts": 1793346933.4081843, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.997, "shock_px": 97.686, "ch1h": -0.012451639177356921, "ch4h": -0.0017803848924565768}
-{"ts": 1793346933.408397, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.997, "shock_px": 97.686, "ch1h": -0.012451639177356921, "ch4h": -0.0017803848924565768}
 {"ts": 1793346978.2139072, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.957, "shock_px": 97.686, "ch1h": -0.012858888210140584, "ch4h": -0.002192034578573754}
 {"ts": 1793346978.2140634, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.957, "shock_px": 97.686, "ch1h": -0.012858888210140584, "ch4h": -0.002192034578573754}
 {"ts": 1793347038.1628733, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.072, "shock_px": 97.686, "ch1h": -0.011688047240887789, "ch4h": -0.001008541730986967}
@@ -198,3 +187,14 @@
 {"ts": 1793352501.0007179, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.811, "shock_px": 97.686, "ch1h": -0.003950820515458475, "ch4h": -0.012001592047924614}
 {"ts": 1793352576.0994427, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.891, "shock_px": 97.686, "ch1h": -0.0031277329080712235, "ch4h": -0.011185157214732455}
 {"ts": 1793352576.099544, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.891, "shock_px": 97.686, "ch1h": -0.0031277329080712235, "ch4h": -0.011185157214732455}
+{"ts": 1793352620.9579802, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.862, "shock_px": 97.686, "ch1h": -0.0037848400699374007, "ch4h": -0.012579513945522813}
+{"ts": 1793352620.9581, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.862, "shock_px": 97.686, "ch1h": -0.0037848400699374007, "ch4h": -0.012579513945522813}
+{"ts": 1793352680.969851, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.789, "shock_px": 97.686, "ch1h": -0.004535637149028049, "ch4h": -0.013323682922851132}
+{"ts": 1793352680.9700415, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.789, "shock_px": 97.686, "ch1h": -0.004535637149028049, "ch4h": -0.013323682922851132}
+{"ts": 1793352741.0371852, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.791, "shock_px": 97.686, "ch1h": -0.004515067366039349, "ch4h": -0.01330329473169145}
+{"ts": 1793352741.0373867, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.791, "shock_px": 97.686, "ch1h": -0.004515067366039349, "ch4h": -0.01330329473169145}
+{"ts": 1793352800.376974, "kind": "event", "src": "decrypt", "title": "Binance Finds 'Additional Points of Breach' in $6.3B Hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
+{"ts": 1793352803.977174, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.735, "shock_px": 97.686, "ch1h": -0.005091021289725495, "ch4h": -0.013874164084162532}
+{"ts": 1793352803.9773023, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.735, "shock_px": 97.686, "ch1h": -0.005091021289725495, "ch4h": -0.013874164084162532}
+{"ts": 1793352890.9950225, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.89, "shock_px": 97.686, "ch1h": -0.0034968631080942725, "ch4h": -0.012294079269287272}
+{"ts": 1793352890.9951856, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.89, "shock_px": 97.686, "ch1h": -0.0034968631080942725, "ch4h": -0.012294079269287272}
