@@ -240,6 +240,18 @@
    "efficacy": "Story picks: 3/3 winners. Screener picks: 0/14, -14% average. The screener is now a veto, not a trigger.",
    "verdict": "adopted",
    "sleeve": "picks"
+  },
+  {
+   "date": "2026-10-29",
+   "name": "Flash-news meme (lab test #2, SAFU)",
+   "public_title": "Buy the leader of a breaking-news meme, sell the same day",
+   "question": "When a big story breaks, does the leading meme launched on it in the first 10-30 minutes pay for a same-day trade?",
+   "hypothesis": "Memes born from breaking news live for hours; picking the leader early and exiting within 6 hours catches the move.",
+   "method": "Live in the lab wallet, one trade: SAFU (Binance-outflow rumours, Oct 29), 0.0558 SOL, 40% stop, 6-hour time exit.",
+   "result": "The pool's liquidity went to zero within hours; every sale failed (no route) and the position was written off at zero on Oct 30: about -$5.4, -100%.",
+   "efficacy": "1 trade, 0 wins, -100%. The exit never existed: the stop and the time limit cannot save a token whose pool empties.",
+   "verdict": "rejected",
+   "sleeve": "lab"
   }
  ],
  "protocol": "Out-of-sample half held out, entries at next bar open, real costs (memes ~3% round trip, perps 0.12% + funding), random-entry control x20; adopt only if test mean > 0, t ≥ 2.5, beats random by ≥ 0.3%/trade, design half also positive. Risk/cost changes are judged on drawdown and realized cost, not on win rate.",

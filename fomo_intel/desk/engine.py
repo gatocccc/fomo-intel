@@ -210,6 +210,22 @@ class Desk:
         self.save()
         return T(f"vendió {frac:.0%} de {p['symbol']} ({why}) por {f.sol:.4f} SOL" + (" — posición cerrada" if closed else ""), f"sold {frac:.0%} of {p['symbol']} ({why}) for {f.sol:.4f} SOL" + (" — position closed" if closed else ""))
 
+    def writeoff(self, mint, why, did=None):
+        """30/10: da de baja una posición en un token muerto (sin liquidez, la venta falla y Jupiter cotiza ~0). Antes SAFU seguía en el
+        lab valuado al precio de entrada (~US$5) por horas: el patrimonio público mentía. Cierra a valor 0; los tokens quedan en la billetera."""
+        p = self.pos.get(mint)
+        if not p:
+            return "sin posición"
+        pnl_sol = p["sol_out"] - p["sol_in"]
+        append("trades.jsonl", {"ts": time.time(), "side": "writeoff", "mint": mint, "symbol": p["symbol"], "ok": True, "sol": 0.0, "tokens": p["tokens"],
+                                "price_usd": 0.0, "why": why, "sig": None, "error": "", "id": did})
+        append("closed.jsonl", {"ts": time.time(), "mint": mint, "symbol": p["symbol"], "sol_in": round(p["sol_in"], 5), "sol_out": round(p["sol_out"], 5),
+                                "pnl_sol": round(pnl_sol, 5), "pnl_usd": round(pnl_sol * self.sol_usd, 2), "ret": round(p["sol_out"] / p["sol_in"] - 1, 3) if p["sol_in"] else None,
+                                "peak_mult": round(p["peak_usd"] / p["entry_usd"], 2), "hold_h": round((time.time() - p["opened_ts"]) / 3600, 1), "why": why,
+                                "reason": p.get("reason"), "sleeve": p.get("sleeve")})
+        self.pos.pop(mint, None); self.save()
+        return T(f"dio de baja {p['symbol']} a valor 0 ({why})", f"wrote off {p['symbol']} at zero ({why})")
+
     def apply_decisions(self):
         # decisiones de Claude (repo) y del cerebro automático (state/<mesa>/auto, ver brain.py)
         files = sorted(DEC.glob("*.json")) if DEC.exists() else []
@@ -236,6 +252,7 @@ class Desk:
                                 if k in o: p[k] = o[k]
                             self.save(); r = f"ajustó {p['symbol']}: " + ", ".join(f"{k}={o[k]}" for k in o if k not in ("action", "mint"))
                         else: r = "sin posición"
+                    elif a == "writeoff": r = self.writeoff(o["mint"], o.get("why", "token muerto"), did)
                     elif a == "pause": (ST_DIR / "PAUSE").write_text(o.get("why", "")); r = "pausa"
                     elif a == "resume":
                         if (ST_DIR / "PAUSE").exists(): (ST_DIR / "PAUSE").unlink()
