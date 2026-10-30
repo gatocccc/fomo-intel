@@ -1,17 +1,17 @@
 {
- "now": 1793392492.1095233,
+ "now": 1793392775.4289496,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 2,
- "equity_usd": 57.14,
- "equity_sol": 0.6013,
+ "equity_usd": 57.09,
+ "equity_sol": 0.6018,
  "cash_sol": 0.2852,
  "positions_usd": 30.04,
- "sol_usd": 95.02,
- "mult": 1.032,
+ "sol_usd": 94.86,
+ "mult": 1.031,
  "halt": false,
  "pause": false,
  "positions": [
@@ -34,7 +34,7 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9996430694696746,
+   "last_usd": 0.9996027953971265,
    "mult": 0.982,
    "value_usd": 20.06
   },
@@ -43,11 +43,11 @@
    "symbol": "ETH short 1.69x",
    "opened_ts": 1793360616.3171363,
    "entry_usd": 2237.16,
-   "last_usd": 2239.95,
+   "last_usd": 2240.15,
    "peak_usd": 2237.16,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1052,
+   "sol_in": 0.1054,
    "sol_out": 0.0,
    "stop": null,
    "trail": null,
@@ -1705,6 +1705,10 @@
   ],
   [
    1793392492,
+   57.14
+  ],
+  [
+   1793392624,
    57.14
   ]
  ],

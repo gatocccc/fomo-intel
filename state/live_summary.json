@@ -1,5 +1,5 @@
 {
- "ts": 1793392500.1959426,
+ "ts": 1793392800.9448462,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-30",
-  "seen": 168,
+  "seen": 169,
   "bought": 0,
   "by_reason": {
-   "freno": 153,
+   "freno": 154,
    "en_banco": 13,
    "mcap_alto": 2
   },
@@ -43,11 +43,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.1131,
- "sol_usd": 94.87642447521176,
+ "sol_usd": 95.01426523027072,
  "stream_connected": true,
- "stream_msgs": 3687,
- "tokens_seen": 3504,
- "tokens_tracked": 65,
+ "stream_msgs": 3754,
+ "tokens_seen": 3566,
+ "tokens_tracked": 75,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -56,19 +56,21 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 2641420,
-  "parsed": 275,
-  "skipped": 2639633,
+  "notifications": 2683964,
+  "parsed": 277,
+  "skipped": 2682167,
   "fast_creates": 11,
   "subs": 1,
   "errors": [
-   "18:28:27 Connection to remote host was lost."
+   "18:28:27 Connection to remote host was lost.",
+   "20:37:20 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 60,
+ "follow_buys_seen": 61,
  "guard": {
   "alerts": [
-   "18:28:31 fuente de se\u00f1ales recuperada tras 3 s"
+   "18:28:31 fuente de se\u00f1ales recuperada tras 3 s",
+   "20:37:23 fuente de se\u00f1ales recuperada tras 2 s"
   ],
   "bench": 1,
   "bench_by_reason": {
@@ -77,7 +79,7 @@
   "source_down_s": 0,
   "exec_fails_recent": 0
  },
- "st_requests": 54,
+ "st_requests": 55,
  "stream_errors": [
   "18:06:27 Connection to remote host was lost.",
   "18:06:29 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Fri, 30 Oct 2026 18:06:29 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
@@ -85,7 +87,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 4,
-  "create": 3683
+  "create": 3750
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",

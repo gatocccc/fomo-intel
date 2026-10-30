@@ -1,0 +1,21 @@
+== 187_kols_verificar 2026-10-30T20:37:03Z ==
+active
+Oct 30 20:37:07 simplai-prod python3[2507793]: 2026-10-30 20:37:07,182 INFO kols: kols: escuchando 21 billeteras (k=4, ventana 60 min, US$5 por operación, modo live)
+Oct 30 20:37:07 simplai-prod python3[2507793]: 2026-10-30 20:37:07,332 INFO live.helius: helius conectado; suscribiendo 21 billeteras
+Oct 30 20:37:17 simplai-prod python3[2507793]: 2026-10-30 20:37:17,324 INFO live.helius: HELIUS 8deJ9x buy Hfw6pxQc 3.0315 SOL @ 3.302e-08 (lat 0.1s)
+Oct 30 20:37:17 simplai-prod python3[2507793]: 2026-10-30 20:37:17,865 INFO live.helius: HELIUS venta RÁPIDA 8deJ9x… Hfw6pxQc 3.075 SOL
+Oct 30 20:37:17 simplai-prod python3[2507793]: 2026-10-30 20:37:17,958 INFO live.helius: HELIUS 8deJ9x sell Hfw6pxQc 3.0048 SOL @ 3.273e-08 (lat 0.1s)
+Oct 30 20:37:59 simplai-prod python3[2507793]: 2026-10-30 20:37:59,514 INFO live.helius: HELIUS 8deJ9x buy HS8zQp25 5.0530 SOL @ 4.086e-07 (lat 0.9s)
+Oct 30 20:38:00 simplai-prod python3[2507793]: 2026-10-30 20:38:00,366 INFO live.helius: HELIUS venta RÁPIDA 8deJ9x… 3XLkRVg6 13363271595.623 SOL
+Oct 30 20:38:00 simplai-prod python3[2507793]: 2026-10-30 20:38:00,464 INFO live.helius: HELIUS 8deJ9x sell HS8zQp25 5.0826 SOL @ 4.110e-07 (lat 0.1s)
+Oct 30 20:38:08 simplai-prod python3[2507793]: 2026-10-30 20:38:08,020 INFO live.helius: HELIUS 8deJ9x buy UYV5Ciog 3.0315 SOL @ 3.895e-08 (lat 0.1s)
+Oct 30 20:39:02 simplai-prod python3[2507793]: 2026-10-30 20:39:02,065 INFO live.helius: HELIUS CE44oK buy F8hkhdWs 2.0032 SOL @ 3.102e-08 (lat 0.1s)
+Oct 30 20:39:17 simplai-prod python3[2507793]: 2026-10-30 20:39:17,828 INFO live.helius: HELIUS 8deJ9x buy UYV5Ciog 0.2525 SOL @ 4.073e-08 (lat 0.1s)
+Oct 30 20:39:19 simplai-prod python3[2507793]: 2026-10-30 20:39:19,487 INFO live.helius: HELIUS venta RÁPIDA 8deJ9x… UYV5Ciog 0.000 SOL
+Oct 30 20:39:19 simplai-prod python3[2507793]: 2026-10-30 20:39:19,578 INFO live.helius: HELIUS 8deJ9x sell UYV5Ciog 3.0222 SOL @ 3.596e-08 (lat 0.1s)
+--- state/desk/kols.json
+{'ts': 1793392746.076474, 'mode': 'live', 'k': 4, 'window_min': 60.0, 'size_usd': 5, 'wallets': 21, 'connected': True, 'notifications': 29, 'buys_seen': 4, 'errors': [], 'started': 1793392627.1803608, 'triggered': {}}
+hot []
+--- lab
+cash_sol 0.2852 equity 57.09
+== exit 0 ==
