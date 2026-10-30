@@ -200,106 +200,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:TreeNewsFeed",
-   "title": "*SEC POISED TO UNVEIL MAJOR CRYPTO PLANS AS CLARITY ACT STALLS: BBG",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "regulatory"
-   ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:TreeNewsFeed",
-   "title": "U.S. CPI: +3.4% YEAR-OVER-YEAR (EST. +3.4%) U.S. CORE CPI: +2.5% YEAR-OVER-YEAR (EST. +2.5%)",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "macro"
-   ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:TreeNewsFeed",
-   "title": "TRUMP: SEC CHAIR WORKING TO BRING HYPERLIQUID INTO US",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "regulatory"
-   ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:TreeNewsFeed",
-   "title": "U.S. CPI: +3.4% YEAR-OVER-YEAR (EST. +3.4%) U.S. CORE CPI: +2.4% YEAR-OVER-YEAR (EST. +2.4%)",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "macro"
-   ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:TreeNewsFeed",
-   "title": "BITGET CONFIRMS HACK WITH LOSSES APPROX. 350M, CLAIMS USER FUNDS ARE SAFE: BITGET CEO",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:TreeNewsFeed",
-   "title": "U.S. CPI: +3.7% YEAR-OVER-YEAR (EST. +3.6%) U.S. CORE CPI: +2.6% YEAR-OVER-YEAR (EST. +2.5%)",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "macro"
-   ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:TreeNewsFeed",
-   "title": "Potential Binance Hack Ongoing - Onchain",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:TreeNewsFeed",
-   "title": "TETHER FREEZES 971M USDT IN LIKELY BINANCE HACK, WITH NO UPDATE FROM BINANCE STILL",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793340887.9738681,
- "bear_score": 20,
- "bull_score": 1,
+ "ts": 1793341172.7177472,
+ "bear_score": 17,
+ "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 97.98,
-   "ch15m": 0.0003981989156738308,
-   "ch1h": 0.0025580681469354882,
-   "ch4h": 0.037736848237075904
+   "px": 98.285,
+   "ch15m": 0.004661194533318369,
+   "ch1h": 0.0043429388922950896,
+   "ch4h": 0.03821817528811522
   },
   "BTC": {
-   "px": 78608.0,
-   "ch15m": 0.001082485386447285,
-   "ch1h": 0.0009295218692302321,
-   "ch4h": 0.020591519306172312
+   "px": 78637.0,
+   "ch15m": 0.0013242840589307026,
+   "ch1h": 0.0007253754135911894,
+   "ch4h": 0.02021302819185511
   }
  },
  "mode": "live",
