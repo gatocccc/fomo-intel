@@ -1,16 +1,16 @@
 {
- "now": 1793361595.9829054,
+ "now": 1793361901.9146516,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 542.1,
- "equity_sol": 5.6244,
+ "equity_usd": 542.13,
+ "equity_sol": 5.6276,
  "cash_sol": 0.0843,
- "positions_usd": 533.98,
- "sol_usd": 96.38,
+ "positions_usd": 534.0,
+ "sol_usd": 96.33,
  "mult": 0.99,
  "halt": false,
  "pause": false,
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9996148727655702,
+   "last_usd": 0.9996656105146348,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 533.98
+   "value_usd": 534.0
   }
  ],
  "perps_pnl_usd": 0,
@@ -2144,6 +2144,10 @@
   [
    1793361511,
    542.12
+  ],
+  [
+   1793361818,
+   542.11
   ]
  ],
  "closed": [
@@ -2932,6 +2936,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793361802.4715126,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-1203"
+  },
   {
    "ts": 1793361189.3710818,
    "title": "Automatic brain: status",
@@ -4326,14 +4337,6 @@
    "kind": "decisión",
    "id": "auto-agresivo-note-20261029-0058",
    "from_plan": "agresivo"
-  },
-  {
-   "ts": 1793235354.363192,
-   "title": "Automatic exit",
-   "text": "STONKLANA: sold 100% of STONKLANA (stop (0.73x)) for 0.4158 SOL — position closed",
-   "kind": "automatic",
-   "id": null,
-   "from_plan": "agresivo"
   }
  ],
  "wins": 1,
@@ -4343,7 +4346,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793361183.7126086,
+  "last_run": 1793361785.3571632,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4353,11 +4356,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793361183.7157128,
+   "ts": 1793361788.60739,
    "text": "[Picks] Idle cash (100%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves."
   },
-  "trad_status": "3 of 21 established memecoins above their 20-day average (best: SAPLING +106%, STONK +7%, OTC +2%)",
-  "sol_ch24h": -3.7,
-  "sol_vs_ma20": -0.0724
+  "trad_status": "SOL -7.5%, BTC -5.3%, ETH -7.3%, JUP -16.6%",
+  "sol_ch24h": -4.0,
+  "sol_vs_ma20": -0.0746
  }
 }

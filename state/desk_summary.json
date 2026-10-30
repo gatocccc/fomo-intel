@@ -1,5 +1,5 @@
 {
- "now": 1793361595.4462929,
+ "now": 1793361901.4724116,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
@@ -7,10 +7,10 @@
  "days": 14,
  "day": 3,
  "equity_usd": 166.74,
- "equity_sol": 1.73,
+ "equity_sol": 1.7309,
  "cash_sol": 0.1009,
- "positions_usd": 157.02,
- "sol_usd": 96.38,
+ "positions_usd": 157.03,
+ "sol_usd": 96.33,
  "mult": 1.683,
  "halt": false,
  "pause": false,
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9996148727655702,
+   "last_usd": 0.9996656105146348,
    "mult": 0.991,
-   "value_usd": 157.02
+   "value_usd": 157.03
   }
  ],
  "perps_pnl_usd": 0,
@@ -3337,6 +3337,10 @@
   [
    1793361511,
    166.74
+  ],
+  [
+   1793361817,
+   166.74
   ]
  ],
  "closed": [
@@ -3718,6 +3722,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793361802.0987585,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-1203"
+  },
   {
    "ts": 1793361188.7054763,
    "title": "Cerebro automático: estado",
@@ -5110,13 +5121,6 @@
    "text": "GTA6: llegó a 2.48x de pico; subo el stop a 1.86x (antes 1.84x).",
    "kind": "decisión",
    "id": "auto-mesa-20261029-0232"
-  },
-  {
-   "ts": 1793239141.3762717,
-   "title": "Salida automática",
-   "text": "SAPLING: vendió 100% de SAPLING (stop (0.70x)) por 0.1888 SOL — posición cerrada",
-   "kind": "automático",
-   "id": null
   }
  ],
  "wins": 2,
@@ -5126,7 +5130,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793361183.7072732,
+  "last_run": 1793361785.3545032,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -5136,11 +5140,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793361183.7091486,
+   "ts": 1793361785.3554566,
    "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -3.7,
-  "sol_vs_ma20": -0.0724
+  "sol_ch24h": -4.0,
+  "sol_vs_ma20": -0.0746
  }
 }
