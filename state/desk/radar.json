@@ -91,45 +91,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793335592.205787,
-   "src": "cointelegraph",
-   "title": "Live updates: Binance eyes withdrawal restart within 48 hours after $6.3B hack",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793335532.199078,
-   "src": "tg:wublockchainenglish",
-   "title": "Spot Bitcoin ETFs Record 17.07 Million in Net Inflows; Spot Ethereum ETFs See 105 Million in Net Outflows On October 29 (ET), spot Bitcoin ETFs recorded total net inflows of 17.0719 million, their fou",
-   "sev": 1,
-   "dir": 1,
-   "types": [
-    "bullish",
-    "exchange_risk"
-   ]
   }
  ],
- "ts": 1793349858.4926581,
+ "ts": 1793350158.8692954,
  "bear_score": 3,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 97.089,
-   "ch15m": -0.0010905910797880392,
-   "ch1h": -0.0010494798901132807,
-   "ch4h": -0.00143989961842661
+   "px": 97.007,
+   "ch15m": -0.00229353080325001,
+   "ch1h": -0.001502784268113233,
+   "ch4h": -0.003164979705081339
   },
   "BTC": {
-   "px": 77920.0,
-   "ch15m": -0.0006412722842118468,
-   "ch1h": -0.0014609016582515233,
-   "ch4h": -0.004637022086532161
+   "px": 77864.0,
+   "ch15m": -0.0017947797548844013,
+   "ch1h": -0.0032770097286226596,
+   "ch4h": -0.0064438744911891055
   }
  },
  "mode": "live",
