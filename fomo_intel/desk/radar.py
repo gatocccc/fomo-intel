@@ -262,8 +262,8 @@ THESIS_ACTIONS = {
 ENTITY_RX = r"\b(binance|coinbase|okx|bybit|kraken|bitget|htx|kucoin|gate\.io|tether|usdt|circle|usdc|polymarket|hyperliquid|solana|ethereum|bitcoin|sec|cftc|fed)\b"
 
 
-def make_thesis(sh):
-    heads = sh.get("headlines", [])[:4]
+def make_thesis(sh, extra_titles=()):
+    heads = list(sh.get("headlines", [])[:4]) + list(extra_titles)
     ents = sorted({m for h in heads for m in re.findall(ENTITY_RX, h.lower())}) or ["binance", "solana"]
     return {"claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: " + " | ".join(heads[:2]),
             "entities": ents, "state": "confirmed" if sh.get("confirmed") else "open", "evidence": [], "rules": {}}
@@ -447,7 +447,8 @@ class Radar:
         p = leg["pos"]
         if p:   # gestionar
             if not p.get("thesis"):   # posiciones abiertas antes de la tesis viva: se les adosa una y se evalúan los titulares recientes
-                p["thesis"] = make_thesis(sh or self.state.get("last_shock") or {"headlines": p.get("headlines", [])})
+                strong = [e["title"] for e in self.recent(6 * 60) if e["cls"]["dir"] < 0 and e["cls"]["sev"] >= 2]
+                p["thesis"] = make_thesis(sh or self.state.get("last_shock") or {"headlines": p.get("headlines", [])}, strong)
                 for e in sorted(self.recent(6 * 60), key=lambda x: x["ts"]):
                     self.judge(leg, e, sol, backfill=True)
             R = {**RULES, **(p["thesis"].get("rules") or {})}
@@ -490,7 +491,10 @@ class Radar:
         if not p or not p.get("thesis") or not e.get("cls"):
             return None
         th = p["thesis"]; title = e["title"]
-        if not re.search(r"\b(" + "|".join(re.escape(x) for x in th["entities"]) + r")\b", title.lower()):
+        # Relevante si nombra a una entidad de la tesis o si es una noticia fuerte de la misma familia (hack / riesgo de exchange /
+        # contagio): la tesis es "shock por noticias", y el desmentido o la cobertura pueden venir en un titular sin la entidad exacta.
+        same_family = e["cls"]["sev"] >= 2 and bool(set(e["cls"].get("types", [])) & {"hack", "exchange_risk", "contagion"})
+        if not same_family and not re.search(r"\b(" + "|".join(re.escape(x) for x in th["entities"]) + r")\b", title.lower()):
             return None
         if any(ev.get("title") == title for ev in th["evidence"]):
             return None
@@ -549,7 +553,7 @@ class Radar:
         R = RULES; now = time.time()
         rec = {"ts": now, "leg": leg["name"], "plan": leg["plan"], "symbol": "SOL", "side": "short", "entry": sol, "collateral_usd": round(coll, 2), "lev": R["lev"], "size_usd": round(coll * R["lev"], 2),
                "mode": self.mode, "why": sh["why"] + (" + confirmed major news" if sh.get("confirmed") else ""), "headlines": sh.get("headlines", [])[:3], "pubkey": None, "sig": None, "best_ret": 0.0,
-               "thesis": make_thesis(sh)}
+               "thesis": make_thesis(sh, [e["title"] for e in self.recent(RULES["window_min"]) if e["cls"]["dir"] < 0 and e["cls"]["sev"] >= 2])}
         if self.mode == "live":
             try:
                 r = self.perps(leg).open("SOL", "short", coll, R["lev"], dry=False)
@@ -629,6 +633,16 @@ class Radar:
 def main():
     from ..live.bot import load_dotenv
     load_dotenv()
+    # 30/10: el servicio corría sin clave del modelo (systemd dejaba ANTHROPIC_API_KEY vacía y load_dotenv no pisa variables ya definidas):
+    # si una variable del .env está vacía en el entorno, se toma del archivo.
+    try:
+        for line in Path(".env").read_text().splitlines():
+            if "=" in line and not line.strip().startswith("#"):
+                k, v = line.split("=", 1); k = k.strip().removeprefix("export ").strip()
+                if k and not os.environ.get(k):
+                    os.environ[k] = v.strip().strip('"').strip("'")
+    except Exception:  # noqa: BLE001
+        pass
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     Radar().run(once="--once" in sys.argv)
 
