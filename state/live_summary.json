@@ -1,5 +1,5 @@
 {
- "ts": 1793367299.7200978,
+ "ts": 1793368188.5327966,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -43,17 +43,17 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.1009,
- "sol_usd": 95.38045296071516,
+ "sol_usd": 94.8948439556596,
  "stream_connected": true,
- "stream_msgs": 828,
- "tokens_seen": 806,
- "tokens_tracked": 76,
+ "stream_msgs": 933,
+ "tokens_seen": 907,
+ "tokens_tracked": 62,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
  "factories": 0,
  "factory_pending": 0,
- "account_trades": 0,
+ "account_trades": 1,
  "helius": {
   "connected": false,
   "notifications": 0,
@@ -62,9 +62,9 @@
   "fast_creates": 0,
   "subs": 0,
   "errors": [
-   "13:32:12 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:32:12 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
-   "13:33:13 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:33:13 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
-   "13:34:13 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:34:13 GMT', 'content-type': 'application/json', 'content-length': '71', 'co"
+   "13:47:13 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:47:13 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
+   "13:48:13 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:48:13 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
+   "13:49:14 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:49:14 GMT', 'content-type': 'application/json', 'content-length': '71', 'co"
   ]
  },
  "follow_buys_seen": 0,
@@ -74,21 +74,22 @@
   "bench_by_reason": {
    "mcap_alto": 1
   },
-  "source_down_s": 6708,
+  "source_down_s": 7597,
   "exec_fails_recent": 0
  },
- "st_requests": 22,
+ "st_requests": 25,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 2,
-  "create": 826
+  "create": 930,
+  "buy": 1
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
- "stream_trades": 0,
+ "stream_trades": 1,
  "stream_cost_sol_est": 0.0,
  "pumpportal_wallet_sol": 0.0999,
  "params": {

@@ -1,5 +1,19 @@
 {
- "shock": null,
+ "shock": {
+  "since": 1793367920.8620214,
+  "bear_score": 16,
+  "sol_px": 95.129,
+  "btc_px": 76966.0,
+  "headlines": [
+   "Binance hit by $6.3B hack, the largest in cryptocurrency history",
+   "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+   "Morning Minute: Binance’s $6.4B Hack Overshadows Hyperliquid’s Biggest Day",
+   "Binance says it holds $5B in matching tokens to cover hack losses"
+  ],
+  "confirmed": true,
+  "why": "bearish news score 16 in 90 min; SOL 1h -1.7%, 4h -1.8%; BTC 1h -0.6%",
+  "last_conf_ts": 1793368178.6023555
+ },
  "events": [
   {
    "ts": 1793366225.5122616,
@@ -156,43 +170,499 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793352980.3201873,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: Binance founder CZ tells Elon Musk to please stop trolling following major hack. Show a little support. @WatcherGuru",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793367246.612225,
- "bear_score": 16,
+ "ts": 1793368178.6023555,
+ "bear_score": 13,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.662,
-   "ch15m": -0.005933515530015643,
-   "ch1h": -0.010253173724561027,
-   "ch4h": -0.012969593165426674
+   "px": 94.968,
+   "ch15m": -0.008457056944183416,
+   "ch1h": -0.018509906055250602,
+   "ch4h": -0.020089769385544076
   },
   "BTC": {
-   "px": 77175.0,
-   "ch15m": -0.0011518948022365416,
-   "ch1h": -0.003319041223266872,
-   "ch4h": -0.005489619979124005
+   "px": 76815.0,
+   "ch15m": -0.005193224202237889,
+   "ch1h": -0.008314075833666834,
+   "ch4h": -0.010766120204504737
   }
  },
  "mode": "live",
- "position": null,
- "positions": {
-  "lab": null,
-  "book": null
+ "position": {
+  "ts": 1793367920.8645487,
+  "leg": "lab",
+  "plan": "lab",
+  "symbol": "SOL",
+  "side": "short",
+  "entry": 94.98,
+  "collateral_usd": 20.06,
+  "lev": 2.0,
+  "size_usd": 40.12,
+  "mode": "live",
+  "why": "bearish news score 16 in 90 min; SOL 1h -1.7%, 4h -1.8%; BTC 1h -0.6% + confirmed major news",
+  "headlines": [
+   "Binance hit by $6.3B hack, the largest in cryptocurrency history",
+   "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+   "Morning Minute: Binance’s $6.4B Hack Overshadows Hyperliquid’s Biggest Day"
+  ],
+  "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
+  "sig": "37pzA2qz9v7nFQfz5MLhMS4SoAfsasJmQTBniipFAS6Y7Yr7fih9Fi8dtTDH3ijqpJmnwpWqHLZAMm1iUWACVpgh",
+  "best_ret": 0.002210991787744865,
+  "thesis": {
+   "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Binance hit by $6.3B hack, the largest in cryptocurrency history | TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+   "entities": [
+    "binance",
+    "bitcoin",
+    "hyperliquid"
+   ],
+   "state": "mixed",
+   "evidence": [
+    {
+     "ts": 1793367953.6444697,
+     "title": "JUST IN: CZ says Binance may use its over 1 billion stake in Elon Musk s SpaceX SPCX to cover losses following major hack. @WatcherGuru",
+     "src": "tg:WatcherGuru",
+     "verdict": "backstop",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6458604,
+     "title": "Binance Reserves Over 6.34B in Company Funds to Cover Hack Losses, Including 5B in Affected Tokens Binance said it has reserved over 6.34 billion in company funds to cover losses from the hack, includ",
+     "src": "tg:wublockchainenglish",
+     "verdict": "backstop",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6466322,
+     "title": "JUST IN: Binance reserves over 6.34 billion of company funds to cover losses from the hack. @WatcherGuru",
+     "src": "tg:WatcherGuru",
+     "verdict": "backstop",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6474206,
+     "title": "Live updates: Binance says $6.34B set aside to cover hack losses",
+     "src": "cointelegraph",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6486976,
+     "title": "JUST IN: 🇺🇸 Binance says it is working with the FBI and US Secret Service following 6.3 billion crypto hack. @WatcherGuru",
+     "src": "tg:WatcherGuru",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6495976,
+     "title": "Binance says it holds $5B in matching tokens to cover hack losses",
+     "src": "cointelegraph",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6502461,
+     "title": "Binance says it has $6.34 billion ready to cover hack losses",
+     "src": "theblock",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    }
+   ],
+   "rules": {
+    "stop_up": 0.025,
+    "max_h": 6,
+    "trail_gap": 0.015,
+    "breakeven_if_ret": 0.01,
+    "trail_arm": 0.02
+   }
+  },
+  "mark": 94.968,
+  "ret_px": 0.0001,
+  "pnl_usd_est": 0.01,
+  "age_h": 0.07,
+  "stop_px": 97.35,
+  "rules": {
+   "stop_up": 0.025,
+   "trail_arm": 0.02,
+   "trail_gap": 0.015,
+   "tp_down": 0.12,
+   "max_h": 6
+  }
  },
- "theses": {},
+ "positions": {
+  "lab": {
+   "ts": 1793367920.8645487,
+   "leg": "lab",
+   "plan": "lab",
+   "symbol": "SOL",
+   "side": "short",
+   "entry": 94.98,
+   "collateral_usd": 20.06,
+   "lev": 2.0,
+   "size_usd": 40.12,
+   "mode": "live",
+   "why": "bearish news score 16 in 90 min; SOL 1h -1.7%, 4h -1.8%; BTC 1h -0.6% + confirmed major news",
+   "headlines": [
+    "Binance hit by $6.3B hack, the largest in cryptocurrency history",
+    "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+    "Morning Minute: Binance’s $6.4B Hack Overshadows Hyperliquid’s Biggest Day"
+   ],
+   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
+   "sig": "37pzA2qz9v7nFQfz5MLhMS4SoAfsasJmQTBniipFAS6Y7Yr7fih9Fi8dtTDH3ijqpJmnwpWqHLZAMm1iUWACVpgh",
+   "best_ret": 0.002210991787744865,
+   "thesis": {
+    "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Binance hit by $6.3B hack, the largest in cryptocurrency history | TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+    "entities": [
+     "binance",
+     "bitcoin",
+     "hyperliquid"
+    ],
+    "state": "mixed",
+    "evidence": [
+     {
+      "ts": 1793367953.6444697,
+      "title": "JUST IN: CZ says Binance may use its over 1 billion stake in Elon Musk s SpaceX SPCX to cover losses following major hack. @WatcherGuru",
+      "src": "tg:WatcherGuru",
+      "verdict": "backstop",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367953.6458604,
+      "title": "Binance Reserves Over 6.34B in Company Funds to Cover Hack Losses, Including 5B in Affected Tokens Binance said it has reserved over 6.34 billion in company funds to cover losses from the hack, includ",
+      "src": "tg:wublockchainenglish",
+      "verdict": "backstop",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367953.6466322,
+      "title": "JUST IN: Binance reserves over 6.34 billion of company funds to cover losses from the hack. @WatcherGuru",
+      "src": "tg:WatcherGuru",
+      "verdict": "backstop",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367953.6474206,
+      "title": "Live updates: Binance says $6.34B set aside to cover hack losses",
+      "src": "cointelegraph",
+      "verdict": "confirmed",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367953.6486976,
+      "title": "JUST IN: 🇺🇸 Binance says it is working with the FBI and US Secret Service following 6.3 billion crypto hack. @WatcherGuru",
+      "src": "tg:WatcherGuru",
+      "verdict": "confirmed",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367953.6495976,
+      "title": "Binance says it holds $5B in matching tokens to cover hack losses",
+      "src": "cointelegraph",
+      "verdict": "confirmed",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367953.6502461,
+      "title": "Binance says it has $6.34 billion ready to cover hack losses",
+      "src": "theblock",
+      "verdict": "confirmed",
+      "fact": "",
+      "by": "kw"
+     }
+    ],
+    "rules": {
+     "stop_up": 0.025,
+     "max_h": 6,
+     "trail_gap": 0.015,
+     "breakeven_if_ret": 0.01,
+     "trail_arm": 0.02
+    }
+   },
+   "mark": 94.968,
+   "ret_px": 0.0001,
+   "pnl_usd_est": 0.01,
+   "age_h": 0.07,
+   "stop_px": 97.35,
+   "rules": {
+    "stop_up": 0.025,
+    "trail_arm": 0.02,
+    "trail_gap": 0.015,
+    "tp_down": 0.12,
+    "max_h": 6
+   }
+  },
+  "book": {
+   "ts": 1793367953.6543465,
+   "leg": "book",
+   "plan": "lloyd",
+   "symbol": "SOL",
+   "side": "short",
+   "entry": 94.84,
+   "collateral_usd": 81.29,
+   "lev": 2.0,
+   "size_usd": 162.57,
+   "mode": "live",
+   "why": "bearish news score 16 in 90 min; SOL 1h -1.7%, 4h -1.8%; BTC 1h -0.6% + confirmed major news",
+   "headlines": [
+    "Binance hit by $6.3B hack, the largest in cryptocurrency history",
+    "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+    "Morning Minute: Binance’s $6.4B Hack Overshadows Hyperliquid’s Biggest Day"
+   ],
+   "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
+   "sig": "35yonov4kU1cJbPGxuZGsXkr3kMwXSksz8Qw4bp5B5QVpA8mwYvunUUbjcv2reJcPzkspDRq3QfAPdtfUgMEReRJ",
+   "best_ret": 0.000738085196119842,
+   "thesis": {
+    "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Binance hit by $6.3B hack, the largest in cryptocurrency history | TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+    "entities": [
+     "binance",
+     "bitcoin",
+     "hyperliquid"
+    ],
+    "state": "mixed",
+    "evidence": [
+     {
+      "ts": 1793367986.051726,
+      "title": "JUST IN: CZ says Binance may use its over 1 billion stake in Elon Musk s SpaceX SPCX to cover losses following major hack. @WatcherGuru",
+      "src": "tg:WatcherGuru",
+      "verdict": "backstop",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367986.0531754,
+      "title": "Binance Reserves Over 6.34B in Company Funds to Cover Hack Losses, Including 5B in Affected Tokens Binance said it has reserved over 6.34 billion in company funds to cover losses from the hack, includ",
+      "src": "tg:wublockchainenglish",
+      "verdict": "backstop",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367986.053837,
+      "title": "JUST IN: Binance reserves over 6.34 billion of company funds to cover losses from the hack. @WatcherGuru",
+      "src": "tg:WatcherGuru",
+      "verdict": "backstop",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367986.0545154,
+      "title": "Live updates: Binance says $6.34B set aside to cover hack losses",
+      "src": "cointelegraph",
+      "verdict": "confirmed",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367986.0558467,
+      "title": "JUST IN: 🇺🇸 Binance says it is working with the FBI and US Secret Service following 6.3 billion crypto hack. @WatcherGuru",
+      "src": "tg:WatcherGuru",
+      "verdict": "confirmed",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367986.0567079,
+      "title": "Binance says it holds $5B in matching tokens to cover hack losses",
+      "src": "cointelegraph",
+      "verdict": "confirmed",
+      "fact": "",
+      "by": "kw"
+     },
+     {
+      "ts": 1793367986.0573854,
+      "title": "Binance says it has $6.34 billion ready to cover hack losses",
+      "src": "theblock",
+      "verdict": "confirmed",
+      "fact": "",
+      "by": "kw"
+     }
+    ],
+    "rules": {
+     "stop_up": 0.025,
+     "max_h": 6,
+     "trail_gap": 0.015,
+     "breakeven_if_ret": 0.01,
+     "trail_arm": 0.02
+    }
+   },
+   "mark": 94.968,
+   "ret_px": -0.0013,
+   "pnl_usd_est": -0.22,
+   "age_h": 0.06,
+   "stop_px": 97.21,
+   "rules": {
+    "stop_up": 0.025,
+    "trail_arm": 0.02,
+    "trail_gap": 0.015,
+    "tp_down": 0.12,
+    "max_h": 6
+   }
+  }
+ },
+ "theses": {
+  "lab": {
+   "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Binance hit by $6.3B hack, the largest in cryptocurrency history | TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+   "entities": [
+    "binance",
+    "bitcoin",
+    "hyperliquid"
+   ],
+   "state": "mixed",
+   "evidence": [
+    {
+     "ts": 1793367953.6444697,
+     "title": "JUST IN: CZ says Binance may use its over 1 billion stake in Elon Musk s SpaceX SPCX to cover losses following major hack. @WatcherGuru",
+     "src": "tg:WatcherGuru",
+     "verdict": "backstop",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6458604,
+     "title": "Binance Reserves Over 6.34B in Company Funds to Cover Hack Losses, Including 5B in Affected Tokens Binance said it has reserved over 6.34 billion in company funds to cover losses from the hack, includ",
+     "src": "tg:wublockchainenglish",
+     "verdict": "backstop",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6466322,
+     "title": "JUST IN: Binance reserves over 6.34 billion of company funds to cover losses from the hack. @WatcherGuru",
+     "src": "tg:WatcherGuru",
+     "verdict": "backstop",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6474206,
+     "title": "Live updates: Binance says $6.34B set aside to cover hack losses",
+     "src": "cointelegraph",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6486976,
+     "title": "JUST IN: 🇺🇸 Binance says it is working with the FBI and US Secret Service following 6.3 billion crypto hack. @WatcherGuru",
+     "src": "tg:WatcherGuru",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6495976,
+     "title": "Binance says it holds $5B in matching tokens to cover hack losses",
+     "src": "cointelegraph",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367953.6502461,
+     "title": "Binance says it has $6.34 billion ready to cover hack losses",
+     "src": "theblock",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    }
+   ],
+   "rules": {
+    "stop_up": 0.025,
+    "max_h": 6,
+    "trail_gap": 0.015,
+    "breakeven_if_ret": 0.01,
+    "trail_arm": 0.02
+   }
+  },
+  "book": {
+   "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Binance hit by $6.3B hack, the largest in cryptocurrency history | TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+   "entities": [
+    "binance",
+    "bitcoin",
+    "hyperliquid"
+   ],
+   "state": "mixed",
+   "evidence": [
+    {
+     "ts": 1793367986.051726,
+     "title": "JUST IN: CZ says Binance may use its over 1 billion stake in Elon Musk s SpaceX SPCX to cover losses following major hack. @WatcherGuru",
+     "src": "tg:WatcherGuru",
+     "verdict": "backstop",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367986.0531754,
+     "title": "Binance Reserves Over 6.34B in Company Funds to Cover Hack Losses, Including 5B in Affected Tokens Binance said it has reserved over 6.34 billion in company funds to cover losses from the hack, includ",
+     "src": "tg:wublockchainenglish",
+     "verdict": "backstop",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367986.053837,
+     "title": "JUST IN: Binance reserves over 6.34 billion of company funds to cover losses from the hack. @WatcherGuru",
+     "src": "tg:WatcherGuru",
+     "verdict": "backstop",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367986.0545154,
+     "title": "Live updates: Binance says $6.34B set aside to cover hack losses",
+     "src": "cointelegraph",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367986.0558467,
+     "title": "JUST IN: 🇺🇸 Binance says it is working with the FBI and US Secret Service following 6.3 billion crypto hack. @WatcherGuru",
+     "src": "tg:WatcherGuru",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367986.0567079,
+     "title": "Binance says it holds $5B in matching tokens to cover hack losses",
+     "src": "cointelegraph",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    },
+    {
+     "ts": 1793367986.0573854,
+     "title": "Binance says it has $6.34 billion ready to cover hack losses",
+     "src": "theblock",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
+    }
+   ],
+   "rules": {
+    "stop_up": 0.025,
+    "max_h": 6,
+    "trail_gap": 0.015,
+    "breakeven_if_ret": 0.01,
+    "trail_arm": 0.02
+   }
+  }
+ },
  "llm": {
   "key": true,
   "last_error": null
@@ -208,7 +678,7 @@
   "tg:wublockchainenglish",
   "theblock"
  ],
- "_skip_note": "stale:book",
+ "_skip_note": null,
  "last_shock": {
   "since": 1793308697.289756,
   "bear_score": 9,

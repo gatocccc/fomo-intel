@@ -1,17 +1,17 @@
 {
- "now": 1793367301.0232644,
+ "now": 1793368167.3562808,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 541.84,
- "equity_sol": 5.6793,
+ "equity_usd": 542.24,
+ "equity_sol": 5.7237,
  "cash_sol": 0.0826,
- "positions_usd": 533.96,
- "sol_usd": 95.41,
- "mult": 0.989,
+ "positions_usd": 534.41,
+ "sol_usd": 94.74,
+ "mult": 0.99,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,14 +32,42 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.999510966063242,
+   "last_usd": 0.9995741988695988,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 533.92
+   "value_usd": 452.66
+  },
+  {
+   "mint": "perps:7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
+   "symbol": "SOL short 2x",
+   "opened_ts": 1793367953.6543465,
+   "entry_usd": 94.84,
+   "last_usd": 94.77,
+   "peak_usd": 94.77,
+   "tokens": 0,
+   "tokens_initial": 0,
+   "sol_in": 0.8581,
+   "sol_out": 0.0,
+   "stop": 0.035,
+   "trail": 0.02,
+   "trail_after": 1.04,
+   "tp": [],
+   "tp_done": [],
+   "thesis": "News-shock SOL short (radar). $81 collateral at 2x; stop if SOL rises 3.5%; trails 2% from its best once up 4%.",
+   "id": "radar-book",
+   "sleeve": "majors",
+   "reason": "news_shock_short",
+   "brain": false,
+   "perps": true,
+   "mult": 1.001,
+   "value_usd": 81.4,
+   "pnl_usd": 0.11,
+   "collateral_usd": 81.29,
+   "side": "short"
   }
  ],
- "perps_pnl_usd": 0,
+ "perps_pnl_usd": 0.11,
  "equity": [
   [
    1793203600,
@@ -2220,6 +2248,22 @@
   [
    1793367099,
    541.88
+  ],
+  [
+   1793367408,
+   541.94
+  ],
+  [
+   1793367432,
+   541.85
+  ],
+  [
+   1793367738,
+   541.88
+  ],
+  [
+   1793368045,
+   541.44
   ]
  ],
  "closed": [
@@ -3008,6 +3052,34 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793368029.588953,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-1347"
+  },
+  {
+   "ts": 1793367991.517733,
+   "title": "Radar: SOL short opened",
+   "text": "Confirmed news shock with price confirmation (bearish news score 16 in 90 min; SOL 1h -1.7%, 4h -1.8%; BTC 1h -0.6%). Lloyd opens a SOL short on Jupiter Perps: $81 collateral at 2x ($163 notional), entry $94.84. Exit: stop if SOL rises 3.5%; once the short is up 4% it trails 2% from its best; take profit at −12%; or 12h. Risk if stopped: about $5.7. Against: a denial or an exchange backstop can squeeze shorts fast; the stop is tight for that reason.",
+   "kind": "decisión",
+   "id": "auto-plan_lloyd-radar-20261030-134626"
+  },
+  {
+   "ts": 1793367929.694465,
+   "title": "Radar: market shock detected",
+   "text": "Lloyd's news radar sees a bearish shock: bearish news score 16 in 90 min; SOL 1h -1.7%, 4h -1.8%; BTC 1h -0.6%. Headlines: Binance hit by $6.3B hack, the largest in cryptocurrency history | TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor | Morning Minute: Binance’s $6.4B Hack Overshadows Hyperliquid’s Biggest Day | Binance says it holds $5B in matching tokens to cover hack losses. The book goes defensive (no new memecoins) while it lasts and looks for a small SOL short.",
+   "kind": "decisión",
+   "id": "auto-plan_lloyd-radar-20261030-134520"
+  },
+  {
+   "ts": 1793367431.5932224,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-1337"
+  },
   {
    "ts": 1793367084.0857666,
    "title": "Automatic brain: status",
@@ -4378,34 +4450,6 @@
    "text": "GTA6: peaked at 1.72x; stop raised to 1.29x (was 1.24x).",
    "kind": "decisión",
    "id": "auto-lloyd-20261029-0528"
-  },
-  {
-   "ts": 1793250494.4038708,
-   "title": "Automatic brain: status",
-   "text": "[Established] Holding mostly USDC on purpose: 2 of 18 established memecoins above their 20-day average (best: SPX +6%, STONK +8%). This plan buys established memecoins only when they are trending up; today most are falling, and USDC has protected the balance. Checked every hour.",
-   "kind": "decisión",
-   "id": "auto-lloyd-note-20261029-0508"
-  },
-  {
-   "ts": 1793249287.265082,
-   "title": "Execution",
-   "text": "set 4kjruq: ajustó GTA6: stop=-0.24",
-   "kind": "execution",
-   "id": "auto-lloyd-20261029-0448"
-  },
-  {
-   "ts": 1793249287.2649477,
-   "title": "Automatic brain: stops raised",
-   "text": "GTA6: peaked at 1.65x; stop raised to 1.24x (was 1.05x).",
-   "kind": "decisión",
-   "id": "auto-lloyd-20261029-0448"
-  },
-  {
-   "ts": 1793243967.0232437,
-   "title": "Execution",
-   "text": "sell EPjFWd: sold 1% of USDC (treasury: fund buys) for 0.0350 SOL\nbuy DOPE: bought 4,903 DOPE for 0.1004 SOL at $0.00204226 (slippage +5.7%)",
-   "kind": "execution",
-   "id": "auto-lloyd-20261029-0319"
   }
  ],
  "wins": 1,
@@ -4415,7 +4459,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793367065.7979171,
+  "last_run": 1793368023.5823524,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4425,11 +4469,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793367065.8012948,
+   "ts": 1793368023.5844898,
    "text": "[Picks] Idle cash (100%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves."
   },
   "trad_status": "SOL -7.3%, BTC -5.4%, ETH -7.5%, JUP -16.5%",
   "sol_ch24h": -4.8,
-  "sol_vs_ma20": -0.0806
+  "sol_vs_ma20": -0.0809
  }
 }
