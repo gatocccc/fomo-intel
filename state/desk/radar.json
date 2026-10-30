@@ -124,33 +124,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793330720.497043,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: Elon Musk says super intelligence AI agents will eventually hack financial systems to obtain money for themselves, not humans. @WatcherGuru",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "hack"
-   ]
   }
  ],
- "ts": 1793345058.2169294,
- "bear_score": 6,
+ "ts": 1793345358.3019743,
+ "bear_score": 3,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 97.929,
-   "ch15m": -0.00047970931656726723,
-   "ch1h": -0.0017838212509173612,
-   "ch4h": 0.02067851373182572
+   "px": 97.914,
+   "ch15m": 0.0004597983018115315,
+   "ch1h": -0.0038963549243618,
+   "ch4h": 0.018356925189029427
   },
   "BTC": {
-   "px": 78450.0,
-   "ch15m": -0.00036952560557601544,
-   "ch1h": -0.0015018837185623024,
-   "ch4h": 0.012258064516128986
+   "px": 78420.0,
+   "ch15m": 0.0007401546668028836,
+   "ch1h": -0.003114472764253473,
+   "ch4h": 0.010358688930117488
   }
  },
  "mode": "live",
