@@ -1,5 +1,5 @@
 {
- "ts": 1793357701.606224,
+ "ts": 1793358302.465006,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -43,11 +43,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.1009,
- "sol_usd": 96.72750541502013,
+ "sol_usd": 97.05052236415962,
  "stream_connected": true,
- "stream_msgs": 4548,
- "tokens_seen": 4436,
- "tokens_tracked": 50,
+ "stream_msgs": 4602,
+ "tokens_seen": 4487,
+ "tokens_tracked": 34,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -55,16 +55,16 @@
  "factory_pending": 0,
  "account_trades": 0,
  "helius": {
-  "connected": true,
-  "notifications": 1906091,
+  "connected": false,
+  "notifications": 1915450,
   "parsed": 135,
-  "skipped": 1905137,
+  "skipped": 1914496,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
-   "09:48:05 Connection to remote host was lost.",
-   "10:06:14 Connection to remote host was lost.",
-   "10:07:19 Connection to remote host was lost."
+   "11:02:44 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 11:02:44 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
+   "11:03:44 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 11:03:44 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
+   "11:04:44 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 11:04:44 GMT', 'content-type': 'application/json', 'content-length': '71', 'co"
   ]
  },
  "follow_buys_seen": 17,
@@ -76,10 +76,10 @@
   "bench_by_reason": {
    "mcap_alto": 1
   },
-  "source_down_s": 0,
+  "source_down_s": 260,
   "exec_fails_recent": 0
  },
- "st_requests": 130,
+ "st_requests": 132,
  "stream_errors": [
   "04:57:45 Connection to remote host was lost.",
   "04:57:53 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Fri, 30 Oct 2026 04:57:53 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
@@ -87,7 +87,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 4,
-  "create": 4544
+  "create": 4598
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
@@ -97,7 +97,7 @@
  ],
  "stream_trades": 0,
  "stream_cost_sol_est": 0.0,
- "pumpportal_wallet_sol": 0.0999,
+ "pumpportal_wallet_sol": null,
  "params": {
   "mode": "real",
   "strategy": "follow",

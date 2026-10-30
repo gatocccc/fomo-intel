@@ -1,16 +1,16 @@
 {
- "now": 1793357693.976167,
+ "now": 1793358301.271096,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 542.16,
- "equity_sol": 5.5902,
+ "equity_usd": 542.14,
+ "equity_sol": 5.5918,
  "cash_sol": 0.0843,
- "positions_usd": 533.99,
- "sol_usd": 96.99,
+ "positions_usd": 533.97,
+ "sol_usd": 96.95,
  "mult": 0.99,
  "halt": false,
  "pause": false,
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9996329908584435,
+   "last_usd": 0.9995978636093619,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 533.99
+   "value_usd": 533.97
   }
  ],
  "perps_pnl_usd": 0,
@@ -2112,6 +2112,14 @@
   [
    1793357572,
    542.14
+  ],
+  [
+   1793357876,
+   542.15
+  ],
+  [
+   1793358179,
+   542.17
   ]
  ],
  "closed": [
@@ -2900,6 +2908,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793358133.8892474,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock (SOL 4h -0.1%): no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-1102"
+  },
   {
    "ts": 1793357526.7085054,
    "title": "Automatic brain: status",
@@ -4299,14 +4314,6 @@
    "kind": "execution",
    "id": "auto-equilibrado-20261029-0009",
    "from_plan": "equilibrado"
-  },
-  {
-   "ts": 1793232594.2038522,
-   "title": "Automatic brain: new position",
-   "text": "SI is -14% versus its 20-day average: the trend broke. Back to USDC.\n\nSTONK ($119M, $2.8M liquidity) is back above its 20-day average (+13%) and up +37% in 7 days (30 days: -50%). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.\n\nUSELESS ($170M, $5.0M liquidity) is back above its 20-day average (+2%) and up +13% in 7 days (30 days: -35%). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.\n\nSPX ($34M, $2.2M liquidity) is back above its 20-day average (+11%) and up +12% in 7 days (30 days: -16%). Buying about a fifth of the plan. Against: trend rules buy late, and a memecoin can still drop 20% in a day; the stop is −20%.",
-   "kind": "decisión",
-   "id": "auto-equilibrado-20261029-0009",
-   "from_plan": "equilibrado"
   }
  ],
  "wins": 1,
@@ -4316,7 +4323,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793357523.4734428,
+  "last_run": 1793358125.162067,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4326,11 +4333,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793357523.4746075,
-   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock (SOL 4h -1.2%): no new memecoins until it improves."
+   "ts": 1793358128.511096,
+   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock (SOL 4h -0.1%): no new memecoins until it improves."
   },
-  "trad_status": "3 of 21 established memecoins above their 20-day average (best: SAPLING +106%, STONK +7%, OTC +2%)",
-  "sol_ch24h": -3.5,
-  "sol_vs_ma20": -0.0684
+  "trad_status": "SOL -6.8%, BTC -4.7%, ETH -6.6%, JUP -15.9%",
+  "sol_ch24h": -3.2,
+  "sol_vs_ma20": -0.0678
  }
 }
