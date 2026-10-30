@@ -1,0 +1,82 @@
+== 176_costo_ejecucion 2026-10-30T19:24:03Z ==
+{"ts": 1793204959, "plan": "lloyd", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 1.9436, "slip_logged": 0.85, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793204961, "plan": "agresivo", "side": "buy", "symbol": "SI", "kind": "meme", "sol": 0.6056, "slip_logged": 3.43, "cost_vs_1m_mid": 2.26, "cost_vs_same_min_close": 2.24, "checked": false, "slot": 462544237}
+{"ts": 1793214457, "plan": "agresivo", "side": "buy", "symbol": "DOAS", "kind": "meme", "sol": 0.6845, "slip_logged": 1.47, "cost_vs_1m_mid": 1.83, "cost_vs_same_min_close": 1.37, "checked": false, "slot": 462588805}
+{"ts": 1793214967, "plan": "agresivo", "side": "sell", "symbol": "DOAS", "kind": "meme", "sol": 0.6708, "slip_logged": null, "cost_vs_1m_mid": 1.15, "cost_vs_same_min_close": 1.12, "checked": false, "slot": 462591183}
+{"ts": 1793221035, "plan": "agresivo", "side": "buy", "symbol": "SAPLING", "kind": "meme", "sol": 0.6708, "slip_logged": 3.17, "cost_vs_1m_mid": 2.08, "cost_vs_same_min_close": 2.08, "checked": false, "slot": 462619531}
+{"ts": 1793231392, "plan": "agresivo", "side": "sell", "symbol": "SAPLING", "kind": "meme", "sol": 0.5746, "slip_logged": null, "cost_vs_1m_mid": 2.79, "cost_vs_same_min_close": 2.8, "checked": false, "slot": 462668017}
+{"ts": 1793231394, "plan": "agresivo", "side": "buy", "symbol": "INVERSE", "kind": "meme", "sol": 0.571, "slip_logged": 1.22, "cost_vs_1m_mid": 4.11, "cost_vs_same_min_close": 1.57, "checked": false, "slot": 462668028}
+{"ts": 1793231397, "plan": "agresivo", "side": "sell", "symbol": "SI", "kind": "meme", "sol": 0.5838, "slip_logged": null, "cost_vs_1m_mid": 0.91, "cost_vs_same_min_close": null, "checked": false, "slot": 462668037}
+{"ts": 1793231403, "plan": "agresivo", "side": "buy", "symbol": "STONKLANA", "kind": "meme", "sol": 0.5757, "slip_logged": 3.98, "cost_vs_1m_mid": 2.9, "cost_vs_same_min_close": 2.49, "checked": false, "slot": 462668067}
+{"ts": 1793232577, "plan": "equilibrado", "side": "sell", "symbol": "SI", "kind": "meme", "sol": 0.5752, "slip_logged": null, "cost_vs_1m_mid": 1.71, "cost_vs_same_min_close": 1.71, "checked": false, "slot": 462673577}
+{"ts": 1793232580, "plan": "equilibrado", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 0.565, "slip_logged": 1.05, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793232587, "plan": "equilibrado", "side": "sell", "symbol": "USDC", "kind": "stable", "sol": 1.4189, "slip_logged": null, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793232589, "plan": "equilibrado", "side": "buy", "symbol": "STONK", "kind": "meme", "sol": 0.3828, "slip_logged": 1.44, "cost_vs_1m_mid": 1.65, "cost_vs_same_min_close": 1.85, "checked": false, "slot": 462673635}
+{"ts": 1793232591, "plan": "equilibrado", "side": "buy", "symbol": "USELESS", "kind": "meme", "sol": 0.3813, "slip_logged": 1.22, "cost_vs_1m_mid": 1.42, "cost_vs_same_min_close": 1.36, "checked": false, "slot": 462673643}
+{"ts": 1793232594, "plan": "equilibrado", "side": "buy", "symbol": "SPX", "kind": "meme", "sol": 0.2375, "slip_logged": 1.87, "cost_vs_1m_mid": 1.77, "cost_vs_same_min_close": 1.72, "checked": false, "slot": 462673655}
+{"ts": 1793235137, "plan": "equilibrado", "side": "sell", "symbol": "USELESS", "kind": "meme", "sol": 0.3721, "slip_logged": null, "cost_vs_1m_mid": 0.62, "cost_vs_same_min_close": 0.55, "checked": false, "slot": 462685541}
+{"ts": 1793235354, "plan": "agresivo", "side": "sell", "symbol": "STONKLANA", "kind": "meme", "sol": 0.4158, "slip_logged": null, "cost_vs_1m_mid": 8.17, "cost_vs_same_min_close": 1.86, "checked": false, "slot": 462686569}
+{"ts": 1793235773, "plan": "agresivo", "side": "sell", "symbol": "INVERSE", "kind": "meme", "sol": 0.424, "slip_logged": null, "cost_vs_1m_mid": 3.18, "cost_vs_same_min_close": 2.0, "checked": false, "slot": 462688525}
+{"ts": 1793236447, "plan": "equilibrado", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 0.7969, "slip_logged": 0.87, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793238981, "plan": "lloyd", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 0.8647, "slip_logged": 1.0, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793243964, "plan": "lloyd", "side": "sell", "symbol": "USDC", "kind": "stable", "sol": 0.035, "slip_logged": null, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793243967, "plan": "lloyd", "side": "buy", "symbol": "DOPE", "kind": "meme", "sol": 0.1004, "slip_logged": 5.74, "cost_vs_1m_mid": 5.63, "cost_vs_same_min_close": 5.61, "checked": false, "slot": 462726802}
+{"ts": 1793271246, "plan": "lloyd", "side": "sell", "symbol": "USDC", "kind": "stable", "sol": 0.8142, "slip_logged": null, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793271855, "plan": "lloyd", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 0.259, "slip_logged": 1.66, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793279226, "plan": "lloyd", "side": "sell", "symbol": "GTA6", "kind": "meme", "sol": 0.3753, "slip_logged": null, "cost_vs_1m_mid": 0.31, "cost_vs_same_min_close": 0.28, "checked": false, "slot": 462891900}
+{"ts": 1793279833, "plan": "lloyd", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 0.3736, "slip_logged": 0.99, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793283456, "plan": "lloyd", "side": "sell", "symbol": "GTA6", "kind": "meme", "sol": 0.4865, "slip_logged": null, "cost_vs_1m_mid": -0.6, "cost_vs_same_min_close": 0.74, "checked": false, "slot": 462911667}
+{"ts": 1793284034, "plan": "lloyd", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 0.4848, "slip_logged": 1.13, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793286344, "plan": "lloyd", "side": "sell", "symbol": "GTA6", "kind": "meme", "sol": 0.5692, "slip_logged": null, "cost_vs_1m_mid": 49.89, "cost_vs_same_min_close": -30.37, "checked": false, "slot": 462925142}
+{"ts": 1793286439, "plan": "lloyd", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 0.5678, "slip_logged": 1.1, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793302155, "plan": "lloyd", "side": "sell", "symbol": "USDC", "kind": "stable", "sol": 0.3896, "slip_logged": null, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793302157, "plan": "lloyd", "side": "buy", "symbol": "JOB", "kind": "meme", "sol": 0.399, "slip_logged": 1.7, "cost_vs_1m_mid": 3.28, "cost_vs_same_min_close": 1.74, "checked": false, "slot": 462999050}
+{"ts": 1793308686, "plan": "lab", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 0.3055, "slip_logged": 1.68, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793308687, "plan": "lloyd", "side": "sell", "symbol": "JOB", "kind": "meme", "sol": 0.3527, "slip_logged": null, "cost_vs_1m_mid": 1.29, "cost_vs_same_min_close": 1.05, "checked": false, "slot": 463029493}
+{"ts": 1793308690, "plan": "lloyd", "side": "sell", "symbol": "DOPE", "kind": "meme", "sol": 0.0791, "slip_logged": null, "cost_vs_1m_mid": 2.55, "cost_vs_same_min_close": 2.66, "checked": false, "slot": 463029509}
+{"ts": 1793309062, "plan": "lloyd", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 0.4247, "slip_logged": 1.0, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793310126, "plan": "lab", "side": "buy", "symbol": "SAFU", "kind": "meme", "sol": 0.0558, "slip_logged": 11.98, "cost_vs_1m_mid": 12.65, "cost_vs_same_min_close": 12.52, "checked": false, "slot": 463036214}
+{"ts": 1793317647, "plan": "lloyd", "side": "sell", "symbol": "STONK", "kind": "meme", "sol": 0.3242, "slip_logged": null, "cost_vs_1m_mid": 1.77, "cost_vs_same_min_close": 0.63, "checked": false, "slot": 463071330}
+{"ts": 1793317882, "plan": "lloyd", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 0.3225, "slip_logged": 0.19, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+{"ts": 1793331786, "plan": "lloyd", "side": "sell", "symbol": "SPX", "kind": "meme", "sol": 0.2111, "slip_logged": null, "cost_vs_1m_mid": 1.14, "cost_vs_same_min_close": 1.21, "checked": false, "slot": 463137515}
+{"ts": 1793332335, "plan": "lloyd", "side": "buy", "symbol": "USDC", "kind": "stable", "sol": 0.2133, "slip_logged": 0.1, "cost_vs_1m_mid": null, "cost_vs_same_min_close": null, "checked": false}
+
+RESUMEN {
+ "meme_buy": {
+  "n": 14,
+  "cost_mean": 3.44,
+  "cost_median": 2.51,
+  "slip_logged_mean": 3.48,
+  "checked_blocks": 0,
+  "sandwiched": 0,
+  "front_run_close": 0
+ },
+ "meme_sell": {
+  "n": 15,
+  "cost_mean": 5.35,
+  "cost_median": 1.5,
+  "slip_logged_mean": null,
+  "checked_blocks": 0,
+  "sandwiched": 0,
+  "front_run_close": 0
+ },
+ "stable_buy": {
+  "n": 13,
+  "cost_mean": null,
+  "cost_median": null,
+  "slip_logged_mean": 0.96,
+  "checked_blocks": 0,
+  "sandwiched": 0,
+  "front_run_close": 0
+ },
+ "stable_sell": {
+  "n": 4,
+  "cost_mean": null,
+  "cost_median": null,
+  "slip_logged_mean": null,
+  "checked_blocks": 0,
+  "sandwiched": 0,
+  "front_run_close": 0
+ }
+}
+== exit 0 ==
