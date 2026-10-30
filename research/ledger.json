@@ -296,14 +296,14 @@
    "question": "Routing memecoin buys/sells through Jupiter (no 0.5% platform fee, same pool price) and logging decision→fill drift: does realized round-trip cost drop from ~4% toward ~2.5%?",
    "hypothesis": "Our quotes are identical on both routers, so dropping the 0.5% per-side fee and trimming the delay between decision and fill should cut about 1–1.5% from every round trip.",
    "method": "Live A/B in the lab and book on alternating tickets (Jupiter vs Solana Tracker), same sizes; judge by realized cost vs the 1-minute price before (exec_cost.py) and by failure rate. Sells now log slippage, quoted impact and route (engine change Oct 30).",
-   "result": "Queued. Evidence: our audit (median ~4% realized vs 1.6% pool cost at quote; quotes identical across routers); cash swaps already dropped from ~1% to ~0.15% after moving to Jupiter.",
-   "efficacy": null,
-   "verdict": "queued",
+   "result": "Live from Oct 30 evening: each memecoin ticket (book, lab, plans) goes through Jupiter or Solana Tracker at random, 50/50, same slippage tolerance and price guard; route logged per fill. Judge after 20+ fills per arm.",
+   "efficacy": "Testing live: half of the trades go each way. Expected saving if it holds: about 1% per round trip.",
+   "verdict": "testing",
    "sleeve": "picks, established",
    "priority": 2
   }
  ],
- "protocol": "Out-of-sample half held out, entries at next bar open, real costs (memes ~3% round trip, perps 0.12% + funding), random-entry control x20; adopt only if test mean > 0, t ≥ 2.5, beats random by ≥ 0.3%/trade, design half also positive. Risk/cost changes are judged on drawdown and realized cost, not on win rate.",
+ "protocol": "Out-of-sample half held out, entries at next bar open, real costs (memes ~4% round trip (measured on our own fills, Oct 30), perps 0.12% + funding), random-entry control x20; adopt only if test mean > 0, t ≥ 2.5, beats random by ≥ 0.3%/trade, design half also positive. Risk/cost changes are judged on drawdown and realized cost, not on win rate.",
  "lab": {
   "budget_pct": 10,
   "note": "A separate lab wallet, about a tenth of the house book, tests new ideas live with small size before they touch the main book."

@@ -10,6 +10,12 @@ Pases de efectivo (SOL<->USDC/USDT): primero por la Swap API de Jupiter, que no 
 (Solana Tracker cobra 0,5% por lado y en plomería interna era puro costo); si Jupiter falla, Solana Tracker como siempre.
 Se apaga con JUP_STABLE_SWAPS=0.
 
+Memecoins (30/10, prueba A/B de la bitácora "Pay the pool, not the middleman"): la auditoría de costos midió ~4% de ida y vuelta
+real contra ~1,6% de la pileta, y Jupiter cotiza exactamente igual que Solana Tracker pero sin su 0,5% por lado. Cada ticket de
+memecoin sale al azar por una u otra vía (mitad y mitad, misma tolerancia de slippage y misma guardia de precio); la vía queda en
+trades.jsonl ("via") y exec_cost.py compara el costo realizado. Si Jupiter falla al cotizar/armar, sigue por Solana Tracker.
+JUP_MEME_SHARE=0 lo apaga; 1 manda todo por Jupiter.
+
 PaperExecutor: mismas interfaces; simula el fill al precio del stream con slippage y fee fijos.
 """
 from __future__ import annotations
@@ -17,6 +23,7 @@ from __future__ import annotations
 import base64
 import logging
 import os
+import random
 import time
 from dataclasses import dataclass, field
 
@@ -31,6 +38,7 @@ PUMPPORTAL_LOCAL = "https://pumpportal.fun/api/trade-local"   # segunda vía: tr
 # plomería interna del libro —estacionar y desestacionar efectivo— era puro costo). Con JUPITER_API_KEY va a api.jup.ag; sin clave, lite-api.
 STABLE_MINTS = {"EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v": 6, "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB": 6}
 JUP_SWAP_ON = os.getenv("JUP_STABLE_SWAPS", "1") == "1"
+JUP_MEME_SHARE = float(os.getenv("JUP_MEME_SHARE", "0.5"))   # fracción de tickets de memecoins que salen por Jupiter (A/B)
 JUP_KEY = os.getenv("JUPITER_API_KEY", "")
 JUP_BASE = "https://api.jup.ag/swap/v1" if JUP_KEY else "https://lite-api.jup.ag/swap/v1"
 
@@ -199,10 +207,19 @@ class RealExecutor:
         t0 = time.time()
         f = Fill(False, side, mint, expected_price=ref_price)
         txn_b64, version, via = None, "v0", "solanatracker"
-        if JUP_SWAP_ON and mint in STABLE_MINTS and not fast:
-            # pase de efectivo (SOL<->stable): Jupiter, sin comisión de plataforma; slippage corto porque el par es profundo
+        stable = mint in STABLE_MINTS
+        use_jup = JUP_SWAP_ON and not fast and (stable or (JUP_MEME_SHARE > 0 and random.random() < JUP_MEME_SHARE))
+        ab_arm = None if stable else ("jupiter" if use_jup else "solanatracker")
+        if use_jup:
+            # stable: pase de efectivo, slippage corto (par profundo). memecoin: misma tolerancia que Solana Tracker, para que el A/B
+            # compare sólo la vía (comisión y armado), no la tolerancia.
             try:
-                dec = STABLE_MINTS[mint]
+                if stable:
+                    dec = STABLE_MINTS[mint]
+                else:
+                    bal_raw, dec = self.rpc.token_balance(self.pub, mint)
+                    if side == "buy" and bal_raw <= 0:
+                        dec = None
                 if side == "buy":
                     raw_amt = int(round(float(amount) * 1e9))
                 elif amount == "auto":
@@ -211,15 +228,23 @@ class RealExecutor:
                     raw_amt = int(round(float(amount) * 10 ** dec))
                 if raw_amt <= 0:
                     raise RuntimeError("monto cero")
-                txn_b64, quote = jup_swap_tx(frm, to, raw_amt, 1.0, self.pub, self.p.priority_fee_sol)
+                if dec is None:      # compra sin cuenta previa: decimales del mint
+                    dec = int(((self.rpc.call("getTokenSupply", [mint]) or {}).get("value") or {}).get("decimals"))
+                txn_b64, quote = jup_swap_tx(frm, to, raw_amt, 1.0 if stable else self.p.swap_slippage_pct, self.pub, self.p.priority_fee_sol)
                 via = "jupiter"
                 ai = float(quote.get("inAmount") or 0); ao = float(quote.get("outAmount") or 0)
+                ain = ai / (1e9 if side == "buy" else 10 ** dec); aout = ao / (10 ** dec if side == "buy" else 1e9)
                 f.quote_impact_pct = round(float(quote.get("priceImpactPct") or 0) * 100, 3)
-                f.raw = {"via": via, "rate": {"amountIn": ai / (1e9 if side == "buy" else 10 ** dec), "amountOut": ao / (10 ** dec if side == "buy" else 1e9),
+                f.raw = {"via": via, "ab_arm": ab_arm, "rate": {"amountIn": ain, "amountOut": aout,
                                               "priceImpact": quote.get("priceImpactPct"), "route": [r.get("swapInfo", {}).get("label") for r in quote.get("routePlan") or []]}}
+                # misma guardia de precio que la vía de Solana Tracker: precio efectivo cotizado vs referencia fresca
+                if not stable and side == "buy" and ain > 0 and aout > 0 and ref_price > 0:
+                    f.quote_impact_pct = round((ain / aout / ref_price - 1) * 100, 2)
+                    if f.quote_impact_pct > self.p.max_slippage_pct:
+                        f.error = f"precio cotizado {f.quote_impact_pct:+.1f}% vs referencia (máx {self.p.max_slippage_pct}%)"; return f
             except Exception as e:  # noqa: BLE001
                 log.warning("jupiter %s %s: %s; voy por Solana Tracker", side, mint[:6], e)
-                txn_b64, via = None, "solanatracker"; f.raw = {"jup_error": str(e)[:160]}
+                txn_b64, via = None, "solanatracker"; f.raw = {"jup_error": str(e)[:160], "ab_arm": ab_arm}
         if not txn_b64:
             try:
                 if fast:
@@ -227,7 +252,7 @@ class RealExecutor:
                 q = self.quote(frm, to, amount, self.p.swap_slippage_pct)
                 rate = q.get("rate") or {}
                 f.quote_impact_pct = round(impact_pct(rate), 2)
-                f.raw = {"rate": rate, "type": q.get("type") or q.get("txVersion"), "via": via}
+                f.raw = {"rate": rate, "type": q.get("type") or q.get("txVersion"), "via": via, "ab_arm": ab_arm}
                 # guardia real: precio efectivo de la cotización contra el precio de referencia fresco
                 try:
                     ai = float(rate.get("amountIn") or 0); ao = float(rate.get("amountOut") or 0)
@@ -244,7 +269,7 @@ class RealExecutor:
                 try:
                     pp_amount = amount if side == "buy" else ("100%" if amount == "auto" else amount)
                     txn_b64 = self._pumpportal_tx(side, mint, pp_amount, max(self.p.swap_slippage_pct, 15))
-                    via = "pumpportal"; f.raw = {"via": via, "st_error": str(e)[:160]}
+                    via = "pumpportal"; f.raw = {"via": via, "st_error": str(e)[:160], "ab_arm": ab_arm}
                 except Exception as e2:  # noqa: BLE001
                     f.error = f"cotización: {str(e)[:120]} | pumpportal: {str(e2)[:120]}"; return f
         try:

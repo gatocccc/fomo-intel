@@ -158,6 +158,15 @@ def main():
                                       "slip_logged_mean": round(st.mean(sl), 2) if sl else None, "checked_blocks": len(chk),
                                       "sandwiched": sum(1 for r in chk if r["sandwich_signers"]),
                                       "front_run_close": sum(1 for r in chk if r["front_run_close"])}
+    # A/B de ruta (desde 30/10): costo por vía en memecoins
+    via_of = {d["sig"]: (d.get("ab_arm") or d.get("via")) for d in rows}
+    for r, d in zip(out, sorted(rows, key=lambda r: r["ts"])):
+        r["via"] = via_of.get(d["sig"])
+    for arm in ("jupiter", "solanatracker", "pumpportal"):
+        for side in ("buy", "sell"):
+            c = [r["cost_vs_1m_mid"] for r in out if r["kind"] == "meme" and r["side"] == side and r.get("via") == arm and r["cost_vs_1m_mid"] is not None]
+            if c:
+                summ[f"ab_{arm}_{side}"] = {"n": len(c), "cost_mean": round(st.mean(c), 2), "cost_median": round(st.median(c), 2)}
     print("\nRESUMEN", json.dumps(summ, ensure_ascii=False, indent=1))
     Path("state/research").mkdir(parents=True, exist_ok=True)
     json.dump({"rows": out, "summary": summ, "ts": int(time.time())}, open("state/research/exec_cost.json", "w"), indent=1)
