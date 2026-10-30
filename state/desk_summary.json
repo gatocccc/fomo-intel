@@ -1,16 +1,16 @@
 {
- "now": 1793348982.2009964,
+ "now": 1793349285.8087976,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 166.79,
- "equity_sol": 1.7164,
+ "equity_usd": 166.81,
+ "equity_sol": 1.7157,
  "cash_sol": 0.1009,
- "positions_usd": 156.99,
- "sol_usd": 97.17,
+ "positions_usd": 157.0,
+ "sol_usd": 97.22,
  "mult": 1.683,
  "halt": false,
  "pause": false,
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9994491823357637,
+   "last_usd": 0.9995146786830111,
    "mult": 0.991,
-   "value_usd": 156.99
+   "value_usd": 157.0
   }
  ],
  "perps_pnl_usd": 0,
@@ -3189,6 +3189,10 @@
   [
    1793348891,
    166.8
+  ],
+  [
+   1793349195,
+   166.81
   ]
  ],
  "closed": [
@@ -3570,6 +3574,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793349133.9686594,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h -0.1%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-0832"
+  },
   {
    "ts": 1793348526.6736057,
    "title": "Cerebro automático: estado",
@@ -4962,13 +4973,6 @@
    "text": "Gastón señaló algo correcto: 27% del patrimonio quieto en la billetera no nos acerca al x10. El escaneo de siempre traía pocos tokens, así que armé uno más amplio (scan4): 1.235 tokens entre rankings y búsqueda por rango de capitalización, filtrados con las reglas de la mesa (liquidez ≥ US$150K, más de 1 día de vida, volumen irregular de personas, volumen 24 h ≥ 15% de la capitalización, top 10 < 30%). Pasaron 9. A los 5 mejores les corrí el chequeo anti-rug.\n\nDescartados: CHICO (el mejor del escaneo, otro meme de GTA) salió CONCENTRADO: 19 de sus 20 mayores holders fueron fondeados por la misma billetera, es decir que los 'holders repartidos' son en realidad una sola persona. tSpaceX también CONCENTRADO. SI depende de un creador con 7.495 lanzamientos (fábrica). GATO está limpio pero se mueve poco (volumen 19% de su capitalización).\n\nElegido: SAPLING (US$3,1M), LIMPIO. No es un meme vacío: es el token de sapling.cash, un launchpad y terminal de trading nativo de Zcash (narrativa de privacidad). Tiene comisiones reales registradas en DefiLlama y notas en KuCoin; ya tocó US$5M de capitalización. 32 días de vida, 4.750 holders, volumen US$1,3M en 24 h con patrón irregular (CV 1,5: gente real) y acelerando (el volumen de las últimas 6 h es el doble del promedio). El chequeo de fondeador común da un solo grupo de 2 billeteras con 3,2%, sin holders fondeados por el creador (8 lanzamientos, ninguno muerto).\n\nAbogado del diablo (datos on-chain): subió 251% en 24 h; comprar después de una suba así suele ser comprar el techo. Además los 20 mayores holders juntos tienen 34% del total, bastante más que GTA6 o REMUS: si unos pocos venden, el precio cae fuerte, y la liquidez (US$368K) es la de un token chico. Por qué igual entro: en las últimas 6 h el precio está plano (+2%) y 29% abajo del máximo, o sea que ya está digiriendo la suba en vez de desplomarse, y el volumen sigue creciendo. Para x10 necesitamos exactamente este tipo de token: chico, con producto y narrativa. El riesgo lo acoto con el stop.\n\nTamaño: 0,26 SOL (~US$26, 24% del patrimonio), dejando 0,035 SOL para comisiones. Stop −30%, trailing 35% desde el pico después de 1,6x, vendo 25% a 3x y 25% a 6x. Quedamos ~97% invertidos en tres tokens.",
    "kind": "decisión",
    "id": "2026-10-28-01"
-  },
-  {
-   "ts": 1793148375.7328134,
-   "title": "Ejecución",
-   "text": "set CA8q2m: ajustó REMUS: stop=0.1",
-   "kind": "ejecución",
-   "id": "2026-10-27-04"
   }
  ],
  "wins": 2,
@@ -4978,7 +4982,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793348523.6316304,
+  "last_run": 1793349124.5538054,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4988,11 +4992,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793348523.6324732,
-   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h -0.2%): no abro memecoins hasta que mejore."
+   "ts": 1793349124.5559206,
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h -0.1%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -3.1,
-  "sol_vs_ma20": -0.0687
+  "sol_ch24h": -3.0,
+  "sol_vs_ma20": -0.0677
  }
 }
