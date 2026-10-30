@@ -1,11 +1,11 @@
 {
  "mode": "live",
- "last_run": 1793334124.8559988,
+ "last_run": 1793334723.2022357,
  "regime": "risk_off",
  "profile": "book",
  "_noted_no_cands": 1793238965.2395556,
- "bal_ts": 1793331063.8600972,
- "trad_status": "SOL -7.2%, BTC -4.5%, ETH -7.4%, JUP -17.6%",
+ "bal_ts": 1793334723.2029114,
+ "trad_status": "2 of 20 established memecoins above their 20-day average (best: SAPLING +49%, STONK +6%)",
  "trad_ts": 1793331723.848521,
  "status": "ok",
  "last_action": {
@@ -16,7 +16,7 @@
  },
  "_noted_book": 1793305023.752567,
  "last_note": {
-  "ts": 1793334124.858505,
+  "ts": 1793334723.203289,
   "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -3.0%, 4h 2.5%): no new memecoins until it improves."
  },
  "_noted_trad": 1793289425.5358365,
