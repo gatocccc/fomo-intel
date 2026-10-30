@@ -12,9 +12,20 @@
   ],
   "confirmed": true,
   "why": "bearish news score 16 in 90 min; SOL 1h -1.7%, 4h -1.8%; BTC 1h -0.6%",
-  "last_conf_ts": 1793370546.7922719
+  "last_conf_ts": 1793370861.3822641
  },
  "events": [
+  {
+   "ts": 1793370620.894739,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: 🇰🇵 North Korea s 6,300,000,000 Binance crypto hack is the largest heist in human history. @WatcherGuru",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
   {
    "ts": 1793369885.6137445,
    "src": "decrypt",
@@ -172,21 +183,21 @@
    ]
   }
  ],
- "ts": 1793370546.7922719,
- "bear_score": 11,
+ "ts": 1793370861.3822641,
+ "bear_score": 13,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.368,
-   "ch15m": -0.0003389830508475633,
-   "ch1h": -0.01629296056540641,
-   "ch4h": -0.02381297196648402
+   "px": 94.136,
+   "ch15m": -0.0068994619685621705,
+   "ch1h": -0.017143811731295422,
+   "ch4h": -0.02934565177043169
   },
   "BTC": {
-   "px": 76864.0,
-   "ch15m": 0.0014853420195439782,
-   "ch1h": -0.0049581213509909405,
-   "ch4h": -0.006552842796396563
+   "px": 76776.0,
+   "ch15m": -0.0016514310234971852,
+   "ch1h": -0.005698300870285999,
+   "ch4h": -0.00995512456800951
   }
  },
  "mode": "live",
@@ -209,7 +220,7 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "37pzA2qz9v7nFQfz5MLhMS4SoAfsasJmQTBniipFAS6Y7Yr7fih9Fi8dtTDH3ijqpJmnwpWqHLZAMm1iUWACVpgh",
-  "best_ret": 0.0070646451884608386,
+  "best_ret": 0.00932827963781857,
   "thesis": {
    "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Binance hit by $6.3B hack, the largest in cryptocurrency history | TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
    "entities": [
@@ -284,10 +295,10 @@
     "trail_arm": 0.02
    }
   },
-  "mark": 94.368,
-  "ret_px": 0.0064,
-  "pnl_usd_est": 0.26,
-  "age_h": 0.73,
+  "mark": 94.136,
+  "ret_px": 0.0089,
+  "pnl_usd_est": 0.36,
+  "age_h": 0.82,
   "stop_px": 97.35,
   "rules": {
    "stop_up": 0.025,
@@ -317,7 +328,7 @@
    ],
    "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
    "sig": "37pzA2qz9v7nFQfz5MLhMS4SoAfsasJmQTBniipFAS6Y7Yr7fih9Fi8dtTDH3ijqpJmnwpWqHLZAMm1iUWACVpgh",
-   "best_ret": 0.0070646451884608386,
+   "best_ret": 0.00932827963781857,
    "thesis": {
     "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Binance hit by $6.3B hack, the largest in cryptocurrency history | TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
     "entities": [
@@ -392,10 +403,10 @@
      "trail_arm": 0.02
     }
    },
-   "mark": 94.368,
-   "ret_px": 0.0064,
-   "pnl_usd_est": 0.26,
-   "age_h": 0.73,
+   "mark": 94.136,
+   "ret_px": 0.0089,
+   "pnl_usd_est": 0.36,
+   "age_h": 0.82,
    "stop_px": 97.35,
    "rules": {
     "stop_up": 0.025,
@@ -424,7 +435,7 @@
    ],
    "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "sig": "35yonov4kU1cJbPGxuZGsXkr3kMwXSksz8Qw4bp5B5QVpA8mwYvunUUbjcv2reJcPzkspDRq3QfAPdtfUgMEReRJ",
-   "best_ret": 0.00559890341628011,
+   "best_ret": 0.007865879375790863,
    "thesis": {
     "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Binance hit by $6.3B hack, the largest in cryptocurrency history | TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
     "entities": [
@@ -499,10 +510,10 @@
      "trail_arm": 0.02
     }
    },
-   "mark": 94.368,
-   "ret_px": 0.005,
-   "pnl_usd_est": 0.81,
-   "age_h": 0.72,
+   "mark": 94.136,
+   "ret_px": 0.0074,
+   "pnl_usd_est": 1.21,
+   "age_h": 0.81,
    "stop_px": 97.21,
    "rules": {
     "stop_up": 0.025,
@@ -665,7 +676,7 @@
  },
  "llm": {
   "key": true,
-  "last_error": "thesis ValueError: model reply without text block (stop_reason=max_tokens)"
+  "last_error": "thesis ValueError: model reply without JSON: {"
  },
  "sources": [
   "bitcoinmagazine",

@@ -1,17 +1,17 @@
 {
- "now": 1793370575.3756337,
+ "now": 1793370884.8986557,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 543.46,
- "equity_sol": 5.771,
+ "equity_usd": 544.27,
+ "equity_sol": 5.7918,
  "cash_sol": 0.0826,
- "positions_usd": 535.69,
- "sol_usd": 94.17,
- "mult": 0.992,
+ "positions_usd": 536.51,
+ "sol_usd": 93.97,
+ "mult": 0.994,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9996538960654685,
+   "last_usd": 0.9996263146609081,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 452.71
+   "value_usd": 452.69
   },
   {
    "mint": "perps:7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "symbol": "SOL short 2x",
    "opened_ts": 1793367953.6543465,
    "entry_usd": 94.84,
-   "last_usd": 94.368,
-   "peak_usd": 94.309,
+   "last_usd": 94.136,
+   "peak_usd": 94.094,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.8632,
+   "sol_in": 0.865,
    "sol_out": 0.0,
    "stop": 0.035,
    "trail": 0.02,
@@ -60,14 +60,14 @@
    "reason": "news_shock_short",
    "brain": false,
    "perps": true,
-   "mult": 1.01,
-   "value_usd": 82.1,
-   "pnl_usd": 0.81,
+   "mult": 1.015,
+   "value_usd": 82.49,
+   "pnl_usd": 1.2,
    "collateral_usd": 81.29,
    "side": "short"
   }
  ],
- "perps_pnl_usd": 0.81,
+ "perps_pnl_usd": 1.2,
  "equity": [
   [
    1793203600,
@@ -2296,6 +2296,10 @@
   [
    1793370487,
    542.8
+  ],
+  [
+   1793370800,
+   543.16
   ]
  ],
  "closed": [
@@ -3084,6 +3088,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793370746.7884042,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -3.1%): no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-1432"
+  },
   {
    "ts": 1793370126.947159,
    "title": "Automatic brain: status",
@@ -4475,13 +4486,6 @@
    "text": "GTA6: peaked at 1.91x; stop raised to 1.43x (was 1.34x).",
    "kind": "decisión",
    "id": "auto-lloyd-20261029-0608"
-  },
-  {
-   "ts": 1793253493.3575795,
-   "title": "Execution",
-   "text": "set 4kjruq: ajustó GTA6: stop=-0.341",
-   "kind": "execution",
-   "id": "auto-lloyd-20261029-0558"
   }
  ],
  "wins": 1,
@@ -4491,7 +4495,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793370124.0470362,
+  "last_run": 1793370725.4325032,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4501,11 +4505,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793370124.0502052,
-   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -2.9%): no new memecoins until it improves."
+   "ts": 1793370725.4355934,
+   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -3.1%): no new memecoins until it improves."
   },
   "trad_status": "SOL -9.2%, BTC -6.0%, ETH -8.0%, JUP -17.6%",
-  "sol_ch24h": -7.1,
-  "sol_vs_ma20": -0.0931
+  "sol_ch24h": -7.4,
+  "sol_vs_ma20": -0.0957
  }
 }
