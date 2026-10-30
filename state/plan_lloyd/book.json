@@ -1,5 +1,5 @@
 {
- "ts": 1793382364.222127,
+ "ts": 1793382963.0853777,
  "regime": {
   "state": "risk_off",
   "ts": 1793382364.2166169,
@@ -28,15 +28,15 @@
    "name": "Cash",
    "target_pct": 60,
    "value_usd": 435.8,
-   "pct": 80.4,
+   "pct": 80.3,
    "positions": 0
   },
   {
    "key": "majors",
    "name": "Majors",
    "target_pct": 10,
-   "value_usd": 98.65,
-   "pct": 18.2,
+   "value_usd": 99.19,
+   "pct": 18.3,
    "positions": 2
   },
   {
