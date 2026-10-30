@@ -69,34 +69,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793338112.2406356,
-   "src": "tg:wublockchainenglish",
-   "title": "ZachXBT: Stolen Funds from the 6.3B Binance Exploit and 388M Bitget Exploit Commingled at Same Address, Suspected Same Attacker ZachXBT posted that stolen funds from the 6.3 billion Binance exploit an",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793352258.8090696,
+ "ts": 1793352576.0991566,
  "bear_score": 3,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.85,
-   "ch15m": -0.0032521663956528446,
-   "ch1h": -0.006829648467943872,
-   "ch4h": -0.011038384168445159
+   "px": 96.891,
+   "ch15m": -0.0015868926786541948,
+   "ch1h": -0.0031277329080712235,
+   "ch4h": -0.011185157214732455
   },
   "BTC": {
-   "px": 77609.0,
-   "ch15m": -0.0021087009630591513,
-   "ch1h": -0.006490347688053677,
-   "ch4h": -0.012243703147471696
+   "px": 77721.0,
+   "ch15m": -0.0003344180482848236,
+   "ch1h": -0.0031935359753751946,
+   "ch4h": -0.011786695148001236
   }
  },
  "mode": "live",

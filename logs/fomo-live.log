@@ -1,4 +1,3 @@
-Oct 30 02:33:23 simplai-prod python3[2052574]: 2026-10-30 02:33:23,743 INFO live.helius: HELIUS 4vw54B buy FrE4wkPw 2.0115 SOL @ 8.396e-08 (lat 0.9s)
 Oct 30 02:33:59 simplai-prod python3[2052574]: 2026-10-30 02:33:59,464 INFO live.helius: HELIUS 4vw54B buy FrE4wkPw 0.2600 SOL @ 1.047e-07 (lat 0.9s)
 Oct 30 02:34:50 simplai-prod python3[2052574]: 2026-10-30 02:34:50,788 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… FrE4wkPw 2.390 SOL
 Oct 30 02:34:51 simplai-prod python3[2052574]: 2026-10-30 02:34:51,665 INFO live.helius: HELIUS 4vw54B sell FrE4wkPw 2.3312 SOL @ 8.816e-08 (lat 0.9s)
@@ -298,3 +297,4 @@ Oct 30 09:21:52 simplai-prod python3[2052574]: 2026-10-30 09:21:52,153 INFO live
 Oct 30 09:22:40 simplai-prod python3[2052574]: 2026-10-30 09:22:40,893 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… DNNQ2p3Q 0.204 SOL
 Oct 30 09:22:51 simplai-prod python3[2052574]: 2026-10-30 09:22:51,549 WARNING live.helius: helius caído: Connection to remote host was lost.; reconecto en 2s
 Oct 30 09:22:53 simplai-prod python3[2052574]: 2026-10-30 09:22:53,656 INFO live.helius: helius conectado; suscribiendo 1 billeteras
+Oct 30 09:26:52 simplai-prod python3[2052574]: 2026-10-30 09:26:52,361 INFO live: latido: stream=True tokens_vistos=3965 seguidos=41 candidatos=0 abiertas=0 cerradas=1 st_requests=113 SOL=$97
