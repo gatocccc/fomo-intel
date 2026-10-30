@@ -1,13 +1,3 @@
-{"ts": 1793338052.8544307, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.0, "shock_px": 97.686, "ch1h": 0.0076084721365412555, "ch4h": 0.04354122520258552}
-{"ts": 1793338052.854621, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.0, "shock_px": 97.686, "ch1h": 0.0076084721365412555, "ch4h": 0.04354122520258552}
-{"ts": 1793338112.2406356, "kind": "event", "src": "tg:wublockchainenglish", "title": "ZachXBT: Stolen Funds from the 6.3B Binance Exploit and 388M Bitget Exploit Commingled at Same Address, Suspected Same Attacker ZachXBT posted that stolen funds from the 6.3 billion Binance exploit an", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
-{"ts": 1793338115.33487, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.979, "shock_px": 97.686, "ch1h": 0.007392556035369147, "ch4h": 0.04331760922575634}
-{"ts": 1793338115.3351142, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.979, "shock_px": 97.686, "ch1h": 0.007392556035369147, "ch4h": 0.04331760922575634}
-{"ts": 1793338157.7757456, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.949, "shock_px": 97.686, "ch1h": 0.007084104462266039, "ch4h": 0.04299815783028604}
-{"ts": 1793338157.7759678, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.949, "shock_px": 97.686, "ch1h": 0.007084104462266039, "ch4h": 0.04299815783028604}
-{"ts": 1793338246.45789, "kind": "event", "src": "tg:wublockchainenglish", "title": "ZachXBT: Stolen Funds from the 6.3B Binance Exploit and 388M Bitget Exploit Commingled at Same Address, Suspected Same North Korea-Linked Attacker ZachXBT posted that stolen funds from the 6.3 billion", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
-{"ts": 1793338249.6049113, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.973, "shock_px": 97.686, "ch1h": 0.007320508734230513, "ch4h": 0.03815750434450904}
-{"ts": 1793338249.6050632, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.973, "shock_px": 97.686, "ch1h": 0.007320508734230513, "ch4h": 0.03815750434450904}
 {"ts": 1793338277.8306267, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.978, "shock_px": 97.686, "ch1h": 0.0073719168011843195, "ch4h": 0.038210486161149415}
 {"ts": 1793338277.8308194, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.978, "shock_px": 97.686, "ch1h": 0.0073719168011843195, "ch4h": 0.038210486161149415}
 {"ts": 1793338337.9944727, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.999, "shock_px": 97.686, "ch1h": 0.007587830682390662, "ch4h": 0.038433009791039696}
@@ -198,3 +188,13 @@
 {"ts": 1793343801.0454004, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.226, "shock_px": 97.686, "ch1h": 0.004058101380981061, "ch4h": 0.027038895859472944}
 {"ts": 1793343845.9508386, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.18, "shock_px": 97.686, "ch1h": 0.003587893160514888, "ch4h": 0.026557925554161477}
 {"ts": 1793343845.9509964, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.18, "shock_px": 97.686, "ch1h": 0.003587893160514888, "ch4h": 0.026557925554161477}
+{"ts": 1793343905.8636043, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.105, "shock_px": 97.686, "ch1h": 0.0028212493227981472, "ch4h": 0.02577373483897949}
+{"ts": 1793343905.8637757, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.105, "shock_px": 97.686, "ch1h": 0.0028212493227981472, "ch4h": 0.02577373483897949}
+{"ts": 1793343965.7618093, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.128, "shock_px": 97.686, "ch1h": 0.002339145445816593, "ch4h": 0.022933867066966984}
+{"ts": 1793343965.7619157, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.128, "shock_px": 97.686, "ch1h": 0.002339145445816593, "ch4h": 0.022933867066966984}
+{"ts": 1793344040.9583843, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.076, "shock_px": 97.686, "ch1h": 0.0018079857812642874, "ch4h": 0.022391793845383923}
+{"ts": 1793344040.9585721, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.076, "shock_px": 97.686, "ch1h": 0.0018079857812642874, "ch4h": 0.022391793845383923}
+{"ts": 1793344085.9988606, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.079, "shock_px": 97.686, "ch1h": 0.0018386296080654674, "ch4h": 0.022423067300475275}
+{"ts": 1793344085.9990392, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.079, "shock_px": 97.686, "ch1h": 0.0018386296080654674, "ch4h": 0.022423067300475275}
+{"ts": 1793344146.082488, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.056, "shock_px": 97.686, "ch1h": 0.0016036936025904946, "ch4h": 0.022183304144775207}
+{"ts": 1793344146.0826776, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.056, "shock_px": 97.686, "ch1h": 0.0016036936025904946, "ch4h": 0.022183304144775207}
