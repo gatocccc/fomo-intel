@@ -77,46 +77,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793382741.645743,
-   "src": "cointelegraph",
-   "title": "Coinbase leads crypto stock selloff following $6.3B Binance hack",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack",
-    "selloff"
-   ]
-  },
-  {
-   "ts": 1793382741.645743,
-   "src": "decrypt",
-   "title": "Secret Service, FBI Join Binance Hack Probe as Circle Freezes $823 Million",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793396957.9299102,
+ "ts": 1793397246.6284432,
  "bear_score": 12,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.392,
-   "ch15m": -0.0005134061881162388,
-   "ch1h": 0.004147455735910244,
-   "ch4h": 0.010583411905543683
+   "px": 95.339,
+   "ch15m": -0.0013721587933381851,
+   "ch1h": 0.0024498980085378985,
+   "ch4h": 0.011125251882490028
   },
   "BTC": {
-   "px": 76773.0,
-   "ch15m": -0.0007809144508219568,
-   "ch1h": -0.002520560759806112,
-   "ch4h": -0.006444849943704645
+   "px": 76666.0,
+   "ch15m": -0.0019787029081725915,
+   "ch1h": -0.00334100334100329,
+   "ch4h": -0.0061317880708849914
   }
  },
  "mode": "live",
