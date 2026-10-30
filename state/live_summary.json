@@ -1,5 +1,5 @@
 {
- "ts": 1793375100.8777487,
+ "ts": 1793375401.3525112,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-30",
-  "seen": 36,
+  "seen": 38,
   "bought": 0,
   "by_reason": {
-   "freno": 21,
+   "freno": 23,
    "en_banco": 13,
    "mcap_alto": 2
   },
@@ -45,9 +45,9 @@
  "wallet_sol": 0.1009,
  "sol_usd": 94.3728126669732,
  "stream_connected": true,
- "stream_msgs": 2253,
- "tokens_seen": 2197,
- "tokens_tracked": 108,
+ "stream_msgs": 2315,
+ "tokens_seen": 2258,
+ "tokens_tracked": 91,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -56,9 +56,9 @@
  "account_trades": 1,
  "helius": {
   "connected": true,
-  "notifications": 131891,
-  "parsed": 9,
-  "skipped": 131864,
+  "notifications": 203701,
+  "parsed": 13,
+  "skipped": 203654,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
@@ -67,7 +67,7 @@
    "15:32:21 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:32:21 GMT', 'content-type': 'application/json', 'content-length': '71', 'co"
   ]
  },
- "follow_buys_seen": 3,
+ "follow_buys_seen": 4,
  "guard": {
   "alerts": [
    "15:33:21 fuente de se\u00f1ales recuperada tras 13818 s"
@@ -84,7 +84,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 2,
-  "create": 2250,
+  "create": 2312,
   "buy": 1
  },
  "stream_samples": [
