@@ -76,11 +76,11 @@ def keys_of(tx):
 
 
 def sandwich(sig, mint, me):
-    t = rpc("getTransaction", [sig, {"encoding": "json", "maxSupportedTransactionVersion": 0, "commitment": "confirmed"}])
+    t = rpc("getTransaction", [sig, {"encoding": "json", "maxSupportedTransactionVersion": 1, "commitment": "confirmed"}])
     if not t:
         return {"checked": False}
     slot = t["slot"]
-    b = rpc("getBlock", [slot, {"encoding": "json", "transactionDetails": "accounts", "maxSupportedTransactionVersion": 0,
+    b = rpc("getBlock", [slot, {"encoding": "json", "transactionDetails": "accounts", "maxSupportedTransactionVersion": 1,
                                "rewards": False, "commitment": "confirmed"}])
     if not b:
         return {"checked": False, "slot": slot}
