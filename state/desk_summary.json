@@ -1,16 +1,16 @@
 {
- "now": 1793382299.8768134,
+ "now": 1793382574.7385316,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 4,
- "equity_usd": 165.81,
- "equity_sol": 1.755,
+ "equity_usd": 165.78,
+ "equity_sol": 1.7567,
  "cash_sol": 0.1131,
- "positions_usd": 155.13,
- "sol_usd": 94.48,
+ "positions_usd": 155.11,
+ "sol_usd": 94.37,
  "mult": 1.673,
  "halt": false,
  "pause": false,
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9997077743215914,
-   "mult": 0.992,
-   "value_usd": 114.63
+   "last_usd": 0.9996339788585114,
+   "mult": 0.991,
+   "value_usd": 114.62
   },
   {
    "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
@@ -68,7 +68,7 @@
    "sleeve": null,
    "reason": "catalyst",
    "max_h": null,
-   "last_usd": 0.012328878782485592,
+   "last_usd": 0.012326903111451227,
    "mult": 0.978,
    "value_usd": 40.49
   }
@@ -3654,6 +3654,10 @@
   [
    1793382147,
    165.78
+  ],
+  [
+   1793382452,
+   165.8
   ]
  ],
  "closed": [
@@ -4063,6 +4067,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793382376.119508,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (72%), pero el radar de noticias sigue viendo un shock bajista: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4 h -0.7%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-1746"
+  },
   {
    "ts": 1793381766.1124086,
    "title": "Cerebro automático: estado",
@@ -5455,13 +5466,6 @@
    "text": "Efectivo ocioso (27%), pero SOL cae fuerte (-1.4% en 24 h): no abro memecoins hasta que se calme.",
    "kind": "decisión",
    "id": "auto-mesa-note-20261029-1214"
-  },
-  {
-   "ts": 1793275444.1913888,
-   "title": "Cerebro automático: estado",
-   "text": "Efectivo ocioso (27%), pero SOL cae fuerte (-2.2% en 24 h): no abro memecoins hasta que se calme.",
-   "kind": "decisión",
-   "id": "auto-mesa-note-20261029-1204"
   }
  ],
  "wins": 2,
@@ -5471,7 +5475,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793381763.0767398,
+  "last_run": 1793382364.2182927,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -5481,11 +5485,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793381763.0791197,
-   "text": "Efectivo ocioso (72%), pero el radar de noticias sigue viendo un shock bajista: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4 h -0.4%): no abro memecoins hasta que mejore."
+   "ts": 1793382364.2192655,
+   "text": "Efectivo ocioso (72%), pero el radar de noticias sigue viendo un shock bajista: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4 h -0.7%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -6.2,
-  "sol_vs_ma20": -0.0898
+  "sol_ch24h": -6.4,
+  "sol_vs_ma20": -0.0923
  }
 }
