@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793333164.9434936,
+   "src": "bitcoinmagazine",
+   "title": "Bitcoin Price Briefly Slides to $76,300 as Binance Confirms Hack Estimated at $6.3 Billion",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793332279.949953,
    "src": "cointelegraph",
    "title": "Binance hack could accelerate shift to DEXs: Standard Chartered",
@@ -270,34 +281,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: Binance Founder CZ says it looks like Binance has been hacked. @WatcherGuru",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793333045.6159413,
- "bear_score": 13,
+ "ts": 1793333345.4317284,
+ "bear_score": 16,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.817,
-   "ch15m": -0.003345617755450836,
-   "ch1h": 0.012306566290255061,
-   "ch4h": 0.015694338078702463
+   "px": 96.76,
+   "ch15m": -0.003039513677811523,
+   "ch1h": 0.008673171545325653,
+   "ch4h": 0.01516025809159105
   },
   "BTC": {
-   "px": 77966.0,
-   "ch15m": -0.002150152302454744,
-   "ch1h": 0.006766354174737144,
-   "ch4h": 7.69625448948652e-05
+   "px": 77944.0,
+   "ch15m": -0.002201853653540864,
+   "ch1h": 0.005754987225476738,
+   "ch4h": 0.0010917170783082408
   }
  },
  "mode": "live",

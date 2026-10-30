@@ -130,3 +130,14 @@
 {"ts": 1793333000.5206606, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.78, "shock_px": 97.686, "ch1h": 0.011919698870765272, "ch4h": 0.015306175973814895}
 {"ts": 1793333045.616701, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.817, "shock_px": 97.686, "ch1h": 0.012306566290255061, "ch4h": 0.015694338078702463}
 {"ts": 1793333045.616902, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.817, "shock_px": 97.686, "ch1h": 0.012306566290255061, "ch4h": 0.015694338078702463}
+{"ts": 1793333120.4548712, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.791, "shock_px": 97.686, "ch1h": 0.008996330581269252, "ch4h": 0.015485495462414178}
+{"ts": 1793333120.455026, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.791, "shock_px": 97.686, "ch1h": 0.008996330581269252, "ch4h": 0.015485495462414178}
+{"ts": 1793333164.9434936, "kind": "event", "src": "bitcoinmagazine", "title": "Bitcoin Price Briefly Slides to $76,300 as Binance Confirms Hack Estimated at $6.3 Billion", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
+{"ts": 1793333166.8671222, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.735, "shock_px": 97.686, "ch1h": 0.008412559419564758, "ch4h": 0.014897969889314355}
+{"ts": 1793333166.8672857, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.735, "shock_px": 97.686, "ch1h": 0.008412559419564758, "ch4h": 0.014897969889314355}
+{"ts": 1793333225.605875, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.736, "shock_px": 97.686, "ch1h": 0.008422983904595283, "ch4h": 0.014908461417405539}
+{"ts": 1793333225.606132, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.736, "shock_px": 97.686, "ch1h": 0.008422983904595283, "ch4h": 0.014908461417405539}
+{"ts": 1793333300.4229696, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.749, "shock_px": 97.686, "ch1h": 0.00855850220999077, "ch4h": 0.015044851282589367}
+{"ts": 1793333300.4231234, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.749, "shock_px": 97.686, "ch1h": 0.00855850220999077, "ch4h": 0.015044851282589367}
+{"ts": 1793333345.4328527, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.76, "shock_px": 97.686, "ch1h": 0.008673171545325653, "ch4h": 0.01516025809159105}
+{"ts": 1793333345.433082, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.76, "shock_px": 97.686, "ch1h": 0.008673171545325653, "ch4h": 0.01516025809159105}
