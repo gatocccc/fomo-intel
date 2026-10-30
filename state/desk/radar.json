@@ -1,19 +1,5 @@
 {
- "shock": {
-  "since": 1793367920.8620214,
-  "bear_score": 16,
-  "sol_px": 95.129,
-  "btc_px": 76966.0,
-  "headlines": [
-   "Binance hit by $6.3B hack, the largest in cryptocurrency history",
-   "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
-   "Morning Minute: Binance’s $6.4B Hack Overshadows Hyperliquid’s Biggest Day",
-   "Binance says it holds $5B in matching tokens to cover hack losses"
-  ],
-  "confirmed": true,
-  "why": "bearish news score 16 in 90 min; SOL 1h -1.7%, 4h -1.8%; BTC 1h -0.6%",
-  "last_conf_ts": 1793372421.6032264
- },
+ "shock": null,
  "events": [
   {
    "ts": 1793392085.0850108,
@@ -58,45 +44,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793379756.6689413,
-   "src": "cointelegraph",
-   "title": "Recap: How Binance’s record $6.3B hack unfolded",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793379441.5676334,
-   "src": "cointelegraph",
-   "title": "As it happened: Binance’s record $6.3B crypto hack",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793393345.721456,
+ "ts": 1793394260.6671183,
  "bear_score": 2,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.959,
-   "ch15m": -0.0016296233992892928,
-   "ch1h": 0.0030527094116403752,
-   "ch4h": 0.002184650455927084
+   "px": 95.276,
+   "ch15m": 0.0029263773974188556,
+   "ch1h": 0.00501049566987688,
+   "ch4h": 0.0037293778049345416
   },
   "BTC": {
-   "px": 76942.0,
-   "ch15m": -0.0008440791096913092,
-   "ch1h": 0.0012883411631507968,
-   "ch4h": -0.003690419153922875
+   "px": 76921.0,
+   "ch15m": -0.0005976587368612396,
+   "ch1h": -9.099417637270513e-05,
+   "ch4h": -0.005546218487395005
   }
  },
  "mode": "live",
@@ -123,20 +87,20 @@
  ],
  "_skip_note": "stale:lab",
  "last_shock": {
-  "since": 1793308697.289756,
-  "bear_score": 9,
-  "sol_px": 97.686,
-  "btc_px": 79602.0,
+  "since": 1793367920.8620214,
+  "bear_score": 16,
+  "sol_px": 95.129,
+  "btc_px": 76966.0,
   "headlines": [
-   "Polymarket suspended trading amid reports of user funds being drained",
-   "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
-   "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts",
-   "Crypto PAC spending before midterms possibly obscured after reported FEC hack"
+   "Binance hit by $6.3B hack, the largest in cryptocurrency history",
+   "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
+   "Morning Minute: Binance’s $6.4B Hack Overshadows Hyperliquid’s Biggest Day",
+   "Binance says it holds $5B in matching tokens to cover hack losses"
   ],
-  "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%",
   "confirmed": true,
-  "confirmed_ts": 1793320444.802916,
-  "until": 1793353325.8028936
+  "why": "bearish news score 16 in 90 min; SOL 1h -1.7%, 4h -1.8%; BTC 1h -0.6%",
+  "last_conf_ts": 1793372421.6032264,
+  "until": 1793394065.8648615
  },
  "_skip_notes": {
   "lab": "stale:lab"
