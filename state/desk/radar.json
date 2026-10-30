@@ -103,34 +103,23 @@
    "types": [
     "selloff"
    ]
-  },
-  {
-   "ts": 1793375405.744995,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: 🇺🇸 US Secret Service is working with Circle to identify, freeze, and recover funds stolen from Binance. @WatcherGuru",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793389746.3217099,
+ "ts": 1793390048.3916981,
  "bear_score": 0,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.699,
-   "ch15m": 0.004018235793044944,
-   "ch1h": 0.009089359162883781,
-   "ch4h": 0.0019785847299813586
+   "px": 94.855,
+   "ch15m": 0.004511325969776214,
+   "ch1h": 0.008334130603480316,
+   "ch4h": 0.003183366118831632
   },
   "BTC": {
-   "px": 76853.0,
-   "ch15m": 0.005205676541756521,
-   "ch1h": 0.0023607053422369795,
-   "ch4h": -0.008041199855439052
+   "px": 76891.0,
+   "ch15m": 0.0030002217555211708,
+   "ch1h": 0.003484547922322001,
+   "ch4h": -0.0077044187487095295
   }
  },
  "mode": "live",
