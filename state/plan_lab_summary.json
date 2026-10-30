@@ -1,17 +1,17 @@
 {
- "now": 1793398179.573518,
+ "now": 1793398487.2645988,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 2,
- "equity_usd": 57.25,
- "equity_sol": 0.6001,
- "cash_sol": 0.2852,
- "positions_usd": 30.04,
- "sol_usd": 95.4,
- "mult": 1.034,
+ "equity_usd": 56.1,
+ "equity_sol": 0.5882,
+ "cash_sol": 0.2285,
+ "positions_usd": 34.31,
+ "sol_usd": 95.38,
+ "mult": 1.013,
  "halt": false,
  "pause": false,
  "positions": [
@@ -34,16 +34,46 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9997470784903442,
+   "last_usd": 0.9997693322019674,
    "mult": 0.982,
    "value_usd": 20.06
+  },
+  {
+   "mint": "5wCqCq6jbppuTocMeq6zd4UywAm64L1QNNxvEDAHpump",
+   "symbol": "5wCqCq",
+   "opened_ts": 1793398212.8141208,
+   "entry_usd": 0.0002088507550502476,
+   "tokens": 25896.482838,
+   "tokens_initial": 25896.482838,
+   "sol_in": 0.05669468,
+   "sol_out": 0.0,
+   "peak_usd": 0.0002088507550502476,
+   "stop": 0.5,
+   "trail": 0.9,
+   "trail_after": 99.0,
+   "tp": [
+    [
+     2.0,
+     0.5
+    ]
+   ],
+   "tp_done": [],
+   "thesis": "Consenso de KOLs: 4 nombres conocidos compraron en 29 min (ohtwoo, sicktuna, tAg911, Dior). Entrada entre los nombres y la audiencia; salida 50% a 2x (initials) y el resto afuera a los 30 min. Backtest 30 d (ops 184): +21,7% por operación, 48% de acierto, n=40.",
+   "id": "kols-1793398206-5wCqCq",
+   "sleeve": null,
+   "reason": "kol_consensus",
+   "max_h": 0.5,
+   "brain": false,
+   "last_usd": 0.0001647045465376227,
+   "mult": 0.789,
+   "value_usd": 4.27
   },
   {
    "mint": "perps:FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy",
    "symbol": "ETH short 1.69x",
    "opened_ts": 1793360616.3171363,
    "entry_usd": 2237.16,
-   "last_usd": 2239.35,
+   "last_usd": 2240.25,
    "peak_usd": 2237.16,
    "tokens": 0,
    "tokens_initial": 0,
@@ -1786,6 +1816,10 @@
   [
    1793398058,
    57.23
+  ],
+  [
+   1793398365,
+   56.37
   ]
  ],
  "closed": [
@@ -1806,6 +1840,23 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793398212.8135638,
+   "side": "buy",
+   "mint": "5wCqCq6jbppuTocMeq6zd4UywAm64L1QNNxvEDAHpump",
+   "symbol": "5wCqCq",
+   "ok": true,
+   "sol": 0.05669468,
+   "tokens": 25896.482838,
+   "price_usd": 0.000208850755,
+   "slip": 12.23,
+   "quote_impact": 3.73,
+   "via": "solanatracker",
+   "ab_arm": "solanatracker",
+   "sig": "3NJGMYMXdVyjJHFP3xZipamM38tGFzUGFjBY6tJTYY3erxAeNvz7x5Y954XTZDQSqpeBt4K9SvbFn1JHvoU4DDwf",
+   "error": "",
+   "id": "kols-1793398206-5wCqCq"
+  },
   {
    "ts": 1793342944.106445,
    "side": "writeoff",
@@ -1892,6 +1943,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793398212.8165526,
+   "title": "Execution",
+   "text": "buy 5wCqCq: bought 25,896 5wCqCq for 0.0567 SOL at $0.000208851 (slippage +12.2%)\nset 5wCqCq: ajustó 5wCqCq: brain=False",
+   "kind": "execution",
+   "id": "kols-1793398206-5wCqCq"
+  },
+  {
+   "ts": 1793398212.8163493,
+   "title": "Consenso KOLs 5wCqCq",
+   "text": "Compra automática del laboratorio: Consenso de KOLs: 4 nombres conocidos compraron en 29 min (ohtwoo, sicktuna, tAg911, Dior). Entrada entre los nombres y la audiencia; salida 50% a 2x (initials) y el resto afuera a los 30 min. Backtest 30 d (ops 184): +21,7% por operación, 48% de acierto, n=40. Riesgo aceptado: los KOLs ya ganan 20–100% cuando entra el cuarto; si la audiencia no llega, el tope de 30 min nos saca.",
+   "kind": "decisión",
+   "id": "kols-1793398206-5wCqCq"
+  },
   {
    "ts": 1793371320.8461962,
    "title": "Radar: SOL short closed",

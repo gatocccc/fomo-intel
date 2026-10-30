@@ -18,6 +18,33 @@
   "id": "lab-2026-10-29-01",
   "sleeve": "cash",
   "reason": "collateral",
-  "last_usd": 0.9995776390734112
+  "last_usd": 0.9997470784903442
+ },
+ "5wCqCq6jbppuTocMeq6zd4UywAm64L1QNNxvEDAHpump": {
+  "mint": "5wCqCq6jbppuTocMeq6zd4UywAm64L1QNNxvEDAHpump",
+  "symbol": "5wCqCq",
+  "opened_ts": 1793398212.8141208,
+  "entry_usd": 0.0002088507550502476,
+  "tokens": 25896.482838,
+  "tokens_initial": 25896.482838,
+  "sol_in": 0.05669468,
+  "sol_out": 0.0,
+  "peak_usd": 0.0002088507550502476,
+  "stop": 0.5,
+  "trail": 0.9,
+  "trail_after": 99.0,
+  "tp": [
+   [
+    2.0,
+    0.5
+   ]
+  ],
+  "tp_done": [],
+  "thesis": "Consenso de KOLs: 4 nombres conocidos compraron en 29 min (ohtwoo, sicktuna, tAg911, Dior). Entrada entre los nombres y la audiencia; salida 50% a 2x (initials) y el resto afuera a los 30 min. Backtest 30 d (ops 184): +21,7% por operación, 48% de acierto, n=40.",
+  "id": "kols-1793398206-5wCqCq",
+  "sleeve": null,
+  "reason": "kol_consensus",
+  "max_h": 0.5,
+  "brain": false
  }
 }
