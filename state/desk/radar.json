@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793329865.3013551,
+   "src": "cointelegraph",
+   "title": "Live updates: Binance says $6.3B hack involved compromised engineer’s laptop",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793329265.4585314,
    "src": "cointelegraph",
    "title": "Live updates: Binance says $6.3B hack possibly involved a compromised engineer’s laptop",
@@ -271,34 +282,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:WatcherGuru",
-   "title": "BREAKING: World s largest crypto exchange Binance hacked with over 5.6 billion stolen: • 1.45 billion BTC • 875 million ETH • 234 million TRX • 50 million XAUT • 1.57 billion USDT • 823 million USDC •",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793329746.053312,
- "bear_score": 57,
+ "ts": 1793330046.0141742,
+ "bear_score": 59,
  "bull_score": 2,
  "price": {
   "SOL": {
-   "px": 95.899,
-   "ch15m": 0.007596452887282501,
-   "ch1h": 0.020408380417318517,
-   "ch4h": -0.006917476984891202
+   "px": 95.62,
+   "ch15m": 0.0025477840569529953,
+   "ch1h": 0.012741349545103198,
+   "ch4h": -0.010237141467151045
   },
   "BTC": {
-   "px": 77523.0,
-   "ch15m": 0.0024828335337703233,
-   "ch1h": 0.009361491588979698,
-   "ch4h": -0.015943335152769134
+   "px": 77400.0,
+   "ch15m": 5.168225748097832e-05,
+   "ch1h": 0.004907688712316061,
+   "ch4h": -0.018165212096610484
   }
  },
  "mode": "live",
