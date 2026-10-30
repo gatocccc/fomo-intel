@@ -1,2 +1,510 @@
 activas 8978 pool 397
   50/397 útiles 3
+corto por tiempo en 394
+útiles 54 — precios con demora…
+{
+ "generated": "2026-10-30 23:02 UTC",
+ "pool": 397,
+ "usable": 54,
+ "cost_round_trip_pct": 0.19,
+ "cohorts": [
+  {
+   "cohort": "todos (top histórico + top del mes)",
+   "copiar": {
+    "traders": 54,
+    "n": 2368,
+    "mean_pct": -0.115,
+    "median_pct": -0.212,
+    "win_pct": 39.0,
+    "traders_positive_pct": 48.1,
+    "mean_of_traders_pct": 0.426,
+    "t_by_trader": 0.6
+   },
+   "contra": {
+    "traders": 54,
+    "n": 2368,
+    "mean_pct": -0.265,
+    "median_pct": -0.168,
+    "win_pct": 40.4,
+    "traders_positive_pct": 33.3,
+    "mean_of_traders_pct": -0.806,
+    "t_by_trader": -1.13
+   },
+   "contra_1a_mitad": {
+    "traders": 52,
+    "n": 1195,
+    "mean_pct": -0.513,
+    "median_pct": -0.17,
+    "win_pct": 39.2,
+    "traders_positive_pct": 36.5,
+    "mean_of_traders_pct": -1.911,
+    "t_by_trader": -1.39
+   },
+   "contra_2a_mitad": {
+    "traders": 51,
+    "n": 1173,
+    "mean_pct": -0.012,
+    "median_pct": -0.152,
+    "win_pct": 41.5,
+    "traders_positive_pct": 35.3,
+    "mean_of_traders_pct": 0.058,
+    "t_by_trader": 0.14
+   },
+   "contra_misma_ventana_sin_demora": {
+    "traders": 44,
+    "n": 333,
+    "mean_pct": -0.291,
+    "median_pct": -0.334,
+    "win_pct": 38.1,
+    "traders_positive_pct": 36.4,
+    "mean_of_traders_pct": -0.476,
+    "t_by_trader": -0.98
+   },
+   "contra_con_demora_1min_20d": {
+    "traders": 44,
+    "n": 333,
+    "mean_pct": -0.255,
+    "median_pct": -0.236,
+    "win_pct": 39.6,
+    "traders_positive_pct": 40.9,
+    "mean_of_traders_pct": -0.56,
+    "t_by_trader": -1.15
+   },
+   "contra_ops_mas_de_30min": {
+    "traders": 41,
+    "n": 251,
+    "mean_pct": -0.3,
+    "median_pct": -0.346,
+    "win_pct": 38.6,
+    "traders_positive_pct": 39.0,
+    "mean_of_traders_pct": -0.548,
+    "t_by_trader": -0.95
+   }
+  },
+  {
+   "cohort": "top histórico",
+   "copiar": {
+    "traders": 40,
+    "n": 2011,
+    "mean_pct": -0.427,
+    "median_pct": -0.258,
+    "win_pct": 35.9,
+    "traders_positive_pct": 40.0,
+    "mean_of_traders_pct": -0.566,
+    "t_by_trader": -1.57
+   },
+   "contra": {
+    "traders": 40,
+    "n": 2011,
+    "mean_pct": 0.047,
+    "median_pct": -0.122,
+    "win_pct": 43.7,
+    "traders_positive_pct": 40.0,
+    "mean_of_traders_pct": 0.186,
+    "t_by_trader": 0.51
+   },
+   "contra_1a_mitad": {
+    "traders": 40,
+    "n": 990,
+    "mean_pct": -0.076,
+    "median_pct": -0.119,
+    "win_pct": 43.6,
+    "traders_positive_pct": 47.5,
+    "mean_of_traders_pct": 0.05,
+    "t_by_trader": 0.11
+   },
+   "contra_2a_mitad": {
+    "traders": 37,
+    "n": 1021,
+    "mean_pct": 0.167,
+    "median_pct": -0.124,
+    "win_pct": 43.8,
+    "traders_positive_pct": 32.4,
+    "mean_of_traders_pct": 0.251,
+    "t_by_trader": 0.58
+   },
+   "contra_misma_ventana_sin_demora": {
+    "traders": 33,
+    "n": 279,
+    "mean_pct": -0.235,
+    "median_pct": -0.193,
+    "win_pct": 41.2,
+    "traders_positive_pct": 39.4,
+    "mean_of_traders_pct": -0.25,
+    "t_by_trader": -0.7
+   },
+   "contra_con_demora_1min_20d": {
+    "traders": 33,
+    "n": 279,
+    "mean_pct": -0.196,
+    "median_pct": -0.169,
+    "win_pct": 42.7,
+    "traders_positive_pct": 42.4,
+    "mean_of_traders_pct": -0.324,
+    "t_by_trader": -0.71
+   },
+   "contra_ops_mas_de_30min": {
+    "traders": 30,
+    "n": 210,
+    "mean_pct": -0.213,
+    "median_pct": -0.238,
+    "win_pct": 41.4,
+    "traders_positive_pct": 40.0,
+    "mean_of_traders_pct": -0.395,
+    "t_by_trader": -0.74
+   }
+  },
+  {
+   "cohort": "top del mes (en racha)",
+   "copiar": {
+    "traders": 18,
+    "n": 533,
+    "mean_pct": 1.144,
+    "median_pct": -0.022,
+    "win_pct": 49.3,
+    "traders_positive_pct": 66.7,
+    "mean_of_traders_pct": 2.693,
+    "t_by_trader": 1.41
+   },
+   "contra": {
+    "traders": 18,
+    "n": 533,
+    "mean_pct": -1.524,
+    "median_pct": -0.358,
+    "win_pct": 28.0,
+    "traders_positive_pct": 11.1,
+    "mean_of_traders_pct": -3.073,
+    "t_by_trader": -1.61
+   },
+   "contra_1a_mitad": {
+    "traders": 16,
+    "n": 279,
+    "mean_pct": -2.12,
+    "median_pct": -0.352,
+    "win_pct": 23.7,
+    "traders_positive_pct": 0.0,
+    "mean_of_traders_pct": -6.84,
+    "t_by_trader": -1.63
+   },
+   "contra_2a_mitad": {
+    "traders": 18,
+    "n": 254,
+    "mean_pct": -0.869,
+    "median_pct": -0.373,
+    "win_pct": 32.7,
+    "traders_positive_pct": 38.9,
+    "mean_of_traders_pct": -0.413,
+    "t_by_trader": -0.56
+   },
+   "contra_misma_ventana_sin_demora": {
+    "traders": 15,
+    "n": 97,
+    "mean_pct": -0.474,
+    "median_pct": -0.46,
+    "win_pct": 36.1,
+    "traders_positive_pct": 26.7,
+    "mean_of_traders_pct": -0.919,
+    "t_by_trader": -0.76
+   },
+   "contra_con_demora_1min_20d": {
+    "traders": 15,
+    "n": 97,
+    "mean_pct": -0.488,
+    "median_pct": -0.28,
+    "win_pct": 38.1,
+    "traders_positive_pct": 40.0,
+    "mean_of_traders_pct": -1.014,
+    "t_by_trader": -0.98
+   },
+   "contra_ops_mas_de_30min": {
+    "traders": 15,
+    "n": 75,
+    "mean_pct": -0.644,
+    "median_pct": -0.415,
+    "win_pct": 36.0,
+    "traders_positive_pct": 40.0,
+    "mean_of_traders_pct": -0.798,
+    "t_by_trader": -0.68
+   }
+  },
+  {
+   "cohort": "venían ganando (−60…−30)",
+   "copiar": {
+    "traders": 33,
+    "n": 1690,
+    "mean_pct": -0.029,
+    "median_pct": -0.199,
+    "win_pct": 40.7,
+    "traders_positive_pct": 54.5,
+    "mean_of_traders_pct": 0.594,
+    "t_by_trader": 1.54
+   },
+   "contra": {
+    "traders": 33,
+    "n": 1690,
+    "mean_pct": -0.351,
+    "median_pct": -0.181,
+    "win_pct": 39.4,
+    "traders_positive_pct": 27.3,
+    "mean_of_traders_pct": -0.974,
+    "t_by_trader": -2.52
+   },
+   "contra_1a_mitad": {
+    "traders": 33,
+    "n": 892,
+    "mean_pct": -0.566,
+    "median_pct": -0.177,
+    "win_pct": 38.1,
+    "traders_positive_pct": 36.4,
+    "mean_of_traders_pct": -1.365,
+    "t_by_trader": -2.57
+   },
+   "contra_2a_mitad": {
+    "traders": 30,
+    "n": 798,
+    "mean_pct": -0.11,
+    "median_pct": -0.188,
+    "win_pct": 40.9,
+    "traders_positive_pct": 26.7,
+    "mean_of_traders_pct": -0.863,
+    "t_by_trader": -1.74
+   },
+   "contra_misma_ventana_sin_demora": {
+    "traders": 26,
+    "n": 205,
+    "mean_pct": -0.64,
+    "median_pct": -0.444,
+    "win_pct": 34.6,
+    "traders_positive_pct": 30.8,
+    "mean_of_traders_pct": -1.171,
+    "t_by_trader": -2.84
+   },
+   "contra_con_demora_1min_20d": {
+    "traders": 26,
+    "n": 205,
+    "mean_pct": -0.542,
+    "median_pct": -0.379,
+    "win_pct": 37.1,
+    "traders_positive_pct": 38.5,
+    "mean_of_traders_pct": -1.252,
+    "t_by_trader": -2.48
+   },
+   "contra_ops_mas_de_30min": {
+    "traders": 23,
+    "n": 149,
+    "mean_pct": -0.65,
+    "median_pct": -0.543,
+    "win_pct": 36.9,
+    "traders_positive_pct": 34.8,
+    "mean_of_traders_pct": -1.336,
+    "t_by_trader": -2.29
+   }
+  },
+  {
+   "cohort": "venían perdiendo (−60…−30)",
+   "copiar": {
+    "traders": 21,
+    "n": 678,
+    "mean_pct": -0.329,
+    "median_pct": -0.241,
+    "win_pct": 34.8,
+    "traders_positive_pct": 38.1,
+    "mean_of_traders_pct": 0.162,
+    "t_by_trader": 0.09
+   },
+   "contra": {
+    "traders": 21,
+    "n": 678,
+    "mean_pct": -0.051,
+    "median_pct": -0.139,
+    "win_pct": 42.8,
+    "traders_positive_pct": 42.9,
+    "mean_of_traders_pct": -0.542,
+    "t_by_trader": -0.31
+   },
+   "contra_1a_mitad": {
+    "traders": 19,
+    "n": 303,
+    "mean_pct": -0.358,
+    "median_pct": -0.145,
+    "win_pct": 42.6,
+    "traders_positive_pct": 36.8,
+    "mean_of_traders_pct": -2.858,
+    "t_by_trader": -0.77
+   },
+   "contra_2a_mitad": {
+    "traders": 21,
+    "n": 375,
+    "mean_pct": 0.197,
+    "median_pct": -0.131,
+    "win_pct": 42.9,
+    "traders_positive_pct": 47.6,
+    "mean_of_traders_pct": 1.375,
+    "t_by_trader": 2.32
+   },
+   "contra_misma_ventana_sin_demora": {
+    "traders": 18,
+    "n": 128,
+    "mean_pct": 0.268,
+    "median_pct": -0.141,
+    "win_pct": 43.8,
+    "traders_positive_pct": 44.4,
+    "mean_of_traders_pct": 0.528,
+    "t_by_trader": 0.53
+   },
+   "contra_con_demora_1min_20d": {
+    "traders": 18,
+    "n": 128,
+    "mean_pct": 0.203,
+    "median_pct": -0.118,
+    "win_pct": 43.8,
+    "traders_positive_pct": 44.4,
+    "mean_of_traders_pct": 0.439,
+    "t_by_trader": 0.48
+   },
+   "contra_ops_mas_de_30min": {
+    "traders": 18,
+    "n": 102,
+    "mean_pct": 0.212,
+    "median_pct": -0.164,
+    "win_pct": 41.2,
+    "traders_positive_pct": 44.4,
+    "mean_of_traders_pct": 0.459,
+    "t_by_trader": 0.44
+   }
+  },
+  {
+   "cohort": "apalancamiento aprox. ≥ 5x",
+   "copiar": {
+    "traders": 1,
+    "n": 14,
+    "mean_pct": -0.601,
+    "median_pct": -0.219,
+    "win_pct": 14.3,
+    "traders_positive_pct": 0.0,
+    "mean_of_traders_pct": -0.601
+   },
+   "contra": {
+    "traders": 1,
+    "n": 14,
+    "mean_pct": 0.221,
+    "median_pct": -0.161,
+    "win_pct": 21.4,
+    "traders_positive_pct": 100.0,
+    "mean_of_traders_pct": 0.221
+   },
+   "contra_1a_mitad": {
+    "traders": 1,
+    "n": 10,
+    "mean_pct": 0.371,
+    "median_pct": -0.17,
+    "win_pct": 30.0,
+    "traders_positive_pct": 100.0,
+    "mean_of_traders_pct": 0.371
+   },
+   "contra_2a_mitad": {
+    "traders": 1,
+    "n": 4,
+    "mean_pct": -0.156,
+    "median_pct": -0.161,
+    "win_pct": 0.0,
+    "traders_positive_pct": 0.0,
+    "mean_of_traders_pct": -0.156
+   },
+   "contra_misma_ventana_sin_demora": {
+    "traders": 1,
+    "n": 1,
+    "mean_pct": -0.193,
+    "median_pct": -0.193,
+    "win_pct": 0.0,
+    "traders_positive_pct": 0.0,
+    "mean_of_traders_pct": -0.193
+   },
+   "contra_con_demora_1min_20d": {
+    "traders": 1,
+    "n": 1,
+    "mean_pct": -0.185,
+    "median_pct": -0.185,
+    "win_pct": 0.0,
+    "traders_positive_pct": 0.0,
+    "mean_of_traders_pct": -0.185
+   },
+   "contra_ops_mas_de_30min": {
+    "n": 0
+   }
+  },
+  {
+   "cohort": "apalancamiento aprox. < 2x",
+   "copiar": {
+    "traders": 48,
+    "n": 1739,
+    "mean_pct": 0.0,
+    "median_pct": -0.161,
+    "win_pct": 43.0,
+    "traders_positive_pct": 52.1,
+    "mean_of_traders_pct": 0.563,
+    "t_by_trader": 0.71
+   },
+   "contra": {
+    "traders": 48,
+    "n": 1739,
+    "mean_pct": -0.38,
+    "median_pct": -0.219,
+    "win_pct": 37.8,
+    "traders_positive_pct": 31.2,
+    "mean_of_traders_pct": -0.943,
+    "t_by_trader": -1.18
+   },
+   "contra_1a_mitad": {
+    "traders": 46,
+    "n": 879,
+    "mean_pct": -0.733,
+    "median_pct": -0.194,
+    "win_pct": 37.8,
+    "traders_positive_pct": 32.6,
+    "mean_of_traders_pct": -2.272,
+    "t_by_trader": -1.47
+   },
+   "contra_2a_mitad": {
+    "traders": 45,
+    "n": 860,
+    "mean_pct": -0.02,
+    "median_pct": -0.25,
+    "win_pct": 37.9,
+    "traders_positive_pct": 37.8,
+    "mean_of_traders_pct": 0.094,
+    "t_by_trader": 0.2
+   },
+   "contra_misma_ventana_sin_demora": {
+    "traders": 39,
+    "n": 294,
+    "mean_pct": -0.286,
+    "median_pct": -0.351,
+    "win_pct": 38.4,
+    "traders_positive_pct": 35.9,
+    "mean_of_traders_pct": -0.546,
+    "t_by_trader": -1.0
+   },
+   "contra_con_demora_1min_20d": {
+    "traders": 39,
+    "n": 294,
+    "mean_pct": -0.243,
+    "median_pct": -0.228,
+    "win_pct": 40.1,
+    "traders_positive_pct": 41.0,
+    "mean_of_traders_pct": -0.642,
+    "t_by_trader": -1.18
+   },
+   "contra_ops_mas_de_30min": {
+    "traders": 37,
+    "n": 227,
+    "mean_pct": -0.292,
+    "median_pct": -0.349,
+    "win_pct": 38.3,
+    "traders_positive_pct": 37.8,
+    "mean_of_traders_pct": -0.63,
+    "t_by_trader": -1.0
+   }
+  }
+ ]
+}
