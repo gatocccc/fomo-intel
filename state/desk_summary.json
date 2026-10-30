@@ -1,17 +1,17 @@
 {
- "now": 1793327376.8531847,
+ "now": 1793327976.923128,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 166.53,
- "equity_sol": 1.7502,
+ "equity_usd": 166.48,
+ "equity_sol": 1.7478,
  "cash_sol": 0.1009,
- "positions_usd": 156.94,
- "sol_usd": 95.15,
- "mult": 1.681,
+ "positions_usd": 156.88,
+ "sol_usd": 95.25,
+ "mult": 1.68,
  "halt": false,
  "pause": false,
  "positions": [
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9990926465009109,
+   "last_usd": 0.9987132920046772,
    "mult": 0.991,
-   "value_usd": 156.94
+   "value_usd": 156.88
   }
  ],
  "perps_pnl_usd": 0,
@@ -2889,6 +2889,18 @@
   [
    1793327104,
    166.51
+  ],
+  [
+   1793327407,
+   166.53
+  ],
+  [
+   1793327584,
+   166.46
+  ],
+  [
+   1793327703,
+   166.45
   ]
  ],
  "closed": [
@@ -3270,6 +3282,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793327718.4289398,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero SOL cayó fuerte (24 h -5.0%, 4 h -2.1%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-0235"
+  },
+  {
+   "ts": 1793327598.9664168,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero SOL cayó fuerte (24 h -4.9%, 4 h -2.0%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-0233"
+  },
   {
    "ts": 1793327118.8359368,
    "title": "Cerebro automático: estado",
@@ -4461,7 +4487,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793327104.3655005,
+  "last_run": 1793327704.0115693,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4471,11 +4497,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793327104.3674119,
+   "ts": 1793327704.0133553,
    "text": "Efectivo ocioso (96%), pero SOL cayó fuerte (24 h -5.0%, 4 h -2.1%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
   "sol_ch24h": -5.0,
-  "sol_vs_ma20": -0.0883
+  "sol_vs_ma20": -0.0884
  }
 }

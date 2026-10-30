@@ -1,0 +1,25 @@
+== 156_tesis_viva3 2026-10-30T02:33:03Z ==
+--- clave en .env: 0 líneas; con export: 0; en el entorno del runner: si
+--- otros lugares:
+/etc/environment
+--- en el proceso del radar: 0
+clave agregada al .env
+--- radar.json
+llm: {'key': True, 'last_error': None}
+book entrada 92.87 mark 95.031 stop_px 96.12 be None reglas {'stop_up': 0.035, 'trail_arm': 0.04, 'trail_gap': 0.02, 'tp_down': 0.12, 'max_h': 12} tesis confirmed ['bitcoin', 'cftc', 'fed', 'polymarket'] []
+--- log
+{"ts": 1793308697.2913723, "kind": "open", "symbol": "SOL", "side": "short", "entry": 97.686, "collateral_usd": 18.61, "lev": 2.0, "size_usd": 37.22, "mode": "shadow", "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%", "headlines": 
+{"ts": 1793309060.2848802, "kind": "open", "symbol": "SOL", "side": "short", "entry": 97.53, "collateral_usd": 18.59, "lev": 2.0, "size_usd": 37.18, "mode": "live", "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%", "headlines": ["P
+{"ts": 1793320444.8066633, "kind": "open", "leg": "book", "symbol": "SOL", "side": "short", "entry": 92.87, "collateral_usd": 81.81, "lev": 2.0, "size_usd": 163.61, "mode": "live", "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0% + 
+{"ts": 1793327061.0759363, "kind": "close", "ts_open": 1793309060.2848802, "leg": "lab", "symbol": "SOL", "side": "short", "entry": 97.53, "exit": 95.053, "collateral_usd": 18.59, "size_usd": 37.18, "ret_px": 0.0254, "best_ret": 0.0467, "pnl_usd": 0.86, "hold_
+--- journal
+Oct 30 02:33:03 simplai-prod systemd[1]: Stopping fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps)...
+Oct 30 02:33:03 simplai-prod systemd[1]: fomo-radar.service: Deactivated successfully.
+Oct 30 02:33:03 simplai-prod systemd[1]: Stopped fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 30 02:33:03 simplai-prod systemd[1]: fomo-radar.service: Consumed 3.703s CPU time.
+Oct 30 02:33:03 simplai-prod systemd[1]: Started fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 30 02:33:03 simplai-prod systemd[1]: Stopping fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps)...
+Oct 30 02:33:03 simplai-prod systemd[1]: fomo-radar.service: Deactivated successfully.
+Oct 30 02:33:03 simplai-prod systemd[1]: Stopped fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 30 02:33:03 simplai-prod systemd[1]: Started fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+== exit 0 ==

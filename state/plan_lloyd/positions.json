@@ -4,7 +4,7 @@
   "symbol": "USDC",
   "opened_ts": 1793204947.898395,
   "entry_usd": 1.0088870352805355,
-  "tokens": 518.175316,
+  "tokens": 513.4992675735908,
   "tokens_initial": 789.1115419999999,
   "sol_in": 7.911664104,
   "sol_out": 2.657660148,
@@ -16,7 +16,7 @@
   "tp_done": [],
   "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
   "id": "equilibrado-2026-10-28-01",
-  "last_usd": 0.9990943382721529,
+  "last_usd": 0.9987065090312219,
   "sleeve": "cash",
   "from_plan": "equilibrado"
  },
@@ -42,7 +42,7 @@
   "tp_done": [],
   "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
   "id": "auto-equilibrado-20261029-0009",
-  "last_usd": 0.3548327187053664,
+  "last_usd": 0.3561465475375938,
   "sleeve": "established",
   "from_plan": "equilibrado"
  }
