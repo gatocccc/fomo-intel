@@ -1,9 +1,9 @@
 {
  "mode": "live",
- "last_run": 1793360584.5864773,
+ "last_run": 1793361183.7072732,
  "regime": "risk_off",
  "profile": "aggressive",
- "status": "idle (plan not running or stale summary)",
+ "status": "ok",
  "last_action": {
   "ts": 1793310124.2687736,
   "title": "Cerebro automático: movimiento",
@@ -34,7 +34,7 @@
  ],
  "_noted_no_cands": 1793243285.1055489,
  "last_note": {
-  "ts": 1793359265.8523715,
+  "ts": 1793361183.7091486,
   "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
  }
 }
