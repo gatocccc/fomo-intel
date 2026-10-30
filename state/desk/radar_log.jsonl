@@ -1,13 +1,3 @@
-{"ts": 1793339478.1211329, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.17, "shock_px": 97.686, "ch1h": 0.008848102436568084, "ch4h": 0.04580803238521347}
-{"ts": 1793339478.1212828, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.17, "shock_px": 97.686, "ch1h": 0.008848102436568084, "ch4h": 0.04580803238521347}
-{"ts": 1793339537.7538173, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.109, "shock_px": 97.686, "ch1h": 0.008221233390539373, "ch4h": 0.045158197507190634}
-{"ts": 1793339537.7539756, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.109, "shock_px": 97.686, "ch1h": 0.008221233390539373, "ch4h": 0.045158197507190634}
-{"ts": 1793339612.7038157, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.969, "shock_px": 97.686, "ch1h": 0.006782517547194944, "ch4h": 0.04366677319697443}
-{"ts": 1793339612.7040346, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.969, "shock_px": 97.686, "ch1h": 0.006782517547194944, "ch4h": 0.04366677319697443}
-{"ts": 1793339657.7596688, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.944, "shock_px": 97.686, "ch1h": 0.006525604003740693, "ch4h": 0.0434004474272931}
-{"ts": 1793339657.7598357, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.944, "shock_px": 97.686, "ch1h": 0.006525604003740693, "ch4h": 0.0434004474272931}
-{"ts": 1793339717.8168573, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.944, "shock_px": 97.686, "ch1h": 0.007633587786259666, "ch4h": 0.04306709265175712}
-{"ts": 1793339717.817041, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.944, "shock_px": 97.686, "ch1h": 0.007633587786259666, "ch4h": 0.04306709265175712}
 {"ts": 1793339777.2515848, "kind": "event", "src": "cointelegraph", "title": "North Korea linked to $6.3B Binance hack by crypto investigators", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793339780.1416667, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.053, "shock_px": 97.686, "ch1h": 0.008754963889631817, "ch4h": 0.04422790202342908}
 {"ts": 1793339780.1417937, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.053, "shock_px": 97.686, "ch1h": 0.008754963889631817, "ch4h": 0.04422790202342908}
@@ -198,3 +188,13 @@
 {"ts": 1793345298.239838, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.924, "shock_px": 97.686, "ch1h": -0.0037946224198092127, "ch4h": 0.018460930430893807}
 {"ts": 1793345358.3024013, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.914, "shock_px": 97.686, "ch1h": -0.0038963549243618, "ch4h": 0.018356925189029427}
 {"ts": 1793345358.3026102, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.914, "shock_px": 97.686, "ch1h": -0.0038963549243618, "ch4h": 0.018356925189029427}
+{"ts": 1793345433.0731921, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.035, "shock_px": 97.686, "ch1h": -0.000672776016554355, "ch4h": 0.014655502540908083}
+{"ts": 1793345433.0733833, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.035, "shock_px": 97.686, "ch1h": -0.000672776016554355, "ch4h": 0.014655502540908083}
+{"ts": 1793345493.3559277, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.136, "shock_px": 97.686, "ch1h": 0.00035677516029397616, "ch4h": 0.01570084558937679}
+{"ts": 1793345493.3560848, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.136, "shock_px": 97.686, "ch1h": 0.00035677516029397616, "ch4h": 0.01570084558937679}
+{"ts": 1793345538.1417105, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.167, "shock_px": 97.686, "ch1h": 0.000672776016554355, "ch4h": 0.01602169345573845}
+{"ts": 1793345538.141856, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.167, "shock_px": 97.686, "ch1h": 0.000672776016554355, "ch4h": 0.01602169345573845}
+{"ts": 1793345598.4665966, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.116, "shock_px": 97.686, "ch1h": 0.00015290364012598978, "ch4h": 0.015493846965917601}
+{"ts": 1793345598.4667578, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.116, "shock_px": 97.686, "ch1h": 0.00015290364012598978, "ch4h": 0.015493846965917601}
+{"ts": 1793345673.2898083, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.855, "shock_px": 97.686, "ch1h": -0.0025076196980662324, "ch4h": 0.012792514929775844}
+{"ts": 1793345673.2900093, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.855, "shock_px": 97.686, "ch1h": -0.0025076196980662324, "ch4h": 0.012792514929775844}

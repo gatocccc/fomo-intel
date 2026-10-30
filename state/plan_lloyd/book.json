@@ -1,15 +1,15 @@
 {
- "ts": 1793344923.639186,
+ "ts": 1793345524.5306056,
  "regime": {
   "state": "risk_off",
-  "ts": 1793344325.3893688,
+  "ts": 1793345524.5201871,
   "since": 1793343124.8845656,
   "exit_since": null,
-  "sol": 97.97,
+  "sol": 98.17,
   "sol_ma20": 104.21,
-  "sol_ch4h": 0.8,
-  "sol_ch24h": -1.8,
-  "btc_vs_ma20": -0.0397,
+  "sol_ch4h": 1.0,
+  "sol_ch24h": -1.6,
+  "btc_vs_ma20": -0.0386,
   "breadth_above": 3,
   "breadth_total": 20,
   "why": "news",
@@ -27,7 +27,7 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 534.27,
+   "value_usd": 534.28,
    "pct": 98.6,
    "positions": 0
   },
@@ -56,6 +56,6 @@
    "positions": 0
   }
  ],
- "liquid_usd": 534.27,
- "trad_status": "SOL -5.9%, BTC -3.8%, ETH -6.6%, JUP -15.8%"
+ "liquid_usd": 534.28,
+ "trad_status": "3 of 20 established memecoins above their 20-day average (best: SAPLING +78%, STONK +8%, OTC +3%)"
 }
