@@ -2,6 +2,28 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793358576.7944746,
+   "src": "tg:wublockchainenglish",
+   "title": "Binance Reserves Over 6.34B in Company Funds to Cover Hack Losses, Including 5B in Affected Tokens Binance said it has reserved over 6.34 billion in company funds to cover losses from the hack, includ",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793358455.437085,
+   "src": "cointelegraph",
+   "title": "EIP-7702 didn’t cause Binance hack, but may have amplified losses",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793354540.322614,
    "src": "cointelegraph",
    "title": "THORChain’s RUNE jumps 13% after Binance’s record $6.3B hack",
@@ -68,21 +90,21 @@
    ]
   }
  ],
- "ts": 1793358245.9335713,
- "bear_score": 7,
+ "ts": 1793358579.4413698,
+ "bear_score": 10,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 97.017,
-   "ch15m": 0.0015795341922695272,
-   "ch1h": 0.006233405243943002,
-   "ch4h": -0.011090158503644143
+   "px": 96.912,
+   "ch15m": -0.002059477716450986,
+   "ch1h": 0.00574939288901799,
+   "ch4h": -0.010859802400587815
   },
   "BTC": {
-   "px": 77693.0,
-   "ch15m": 0.001211355816440829,
-   "ch1h": 0.0024773873885497455,
-   "ch4h": -0.010885063909965909
+   "px": 77744.0,
+   "ch15m": 0.0005662805662804971,
+   "ch1h": 0.004003409355063603,
+   "ch4h": -0.009365562762012725
   }
  },
  "mode": "live",
