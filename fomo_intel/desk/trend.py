@@ -142,7 +142,9 @@ class TrendLab:
                 r = {"ok": False, "error": str(e)}
             if not r.get("ok"):
                 log.error("trend: no abrió %s %s: %s", side, coin, r.get("error"))
-                self.radar_log("trend_open_failed", coin=coin, side=side, error=str(r.get("error"))[:300]); return
+                self.radar_log("trend_open_failed", coin=coin, side=side, error=str(r.get("error"))[:300])
+                self.last = now - 3600 + 300   # reintenta en 5 min (el 30/10 falló por un 429 del RPC justo tras el reinicio)
+                return
             rec.update({"pubkey": r.get("position_pubkey"), "sig": r.get("sig")})
             try:
                 live = [q for q in self.radar.perps(self.leg).positions() if q.get("pubkey") == rec["pubkey"]]
