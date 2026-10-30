@@ -135,6 +135,23 @@ def book_view(full: bool = True, admin: bool = False) -> dict | None:
                      "worst": {"token": min(rets, key=lambda x: x[1])[0], "result": min(rets, key=lambda x: x[1])[1]} if rets else None},
            "brain": {"last_run": br.get("last_run"), "every_min": 10, "last_action": br.get("last_action"), "next_review": "09:39 / 21:39 ART",
                      "live": br.get("mode") == "live"}}
+    # 30/10: órdenes guardadas (niveles de la tortuga 55/20) y posiciones de perps abiertas del libro, para que se vea qué está armado
+    try:
+        lv = jl(STATE / "desk" / "levels.json", {}) or {}
+        out["armed"] = [{"coin": c, "price": v.get("px"), "buy_above": v.get("buy_above"), "short_below": v.get("short_below"),
+                         "to_buy": v.get("to_buy"), "to_short": v.get("to_short"), "long_exit": v.get("long_exit_below"), "short_exit": v.get("short_exit_above")}
+                        for c, v in (lv.get("view") or {}).items()]
+        perps = []
+        for c, p in (jl(STATE / "desk" / "turtle_pos_book.json", {}) or {}).items():
+            perps.append({"coin": c, "side": p.get("side"), "entry": p.get("entry"), "mark": p.get("mark"), "exit_level": p.get("exit_level"),
+                          "collateral_usd": p.get("collateral_usd"), "lev": p.get("lev"), "pnl_usd": p.get("pnl_usd_est"), "opened": p.get("ts"), "system": "Breakout 55/20"})
+        rp = ((jl(STATE / "desk" / "radar.json", {}) or {}).get("positions") or {}).get("book")
+        if rp:
+            perps.append({"coin": "SOL", "side": rp.get("side"), "entry": rp.get("entry"), "mark": rp.get("mark"), "exit_level": rp.get("stop_px"),
+                          "collateral_usd": rp.get("collateral_usd"), "lev": rp.get("lev"), "pnl_usd": rp.get("pnl_usd_est"), "opened": rp.get("ts"), "system": "News-shock short"})
+        out["perps"] = perps
+    except Exception:  # noqa: BLE001
+        out["armed"], out["perps"] = [], []
     try:
         out["track"] = track_record()
     except Exception:  # noqa: BLE001

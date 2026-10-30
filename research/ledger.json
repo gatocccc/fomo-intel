@@ -82,13 +82,13 @@
    "name": "Volatility targeting + drawdown throttle",
    "question": "Does sizing each pocket to a fixed volatility (and cutting exposure after a drawdown) improve risk-adjusted results?",
    "method": "Replay pocket signals fixed-size vs vol-targeted (10/20-day half-life); same costs; random-entry control",
-   "result": "Queued. Evidence: arXiv 2602.11708 (OOS 2022–25: Sharpe 0.65→1.83, maxDD 35%→16%); arXiv 2603.23480",
-   "verdict": "queued",
+   "result": "Oct 30 backtest (majors_bt.py, 8 majors 2020–26, out-of-sample 2024–26): sizing each position to 60% annual volatility raised out-of-sample Sharpe in every trend variant (e.g. 20-day average long-only +0.29 → +0.72; 30-day momentum +0.50 → +0.66) and cut drawdowns.",
+   "verdict": "adopted",
    "sleeve": "all",
    "priority": 1,
    "public_title": "Size by volatility",
    "hypothesis": "Betting less when a market gets wild, and more when it calms down, cuts drawdowns without hurting returns.",
-   "efficacy": null
+   "efficacy": "Adopted: the lab's daily-trend test sizes leverage as 60% / 30-day volatility."
   },
   {
    "date": "2026-10-29",
@@ -147,13 +147,13 @@
    "name": "Multi-lookback trend ensemble + ATR trailing stop",
    "question": "Is a 10/20/55/100-day breakout ensemble with ATR trail sturdier than the single 20-day MA?",
    "method": "Walk-forward on years of Binance daily candles; same costs/sizing; random long/short control with matched holding time",
-   "result": "Queued. Evidence: Zarattini–Pagani–Barbon SSRN 5209907 (Sharpe >1.5 net, 2015+); AdaptiveTrend ablation (trail: maxDD 22%→13%)",
-   "verdict": "queued",
+   "result": "Oct 30 walk-forward (design 2020–23, test 2024–26, costs + funding, 100 random-timing controls): the 10-rule average is positive out of sample (long-only Sharpe +0.66, worst drop −38% vs −71% buy-and-hold) but t 1.1 < 2. 4-hour versions lose. Now live in the lab (see daily-trend test).",
+   "verdict": "testing",
    "sleeve": "majors, established",
    "priority": 6,
    "public_title": "Several trends, not one",
    "hypothesis": "Reading the trend on four time windows at once, with a trailing stop, is sturdier than a single 20-day average.",
-   "efficacy": null
+   "efficacy": "Testing live in the lab."
   },
   {
    "date": "2026-10-29",
@@ -262,6 +262,18 @@
    "method": "Backtest first (majors_bt.py): 8 markets, Jan 2020–Oct 2026, costs 0.10% per trade plus 10%/yr funding on longs; rules picked on 2020–23, judged on 2024–26 against 100 random-timing controls. Result: every daily trend rule was positive out of sample in 5–8 of 8 markets and cut the worst drawdown from −71% (buy and hold) to about −38%, but t-stats of 0.6–1.7 fall short of the t ≥ 2 bar; 4-hour rules, dip-buying and rip-shorting lost. Live: fomo-radar checks hourly; signal ≤ −0.5 opens a short (≥ +0.5 a long) on the more extreme of BTC/ETH, $10 collateral, leverage = 60% vol target / 30-day vol (1–2x); exit when the signal fades past ±0.2, hard stop 8% against, or 14 days. Adopt into the book after 15+ trades beating random timing.",
    "result": "Started Oct 30. First signal: ETH −0.8 (9 of 10 rules bearish), BTC −0.3.",
    "efficacy": "Testing.",
+   "verdict": "testing",
+   "sleeve": "majors"
+  },
+  {
+   "date": "2026-10-30",
+   "name": "Turtle breakout 55/20 with orders on file (book, live)",
+   "public_title": "Buy the 55-day high, short the 55-day low, exit at the 20-day extreme",
+   "question": "Do standing orders at each major's 55-day high (buy) and 55-day low (short), with the exit at the 20-day low/high, make money after costs?",
+   "hypothesis": "Breakouts to new 55-day extremes start the multi-week moves that trend rules catch; standing orders catch them the minute they happen instead of at the daily close.",
+   "method": "Backtest on 8 majors, Binance daily 2020–26, 0.1% fee per side + 0.2% slippage + 10%/yr funding on longs; out-of-sample 2024–26: long and short 148 trades, 45% winners, +7.1% per trade (t 2.04), 7 of 8 markets positive; long-only 82 trades, +13.8% (t 2.35); random entries with the same exit +1.8% (p50) / +4.3% (p95). Live from Oct 30 in the book on BTC/ETH/SOL perps at 2x, each trade sized so hitting the exit costs 1% of the book. Levels published on the book page.",
+   "result": "Started Oct 30. Levels on file: short ETH at $2,233, SOL at $95.0, BTC at $74,968; buy ETH above $2,807, SOL above $124.95, BTC above $87,396.",
+   "efficacy": "Testing live (passed the backtest bar).",
    "verdict": "testing",
    "sleeve": "majors"
   }
