@@ -1,13 +1,3 @@
-{"ts": 1793336897.8276846, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.662, "shock_px": 97.686, "ch1h": 0.008821584992975806, "ch4h": 0.03545452617739997}
-{"ts": 1793336897.8278644, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.662, "shock_px": 97.686, "ch1h": 0.008821584992975806, "ch4h": 0.03545452617739997}
-{"ts": 1793336957.829247, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.708, "shock_px": 97.686, "ch1h": 0.009296752334517766, "ch4h": 0.03594223796094065}
-{"ts": 1793336957.8294694, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.708, "shock_px": 97.686, "ch1h": 0.009296752334517766, "ch4h": 0.03594223796094065}
-{"ts": 1793337047.7885797, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.787, "shock_px": 97.686, "ch1h": 0.00572868456237785, "ch4h": 0.03237964527027026}
-{"ts": 1793337047.788755, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.787, "shock_px": 97.686, "ch1h": 0.00572868456237785, "ch4h": 0.03237964527027026}
-{"ts": 1793337092.176117, "kind": "event", "src": "cointelegraph", "title": "Live updates: Binance $6.3B hack linked to North Korea’s TraderTraitor", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
-{"ts": 1793337094.5734057, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.923, "shock_px": 97.686, "ch1h": 0.007127429805615426, "ch4h": 0.03381545608108105}
-{"ts": 1793337094.573564, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.923, "shock_px": 97.686, "ch1h": 0.007127429805615426, "ch4h": 0.03381545608108105}
-{"ts": 1793337152.785402, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.863, "shock_px": 97.686, "ch1h": 0.00651033631595177, "ch4h": 0.03318201013513522}
 {"ts": 1793337152.785565, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.863, "shock_px": 97.686, "ch1h": 0.00651033631595177, "ch4h": 0.03318201013513522}
 {"ts": 1793337212.1035187, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: 🇰🇵 North Korea responsible for 6 billion Binance hack, CNN reports. @WatcherGuru", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw+llm", "confirmed": false}}
 {"ts": 1793337215.323627, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.695, "shock_px": 97.686, "ch1h": 0.004782474544893445, "ch4h": 0.0314083614864864}
@@ -198,3 +188,13 @@
 {"ts": 1793342586.3630812, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.033, "shock_px": 97.686, "ch1h": -0.0028176177398027136, "ch4h": 0.027588809341621223}
 {"ts": 1793342660.8399334, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.007, "shock_px": 97.686, "ch1h": -0.003082087274946521, "ch4h": 0.027316275510739008}
 {"ts": 1793342660.8400946, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.007, "shock_px": 97.686, "ch1h": -0.003082087274946521, "ch4h": 0.027316275510739008}
+{"ts": 1793342705.7215168, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.991, "shock_px": 97.686, "ch1h": -0.0038021654043612907, "ch4h": 0.02991223921383157}
+{"ts": 1793342705.7216802, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.991, "shock_px": 97.686, "ch1h": -0.0038021654043612907, "ch4h": 0.02991223921383157}
+{"ts": 1793342765.8143601, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.957, "shock_px": 97.686, "ch1h": -0.004147816804757842, "ch4h": 0.029554889904882087}
+{"ts": 1793342765.8145373, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.957, "shock_px": 97.686, "ch1h": -0.004147816804757842, "ch4h": 0.029554889904882087}
+{"ts": 1793342855.7042267, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.82, "shock_px": 97.686, "ch1h": -0.005540588624002418, "ch4h": 0.02811498239529131}
+{"ts": 1793342855.7045026, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.82, "shock_px": 97.686, "ch1h": -0.005540588624002418, "ch4h": 0.02811498239529131}
+{"ts": 1793342885.5942426, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.816, "shock_px": 97.686, "ch1h": -0.005581253494637228, "ch4h": 0.028072941300120835}
+{"ts": 1793342885.5944545, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.816, "shock_px": 97.686, "ch1h": -0.005581253494637228, "ch4h": 0.028072941300120835}
+{"ts": 1793342945.8176773, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.822, "shock_px": 97.686, "ch1h": -0.005520256188684902, "ch4h": 0.02813600294287677}
+{"ts": 1793342945.8179078, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.822, "shock_px": 97.686, "ch1h": -0.005520256188684902, "ch4h": 0.02813600294287677}

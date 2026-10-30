@@ -1,17 +1,17 @@
 {
- "now": 1793342691.2408926,
+ "now": 1793342989.653683,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 1,
- "equity_usd": 63.66,
- "equity_sol": 0.6501,
+ "equity_usd": 58.17,
+ "equity_sol": 0.5951,
  "cash_sol": 0.287,
- "positions_usd": 35.56,
- "sol_usd": 97.92,
- "mult": 1.15,
+ "positions_usd": 30.12,
+ "sol_usd": 97.76,
+ "mult": 1.051,
  "halt": false,
  "pause": false,
  "positions": [
@@ -34,37 +34,9 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9993226073175141,
+   "last_usd": 0.9993269515467879,
    "mult": 0.982,
    "value_usd": 30.12
-  },
-  {
-   "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
-   "symbol": "SAFU",
-   "opened_ts": 1793310126.248107,
-   "entry_usd": 3.556292172099787e-05,
-   "tokens": 152993.972163,
-   "tokens_initial": 152993.972163,
-   "sol_in": 0.05579652,
-   "sol_out": 0.0,
-   "peak_usd": 3.556292172099787e-05,
-   "stop": 0.4,
-   "trail": 0.3,
-   "trail_after": 1.5,
-   "tp": [
-    [
-     2,
-     0.5
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "Flash-news meme: leader among the SAFU tokens launched on today's Binance-outflow rumours. Out within 6 hours.",
-   "id": "lab-2026-10-29-02",
-   "sleeve": "picks",
-   "reason": "flash_narrative",
-   "max_h": 6,
-   "mult": 1.0,
-   "value_usd": 5.44
   }
  ],
  "perps_pnl_usd": 0,
@@ -1048,10 +1020,58 @@
   [
    1793342523,
    63.67
+  ],
+  [
+   1793342824,
+   63.62
   ]
  ],
- "closed": [],
+ "closed": [
+  {
+   "ts": 1793342944.106585,
+   "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
+   "symbol": "SAFU",
+   "sol_in": 0.0558,
+   "sol_out": 0.0,
+   "pnl_sol": -0.0558,
+   "pnl_usd": -5.45,
+   "ret": -1.0,
+   "peak_mult": 1.0,
+   "hold_h": 9.1,
+   "why": "dead token: $0 pool liquidity, Jupiter quote ~0, sale failed for hours",
+   "reason": "flash_narrative",
+   "sleeve": "picks"
+  }
+ ],
  "trades": [
+  {
+   "ts": 1793342944.106445,
+   "side": "writeoff",
+   "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
+   "symbol": "SAFU",
+   "ok": true,
+   "sol": 0.0,
+   "tokens": 152993.972163,
+   "price_usd": 0.0,
+   "why": "dead token: $0 pool liquidity, Jupiter quote ~0, sale failed for hours",
+   "sig": null,
+   "error": "",
+   "id": "lab-2026-10-30-01"
+  },
+  {
+   "ts": 1793342851.7362335,
+   "side": "sell",
+   "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
+   "symbol": "SAFU",
+   "ok": false,
+   "sol": 0.0,
+   "tokens": 0.0,
+   "price_usd": null,
+   "why": "time stop (6h, no price feed)",
+   "sig": "",
+   "error": "cotización: modo rápido: directo a PumpPortal | pumpportal: pumpportal 400: Bad Request",
+   "id": null
+  },
   {
    "ts": 1793342552.3123794,
    "side": "sell",
@@ -1110,6 +1130,27 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793342944.107771,
+   "title": "Execution",
+   "text": "writeoff A8aDT3: wrote off SAFU at zero (dead token: $0 pool liquidity, Jupiter quote ~0, sale failed for hours)",
+   "kind": "execution",
+   "id": "lab-2026-10-30-01"
+  },
+  {
+   "ts": 1793342944.1076322,
+   "title": "SAFU written off: the flash-meme test lost its whole stake",
+   "text": "Lab test #2 bought SAFU, the leading meme launched on the Binance-outflow rumours, with 0.0558 SOL (~$5.4). Within hours its pool liquidity went to zero: DexScreener shows $0 liquidity on PumpSwap and Jupiter quotes the whole balance at 0.00003 SOL. Every sale attempt failed. Until now the lab still showed SAFU at its entry price, which overstated the lab balance by about $5. It is written off at zero today. Lesson: a flash-news meme can die before the 6-hour exit even fires; the edge (if any) needs an exit you can actually take, so this test is closed as rejected.",
+   "kind": "decisión",
+   "id": "lab-2026-10-30-01"
+  },
+  {
+   "ts": 1793342851.7372272,
+   "title": "Automatic exit",
+   "text": "SAFU: venta falló: cotización: modo rápido: directo a PumpPortal | pumpportal: pumpportal 400: Bad Request",
+   "kind": "automatic",
+   "id": null
+  },
   {
    "ts": 1793342552.3134193,
    "title": "Automatic exit",
@@ -1231,8 +1272,8 @@
   }
  ],
  "wins": 0,
- "n_closed": 0,
- "realized_usd": 0,
+ "n_closed": 1,
+ "realized_usd": -5.45,
  "plan": "lab",
  "wallet": "AXbTdJLRephZMSAMoiRwfbCBWXFYtfHeLmbPj9TZk69M"
 }

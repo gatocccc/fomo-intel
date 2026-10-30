@@ -1,0 +1,18 @@
+== 159_dd_diag 2026-10-30T06:47:03Z ==
+SOLANATRACKER_API_KEY: si
+SOLANA_TRACKER_API_KEY: no
+ST_API_KEY: no
+HELIUS_API_KEY: si
+11:STH = {"x-api-key": os.environ.get("SOLANATRACKER_API_KEY", "")}
+12:HK = os.environ.get("HELIUS_API_KEY", "")
+13:RPC = os.environ.get("SOLANA_RPC_URL") or f"https://mainnet.helius-rpc.com/?api-key={HK}"
+=== GTA6 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz → LIMPIO
+top 20: billeteras 20.55% · pools/curva 1.04% · sin fondeador identificado 8
+riesgo ST: {'bundlers%': 5.2488, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': ['No social media', 'Top 10 Holders', 'Bundler Holdings']}
+creador: {'creator': 'vPczFpjUEeMfYTtPkwqNYdJXvFBB1dDVBUA4sbMocQe', 'lanzamientos': 1994, 'muertos_<US$10K': 16, 'graduados_aprox': 0, 'muestra': 500}
+  grupo fondeador H8sMJSCQ…  : 2 billeteras, 2.64%
+detalle: [('Beqv6d', 3.69, '?', 'rpc'), ('8Sf5C4', 2.23, 'FWznbc', 'rpc'), ('JLAhz4', 2.13, '?', 'rpc'), ('7zs3Cd', 1.54, 'H8sMJS', 'rpc-payer'), ('AVyZMp', 1.52, '5F1seM', 'rpc'), ('CdMRJE', 1.32, '8d9FNC', 'rpc-payer'), ('EKKv8A', 1.1, 'H8sMJS', 'rpc'), ('C78grZ', 1.08, '?', 'rpc'), ('AEtL29', 0.91, '?', 'rpc'), ('EqBQho', 0.73, '?', 'rpc'), ('CrvMqF', 0.61, '?', 'rpc'), ('J88F7A', 0.6, '5wHcGE', 'rpc'), ('4fP5P1', 0.58, '4NyK1A', 'rpc-payer'), ('FQFhzZ', 0.55, 'Gn1FRY', 'rpc-payer'), ('BM9Ccy', 0.55, '?', 'rpc'), ('tKNFhj', 0.5, '6LY1Jz', 'rpc-payer'), ('CjcQxh', 0.47, '54Pz1e', 'rpc-payer'), ('4dZY57', 0.46, '?', 'rpc')]
+--- motor lab
+active
+3
+== exit 0 ==

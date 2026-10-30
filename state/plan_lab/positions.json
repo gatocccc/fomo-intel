@@ -18,32 +18,6 @@
   "id": "lab-2026-10-29-01",
   "sleeve": "cash",
   "reason": "collateral",
-  "last_usd": 0.9990943382721529
- },
- "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it": {
-  "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
-  "symbol": "SAFU",
-  "opened_ts": 1793310126.248107,
-  "entry_usd": 3.556292172099787e-05,
-  "tokens": 152993.972163,
-  "tokens_initial": 152993.972163,
-  "sol_in": 0.05579652,
-  "sol_out": 0.0,
-  "peak_usd": 3.556292172099787e-05,
-  "stop": 0.4,
-  "trail": 0.3,
-  "trail_after": 1.5,
-  "tp": [
-   [
-    2,
-    0.5
-   ]
-  ],
-  "tp_done": [],
-  "thesis": "Flash-news meme: leader among the SAFU tokens launched on today's Binance-outflow rumours. Out within 6 hours.",
-  "id": "lab-2026-10-29-02",
-  "sleeve": "picks",
-  "reason": "flash_narrative",
-  "max_h": 6
+  "last_usd": 0.9993183603484936
  }
 }
