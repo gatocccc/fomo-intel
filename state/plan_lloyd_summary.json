@@ -1,17 +1,17 @@
 {
- "now": 1793325577.7481194,
+ "now": 1793325883.3847516,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 542.79,
- "equity_sol": 5.7922,
+ "equity_usd": 543.11,
+ "equity_sol": 5.814,
  "cash_sol": 0.0866,
- "positions_usd": 534.68,
- "sol_usd": 93.71,
- "mult": 0.991,
+ "positions_usd": 535.02,
+ "sol_usd": 93.41,
+ "mult": 0.992,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.999122238134372,
+   "last_usd": 0.9990761774369457,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.99,
-   "value_usd": 435.91
+   "value_usd": 435.89
   },
   {
    "mint": "J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr",
@@ -60,22 +60,22 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.35009499723025356,
+   "last_usd": 0.3497936333991607,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.838,
-   "value_usd": 20.36
+   "mult": 0.837,
+   "value_usd": 20.34
   },
   {
    "mint": "perps:7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "symbol": "SOL short 2x",
    "opened_ts": 1793320444.8066633,
    "entry_usd": 92.87,
-   "last_usd": 93.837,
+   "last_usd": 93.728,
    "peak_usd": 92.87,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.873,
+   "sol_in": 0.8758,
    "sol_out": 0.0,
    "stop": 0.035,
    "trail": 0.02,
@@ -88,14 +88,14 @@
    "reason": "news_shock_short",
    "brain": false,
    "perps": true,
-   "mult": 0.979,
-   "value_usd": 80.11,
-   "pnl_usd": -1.7,
+   "mult": 0.982,
+   "value_usd": 80.3,
+   "pnl_usd": -1.51,
    "collateral_usd": 81.81,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -1.7,
+ "perps_pnl_usd": -1.51,
  "equity": [
   [
    1793203600,
@@ -1732,6 +1732,10 @@
   [
    1793325394,
    544.22
+  ],
+  [
+   1793325699,
+   544.61
   ]
  ],
  "closed": [

@@ -1,17 +1,17 @@
 {
- "now": 1793325598.969985,
+ "now": 1793325875.8619936,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 1,
- "equity_usd": 64.39,
- "equity_sol": 0.6875,
+ "equity_usd": 64.46,
+ "equity_sol": 0.6885,
  "cash_sol": 0.287,
- "positions_usd": 37.51,
- "sol_usd": 93.65,
- "mult": 1.163,
+ "positions_usd": 37.59,
+ "sol_usd": 93.62,
+ "mult": 1.164,
  "halt": false,
  "pause": false,
  "positions": [
@@ -34,7 +34,7 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.999122238134372,
+   "last_usd": 0.9990761774369457,
    "mult": 0.981,
    "value_usd": 10.66
   },
@@ -71,11 +71,11 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793309060.2848802,
    "entry_usd": 97.53,
-   "last_usd": 93.837,
+   "last_usd": 93.728,
    "peak_usd": 92.974,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1985,
+   "sol_in": 0.1986,
    "sol_out": 0.0,
    "stop": 0.035,
    "trail": 0.02,
@@ -88,14 +88,14 @@
    "reason": "news_shock_short",
    "brain": false,
    "perps": true,
-   "mult": 1.076,
-   "value_usd": 20.0,
-   "pnl_usd": 1.41,
+   "mult": 1.078,
+   "value_usd": 20.04,
+   "pnl_usd": 1.45,
    "collateral_usd": 18.59,
    "side": "short"
   }
  ],
- "perps_pnl_usd": 1.41,
+ "perps_pnl_usd": 1.45,
  "equity": [
   [
    1793271309,
@@ -840,6 +840,10 @@
   [
    1793325414,
    62.92
+  ],
+  [
+   1793325722,
+   63.02
   ]
  ],
  "closed": [],
