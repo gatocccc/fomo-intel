@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793328376.7279932,
+   "src": "cointelegraph",
+   "title": "Binance points to engineer’s hacked laptop in $6.3B breach",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793326985.5265894,
    "src": "theblock",
    "title": "Bitcoin slides below $77,000, BNB drops amid Binance hack",
@@ -271,34 +282,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: Binance says it will cover all losses from the hack. @WatcherGuru",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793328261.2175138,
- "bear_score": 51,
+ "ts": 1793328561.130069,
+ "bear_score": 53,
  "bull_score": 2,
  "price": {
   "SOL": {
-   "px": 95.433,
-   "ch15m": 0.003100758897601308,
-   "ch1h": 0.015817428975912096,
-   "ch4h": -0.019973710694407343
+   "px": 95.153,
+   "ch15m": 0.0018214360918087369,
+   "ch1h": 0.01224442033148243,
+   "ch4h": -0.020898501810997616
   },
   "BTC": {
-   "px": 77547.0,
-   "ch15m": 0.0031045054134812844,
-   "ch1h": 0.006541801331723773,
-   "ch4h": -0.018305419467547712
+   "px": 77347.0,
+   "ch15m": 0.001994999546591103,
+   "ch1h": 0.005407443033367487,
+   "ch4h": -0.020800101278642846
   }
  },
  "mode": "live",
@@ -310,7 +310,7 @@
  "theses": {},
  "llm": {
   "key": true,
-  "last_error": null
+  "last_error": "AttributeError: 'ThinkingBlock' object has no attribute 'text'"
  },
  "sources": [
   "bitcoinmagazine",
