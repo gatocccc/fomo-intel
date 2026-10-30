@@ -1,17 +1,17 @@
 {
- "now": 1793326780.120621,
+ "now": 1793327381.6841993,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 1,
- "equity_usd": 63.93,
- "equity_sol": 0.6775,
+ "equity_usd": 62.85,
+ "equity_sol": 0.6607,
  "cash_sol": 0.287,
- "positions_usd": 36.85,
- "sol_usd": 94.36,
- "mult": 1.155,
+ "positions_usd": 35.55,
+ "sol_usd": 95.14,
+ "mult": 1.135,
  "halt": false,
  "pause": false,
  "positions": [
@@ -20,7 +20,7 @@
    "symbol": "USDC",
    "opened_ts": 1793308686.6183815,
    "entry_usd": 1.018092076638584,
-   "tokens": 29.278776,
+   "tokens": 30.139555575117296,
    "tokens_initial": 29.278776,
    "sol_in": 0.30548188,
    "sol_out": 0.0,
@@ -34,9 +34,9 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9991232863635057,
+   "last_usd": 0.9990926465009109,
    "mult": 0.981,
-   "value_usd": 10.66
+   "value_usd": 30.11
   },
   {
    "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
@@ -65,37 +65,9 @@
    "max_h": 6,
    "mult": 1.0,
    "value_usd": 5.44
-  },
-  {
-   "mint": "perps:DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
-   "symbol": "SOL short 2x",
-   "opened_ts": 1793309060.2848802,
-   "entry_usd": 97.53,
-   "last_usd": 94.691,
-   "peak_usd": 92.974,
-   "tokens": 0,
-   "tokens_initial": 0,
-   "sol_in": 0.197,
-   "sol_out": 0.0,
-   "stop": 0.035,
-   "trail": 0.02,
-   "trail_after": 1.04,
-   "tp": [],
-   "tp_done": [],
-   "thesis": "News-shock SOL short (radar). $19 collateral at 2x; stop if SOL rises 3.5%; trails 2% from its best once up 4%.",
-   "id": "radar-lab",
-   "sleeve": "majors",
-   "reason": "news_shock_short",
-   "brain": false,
-   "perps": true,
-   "mult": 1.058,
-   "value_usd": 19.67,
-   "pnl_usd": 1.08,
-   "collateral_usd": 18.59,
-   "side": "short"
   }
  ],
- "perps_pnl_usd": 1.08,
+ "perps_pnl_usd": 0,
  "equity": [
   [
    1793271309,
@@ -856,6 +828,14 @@
   [
    1793326564,
    62.98
+  ],
+  [
+   1793326872,
+   62.91
+  ],
+  [
+   1793327104,
+   62.79
   ]
  ],
  "closed": [],
@@ -890,6 +870,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793327088.2801492,
+   "title": "SOL short settled",
+   "text": "The radar's SOL short settled back into USDC: result $+0.86 (trailing: locked 2.5% after a best of 4.7%). The book's USDC balance was adjusted accordingly.",
+   "kind": "automatic",
+   "id": null
+  },
+  {
+   "ts": 1793327072.5256364,
+   "title": "Radar: SOL short closed",
+   "text": "Closed the SOL short: trailing: locked 2.5% after a best of 4.7%. Entry $97.53, exit $95.05, result about $+0.86 on $19 collateral.",
+   "kind": "decisión",
+   "id": "auto-plan_lab-radar-20261030-022424"
+  },
   {
    "ts": 1793324165.1278937,
    "title": "Alert",

@@ -1,0 +1,23 @@
+== 155_tesis_viva2 2026-10-30T02:25:03Z ==
+--- servicio
+active
+--- paquete anthropic: 0.84.0
+--- prueba directa del modelo
+modelo responde: ok
+--- radar.json: tesis, reglas, llm, fuentes
+llm: {'key': False, 'last_error': None}
+fuentes vistas: ['bitcoinmagazine', 'claude-session', 'cointelegraph', 'decrypt', 'tg:TreeNewsFeed', 'tg:WatcherGuru', 'tg:binance_announcements', 'tg:wublockchainenglish', 'theblock']
+book entrada 92.87 mark 95.112 stop_px 96.12 be None reglas {'stop_up': 0.035, 'trail_arm': 0.04, 'trail_gap': 0.02, 'tp_down': 0.12, 'max_h': 12} tesis confirmed []
+--- log del radar (tesis/telegram)
+{"ts": 1793327061.0759363, "kind": "close", "ts_open": 1793309060.2848802, "leg": "lab", "symbol": "SOL", "side": "short", "entry": 97.53, "exit": 95.053, "collateral_usd": 18.59, "size_usd": 37.18, "ret_px": 0.0254, "best_ret": 0.0467, "pnl_usd": 0.86, "hold_h": 5.0, "why": "trailing: locked 2.5% a
+--- journal
+Oct 30 02:24:21 simplai-prod python3[2105776]: 2026-10-30 02:24:21,215 INFO radar: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 30 02:24:21 simplai-prod python3[2105776]: 2026-10-30 02:24:21,298 INFO radar: perps submit: sent 5yovRTAEGw9u4gHdzfwHbVS5KVLGmLLrkn6JMP3JdLkX68juVtevJ98heycPTnDLujVkB4CQEsHp3vW9jRruh7EV, waiting up to 90s
+Oct 30 02:24:24 simplai-prod python3[2105776]: 2026-10-30 02:24:24,558 INFO radar: perps submit: confirmed 5yovRTAEGw9u4gHdzfwHbVS5KVLGmLLrkn6JMP3JdLkX68juVtevJ98heycPTnDLujVkB4CQEsHp3vW9jRruh7EV (finalized)
+Oct 30 02:24:24 simplai-prod python3[2105776]: 2026-10-30 02:24:24,559 WARNING radar: [lab] SHORT cerrado: trailing: locked 2.5% after a best of 4.7% → +0.86 US$ (live)
+Oct 30 02:25:03 simplai-prod systemd[1]: Stopping fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps)...
+Oct 30 02:25:03 simplai-prod systemd[1]: fomo-radar.service: Deactivated successfully.
+Oct 30 02:25:03 simplai-prod systemd[1]: Stopped fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+Oct 30 02:25:03 simplai-prod systemd[1]: fomo-radar.service: Consumed 4.502s CPU time.
+Oct 30 02:25:03 simplai-prod systemd[1]: Started fomo-radar.service - FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps).
+== exit 0 ==

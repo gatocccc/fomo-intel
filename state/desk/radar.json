@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793326985.5265894,
+   "src": "theblock",
+   "title": "Bitcoin slides below $77,000, BNB drops amid Binance hack",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793326580.4845843,
    "src": "tg:TreeNewsFeed",
    "title": "*SEC POISED TO UNVEIL MAJOR CRYPTO PLANS AS CLARITY ACT STALLS: BBG",
@@ -271,124 +282,29 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: Binance says 3,000,000,000 worth of stolen crypto has now been frozen following major hack. @WatcherGuru",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793326746.131515,
- "bear_score": 53,
+ "ts": 1793327345.592085,
+ "bear_score": 55,
  "bull_score": 2,
  "price": {
   "SOL": {
-   "px": 94.691,
-   "ch15m": 0.012922135575452298,
-   "ch1h": 0.0065051711859183126,
-   "ch4h": -0.026213492389962956
+   "px": 95.27,
+   "ch15m": 0.009034389993327396,
+   "ch1h": 0.014471148214799001,
+   "ch4h": -0.019755118839386743
   },
   "BTC": {
-   "px": 77092.0,
-   "ch15m": 0.00708033964728938,
-   "ch1h": 0.0016370865057298012,
-   "ch4h": -0.023125562299631253
+   "px": 77308.0,
+   "ch15m": 0.0037132247929163587,
+   "ch1h": 0.005227160429615463,
+   "ch4h": -0.021417721518987354
   }
  },
  "mode": "live",
- "position": {
-  "ts": 1793309060.2848802,
-  "symbol": "SOL",
-  "side": "short",
-  "entry": 97.53,
-  "collateral_usd": 18.59,
-  "lev": 2.0,
-  "size_usd": 37.18,
-  "mode": "live",
-  "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%",
-  "headlines": [
-   "Polymarket suspended trading amid reports of user funds being drained",
-   "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
-   "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts"
-  ],
-  "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
-  "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 94.691,
-  "ret_px": 0.0291,
-  "pnl_usd_est": 1.08,
-  "age_h": 4.91,
-  "best_ret": 0.04671383164154619,
-  "thesis": {
-   "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair",
-   "entities": [
-    "bitcoin",
-    "cftc",
-    "fed",
-    "polymarket"
-   ],
-   "state": "confirmed",
-   "evidence": [],
-   "rules": {}
-  },
-  "stop_px": 100.94,
-  "rules": {
-   "stop_up": 0.035,
-   "trail_arm": 0.04,
-   "trail_gap": 0.02,
-   "tp_down": 0.12,
-   "max_h": 12
-  }
- },
+ "position": null,
  "positions": {
-  "lab": {
-   "ts": 1793309060.2848802,
-   "symbol": "SOL",
-   "side": "short",
-   "entry": 97.53,
-   "collateral_usd": 18.59,
-   "lev": 2.0,
-   "size_usd": 37.18,
-   "mode": "live",
-   "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%",
-   "headlines": [
-    "Polymarket suspended trading amid reports of user funds being drained",
-    "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
-    "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts"
-   ],
-   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
-   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-   "mark": 94.691,
-   "ret_px": 0.0291,
-   "pnl_usd_est": 1.08,
-   "age_h": 4.91,
-   "best_ret": 0.04671383164154619,
-   "thesis": {
-    "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair",
-    "entities": [
-     "bitcoin",
-     "cftc",
-     "fed",
-     "polymarket"
-    ],
-    "state": "confirmed",
-    "evidence": [],
-    "rules": {}
-   },
-   "stop_px": 100.94,
-   "rules": {
-    "stop_up": 0.035,
-    "trail_arm": 0.04,
-    "trail_gap": 0.02,
-    "tp_down": 0.12,
-    "max_h": 12
-   }
-  },
+  "lab": null,
   "book": {
    "ts": 1793320444.8066633,
    "leg": "book",
@@ -408,10 +324,10 @@
    "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "sig": "52fnUTsu5TQh9dGoURqVntbYErKt566sgbn8AKFywmcR8vVs2GfMC9b3pp3MgZyJ3zbrvN7oDuUc44K8S6rxDM3K",
    "best_ret": 0.0,
-   "mark": 94.691,
-   "ret_px": -0.0196,
-   "pnl_usd_est": -3.21,
-   "age_h": 1.75,
+   "mark": 95.27,
+   "ret_px": -0.0258,
+   "pnl_usd_est": -4.23,
+   "age_h": 1.92,
    "thesis": {
     "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair",
     "entities": [
@@ -435,18 +351,6 @@
   }
  },
  "theses": {
-  "lab": {
-   "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair",
-   "entities": [
-    "bitcoin",
-    "cftc",
-    "fed",
-    "polymarket"
-   ],
-   "state": "confirmed",
-   "evidence": [],
-   "rules": {}
-  },
   "book": {
    "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair",
    "entities": [
