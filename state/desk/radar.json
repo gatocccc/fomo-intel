@@ -1,19 +1,5 @@
 {
- "shock": {
-  "since": 1793308697.289756,
-  "bear_score": 9,
-  "sol_px": 97.686,
-  "btc_px": 79602.0,
-  "headlines": [
-   "Polymarket suspended trading amid reports of user funds being drained",
-   "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
-   "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts",
-   "Crypto PAC spending before midterms possibly obscured after reported FEC hack"
-  ],
-  "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%",
-  "confirmed": true,
-  "confirmed_ts": 1793320444.802916
- },
+ "shock": null,
  "events": [
   {
    "ts": 1793352980.3201873,
@@ -82,21 +68,21 @@
    ]
   }
  ],
- "ts": 1793353176.0924547,
+ "ts": 1793353460.83163,
  "bear_score": 8,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.958,
-   "ch15m": 0.00109445339280545,
-   "ch1h": -0.0025820654466151005,
-   "ch4h": -0.012456585286358846
+   "px": 97.011,
+   "ch15m": 0.0012075051086752886,
+   "ch1h": -0.0006592840587175131,
+   "ch4h": -0.013213304851998897
   },
   "BTC": {
-   "px": 77668.0,
-   "ch15m": 0.0008246997577443516,
-   "ch1h": -0.004141503506814859,
-   "ch4h": -0.01281203924958052
+   "px": 77698.0,
+   "ch15m": -0.000308792877177666,
+   "ch1h": -0.002605871554922312,
+   "ch4h": -0.012832240687096652
   }
  },
  "mode": "live",
@@ -108,7 +94,7 @@
  "theses": {},
  "llm": {
   "key": true,
-  "last_error": "ValueError: model reply without JSON: {\"type\": \"noise\", \"dir\": 0, \"sev\": 1, \"confirm"
+  "last_error": null
  },
  "sources": [
   "bitcoinmagazine",
@@ -121,5 +107,21 @@
   "tg:wublockchainenglish",
   "theblock"
  ],
- "_skip_note": "stale:book"
+ "_skip_note": "stale:book",
+ "last_shock": {
+  "since": 1793308697.289756,
+  "bear_score": 9,
+  "sol_px": 97.686,
+  "btc_px": 79602.0,
+  "headlines": [
+   "Polymarket suspended trading amid reports of user funds being drained",
+   "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+   "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts",
+   "Crypto PAC spending before midterms possibly obscured after reported FEC hack"
+  ],
+  "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%",
+  "confirmed": true,
+  "confirmed_ts": 1793320444.802916,
+  "until": 1793353325.8028936
+ }
 }

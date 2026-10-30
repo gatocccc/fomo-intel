@@ -1,0 +1,21 @@
+== 160_autocritica_0939 2026-10-30T09:42:03Z ==
+--- radar
+shock None last_shock_until 1793353325.8028936 {'key': True, 'last_error': None} {'px': 97.004, 'ch15m': 0.0011352612132846662, 'ch1h': -0.0007313932526397116, 'ch4h': -0.01328450818838367}
+{"ts": 1793353325.8032272, "kind": "shock_off", "since": 1793308697.289756, "quiet": false, "recovered": false, "stale": true}
+--- GTA6
+('196.69', 'mcap', 84, 'liq', 446966.16, 'ch', {'h1': 1.98, 'h6': 1.96, 'h24': -2.58}, 'vol', {'h24': 2763404.12, 'h6': 60325.29, 'h1': 20678.62, 'm5': 0}, 'txns24', {'buys': 6428, 'sells': 10077})
+
+=== GTA6 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz → LIMPIO
+top 20: billeteras 20.55% · pools/curva 1.02% · sin fondeador identificado 8
+riesgo ST: {'bundlers%': 5.2447, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': ['No social media', 'Top 10 Holders', 'Bundler Holdings']}
+creador: {'creator': 'vPczFpjUEeMfYTtPkwqNYdJXvFBB1dDVBUA4sbMocQe', 'lanzamientos': 1989, 'muertos_<US$10K': 16, 'graduados_aprox': 0, 'muestra': 500}
+  grupo fondeador H8sMJSCQ…  : 2 billeteras, 2.64%
+detalle: [('Beqv6d', 3.69, '?', 'rpc'), ('8Sf5C4', 2.23, 'FWznbc', 'rpc'), ('JLAhz4', 2.13, '?', 'rpc'), ('7zs3Cd', 1.54, 'H8sMJS', 'rpc-payer'), ('AVyZMp', 1.52, '5F1seM', 'rpc'), ('CdMRJE', 1.32, '8d9FNC', 'rpc-payer'), ('EKKv8A', 1.1, 'H8sMJS', 'rpc'), ('C78grZ', 1.08, '?', 'rpc'), ('AEtL29', 0.91, '?', 'rpc'), ('EqBQho', 0.73, '?', 'rpc'), ('CrvMqF', 0.61, '?', 'rpc'), ('J88F7A', 0.6, '5wHcGE', 'rpc'), ('4fP5P1', 0.58, '4NyK1A', 'rpc-payer'), ('FQFhzZ', 0.55, 'Gn1FRY', 'rpc-payer'), ('BM9Ccy', 0.54, '?', 'rpc'), ('tKNFhj', 0.5, '6LY1Jz', 'rpc-payer'), ('CjcQxh', 0.47, '54Pz1e', 'rpc-payer'), ('4dZY57', 0.46, '?', 'rpc')]
+--- cerebro
+{'state': 'risk_off', 'ts': 1793353325.3552766, 'since': 1793353325.3552763, 'exit_since': None, 'sol': 96.9, 'sol_ma20': 104.21, 'sol_ch4h': -1.1, 'sol_ch24h': -3.3, 'btc_vs_ma20': -0.049, 'breadth_above': 3, 'breadth_total': 20, 'why': 'news', 'shock': True, 'label': 'defensive'}
+Oct 30 09:42:03 simplai-prod systemd[1]: Stopping fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta)...
+Oct 30 09:42:03 simplai-prod systemd[1]: fomo-brain.service: Deactivated successfully.
+Oct 30 09:42:03 simplai-prod systemd[1]: Stopped fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta).
+Oct 30 09:42:03 simplai-prod systemd[1]: fomo-brain.service: Consumed 1.408s CPU time.
+Oct 30 09:42:03 simplai-prod systemd[1]: Started fomo-brain.service - FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta).
+== exit 0 ==
