@@ -276,6 +276,18 @@
    "efficacy": "Testing live (passed the backtest bar).",
    "verdict": "testing",
    "sleeve": "majors"
+  },
+  {
+   "date": "2026-10-30",
+   "name": "Cross-market lead-lag: Nasdaq, S&P, gold, silver, dollar → crypto (hours)",
+   "public_title": "Does Wall Street move first and crypto follow?",
+   "question": "When the Nasdaq, S&P 500, gold, silver or the dollar make a big move, does crypto follow it in the next hours, so a trade placed after the move still wins?",
+   "hypothesis": "Information starts in the bigger market and crypto takes hours to digest it: an edge from reading, not from speed.",
+   "method": "2 years of hourly bars (Yahoo futures NQ, ES, GC, SI, DXY; Binance BTC, ETH, SOL), aligned by UTC hour. Same-hour and lagged correlations; 2-sigma hourly shocks → crypto 1/3/6 h later; pre-market moves → US session; ±2% days → next 24/48 h; a short-after-shock rule with 0.12% round-trip costs. Design half / test half, random-entry control ×300.",
+   "result": "Crypto moves in the SAME hour as the Nasdaq (correlation 0.43–0.47; gold 0.14–0.19; silver 0.19–0.23; dollar −0.09) and the next-hour correlation is zero everywhere (|r| ≤ 0.03), in both directions. After a 2-sigma Nasdaq drop, crypto is flat to slightly UP the next hour; shorting after the shock lost 0.1–0.5% per trade in both halves. Daily ±2% equity days were too rare for a verdict (6 in the test year); on those days crypto had already fallen 6–8% and bounced +1.5 to +3% the next day. Silver's +2% days coincided with crypto falling the next day in the test year (t −2.3) but not in the design year: one regime, not a rule.",
+   "efficacy": "No lag to exploit: by the time Wall Street's move is visible, crypto has priced it. Chasing it loses after costs.",
+   "verdict": "rejected",
+   "sleeve": "majors"
   }
  ],
  "protocol": "Out-of-sample half held out, entries at next bar open, real costs (memes ~3% round trip, perps 0.12% + funding), random-entry control x20; adopt only if test mean > 0, t ≥ 2.5, beats random by ≥ 0.3%/trade, design half also positive. Risk/cost changes are judged on drawdown and realized cost, not on win rate.",
