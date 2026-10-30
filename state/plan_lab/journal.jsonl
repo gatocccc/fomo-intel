@@ -11,3 +11,4 @@
 {"ts": 1793324165.1278937, "title": "Alert", "text": "SAFU: no price for over 10 minutes", "kind": "alert", "id": null}
 {"ts": 1793327072.5256364, "title": "Radar: SOL short closed", "text": "Closed the SOL short: trailing: locked 2.5% after a best of 4.7%. Entry $97.53, exit $95.05, result about $+0.86 on $19 collateral.", "kind": "decisión", "id": "auto-plan_lab-radar-20261030-022424"}
 {"ts": 1793327088.2801492, "title": "SOL short settled", "text": "The radar's SOL short settled back into USDC: result $+0.86 (trailing: locked 2.5% after a best of 4.7%). The book's USDC balance was adjusted accordingly.", "kind": "automatic", "id": null}
+{"ts": 1793328665.1206589, "title": "Alert", "text": "SAFU: no price for over 10 minutes", "kind": "alert", "id": null}

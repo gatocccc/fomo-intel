@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793328620.500931,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Binance says 6,300,000,000 worth of crypto was impacted following major hack. @WatcherGuru",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793328376.7279932,
    "src": "cointelegraph",
    "title": "Binance points to engineer’s hacked laptop in $6.3B breach",
@@ -271,34 +282,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: Binance says 2,540,000,000 worth of stolen crypto has been frozen following major hack. This figure may continue to increase. @WatcherGuru",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793328561.130069,
- "bear_score": 53,
+ "ts": 1793328861.2092686,
+ "bear_score": 55,
  "bull_score": 2,
  "price": {
   "SOL": {
-   "px": 95.153,
-   "ch15m": 0.0018214360918087369,
-   "ch1h": 0.01224442033148243,
-   "ch4h": -0.020898501810997616
+   "px": 95.099,
+   "ch15m": -0.0023708366115918755,
+   "ch1h": 0.013092574837541227,
+   "ch4h": -0.0191226676843419
   },
   "BTC": {
-   "px": 77347.0,
-   "ch15m": 0.001994999546591103,
-   "ch1h": 0.005407443033367487,
-   "ch4h": -0.020800101278642846
+   "px": 77309.0,
+   "ch15m": -0.0024645161290323125,
+   "ch1h": 0.005658610193303382,
+   "ch4h": -0.020921720849533365
   }
  },
  "mode": "live",
