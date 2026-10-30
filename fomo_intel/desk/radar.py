@@ -91,7 +91,7 @@ LEGS = [
 RULES = {"window_min": 90, "min_bear_score": 3, "sol_1h": -0.015, "sol_4h": -0.025, "btc_1h": -0.01,
          "clear_quiet_h": 3, "coll_frac": float(os.getenv("RADAR_COLL_FRAC", "0.35")), "coll_min": 10.0, "coll_max": 60.0, "lev": 2.0,
          "stop_up": 0.035, "tp_down": 0.12, "trail_arm": 0.04, "trail_gap": 0.02, "max_h": 12, "max_opens_day": 2, "cooldown_h": 2, "min_profit_clear": 0.5,
-         "chase_max": 0.035}
+         "chase_max": 0.035, "max_stale_h": 6}
 # tp_down pasó de 7% a 12% y se agregó trailing (29/10 noche): con un hack confirmado la caída puede ser larga; en cuanto el corto gana
 # trail_arm (4% del precio) se protege trail_gap (2%) desde el mejor punto, en vez de cortar a un objetivo fijo.
 
@@ -428,9 +428,16 @@ class Radar:
                 log.warning("SHOCK CONFIRMADO (noticia de severidad 3 confirmada)")
             quiet = not [e for e in self.recent(R["clear_quiet_h"] * 60) if e["cls"]["dir"] < 0]
             recovered = sol.get("px") and sh.get("sol_px") and sol["px"] >= sh["sol_px"] * 1.01
-            if (quiet and now - sh["since"] > 3600) or recovered:
-                logrow("shock_off", since=sh["since"], quiet=quiet, recovered=bool(recovered))
-                log.warning("SHOCK OFF (quiet=%s recovered=%s)", quiet, recovered)
+            # 30/10 09:45 (autocrítica): el shock del hack de Binance quedó prendido 12 h solo porque los medios re-publicaban la misma
+            # historia ("more breach points"), con SOL apenas −0,8% desde el arranque y sin caída que confirme. Noticia sin precio = ruido
+            # (la regla del propio radar para ABRIR): si pasan max_stale_h sin confirmación de precio, el shock vence. Si vuelve a caer
+            # con noticias, se prende uno nuevo en el minuto. Al vencer, el cerebro pasa a "bear" y puede usar la regla del catalizador.
+            if price_conf:
+                sh["last_conf_ts"] = now
+            stale = not price_conf and now - sh.get("last_conf_ts", sh["since"]) > R["max_stale_h"] * 3600
+            if (quiet and now - sh["since"] > 3600) or recovered or stale:
+                logrow("shock_off", since=sh["since"], quiet=quiet, recovered=bool(recovered), stale=bool(stale))
+                log.warning("SHOCK OFF (quiet=%s recovered=%s stale=%s)", quiet, recovered, stale)
                 self.state["shock"] = None; self.state["last_shock"] = {**sh, "until": now}
         self.state.update({"ts": now, "bear_score": bear, "bull_score": bull, "price": px, "mode": self.mode,
                            "events": [{"ts": e["ts"], "src": e["src"], "title": e["title"], "sev": e["cls"]["sev"], "dir": e["cls"]["dir"], "types": e["cls"]["types"]}
@@ -522,12 +529,13 @@ class Radar:
         chased = bool(px_now and base and px_now < base * (1 - R["chase_max"]))
         if not fresh or chased:
             key = ("chased" if chased else "stale") + ":" + leg["name"]
-            if self.state.get("_skip_note") != key:
-                self.state["_skip_note"] = key
+            notes = self.state.get("_skip_notes") or {}   # 30/10: por pierna (antes una sola clave: lab y libro se pisaban y el log repetía cada minuto)
+            if notes.get(leg["name"]) != key:
+                notes[leg["name"]] = key; self.state["_skip_notes"] = notes; self.state["_skip_note"] = key
                 logrow("skip_open", leg=leg["name"], reason=key.split(":")[0], sol_px=px_now, shock_px=base,
                        ch1h=sp.get("ch1h"), ch4h=sp.get("ch4h"))
             return
-        self.state["_skip_note"] = None
+        self.state["_skip_note"] = None; (self.state.get("_skip_notes") or {}).pop(leg["name"], None)
         today = time.strftime("%Y-%m-%d", time.gmtime(now - 3 * 3600))
         rows = [c for c in self.closed_rows() if c.get("leg", "lab") == leg["name"]]
         opens = [c for c in rows if time.strftime("%Y-%m-%d", time.gmtime(c["ts_open"] - 3 * 3600)) == today]
