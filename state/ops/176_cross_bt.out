@@ -1,0 +1,274 @@
+== 176_cross_bt 2026-10-30T19:29:03Z ==
+yahoo NQ 13736
+yahoo ES 13739
+yahoo GOLD 13773
+yahoo SILVER 13771
+yahoo DXY 14337
+binance BTC 17640
+binance ETH 17640
+binance SOL 17640
+ok NQ BTC 89 s
+ok NQ ETH 90 s
+ok NQ SOL 91 s
+ok ES BTC 92 s
+ok ES ETH 92 s
+ok ES SOL 93 s
+ok GOLD BTC 94 s
+ok GOLD ETH 94 s
+ok GOLD SOL 95 s
+ok SILVER BTC 96 s
+ok SILVER ETH 97 s
+ok SILVER SOL 97 s
+ok DXY BTC 98 s
+ok DXY ETH 99 s
+ok DXY SOL 99 s
+
+== cross_bt 2026-10-30T19:30:31Z  rango ['2024-06-09', '2026-10-30']  split 2025-08-20  barras {'NQ': 13736, 'ES': 13739, 'GOLD': 13773, 'SILVER': 13771, 'DXY': 14337, 'BTC': 17640, 'ETH': 17640, 'SOL': 17640}
+
+[NQ->BTC] corr lag0 0.466  +1h -0.016  +2h -0.003  | al revés +1h 0.026
+  shock down_test_1h: n=215 media 0.066% hit 0.535 t=1.29  azar p5/p95 -0.05/0.054
+  shock down_test_3h: n=213 media 0.007% hit 0.54 t=0.08  azar p5/p95 -0.083/0.103
+  shock down_test_6h: n=212 media 0.007% hit 0.552 t=0.07  azar p5/p95 -0.105/0.132
+  shock up_test_1h: n=186 media -0.074% hit 0.473 t=-1.43  azar p5/p95 -0.051/0.059
+  shock up_test_3h: n=186 media -0.108% hit 0.452 t=-1.23  azar p5/p95 -0.092/0.104
+  shock up_test_6h: n=186 media -0.054% hit 0.473 t=-0.55  azar p5/p95 -0.132/0.149
+  pre_down_test: n=15 X -1.29%  Y4h -0.109% (t -0.38)  Y8h 0.188% (t 0.55)  azar4h {'p5_pct': -0.581, 'p95_pct': 0.681, 'mean_pct': 0.026}
+  pre_up_test: n=9 X 1.52%  Y4h 0.104% (t 0.51)  Y8h 0.343% (t 1.13)  azar4h {'p5_pct': -0.693, 'p95_pct': 0.869, 'mean_pct': 0.048}
+  day_up_design: n=1 X 2.75% Y mismo día 9.73%  Y24h -0.018% (hit 0.0, t 0.0)  Y48h 0.782%  | si Y ya cayó: -0.018% n=1  si Y plano: None% n=0  azar24h None
+  day_down_design: n=6 X -2.68% Y mismo día -1.37%  Y24h -1.365% (hit 0.167, t -1.78)  Y48h -1.088%  | si Y ya cayó: -1.078% n=3  si Y plano: -1.652% n=3  azar24h {'p5_pct': -1.848, 'p95_pct': 1.927, 'mean_pct': -0.043}
+  day_down_test: n=6 X -2.49% Y mismo día -5.87%  Y24h 1.548% (hit 0.5, t 0.77)  Y48h 0.284%  | si Y ya cayó: 1.548% n=6  si Y plano: None% n=0  azar24h {'p5_pct': -1.885, 'p95_pct': 2.143, 'mean_pct': -0.023}
+  day_up_test: n=3 X 2.58% Y mismo día 5.73%  Y24h -2.005% (hit 0.0, t -5.26)  Y48h -0.472%  | si Y ya cayó: -2.005% n=3  si Y plano: None% n=0  azar24h {'p5_pct': -2.997, 'p95_pct': 2.993, 'mean_pct': -0.236}
+  regla short_3h: diseño {'n': 91, 'mean_pct': -0.306, 'hit': 0.374, 't': -2.64, 'median_pct': -0.366}  prueba {'n': 142, 'mean_pct': -0.121, 'hit': 0.401, 't': -1.18, 'median_pct': -0.155}  suma prueba -17.15%  azar {'p5_pct': -0.238, 'p95_pct': -0.004, 'mean_pct': -0.123}
+  regla short_6h: diseño {'n': 91, 'mean_pct': -0.412, 'hit': 0.407, 't': -2.14, 'median_pct': -0.567}  prueba {'n': 141, 'mean_pct': -0.161, 'hit': 0.39, 't': -1.31, 'median_pct': -0.229}  suma prueba -22.73%  azar {'p5_pct': -0.286, 'p95_pct': 0.027, 'mean_pct': -0.136}
+  regla short_12h: diseño {'n': 91, 'mean_pct': -0.462, 'hit': 0.429, 't': -1.94, 'median_pct': -0.381}  prueba {'n': 141, 'mean_pct': -0.111, 'hit': 0.397, 't': -0.68, 'median_pct': -0.264}  suma prueba -15.68%  azar {'p5_pct': -0.364, 'p95_pct': 0.083, 'mean_pct': -0.135}
+
+[NQ->ETH] corr lag0 0.464  +1h -0.001  +2h 0.006  | al revés +1h 0.016
+  shock down_test_1h: n=215 media 0.075% hit 0.563 t=1.07  azar p5/p95 -0.083/0.088
+  shock down_test_3h: n=213 media 0.101% hit 0.559 t=0.8  azar p5/p95 -0.135/0.139
+  shock down_test_6h: n=212 media 0.078% hit 0.58 t=0.52  azar p5/p95 -0.19/0.21
+  shock up_test_1h: n=186 media -0.051% hit 0.452 t=-0.71  azar p5/p95 -0.083/0.097
+  shock up_test_3h: n=186 media -0.074% hit 0.462 t=-0.58  azar p5/p95 -0.137/0.157
+  shock up_test_6h: n=186 media -0.033% hit 0.441 t=-0.22  azar p5/p95 -0.195/0.231
+  pre_down_test: n=15 X -1.29%  Y4h -0.02% (t -0.04)  Y8h 0.216% (t 0.4)  azar4h {'p5_pct': -0.953, 'p95_pct': 0.857, 'mean_pct': -0.027}
+  pre_up_test: n=9 X 1.52%  Y4h -0.081% (t -0.33)  Y8h 0.173% (t 0.48)  azar4h {'p5_pct': -1.229, 'p95_pct': 1.265, 'mean_pct': -0.02}
+  day_up_design: n=1 X 2.75% Y mismo día 11.23%  Y24h 7.602% (hit 1.0, t 0.0)  Y48h 9.506%  | si Y ya cayó: 7.602% n=1  si Y plano: None% n=0  azar24h None
+  day_down_design: n=6 X -2.68% Y mismo día -3.13%  Y24h -1.647% (hit 0.333, t -1.02)  Y48h -0.715%  | si Y ya cayó: -2.152% n=4  si Y plano: -0.638% n=2  azar24h {'p5_pct': -2.896, 'p95_pct': 2.947, 'mean_pct': -0.126}
+  day_down_test: n=6 X -2.49% Y mismo día -8.17%  Y24h 2.672% (hit 0.667, t 1.33)  Y48h 1.689%  | si Y ya cayó: 2.672% n=6  si Y plano: None% n=0  azar24h {'p5_pct': -2.854, 'p95_pct': 2.131, 'mean_pct': -0.157}
+  day_up_test: n=3 X 2.58% Y mismo día 6.68%  Y24h -0.728% (hit 0.333, t -0.53)  Y48h 0.235%  | si Y ya cayó: -0.728% n=3  si Y plano: None% n=0  azar24h {'p5_pct': -3.997, 'p95_pct': 4.175, 'mean_pct': -0.074}
+  regla short_3h: diseño {'n': 91, 'mean_pct': -0.359, 'hit': 0.33, 't': -2.23, 'median_pct': -0.429}  prueba {'n': 142, 'mean_pct': -0.276, 'hit': 0.401, 't': -1.88, 'median_pct': -0.241}  suma prueba -39.24%  azar {'p5_pct': -0.299, 'p95_pct': 0.029, 'mean_pct': -0.132}
+  regla short_6h: diseño {'n': 91, 'mean_pct': -0.367, 'hit': 0.473, 't': -1.28, 'median_pct': -0.188}  prueba {'n': 141, 'mean_pct': -0.288, 'hit': 0.376, 't': -1.58, 'median_pct': -0.33}  suma prueba -40.64%  azar {'p5_pct': -0.344, 'p95_pct': 0.126, 'mean_pct': -0.129}
+  regla short_12h: diseño {'n': 91, 'mean_pct': -0.525, 'hit': 0.407, 't': -1.39, 'median_pct': -0.508}  prueba {'n': 141, 'mean_pct': -0.296, 'hit': 0.397, 't': -1.23, 'median_pct': -0.307}  suma prueba -41.69%  azar {'p5_pct': -0.468, 'p95_pct': 0.156, 'mean_pct': -0.152}
+
+[NQ->SOL] corr lag0 0.428  +1h -0.018  +2h -0.0  | al revés +1h 0.024
+  shock down_test_1h: n=215 media 0.123% hit 0.572 t=1.62  azar p5/p95 -0.078/0.08
+  shock down_test_3h: n=213 media 0.047% hit 0.535 t=0.36  azar p5/p95 -0.174/0.164
+  shock down_test_6h: n=212 media -0.013% hit 0.557 t=-0.07  azar p5/p95 -0.22/0.214
+  shock up_test_1h: n=186 media -0.128% hit 0.457 t=-1.71  azar p5/p95 -0.102/0.1
+  shock up_test_3h: n=186 media -0.135% hit 0.457 t=-1.07  azar p5/p95 -0.182/0.173
+  shock up_test_6h: n=186 media 0.008% hit 0.489 t=0.06  azar p5/p95 -0.229/0.23
+  pre_down_test: n=15 X -1.29%  Y4h -0.116% (t -0.2)  Y8h 0.053% (t 0.08)  azar4h {'p5_pct': -0.911, 'p95_pct': 0.909, 'mean_pct': -0.025}
+  pre_up_test: n=9 X 1.52%  Y4h 0.241% (t 1.07)  Y8h 0.559% (t 1.61)  azar4h {'p5_pct': -1.211, 'p95_pct': 1.199, 'mean_pct': 0.012}
+  day_up_design: n=1 X 2.75% Y mismo día 14.21%  Y24h 3.897% (hit 1.0, t 0.0)  Y48h 5.279%  | si Y ya cayó: 3.897% n=1  si Y plano: None% n=0  azar24h None
+  day_down_design: n=6 X -2.68% Y mismo día -2.87%  Y24h -0.321% (hit 0.333, t -0.17)  Y48h -0.492%  | si Y ya cayó: -2.459% n=3  si Y plano: 1.818% n=3  azar24h {'p5_pct': -3.277, 'p95_pct': 3.372, 'mean_pct': -0.111}
+  day_down_test: n=6 X -2.49% Y mismo día -7.9%  Y24h 2.911% (hit 0.667, t 1.39)  Y48h 1.161%  | si Y ya cayó: 4.277% n=5  si Y plano: -3.922% n=1  azar24h {'p5_pct': -2.837, 'p95_pct': 2.903, 'mean_pct': -0.158}
+  day_up_test: n=3 X 2.58% Y mismo día 6.84%  Y24h -2.276% (hit 0.333, t -1.58)  Y48h -1.753%  | si Y ya cayó: -0.562% n=2  si Y plano: -5.703% n=1  azar24h {'p5_pct': -4.077, 'p95_pct': 4.206, 'mean_pct': -0.03}
+  regla short_3h: diseño {'n': 91, 'mean_pct': -0.563, 'hit': 0.352, 't': -3.05, 'median_pct': -0.43}  prueba {'n': 142, 'mean_pct': -0.274, 'hit': 0.415, 't': -1.81, 'median_pct': -0.31}  suma prueba -38.96%  azar {'p5_pct': -0.332, 'p95_pct': 0.102, 'mean_pct': -0.117}
+  regla short_6h: diseño {'n': 91, 'mean_pct': -0.537, 'hit': 0.451, 't': -1.61, 'median_pct': -0.165}  prueba {'n': 141, 'mean_pct': -0.294, 'hit': 0.418, 't': -1.48, 'median_pct': -0.318}  suma prueba -41.4%  azar {'p5_pct': -0.42, 'p95_pct': 0.127, 'mean_pct': -0.144}
+  regla short_12h: diseño {'n': 91, 'mean_pct': -0.452, 'hit': 0.462, 't': -1.05, 'median_pct': -0.404}  prueba {'n': 141, 'mean_pct': -0.333, 'hit': 0.418, 't': -1.25, 'median_pct': -0.342}  suma prueba -46.97%  azar {'p5_pct': -0.476, 'p95_pct': 0.257, 'mean_pct': -0.117}
+
+[ES->BTC] corr lag0 0.446  +1h -0.008  +2h 0.002  | al revés +1h 0.02
+  shock down_test_1h: n=206 media -0.015% hit 0.524 t=-0.29  azar p5/p95 -0.047/0.051
+  shock down_test_3h: n=205 media -0.068% hit 0.512 t=-0.79  azar p5/p95 -0.074/0.104
+  shock down_test_6h: n=204 media -0.12% hit 0.49 t=-1.12  azar p5/p95 -0.115/0.129
+  shock up_test_1h: n=178 media 0.011% hit 0.517 t=0.2  azar p5/p95 -0.056/0.058
+  shock up_test_3h: n=178 media 0.009% hit 0.5 t=0.1  azar p5/p95 -0.095/0.1
+  shock up_test_6h: n=178 media 0.046% hit 0.506 t=0.45  azar p5/p95 -0.14/0.158
+  pre_up_test: n=4 X 1.47%  Y4h 0.468% (t 1.45)  Y8h 0.46% (t 0.92)  azar4h {'p5_pct': -1.18, 'p95_pct': 1.302, 'mean_pct': 0.05}
+  pre_down_test: n=2 X -1.24%  Y4h 0.284% (t 0.0)  Y8h 0.985% (t 0.0)  azar4h None
+  day_up_design: n=2 X 2.27% Y mismo día 4.46%  Y24h 0.13% (hit 0.5, t 0.0)  Y48h -0.344%  | si Y ya cayó: -0.018% n=1  si Y plano: 0.278% n=1  azar24h None
+  day_down_design: n=1 X -2.97% Y mismo día -5.08%  Y24h -3.557% (hit 0.0, t 0.0)  Y48h -4.343%  | si Y ya cayó: -3.557% n=1  si Y plano: None% n=0  azar24h None
+  day_down_test: n=2 X -2.08% Y mismo día -8.42%  Y24h 4.448% (hit 0.5, t 0.0)  Y48h 3.326%  | si Y ya cayó: 4.448% n=2  si Y plano: None% n=0  azar24h None
+  day_up_test: n=1 X 2.42% Y mismo día 11.3%  Y24h -1.223% (hit 0.0, t 0.0)  Y48h 0.485%  | si Y ya cayó: -1.223% n=1  si Y plano: None% n=0  azar24h None
+  regla short_3h: diseño {'n': 85, 'mean_pct': -0.132, 'hit': 0.412, 't': -0.96, 'median_pct': -0.214}  prueba {'n': 130, 'mean_pct': 0.082, 'hit': 0.462, 't': 0.81, 'median_pct': -0.084}  suma prueba 10.68%  azar {'p5_pct': -0.236, 'p95_pct': -0.011, 'mean_pct': -0.125}
+  regla short_6h: diseño {'n': 85, 'mean_pct': -0.318, 'hit': 0.412, 't': -1.64, 'median_pct': -0.418}  prueba {'n': 129, 'mean_pct': 0.112, 'hit': 0.481, 't': 0.92, 'median_pct': -0.065}  suma prueba 14.45%  azar {'p5_pct': -0.272, 'p95_pct': 0.026, 'mean_pct': -0.128}
+  regla short_12h: diseño {'n': 85, 'mean_pct': -0.351, 'hit': 0.4, 't': -1.48, 'median_pct': -0.639}  prueba {'n': 129, 'mean_pct': 0.08, 'hit': 0.426, 't': 0.48, 'median_pct': -0.141}  suma prueba 10.26%  azar {'p5_pct': -0.387, 'p95_pct': 0.098, 'mean_pct': -0.142}
+
+[ES->ETH] corr lag0 0.45  +1h 0.007  +2h 0.011  | al revés +1h 0.012
+  shock down_test_1h: n=206 media -0.029% hit 0.51 t=-0.38  azar p5/p95 -0.07/0.08
+  shock down_test_3h: n=205 media 0.009% hit 0.527 t=0.07  azar p5/p95 -0.119/0.137
+  shock down_test_6h: n=204 media -0.076% hit 0.539 t=-0.51  azar p5/p95 -0.178/0.228
+  shock up_test_1h: n=178 media 0.056% hit 0.472 t=0.74  azar p5/p95 -0.078/0.091
+  shock up_test_3h: n=178 media 0.014% hit 0.511 t=0.11  azar p5/p95 -0.14/0.15
+  shock up_test_6h: n=178 media 0.023% hit 0.455 t=0.15  azar p5/p95 -0.187/0.259
+  pre_up_test: n=4 X 1.47%  Y4h 0.138% (t 0.29)  Y8h 0.322% (t 0.5)  azar4h {'p5_pct': -1.881, 'p95_pct': 2.151, 'mean_pct': -0.088}
+  pre_down_test: n=2 X -1.24%  Y4h -0.12% (t 0.0)  Y8h 0.492% (t 0.0)  azar4h None
+  day_up_design: n=2 X 2.27% Y mismo día 5.92%  Y24h 2.023% (hit 0.5, t 0.0)  Y48h 2.474%  | si Y ya cayó: 7.602% n=1  si Y plano: -3.555% n=1  azar24h None
+  day_down_design: n=1 X -2.97% Y mismo día -6.08%  Y24h -7.413% (hit 0.0, t 0.0)  Y48h -6.837%  | si Y ya cayó: -7.413% n=1  si Y plano: None% n=0  azar24h None
+  day_down_test: n=2 X -2.08% Y mismo día -8.43%  Y24h 3.546% (hit 0.5, t 0.0)  Y48h 4.459%  | si Y ya cayó: 3.546% n=2  si Y plano: None% n=0  azar24h None
+  day_up_test: n=1 X 2.42% Y mismo día 11.0%  Y24h 2.261% (hit 1.0, t 0.0)  Y48h 1.944%  | si Y ya cayó: 2.261% n=1  si Y plano: None% n=0  azar24h None
+  regla short_3h: diseño {'n': 85, 'mean_pct': -0.047, 'hit': 0.365, 't': -0.22, 'median_pct': -0.41}  prueba {'n': 130, 'mean_pct': -0.006, 'hit': 0.454, 't': -0.04, 'median_pct': -0.089}  suma prueba -0.78%  azar {'p5_pct': -0.297, 'p95_pct': 0.059, 'mean_pct': -0.131}
+  regla short_6h: diseño {'n': 85, 'mean_pct': -0.18, 'hit': 0.482, 't': -0.62, 'median_pct': -0.188}  prueba {'n': 129, 'mean_pct': 0.042, 'hit': 0.45, 't': 0.23, 'median_pct': -0.102}  suma prueba 5.43%  azar {'p5_pct': -0.35, 'p95_pct': 0.136, 'mean_pct': -0.116}
+  regla short_12h: diseño {'n': 85, 'mean_pct': -0.179, 'hit': 0.447, 't': -0.45, 'median_pct': -0.312}  prueba {'n': 129, 'mean_pct': 0.051, 'hit': 0.434, 't': 0.23, 'median_pct': -0.29}  suma prueba 6.53%  azar {'p5_pct': -0.514, 'p95_pct': 0.195, 'mean_pct': -0.152}
+
+[ES->SOL] corr lag0 0.412  +1h -0.011  +2h 0.006  | al revés +1h 0.017
+  shock down_test_1h: n=206 media 0.002% hit 0.534 t=0.03  azar p5/p95 -0.094/0.107
+  shock down_test_3h: n=205 media -0.094% hit 0.512 t=-0.7  azar p5/p95 -0.152/0.16
+  shock down_test_6h: n=204 media -0.252% hit 0.505 t=-1.36  azar p5/p95 -0.209/0.227
+  shock up_test_1h: n=178 media 0.035% hit 0.5 t=0.46  azar p5/p95 -0.1/0.103
+  shock up_test_3h: n=178 media 0.048% hit 0.5 t=0.39  azar p5/p95 -0.183/0.172
+  shock up_test_6h: n=178 media 0.109% hit 0.511 t=0.73  azar p5/p95 -0.241/0.246
+  pre_up_test: n=4 X 1.47%  Y4h 1.175% (t 2.68)  Y8h 1.398% (t 3.33)  azar4h {'p5_pct': -2.029, 'p95_pct': 1.8, 'mean_pct': -0.122}
+  pre_down_test: n=2 X -1.24%  Y4h 1.451% (t 0.0)  Y8h 1.866% (t 0.0)  azar4h None
+  day_up_design: n=2 X 2.27% Y mismo día 6.16%  Y24h -0.738% (hit 0.5, t 0.0)  Y48h -0.052%  | si Y ya cayó: 3.897% n=1  si Y plano: -5.373% n=1  azar24h None
+  day_down_design: n=1 X -2.97% Y mismo día -7.44%  Y24h -6.813% (hit 0.0, t 0.0)  Y48h -8.584%  | si Y ya cayó: -6.813% n=1  si Y plano: None% n=0  azar24h None
+  day_down_test: n=2 X -2.08% Y mismo día -7.23%  Y24h 3.773% (hit 0.5, t 0.0)  Y48h 3.037%  | si Y ya cayó: 11.468% n=1  si Y plano: -3.922% n=1  azar24h None
+  day_up_test: n=1 X 2.42% Y mismo día 11.47%  Y24h 0.17% (hit 1.0, t 0.0)  Y48h -1.658%  | si Y ya cayó: 0.17% n=1  si Y plano: None% n=0  azar24h None
+  regla short_3h: diseño {'n': 85, 'mean_pct': -0.32, 'hit': 0.4, 't': -1.31, 'median_pct': -0.337}  prueba {'n': 130, 'mean_pct': 0.04, 'hit': 0.477, 't': 0.24, 'median_pct': -0.067}  suma prueba 5.2%  azar {'p5_pct': -0.314, 'p95_pct': 0.066, 'mean_pct': -0.134}
+  regla short_6h: diseño {'n': 85, 'mean_pct': -0.536, 'hit': 0.471, 't': -1.5, 'median_pct': -0.165}  prueba {'n': 129, 'mean_pct': 0.117, 'hit': 0.488, 't': 0.55, 'median_pct': -0.048}  suma prueba 15.13%  azar {'p5_pct': -0.395, 'p95_pct': 0.19, 'mean_pct': -0.098}
+  regla short_12h: diseño {'n': 85, 'mean_pct': -0.475, 'hit': 0.447, 't': -1.05, 'median_pct': -0.426}  prueba {'n': 129, 'mean_pct': 0.027, 'hit': 0.465, 't': 0.1, 'median_pct': -0.143}  suma prueba 3.53%  azar {'p5_pct': -0.517, 'p95_pct': 0.368, 'mean_pct': -0.103}
+
+[GOLD->BTC] corr lag0 0.186  +1h -0.004  +2h 0.005  | al revés +1h 0.003
+  shock down_test_1h: n=193 media -0.005% hit 0.482 t=-0.1  azar p5/p95 -0.052/0.056
+  shock down_test_3h: n=193 media -0.02% hit 0.503 t=-0.24  azar p5/p95 -0.091/0.093
+  shock down_test_6h: n=192 media 0.07% hit 0.505 t=0.72  azar p5/p95 -0.124/0.151
+  shock up_test_1h: n=180 media 0.032% hit 0.489 t=0.54  azar p5/p95 -0.059/0.057
+  shock up_test_3h: n=180 media 0.068% hit 0.472 t=0.87  azar p5/p95 -0.093/0.1
+  shock up_test_6h: n=180 media 0.028% hit 0.506 t=0.27  azar p5/p95 -0.128/0.143
+  pre_up_test: n=21 X 1.63%  Y4h 0.402% (t 1.06)  Y8h 0.31% (t 0.66)  azar4h {'p5_pct': -0.445, 'p95_pct': 0.595, 'mean_pct': 0.053}
+  pre_down_test: n=21 X -1.63%  Y4h 0.025% (t 0.07)  Y8h -0.03% (t -0.06)  azar4h {'p5_pct': -0.478, 'p95_pct': 0.586, 'mean_pct': 0.068}
+  day_down_design: n=5 X -2.69% Y mismo día 3.0%  Y24h -1.028% (hit 0.4, t -1.46)  Y48h -0.089%  | si Y ya cayó: -2.871% n=2  si Y plano: 0.201% n=3  azar24h {'p5_pct': -2.083, 'p95_pct': 1.971, 'mean_pct': -0.071}
+  day_up_design: n=2 X 2.48% Y mismo día -0.6%  Y24h -0.723% (hit 0.5, t 0.0)  Y48h -0.242%  | si Y ya cayó: None% n=0  si Y plano: -0.723% n=2  azar24h None
+  day_up_test: n=14 X 3.15% Y mismo día 0.55%  Y24h -0.846% (hit 0.429, t -1.39)  Y48h -1.612%  | si Y ya cayó: -0.863% n=4  si Y plano: -0.839% n=10  azar24h {'p5_pct': -1.261, 'p95_pct': 0.998, 'mean_pct': -0.114}
+  day_down_test: n=8 X -4.37% Y mismo día -3.86%  Y24h 1.629% (hit 0.625, t 0.82)  Y48h 0.25%  | si Y ya cayó: 3.174% n=6  si Y plano: -3.005% n=2  azar24h {'p5_pct': -1.757, 'p95_pct': 1.527, 'mean_pct': -0.129}
+  regla short_3h: diseño {'n': 87, 'mean_pct': -0.206, 'hit': 0.414, 't': -1.92, 'median_pct': -0.177}  prueba {'n': 121, 'mean_pct': 0.005, 'hit': 0.397, 't': 0.05, 'median_pct': -0.089}  suma prueba 0.55%  azar {'p5_pct': -0.24, 'p95_pct': 0.004, 'mean_pct': -0.125}
+  regla short_6h: diseño {'n': 87, 'mean_pct': -0.252, 'hit': 0.437, 't': -1.32, 'median_pct': -0.159}  prueba {'n': 121, 'mean_pct': -0.033, 'hit': 0.463, 't': -0.3, 'median_pct': -0.095}  suma prueba -3.95%  azar {'p5_pct': -0.312, 'p95_pct': 0.043, 'mean_pct': -0.133}
+  regla short_12h: diseño {'n': 87, 'mean_pct': -0.321, 'hit': 0.437, 't': -1.42, 'median_pct': -0.197}  prueba {'n': 120, 'mean_pct': 0.146, 'hit': 0.533, 't': 1.04, 'median_pct': 0.076}  suma prueba 17.54%  azar {'p5_pct': -0.411, 'p95_pct': 0.093, 'mean_pct': -0.155}
+
+[GOLD->ETH] corr lag0 0.168  +1h -0.001  +2h 0.0  | al revés +1h -0.0
+  shock down_test_1h: n=193 media 0.004% hit 0.508 t=0.06  azar p5/p95 -0.077/0.088
+  shock down_test_3h: n=193 media -0.079% hit 0.482 t=-0.76  azar p5/p95 -0.124/0.158
+  shock down_test_6h: n=192 media -0.012% hit 0.49 t=-0.09  azar p5/p95 -0.166/0.221
+  shock up_test_1h: n=180 media 0.096% hit 0.511 t=1.17  azar p5/p95 -0.088/0.082
+  shock up_test_3h: n=180 media 0.122% hit 0.489 t=1.09  azar p5/p95 -0.159/0.152
+  shock up_test_6h: n=180 media 0.093% hit 0.506 t=0.6  azar p5/p95 -0.185/0.236
+  pre_up_test: n=21 X 1.63%  Y4h 0.389% (t 0.7)  Y8h 0.561% (t 0.58)  azar4h {'p5_pct': -0.753, 'p95_pct': 0.672, 'mean_pct': -0.003}
+  pre_down_test: n=21 X -1.63%  Y4h -0.012% (t -0.03)  Y8h -0.196% (t -0.34)  azar4h {'p5_pct': -0.656, 'p95_pct': 0.822, 'mean_pct': 0.022}
+  day_down_design: n=5 X -2.69% Y mismo día 4.94%  Y24h -1.223% (hit 0.2, t -0.56)  Y48h 0.205%  | si Y ya cayó: -7.413% n=1  si Y plano: 0.324% n=4  azar24h {'p5_pct': -3.497, 'p95_pct': 3.198, 'mean_pct': -0.186}
+  day_up_design: n=2 X 2.48% Y mismo día -0.02%  Y24h 2.231% (hit 1.0, t 0.0)  Y48h -0.077%  | si Y ya cayó: 2.305% n=1  si Y plano: 2.157% n=1  azar24h None
+  day_up_test: n=14 X 3.15% Y mismo día 0.53%  Y24h -0.913% (hit 0.5, t -1.06)  Y48h -2.206%  | si Y ya cayó: -0.616% n=6  si Y plano: -1.135% n=8  azar24h {'p5_pct': -1.858, 'p95_pct': 1.554, 'mean_pct': -0.178}
+  day_down_test: n=8 X -4.37% Y mismo día -4.91%  Y24h 1.481% (hit 0.5, t 0.62)  Y48h -0.091%  | si Y ya cayó: 1.847% n=6  si Y plano: 0.383% n=2  azar24h {'p5_pct': -2.379, 'p95_pct': 2.074, 'mean_pct': -0.164}
+  regla short_3h: diseño {'n': 87, 'mean_pct': -0.274, 'hit': 0.391, 't': -1.93, 'median_pct': -0.34}  prueba {'n': 121, 'mean_pct': 0.098, 'hit': 0.446, 't': 0.78, 'median_pct': -0.077}  suma prueba 11.89%  azar {'p5_pct': -0.326, 'p95_pct': 0.036, 'mean_pct': -0.14}
+  regla short_6h: diseño {'n': 87, 'mean_pct': -0.384, 'hit': 0.402, 't': -1.28, 'median_pct': -0.603}  prueba {'n': 121, 'mean_pct': 0.062, 'hit': 0.504, 't': 0.41, 'median_pct': 0.006}  suma prueba 7.53%  azar {'p5_pct': -0.384, 'p95_pct': 0.146, 'mean_pct': -0.126}
+  regla short_12h: diseño {'n': 87, 'mean_pct': -0.694, 'hit': 0.402, 't': -1.94, 'median_pct': -0.773}  prueba {'n': 120, 'mean_pct': 0.194, 'hit': 0.517, 't': 1.07, 'median_pct': 0.066}  suma prueba 23.31%  azar {'p5_pct': -0.518, 'p95_pct': 0.249, 'mean_pct': -0.148}
+
+[GOLD->SOL] corr lag0 0.142  +1h -0.011  +2h 0.001  | al revés +1h -0.001
+  shock down_test_1h: n=193 media 0.062% hit 0.523 t=0.89  azar p5/p95 -0.103/0.108
+  shock down_test_3h: n=193 media 0.037% hit 0.528 t=0.32  azar p5/p95 -0.182/0.157
+  shock down_test_6h: n=192 media 0.097% hit 0.536 t=0.7  azar p5/p95 -0.241/0.22
+  shock up_test_1h: n=180 media 0.045% hit 0.472 t=0.58  azar p5/p95 -0.102/0.088
+  shock up_test_3h: n=180 media 0.03% hit 0.472 t=0.3  azar p5/p95 -0.175/0.185
+  shock up_test_6h: n=180 media 0.019% hit 0.533 t=0.13  azar p5/p95 -0.271/0.238
+  pre_up_test: n=21 X 1.63%  Y4h 0.396% (t 0.9)  Y8h 0.647% (t 0.95)  azar4h {'p5_pct': -0.774, 'p95_pct': 0.732, 'mean_pct': -0.034}
+  pre_down_test: n=21 X -1.63%  Y4h 0.311% (t 0.64)  Y8h 0.304% (t 0.49)  azar4h {'p5_pct': -0.816, 'p95_pct': 0.799, 'mean_pct': -0.048}
+  day_down_design: n=5 X -2.69% Y mismo día 2.59%  Y24h -2.544% (hit 0.2, t -1.62)  Y48h -2.587%  | si Y ya cayó: -5.176% n=2  si Y plano: -0.788% n=3  azar24h {'p5_pct': -3.297, 'p95_pct': 3.513, 'mean_pct': -0.142}
+  day_up_design: n=2 X 2.48% Y mismo día -7.16%  Y24h -2.313% (hit 0.0, t 0.0)  Y48h -3.358%  | si Y ya cayó: -4.262% n=1  si Y plano: -0.364% n=1  azar24h None
+  day_up_test: n=14 X 3.15% Y mismo día -0.2%  Y24h -1.173% (hit 0.5, t -1.15)  Y48h -2.075%  | si Y ya cayó: 1.465% n=5  si Y plano: -2.638% n=9  azar24h {'p5_pct': -1.881, 'p95_pct': 1.969, 'mean_pct': -0.019}
+  day_down_test: n=8 X -4.37% Y mismo día -3.75%  Y24h 1.004% (hit 0.5, t 0.37)  Y48h -0.331%  | si Y ya cayó: 6.312% n=4  si Y plano: -4.303% n=4  azar24h {'p5_pct': -2.286, 'p95_pct': 2.118, 'mean_pct': -0.013}
+  regla short_3h: diseño {'n': 87, 'mean_pct': -0.211, 'hit': 0.448, 't': -1.28, 'median_pct': -0.091}  prueba {'n': 121, 'mean_pct': -0.012, 'hit': 0.421, 't': -0.08, 'median_pct': -0.179}  suma prueba -1.41%  azar {'p5_pct': -0.33, 'p95_pct': 0.076, 'mean_pct': -0.125}
+  regla short_6h: diseño {'n': 87, 'mean_pct': -0.27, 'hit': 0.425, 't': -0.86, 'median_pct': -0.3}  prueba {'n': 121, 'mean_pct': -0.026, 'hit': 0.471, 't': -0.16, 'median_pct': -0.135}  suma prueba -3.16%  azar {'p5_pct': -0.401, 'p95_pct': 0.169, 'mean_pct': -0.129}
+  regla short_12h: diseño {'n': 87, 'mean_pct': -0.115, 'hit': 0.471, 't': -0.31, 'median_pct': -0.2}  prueba {'n': 120, 'mean_pct': -0.003, 'hit': 0.558, 't': -0.02, 'median_pct': 0.355}  suma prueba -0.42%  azar {'p5_pct': -0.573, 'p95_pct': 0.292, 'mean_pct': -0.135}
+
+[SILVER->BTC] corr lag0 0.23  +1h -0.003  +2h -0.004  | al revés +1h 0.004
+  shock down_test_1h: n=204 media 0.005% hit 0.5 t=0.1  azar p5/p95 -0.044/0.05
+  shock down_test_3h: n=204 media 0.003% hit 0.515 t=0.04  azar p5/p95 -0.089/0.098
+  shock down_test_6h: n=204 media 0.024% hit 0.539 t=0.24  azar p5/p95 -0.125/0.14
+  shock up_test_1h: n=216 media 0.002% hit 0.495 t=0.04  azar p5/p95 -0.05/0.056
+  shock up_test_3h: n=216 media 0.042% hit 0.495 t=0.58  azar p5/p95 -0.09/0.096
+  shock up_test_6h: n=216 media 0.036% hit 0.519 t=0.41  azar p5/p95 -0.116/0.132
+  pre_up_test: n=63 X 2.09%  Y4h 0.044% (t 0.23)  Y8h 0.004% (t 0.02)  azar4h {'p5_pct': -0.285, 'p95_pct': 0.3, 'mean_pct': 0.022}
+  pre_down_test: n=57 X -2.18%  Y4h -0.008% (t -0.04)  Y8h 0.088% (t 0.35)  azar4h {'p5_pct': -0.249, 'p95_pct': 0.357, 'mean_pct': 0.049}
+  day_down_design: n=9 X -3.0% Y mismo día 0.51%  Y24h -0.466% (hit 0.444, t -0.59)  Y48h 1.067%  | si Y ya cayó: -1.391% n=5  si Y plano: 0.691% n=4  azar24h {'p5_pct': -1.541, 'p95_pct': 1.515, 'mean_pct': 0.008}
+  day_up_design: n=10 X 2.69% Y mismo día 0.76%  Y24h 0.296% (hit 0.7, t 0.81)  Y48h 0.707%  | si Y ya cayó: 0.588% n=4  si Y plano: 0.101% n=6  azar24h {'p5_pct': -1.539, 'p95_pct': 1.56, 'mean_pct': -0.018}
+  day_down_test: n=14 X -8.16% Y mismo día -2.33%  Y24h 1.191% (hit 0.571, t 1.03)  Y48h 0.827%  | si Y ya cayó: 2.696% n=9  si Y plano: -1.517% n=5  azar24h {'p5_pct': -1.066, 'p95_pct': 1.33, 'mean_pct': 0.026}
+  day_up_test: n=39 X 4.82% Y mismo día 0.53%  Y24h -1.006% (hit 0.385, t -2.28)  Y48h -1.07%  | si Y ya cayó: -0.746% n=12  si Y plano: -1.122% n=27  azar24h {'p5_pct': -0.69, 'p95_pct': 0.619, 'mean_pct': -0.015}
+  regla short_3h: diseño {'n': 91, 'mean_pct': -0.172, 'hit': 0.418, 't': -1.35, 'median_pct': -0.142}  prueba {'n': 134, 'mean_pct': -0.108, 'hit': 0.433, 't': -1.14, 'median_pct': -0.084}  suma prueba -14.5%  azar {'p5_pct': -0.237, 'p95_pct': 0.001, 'mean_pct': -0.124}
+  regla short_6h: diseño {'n': 91, 'mean_pct': -0.201, 'hit': 0.484, 't': -1.06, 'median_pct': -0.065}  prueba {'n': 134, 'mean_pct': -0.075, 'hit': 0.425, 't': -0.62, 'median_pct': -0.171}  suma prueba -10.04%  azar {'p5_pct': -0.302, 'p95_pct': 0.03, 'mean_pct': -0.134}
+  regla short_12h: diseño {'n': 91, 'mean_pct': 0.04, 'hit': 0.527, 't': 0.18, 'median_pct': 0.144}  prueba {'n': 133, 'mean_pct': 0.134, 'hit': 0.541, 't': 0.83, 'median_pct': 0.176}  suma prueba 17.84%  azar {'p5_pct': -0.355, 'p95_pct': 0.088, 'mean_pct': -0.138}
+
+[SILVER->ETH] corr lag0 0.217  +1h 0.008  +2h 0.0  | al revés +1h -0.003
+  shock down_test_1h: n=204 media 0.015% hit 0.495 t=0.23  azar p5/p95 -0.084/0.083
+  shock down_test_3h: n=204 media -0.054% hit 0.5 t=-0.56  azar p5/p95 -0.146/0.14
+  shock down_test_6h: n=204 media -0.019% hit 0.485 t=-0.15  azar p5/p95 -0.198/0.223
+  shock up_test_1h: n=216 media 0.047% hit 0.491 t=0.69  azar p5/p95 -0.074/0.086
+  shock up_test_3h: n=216 media 0.053% hit 0.491 t=0.54  azar p5/p95 -0.131/0.141
+  shock up_test_6h: n=216 media 0.055% hit 0.495 t=0.45  azar p5/p95 -0.217/0.221
+  pre_up_test: n=63 X 2.09%  Y4h 0.141% (t 0.56)  Y8h 0.175% (t 0.46)  azar4h {'p5_pct': -0.436, 'p95_pct': 0.372, 'mean_pct': -0.063}
+  pre_down_test: n=57 X -2.18%  Y4h -0.102% (t -0.36)  Y8h -0.007% (t -0.02)  azar4h {'p5_pct': -0.478, 'p95_pct': 0.422, 'mean_pct': -0.029}
+  day_down_design: n=9 X -3.0% Y mismo día 1.7%  Y24h -0.167% (hit 0.556, t -0.1)  Y48h 1.432%  | si Y ya cayó: -3.636% n=3  si Y plano: 1.568% n=6  azar24h {'p5_pct': -2.107, 'p95_pct': 2.207, 'mean_pct': 0.051}
+  day_up_design: n=10 X 2.69% Y mismo día 1.72%  Y24h 0.302% (hit 0.5, t 0.35)  Y48h 1.155%  | si Y ya cayó: 0.86% n=7  si Y plano: -1.0% n=3  azar24h {'p5_pct': -2.146, 'p95_pct': 2.065, 'mean_pct': -0.109}
+  day_down_test: n=14 X -8.16% Y mismo día -3.17%  Y24h 1.191% (hit 0.571, t 0.81)  Y48h 1.23%  | si Y ya cayó: 2.082% n=9  si Y plano: -0.412% n=5  azar24h {'p5_pct': -1.662, 'p95_pct': 1.675, 'mean_pct': -0.005}
+  day_up_test: n=39 X 4.82% Y mismo día 0.74%  Y24h -1.195% (hit 0.487, t -2.23)  Y48h -1.43%  | si Y ya cayó: -0.619% n=15  si Y plano: -1.555% n=24  azar24h {'p5_pct': -1.088, 'p95_pct': 0.858, 'mean_pct': -0.047}
+  regla short_3h: diseño {'n': 91, 'mean_pct': -0.134, 'hit': 0.462, 't': -0.86, 'median_pct': -0.068}  prueba {'n': 134, 'mean_pct': -0.043, 'hit': 0.403, 't': -0.36, 'median_pct': -0.145}  suma prueba -5.83%  azar {'p5_pct': -0.3, 'p95_pct': 0.047, 'mean_pct': -0.121}
+  regla short_6h: diseño {'n': 91, 'mean_pct': -0.076, 'hit': 0.462, 't': -0.29, 'median_pct': -0.194}  prueba {'n': 134, 'mean_pct': -0.044, 'hit': 0.478, 't': -0.29, 'median_pct': -0.094}  suma prueba -5.83%  azar {'p5_pct': -0.425, 'p95_pct': 0.094, 'mean_pct': -0.154}
+  regla short_12h: diseño {'n': 91, 'mean_pct': 0.228, 'hit': 0.56, 't': 0.66, 'median_pct': 0.285}  prueba {'n': 133, 'mean_pct': 0.226, 'hit': 0.549, 't': 1.12, 'median_pct': 0.236}  suma prueba 30.03%  azar {'p5_pct': -0.5, 'p95_pct': 0.207, 'mean_pct': -0.142}
+
+[SILVER->SOL] corr lag0 0.185  +1h -0.005  +2h -0.004  | al revés +1h -0.008
+  shock down_test_1h: n=204 media 0.057% hit 0.5 t=0.81  azar p5/p95 -0.101/0.094
+  shock down_test_3h: n=204 media -0.008% hit 0.515 t=-0.08  azar p5/p95 -0.168/0.172
+  shock down_test_6h: n=204 media -0.018% hit 0.49 t=-0.12  azar p5/p95 -0.214/0.254
+  shock up_test_1h: n=216 media -0.014% hit 0.454 t=-0.19  azar p5/p95 -0.093/0.101
+  shock up_test_3h: n=216 media 0.006% hit 0.472 t=0.06  azar p5/p95 -0.152/0.149
+  shock up_test_6h: n=216 media 0.052% hit 0.56 t=0.4  azar p5/p95 -0.18/0.229
+  pre_up_test: n=63 X 2.09%  Y4h 0.175% (t 0.72)  Y8h 0.061% (t 0.18)  azar4h {'p5_pct': -0.449, 'p95_pct': 0.452, 'mean_pct': -0.021}
+  pre_down_test: n=57 X -2.18%  Y4h 0.139% (t 0.46)  Y8h 0.296% (t 0.84)  azar4h {'p5_pct': -0.45, 'p95_pct': 0.478, 'mean_pct': -0.008}
+  day_down_design: n=9 X -3.0% Y mismo día 0.78%  Y24h -1.423% (hit 0.333, t -1.16)  Y48h 0.173%  | si Y ya cayó: -3.501% n=4  si Y plano: 0.239% n=5  azar24h {'p5_pct': -2.106, 'p95_pct': 2.681, 'mean_pct': 0.193}
+  day_up_design: n=10 X 2.69% Y mismo día 0.71%  Y24h -0.049% (hit 0.4, t -0.05)  Y48h 0.21%  | si Y ya cayó: 1.313% n=6  si Y plano: -2.09% n=4  azar24h {'p5_pct': -2.27, 'p95_pct': 2.228, 'mean_pct': -0.154}
+  day_down_test: n=14 X -8.16% Y mismo día -2.16%  Y24h 1.24% (hit 0.571, t 0.77)  Y48h 1.126%  | si Y ya cayó: 5.301% n=7  si Y plano: -2.821% n=7  azar24h {'p5_pct': -1.974, 'p95_pct': 2.063, 'mean_pct': 0.021}
+  day_up_test: n=39 X 4.82% Y mismo día 0.31%  Y24h -1.482% (hit 0.333, t -2.55)  Y48h -1.481%  | si Y ya cayó: -0.419% n=15  si Y plano: -2.146% n=24  azar24h {'p5_pct': -1.063, 'p95_pct': 1.11, 'mean_pct': -0.062}
+  regla short_3h: diseño {'n': 91, 'mean_pct': -0.046, 'hit': 0.516, 't': -0.23, 'median_pct': 0.03}  prueba {'n': 134, 'mean_pct': -0.091, 'hit': 0.463, 't': -0.76, 'median_pct': -0.111}  suma prueba -12.18%  azar {'p5_pct': -0.312, 'p95_pct': 0.103, 'mean_pct': -0.109}
+  regla short_6h: diseño {'n': 91, 'mean_pct': 0.095, 'hit': 0.527, 't': 0.32, 'median_pct': 0.241}  prueba {'n': 134, 'mean_pct': -0.036, 'hit': 0.522, 't': -0.2, 'median_pct': 0.03}  suma prueba -4.87%  azar {'p5_pct': -0.358, 'p95_pct': 0.161, 'mean_pct': -0.107}
+  regla short_12h: diseño {'n': 91, 'mean_pct': 0.387, 'hit': 0.549, 't': 1.04, 'median_pct': 0.366}  prueba {'n': 133, 'mean_pct': 0.177, 'hit': 0.564, 't': 0.68, 'median_pct': 0.432}  suma prueba 23.49%  azar {'p5_pct': -0.521, 'p95_pct': 0.347, 'mean_pct': -0.1}
+
+[DXY->BTC] corr lag0 -0.097  +1h -0.002  +2h -0.013  | al revés +1h 0.006
+  shock down_test_1h: n=182 media -0.031% hit 0.451 t=-0.68  azar p5/p95 -0.057/0.06
+  shock down_test_3h: n=182 media 0.034% hit 0.478 t=0.37  azar p5/p95 -0.08/0.11
+  shock down_test_6h: n=182 media -0.102% hit 0.478 t=-0.96  azar p5/p95 -0.122/0.158
+  shock up_test_1h: n=150 media -0.08% hit 0.493 t=-1.41  azar p5/p95 -0.062/0.072
+  shock up_test_3h: n=150 media -0.156% hit 0.407 t=-1.78  azar p5/p95 -0.096/0.121
+  shock up_test_6h: n=150 media -0.129% hit 0.473 t=-1.28  azar p5/p95 -0.143/0.173
+  regla short_3h: diseño {'n': 97, 'mean_pct': -0.206, 'hit': 0.351, 't': -1.96, 'median_pct': -0.376}  prueba {'n': 130, 'mean_pct': -0.169, 'hit': 0.415, 't': -1.47, 'median_pct': -0.164}  suma prueba -21.99%  azar {'p5_pct': -0.25, 'p95_pct': -0.017, 'mean_pct': -0.129}
+  regla short_6h: diseño {'n': 97, 'mean_pct': -0.405, 'hit': 0.34, 't': -2.54, 'median_pct': -0.392}  prueba {'n': 130, 'mean_pct': 0.048, 'hit': 0.5, 't': 0.37, 'median_pct': -0.032}  suma prueba 6.26%  azar {'p5_pct': -0.296, 'p95_pct': 0.034, 'mean_pct': -0.128}
+  regla short_12h: diseño {'n': 97, 'mean_pct': -0.463, 'hit': 0.402, 't': -2.46, 'median_pct': -0.218}  prueba {'n': 130, 'mean_pct': -0.083, 'hit': 0.485, 't': -0.55, 'median_pct': -0.137}  suma prueba -10.76%  azar {'p5_pct': -0.376, 'p95_pct': 0.097, 'mean_pct': -0.143}
+
+[DXY->ETH] corr lag0 -0.104  +1h -0.001  +2h -0.031  | al revés +1h -0.002
+  shock down_test_1h: n=182 media -0.017% hit 0.467 t=-0.25  azar p5/p95 -0.079/0.078
+  shock down_test_3h: n=182 media 0.116% hit 0.505 t=0.85  azar p5/p95 -0.13/0.149
+  shock down_test_6h: n=182 media -0.05% hit 0.484 t=-0.29  azar p5/p95 -0.199/0.234
+  shock up_test_1h: n=150 media -0.093% hit 0.473 t=-1.28  azar p5/p95 -0.084/0.105
+  shock up_test_3h: n=150 media -0.177% hit 0.467 t=-1.52  azar p5/p95 -0.165/0.18
+  shock up_test_6h: n=150 media -0.136% hit 0.46 t=-1.01  azar p5/p95 -0.262/0.257
+  regla short_3h: diseño {'n': 97, 'mean_pct': -0.371, 'hit': 0.32, 't': -2.19, 'median_pct': -0.497}  prueba {'n': 130, 'mean_pct': -0.175, 'hit': 0.446, 't': -1.14, 'median_pct': -0.2}  suma prueba -22.78%  azar {'p5_pct': -0.293, 'p95_pct': 0.064, 'mean_pct': -0.124}
+  regla short_6h: diseño {'n': 97, 'mean_pct': -0.498, 'hit': 0.371, 't': -2.09, 'median_pct': -0.554}  prueba {'n': 130, 'mean_pct': 0.032, 'hit': 0.492, 't': 0.17, 'median_pct': -0.029}  suma prueba 4.18%  azar {'p5_pct': -0.353, 'p95_pct': 0.116, 'mean_pct': -0.123}
+  regla short_12h: diseño {'n': 97, 'mean_pct': -0.474, 'hit': 0.412, 't': -1.57, 'median_pct': -0.627}  prueba {'n': 130, 'mean_pct': -0.095, 'hit': 0.485, 't': -0.39, 'median_pct': -0.038}  suma prueba -12.29%  azar {'p5_pct': -0.479, 'p95_pct': 0.25, 'mean_pct': -0.133}
+
+[DXY->SOL] corr lag0 -0.086  +1h -0.0  +2h -0.017  | al revés +1h 0.015
+  shock down_test_1h: n=182 media -0.002% hit 0.451 t=-0.03  azar p5/p95 -0.105/0.099
+  shock down_test_3h: n=182 media 0.073% hit 0.473 t=0.61  azar p5/p95 -0.156/0.165
+  shock down_test_6h: n=182 media -0.133% hit 0.478 t=-0.82  azar p5/p95 -0.283/0.253
+  shock up_test_1h: n=150 media -0.074% hit 0.453 t=-0.9  azar p5/p95 -0.11/0.118
+  shock up_test_3h: n=150 media -0.165% hit 0.44 t=-1.34  azar p5/p95 -0.194/0.173
+  shock up_test_6h: n=150 media -0.113% hit 0.473 t=-0.77  azar p5/p95 -0.273/0.249
+  regla short_3h: diseño {'n': 97, 'mean_pct': -0.328, 'hit': 0.371, 't': -1.86, 'median_pct': -0.43}  prueba {'n': 130, 'mean_pct': -0.147, 'hit': 0.485, 't': -0.99, 'median_pct': -0.08}  suma prueba -19.09%  azar {'p5_pct': -0.346, 'p95_pct': 0.082, 'mean_pct': -0.125}
+  regla short_6h: diseño {'n': 97, 'mean_pct': -0.501, 'hit': 0.402, 't': -1.85, 'median_pct': -0.369}  prueba {'n': 130, 'mean_pct': 0.147, 'hit': 0.508, 't': 0.74, 'median_pct': 0.041}  suma prueba 19.1%  azar {'p5_pct': -0.404, 'p95_pct': 0.153, 'mean_pct': -0.125}
+  regla short_12h: diseño {'n': 97, 'mean_pct': -0.468, 'hit': 0.464, 't': -1.39, 'median_pct': -0.183}  prueba {'n': 130, 'mean_pct': -0.161, 'hit': 0.446, 't': -0.67, 'median_pct': -0.312}  suma prueba -20.95%  azar {'p5_pct': -0.53, 'p95_pct': 0.3, 'mean_pct': -0.111}
+
+[BTC->NQ] corr lag0 0.466  +1h 0.026  +2h 0.015  | al revés +1h -0.016
+  shock down_test_1h: n=263 media -0.031% hit 0.464 t=-1.31  azar p5/p95 -0.022/0.035
+  shock down_test_3h: n=253 media -0.024% hit 0.498 t=-0.67  azar p5/p95 -0.042/0.059
+  shock down_test_6h: n=230 media 0.001% hit 0.526 t=0.03  azar p5/p95 -0.056/0.093
+  shock up_test_1h: n=228 media 0.029% hit 0.544 t=1.38  azar p5/p95 -0.03/0.033
+  shock up_test_3h: n=229 media 0.048% hit 0.563 t=1.52  azar p5/p95 -0.049/0.064
+  shock up_test_6h: n=205 media 0.103% hit 0.6 t=2.54  azar p5/p95 -0.06/0.094
+
+listo en 100 s → state/research/cross_asset.json
+== exit 0 ==

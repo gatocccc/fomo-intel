@@ -1,0 +1,5 @@
+== 177_debug_getblock 2026-10-30T19:26:03Z ==
+accounts json 200 0.1 s err: {'code': -32015, 'message': 'Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1'} ntx: 0 bytes 238
+accounts jsonParsed 200 0.1 s err: {'code': -32015, 'message': 'Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1'} ntx: 0 bytes 238
+signatures json 200 0.1 s err: None ntx: 551 bytes 50274
+== exit 0 ==
