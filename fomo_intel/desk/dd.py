@@ -157,7 +157,8 @@ def analyze(mint):
     wallets = [h for h in hs if wal.get(h["address"], True)]
     pools = [h for h in hs if not wal.get(h["address"], True)]
     for h in wallets:
-        f = funder_helius(h["address"]) or funder_rpc(h["address"]) or {}
+        # con Helius en tope de uso, el respaldo por RPC pública tarda >9 min por token (ops 170) y trababa al cerebro: se salta → SIN_DATOS
+        f = funder_helius(h["address"]) or ({} if _HELIUS_DOWN["api"] else funder_rpc(h["address"])) or {}
         h.update({k: v for k, v in f.items()})
         time.sleep(0.15)
     groups = defaultdict(list)
