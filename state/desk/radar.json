@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793338112.2406356,
+   "src": "tg:wublockchainenglish",
+   "title": "ZachXBT: Stolen Funds from the 6.3B Binance Exploit and 388M Bitget Exploit Commingled at Same Address, Suspected Same Attacker ZachXBT posted that stolen funds from the 6.3 billion Binance exploit an",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793337212.1035187,
    "src": "tg:WatcherGuru",
    "title": "JUST IN: 🇰🇵 North Korea responsible for 6 billion Binance hack, CNN reports. @WatcherGuru",
@@ -271,33 +282,23 @@
     "exchange",
     "selloff"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:wublockchainenglish",
-   "title": "Multiple Polymarket Users Report Stolen Funds as Platform Restricts Trading and Launches Investigation Multiple Polymarket users reported unauthorized fund transfers, with some claiming losses of hund",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "hack"
-   ]
   }
  ],
- "ts": 1793337872.9267607,
- "bear_score": 11,
+ "ts": 1793338157.7753553,
+ "bear_score": 14,
  "bull_score": 1,
  "price": {
   "SOL": {
-   "px": 97.999,
-   "ch15m": 0.002690922485061753,
-   "ch1h": 0.009258496395468496,
-   "ch4h": 0.04401973004357229
+   "px": 97.949,
+   "ch15m": 0.0022408676967153873,
+   "ch1h": 0.007084104462266039,
+   "ch4h": 0.04299815783028604
   },
   "BTC": {
-   "px": 78618.0,
-   "ch15m": 0.001413886659788366,
-   "ch1h": 0.004061302681992229,
-   "ch4h": 0.022460365972610585
+   "px": 78607.0,
+   "ch15m": 0.0009167886929395408,
+   "ch1h": 0.0032673482150833433,
+   "ch4h": 0.02211791017605913
   }
  },
  "mode": "live",
