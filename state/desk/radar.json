@@ -2,6 +2,17 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793363542.1796463,
+   "src": "decrypt",
+   "title": "Morning Minute: Binance’s $6.4B Hack Overshadows Hyperliquid’s Biggest Day",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793363017.2771683,
    "src": "decrypt",
    "title": "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
@@ -146,21 +157,21 @@
    ]
   }
  ],
- "ts": 1793363362.7776785,
- "bear_score": 23,
+ "ts": 1793363692.8903651,
+ "bear_score": 26,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.591,
-   "ch15m": -0.0004139458351875014,
-   "ch1h": -0.004442291439055168,
-   "ch4h": -0.006214311435773445
+   "px": 96.673,
+   "ch15m": -0.0008784803323755863,
+   "ch1h": -0.0026205288516100156,
+   "ch4h": -0.00572868456237785
   },
   "BTC": {
-   "px": 77452.0,
-   "ch15m": -0.00077407369181548,
-   "ch1h": -0.004204219647977014,
-   "ch4h": -0.006643580864435061
+   "px": 77419.0,
+   "ch15m": -0.0014574627250683037,
+   "ch1h": -0.003321446502825842,
+   "ch4h": -0.007499615404338189
   }
  },
  "mode": "live",
