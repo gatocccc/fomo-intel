@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793346092.5937626,
+   "src": "cointelegraph",
+   "title": "Binance investigates multibillion-dollar security breach",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793340092.0653088,
    "src": "cointelegraph",
    "title": "North Korea’s TraderTraitor linked to $6.3B Binance hack",
@@ -126,21 +137,21 @@
    ]
   }
  ],
- "ts": 1793345958.3150513,
- "bear_score": 0,
+ "ts": 1793346258.6411982,
+ "bear_score": 3,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 97.584,
-   "ch15m": -0.0038281321777478006,
-   "ch1h": -0.005857842887559972,
-   "ch4h": 0.008411697840239762
+   "px": 97.367,
+   "ch15m": -0.0060027563677198525,
+   "ch1h": -0.006499734704705884,
+   "ch4h": 0.004239036263872231
   },
   "BTC": {
-   "px": 78259.0,
-   "ch15m": -0.002676216085333083,
-   "ch1h": -0.004224402285248896,
-   "ch4h": 0.003371967793220243
+   "px": 78067.0,
+   "ch15m": -0.005034284112054199,
+   "ch1h": -0.005718579652554845,
+   "ch4h": -0.0003713378406063894
   }
  },
  "mode": "live",
