@@ -147,34 +147,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793309479.385678,
-   "src": "cointelegraph",
-   "title": "Binance investigates potential multibillion-dollar hack",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793323745.5191512,
+ "ts": 1793324045.4399607,
  "bear_score": 8,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 93.982,
-   "ch15m": -0.007791385135135109,
-   "ch1h": 0.01034186196516873,
-   "ch4h": -0.03538951041773586
+   "px": 94.103,
+   "ch15m": 0.0002551047523888794,
+   "ch1h": 0.008304045945482397,
+   "ch4h": -0.03659984848174613
   },
   "BTC": {
-   "px": 77039.0,
-   "ch15m": -0.0031830238726789917,
-   "ch1h": 0.0009744815758017111,
-   "ch4h": -0.02881815316734948
+   "px": 76980.0,
+   "ch15m": 0.0001818985006365459,
+   "ch1h": -0.002332814930015581,
+   "ch4h": -0.03194164989939641
   }
  },
  "mode": "live",
@@ -195,10 +184,10 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 93.982,
-  "ret_px": 0.0364,
-  "pnl_usd_est": 1.35,
-  "age_h": 4.08,
+  "mark": 94.103,
+  "ret_px": 0.0351,
+  "pnl_usd_est": 1.31,
+  "age_h": 4.16,
   "best_ret": 0.04671383164154619
  },
  "positions": {
@@ -219,10 +208,10 @@
    ],
    "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
    "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-   "mark": 93.982,
-   "ret_px": 0.0364,
-   "pnl_usd_est": 1.35,
-   "age_h": 4.08,
+   "mark": 94.103,
+   "ret_px": 0.0351,
+   "pnl_usd_est": 1.31,
+   "age_h": 4.16,
    "best_ret": 0.04671383164154619
   },
   "book": {
@@ -244,10 +233,10 @@
    "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "sig": "52fnUTsu5TQh9dGoURqVntbYErKt566sgbn8AKFywmcR8vVs2GfMC9b3pp3MgZyJ3zbrvN7oDuUc44K8S6rxDM3K",
    "best_ret": 0.0,
-   "mark": 93.982,
-   "ret_px": -0.012,
-   "pnl_usd_est": -1.96,
-   "age_h": 0.92
+   "mark": 94.103,
+   "ret_px": -0.0133,
+   "pnl_usd_est": -2.17,
+   "age_h": 1.0
   }
  }
 }
