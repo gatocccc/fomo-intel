@@ -1,16 +1,16 @@
 {
- "now": 1793327977.9348037,
+ "now": 1793328277.9149153,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 541.93,
- "equity_sol": 5.6894,
+ "equity_usd": 541.96,
+ "equity_sol": 5.6877,
  "cash_sol": 0.0866,
- "positions_usd": 533.68,
- "sol_usd": 95.25,
+ "positions_usd": 533.71,
+ "sol_usd": 95.29,
  "mult": 0.99,
  "halt": false,
  "pause": false,
@@ -32,7 +32,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9987132920046772,
+   "last_usd": 0.9987208570400364,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.99,
@@ -60,11 +60,11 @@
    "tp_done": [],
    "thesis": "SPX: established memecoin back in an uptrend (+11% vs 20-day average, +12% in 7 days).",
    "id": "auto-equilibrado-20261029-0009",
-   "last_usd": 0.35838614380612827,
+   "last_usd": 0.35876015156312685,
    "sleeve": "established",
    "from_plan": "equilibrado",
-   "mult": 0.858,
-   "value_usd": 20.84
+   "mult": 0.859,
+   "value_usd": 20.87
   }
  ],
  "perps_pnl_usd": 0,
@@ -1740,6 +1740,14 @@
   [
    1793327703,
    542.67
+  ],
+  [
+   1793328008,
+   541.96
+  ],
+  [
+   1793328064,
+   541.98
   ]
  ],
  "closed": [
@@ -2485,6 +2493,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793328079.4228208,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -4.7%, 4h -1.8%): no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-0241"
+  },
   {
    "ts": 1793327794.7840314,
    "title": "SOL short settled",
@@ -3661,7 +3676,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793327704.0160177,
+  "last_run": 1793328065.956925,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -3671,11 +3686,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793327704.0172005,
-   "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -5.0%, 4h -2.1%): no new memecoins until it improves."
+   "ts": 1793328068.2724075,
+   "text": "[Picks] Idle cash (100%), but SOL fell hard (24h -4.7%, 4h -1.8%): no new memecoins until it improves."
   },
-  "trad_status": "1 of 20 established memecoins above their 20-day average (best: SAPLING +50%)",
-  "sol_ch24h": -5.0,
-  "sol_vs_ma20": -0.0884
+  "trad_status": "SOL -8.5%, BTC -5.1%, ETH -7.9%, JUP -18.5%",
+  "sol_ch24h": -4.7,
+  "sol_vs_ma20": -0.0852
  }
 }
