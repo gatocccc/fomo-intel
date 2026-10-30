@@ -1,5 +1,5 @@
 {
- "now": 1793344186.0639718,
+ "now": 1793344489.6872213,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
@@ -7,10 +7,10 @@
  "days": 14,
  "day": 3,
  "equity_usd": 166.85,
- "equity_sol": 1.7029,
+ "equity_sol": 1.7053,
  "cash_sol": 0.1009,
- "positions_usd": 156.97,
- "sol_usd": 97.98,
+ "positions_usd": 156.98,
+ "sol_usd": 97.84,
  "mult": 1.684,
  "halt": false,
  "pause": false,
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9993028987922941,
+   "last_usd": 0.9993617491210779,
    "mult": 0.991,
-   "value_usd": 156.97
+   "value_usd": 156.98
   }
  ],
  "perps_pnl_usd": 0,
@@ -3125,6 +3125,10 @@
   [
    1793344034,
    166.86
+  ],
+  [
+   1793344338,
+   166.85
   ]
  ],
  "closed": [
@@ -3506,6 +3510,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793344337.8626657,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h 0.8%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-0712"
+  },
   {
    "ts": 1793343730.8730505,
    "title": "Cerebro automático: estado",
@@ -4898,13 +4909,6 @@
    "text": "Objetivo: x10 en 14 días (de US$99 a ~US$991). Para eso hace falta concentrar en pocos tokens con mucha volatilidad y dejar correr a los ganadores. No diversificar ni tomar ganancias chicas.\n\nQué descarté: lo que más sube en los rankings de hoy (JEANPHIL +107%, DOAS +80%, USDF +51%, USOE +29%) tiene volumen fabricado. Mueve la misma plata cada hora (US$7–15K) con una suba en escalera perfecta. DOAS ya cayó 64% desde su máximo y USDF 94%. Son bots inflando el precio: el que entra tarde es la salida de ellos.\n\nQué elegí, entre los 33 tokens con liquidez real, filtrando por volumen irregular (de gente) y volumen alto respecto de la capitalización:\n\n1) GTA6 — 0,35 SOL. Catalizador con fecha: GTA VI sale en noviembre de 2026, y el hype va a crecer en las próximas 3 semanas (tráilers, reviews, lanzamiento). Tiene 20.700 holders, el top 10 concentra 19%, vale US$4,5M y mueve US$1M por día (23% de su capitalización). Subió 63% en 72 h y está al 89% de su máximo semanal.\n\n2) LMAO! — 0,28 SOL. Meme de un año que revive: 17.400 holders, US$2,6M de capitalización, US$1,4M de volumen en 24 h (55% de la capitalización, el más alto del escaneo). +40% en 72 h.\n\nReglas de las dos: stop −30% desde la entrada. Trailing de 35% desde el pico una vez que pasa 1,6x. Vendo 25% a 3x y 25% a 6x, y el resto corre.\n\nGuardo ~0,33 SOL para la próxima oportunidad y para las comisiones.\n\nRiesgo honesto: capitalizaciones chicas, pueden caer 30% en horas. El stop ejecuta solo, aunque yo no esté.",
    "kind": "decisión",
    "id": "2026-10-27-01"
-  },
-  {
-   "ts": 1793113265.7115865,
-   "title": "Arranque de la mesa",
-   "text": "Saldo inicial 0.9833 SOL (US$99.09, SOL a US$100.77). Objetivo: x10 en 14 días. Piso de corte: US$15.",
-   "kind": "sistema",
-   "id": null
   }
  ],
  "wins": 2,
@@ -4914,7 +4918,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793343723.6314366,
+  "last_run": 1793344325.3926733,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4924,11 +4928,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793343723.6334224,
-   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h 2.8%): no abro memecoins hasta que mejore."
+   "ts": 1793344325.394625,
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista: Polymarket suspended trading amid reports of user funds being drained (SOL 4 h 0.8%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -2.0,
-  "sol_vs_ma20": -0.0588
+  "sol_ch24h": -1.8,
+  "sol_vs_ma20": -0.0599
  }
 }
