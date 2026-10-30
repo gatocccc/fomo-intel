@@ -1,16 +1,16 @@
 {
- "now": 1793356175.8903012,
+ "now": 1793356479.491503,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 3,
- "equity_usd": 166.76,
- "equity_sol": 1.7282,
+ "equity_usd": 166.8,
+ "equity_sol": 1.7217,
  "cash_sol": 0.1009,
  "positions_usd": 157.03,
- "sol_usd": 96.5,
+ "sol_usd": 96.88,
  "mult": 1.683,
  "halt": false,
  "pause": false,
@@ -35,7 +35,7 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9996809877879909,
+   "last_usd": 0.999672891315734,
    "mult": 0.991,
    "value_usd": 157.03
   }
@@ -3285,6 +3285,10 @@
   [
    1793356054,
    166.78
+  ],
+  [
+   1793356358,
+   166.78
   ]
  ],
  "closed": [
@@ -3666,6 +3670,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793356327.386797,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista (SOL 4 h -2.0%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-1032"
+  },
   {
    "ts": 1793355735.6667905,
    "title": "Cerebro automático: estado",
@@ -5058,13 +5069,6 @@
    "text": "set 4kjruq: ajustó GTA6: stop=-0.364\nbuy SI: compró 1,120 SI por 0.1644 SOL a US$0.0149778 (slippage +4.3%)",
    "kind": "ejecución",
    "id": "auto-mesa-20261028-1926"
-  },
-  {
-   "ts": 1793215578.9929423,
-   "title": "Cerebro automático: compra",
-   "text": "GTA6: llegó a 1.82x de pico; subo el stop a 1.36x (antes 1.28x).\n\nEfectivo ocioso: 0.319 SOL (26% del patrimonio). Lo pongo a trabajar en SI.\n\nSI: US$14.5M, liquidez US$533K, volumen 24 h 0.3x su valor, 51804 holders, top 10 11%; 24 h +9%, 78% del máximo de 3 días. Anti-rug LIMPIO (grupos con fondeador común 1.74%). En contra: bundlers 0%, creador con muchos lanzamientos (tamaño a la mitad); un stop de 30–35% puede ejecutarse más abajo en una caída rápida.",
-   "kind": "decisión",
-   "id": "auto-mesa-20261028-1926"
   }
  ],
  "wins": 2,
@@ -5074,7 +5078,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793355724.4131622,
+  "last_run": 1793356323.4713948,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -5084,7 +5088,7 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793355724.4150283,
+   "ts": 1793356323.4735951,
    "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista (SOL 4 h -2.0%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,
