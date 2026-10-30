@@ -2,6 +2,17 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793364382.3120997,
+   "src": "cointelegraph",
+   "title": "Binance says it holds $5B in matching tokens to cover hack losses",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793363542.1796463,
    "src": "decrypt",
    "title": "Morning Minute: Binance’s $6.4B Hack Overshadows Hyperliquid’s Biggest Day",
@@ -157,21 +168,21 @@
    ]
   }
  ],
- "ts": 1793364262.8425086,
- "bear_score": 18,
+ "ts": 1793364562.9463081,
+ "bear_score": 20,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.44,
-   "ch15m": -0.0015012683128849957,
-   "ch1h": -0.0020282296452667214,
-   "ch4h": -0.006541334020087608
+   "px": 96.713,
+   "ch15m": 0.0006207774202557914,
+   "ch1h": 0.0019580622435870776,
+   "ch4h": -0.003985581874356381
   },
   "BTC": {
-   "px": 77256.0,
-   "ch15m": -0.0022343049761717193,
-   "ch1h": -0.0020538655299360276,
-   "ch4h": -0.008279739669580621
+   "px": 77436.0,
+   "ch15m": 5.165822915587093e-05,
+   "ch1h": 0.0004521905401739801,
+   "ch4h": -0.00579043999640505
   }
  },
  "mode": "live",

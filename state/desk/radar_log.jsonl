@@ -1,4 +1,3 @@
-{"ts": 1793347998.2923634, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.08, "shock_px": 97.686, "ch1h": -0.00806179689176345, "ch4h": -0.001542733724159251}
 {"ts": 1793347998.2925591, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.08, "shock_px": 97.686, "ch1h": -0.00806179689176345, "ch4h": -0.001542733724159251}
 {"ts": 1793348058.245989, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.141, "shock_px": 97.686, "ch1h": -0.007438514749307679, "ch4h": -0.0009153553430011341}
 {"ts": 1793348058.2461667, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.141, "shock_px": 97.686, "ch1h": -0.007438514749307679, "ch4h": -0.0009153553430011341}
@@ -198,3 +197,4 @@
 {"ts": 1793362582.242887, "kind": "event", "src": "cointelegraph", "title": "Binance hit by $6.3B hack, the largest in cryptocurrency history", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793363017.2771683, "kind": "event", "src": "decrypt", "title": "TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793363542.1796463, "kind": "event", "src": "decrypt", "title": "Morning Minute: Binance’s $6.4B Hack Overshadows Hyperliquid’s Biggest Day", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
+{"ts": 1793364382.3120997, "kind": "event", "src": "cointelegraph", "title": "Binance says it holds $5B in matching tokens to cover hack losses", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw+llm", "confirmed": true}}
