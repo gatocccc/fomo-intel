@@ -1,0 +1,26 @@
+== 185_grupos_privados 2026-10-30T20:23:03Z ==
+billeteras por grupo: Counter({'B48kNV': 4, '8mowmV': 3, 'iGdFcQ': 3, 'u6PJ8D': 3})
+B48kNV F1JSFQ trades 30d: 656
+B48kNV EBMXd1 trades 30d: 3700
+B48kNV mqVXg1 trades 30d: 2939
+B48kNV 5trHEx trades 30d: 3254
+8mowmV HuxYsA trades 30d: 3233
+8mowmV EPLZQt trades 30d: 2932
+8mowmV FywV81 trades 30d: 2514
+iGdFcQ CdPMDP trades 30d: 201
+iGdFcQ 4EvsK8 trades 30d: 3112
+iGdFcQ AmNCPb trades 30d: 2717
+u6PJ8D GbPLPQ trades 30d: 1681
+u6PJ8D EgrfTE trades 30d: 2658
+u6PJ8D 32nJrH trades 30d: 2593
+
+posiciones: 4393  tokens distintos: 1385  tokens con >=2 billeteras de los grupos: 787
+B48kNV: posiciones 1491  ganadoras 25%  invertido US$275495  retirado US$254421  tenencia mediana 8 s  vende <60 s: 86%
+8mowmV: posiciones 1148  ganadoras 24%  invertido US$220131  retirado US$214012  tenencia mediana 6 s  vende <60 s: 83%
+iGdFcQ: posiciones 844  ganadoras 25%  invertido US$156417  retirado US$153067  tenencia mediana 8 s  vende <60 s: 81%
+u6PJ8D: posiciones 910  ganadoras 23%  invertido US$205555  retirado US$182395  tenencia mediana 13 s  vende <60 s: 83%
+
+COPIA a +2 s (n=108): acierto 22%  prom -12.2%  mediana -16.4%
+ellos mismos (precio de su vela): mediana -7.5%; el precio ya subió entre su compra y nuestra entrada: mediana +5.2%
+OK
+== exit 0 ==
