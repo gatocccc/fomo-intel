@@ -32,8 +32,24 @@ class Rpc:
     def __init__(self, url: str):
         self.url = url
 
+    FALLBACK = "https://api.mainnet-beta.solana.com"
+
     def call(self, method: str, params: list, timeout: float = 20):
-        r = requests.post(self.url, json={"jsonrpc": "2.0", "id": 1, "method": method, "params": params}, timeout=timeout)
+        # 30/10: Helius devolvía 429 (demasiadas consultas) y la apertura de perps fallaba sin reintentar. Ahora: hasta 3 reintentos con
+        # espera creciente y, si sigue el 429, la RPC pública de Solana como respaldo (una tx ya firmada se puede mandar por cualquiera).
+        body = {"jsonrpc": "2.0", "id": 1, "method": method, "params": params}
+        r = None
+        for attempt, url in enumerate([self.url, self.url, self.url, self.FALLBACK]):
+            try:
+                r = requests.post(url, json=body, timeout=timeout)
+            except requests.RequestException:
+                if attempt == 3:
+                    raise
+                time.sleep(1.0 + attempt); continue
+            if r.status_code == 429 or r.status_code >= 500:
+                if attempt < 3:
+                    time.sleep(float(r.headers.get("retry-after") or 0) or (1.0 + 1.5 * attempt)); continue
+            break
         r.raise_for_status()
         d = r.json()
         if "error" in d:

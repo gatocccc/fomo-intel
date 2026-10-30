@@ -134,13 +134,13 @@
    "name": "Short new perp listings after day 1",
    "question": "Do newly listed perps drift down over 7–14 days?",
    "method": "Short at day-1 close, exit d7/d14, 2x stop; pool Hyperliquid + Binance listings; control = random similar-cap perps same dates",
-   "result": "Queued. Evidence: The Tie 2026 (1,844 listings, mean-revert in 1–2 weeks); Four Pillars (Upbit/Bithumb 2025 day-1 buyers kept ~$0.31/$1)",
-   "verdict": "queued",
+   "result": "Oct 30 backtest on all 114 Hyperliquid perps listed since June 2023, short at the day-1 close hedged with BTC, 0.3% costs: 60% of the shorts win and the median gain is +8% at day 7, but the average is −7% (t −1.5) because a few new listings squeeze 100%+. Random windows of the same tokens: +1.6%. The typical listing does drift down, but the tail kills the trade without a tight stop; and Jupiter Perps (our venue) only lists SOL, ETH and BTC.",
+   "verdict": "rejected",
    "sleeve": "majors (perps)",
    "priority": 5,
    "public_title": "New listings fade",
    "hypothesis": "Freshly listed perpetuals drift down over their first one to two weeks.",
-   "efficacy": null
+   "efficacy": "Rejected for now: negative average after costs; revisit only with a stop and a venue that lists new perps."
   },
   {
    "date": "2026-10-29",
