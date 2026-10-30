@@ -389,10 +389,15 @@ def wallet_view(d: dict, full: bool = False) -> dict:
     """Vista de una billetera que opera (plan de la casa o, más adelante, la de un usuario)."""
     start, eq = d.get("start_usd") if d.get("start_usd") is not None else d.get("deposited_usd"), d.get("equity_usd")
     closed = d.get("closed") or []
-    out = {"wallet": d.get("wallet"), "started": d.get("started", True) and bool(d.get("start_ts")), "since": d.get("start_ts"),
-           "start_usd": start, "equity_usd": eq, "pnl_usd": round(eq - start, 2) if start and eq is not None else None,
-           "pnl_pct": round(eq / start - 1, 4) if start and eq else None, "cash_sol": d.get("cash_sol"),
-           "open": len(d.get("positions") or []), "closed": d.get("n_closed", len(closed)), "wins": d.get("wins"),
+    # Los resúmenes de los stools (mirror.py) traen `started`/`since`; el del libro trae `start_ts`. Hasta el 30/10 acá se exigía
+    # `start_ts` y todas las billeteras de usuarios figuraban "waiting for funds" con plata adentro (y no sumaban al capital bajo el bot).
+    since = d.get("start_ts") or d.get("since")
+    out = {"wallet": d.get("wallet"), "started": bool(d.get("started", True)) and bool(since), "since": since,
+           "start_usd": start, "equity_usd": eq,
+           "pnl_usd": d.get("pnl_usd") if d.get("pnl_usd") is not None else (round(eq - start, 2) if start and eq is not None else None),
+           "pnl_pct": d.get("pnl_pct") if d.get("pnl_pct") is not None else (round(eq / start - 1, 4) if start and eq else None), "cash_sol": d.get("cash_sol"),
+           "open": len(d.get("positions") or []), "closed": d.get("n_closed", len(closed)),
+           "wins": d.get("wins") if d.get("wins") is not None else sum(1 for c in closed if (c.get("pnl_usd") or 0) > 0),
            "realized_usd": d.get("realized_usd"), "halted": d.get("halt"), "closed_out": d.get("stopped") if "stopped" in d else (d.get("closed") if isinstance(d.get("closed"), bool) else None), "updated": d.get("now"), "stray_usd": d.get("stray_usd") or 0,
            "fees_usd": d.get("fees_usd"),
            "last_trade": (d.get("trades") or [{}])[0].get("ts") if d.get("trades") else None,

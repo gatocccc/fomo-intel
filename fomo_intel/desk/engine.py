@@ -328,16 +328,9 @@ class Desk:
                          kind=T("automático", "automatic"))
         if changed:
             jsave(applied_f, sorted(applied))
-        out = 0.0
-        # 30/10: además del corto del radar, la prueba de tendencia del lab (un dict) y la tortuga del libro (dict moneda → posición)
-        files = [pos_file] + (["state/desk/trend_pos_lab.json"] if leg == "lab" else ["state/desk/turtle_pos_book.json"])
-        for f in files:
-            obj = jload(Path(f), None)
-            items = [obj] if (obj and "ts" in obj) else list((obj or {}).values())
-            for p in items:
-                if p and p.get("mode") == "live" and (p.get("ts") or 0) >= PERPS_SINCE and f"{p.get('ts')}" not in applied:
-                    out += float(p.get("pnl_usd_est") or 0.0)
-        return out
+        # 30/10 (tarde): el resultado no realizado de las perps abiertas se suma UNA sola vez, en `perps_positions()` (radar + tortuga
+        # + tendencia del lab). Antes se sumaba acá (estimado) y otra vez en `publish` (radar.json): el corto del radar contaba doble.
+        return 0.0
 
     def equity(self):
         try:
@@ -346,7 +339,8 @@ class Desk:
             pass
         pos_usd = sum(p["tokens"] * (self.prices.get(m) or p.get("last_usd") or p["entry_usd"]) for m, p in self.pos.items())
         try:
-            pos_usd += self.perps_sync()
+            self.perps_sync()                                             # liquida en USDC los cierres de perps (una sola vez cada uno)
+            pos_usd += sum(x["pnl_usd"] for x in self.perps_positions())  # resultado no realizado de las perps abiertas (radar, tortuga, tendencia)
         except Exception as e:  # noqa: BLE001
             log.warning("perps_sync: %s", e)
         return self.wallet_sol * self.sol_usd + pos_usd, pos_usd
@@ -377,8 +371,30 @@ class Desk:
                         "sol_in": round(coll / self.sol_usd, 4), "sol_out": 0.0, "stop": 0.035, "trail": 0.02, "trail_after": 1.04, "tp": [], "tp_done": [],
                         "thesis": T(f"Corto de SOL por shock de noticias (radar). Colateral US${coll:.0f} a {p.get('lev', 2):g}x; stop si SOL sube 3,5%; trailing 2% desde el mejor punto una vez que gana 4%.",
                                     f"News-shock SOL short (radar). ${coll:.0f} collateral at {p.get('lev', 2):g}x; stop if SOL rises 3.5%; trails 2% from its best once up 4%."),
-                        "id": f"radar-{leg}", "sleeve": "majors", "reason": "news_shock_short", "brain": False, "perps": True,
+                        "id": f"radar-{leg}", "sleeve": "majors", "reason": "news_shock_short", "brain": False, "perps": True, "system": "News-shock short",
                         "mult": round(1 + ret * float(p.get("lev") or 2), 3), "value_usd": round(coll + pnl, 2), "pnl_usd": pnl, "collateral_usd": coll, "side": "short"})
+        # 30/10 (tarde): la tortuga 55/20 del libro (dict moneda → posición) y la tendencia diaria del lab (una posición) también son perps
+        # de ESTA billetera. Antes no se listaban: /book/ decía "1 open" con dos cortos abiertos y el bolsillo de majors no las contaba.
+        f = {"lloyd": "state/desk/turtle_pos_book.json", "lab": "state/desk/trend_pos_lab.json"}.get(NAME or "")
+        obj = jload(Path(f), None) if f else None
+        items = [obj] if (obj and "ts" in obj) else list((obj or {}).values())
+        for p in items:
+            if not p or p.get("mode") != "live" or not p.get("pubkey"):
+                continue
+            coin = p.get("symbol") or p.get("coin") or "?"; side = p.get("side") or "short"; d = 1 if side == "long" else -1
+            coll = float(p.get("collateral_usd") or 0); size = float(p.get("size_usd") or coll * float(p.get("lev") or 2)); ret = float(p.get("ret_px") or 0)
+            pnl = round(ret * size, 2); lev = float(p.get("lev") or 2); ex = p.get("exit_level") or p.get("stop_px")
+            stop = round(abs(float(ex) / float(p["entry"]) - 1), 4) if ex and p.get("entry") else None
+            turtle = (p.get("system") or "").startswith("turtle") or "exit_level" in p
+            thesis = (T(f"Tortuga 55/20: {coin} tocó su {'máximo' if d > 0 else 'mínimo'} de 55 días. {side} a {lev:g}x, colateral US${coll:.0f}; sale al tocar el {'mínimo' if d > 0 else 'máximo'} de 20 días (US${float(ex):,.2f}), riesgo 1% del libro.",
+                        f"Breakout 55/20: {coin} touched its 55-day {'high' if d > 0 else 'low'}. {side} at {lev:g}x, ${coll:.0f} collateral; exits when it touches the 20-day {'low' if d > 0 else 'high'} (${float(ex):,.2f}), 1% of the book at risk.") if (turtle and ex)
+                      else T(f"Tendencia diaria en majors: {side} {coin} a {lev:g}x, colateral US${coll:.0f}.", f"Daily trend on majors: {side} {coin} at {lev:g}x, ${coll:.0f} collateral."))
+            out.append({"mint": f"perps:{p.get('pubkey')}", "symbol": f"{coin} {side} {lev:g}x", "opened_ts": p["ts"], "entry_usd": p["entry"],
+                        "last_usd": p.get("mark") or p["entry"], "peak_usd": p["entry"], "tokens": 0, "tokens_initial": 0,
+                        "sol_in": round(coll / self.sol_usd, 4), "sol_out": 0.0, "stop": stop, "trail": None, "trail_after": None, "tp": [], "tp_done": [],
+                        "thesis": thesis, "id": f"{'turtle' if turtle else 'trend'}-{coin}", "sleeve": "majors", "reason": "majors_trend", "brain": False, "perps": True,
+                        "system": "Breakout 55/20" if turtle else "Daily trend", "exit_level": ex,
+                        "mult": round(1 + ret * lev, 3), "value_usd": round(coll + pnl, 2), "pnl_usd": pnl, "collateral_usd": coll, "side": side})
         return out
 
     def publish(self, eq, pos_usd):
@@ -394,8 +410,7 @@ class Desk:
         hist = tail("equity.jsonl", 3000)
         closed = tail("closed.jsonl", 200)
         perps = self.perps_positions()
-        perps_pnl = sum(x["pnl_usd"] for x in perps); perps_coll = sum(x["collateral_usd"] for x in perps)
-        eq = eq + perps_pnl; pos_usd = pos_usd + perps_pnl
+        perps_pnl = sum(x["pnl_usd"] for x in perps); perps_coll = sum(x["collateral_usd"] for x in perps)   # ya incluido en eq (equity())
         s = {"now": now, "start_ts": c["start_ts"], "start_usd": c["start_usd"], "start_sol": c["start_sol"], "goal_usd": round(c["start_usd"] * c["goal_mult"], 2),
              "days": c["days"], "day": int((now - c["start_ts"]) // 86400) + 1, "equity_usd": round(eq, 2), "equity_sol": round(eq / self.sol_usd, 4),
              "cash_sol": round(self.wallet_sol, 4), "positions_usd": round(pos_usd, 2), "sol_usd": round(self.sol_usd, 2),

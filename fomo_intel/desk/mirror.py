@@ -12,6 +12,13 @@ Qué hace, cada 15 s, para cada usuario con asiento (users.status = 'seated' en 
 - Publica state/users/<id>_summary.json (la app lo sirve en /api/me) y state/users/_all.json (admin).
 
 Operaciones chicas: no se replican las de menos de MIRROR_MIN_LEG_USD (US$10) salvo que cierren una posición. Prioridad baja por defecto.
+
+Perps (30/10, pedido de Gastón: "tiene que funcionar exactamente igual para todos"): cada stool copia también los cortos/largos del libro en
+Jupiter Perps (tortuga 55/20: state/desk/turtle_pos_book.json; radar de noticias: state/desk/radar_pos_book.json), con el mismo
+apalancamiento y el colateral escalado por patrimonio (mínimo US$10 por posición, tope 35% por posición y 50% en total; si el mínimo
+no entra, se avisa y se salta). El colateral sale del USDC del stool (si falta, se pasa SOL→USDC antes). Se cierra cuando el libro cierra;
+el colateral vuelve como USDC ± resultado y el saldo de USDC del stool se vuelve a leer de la cadena. Comisión: FEE% del colateral al abrir.
+Registro por stool: perps.json (abiertas), trades.jsonl (perp_open_*/perp_close_*), closed.jsonl (perps: true). MIRROR_PERPS=0 lo apaga.
 """
 from __future__ import annotations
 
@@ -47,6 +54,14 @@ FEE_HOLDER = float(os.getenv("FEE_TRADE_HOLDER_PCT", "1")) / 100
 FEE_EXTERNAL = float(os.getenv("FEE_TRADE_EXTERNAL_PCT", "1.5")) / 100
 FEE_SWEEP_SOL = 0.02
 FLOOR_FRAC = 0.4
+# Perps (30/10): los stools copian también los cortos/largos del libro en Jupiter Perps (tortuga 55/20 y radar de noticias),
+# escalados por patrimonio. Decisión de Gastón: "tiene que funcionar exactamente igual para todos y con las mismas posibilidades".
+DESK = STATE / "desk"
+PERPS_ON = os.getenv("MIRROR_PERPS", "1") != "0"
+PERP_MIN_COLL = float(os.getenv("MIRROR_PERP_MIN_COLL_USD", "10"))   # colateral mínimo que acepta Jupiter sin que la comisión se coma la posición
+PERP_MAX_FRAC = float(os.getenv("MIRROR_PERP_MAX_FRAC", "0.35"))      # tope de colateral por posición: 35% del stool (si el mínimo pide más, no se copia)
+PERP_TOTAL_FRAC = float(os.getenv("MIRROR_PERP_TOTAL_FRAC", "0.5"))    # tope del colateral total en perps: 50% del stool
+PERP_RETRY_S = 300
 
 
 def jl(p, d=None):
@@ -91,12 +106,15 @@ class Stool:
                                                          "fee_pct": None, "fees_sol": 0.0, "fees_pending_sol": 0.0, "fees_paid_sol": 0.0, "halt": False, "closed": False}
         self.pos: dict = jl(self.dir / "positions.json", {}) or {}
         self.seen: list = jl(self.dir / "processed.json", []) or []
+        self.perps: dict = jl(self.dir / "perps.json", {}) or {}      # clave "COIN:side" → posición copiada en Jupiter Perps
+        self._jp = None; self._perps_live: list | None = None; self._perps_live_ts = 0.0; self._perps_retry: dict = {}
         self.sol = 0.0
         self.refresh_type()
 
     # ---------- registro ----------
     def save(self):
         js(self.dir / "config.json", self.cfg); js(self.dir / "positions.json", self.pos); js(self.dir / "processed.json", self.seen[-2000:])
+        js(self.dir / "perps.json", self.perps)
 
     def append(self, name, row):
         with open(self.dir / name, "a") as f:
@@ -146,6 +164,8 @@ class Stool:
         Se avisa una vez al usuario y queda marcado para el admin."""
         if time.time() - float(self.cfg.get("_stray_ts") or 0) < 300:
             return
+        if time.time() - float(self.cfg.get("_perps_settled_ts") or 0) < 600:
+            return      # una perp recién cerrada devuelve el colateral (± resultado) como USDC: no es plata "enviada por error"
         self.cfg["_stray_ts"] = time.time()
         stray = 0.0
         for m in STABLES:
@@ -164,10 +184,12 @@ class Stool:
         self.save()
 
     def equity(self):
+        """Patrimonio = SOL + tokens (el USDC que está puesto como colateral sigue contado como USDC) + resultado no realizado de las perps."""
         tokens_usd = 0.0
         for m, p in self.pos.items():
             px = self.svc.price(m) or p.get("last_usd") or p.get("entry_usd") or 0
             p["last_usd"] = px; tokens_usd += p["tokens"] * px
+        tokens_usd += self.perps_pnl()
         return self.sol * self.svc.sol_usd + tokens_usd, tokens_usd
 
     # ---------- comisión ----------
@@ -342,6 +364,208 @@ class Stool:
                 res = self.sell(m, 1.0, "the book no longer holds it"); miss.pop(m, None)
                 self.journal("Lloyd moved, so did you", f"{sym}: {res}", kind="auto")
 
+    # ---------- perps: copiar los cortos/largos del libro ----------
+    def jp(self):
+        if self._jp is None:
+            from ..live.perps import JupPerps
+            self._jp = JupPerps(self.kp, self.svc.rpc, log)
+        return self._jp
+
+    @staticmethod
+    def book_perps() -> dict:
+        """Lo que el libro tiene abierto en Jupiter Perps, por "COIN:side": la tortuga 55/20 (turtle_pos_book.json, una por moneda) y el
+        corto del radar de noticias (radar_pos_book.json). Solo cuenta lo que está en real y ya confirmado en cadena (pubkey)."""
+        want: dict = {}
+        def add(p, system):
+            if not p or p.get("mode") != "live" or not p.get("pubkey"):
+                return
+            coin = p.get("symbol") or p.get("coin"); side = (p.get("side") or "short").lower()
+            if coin not in ("SOL", "ETH", "BTC") or side not in ("long", "short"):
+                return
+            k = f"{coin}:{side}"; w = want.setdefault(k, {"coin": coin, "side": side, "lev": float(p.get("lev") or 2), "collateral_usd": 0.0, "ts": p.get("ts"), "systems": [], "entry": p.get("entry"), "mark": p.get("mark"), "ret_px": p.get("ret_px")})
+            w["collateral_usd"] += float(p.get("collateral_usd") or 0); w["systems"].append(system)
+            w["ts"] = min(w["ts"] or (p.get("ts") or time.time()), p.get("ts") or time.time())
+        for c, p in (jl(DESK / "turtle_pos_book.json", {}) or {}).items():
+            add(dict(p, symbol=p.get("symbol") or c), "Breakout 55/20")
+        add(jl(DESK / "radar_pos_book.json", None), "News-shock short")
+        return want
+
+    def perps_live(self, force=False) -> list | None:
+        """Posiciones reales en cadena de esta billetera (cache 60 s). None si no se pudo consultar."""
+        if not force and self._perps_live is not None and time.time() - self._perps_live_ts < 60:
+            return self._perps_live
+        if not self.perps and not force:
+            return self._perps_live or []
+        try:
+            self._perps_live = self.jp().positions(); self._perps_live_ts = time.time()
+        except Exception as e:  # noqa: BLE001
+            log.warning("stool %s perps: %s", self.uid, e)
+        return self._perps_live
+
+    def perps_pnl(self) -> float:
+        """Resultado no realizado de las perps copiadas: el de la cadena si está, si no el del libro escalado (misma entrada, mismo mercado)."""
+        if not self.perps:
+            return 0.0
+        live = {q.get("pubkey"): q for q in (self.perps_live() or []) if q.get("pubkey")}
+        book = self.book_perps(); total = 0.0
+        for k, p in self.perps.items():
+            q = live.get(p.get("pubkey"))
+            if q and q.get("pnl_usd") is not None:
+                p["pnl_usd"] = float(q["pnl_usd"]); p["mark"] = q.get("mark") or p.get("mark")
+                if q.get("entry"): p["entry"] = float(q["entry"])
+            else:
+                b = book.get(k) or {}
+                mark = b.get("mark"); entry = p.get("entry") or b.get("entry")
+                if mark and entry:
+                    d = 1 if p["side"] == "long" else -1
+                    p["mark"] = mark; p["pnl_usd"] = round(d * (float(mark) / float(entry) - 1) * float(p["size_usd"]), 2)
+            total += float(p.get("pnl_usd") or 0)
+        return total
+
+    def perps_follow(self):
+        if not PERPS_ON or not self.cfg.get("start_ts"):
+            return
+        if self.cfg.get("halt") or self.cfg.get("closed"):
+            if self.perps:
+                self.perps_close_all("your stool is stopped")    # por si un cierre falló cuando se paró
+            return
+        want = self.book_perps(); now = time.time()
+        # 1) lo que el libro ya cerró, se cierra
+        for k in [k for k in self.perps if k not in want]:
+            self.perp_close(k, "Lloyd closed it in the book")
+        # 2) lo que el libro tiene y el stool no, se abre (escalado)
+        for k, w in want.items():
+            if k in self.perps or now < self._perps_retry.get(k, 0):
+                continue
+            self.perp_open(k, w)
+
+    def perp_open(self, k: str, w: dict):
+        now = time.time(); eq, _ = self.equity(); r = self.ratio()
+        coll = float(w["collateral_usd"]) * r; cap = eq * PERP_MAX_FRAC
+        if coll < PERP_MIN_COLL:
+            if PERP_MIN_COLL > cap:
+                if not self.cfg.get("_perp_small_warned", {}).get(k):
+                    self.cfg.setdefault("_perp_small_warned", {})[k] = now; self.save()
+                    self.journal("Too small to copy", f"Lloyd opened a {w['side']} on {w['coin']} (perps). Your share would be ${coll:.2f}, below the ${PERP_MIN_COLL:.0f} minimum "
+                                 f"Jupiter accepts, and the minimum would be more than {PERP_MAX_FRAC:.0%} of your stool. Skipped; everything else is copied as usual.", kind="auto")
+                self._perps_retry[k] = now + 3600
+                return
+            coll = PERP_MIN_COLL
+        coll = round(min(coll, cap), 2)
+        already = sum(float(p.get("collateral_usd") or 0) for p in self.perps.values())
+        if coll < PERP_MIN_COLL or already + coll > eq * PERP_TOTAL_FRAC:
+            self._perps_retry[k] = now + 3600
+            self.append("skipped.jsonl", {"ts": now, "perp": k, "usd": round(coll, 2), "why": "perps collateral cap"}); return
+        self.cfg.get("_perp_small_warned", {}).pop(k, None)
+        # colateral: USDC en la billetera. Si falta (la plata está en SOL), se pasa primero.
+        try:
+            have = self.jp().usdc_balance()
+        except Exception as e:  # noqa: BLE001
+            self._perps_retry[k] = now + 60; log.warning("stool %s usdc: %s", self.uid, e); return
+        if have < coll + 0.5:
+            need = coll + 1.0 - have
+            res = self.buy(USDC, "USDC", need / self.svc.sol_usd, f"collateral to copy Lloyd's {w['side']} on {w['coin']}")
+            if not res.startswith("parked"):
+                self._perps_retry[k] = now + PERP_RETRY_S
+                self.append("skipped.jsonl", {"ts": now, "perp": k, "usd": round(coll, 2), "why": f"no collateral: {res}"}); return
+            try:
+                have = self.jp().usdc_balance()
+            except Exception:  # noqa: BLE001
+                have = coll
+            coll = round(min(coll, max(0.0, have - 0.2)), 2)
+            if coll < PERP_MIN_COLL:
+                self._perps_retry[k] = now + PERP_RETRY_S; return
+        try:
+            r = self.jp().open(w["coin"], w["side"], coll, float(w["lev"]), dry=False)
+        except Exception as e:  # noqa: BLE001
+            r = {"ok": False, "error": str(e)}
+        rec = {"key": k, "coin": w["coin"], "side": w["side"], "lev": float(w["lev"]), "collateral_usd": coll, "size_usd": round(coll * float(w["lev"]), 2), "ts": now,
+               "book_ts": w.get("ts"), "systems": w.get("systems"), "entry": w.get("entry"), "pubkey": r.get("position_pubkey"), "sig": r.get("sig"), "ok": bool(r.get("ok")),
+               "error": (str(r.get("error")) if r.get("error") else "")[:200], "fee_sol": 0.0}
+        if not r.get("ok"):
+            self._perps_retry[k] = now + PERP_RETRY_S
+            self.append("trades.jsonl", {**rec, "side": f"perp_open_{w['side']}", "symbol": w["coin"], "mint": f"perps:{k}", "sol": 0.0, "tokens": 0.0, "price_usd": None, "sig": None,
+                                         "why": f"following the book: {', '.join(w.get('systems') or [])}"})
+            n = self.cfg.setdefault("_perp_fail", {}); n[k] = n.get(k, 0) + 1; self.save()
+            if n[k] in (1, 5):
+                self.journal("Could not copy a perps trade", f"{w['coin']} {w['side']}: {rec['error'][:140]}. Will retry.", kind="system")
+            log.error("stool %s: perp %s no abrió: %s", self.uid, k, rec["error"]); return
+        fee = self.take_fee(coll * float(self.cfg["fee_pct"]) / self.svc.sol_usd, f"perp_open", w["coin"]) if self.cfg.get("fee_pct") else 0.0
+        rec["fee_sol"] = round(fee, 6)
+        try:
+            live = [q for q in (self.perps_live(force=True) or []) if q.get("pubkey") == rec["pubkey"]]
+            if live and live[0].get("entry"): rec["entry"] = float(live[0]["entry"])
+            if live and live[0].get("collateral_usd"): rec["collateral_usd"] = float(live[0]["collateral_usd"])
+        except Exception:  # noqa: BLE001
+            pass
+        self.perps[k] = rec; self.cfg.get("_perp_fail", {}).pop(k, None); self.save()
+        self.append("trades.jsonl", {**rec, "side": f"perp_open_{w['side']}", "symbol": w["coin"], "mint": f"perps:{k}", "sol": round(coll / self.svc.sol_usd, 5), "tokens": 0.0,
+                                     "price_usd": rec.get("entry"), "why": f"following the book: {', '.join(w.get('systems') or [])}"})
+        self.journal("Lloyd moved, so did you", f"{w['coin']}: opened a {w['side']} at {w['lev']:g}x on Jupiter Perps with ${coll:.2f} of your USDC as collateral "
+                     f"(entry ${float(rec['entry'] or 0):,.2f}). Same trade as the book ({', '.join(w.get('systems') or [])}), sized to your stool.", kind="auto")
+
+    def perp_close(self, k: str, why: str):
+        p = self.perps.get(k)
+        if not p:
+            return
+        now = time.time()
+        if now < self._perps_retry.get("close:" + k, 0):
+            return
+        pnl = None
+        try:
+            q = [x for x in (self.perps_live(force=True) or []) if x.get("pubkey") == p.get("pubkey")]
+            if q and q[0].get("pnl_usd") is not None: pnl = float(q[0]["pnl_usd"])
+            on_chain = bool(q)
+        except Exception:  # noqa: BLE001
+            on_chain = True
+        if on_chain and p.get("pubkey"):
+            try:
+                r = self.jp().close(p["pubkey"], dry=False)
+            except Exception as e:  # noqa: BLE001
+                r = {"ok": False, "error": str(e)}
+            if not r.get("ok"):
+                p["close_attempts"] = p.get("close_attempts", 0) + 1; self.save()
+                self._perps_retry["close:" + k] = now + 120
+                log.error("stool %s: perp %s no cerró: %s", self.uid, k, r.get("error"))
+                if p["close_attempts"] in (1, 5):
+                    self.journal("Could not close a perps trade yet", f"{p['coin']} {p['side']}: {str(r.get('error'))[:140]}. Retrying every 2 minutes.", kind="system")
+                return
+            sig = r.get("sig")
+        else:
+            sig = None; why = why + " (already closed on-chain)"
+        if pnl is None:
+            pnl = float(p.get("pnl_usd") or 0.0)
+        # el colateral vuelve como USDC con el resultado: el saldo de USDC del stool se ajusta a lo que hay en cadena
+        try:
+            time.sleep(2)
+            raw, dec = self.svc.rpc.token_balance(self.pub, USDC); have = raw / (10 ** dec)
+            still_out = sum(float(x.get("collateral_usd") or 0) for kk, x in self.perps.items() if kk != k)   # colateral de las otras perps abiertas
+            ours = max(0.0, have + still_out - float(self.cfg.get("stray_usd") or 0))
+            u = self.pos.get(USDC)
+            if u:
+                u["tokens"] = ours
+            elif ours > 0.5:
+                self.pos[USDC] = {"mint": USDC, "symbol": "USDC", "opened_ts": now, "entry_usd": 1.0, "tokens": ours, "sol_in": 0.0, "sol_out": 0.0, "sleeve": "cash", "thesis": ""}
+        except Exception as e:  # noqa: BLE001
+            log.warning("stool %s usdc resync: %s", self.uid, e)
+            u = self.pos.get(USDC)
+            if u: u["tokens"] = max(0.0, u["tokens"] + pnl)
+        self.cfg["_perps_settled_ts"] = now
+        row = {"ts": now, "mint": f"perps:{k}", "symbol": f"{p['coin']} {p['side']} {p.get('lev', 2):g}x", "sol_in": round(float(p["collateral_usd"]) / self.svc.sol_usd, 5),
+               "sol_out": round((float(p["collateral_usd"]) + pnl) / self.svc.sol_usd, 5), "pnl_sol": round(pnl / self.svc.sol_usd, 5), "pnl_usd": round(pnl, 2),
+               "ret": round(pnl / float(p["collateral_usd"]), 3) if p.get("collateral_usd") else None, "hold_h": round((now - p["ts"]) / 3600, 1), "why": why, "sleeve": "majors", "perps": True}
+        self.append("closed.jsonl", row)
+        self.append("trades.jsonl", {"ts": now, "side": f"perp_close_{p['side']}", "mint": f"perps:{k}", "symbol": p["coin"], "ok": True, "sol": row["sol_out"], "tokens": 0.0,
+                                     "price_usd": p.get("mark"), "fee_sol": 0.0, "sig": sig, "error": "", "why": why})
+        self.perps.pop(k, None); self._perps_retry.pop("close:" + k, None); self.save()
+        self.journal("Lloyd moved, so did you", f"{p['coin']}: closed the {p['side']} ({why}). Result ${pnl:+.2f} on ${float(p['collateral_usd']):.2f} collateral; "
+                     f"the collateral is back in your stool as USDC.", kind="auto")
+
+    def perps_close_all(self, why):
+        for k in list(self.perps):
+            self._perps_retry.pop("close:" + k, None)
+            self.perp_close(k, why)
+
     # ---------- piso, cierre y retiro ----------
     def floor_check(self, eq):
         if self.cfg.get("start_ts") and not self.cfg.get("halt") and eq < float(self.cfg.get("floor_usd") or 0):
@@ -350,6 +574,7 @@ class Stool:
             self.journal("Stool stopped", f"Your stool fell to ${eq:.2f}, below the ${self.cfg['floor_usd']:.0f} floor. Everything was sold to SOL and it stopped.", kind="system")
 
     def close_all(self, why="you asked"):
+        self.perps_close_all(why)      # primero las perps: el colateral vuelve como USDC y se vende con el resto
         res = [f"{p['symbol']}: {self.sell(m, 1.0, why)}" for m, p in list(self.pos.items())]
         self.cfg["closed"] = True; self.save()
         self.journal("Everything to SOL", "\n".join(res) or "Nothing to sell.", kind="system")
@@ -393,7 +618,7 @@ class Stool:
             dest = (self.row["sol_wallet"] or "").strip(); w.unlink()
             if not dest:
                 self.journal("Withdrawal skipped", "No Solana wallet on file.", kind="system"); return
-            if self.pos:
+            if self.pos or self.perps:
                 self.close_all("withdrawal")
             self.balance(); amt = round(self.sol - RESERVE_SOL - float(self.cfg.get("fees_pending_sol") or 0) - 0.002, 5)
             if amt <= 0.001:
@@ -436,13 +661,20 @@ class Stool:
         dep = float(c.get("deposited_usd") or 0); wd = float(c.get("withdrawn_sol") or 0) * su
         if c.get("start_ts") and now - float(c.get("_last_eq") or 0) > (60 if now - float(c["start_ts"]) < 3600 else 300):   # la primera hora, cada minuto (así el gráfico arranca enseguida)
             self.append("equity.jsonl", {"ts": now, "usd": round(eq, 2), "sol": round(eq / su, 4), "sol_usd": round(su, 2)}); c["_last_eq"] = now; self.save()
+        perps_coll = sum(float(p.get("collateral_usd") or 0) for p in self.perps.values())
+        perps_pos = [{"token": f"{p['coin']} {p['side']} {p.get('lev', 2):g}x", "mint": f"perps:{p.get('pubkey') or k}", "sleeve": "majors", "perps": True,
+                      "multiple": round(1 + float(p.get("pnl_usd") or 0) / float(p["collateral_usd"]), 3) if p.get("collateral_usd") else None,
+                      "value_usd": round(float(p.get("collateral_usd") or 0) + float(p.get("pnl_usd") or 0), 2), "opened": p.get("ts"),
+                      "thesis": f"Same {p['side']} on {p['coin']} as the book ({', '.join(p.get('systems') or [])}), {p.get('lev', 2):g}x on Jupiter Perps, sized to your stool."}
+                     for k, p in self.perps.items()]
         s = {"now": now, "user_id": self.uid, "wallet": self.pub, "type": c.get("type"), "fee_pct": c.get("fee_pct"), "started": bool(c.get("start_ts")), "since": c.get("start_ts"),
+             "start_ts": c.get("start_ts"), "start_usd": c.get("start_usd"), "perps_open": len(self.perps),
              "halt": bool(c.get("halt")), "stopped": bool(c.get("closed")), "sol_usd": round(su, 2), "cash_sol": round(self.sol, 4),
              "equity_usd": round(eq, 2), "deposited_usd": round(dep, 2), "withdrawn_usd": round(wd, 2), "pnl_usd": round(eq + wd + float(c.get("tipped_sol") or 0) * su - dep, 2) if dep else None,
              "pnl_pct": round((eq + wd + float(c.get("tipped_sol") or 0) * su) / dep - 1, 4) if dep else None, "fees_usd": round(float(c.get("fees_sol") or 0) * su, 2), "min_sol": MIN_SOL, "stray_usd": c.get("stray_usd") or 0,
              "positions": [{"token": p["symbol"], "mint": m, "sleeve": p.get("sleeve"), "multiple": round((p.get("last_usd") or p["entry_usd"]) / p["entry_usd"], 3) if p["entry_usd"] else None,
-                            "value_usd": round(p["tokens"] * (p.get("last_usd") or p["entry_usd"]), 2), "opened": p.get("opened_ts"), "thesis": p.get("thesis")} for m, p in self.pos.items() if m not in STABLES],
-             "cash_usd": round(self.sol * su + sum(p["tokens"] * (p.get("last_usd") or 1) for m, p in self.pos.items() if m in STABLES), 2),
+                            "value_usd": round(p["tokens"] * (p.get("last_usd") or p["entry_usd"]), 2), "opened": p.get("opened_ts"), "thesis": p.get("thesis")} for m, p in self.pos.items() if m not in STABLES] + perps_pos,
+             "cash_usd": round(self.sol * su + sum(p["tokens"] * (p.get("last_usd") or 1) for m, p in self.pos.items() if m in STABLES) - perps_coll, 2),
              "equity": [[round(h["ts"]), h["usd"]] for h in tail(self.dir / "equity.jsonl", 2000)], "pct_series": self.pct_series(),
              "closed": tail(self.dir / "closed.jsonl", 100)[::-1], "trades": tail(self.dir / "trades.jsonl", 60)[::-1], "journal": tail(self.dir / "journal.jsonl", 100)[::-1]}
         js(UDIR / f"{self.uid}_summary.json", s)
@@ -532,7 +764,7 @@ class Mirror:
                 allp = []
                 for s in list(self.stools.values()):
                     try:
-                        s.balance(); s.detect_deposit(); s.check_stray_stables(); s.start(); s.requests(); s.follow()
+                        s.balance(); s.detect_deposit(); s.check_stray_stables(); s.start(); s.requests(); s.follow(); s.perps_follow()
                         eq, tu = s.equity(); s.floor_check(eq); s.sweep_fees()
                         if now - last_pub > 30:
                             allp.append({k: v for k, v in s.publish(eq, tu).items() if k not in ("equity", "pct_series", "closed", "trades", "journal", "positions")} | {"email": s.row["email"], "name": s.row["name"]})

@@ -139,7 +139,8 @@ def book_view(full: bool = True, admin: bool = False) -> dict | None:
     try:
         lv = jl(STATE / "desk" / "levels.json", {}) or {}
         out["armed"] = [{"coin": c, "price": v.get("px"), "buy_above": v.get("buy_above"), "short_below": v.get("short_below"),
-                         "to_buy": v.get("to_buy"), "to_short": v.get("to_short"), "long_exit": v.get("long_exit_below"), "short_exit": v.get("short_exit_above")}
+                         "to_buy": v.get("to_buy"), "to_short": v.get("to_short"), "long_exit": v.get("long_exit_below"), "short_exit": v.get("short_exit_above"),
+                         "open_side": (v.get("position") or {}).get("side")}      # la orden ya disparó: hay posición abierta en esa moneda
                         for c, v in (lv.get("view") or {}).items()]
         perps = []
         for c, p in (jl(STATE / "desk" / "turtle_pos_book.json", {}) or {}).items():
