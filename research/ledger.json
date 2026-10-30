@@ -301,6 +301,19 @@
    "verdict": "testing",
    "sleeve": "picks, established",
    "priority": 2
+  },
+  {
+   "date": "2026-10-30",
+   "name": "Copy profitable perps traders (Hyperliquid, as shown in Phantom/FOMO)",
+   "public_title": "Following the 'profitable trader' badge",
+   "question": "If we copy every perp trade of wallets that were profitable in the past, do we make money after costs and a realistic copy delay?",
+   "hypothesis": "Past profit (or profit per dollar traded) predicts future trades, so a filtered follower should beat random wallets.",
+   "method": "Hyperliquid public leaderboard (48,306 wallets) → 300 active (150 top all-time + 150 random). Picked with days −60…−30, measured on −30…0, unlevered, equal weight per trade, 0.19% round-trip cost; last 3 days re-priced with 1-minute candles (~1 min delay). experiments/hl_copy.py, ops 191–192.",
+   "result": "76 usable traders, 5,561 out-of-sample trades: −0.19% per trade (t −2.8), 37% wins. Random wallets −0.14%; top of the leaderboard −0.53% (t −4.0); past winners −0.09%; profit/volume ≥1% −0.27%; ≥2% −0.68%. With the 1-minute delay nothing turns positive with significance. Only one wallet of the 'high hit-rate scalper' type, positive (+0.4%/trade) but n=1.",
+   "efficacy": "No edge: past profit does not predict the next trades; the leaderboard top is the worst group to copy.",
+   "verdict": "rejected",
+   "sleeve": "majors",
+   "priority": 3
   }
  ],
  "protocol": "Out-of-sample half held out, entries at next bar open, real costs (memes ~4% round trip (measured on our own fills, Oct 30), perps 0.12% + funding), random-entry control x20; adopt only if test mean > 0, t ≥ 2.5, beats random by ≥ 0.3%/trade, design half also positive. Risk/cost changes are judged on drawdown and realized cost, not on win rate.",
