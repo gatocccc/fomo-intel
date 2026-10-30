@@ -1,16 +1,16 @@
 {
- "now": 1793379902.5396218,
+ "now": 1793380175.849421,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.4,
- "equity_sol": 5.7035,
+ "equity_usd": 541.69,
+ "equity_sol": 5.7138,
  "cash_sol": 0.0826,
- "positions_usd": 533.56,
- "sol_usd": 94.92,
+ "positions_usd": 533.86,
+ "sol_usd": 94.8,
  "mult": 0.989,
  "halt": false,
  "pause": false,
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9997611177871479,
+   "last_usd": 0.9997223328926427,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 435.59
+   "value_usd": 435.57
   },
   {
    "mint": "perps:7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "symbol": "SOL short 2x",
    "opened_ts": 1793367953.6543465,
    "entry_usd": 94.84,
-   "last_usd": 95.001,
+   "last_usd": 94.831,
    "peak_usd": 93.966,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.8564,
+   "sol_in": 0.8575,
    "sol_out": 0.0,
    "stop": 0.035,
    "trail": 0.02,
@@ -61,9 +61,9 @@
    "brain": false,
    "perps": true,
    "system": "News-shock short",
-   "mult": 0.997,
-   "value_usd": 81.01,
-   "pnl_usd": -0.28,
+   "mult": 1.0,
+   "value_usd": 81.31,
+   "pnl_usd": 0.02,
    "collateral_usd": 81.29,
    "side": "short"
   },
@@ -72,11 +72,11 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2240.05,
+   "last_usd": 2238.65,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1809,
+   "sol_in": 0.1811,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -91,14 +91,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 0.988,
-   "value_usd": 16.96,
-   "pnl_usd": -0.21,
+   "mult": 0.989,
+   "value_usd": 16.98,
+   "pnl_usd": -0.19,
    "collateral_usd": 17.17,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.49,
+ "perps_pnl_usd": -0.17,
  "equity": [
   [
    1793203600,
@@ -2455,6 +2455,10 @@
   [
    1793379689,
    541.43
+  ],
+  [
+   1793379993,
+   541.4
   ]
  ],
  "closed": [
@@ -3243,6 +3247,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793379978.1062236,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -0.3%): no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-1706"
+  },
   {
    "ts": 1793379370.7531524,
    "title": "Automatic brain: status",
@@ -4635,13 +4646,6 @@
    "text": "GTA6: peaked at 2.51x; stop raised to 1.88x (was 1.83x).",
    "kind": "decisión",
    "id": "auto-lloyd-20261029-1317"
-  },
-  {
-   "ts": 1793279226.3579066,
-   "title": "Execution",
-   "text": "sell 4kjruq: sold 25% of GTA6 (trim: single-name concentration (27% of the book) in a defensive market) for 0.3753 SOL",
-   "kind": "execution",
-   "id": "lloyd-2026-10-29-02"
   }
  ],
  "wins": 1,
@@ -4651,7 +4655,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793379363.0800476,
+  "last_run": 1793379964.9687467,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4661,11 +4665,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793379363.0834239,
-   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -1.9%): no new memecoins until it improves."
+   "ts": 1793379964.9715924,
+   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -0.3%): no new memecoins until it improves."
   },
   "trad_status": "SOL -8.7%, BTC -5.2%, ETH -7.2%, JUP -16.4%",
-  "sol_ch24h": -6.7,
-  "sol_vs_ma20": -0.0884
+  "sol_ch24h": -6.0,
+  "sol_vs_ma20": -0.0885
  }
 }
