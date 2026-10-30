@@ -1,17 +1,17 @@
 {
- "now": 1793358934.9947574,
+ "now": 1793360982.0473077,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 2,
- "equity_usd": 57.9,
- "equity_sol": 0.5982,
- "cash_sol": 0.287,
- "positions_usd": 30.13,
- "sol_usd": 96.8,
- "mult": 1.046,
+ "equity_usd": 57.63,
+ "equity_sol": 0.5979,
+ "cash_sol": 0.2852,
+ "positions_usd": 30.14,
+ "sol_usd": 96.38,
+ "mult": 1.041,
  "halt": false,
  "pause": false,
  "positions": [
@@ -34,7 +34,7 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9995627792819514,
+   "last_usd": 0.9996041294293628,
    "mult": 0.982,
    "value_usd": 30.13
   }
@@ -1236,6 +1236,14 @@
   [
    1793358783,
    57.91
+  ],
+  [
+   1793360592,
+   57.85
+  ],
+  [
+   1793360898,
+   57.61
   ]
  ],
  "closed": [
@@ -1342,6 +1350,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793360653.2360191,
+   "title": "Lab test: daily-trend short on ETH",
+   "text": "The daily trend signal for ETH is -0.8 (average of 10 standard trend rules: momentum 10–90 days, price vs 20/50/100-day averages, 20/55-day breakouts). Lab opens a short on Jupiter Perps: $10 collateral at 1.69x (sized to 60% annual volatility), entry $2,237.16. Exit when the signal fades past ±0.2, a hard stop 8% against the entry, or 14 days. Why a test and not the book: in the 2024–26 backtest these rules beat buy-and-hold on risk in most markets, but the edge is not yet statistically proven (t ≈ 0.6–1.7). Against: trend rules lose in choppy markets, and shorting after a 16% monthly drop can catch the bounce.",
+   "kind": "decisión",
+   "id": "auto-lab-trend-20261030-114410"
+  },
   {
    "ts": 1793342944.107771,
    "title": "Execution",

@@ -1,0 +1,22 @@
+== 166_verifica_perps 2026-10-30T11:43:04Z ==
+{"ts": 1793359746.8318472, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+{"ts": 1793360107.0584521, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+{"ts": 1793360467.2475638, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+{"ts": 1793360616.3171363, "kind": "trend_open", "leg": "lab", "plan": "lab", "symbol": "ETH", "side": "short", "entry": 2237.16, "collateral_usd": 10.0, "lev": 1.69, "size_usd": 16.9, "mode": "live", "signal": -0.8, "vol": 0.356, "pubkey": "FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy", "reason": "majors_trend", "sig": "uvhxBQYK3AE5LXEsFDNryeNgrPEjTZ243D9auuD5sSkJXi1SJ8yaxybsBzbdKr9gjNHQE4XdmgFJioD2hHvGpi1"}
+trend pos {"ts": 1793360616.3171363, "leg": "lab", "plan": "lab", "symbol": "ETH", "side": "short", "entry": 2237.16, "collateral_usd": 10.0, "lev": 1.69, "size_usd": 16.9, "mode": "live", "signal": -0.8, "vol": 0.356, "parts": {"mom10": -1.0, "mom20": -1.0, "mom30": -1.0, "mom60": -1.0, "mom90": 1.0, "ema20": -1.0, "ema50": -1.0, "ema100": -1.0, "don20": -1.0, "don55": -1.0}, "pubkey": "FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy", "reason": "majors_trend", "sig": "uvhxBQYK3AE5LXEsFDNryeNgrPEjTZ243D9auu
+BTC 77451.5 74903.0 -0.0329 null
+ETH 2239.55 2227.2 -0.0055 null
+SOL 96.6495 94.809 -0.019 null
+2026-10-30 11:47:04,198 INFO perps: wallet AXbTdJLRephZMSAMoiRwfbCBWXFYtfHeLmbPj9TZk69M rpc https://mainnet.helius-rpc.com/
+{"wallet":"AXbTdJLRephZMSAMoiRwfbCBWXFYtfHeLmbPj9TZk69M","count":1,"positions":[{"pubkey":"FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy","symbol":"ETH","side":"short","size_usd":16.88,"collateral_usd":9986131.0,"entry":2237.16,"mark":2233.3,"liq_price":3554.88,"pnl_usd":0.01,"pnl_pct":0.09,"leverage":1.69,"opened_ts":1793360642.0,"collateral_mint":"EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v","market_mint":"7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs"}]}
+2026-10-30 11:47:04,415 INFO perps: wallet G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek rpc https://mainnet.helius-rpc.com/
+{"wallet":"G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek","count":0,"positions":[]}
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.12/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+18:from __future__ import annotations
+20:import hashlib
+21:import hmac
+== exit 0 ==

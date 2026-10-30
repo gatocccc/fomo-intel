@@ -1,5 +1,3 @@
-{"ts": 1793347818.3008685, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.022, "shock_px": 97.686, "ch1h": -0.008654425814098365, "ch4h": -0.002139257430834096}
-{"ts": 1793347878.490386, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.032, "shock_px": 97.686, "ch1h": -0.00855224841369584, "ch4h": -0.0020364085158902645}
 {"ts": 1793347878.49058, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.032, "shock_px": 97.686, "ch1h": -0.00855224841369584, "ch4h": -0.0020364085158902645}
 {"ts": 1793347968.2670357, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.131, "shock_px": 97.686, "ch1h": -0.007540692149710315, "ch4h": -0.0010182042579450767}
 {"ts": 1793347968.267201, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.131, "shock_px": 97.686, "ch1h": -0.007540692149710315, "ch4h": -0.0010182042579450767}
@@ -198,3 +196,5 @@
 {"ts": 1793359868.3997004, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: 🇺🇸 Binance says it is working with the FBI and US Secret Service following 6.3 billion crypto hack. @WatcherGuru", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793360107.0584521, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
 {"ts": 1793360225.2903755, "kind": "event", "src": "cointelegraph", "title": "Bitcoin price metrics hint at rebound as $1.6B liquidations follow Binance hack", "cls": {"types": ["exchange", "hack", "selloff"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
+{"ts": 1793360467.2475638, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+{"ts": 1793360616.3171363, "kind": "trend_open", "leg": "lab", "plan": "lab", "symbol": "ETH", "side": "short", "entry": 2237.16, "collateral_usd": 10.0, "lev": 1.69, "size_usd": 16.9, "mode": "live", "signal": -0.8, "vol": 0.356, "pubkey": "FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy", "reason": "majors_trend", "sig": "uvhxBQYK3AE5LXEsFDNryeNgrPEjTZ243D9auuD5sSkJXi1SJ8yaxybsBzbdKr9gjNHQE4XdmgFJioD2hHvGpi1"}
