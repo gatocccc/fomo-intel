@@ -163,7 +163,8 @@ class Desk:
             return "sin precio"
         f = self.exe.buy(mint, sol, px / self.sol_usd)
         append("trades.jsonl", {"ts": time.time(), "side": "buy", "mint": mint, "symbol": o.get("symbol"), "ok": f.ok, "sol": f.sol, "tokens": f.tokens,
-                                "price_usd": round(f.price * self.sol_usd, 12) if f.ok else None, "slip": f.slippage_pct, "sig": f.sig, "error": f.error[:200], "id": did})
+                                "price_usd": round(f.price * self.sol_usd, 12) if f.ok else None, "slip": f.slippage_pct, "quote_impact": f.quote_impact_pct,
+                                "via": (f.raw or {}).get("via"), "sig": f.sig, "error": f.error[:200], "id": did})
         if not f.ok:
             return f"compra falló: {f.error[:120]}"
         cur = self.pos.get(mint)
@@ -194,7 +195,8 @@ class Desk:
                 break
             time.sleep(3)
         append("trades.jsonl", {"ts": time.time(), "side": "sell", "mint": mint, "symbol": p["symbol"], "ok": f.ok, "sol": f.sol, "tokens": f.tokens,
-                                "price_usd": round(f.price * self.sol_usd, 12) if f.ok else None, "why": why, "sig": f.sig, "error": f.error[:200], "id": did})
+                                "price_usd": round(f.price * self.sol_usd, 12) if f.ok else None, "slip": f.slippage_pct, "quote_impact": f.quote_impact_pct,
+                                "via": (f.raw or {}).get("via"), "why": why, "sig": f.sig, "error": f.error[:200], "id": did})
         if not f.ok and "sin tokens" not in f.error:
             return f"venta falló: {f.error[:120]}"
         p["tokens"] = max(0.0, p["tokens"] - (f.tokens if f.ok else p["tokens"]))
