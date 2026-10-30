@@ -350,7 +350,7 @@ function fillMoney(u) {
     pos.sort((a, b) => (b.value_usd || 0) - (a.value_usd || 0)).forEach(p => {
       const li = document.createElement("li"); const pk = L.POCKETS[p.sleeve] || L.POCKETS.picks;
       li.innerHTML = `<i class="${pk.cls}"></i><b></b><span class="v ${p.multiple != null && p.multiple < 1 ? "down" : "up"}">${L.usd(p.value_usd, 2)}<small>${L.fmtX(p.multiple)} since bought</small></span>`;
-      li.children[1].innerHTML = `${L.esc(p.token)}<small>${L.esc(pk.name)}</small>`; rows.appendChild(li);
+      li.children[1].innerHTML = `${L.esc(p.token)}${p.chart ? ` <a class="chart" href="${p.chart}" target="_blank" rel="noopener" title="Open chart">↗</a>` : ""}<small>${L.esc(pk.name)}</small>`; rows.appendChild(li);
     });
     if (!pos.length) { const li = document.createElement("li"); li.className = "empty"; li.textContent = "All in cash right now, like the book. Lloyd is waiting for something that passes his checks."; rows.appendChild(li); }
   }

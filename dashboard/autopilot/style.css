@@ -285,3 +285,7 @@ dialog.modal .cta{margin-top:18px}
 .feed li{min-width:0;overflow-wrap:anywhere}
 @media (max-width:640px){table.stack tbody th{order:-2}table.stack td.lead{order:-1}}
 .feed.clip li:nth-child(n+11){display:none}
+
+/* link al gráfico (DexScreener) al lado de cada token */
+a.chart{display:inline-block;margin-left:4px;font-size:.85em;text-decoration:none;opacity:.6;border-bottom:none}
+a.chart:hover{opacity:1}

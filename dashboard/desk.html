@@ -126,7 +126,8 @@ function render(d){
   $('hit').textContent=d.n_closed?`${d.wins}/${d.n_closed}`:'—';
   chart(d);
   $('pos').innerHTML=d.positions.length?d.positions.map(p=>{const m=p.mult,c=m>=1?'ok':'bad';
-    return `<div class="pos"><div class="row"><span class="sym">${esc(p.symbol)}</span><span class="mult ${c}">${m.toFixed(2)}x</span></div>
+    const ch=p.perps?'https://dexscreener.com/solana/So11111111111111111111111111111111111111112':(p.mint&&!p.mint.startsWith('perps:')?'https://dexscreener.com/solana/'+p.mint:null);
+    return `<div class="pos"><div class="row"><span class="sym">${esc(p.symbol)}${ch?` <a href="${ch}" target="_blank" rel="noopener" title="Ver gráfico" style="text-decoration:none;opacity:.6;font-size:.85em">↗</a>`:''}</span><span class="mult ${c}">${m.toFixed(2)}x</span></div>
     <div class="meta">vale ${usd(p.value_usd)} · entrada US$${Number(p.entry_usd).toPrecision(4)} · pico ${(p.peak_usd/p.entry_usd).toFixed(2)}x · stop −${Math.round(p.stop*100)}% · trailing ${Math.round(p.trail*100)}% desde ${p.trail_after}x${p.tp&&p.tp.length?' · ventas en '+p.tp.map(t=>t[0]+'x').join(', '):''} · abierta ${hm(p.opened_ts)}</div>
     ${p.thesis?`<div class="th">${esc(p.thesis)}</div>`:''}</div>`}).join(''):'<div class="empty">Sin posiciones abiertas</div>';
   $('journal').innerHTML=d.journal.length?d.journal.slice(0,60).map(j=>`<div class="j"><div class="h"><span>${hm(j.ts)}</span><span class="tag ${esc(j.kind)}">${esc(j.kind)}</span></div><div class="t">${esc(j.title)}</div><p>${esc(j.text)}</p></div>`).join(''):'<div class="empty">Todavía no hay movimientos</div>';

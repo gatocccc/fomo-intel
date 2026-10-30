@@ -86,6 +86,17 @@ def max_drawdown(eq: list) -> float:
     return round(dd * 100, 1)
 
 
+SOL_MINT = "So11111111111111111111111111111111111111112"
+
+
+def chart_url(p):
+    """Link al gráfico: DexScreener para tokens de Solana; para los cortos en perps, el gráfico de SOL."""
+    m = p.get("mint") or ""
+    if p.get("perps") or m.startswith("perps:"):
+        return f"https://dexscreener.com/solana/{SOL_MINT}"
+    return f"https://dexscreener.com/solana/{m}" if m else None
+
+
 def book_view(full: bool = True, admin: bool = False) -> dict | None:
     s = _summary()
     if not s:
@@ -117,7 +128,7 @@ def book_view(full: bool = True, admin: bool = False) -> dict | None:
            "sleeves": sleeves,
            "positions": [{"token": p.get("symbol"), "sleeve": sleeve_of(p), "multiple": p.get("mult"), "value_usd": p.get("value_usd"),
                           "stop_mult": round(1 - float(p.get("stop", 0)), 3) if p.get("stop") is not None and p.get("mint") not in STABLES else None,
-                          "opened": p.get("opened_ts"), "thesis": p.get("thesis")} for p in pos if p.get("mint") not in STABLES],
+                          "opened": p.get("opened_ts"), "thesis": p.get("thesis"), "mint": p.get("mint"), "chart": chart_url(p)} for p in pos if p.get("mint") not in STABLES],
            "stats": {"closed": s.get("n_closed", len(closed)), "wins": s.get("wins"), "realized_usd": s.get("realized_usd"),
                      "max_drawdown_pct": max_drawdown(s.get("equity") or []),
                      "best": {"token": max(rets, key=lambda x: x[1])[0], "result": max(rets, key=lambda x: x[1])[1]} if rets else None,
@@ -130,7 +141,7 @@ def book_view(full: bool = True, admin: bool = False) -> dict | None:
         out["track"] = {}
     if full:
         out["closed_list"] = [{"ts": c.get("ts"), "token": c.get("symbol"), "sleeve": c.get("sleeve") or "picks", "result": c.get("ret"), "pnl_usd": c.get("pnl_usd"),
-                               "why": c.get("why"), "hold_h": c.get("hold_h")} for c in closed[:40]]
+                               "why": c.get("why"), "hold_h": c.get("hold_h"), "mint": c.get("mint"), "chart": chart_url(c)} for c in closed[:40]]
         kinds = {"decisión": "decision", "decision": "decision", "automatic": "auto", "system": "system"}
         jr = s.get("journal") or []
         if not admin:   # en lo público, sin los registros crudos del motor ("set 4kjruq: ajustó…"): las decisiones ya los explican
@@ -332,7 +343,7 @@ def lab_public() -> dict:
     if lab.get("start_ts"):
         wallet = {"wallet": lab.get("wallet"), "equity_usd": lab.get("equity_usd"), "start_usd": lab.get("start_usd"),
                   "pnl_pct": round(lab["equity_usd"] / lab["start_usd"] - 1, 4) if lab.get("start_usd") else None,
-                  "since": lab.get("start_ts"), "live_tests": [{"token": p.get("symbol"), "multiple": p.get("mult"), "test": p.get("thesis")} for p in lab.get("positions") or [] if p.get("mint") not in STABLES]}
+                  "since": lab.get("start_ts"), "live_tests": [{"token": p.get("symbol"), "multiple": p.get("mult"), "test": p.get("thesis"), "chart": chart_url(p)} for p in lab.get("positions") or [] if p.get("mint") not in STABLES]}
     return {"experiments": out, "counts": counts, "total": len(out), "lab_wallet": wallet,
             "lab_note": (d.get("lab") or {}).get("note"), "cadence": "New ideas are tested every Monday, Wednesday and Friday. Every Sunday, each rule in use is re-checked against the latest week.",
             "updated": time.time()}

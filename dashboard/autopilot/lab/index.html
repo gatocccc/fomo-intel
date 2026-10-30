@@ -140,7 +140,7 @@ function render(d) {
     p.className = (w.pnl_pct || 0) >= 0 ? "up" : "down";
     $("#w-note").textContent = d.lab_note || "A separate wallet with real money, where new ideas are tested before they reach the book.";
     $("#w-link").innerHTML = w.wallet ? `<a href="https://solscan.io/account/${encodeURIComponent(w.wallet)}" target="_blank" rel="noopener">See the lab wallet on Solscan →</a>` : "";
-    $("#w-tests").innerHTML = (w.live_tests || []).map(t => `<li><b>${L.esc(t.token)}</b><span><span class="${(t.multiple || 0) >= 1 ? "up" : "down"}">${L.fmtX(t.multiple)}</span><br><small style="font-weight:400">${L.esc(t.test)}</small></span></li>`).join("") || `<li>No live tests right now.</li>`;
+    $("#w-tests").innerHTML = (w.live_tests || []).map(t => `<li><b>${L.esc(t.token)}${t.chart ? ` <a class="chart" href="${t.chart}" target="_blank" rel="noopener" title="Open chart">↗</a>` : ""}</b><span><span class="${(t.multiple || 0) >= 1 ? "up" : "down"}">${L.fmtX(t.multiple)}</span><br><small style="font-weight:400">${L.esc(t.test)}</small></span></li>`).join("") || `<li>No live tests right now.</li>`;
   } else {
     $("#wallet-sect").hidden = true;
   }

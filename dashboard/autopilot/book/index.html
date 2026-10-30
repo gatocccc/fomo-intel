@@ -193,13 +193,13 @@ function render(b) {
   $("#pos").innerHTML = pos.map(x => {
     const age = x.opened ? L.hours((Date.now() / 1000 - x.opened) / 3600) : "—";
     const stop = x.stop_mult != null ? `${L.fmtX(x.stop_mult)}${x.multiple != null && x.stop_mult >= 1 ? " · profit locked" : ""}` : "—";
-    return `<tr><th scope="row">${L.esc(x.token)}</th><td class="tagc">${L.pill(x.sleeve)}</td><td class="n lead ${x.multiple != null ? (x.multiple >= 1 ? "up" : "down") : ""}" data-label="Multiple">${L.fmtX(x.multiple)}</td><td class="n" data-label="Value">${L.usd(x.value_usd, 2)}</td><td class="n" data-label="Stop">${stop}</td><td class="n" data-label="Held">${age}</td><td class="why">${L.esc(x.thesis)}</td></tr>`;
+    return `<tr><th scope="row">${L.esc(x.token)}${x.chart ? ` <a class="chart" href="${x.chart}" target="_blank" rel="noopener" title="Open chart">↗</a>` : ""}</th><td class="tagc">${L.pill(x.sleeve)}</td><td class="n lead ${x.multiple != null ? (x.multiple >= 1 ? "up" : "down") : ""}" data-label="Multiple">${L.fmtX(x.multiple)}</td><td class="n" data-label="Value">${L.usd(x.value_usd, 2)}</td><td class="n" data-label="Stop">${stop}</td><td class="n" data-label="Held">${age}</td><td class="why">${L.esc(x.thesis)}</td></tr>`;
   }).join("") || `<tr><td colspan="7" class="empty">Nothing open. Lloyd is holding cash, and the notes below say why.</td></tr>`;
 
   const cl = Array.isArray(b.closed_list) ? b.closed_list : [];
   $("#cl").innerHTML = cl.map(x => {
     const won = (x.result || 0) >= 0;
-    return `<tr><th scope="row">${L.esc(x.token)}</th><td class="n lead ${won ? "up" : "down"}" data-label="Result">${L.frac(x.result)}</td><td class="tagc">${L.pill(x.sleeve)} <span class="pill ${won ? "" : "c"}">${won ? "Won" : "Lost"}</span></td><td data-label="Closed">${L.when(x.ts)}</td><td class="n ${won ? "up" : "down"}" data-label="P&amp;L">${L.usdS(x.pnl_usd, 2)}</td><td class="n" data-label="Held">${L.hours(x.hold_h)}</td><td class="why">${L.esc(x.why)}</td></tr>`;
+    return `<tr><th scope="row">${L.esc(x.token)}${x.chart ? ` <a class="chart" href="${x.chart}" target="_blank" rel="noopener" title="Open chart">↗</a>` : ""}</th><td class="n lead ${won ? "up" : "down"}" data-label="Result">${L.frac(x.result)}</td><td class="tagc">${L.pill(x.sleeve)} <span class="pill ${won ? "" : "c"}">${won ? "Won" : "Lost"}</span></td><td data-label="Closed">${L.when(x.ts)}</td><td class="n ${won ? "up" : "down"}" data-label="P&amp;L">${L.usdS(x.pnl_usd, 2)}</td><td class="n" data-label="Held">${L.hours(x.hold_h)}</td><td class="why">${L.esc(x.why)}</td></tr>`;
   }).join("") || `<tr><td colspan="7" class="empty">No closed trades yet.</td></tr>`;
 
   const jr = Array.isArray(b.journal) ? b.journal.slice(0, 60) : [];
