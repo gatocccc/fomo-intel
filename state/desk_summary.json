@@ -1,5 +1,5 @@
 {
- "now": 1793358574.0142052,
+ "now": 1793358877.525555,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
@@ -7,10 +7,10 @@
  "days": 14,
  "day": 3,
  "equity_usd": 166.78,
- "equity_sol": 1.722,
+ "equity_sol": 1.7226,
  "cash_sol": 0.1009,
- "positions_usd": 157.01,
- "sol_usd": 96.85,
+ "positions_usd": 157.02,
+ "sol_usd": 96.82,
  "mult": 1.683,
  "halt": false,
  "pause": false,
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.999590720839463,
+   "last_usd": 0.99960387829235,
    "mult": 0.991,
-   "value_usd": 157.01
+   "value_usd": 157.02
   }
  ],
  "perps_pnl_usd": 0,
@@ -3317,6 +3317,10 @@
   [
    1793358483,
    166.79
+  ],
+  [
+   1793358786,
+   166.78
   ]
  ],
  "closed": [
@@ -3698,6 +3702,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793358725.43835,
+   "title": "Cerebro automático: estado",
+   "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista (SOL 4 h -0.1%): no abro memecoins hasta que mejore.",
+   "kind": "decisión",
+   "id": "auto-mesa-note-20261030-1112"
+  },
   {
    "ts": 1793358133.80566,
    "title": "Cerebro automático: estado",
@@ -5090,13 +5101,6 @@
    "text": "set 4kjruq: ajustó GTA6: stop=-0.636",
    "kind": "ejecución",
    "id": "auto-mesa-20261029-0134"
-  },
-  {
-   "ts": 1793237654.4881575,
-   "title": "Cerebro automático: ajuste de stops",
-   "text": "GTA6: llegó a 2.18x de pico; subo el stop a 1.64x (antes 1.59x).",
-   "kind": "decisión",
-   "id": "auto-mesa-20261029-0134"
   }
  ],
  "wins": 2,
@@ -5106,7 +5110,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793358125.1570308,
+  "last_run": 1793358723.4715269,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -5116,7 +5120,7 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793358125.1589048,
+   "ts": 1793358723.473497,
    "text": "Efectivo ocioso (96%), pero el radar de noticias sigue viendo un shock bajista (SOL 4 h -0.1%): no abro memecoins hasta que mejore."
   },
   "trad_status": null,

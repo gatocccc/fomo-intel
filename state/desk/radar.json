@@ -2,6 +2,17 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793358785.1818795,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Binance reserves over 6.34 billion of company funds to cover losses from the hack. @WatcherGuru",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793358576.7944746,
    "src": "tg:wublockchainenglish",
    "title": "Binance Reserves Over 6.34B in Company Funds to Cover Hack Losses, Including 5B in Affected Tokens Binance said it has reserved over 6.34 billion in company funds to cover losses from the hack, includ",
@@ -90,21 +101,21 @@
    ]
   }
  ],
- "ts": 1793358579.4413698,
- "bear_score": 10,
+ "ts": 1793358845.84605,
+ "bear_score": 13,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.912,
-   "ch15m": -0.002059477716450986,
-   "ch1h": 0.00574939288901799,
-   "ch4h": -0.010859802400587815
+   "px": 96.838,
+   "ch15m": -0.004594747391684306,
+   "ch1h": 0.0041269182911654045,
+   "ch4h": -0.010534489981505968
   },
   "BTC": {
-   "px": 77744.0,
-   "ch15m": 0.0005662805662804971,
-   "ch1h": 0.004003409355063603,
-   "ch4h": -0.009365562762012725
+   "px": 77635.0,
+   "ch15m": -0.0022105980181731377,
+   "ch1h": 0.0028159189842025256,
+   "ch4h": -0.009277455909752153
   }
  },
  "mode": "live",
