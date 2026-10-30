@@ -1,5 +1,5 @@
 {
- "ts": 1793337724.325746,
+ "ts": 1793338323.207436,
  "regime": {
   "state": "risk_off",
   "ts": 1793337724.31587,
@@ -27,7 +27,7 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 534.21,
+   "value_usd": 534.19,
    "pct": 98.6,
    "positions": 0
   },
@@ -56,6 +56,6 @@
    "positions": 0
   }
  ],
- "liquid_usd": 534.21,
- "trad_status": "SOL -6.7%, BTC -4.1%, ETH -6.7%, JUP -17.1%"
+ "liquid_usd": 534.19,
+ "trad_status": "2 of 20 established memecoins above their 20-day average (best: SAPLING +49%, STONK +6%)"
 }

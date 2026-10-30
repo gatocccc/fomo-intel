@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793338246.45789,
+   "src": "tg:wublockchainenglish",
+   "title": "ZachXBT: Stolen Funds from the 6.3B Binance Exploit and 388M Bitget Exploit Commingled at Same Address, Suspected Same North Korea-Linked Attacker ZachXBT posted that stolen funds from the 6.3 billion",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793338112.2406356,
    "src": "tg:wublockchainenglish",
    "title": "ZachXBT: Stolen Funds from the 6.3B Binance Exploit and 388M Bitget Exploit Commingled at Same Address, Suspected Same Attacker ZachXBT posted that stolen funds from the 6.3 billion Binance exploit an",
@@ -271,34 +282,23 @@
     "bullish",
     "exchange"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:wublockchainenglish",
-   "title": "ZachXBT: AXIS Insiders Dump ~42M Tokens From Team Multisig, Triggering 40% Crash Just Days After Binance, Coinbase Upbit Listings According to on-chain investigator ZachXBT, suspected insiders of Axis",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "selloff"
-   ]
   }
  ],
- "ts": 1793338157.7753553,
- "bear_score": 14,
+ "ts": 1793338457.8958483,
+ "bear_score": 17,
  "bull_score": 1,
  "price": {
   "SOL": {
-   "px": 97.949,
-   "ch15m": 0.0022408676967153873,
-   "ch1h": 0.007084104462266039,
-   "ch4h": 0.04299815783028604
+   "px": 98.09,
+   "ch15m": 0.0023502963417127987,
+   "ch1h": 0.008523457500951181,
+   "ch4h": 0.03939727885389743
   },
   "BTC": {
-   "px": 78607.0,
-   "ch15m": 0.0009167886929395408,
-   "ch1h": 0.0032673482150833433,
-   "ch4h": 0.02211791017605913
+   "px": 78671.0,
+   "ch15m": 0.0011580554848562574,
+   "ch1h": 0.0048665219057351106,
+   "ch4h": 0.021475778074970364
   }
  },
  "mode": "live",
