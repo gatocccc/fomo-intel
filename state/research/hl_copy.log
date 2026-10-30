@@ -6,3 +6,215 @@ pool: 300 de 8974 activas
   200/300 útiles 31
   225/300 útiles 41
   250/300 útiles 58
+{
+ "generated": "2026-10-30 22:02 UTC",
+ "screenshot_match": [],
+ "cost_round_trip_pct": 0.19,
+ "traders_usable": 76,
+ "cohorts": [
+  {
+   "cohort": "todos",
+   "traders": 76,
+   "per_trade": {
+    "n": 5561,
+    "mean_pct": -0.187,
+    "median_pct": -0.165,
+    "win_pct": 37.4,
+    "t": -2.8
+   },
+   "per_trader_positive_pct": 35.5,
+   "per_trader_mean_pct": -0.323,
+   "last3d_own_prices": {
+    "n": 745,
+    "mean_pct": -0.05,
+    "median_pct": -0.179,
+    "win_pct": 38.4,
+    "t": -0.68
+   },
+   "last3d_with_delay": {
+    "n": 745,
+    "mean_pct": -0.098,
+    "median_pct": -0.19,
+    "win_pct": 37.7,
+    "t": -1.2
+   }
+  },
+  {
+   "cohort": "azar (control)",
+   "traders": 62,
+   "per_trade": {
+    "n": 4937,
+    "mean_pct": -0.144,
+    "median_pct": -0.154,
+    "win_pct": 37.7,
+    "t": -1.96
+   },
+   "per_trader_positive_pct": 37.1,
+   "per_trader_mean_pct": -0.308,
+   "last3d_own_prices": {
+    "n": 652,
+    "mean_pct": -0.048,
+    "median_pct": -0.178,
+    "win_pct": 37.7,
+    "t": -0.64
+   },
+   "last3d_with_delay": {
+    "n": 652,
+    "mean_pct": -0.105,
+    "median_pct": -0.19,
+    "win_pct": 36.8,
+    "t": -1.25
+   }
+  },
+  {
+   "cohort": "ranking top",
+   "traders": 14,
+   "per_trade": {
+    "n": 624,
+    "mean_pct": -0.526,
+    "median_pct": -0.254,
+    "win_pct": 34.5,
+    "t": -4.03
+   },
+   "per_trader_positive_pct": 28.6,
+   "per_trader_mean_pct": -0.388,
+   "last3d_own_prices": {
+    "n": 93,
+    "mean_pct": -0.064,
+    "median_pct": -0.209,
+    "win_pct": 43.0,
+    "t": -0.24
+   },
+   "last3d_with_delay": {
+    "n": 93,
+    "mean_pct": -0.049,
+    "median_pct": -0.08,
+    "win_pct": 44.1,
+    "t": -0.17
+   }
+  },
+  {
+   "cohort": "ganadores pasado (pnl>0)",
+   "traders": 46,
+   "per_trade": {
+    "n": 3013,
+    "mean_pct": -0.092,
+    "median_pct": -0.134,
+    "win_pct": 41.9,
+    "t": -1.9
+   },
+   "per_trader_positive_pct": 45.7,
+   "per_trader_mean_pct": -0.058,
+   "last3d_own_prices": {
+    "n": 419,
+    "mean_pct": 0.047,
+    "median_pct": -0.139,
+    "win_pct": 43.2,
+    "t": 0.44
+   },
+   "last3d_with_delay": {
+    "n": 419,
+    "mean_pct": 0.035,
+    "median_pct": -0.18,
+    "win_pct": 43.2,
+    "t": 0.3
+   }
+  },
+  {
+   "cohort": "tipo captura: acierto≥80% y pnl/vol<0,3%",
+   "traders": 1,
+   "per_trade": {
+    "n": 122,
+    "mean_pct": 0.395,
+    "median_pct": 0.363,
+    "win_pct": 64.8,
+    "t": 1.12
+   },
+   "per_trader_positive_pct": 100.0,
+   "per_trader_mean_pct": 0.395,
+   "last3d_own_prices": {
+    "n": 18,
+    "mean_pct": 1.793,
+    "median_pct": 1.269,
+    "win_pct": 88.9,
+    "t": 4.1
+   },
+   "last3d_with_delay": {
+    "n": 18,
+    "mean_pct": 1.591,
+    "median_pct": 1.086,
+    "win_pct": 77.8,
+    "t": 3.37
+   }
+  },
+  {
+   "cohort": "ventaja: pnl/vol≥1% y ≥10 ops",
+   "traders": 15,
+   "per_trade": {
+    "n": 245,
+    "mean_pct": -0.265,
+    "median_pct": -0.117,
+    "win_pct": 43.3,
+    "t": -1.18
+   },
+   "per_trader_positive_pct": 46.7,
+   "per_trader_mean_pct": -0.154,
+   "last3d_own_prices": {
+    "n": 40,
+    "mean_pct": 0.178,
+    "median_pct": -0.455,
+    "win_pct": 42.5,
+    "t": 0.41
+   },
+   "last3d_with_delay": {
+    "n": 40,
+    "mean_pct": 0.028,
+    "median_pct": -0.167,
+    "win_pct": 45.0,
+    "t": 0.06
+   }
+  },
+  {
+   "cohort": "ventaja fuerte: pnl/vol≥2%",
+   "traders": 9,
+   "per_trade": {
+    "n": 118,
+    "mean_pct": -0.682,
+    "median_pct": -0.455,
+    "win_pct": 32.2,
+    "t": -1.84
+   },
+   "per_trader_positive_pct": 44.4,
+   "per_trader_mean_pct": 0.18,
+   "last3d_own_prices": {
+    "n": 28,
+    "mean_pct": 0.066,
+    "median_pct": -0.482,
+    "win_pct": 35.7,
+    "t": 0.16
+   },
+   "last3d_with_delay": {
+    "n": 28,
+    "mean_pct": 0.323,
+    "median_pct": -0.167,
+    "win_pct": 42.9,
+    "t": 0.7
+   }
+  },
+  {
+   "cohort": "captura",
+   "traders": 0,
+   "per_trade": {
+    "n": 0
+   },
+   "per_trader_positive_pct": null,
+   "per_trader_mean_pct": null,
+   "last3d_own_prices": {
+    "n": 0
+   },
+   "last3d_with_delay": {
+    "n": 0
+   }
+  }
+ ]
+}
