@@ -1,5 +1,5 @@
 {
- "ts": 1793361788.6066356,
+ "ts": 1793362383.7136016,
  "regime": {
   "state": "risk_off",
   "ts": 1793361785.352839,
@@ -27,7 +27,7 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 534.42,
+   "value_usd": 534.41,
    "pct": 98.6,
    "positions": 0
   },
@@ -56,6 +56,6 @@
    "positions": 0
   }
  ],
- "liquid_usd": 534.42,
+ "liquid_usd": 534.41,
  "trad_status": "SOL -7.5%, BTC -5.3%, ETH -7.3%, JUP -16.6%"
 }
