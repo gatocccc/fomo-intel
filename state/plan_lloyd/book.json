@@ -1,5 +1,5 @@
 {
- "ts": 1793373126.1996179,
+ "ts": 1793373726.079616,
  "regime": {
   "state": "risk_off",
   "ts": 1793373126.1907568,
@@ -35,7 +35,7 @@
    "key": "majors",
    "name": "Majors",
    "target_pct": 10,
-   "value_usd": 80.56,
+   "value_usd": 80.4,
    "pct": 14.9,
    "positions": 1
   },
@@ -57,5 +57,5 @@
   }
  ],
  "liquid_usd": 452.96,
- "trad_status": "2 of 19 established memecoins above their 20-day average (best: SAPLING +97%, STONK +2%)"
+ "trad_status": "SOL -8.5%, BTC -4.7%, ETH -6.7%, JUP -15.8%"
 }
