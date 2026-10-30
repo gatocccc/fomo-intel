@@ -1,5 +1,5 @@
 {
- "ts": 1793325002.962,
+ "ts": 1793325303.2364943,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -43,11 +43,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.1009,
- "sol_usd": 93.6385019992827,
+ "sol_usd": 93.66553339759575,
  "stream_connected": true,
- "stream_msgs": 1011,
- "tokens_seen": 993,
- "tokens_tracked": 46,
+ "stream_msgs": 1043,
+ "tokens_seen": 1025,
+ "tokens_tracked": 44,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -56,14 +56,15 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 487330,
+  "notifications": 498383,
   "parsed": 40,
-  "skipped": 487184,
+  "skipped": 498231,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
    "00:27:41 Connection to remote host was lost.",
-   "01:29:37 Connection to remote host was lost."
+   "01:29:37 Connection to remote host was lost.",
+   "01:53:28 Connection to remote host was lost."
   ]
  },
  "follow_buys_seen": 5,
@@ -78,12 +79,12 @@
   "source_down_s": 0,
   "exec_fails_recent": 0
  },
- "st_requests": 24,
+ "st_requests": 25,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 2,
-  "create": 1009
+  "create": 1041
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
