@@ -1,13 +1,3 @@
-{"ts": 1793335468.8485646, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.219, "shock_px": 97.686, "ch1h": 0.0027125706506043734, "ch4h": 0.03576527242121408}
-{"ts": 1793335468.8486617, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.219, "shock_px": 97.686, "ch1h": 0.0027125706506043734, "ch4h": 0.03576527242121408}
-{"ts": 1793335532.199078, "kind": "event", "src": "tg:wublockchainenglish", "title": "Spot Bitcoin ETFs Record 17.07 Million in Net Inflows; Spot Ethereum ETFs See 105 Million in Net Outflows On October 29 (ET), spot Bitcoin ETFs recorded total net inflows of 17.0719 million, their fou", "cls": {"types": ["bullish", "exchange_risk"], "dir": 1, "sev": 1, "by": "kw+llm", "confirmed": true}}
-{"ts": 1793335534.3972497, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.287, "shock_px": 97.686, "ch1h": 0.001492660229355014, "ch4h": 0.03217900566554199}
-{"ts": 1793335534.3975213, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.287, "shock_px": 97.686, "ch1h": 0.001492660229355014, "ch4h": 0.03217900566554199}
-{"ts": 1793335592.205787, "kind": "event", "src": "cointelegraph", "title": "Live updates: Binance eyes withdrawal restart within 48 hours after $6.3B hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
-{"ts": 1793335594.1419048, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.332, "shock_px": 97.686, "ch1h": 0.0019558996108788307, "ch4h": 0.03265643898402182}
-{"ts": 1793335594.1420841, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.332, "shock_px": 97.686, "ch1h": 0.0019558996108788307, "ch4h": 0.03265643898402182}
-{"ts": 1793335674.1459565, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.392, "shock_px": 97.686, "ch1h": 0.002573552119577549, "ch4h": 0.03329301674199492}
-{"ts": 1793335674.1460829, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.392, "shock_px": 97.686, "ch1h": 0.002573552119577549, "ch4h": 0.03329301674199492}
 {"ts": 1793335712.8610063, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.33, "shock_px": 97.686, "ch1h": 0.0019353111939224288, "ch4h": 0.032635219725422715}
 {"ts": 1793335712.861216, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.33, "shock_px": 97.686, "ch1h": 0.0019353111939224288, "ch4h": 0.032635219725422715}
 {"ts": 1793335772.813457, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.32, "shock_px": 97.686, "ch1h": 0.001832369109139087, "ch4h": 0.0325291234324272}
@@ -198,3 +188,13 @@
 {"ts": 1793341097.915711, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.1, "shock_px": 97.686, "ch1h": 0.002452483139178341, "ch4h": 0.0362639568170533}
 {"ts": 1793341172.7181008, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.285, "shock_px": 97.686, "ch1h": 0.0043429388922950896, "ch4h": 0.03821817528811522}
 {"ts": 1793341172.7182536, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.285, "shock_px": 97.686, "ch1h": 0.0043429388922950896, "ch4h": 0.03821817528811522}
+{"ts": 1793341217.7906666, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.245, "shock_px": 97.686, "ch1h": 0.0032063391571617306, "ch4h": 0.03372264309764317}
+{"ts": 1793341217.79086, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.245, "shock_px": 97.686, "ch1h": 0.0032063391571617306, "ch4h": 0.03372264309764317}
+{"ts": 1793341308.0398307, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.193, "shock_px": 97.686, "ch1h": 0.002675353054701679, "ch4h": 0.03317550505050493}
+{"ts": 1793341308.039946, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.193, "shock_px": 97.686, "ch1h": 0.002675353054701679, "ch4h": 0.03317550505050493}
+{"ts": 1793341352.8328614, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.206, "shock_px": 97.686, "ch1h": 0.002808099580316803, "ch4h": 0.03331228956228949}
+{"ts": 1793341352.8330579, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.206, "shock_px": 97.686, "ch1h": 0.002808099580316803, "ch4h": 0.03331228956228949}
+{"ts": 1793341412.5914571, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.185, "shock_px": 97.686, "ch1h": 0.0025936628850926624, "ch4h": 0.03309132996633002}
+{"ts": 1793341412.5916247, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.185, "shock_px": 97.686, "ch1h": 0.0025936628850926624, "ch4h": 0.03309132996633002}
+{"ts": 1793341472.9878733, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 98.185, "shock_px": 97.686, "ch1h": 0.0025936628850926624, "ch4h": 0.03309132996633002}
+{"ts": 1793341472.9880316, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 98.185, "shock_px": 97.686, "ch1h": 0.0025936628850926624, "ch4h": 0.03309132996633002}
