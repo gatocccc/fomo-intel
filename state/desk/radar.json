@@ -14,6 +14,17 @@
  },
  "events": [
   {
+   "ts": 1793319364.571522,
+   "src": "cointelegraph",
+   "title": "Binance hack may involve private key ‘misuse,’ not theft: Blockaid CEO",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793317263.7510424,
    "src": "cointelegraph",
    "title": "Live Updates: Binance says $2.54 billion frozen after hack",
@@ -205,21 +216,21 @@
    ]
   }
  ],
- "ts": 1793319245.28092,
- "bear_score": 8,
+ "ts": 1793319545.3615766,
+ "bear_score": 10,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.318,
-   "ch15m": -0.003064500946543869,
-   "ch1h": -0.013363144220517764,
-   "ch4h": -0.03828962900931265
+   "px": 93.6,
+   "ch15m": -0.018054783311127753,
+   "ch1h": -0.03250813995555335,
+   "ch4h": -0.05621376354928165
   },
   "BTC": {
-   "px": 77767.0,
-   "ch15m": -0.0023092614212221196,
-   "ch1h": -0.013509742236655131,
-   "ch4h": -0.03285701849295475
+   "px": 77232.0,
+   "ch15m": -0.009338122113904612,
+   "ch1h": -0.020358461128657912,
+   "ch4h": -0.039056376056040065
   }
  },
  "mode": "live",
@@ -240,9 +251,9 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 95.318,
-  "ret_px": 0.0227,
-  "pnl_usd_est": 0.84,
-  "age_h": 2.83
+  "mark": 93.6,
+  "ret_px": 0.0403,
+  "pnl_usd_est": 1.5,
+  "age_h": 2.91
  }
 }
