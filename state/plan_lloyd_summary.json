@@ -1,5 +1,5 @@
 {
- "now": 1793400277.9548914,
+ "now": 1793400581.472638,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
@@ -32,18 +32,18 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9997510624300002,
+   "last_usd": 0.999728207322436,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 503.14
+   "value_usd": 503.13
   },
   {
    "mint": "perps:CET8XhBZEpDac7XRWnCyxWy4bCzH8DBU29thCJ5yaqM3",
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2236.15,
+   "last_usd": 2235.95,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
@@ -73,7 +73,7 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 95.7525,
+   "last_usd": 95.7445,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
@@ -92,14 +92,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 0.975,
-   "value_usd": 13.34,
-   "pnl_usd": -0.34,
+   "mult": 0.976,
+   "value_usd": 13.35,
+   "pnl_usd": -0.33,
    "collateral_usd": 13.68,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.48,
+ "perps_pnl_usd": -0.47,
  "equity": [
   [
    1793203600,
@@ -2736,6 +2736,10 @@
   [
    1793400186,
    541.43
+  ],
+  [
+   1793400490,
+   541.44
   ]
  ],
  "closed": [
@@ -4932,7 +4936,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793399824.907708,
+  "last_run": 1793400424.2696052,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4946,7 +4950,7 @@
    "text": "[Picks] Idle cash (100%), but SOL and BTC are below their 20-day averages and only 2 of 19 large memecoins are above theirs: bear market: no new memecoins until it improves.",
    "key": "[Picks] Idle cash (#), but SOL and BTC are below their #-day averages and only # of # large memecoins are above theirs: bear market: no new memecoins until it improves."
   },
-  "trad_status": "SOL -8.4%, BTC -5.9%, ETH -7.0%, JUP -15.7%",
+  "trad_status": "SOL -8.1%, BTC -5.8%, ETH -7.1%, JUP -15.3%",
   "sol_ch24h": -1.3,
   "sol_vs_ma20": -0.0806
  }
