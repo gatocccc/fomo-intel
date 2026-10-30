@@ -121,6 +121,18 @@ class KolConsensus:
         except Exception:  # noqa: BLE001
             return 0
 
+    def _verdict(self) -> tuple[int, float, float]:
+        """Cierres del lab con motivo kol_consensus: (n, retorno medio, P&L US$). Freno propio: con ≥10 cierres y retorno medio
+        negativo la prueba pasa sola a modo sombra (registra, no compra). Es el criterio 'si aprueba en el lab pasa al otro'."""
+        try:
+            rows = [json.loads(l) for l in Path("state/plan_lab/closed.jsonl").read_text().splitlines() if l.strip()]
+        except Exception:  # noqa: BLE001
+            return 0, 0.0, 0.0
+        rows = [r for r in rows if r.get("reason") == "kol_consensus"]
+        if not rows:
+            return 0, 0.0, 0.0
+        return len(rows), sum(float(r.get("ret") or 0) for r in rows) / len(rows), sum(float(r.get("pnl_usd") or 0) for r in rows)
+
     def _lab_sol(self) -> float:
         try:
             return float(json.load(open("state/plan_lab_summary.json")).get("cash_sol") or 0)
@@ -164,7 +176,8 @@ class KolConsensus:
             self._fire(m, ws, now)
         self.triggered = {m: t for m, t in self.triggered.items() if now - t < 7 * 86400}
         # 4) estado para el panel
-        st = {"ts": now, "mode": self.mode, "k": k, "window_min": win / 60, "size_usd": self.cfg.get("size_usd"), "wallets": len(self.names),
+        n, ret, pnl = self._verdict()
+        st = {"ts": now, "mode": self.mode, "verdict": {"n": n, "ret": round(ret, 4), "pnl_usd": round(pnl, 2), "halted": n >= 10 and ret < 0}, "k": k, "window_min": win / 60, "size_usd": self.cfg.get("size_usd"), "wallets": len(self.names),
               "connected": bool(getattr(self.watch, "connected", False)), "notifications": getattr(self.watch, "notifications", 0),
               "buys_seen": self.events, "errors": list(getattr(self.watch, "errors", []))[-3:], "started": self.started,
               "hot": sorted(({"mint": m, "n": len(ws), "who": [b["name"] for b in ws.values()], "last": max(b["ts"] for b in ws.values())}
@@ -182,6 +195,10 @@ class KolConsensus:
         size_usd = float(self.cfg.get("size_usd", 5)); max_open = int(self.cfg.get("max_open", 3))
         if self.mode != "live":
             row["skip"] = "shadow"; _jl(LOG, row); log.info("kols sombra: %s %s", mint[:8], names); return
+        n, ret, pnl = self._verdict()
+        if n >= 10 and ret < 0:
+            row["skip"] = f"freno: {n} cierres, retorno medio {ret:+.1%}, P&L US${pnl:+.2f} → modo sombra"; _jl(LOG, row)
+            log.warning("kols: %s", row["skip"]); return
         if self._lab_open() >= max_open:
             row["skip"] = f"max_open {max_open}"; _jl(LOG, row); return
         sol = round(size_usd / self._sol_price(), 4)
