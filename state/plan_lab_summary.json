@@ -1,16 +1,16 @@
 {
- "now": 1793342391.4645872,
+ "now": 1793342691.2408926,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 1,
- "equity_usd": 63.69,
- "equity_sol": 0.6497,
+ "equity_usd": 63.66,
+ "equity_sol": 0.6501,
  "cash_sol": 0.287,
  "positions_usd": 35.56,
- "sol_usd": 98.02,
+ "sol_usd": 97.92,
  "mult": 1.15,
  "halt": false,
  "pause": false,
@@ -34,7 +34,7 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9993219235374455,
+   "last_usd": 0.9993226073175141,
    "mult": 0.982,
    "value_usd": 30.12
   },
@@ -1040,10 +1040,32 @@
   [
    1793342206,
    63.69
+  ],
+  [
+   1793342514,
+   63.68
+  ],
+  [
+   1793342523,
+   63.67
   ]
  ],
  "closed": [],
  "trades": [
+  {
+   "ts": 1793342552.3123794,
+   "side": "sell",
+   "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
+   "symbol": "SAFU",
+   "ok": false,
+   "sol": 0.0,
+   "tokens": 0.0,
+   "price_usd": null,
+   "why": "time stop (6h, no price feed)",
+   "sig": "",
+   "error": "cotización: modo rápido: directo a PumpPortal | pumpportal: pumpportal 400: Bad Request",
+   "id": null
+  },
   {
    "ts": 1793331769.0025752,
    "side": "sell",
@@ -1088,6 +1110,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793342552.3134193,
+   "title": "Automatic exit",
+   "text": "SAFU: venta falló: cotización: modo rápido: directo a PumpPortal | pumpportal: pumpportal 400: Bad Request",
+   "kind": "automatic",
+   "id": null
+  },
   {
    "ts": 1793332339.030367,
    "title": "Alert",
