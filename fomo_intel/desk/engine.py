@@ -329,11 +329,14 @@ class Desk:
         if changed:
             jsave(applied_f, sorted(applied))
         out = 0.0
-        files = [pos_file] + (["state/desk/trend_pos_lab.json"] if leg == "lab" else [])   # 30/10: prueba de tendencia diaria del lab
+        # 30/10: además del corto del radar, la prueba de tendencia del lab (un dict) y la tortuga del libro (dict moneda → posición)
+        files = [pos_file] + (["state/desk/trend_pos_lab.json"] if leg == "lab" else ["state/desk/turtle_pos_book.json"])
         for f in files:
-            p = jload(Path(f), None)
-            if p and p.get("mode") == "live" and (p.get("ts") or 0) >= PERPS_SINCE and f"{p.get('ts')}" not in applied:
-                out += float(p.get("pnl_usd_est") or 0.0)
+            obj = jload(Path(f), None)
+            items = [obj] if (obj and "ts" in obj) else list((obj or {}).values())
+            for p in items:
+                if p and p.get("mode") == "live" and (p.get("ts") or 0) >= PERPS_SINCE and f"{p.get('ts')}" not in applied:
+                    out += float(p.get("pnl_usd_est") or 0.0)
         return out
 
     def equity(self):

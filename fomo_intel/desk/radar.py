@@ -518,6 +518,8 @@ class Radar:
             return
         if not sh or (leg["require_confirmed"] and not sh.get("confirmed")):
             return
+        if leg["name"] == "book" and (jload(ST / "turtle_pos_book.json", {}) or {}).get("SOL", {}).get("side") == "short":
+            return   # 30/10: la tortuga ya tiene un corto de SOL en esta billetera (Jupiter juntaría las dos en una sola posición)
         # 30/10 03:40 (autocrítica): el corto del libro abrió a $92,87 cuando el shock había arrancado en $97,69 (SOL ya −4,9%) y
         # se comió el rebote (stop, −$4,67); el del lab, que entró cerca del arranque ($97,53), ganó. Además el precio solo se miraba
         # al detectar el shock: horas después (y tras un cierre) se podía volver a cortar con SOL rebotando. Dos frenos al abrir:
@@ -690,6 +692,13 @@ class Radar:
             self.trend.step()
         except Exception as e:  # noqa: BLE001
             log.exception("trend: %s", e)
+        try:   # 30/10: tortuga 55/20 con niveles guardados en BTC/ETH/SOL, libro Lloyd (fomo_intel/desk/turtle.py)
+            if not hasattr(self, "turtle"):
+                from .turtle import TurtleBook
+                self.turtle = TurtleBook(self)
+            self.turtle.step()
+        except Exception as e:  # noqa: BLE001
+            log.exception("turtle: %s", e)
         self.state["position"] = self.pos
         self.state["positions"] = {leg["name"]: leg["pos"] for leg in self.legs}
         self.state["theses"] = {leg["name"]: (leg["pos"] or {}).get("thesis") for leg in self.legs if leg["pos"]}
