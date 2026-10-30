@@ -1,5 +1,5 @@
 {
- "ts": 1793323564.9264126,
+ "ts": 1793326564.7197146,
  "n_total": 19,
  "by_category": {
   "affiliation": {
@@ -84,7 +84,7 @@
    "n": 1,
    "mean_ret": 0.139,
    "pnl_usd": 4.26,
-   "ts": 1793323564.9264126,
+   "ts": 1793326564.7197146,
    "name_es": "Afiliación a un producto real",
    "name_en": "Official token of a real product"
   },
@@ -93,7 +93,7 @@
    "n": 2,
    "mean_ret": 1.9175,
    "pnl_usd": 174.83,
-   "ts": 1793323564.9264126,
+   "ts": 1793326564.7197146,
    "name_es": "Catalizador con fecha",
    "name_en": "Dated catalyst"
   },
@@ -102,7 +102,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793323564.9264126,
+   "ts": 1793326564.7197146,
    "name_es": "Tendencia en majors",
    "name_en": "Majors trend"
   },
@@ -111,7 +111,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793323564.9264126,
+   "ts": 1793326564.7197146,
    "name_es": "Otro (manual)",
    "name_en": "Other (manual)"
   },
@@ -120,7 +120,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793323564.9264126,
+   "ts": 1793326564.7197146,
    "name_es": "Narrativa verificada",
    "name_en": "Verified narrative"
   },
@@ -129,7 +129,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793323564.9264126,
+   "ts": 1793326564.7197146,
    "name_es": "Corto por shock de noticias",
    "name_en": "News-shock short"
   },
@@ -138,7 +138,7 @@
    "n": 14,
    "mean_ret": -0.1434,
    "pnl_usd": -79.0,
-   "ts": 1793323564.9264126,
+   "ts": 1793326564.7197146,
    "name_es": "Pick del escáner (sin historia)",
    "name_en": "Screener pick (no story)"
   },
@@ -147,7 +147,7 @@
    "n": 2,
    "mean_ret": -0.0885,
    "pnl_usd": -6.55,
-   "ts": 1793323564.9264126,
+   "ts": 1793326564.7197146,
    "name_es": "Tendencia 20 días en memes establecidas",
    "name_en": "20-day trend, established memes"
   },
@@ -156,7 +156,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793323564.9264126,
+   "ts": 1793326564.7197146,
    "name_es": "Meme flash de noticia (horas)",
    "name_en": "Flash-news meme (hours)"
   }

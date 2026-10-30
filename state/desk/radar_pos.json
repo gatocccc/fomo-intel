@@ -15,9 +15,29 @@
  ],
  "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
  "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
- "mark": 94.351,
- "ret_px": 0.0326,
- "pnl_usd_est": 1.21,
- "age_h": 4.83,
- "best_ret": 0.04671383164154619
+ "mark": 94.691,
+ "ret_px": 0.0291,
+ "pnl_usd_est": 1.08,
+ "age_h": 4.91,
+ "best_ret": 0.04671383164154619,
+ "thesis": {
+  "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+  "entities": [
+   "bitcoin",
+   "cftc",
+   "fed",
+   "polymarket"
+  ],
+  "state": "confirmed",
+  "evidence": [],
+  "rules": {}
+ },
+ "stop_px": 100.94,
+ "rules": {
+  "stop_up": 0.035,
+  "trail_arm": 0.04,
+  "trail_gap": 0.02,
+  "tp_down": 0.12,
+  "max_h": 12
+ }
 }

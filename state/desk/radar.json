@@ -16,9 +16,49 @@
  },
  "events": [
   {
-   "ts": 1793326264.8864737,
-   "src": "cointelegraph",
-   "title": "Binance hack drained billions through private key ‘misuse’: Blockaid CEO",
+   "ts": 1793326580.4845843,
+   "src": "tg:TreeNewsFeed",
+   "title": "*SEC POISED TO UNVEIL MAJOR CRYPTO PLANS AS CLARITY ACT STALLS: BBG",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "regulatory"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:TreeNewsFeed",
+   "title": "U.S. CPI: +3.4% YEAR-OVER-YEAR (EST. +3.4%) U.S. CORE CPI: +2.5% YEAR-OVER-YEAR (EST. +2.5%)",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "macro"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:TreeNewsFeed",
+   "title": "TRUMP: SEC CHAIR WORKING TO BRING HYPERLIQUID INTO US",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "regulatory"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:TreeNewsFeed",
+   "title": "U.S. CPI: +3.4% YEAR-OVER-YEAR (EST. +3.4%) U.S. CORE CPI: +2.4% YEAR-OVER-YEAR (EST. +2.4%)",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "macro"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:TreeNewsFeed",
+   "title": "BITGET CONFIRMS HACK WITH LOSSES APPROX. 350M, CLAIMS USER FUNDS ARE SAFE: BITGET CEO",
    "sev": 2,
    "dir": -1,
    "types": [
@@ -27,9 +67,19 @@
    ]
   },
   {
-   "ts": 1793323564.8754742,
-   "src": "cointelegraph",
-   "title": "Binance hack rattles markets as BNB falls 8%, Bitcoin nears $77K",
+   "ts": 1793326580.4845843,
+   "src": "tg:TreeNewsFeed",
+   "title": "U.S. CPI: +3.7% YEAR-OVER-YEAR (EST. +3.6%) U.S. CORE CPI: +2.6% YEAR-OVER-YEAR (EST. +2.5%)",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "macro"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:TreeNewsFeed",
+   "title": "Potential Binance Hack Ongoing - Onchain",
    "sev": 2,
    "dir": -1,
    "types": [
@@ -38,9 +88,9 @@
    ]
   },
   {
-   "ts": 1793322664.4117434,
-   "src": "cointelegraph",
-   "title": "Live updates: Binance says $3B in crypto frozen in connection to hack",
+   "ts": 1793326580.4845843,
+   "src": "tg:TreeNewsFeed",
+   "title": "TETHER FREEZES 971M USDT IN LIKELY BINANCE HACK, WITH NO UPDATE FROM BINANCE STILL",
    "sev": 2,
    "dir": -1,
    "types": [
@@ -49,9 +99,51 @@
    ]
   },
   {
-   "ts": 1793322064.274168,
-   "src": "cointelegraph",
-   "title": "Live Updates: Estimated losses in Binance hack reach $5.9B",
+   "ts": 1793326580.4845843,
+   "src": "tg:wublockchainenglish",
+   "title": "Bithumb Details Internal System Breach: 6,444 Customers and 715 Employees Compromised South Korea s second-largest crypto exchange, Bithumb, disclosed that an unauthorized external intrusion into its ",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:wublockchainenglish",
+   "title": "Binance to List BNB Chain Prediction Market Token Predict (PREDICT) on October 30 Binance announced that it will list Predict (PREDICT), the token of a prediction market project on BNB Chain, and open",
+   "sev": 1,
+   "dir": 1,
+   "types": [
+    "bullish",
+    "exchange"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:wublockchainenglish",
+   "title": "ZachXBT: AXIS Insiders Dump ~42M Tokens From Team Multisig, Triggering 40% Crash Just Days After Binance, Coinbase Upbit Listings According to on-chain investigator ZachXBT, suspected insiders of Axis",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "selloff"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:wublockchainenglish",
+   "title": "Multiple Polymarket Users Report Stolen Funds as Platform Restricts Trading and Launches Investigation Multiple Polymarket users reported unauthorized fund transfers, with some claiming losses of hund",
+   "sev": 1,
+   "dir": -1,
+   "types": [
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:wublockchainenglish",
+   "title": "CZ: Binance May Have Been Hacked as Tether and Circle Freeze Over 2.3B in Stablecoins Breaking: Binance co-founder Changpeng Zhao (CZ) said the exchange appeared to have been hacked but that user fund",
    "sev": 2,
    "dir": -1,
    "types": [
@@ -60,9 +152,9 @@
    ]
   },
   {
-   "ts": 1793319364.571522,
-   "src": "cointelegraph",
-   "title": "Binance hack may involve private key ‘misuse,’ not theft: Blockaid CEO",
+   "ts": 1793326580.4845843,
+   "src": "tg:wublockchainenglish",
+   "title": "Arbitrum Security Council Takes Emergency Action to Transfer Binance-Related Stolen Funds to an Intermediary Frozen Wallet The Arbitrum Security Council announced that it has taken emergency action to",
    "sev": 2,
    "dir": -1,
    "types": [
@@ -71,9 +163,20 @@
    ]
   },
   {
-   "ts": 1793317263.7510424,
-   "src": "cointelegraph",
-   "title": "Live Updates: Binance says $2.54 billion frozen after hack",
+   "ts": 1793326580.4845843,
+   "src": "tg:binance_announcements",
+   "title": "Binance Will List Predict (PREDICT) with Seed Tag Applied Binance will list Predict (PREDICT) and open trading for the PREDICT/USDT, PREDICT/USDC, and PREDICT/TRY spot trading pairs at 2026-10-30 10:0",
+   "sev": 1,
+   "dir": 1,
+   "types": [
+    "bullish",
+    "exchange"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Circle freezes 823 million USDC linked to suspected Binance hack. @WatcherGuru",
    "sev": 2,
    "dir": -1,
    "types": [
@@ -82,9 +185,9 @@
    ]
   },
   {
-   "ts": 1793316663.8186147,
-   "src": "cointelegraph",
-   "title": "Binance hack rattles crypto markets as BNB falls 7%, Bitcoin slides",
+   "ts": 1793326580.4845843,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Binance Founder CZ says it looks like Binance has been hacked. @WatcherGuru",
    "sev": 2,
    "dir": -1,
    "types": [
@@ -93,9 +196,9 @@
    ]
   },
   {
-   "ts": 1793315763.9776077,
-   "src": "cointelegraph",
-   "title": "Live Updates: Binance hit by largest crypto hack in history",
+   "ts": 1793326580.4845843,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Binance issues statement following suspected crypto hack. Our teams are aware of reports of a potential security issue and are actively investigating. At this stage, we have not confirmed any",
    "sev": 2,
    "dir": -1,
    "types": [
@@ -104,9 +207,9 @@
    ]
   },
   {
-   "ts": 1793315223.7778623,
-   "src": "bitcoinmagazine",
-   "title": "Bitcoin Price Slides Below $79,000 as Binance Loses $5.8 Billion in Massive Hack",
+   "ts": 1793326580.4845843,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Tether has now frozen 1.5 billion in USDT linked to suspected Binance hack. @WatcherGuru",
    "sev": 2,
    "dir": -1,
    "types": [
@@ -115,9 +218,9 @@
    ]
   },
   {
-   "ts": 1793313363.746426,
-   "src": "cointelegraph",
-   "title": "Binance hit by $5.8B hack as Tether and Circle freeze billions",
+   "ts": 1793326580.4845843,
+   "src": "tg:WatcherGuru",
+   "title": "BREAKING: World s largest crypto exchange Binance hacked with over 5.6 billion stolen: • 1.45 billion BTC • 875 million ETH • 234 million TRX • 50 million XAUT • 1.57 billion USDT • 823 million USDC •",
    "sev": 2,
    "dir": -1,
    "types": [
@@ -126,9 +229,53 @@
    ]
   },
   {
-   "ts": 1793312163.8012571,
-   "src": "cointelegraph",
-   "title": "Binance hacked for over $5.8B in massive crypto exploit",
+   "ts": 1793326580.4845843,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Binance says user funds remain safe following major hack. Withdrawals will resume as soon as the security issue is fully resolved. @WatcherGuru",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Elon Musk says everyday is zeroday following Binance hack. @WatcherGuru",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Binance says 2,540,000,000 worth of stolen crypto has been frozen following major hack. This figure may continue to increase. @WatcherGuru",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Binance says it will cover all losses from the hack. @WatcherGuru",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793326580.4845843,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: Binance says 3,000,000,000 worth of stolen crypto has now been frozen following major hack. @WatcherGuru",
    "sev": 2,
    "dir": -1,
    "types": [
@@ -137,21 +284,21 @@
    ]
   }
  ],
- "ts": 1793326445.4639459,
- "bear_score": 8,
- "bull_score": 0,
+ "ts": 1793326746.131515,
+ "bear_score": 53,
+ "bull_score": 2,
  "price": {
   "SOL": {
-   "px": 94.351,
-   "ch15m": 0.004802981895633662,
-   "ch1h": -0.00389569256756761,
-   "ch4h": -0.027950630511827224
+   "px": 94.691,
+   "ch15m": 0.012922135575452298,
+   "ch1h": 0.0065051711859183126,
+   "ch4h": -0.026213492389962956
   },
   "BTC": {
-   "px": 76967.0,
-   "ch15m": 0.0023310934000104755,
-   "ch1h": -0.004114640615902165,
-   "ch4h": -0.023372965016685954
+   "px": 77092.0,
+   "ch15m": 0.00708033964728938,
+   "ch1h": 0.0016370865057298012,
+   "ch4h": -0.023125562299631253
   }
  },
  "mode": "live",
@@ -172,11 +319,31 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 94.351,
-  "ret_px": 0.0326,
-  "pnl_usd_est": 1.21,
-  "age_h": 4.83,
-  "best_ret": 0.04671383164154619
+  "mark": 94.691,
+  "ret_px": 0.0291,
+  "pnl_usd_est": 1.08,
+  "age_h": 4.91,
+  "best_ret": 0.04671383164154619,
+  "thesis": {
+   "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+   "entities": [
+    "bitcoin",
+    "cftc",
+    "fed",
+    "polymarket"
+   ],
+   "state": "confirmed",
+   "evidence": [],
+   "rules": {}
+  },
+  "stop_px": 100.94,
+  "rules": {
+   "stop_up": 0.035,
+   "trail_arm": 0.04,
+   "trail_gap": 0.02,
+   "tp_down": 0.12,
+   "max_h": 12
+  }
  },
  "positions": {
   "lab": {
@@ -196,11 +363,31 @@
    ],
    "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
    "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-   "mark": 94.351,
-   "ret_px": 0.0326,
-   "pnl_usd_est": 1.21,
-   "age_h": 4.83,
-   "best_ret": 0.04671383164154619
+   "mark": 94.691,
+   "ret_px": 0.0291,
+   "pnl_usd_est": 1.08,
+   "age_h": 4.91,
+   "best_ret": 0.04671383164154619,
+   "thesis": {
+    "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+    "entities": [
+     "bitcoin",
+     "cftc",
+     "fed",
+     "polymarket"
+    ],
+    "state": "confirmed",
+    "evidence": [],
+    "rules": {}
+   },
+   "stop_px": 100.94,
+   "rules": {
+    "stop_up": 0.035,
+    "trail_arm": 0.04,
+    "trail_gap": 0.02,
+    "tp_down": 0.12,
+    "max_h": 12
+   }
   },
   "book": {
    "ts": 1793320444.8066633,
@@ -221,10 +408,71 @@
    "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "sig": "52fnUTsu5TQh9dGoURqVntbYErKt566sgbn8AKFywmcR8vVs2GfMC9b3pp3MgZyJ3zbrvN7oDuUc44K8S6rxDM3K",
    "best_ret": 0.0,
-   "mark": 94.351,
-   "ret_px": -0.0159,
-   "pnl_usd_est": -2.61,
-   "age_h": 1.67
+   "mark": 94.691,
+   "ret_px": -0.0196,
+   "pnl_usd_est": -3.21,
+   "age_h": 1.75,
+   "thesis": {
+    "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+    "entities": [
+     "bitcoin",
+     "cftc",
+     "fed",
+     "polymarket"
+    ],
+    "state": "confirmed",
+    "evidence": [],
+    "rules": {}
+   },
+   "stop_px": 96.12,
+   "rules": {
+    "stop_up": 0.035,
+    "trail_arm": 0.04,
+    "trail_gap": 0.02,
+    "tp_down": 0.12,
+    "max_h": 12
+   }
   }
- }
+ },
+ "theses": {
+  "lab": {
+   "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+   "entities": [
+    "bitcoin",
+    "cftc",
+    "fed",
+    "polymarket"
+   ],
+   "state": "confirmed",
+   "evidence": [],
+   "rules": {}
+  },
+  "book": {
+   "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Polymarket suspended trading amid reports of user funds being drained | Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+   "entities": [
+    "bitcoin",
+    "cftc",
+    "fed",
+    "polymarket"
+   ],
+   "state": "confirmed",
+   "evidence": [],
+   "rules": {}
+  }
+ },
+ "llm": {
+  "key": false,
+  "last_error": null
+ },
+ "sources": [
+  "bitcoinmagazine",
+  "claude-session",
+  "cointelegraph",
+  "decrypt",
+  "tg:TreeNewsFeed",
+  "tg:WatcherGuru",
+  "tg:binance_announcements",
+  "tg:wublockchainenglish",
+  "theblock"
+ ]
 }

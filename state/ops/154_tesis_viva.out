@@ -1,0 +1,26 @@
+== 154_tesis_viva 2026-10-30T02:16:04Z ==
+--- servicio
+active
+--- paquete anthropic: 0.84.0
+--- prueba directa del modelo
+modelo responde: ok
+--- radar.json: tesis, reglas, llm, fuentes
+llm: {'key': False, 'last_error': None}
+fuentes vistas: ['bitcoinmagazine', 'claude-session', 'cointelegraph', 'decrypt', 'tg:TreeNewsFeed', 'tg:WatcherGuru', 'tg:binance_announcements', 'tg:wublockchainenglish', 'theblock']
+lab entrada 97.53 mark 94.536 stop_px 100.94 be None reglas {'stop_up': 0.035, 'trail_arm': 0.04, 'trail_gap': 0.02, 'tp_down': 0.12, 'max_h': 12} tesis confirmed []
+book entrada 92.87 mark 94.536 stop_px 96.12 be None reglas {'stop_up': 0.035, 'trail_arm': 0.04, 'trail_gap': 0.02, 'tp_down': 0.12, 'max_h': 12} tesis confirmed []
+--- log del radar (tesis/telegram)
+--- journal
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,488 INFO radar: evento [tg:WatcherGuru] sev 2 dir -1: JUST IN: Binance Founder CZ says it looks like Binance has been hacked. @WatcherGuru
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,488 INFO radar: evento [tg:WatcherGuru] sev 2 dir -1: JUST IN: Binance issues statement following suspected crypto hack. Our teams are aware of reports o
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,488 INFO radar: evento [tg:WatcherGuru] sev 2 dir -1: JUST IN: Tether has now frozen 1.5 billion in USDT linked to suspected Binance hack. @WatcherGuru
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,488 INFO radar: evento [tg:WatcherGuru] sev 2 dir -1: BREAKING: World s largest crypto exchange Binance hacked with over 5.6 billion stolen: • 1.45 bil
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,489 INFO radar: evento [tg:WatcherGuru] sev 2 dir -1: JUST IN: Binance says user funds remain safe following major hack. Withdrawals will resume as soon 
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,489 INFO radar: evento [tg:WatcherGuru] sev 2 dir -1: JUST IN: Elon Musk says everyday is zeroday following Binance hack. @WatcherGuru
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,489 INFO radar: evento [tg:WatcherGuru] sev 2 dir -1: JUST IN: Binance says 2,540,000,000 worth of stolen crypto has been frozen following major hack. Th
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,489 INFO radar: evento [tg:WatcherGuru] sev 2 dir -1: JUST IN: Binance says it will cover all losses from the hack. @WatcherGuru
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,489 INFO radar: evento [tg:WatcherGuru] sev 2 dir -1: JUST IN: Binance says 3,000,000,000 worth of stolen crypto has now been frozen following major hack
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,489 INFO radar: evento [tg:WatcherGuru] sev 3 dir -1: JUST IN: Over 1.3 billion in leveraged crypto longs have been liquidated in the past 5 hours. This 
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,489 INFO radar: evento [tg:WatcherGuru] sev 2 dir -1: JUST IN: Coinbase CEO Brain Armstrong says his team is doing everything they can to help following 
+Oct 30 02:16:20 simplai-prod python3[2105776]: 2026-10-30 02:16:20,489 INFO radar: evento [claude-session] sev 2 dir -1: Binance confirms the hack and says it will fully cover all user losses from its reserves; CZ says u
+== exit 0 ==
