@@ -1,17 +1,17 @@
 {
- "now": 1793389490.348184,
+ "now": 1793389793.8095205,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 542.24,
- "equity_sol": 5.7419,
+ "equity_usd": 541.52,
+ "equity_sol": 5.7282,
  "cash_sol": 0.0826,
- "positions_usd": 534.44,
- "sol_usd": 94.44,
- "mult": 0.99,
+ "positions_usd": 533.72,
+ "sol_usd": 94.54,
+ "mult": 0.989,
  "halt": false,
  "pause": false,
  "positions": [
@@ -20,7 +20,7 @@
    "symbol": "USDC",
    "opened_ts": 1793204947.898395,
    "entry_usd": 1.0085494566713649,
-   "tokens": 534.1816045735908,
+   "tokens": 534.121590006866,
    "tokens_initial": 809.7938789999998,
    "sol_in": 8.124998901,
    "sol_out": 2.657660148,
@@ -32,51 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9996654672350265,
+   "last_usd": 0.9996136003156182,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 435.54
-  },
-  {
-   "mint": "perps:7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
-   "symbol": "SOL short 2x",
-   "opened_ts": 1793367953.6543465,
-   "entry_usd": 94.84,
-   "last_usd": 94.54,
-   "peak_usd": 93.645,
-   "tokens": 0,
-   "tokens_initial": 0,
-   "sol_in": 0.8608,
-   "sol_out": 0.0,
-   "stop": 0.035,
-   "trail": 0.02,
-   "trail_after": 1.04,
-   "tp": [],
-   "tp_done": [],
-   "thesis": "News-shock SOL short (radar). $81 collateral at 2x; stop if SOL rises 3.5%; trails 2% from its best once up 4%.",
-   "id": "radar-book",
-   "sleeve": "majors",
-   "reason": "news_shock_short",
-   "brain": false,
-   "perps": true,
-   "system": "News-shock short",
-   "mult": 1.006,
-   "value_usd": 81.81,
-   "pnl_usd": 0.52,
-   "collateral_usd": 81.29,
-   "side": "short"
+   "value_usd": 503.07
   },
   {
    "mint": "perps:CET8XhBZEpDac7XRWnCyxWy4bCzH8DBU29thCJ5yaqM3",
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2231.95,
+   "last_usd": 2237.55,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1818,
+   "sol_in": 0.1816,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -91,14 +62,44 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 0.995,
-   "value_usd": 17.09,
-   "pnl_usd": -0.08,
+   "mult": 0.99,
+   "value_usd": 17.0,
+   "pnl_usd": -0.17,
    "collateral_usd": 17.17,
+   "side": "short"
+  },
+  {
+   "mint": "perps:7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
+   "symbol": "SOL short 2x",
+   "opened_ts": 1793389583.9844668,
+   "entry_usd": 94.59,
+   "last_usd": 94.6995,
+   "peak_usd": 94.59,
+   "tokens": 0,
+   "tokens_initial": 0,
+   "sol_in": 0.1447,
+   "sol_out": 0.0,
+   "stop": 0.1988,
+   "trail": null,
+   "trail_after": null,
+   "tp": [],
+   "tp_done": [],
+   "thesis": "Breakout 55/20: SOL touched its 55-day low. short at 2x, $14 collateral; exits when it touches the 20-day high ($113.39), 1% of the book at risk.",
+   "id": "turtle-SOL",
+   "sleeve": "majors",
+   "reason": "majors_trend",
+   "brain": false,
+   "perps": true,
+   "system": "Breakout 55/20",
+   "exit_level": 113.39,
+   "mult": 0.998,
+   "value_usd": 13.65,
+   "pnl_usd": -0.03,
+   "collateral_usd": 13.68,
    "side": "short"
   }
  ],
- "perps_pnl_usd": 0.44,
+ "perps_pnl_usd": -0.2,
  "equity": [
   [
    1793203600,
@@ -2587,6 +2588,10 @@
   [
    1793389460,
    542.24
+  ],
+  [
+   1793389763,
+   541.52
   ]
  ],
  "closed": [
@@ -3375,6 +3380,27 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793389611.6942503,
+   "title": "SOL short settled",
+   "text": "The radar's SOL short settled back into USDC: result $-0.06 (time stop (6h)). The book's USDC balance was adjusted accordingly.",
+   "kind": "automatic",
+   "id": null
+  },
+  {
+   "ts": 1793389596.4767072,
+   "title": "Radar: SOL short closed",
+   "text": "Closed the SOL short: time stop (6h). Entry $94.84, exit $94.65, result about $-0.06 on $81 collateral.",
+   "kind": "decisión",
+   "id": "auto-plan_lloyd-radar-20261030-194622"
+  },
+  {
+   "ts": 1793389596.4745462,
+   "title": "Breakout: short SOL",
+   "text": "SOL touched its 55-day low ($94.81), a level Lloyd had on file. Turtle rule (55/20): open a short on Jupiter Perps at 2x, $14 collateral ($27 exposure), entry $94.59. The exit is pre-set at the 20-day high ($113.39); if it is hit, the loss is about $5.4 (1% of the book). Why: in 2024–26 this rule made +7% per trade on average across 8 crypto markets (t 2.0, beats random entries). Against: most breakouts fail (55–65% of trades lose); the system lives on the few big moves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-turtle-20261030-194626"
+  },
   {
    "ts": 1793385678.6220698,
    "title": "Automatic brain: status",
@@ -4753,27 +4779,6 @@
    "text": "set 4kjruq: ajustó GTA6: stop=-1.568",
    "kind": "execution",
    "id": "auto-lloyd-20261029-1447"
-  },
-  {
-   "ts": 1793285226.4311595,
-   "title": "Automatic brain: stops raised",
-   "text": "GTA6: peaked at 3.67x; stop raised to 2.57x (was 2.37x).",
-   "kind": "decisión",
-   "id": "auto-lloyd-20261029-1447"
-  },
-  {
-   "ts": 1793284637.836557,
-   "title": "Execution",
-   "text": "set 4kjruq: ajustó GTA6: stop=-1.368",
-   "kind": "execution",
-   "id": "auto-lloyd-20261029-1437"
-  },
-  {
-   "ts": 1793284637.8362923,
-   "title": "Automatic brain: stops raised",
-   "text": "GTA6: peaked at 3.38x; stop raised to 2.37x (was 2.23x).",
-   "kind": "decisión",
-   "id": "auto-lloyd-20261029-1437"
   }
  ],
  "wins": 1,

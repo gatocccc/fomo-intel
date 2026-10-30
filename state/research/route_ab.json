@@ -1,0 +1,336 @@
+[
+ {
+  "sym": "SI",
+  "sol": 0.1,
+  "buy_jup_better_pct": 0.17,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 2.55,
+  "roundtrip_cost_jup_pct": 2.55,
+  "jup_route": [
+   "BisonFi",
+   "Deriverse",
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "SI",
+  "sol": 0.4,
+  "buy_jup_better_pct": 0.1,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 2.57,
+  "roundtrip_cost_jup_pct": 2.57,
+  "jup_route": [
+   "TesseraV",
+   "Deriverse",
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "SI",
+  "sol": 1.0,
+  "buy_jup_better_pct": -0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 2.57,
+  "roundtrip_cost_jup_pct": 2.57,
+  "jup_route": [
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "GTA6",
+  "sol": 0.1,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 0.4,
+  "roundtrip_cost_jup_pct": 0.4,
+  "jup_route": [
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "GTA6",
+  "sol": 0.4,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 0.48,
+  "roundtrip_cost_jup_pct": 0.48,
+  "jup_route": [
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "GTA6",
+  "sol": 1.0,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 0.73,
+  "roundtrip_cost_jup_pct": 0.73,
+  "jup_route": [
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "DOAS",
+  "sol": 0.1,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 3.45,
+  "roundtrip_cost_jup_pct": 3.45,
+  "jup_route": [
+   "Pump.fun Amm"
+  ]
+ },
+ {
+  "sym": "DOAS",
+  "sol": 0.4,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 6.28,
+  "roundtrip_cost_jup_pct": 6.28,
+  "jup_route": [
+   "Pump.fun Amm"
+  ]
+ },
+ {
+  "sym": "DOAS",
+  "sol": 1.0,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 11.46,
+  "roundtrip_cost_jup_pct": 11.46,
+  "jup_route": [
+   "Pump.fun Amm"
+  ]
+ },
+ {
+  "sym": "SAPLING",
+  "sol": 0.1,
+  "buy_jup_better_pct": -0.02,
+  "sell_jup_better_pct": 0.01,
+  "roundtrip_cost_st_pct": 2.52,
+  "roundtrip_cost_jup_pct": 2.52,
+  "jup_route": [
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "SAPLING",
+  "sol": 0.4,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.02,
+  "roundtrip_cost_st_pct": 2.92,
+  "roundtrip_cost_jup_pct": 2.9,
+  "jup_route": [
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "SAPLING",
+  "sol": 1.0,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.01,
+  "roundtrip_cost_st_pct": 3.12,
+  "roundtrip_cost_jup_pct": 3.11,
+  "jup_route": [
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "INVERSE",
+  "sol": 0.1,
+  "buy_jup_better_pct": -0.03,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 1.15,
+  "roundtrip_cost_jup_pct": 1.15,
+  "jup_route": [
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "INVERSE",
+  "sol": 0.4,
+  "buy_jup_better_pct": -0.15,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 1.68,
+  "roundtrip_cost_jup_pct": 1.68,
+  "jup_route": [
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "INVERSE",
+  "sol": 1.0,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 2.0,
+  "roundtrip_cost_jup_pct": 2.0,
+  "jup_route": [
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "STONK",
+  "sol": 0.1,
+  "buy_jup_better_pct": -0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 0.0,
+  "roundtrip_cost_jup_pct": 0.0,
+  "jup_route": [
+   "Manifest"
+  ]
+ },
+ {
+  "sym": "STONK",
+  "sol": 0.4,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 0.0,
+  "roundtrip_cost_jup_pct": 0.0,
+  "jup_route": [
+   "Manifest"
+  ]
+ },
+ {
+  "sym": "STONK",
+  "sol": 1.0,
+  "buy_jup_better_pct": -0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 0.02,
+  "roundtrip_cost_jup_pct": 0.02,
+  "jup_route": [
+   "Manifest"
+  ]
+ },
+ {
+  "sym": "USELESS",
+  "sol": 0.1,
+  "buy_jup_better_pct": 0.02,
+  "sell_jup_better_pct": null,
+  "roundtrip_cost_st_pct": null,
+  "roundtrip_cost_jup_pct": 0.11,
+  "jup_route": [
+   "Scorch"
+  ]
+ },
+ {
+  "sym": "USELESS",
+  "sol": 0.4,
+  "buy_jup_better_pct": 0.05,
+  "sell_jup_better_pct": null,
+  "roundtrip_cost_st_pct": null,
+  "roundtrip_cost_jup_pct": 0.15,
+  "jup_route": [
+   "Scorch"
+  ]
+ },
+ {
+  "sym": "USELESS",
+  "sol": 1.0,
+  "buy_jup_better_pct": 0.07,
+  "sell_jup_better_pct": 0.07,
+  "roundtrip_cost_st_pct": 0.13,
+  "roundtrip_cost_jup_pct": 0.06,
+  "jup_route": [
+   "Scorch"
+  ]
+ },
+ {
+  "sym": "SPX",
+  "sol": 0.1,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 0.25,
+  "roundtrip_cost_jup_pct": 0.25,
+  "jup_route": [
+   "Meteora DLMM"
+  ]
+ },
+ {
+  "sym": "SPX",
+  "sol": 0.4,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 0.33,
+  "roundtrip_cost_jup_pct": 0.33,
+  "jup_route": [
+   "Whirlpool"
+  ]
+ },
+ {
+  "sym": "SPX",
+  "sol": 1.0,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 0.34,
+  "roundtrip_cost_jup_pct": 0.34,
+  "jup_route": [
+   "Whirlpool"
+  ]
+ },
+ {
+  "sym": "DOPE",
+  "sol": 0.1,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 1.81,
+  "roundtrip_cost_jup_pct": 1.81,
+  "jup_route": [
+   "Pump.fun Amm"
+  ]
+ },
+ {
+  "sym": "DOPE",
+  "sol": 0.4,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 1.87,
+  "roundtrip_cost_jup_pct": 1.87,
+  "jup_route": [
+   "Pump.fun Amm"
+  ]
+ },
+ {
+  "sym": "DOPE",
+  "sol": 1.0,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 2.0,
+  "roundtrip_cost_jup_pct": 2.0,
+  "jup_route": [
+   "Pump.fun Amm"
+  ]
+ },
+ {
+  "sym": "JOB",
+  "sol": 0.1,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 1.39,
+  "roundtrip_cost_jup_pct": 1.39,
+  "jup_route": [
+   "Pump.fun Amm"
+  ]
+ },
+ {
+  "sym": "JOB",
+  "sol": 0.4,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 1.45,
+  "roundtrip_cost_jup_pct": 1.45,
+  "jup_route": [
+   "Pump.fun Amm"
+  ]
+ },
+ {
+  "sym": "JOB",
+  "sol": 1.0,
+  "buy_jup_better_pct": 0.0,
+  "sell_jup_better_pct": 0.0,
+  "roundtrip_cost_st_pct": 1.62,
+  "roundtrip_cost_jup_pct": 1.62,
+  "jup_route": [
+   "Pump.fun Amm"
+  ]
+ }
+]
