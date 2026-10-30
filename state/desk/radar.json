@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793322064.274168,
+   "src": "cointelegraph",
+   "title": "Live Updates: Estimated losses in Binance hack reach $5.9B",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793319364.571522,
    "src": "cointelegraph",
    "title": "Binance hack may involve private key ‘misuse,’ not theft: Blockaid CEO",
@@ -218,21 +229,21 @@
    ]
   }
  ],
- "ts": 1793321944.7733643,
+ "ts": 1793322244.9964497,
  "bear_score": 6,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.863,
-   "ch15m": 0.01066459269992115,
-   "ch1h": -0.007823367604146036,
-   "ch4h": -0.013487936772046516
+   "px": 94.5,
+   "ch15m": 0.002609968807689711,
+   "ch1h": -0.008613002381426926,
+   "ch4h": -0.011506276150627603
   },
   "BTC": {
-   "px": 77221.0,
-   "ch15m": 0.0017772819262102946,
-   "ch1h": -0.009314021065595868,
-   "ch4h": -0.02041101103640741
+   "px": 76995.0,
+   "ch15m": 0.00023383608090732366,
+   "ch1h": -0.0123781426372499,
+   "ch4h": -0.023637124488010253
   }
  },
  "mode": "live",
@@ -253,10 +264,10 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 94.863,
-  "ret_px": 0.0273,
-  "pnl_usd_est": 1.02,
-  "age_h": 3.58,
+  "mark": 94.5,
+  "ret_px": 0.0311,
+  "pnl_usd_est": 1.16,
+  "age_h": 3.66,
   "best_ret": 0.04671383164154619
  },
  "positions": {
@@ -277,10 +288,10 @@
    ],
    "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
    "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-   "mark": 94.863,
-   "ret_px": 0.0273,
-   "pnl_usd_est": 1.02,
-   "age_h": 3.58,
+   "mark": 94.5,
+   "ret_px": 0.0311,
+   "pnl_usd_est": 1.16,
+   "age_h": 3.66,
    "best_ret": 0.04671383164154619
   },
   "book": {
@@ -302,10 +313,10 @@
    "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "sig": "52fnUTsu5TQh9dGoURqVntbYErKt566sgbn8AKFywmcR8vVs2GfMC9b3pp3MgZyJ3zbrvN7oDuUc44K8S6rxDM3K",
    "best_ret": 0.0,
-   "mark": 94.863,
-   "ret_px": -0.0215,
-   "pnl_usd_est": -3.51,
-   "age_h": 0.42
+   "mark": 94.5,
+   "ret_px": -0.0176,
+   "pnl_usd_est": -2.87,
+   "age_h": 0.5
   }
  }
 }
