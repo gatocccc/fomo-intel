@@ -314,6 +314,19 @@
    "verdict": "rejected",
    "sleeve": "majors",
    "priority": 3
+  },
+  {
+   "date": "2026-10-30",
+   "name": "Fade the top perps traders (Hyperliquid)",
+   "public_title": "Betting against the leaderboard",
+   "question": "Copying top traders lost money. Does taking the opposite side of their trades win instead?",
+   "hypothesis": "Leaderboard tops are on hot streaks and mean-revert, so their next trades are wrong more often than chance.",
+   "method": "397 wallets (300 top all-time + 200 top of the month), 54 with enough history. Picked with days −60…−30, measured on −30…0, opposite side, same timing, 0.19% round-trip cost; last 20 days re-priced with a 1-minute delay; significance counted per trader. experiments/hl_fade.py, ops 193–194.",
+   "result": "Fading everyone: −0.27% per trade. Fading the all-time top: +0.05% at their prices, −0.20% with a 1-minute delay. Fading recent winners: −0.35% (t −2.5, i.e. they kept winning). Nothing positive and significant.",
+   "efficacy": "No edge either way: the loss of copying was the fees, not a reliable wrong call by the traders.",
+   "verdict": "rejected",
+   "sleeve": "majors",
+   "priority": 3
   }
  ],
  "protocol": "Out-of-sample half held out, entries at next bar open, real costs (memes ~4% round trip (measured on our own fills, Oct 30), perps 0.12% + funding), random-entry control x20; adopt only if test mean > 0, t ≥ 2.5, beats random by ≥ 0.3%/trade, design half also positive. Risk/cost changes are judged on drawdown and realized cost, not on win rate.",
