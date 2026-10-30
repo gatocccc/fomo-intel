@@ -328,10 +328,13 @@ class Desk:
                          kind=T("automático", "automatic"))
         if changed:
             jsave(applied_f, sorted(applied))
-        p = jload(Path(pos_file), None)
-        if p and p.get("mode") == "live" and (p.get("ts") or 0) >= PERPS_SINCE and f"{p.get('ts')}" not in applied:
-            return float(p.get("pnl_usd_est") or 0.0)
-        return 0.0
+        out = 0.0
+        files = [pos_file] + (["state/desk/trend_pos_lab.json"] if leg == "lab" else [])   # 30/10: prueba de tendencia diaria del lab
+        for f in files:
+            p = jload(Path(f), None)
+            if p and p.get("mode") == "live" and (p.get("ts") or 0) >= PERPS_SINCE and f"{p.get('ts')}" not in applied:
+                out += float(p.get("pnl_usd_est") or 0.0)
+        return out
 
     def equity(self):
         try:

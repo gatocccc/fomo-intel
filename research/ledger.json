@@ -252,6 +252,18 @@
    "efficacy": "1 trade, 0 wins, -100%. The exit never existed: the stop and the time limit cannot save a token whose pool empties.",
    "verdict": "rejected",
    "sleeve": "lab"
+  },
+  {
+   "date": "2026-10-30",
+   "name": "Daily trend on majors, both directions (lab, Jupiter Perps)",
+   "public_title": "Ride the daily trend in BTC and ETH, up or down",
+   "question": "Does an average of 10 standard daily trend rules (momentum 10–90 days, price vs 20/50/100-day averages, 20/55-day breakouts), traded long or short on BTC/ETH perps and sized to volatility, beat its costs live?",
+   "hypothesis": "Crypto majors trend over days to weeks, so following the daily trend both ways catches the big moves and stays out of the crashes; hour-scale moves are noise.",
+   "method": "Backtest first (majors_bt.py): 8 markets, Jan 2020–Oct 2026, costs 0.10% per trade plus 10%/yr funding on longs; rules picked on 2020–23, judged on 2024–26 against 100 random-timing controls. Result: every daily trend rule was positive out of sample in 5–8 of 8 markets and cut the worst drawdown from −71% (buy and hold) to about −38%, but t-stats of 0.6–1.7 fall short of the t ≥ 2 bar; 4-hour rules, dip-buying and rip-shorting lost. Live: fomo-radar checks hourly; signal ≤ −0.5 opens a short (≥ +0.5 a long) on the more extreme of BTC/ETH, $10 collateral, leverage = 60% vol target / 30-day vol (1–2x); exit when the signal fades past ±0.2, hard stop 8% against, or 14 days. Adopt into the book after 15+ trades beating random timing.",
+   "result": "Started Oct 30. First signal: ETH −0.8 (9 of 10 rules bearish), BTC −0.3.",
+   "efficacy": "Testing.",
+   "verdict": "testing",
+   "sleeve": "majors"
   }
  ],
  "protocol": "Out-of-sample half held out, entries at next bar open, real costs (memes ~3% round trip, perps 0.12% + funding), random-entry control x20; adopt only if test mean > 0, t ≥ 2.5, beats random by ≥ 0.3%/trade, design half also positive. Risk/cost changes are judged on drawdown and realized cost, not on win rate.",

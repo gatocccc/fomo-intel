@@ -683,6 +683,13 @@ class Radar:
             self.manage(px)
         except Exception as e:  # noqa: BLE001
             log.exception("manage: %s", e)
+        try:   # 30/10: prueba del lab — tendencia diaria en BTC/ETH con perps (fomo_intel/desk/trend.py)
+            if not hasattr(self, "trend"):
+                from .trend import TrendLab
+                self.trend = TrendLab(self)
+            self.trend.step()
+        except Exception as e:  # noqa: BLE001
+            log.exception("trend: %s", e)
         self.state["position"] = self.pos
         self.state["positions"] = {leg["name"]: leg["pos"] for leg in self.legs}
         self.state["theses"] = {leg["name"]: (leg["pos"] or {}).get("thesis") for leg in self.legs if leg["pos"]}
