@@ -1,0 +1,155 @@
+== 172_verifica_perps_stools 2026-10-30T15:59:03Z ==
+== servicios ==
+fomo-mirror        active
+fomo-desk@lloyd    active
+fomo-app           active
+fomo-radar         active
+fomo-brain         active
+
+== libro: posiciones publicadas (plan_lloyd_summary.json) ==
+equity 542.01 perps_pnl 0.13
+                    USDC sleeve=cash value=435.6 perps=None mult=0.991
+            SOL short 2x sleeve=majors value=81.4 perps=True mult=1.001
+            ETH short 2x sleeve=majors value=17.19 perps=True mult=1.001
+
+== perps del libro en cadena (Jupiter) ==
+Traceback (most recent call last):
+  File "/root/fomo_intel/scripts/perps_probe.py", line 26, in <module>
+    from fomo_intel.live.bot import load_dotenv
+ModuleNotFoundError: No module named 'fomo_intel'
+
+== stools ==
+[1] G3ueF52vBYbbKjQ6NT9dXbYdFiKAv5YMfxsgzaNwdVZz started=True since=1793316098.0100262 eq=182.88 cash=-9985835.11 perps_open=1
+     ETH:short: coll=9986018.0 pubkey=GBb67nA8o6QfU99DkewphcHb6BNkesxagUSioYvwkAo5 entry=2225.0 pnl=None err=
+     · Lloyd moved, so did you — ETH: opened a short at 2x on Jupiter Perps with $10.00 of your USDC as collateral (entry $2,225.00). Same trad
+     · Lloyd moved, so did you — USDC: parked 0.0636 SOL as 6.17 USDC (Lloyd keeps idle cash in dollars)
+     · Lloyd moved, so did you — SPX: sold 100% of SPX for 0.0494 SOL
+     · Lloyd moved, so did you — USDC: parked 0.1112 SOL as 10.33 USDC (Lloyd keeps idle cash in dollars)
+[2] AfXvDr3viGEjVfF7rbAxv2XrF9VsxAK6fY1LpvzQpH9C started=True since=1793315905.6502538 eq=979.01 cash=-30975648.95 perps_open=1
+     ETH:short: coll=30976628.0 pubkey=3Cfcdc4QofHnqzpFgcNXx335UVrj6KpANUxtrX5RXAMx entry=2224.83 pnl=None err=
+     · Lloyd moved, so did you — ETH: opened a short at 2x on Jupiter Perps with $31.02 of your USDC as collateral (entry $2,224.83). Same trad
+     · Lloyd moved, so did you — USDC: parked 0.3856 SOL as 37.39 USDC (Lloyd keeps idle cash in dollars)
+     · Lloyd moved, so did you — SPX: sold 100% of SPX for 0.3763 SOL
+     · Lloyd moved, so did you — USDC: parked 0.5779 SOL as 55.17 USDC (Lloyd keeps idle cash in dollars)
+[3] BKk19xcyQc4LRR6QE2Yvkq3Di8ciTyyX8JpMNwjVUHev started=True since=1793321739.5267951 eq=46.93 cash=-9985972.07 perps_open=1
+     ETH:short: coll=9986019.0 pubkey=BhJA14UTYCz77F2qnF9vYEBtawf8yoLAusuG3Y2Gdkbk entry=2225.67 pnl=-0.02 err=
+     · Lloyd moved, so did you — ETH: opened a short at 2x on Jupiter Perps with $10.00 of your USDC as collateral (entry $2,225.67). Same trad
+     · Matched the book — Your stool now holds what Lloyd holds, in proportion: USDC: parked 0.4782 SOL as 45.03 USDC (Lloyd keeps idle 
+     · Your stool is open — Lloyd starts trading for you with 0.5000 SOL ($47.26). Hard floor: $19; if your stool ever loses 60%, everythi
+     · Deposit received — 0.5000 SOL ($47.26) arrived in your stool.
+[4] 8R6qCpspwpXksJkJ884Hw7TM4poyXLeNJLV5xYkwDsRt started=True since=1793314480.0151887 eq=127.65 cash=-9985890.35 perps_open=1
+     ETH:short: coll=9986018.0 pubkey=9hX7tHu1mkgrk9Za4CYQv1D1QoWPdsnyRVMddsMnsH6a entry=2225.76 pnl=-0.02 err=
+     · Lloyd moved, so did you — ETH: opened a short at 2x on Jupiter Perps with $10.00 of your USDC as collateral (entry $2,225.76). Same trad
+     · Lloyd moved, so did you — USDC: parked 0.0534 SOL as 4.89 USDC (Lloyd keeps idle cash in dollars)
+     · Lloyd moved, so did you — SPX: sold 100% of SPX for 0.0392 SOL
+     · New money put to work — Your stool now holds what Lloyd holds, in proportion: USDC: parked 1.0052 SOL as 94.41 USDC (Lloyd keeps idle 
+[5] Eeb6YXZA5cyq1ncWahNsLY7SAeubXRje3n42Gv9FdTbz started=False since=None eq=0.0 cash=0.0 perps_open=0
+[6] H3Hz21eYwE9JVaoBKvkUvGcHR9fHsCDsFmu7mj177RmE started=True since=1793319105.9844315 eq=45.35 cash=-9985972.64 perps_open=1
+     ETH:short: coll=9986018.0 pubkey=C84wESadyVfrw5jZmMZWrrNwxzcPBFrfed74XFzc55yL entry=2225.28 pnl=None err=
+     · Lloyd moved, so did you — ETH: opened a short at 2x on Jupiter Perps with $10.00 of your USDC as collateral (entry $2,225.28). Same trad
+     · Matched the book — Your stool now holds what Lloyd holds, in proportion: USDC: parked 0.4569 SOL as 43.34 USDC (Lloyd keeps idle 
+     · Your stool is open — Lloyd starts trading for you with 0.4800 SOL ($45.65). Hard floor: $18; if your stool ever loses 60%, everythi
+     · Deposit received — 0.4800 SOL ($45.65) arrived in your stool.
+[7] 3nB79h44Uy4HC6Dv3J2uGeWBZgmv4jXpan96uQHfRHdj started=False since=None eq=0.0 cash=0.0 perps_open=0
+[8] 6ZXLMNHRbX3yC8UGwjzr7b9CRvWF8UsVu1Pv3UFucWrT started=False since=None eq=0.0 cash=0.0 perps_open=0
+
+== /api/admin/wallets (started/equity) ==
+    The house book started=True eq=542.01 open=3 pnl=-5.59
+              Jase started=True eq=182.88 open=1 pnl=-1.29
+            Jeeper started=True eq=979.01 open=1 pnl=-12.97
+              Kate started=True eq=46.93 open=1 pnl=-0.33
+             Jtorr started=True eq=127.65 open=1 pnl=-1.06
+     Anthony Murch started=False eq=0.0 open=0 pnl=None
+             Weiss started=True eq=45.35 open=1 pnl=-0.3
+            EzFlow started=False eq=0.0 open=0 pnl=None
+         Eagle Jay started=False eq=0.0 open=0 pnl=None
+
+== mirror log ==
+Oct 29 21:01:02 simplai-prod systemd[1]: Stopped fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 29 21:01:02 simplai-prod systemd[1]: Started fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 29 22:44:50 simplai-prod python3[1997627]: 2026-10-29 22:44:50,085 INFO mirror: stool 5: wallet Eeb6YXZA5cyq1ncWahNsLY7SAeubXRje3n42Gv9FdTbz
+Oct 29 22:45:20 simplai-prod python3[1997627]: 2026-10-29 22:45:20,574 INFO mirror: stool 1: wallet G3ueF52vBYbbKjQ6NT9dXbYdFiKAv5YMfxsgzaNwdVZz
+Oct 29 22:45:20 simplai-prod python3[1997627]: 2026-10-29 22:45:20,575 INFO mirror: stool 2: wallet AfXvDr3viGEjVfF7rbAxv2XrF9VsxAK6fY1LpvzQpH9C
+Oct 29 22:45:20 simplai-prod python3[1997627]: 2026-10-29 22:45:20,576 INFO mirror: stool 3: wallet BKk19xcyQc4LRR6QE2Yvkq3Di8ciTyyX8JpMNwjVUHev
+Oct 29 22:45:20 simplai-prod python3[1997627]: 2026-10-29 22:45:20,577 INFO mirror: stool 4: wallet 8R6qCpspwpXksJkJ884Hw7TM4poyXLeNJLV5xYkwDsRt
+Oct 29 23:43:04 simplai-prod systemd[1]: Stopping fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book)...
+Oct 29 23:43:04 simplai-prod systemd[1]: fomo-mirror.service: Deactivated successfully.
+Oct 29 23:43:04 simplai-prod systemd[1]: Stopped fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 29 23:43:04 simplai-prod systemd[1]: fomo-mirror.service: Consumed 49.194s CPU time, 23.4M memory peak, 0B memory swap peak.
+Oct 29 23:43:04 simplai-prod systemd[1]: Started fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 29 23:51:04 simplai-prod systemd[1]: Stopping fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book)...
+Oct 29 23:51:04 simplai-prod systemd[1]: fomo-mirror.service: Deactivated successfully.
+Oct 29 23:51:04 simplai-prod systemd[1]: Stopped fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 29 23:51:04 simplai-prod systemd[1]: fomo-mirror.service: Consumed 8.539s CPU time.
+Oct 29 23:51:04 simplai-prod systemd[1]: Started fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 29 23:59:03 simplai-prod systemd[1]: Stopping fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book)...
+Oct 29 23:59:03 simplai-prod systemd[1]: fomo-mirror.service: Deactivated successfully.
+Oct 29 23:59:03 simplai-prod systemd[1]: Stopped fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 29 23:59:03 simplai-prod systemd[1]: fomo-mirror.service: Consumed 7.594s CPU time.
+Oct 29 23:59:03 simplai-prod systemd[1]: Started fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 30 00:07:50 simplai-prod python3[2055572]: 2026-10-30 00:07:50,975 INFO mirror: stool 6: wallet H3Hz21eYwE9JVaoBKvkUvGcHR9fHsCDsFmu7mj177RmE
+Oct 30 00:18:03 simplai-prod systemd[1]: Stopping fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book)...
+Oct 30 00:18:03 simplai-prod systemd[1]: fomo-mirror.service: Deactivated successfully.
+Oct 30 00:18:03 simplai-prod systemd[1]: Stopped fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 30 00:18:03 simplai-prod systemd[1]: fomo-mirror.service: Consumed 17.579s CPU time.
+Oct 30 00:18:03 simplai-prod systemd[1]: Started fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 30 01:26:03 simplai-prod systemd[1]: Stopping fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book)...
+Oct 30 01:26:03 simplai-prod systemd[1]: fomo-mirror.service: Deactivated successfully.
+Oct 30 01:26:03 simplai-prod systemd[1]: Stopped fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 30 01:26:03 simplai-prod systemd[1]: fomo-mirror.service: Consumed 1min 8.269s CPU time.
+Oct 30 01:26:03 simplai-prod systemd[1]: Started fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 30 11:43:03 simplai-prod systemd[1]: Stopping fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book)...
+Oct 30 11:43:03 simplai-prod systemd[1]: fomo-mirror.service: Deactivated successfully.
+Oct 30 11:43:03 simplai-prod systemd[1]: Stopped fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 30 11:43:03 simplai-prod systemd[1]: fomo-mirror.service: Consumed 10min 13.481s CPU time.
+Oct 30 11:43:03 simplai-prod systemd[1]: Started fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 30 15:24:53 simplai-prod python3[2308364]: 2026-10-30 15:24:53,882 INFO mirror: stool 7: wallet 3nB79h44Uy4HC6Dv3J2uGeWBZgmv4jXpan96uQHfRHdj
+Oct 30 15:24:53 simplai-prod python3[2308364]: 2026-10-30 15:24:53,883 INFO mirror: stool 8: wallet 6ZXLMNHRbX3yC8UGwjzr7b9CRvWF8UsVu1Pv3UFucWrT
+Oct 30 15:59:03 simplai-prod systemd[1]: Stopping fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book)...
+Oct 30 15:59:03 simplai-prod systemd[1]: fomo-mirror.service: Deactivated successfully.
+Oct 30 15:59:03 simplai-prod systemd[1]: Stopped fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 30 15:59:03 simplai-prod systemd[1]: fomo-mirror.service: Consumed 4min 30.300s CPU time.
+Oct 30 15:59:03 simplai-prod systemd[1]: Started fomo-mirror.service - Lloyd's Tavern - stools (user wallets following the book).
+Oct 30 15:59:04 simplai-prod python3[2398162]: 2026-10-30 15:59:04,164 INFO mirror: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 30 15:59:04 simplai-prod python3[2398162]: 2026-10-30 15:59:04,244 INFO mirror: perps submit: sent 3FaCrP2x5KTRV5xPYwbuccc6oUe5ta87kKZ7roswNpd5yK8L12YF2y5Yn69ARKce9xAzQVjaXGM3cEoMHtvzvCtp, waiting up to 90s
+Oct 30 15:59:05 simplai-prod python3[2398162]: 2026-10-30 15:59:05,909 INFO mirror: perps submit: confirmed 3FaCrP2x5KTRV5xPYwbuccc6oUe5ta87kKZ7roswNpd5yK8L12YF2y5Yn69ARKce9xAzQVjaXGM3cEoMHtvzvCtp (finalized)
+Oct 30 15:59:06 simplai-prod python3[2398162]: 2026-10-30 15:59:06,555 INFO mirror: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 30 15:59:06 simplai-prod python3[2398162]: 2026-10-30 15:59:06,702 INFO mirror: perps submit: sent 5MgQfvC1HUPc3EBNmsWifxzGoTNRjT3ei5HyrvzHytjPQBD6wMfNgm8ogwZD2Qzm7C4sthGMwD3ZYQzK5CdK2Mjs, waiting up to 90s
+Oct 30 15:59:08 simplai-prod python3[2398162]: 2026-10-30 15:59:08,436 INFO mirror: perps submit: confirmed 5MgQfvC1HUPc3EBNmsWifxzGoTNRjT3ei5HyrvzHytjPQBD6wMfNgm8ogwZD2Qzm7C4sthGMwD3ZYQzK5CdK2Mjs (finalized)
+Oct 30 15:59:09 simplai-prod python3[2398162]: 2026-10-30 15:59:09,080 INFO mirror: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 30 15:59:09 simplai-prod python3[2398162]: 2026-10-30 15:59:09,166 INFO mirror: perps submit: sent 51yAvkrcmHBGTzEgm19vnvCFRi4V5osa6Q5LfKRqapztHiqEMufZ1Pfe3W1qPWtK1JBwfEyJUdo14nNeFK24V8LF, waiting up to 90s
+Oct 30 15:59:10 simplai-prod python3[2398162]: 2026-10-30 15:59:10,846 INFO mirror: perps submit: confirmed 51yAvkrcmHBGTzEgm19vnvCFRi4V5osa6Q5LfKRqapztHiqEMufZ1Pfe3W1qPWtK1JBwfEyJUdo14nNeFK24V8LF (finalized)
+Oct 30 15:59:11 simplai-prod python3[2398162]: 2026-10-30 15:59:11,535 INFO mirror: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 30 15:59:11 simplai-prod python3[2398162]: 2026-10-30 15:59:11,619 INFO mirror: perps submit: sent 3r9KbPm2GnEMFwt1ZyzAbRCBHksKT5wCmWPARUq17gi79eeykHjkFd5aWDBVasFMW723de73aw4Xvd7pXnHzJ4Pj, waiting up to 90s
+Oct 30 15:59:13 simplai-prod python3[2398162]: 2026-10-30 15:59:13,358 INFO mirror: perps submit: confirmed 3r9KbPm2GnEMFwt1ZyzAbRCBHksKT5wCmWPARUq17gi79eeykHjkFd5aWDBVasFMW723de73aw4Xvd7pXnHzJ4Pj (finalized)
+Oct 30 15:59:14 simplai-prod python3[2398162]: 2026-10-30 15:59:14,147 INFO mirror: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 30 15:59:14 simplai-prod python3[2398162]: 2026-10-30 15:59:14,222 INFO mirror: perps submit: sent 5tgM3w2R3gB9S2oG6hxUi64WU5B5LZdhH2tryakmQCAKDyvaFzvg7q4okXxVTNw9mVDidQrfsLWfTHX5UBhUsgY9, waiting up to 90s
+Oct 30 15:59:15 simplai-prod python3[2398162]: 2026-10-30 15:59:15,900 INFO mirror: perps submit: confirmed 5tgM3w2R3gB9S2oG6hxUi64WU5B5LZdhH2tryakmQCAKDyvaFzvg7q4okXxVTNw9mVDidQrfsLWfTHX5UBhUsgY9 (finalized)
+
+== desk lloyd log ==
+Oct 30 11:42:58 simplai-prod python3[2308322]: requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc
+Oct 30 11:42:58 simplai-prod systemd[1]: fomo-desk@lloyd.service: Main process exited, code=exited, status=1/FAILURE
+Oct 30 11:42:58 simplai-prod systemd[1]: fomo-desk@lloyd.service: Failed with result 'exit-code'.
+Oct 30 11:43:03 simplai-prod systemd[1]: Stopped fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+Oct 30 11:43:03 simplai-prod systemd[1]: Started fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+Oct 30 13:11:03 simplai-prod systemd[1]: Stopping fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd...
+Oct 30 13:11:03 simplai-prod systemd[1]: fomo-desk@lloyd.service: Deactivated successfully.
+Oct 30 13:11:03 simplai-prod systemd[1]: Stopped fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+Oct 30 13:11:03 simplai-prod systemd[1]: fomo-desk@lloyd.service: Consumed 38.647s CPU time.
+Oct 30 13:11:03 simplai-prod systemd[1]: Started fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+Oct 30 13:37:03 simplai-prod systemd[1]: Stopping fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd...
+Oct 30 13:37:03 simplai-prod systemd[1]: fomo-desk@lloyd.service: Deactivated successfully.
+Oct 30 13:37:03 simplai-prod systemd[1]: Stopped fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+Oct 30 13:37:03 simplai-prod systemd[1]: fomo-desk@lloyd.service: Consumed 11.650s CPU time.
+Oct 30 13:37:03 simplai-prod systemd[1]: Started fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+Oct 30 13:52:03 simplai-prod systemd[1]: Stopping fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd...
+Oct 30 13:52:03 simplai-prod systemd[1]: fomo-desk@lloyd.service: Deactivated successfully.
+Oct 30 13:52:03 simplai-prod systemd[1]: Stopped fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+Oct 30 13:52:03 simplai-prod systemd[1]: fomo-desk@lloyd.service: Consumed 6.806s CPU time.
+Oct 30 13:52:03 simplai-prod systemd[1]: Started fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+Oct 30 15:59:03 simplai-prod systemd[1]: Stopping fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd...
+Oct 30 15:59:03 simplai-prod systemd[1]: fomo-desk@lloyd.service: Deactivated successfully.
+Oct 30 15:59:03 simplai-prod systemd[1]: Stopped fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+Oct 30 15:59:03 simplai-prod systemd[1]: fomo-desk@lloyd.service: Consumed 53.829s CPU time.
+Oct 30 15:59:03 simplai-prod systemd[1]: Started fomo-desk@lloyd.service - Nonco Autopilot - mesa del plan lloyd.
+== exit 0 ==

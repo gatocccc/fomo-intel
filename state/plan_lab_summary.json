@@ -1,17 +1,17 @@
 {
- "now": 1793375677.2176952,
+ "now": 1793376035.1354768,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 2,
- "equity_usd": 57.11,
- "equity_sol": 0.6038,
+ "equity_usd": 57.16,
+ "equity_sol": 0.6034,
  "cash_sol": 0.2852,
- "positions_usd": 30.13,
- "sol_usd": 94.58,
- "mult": 1.032,
+ "positions_usd": 30.14,
+ "sol_usd": 94.74,
+ "mult": 1.033,
  "halt": false,
  "pause": false,
  "positions": [
@@ -34,12 +34,42 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9997911962418926,
+   "last_usd": 0.9997673925745848,
    "mult": 0.982,
-   "value_usd": 30.06
+   "value_usd": 20.06
+  },
+  {
+   "mint": "perps:FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy",
+   "symbol": "ETH short 1.69x",
+   "opened_ts": 1793360616.3171363,
+   "entry_usd": 2237.16,
+   "last_usd": 2226.65,
+   "peak_usd": 2237.16,
+   "tokens": 0,
+   "tokens_initial": 0,
+   "sol_in": 0.1056,
+   "sol_out": 0.0,
+   "stop": null,
+   "trail": null,
+   "trail_after": null,
+   "tp": [],
+   "tp_done": [],
+   "thesis": "Daily trend on majors: short ETH at 1.69x, $10 collateral.",
+   "id": "trend-ETH",
+   "sleeve": "majors",
+   "reason": "majors_trend",
+   "brain": false,
+   "perps": true,
+   "system": "Daily trend",
+   "exit_level": null,
+   "mult": 1.008,
+   "value_usd": 10.08,
+   "pnl_usd": 0.08,
+   "collateral_usd": 10.0,
+   "side": "short"
   }
  ],
- "perps_pnl_usd": 0,
+ "perps_pnl_usd": 0.08,
  "equity": [
   [
    1793271309,
@@ -1440,6 +1470,14 @@
   [
    1793375404,
    57.06
+  ],
+  [
+   1793375707,
+   57.08
+  ],
+  [
+   1793375944,
+   57.15
   ]
  ],
  "closed": [
