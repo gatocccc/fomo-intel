@@ -1,16 +1,16 @@
 {
- "ts": 1793331087.9515254,
+ "ts": 1793331727.3171039,
  "regime": {
   "state": "risk_off",
-  "ts": 1793330464.4581854,
-  "since": 1793328065.946487,
+  "ts": 1793331723.8414543,
+  "since": 1793331723.8414543,
   "exit_since": null,
-  "sol": 95.68,
+  "sol": 96.75,
   "sol_ma20": 104.21,
-  "sol_ch4h": 0.1,
-  "sol_ch24h": -4.0,
-  "btc_vs_ma20": -0.0528,
-  "breadth_above": 1,
+  "sol_ch4h": 1.2,
+  "sol_ch24h": -2.9,
+  "btc_vs_ma20": -0.0448,
+  "breadth_above": 2,
   "breadth_total": 20,
   "why": "news",
   "shock": true,
@@ -27,7 +27,7 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 513.58,
+   "value_usd": 513.76,
    "pct": 94.8,
    "positions": 0
   },
@@ -43,7 +43,7 @@
    "key": "established",
    "name": "Established memes",
    "target_pct": 10,
-   "value_usd": 20.48,
+   "value_usd": 20.68,
    "pct": 3.8,
    "positions": 1
   },
@@ -56,6 +56,6 @@
    "positions": 0
   }
  ],
- "liquid_usd": 513.58,
- "trad_status": "2 of 20 established memecoins above their 20-day average (best: SAPLING +49%, STONK +6%)"
+ "liquid_usd": 513.76,
+ "trad_status": "SOL -7.2%, BTC -4.5%, ETH -7.4%, JUP -17.6%"
 }

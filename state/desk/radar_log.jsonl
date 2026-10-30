@@ -83,3 +83,9 @@
 {"ts": 1793329265.4585314, "kind": "event", "src": "cointelegraph", "title": "Live updates: Binance says $6.3B hack possibly involved a compromised engineer’s laptop", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
 {"ts": 1793329865.3013551, "kind": "event", "src": "cointelegraph", "title": "Live updates: Binance says $6.3B hack involved compromised engineer’s laptop", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
 {"ts": 1793330720.497043, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: Elon Musk says super intelligence AI agents will eventually hack financial systems to obtain money for themselves, not humans. @WatcherGuru", "cls": {"types": ["hack"], "dir": -1, "sev": 1, "by": "kw"}}
+{"ts": 1793331725.460921, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.749, "shock_px": 97.686, "ch1h": 0.014129830924204168, "ch4h": 0.005320199091825462}
+{"ts": 1793331725.4611075, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.749, "shock_px": 97.686, "ch1h": 0.014129830924204168, "ch4h": 0.005320199091825462}
+{"ts": 1793331785.6249697, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.857, "shock_px": 97.686, "ch1h": 0.015261894529407405, "ch4h": 0.006442428587757343}
+{"ts": 1793331785.6251264, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.857, "shock_px": 97.686, "ch1h": 0.015261894529407405, "ch4h": 0.006442428587757343}
+{"ts": 1793331845.5992951, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.89, "shock_px": 97.686, "ch1h": 0.01560780285321961, "ch4h": 0.006785332044847658}
+{"ts": 1793331845.5995288, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.89, "shock_px": 97.686, "ch1h": 0.01560780285321961, "ch4h": 0.006785332044847658}

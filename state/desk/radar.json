@@ -283,21 +283,21 @@
    ]
   }
  ],
- "ts": 1793331576.1851797,
- "bear_score": 60,
+ "ts": 1793331845.5985584,
+ "bear_score": 58,
  "bull_score": 2,
  "price": {
   "SOL": {
-   "px": 96.779,
-   "ch15m": 0.008692480066704977,
-   "ch1h": 0.01525308156307359,
-   "ch4h": 0.004410818440334641
+   "px": 96.89,
+   "ch15m": 0.007706788422136457,
+   "ch1h": 0.01560780285321961,
+   "ch4h": 0.006785332044847658
   },
   "BTC": {
    "px": 78041.0,
-   "ch15m": 0.0069806451612903775,
-   "ch1h": 0.0069806451612903775,
-   "ch4h": -0.006530539501489407
+   "ch15m": 0.005475675118532308,
+   "ch1h": 0.006435222202161306,
+   "ch4h": -0.004083664067584647
   }
  },
  "mode": "live",
@@ -309,7 +309,7 @@
  "theses": {},
  "llm": {
   "key": true,
-  "last_error": "AttributeError: 'ThinkingBlock' object has no attribute 'text'"
+  "last_error": null
  },
  "sources": [
   "bitcoinmagazine",
@@ -321,5 +321,6 @@
   "tg:binance_announcements",
   "tg:wublockchainenglish",
   "theblock"
- ]
+ ],
+ "_skip_note": "stale:book"
 }
