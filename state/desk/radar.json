@@ -12,7 +12,7 @@
   ],
   "confirmed": true,
   "why": "bearish news score 16 in 90 min; SOL 1h -1.7%, 4h -1.8%; BTC 1h -0.6%",
-  "last_conf_ts": 1793368761.471192
+  "last_conf_ts": 1793369046.472043
  },
  "events": [
   {
@@ -148,34 +148,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793354540.322614,
-   "src": "cointelegraph",
-   "title": "THORChain’s RUNE jumps 13% after Binance’s record $6.3B hack",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793368761.471192,
- "bear_score": 10,
+ "ts": 1793369046.472043,
+ "bear_score": 7,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.212,
-   "ch15m": 0.0010513920430650359,
-   "ch1h": -0.016740160895562406,
-   "ch4h": -0.01643544105038064
+   "px": 94.847,
+   "ch15m": 9.489866930967317e-05,
+   "ch1h": -0.019192786159684894,
+   "ch4h": -0.016273232658479908
   },
   "BTC": {
-   "px": 77075.0,
-   "ch15m": 0.001754613984923381,
-   "ch1h": -0.004687621064593639,
-   "ch4h": -0.007468933101538844
+   "px": 76897.0,
+   "ch15m": 0.0016934359816067612,
+   "ch1h": -0.0052134540750323755,
+   "ch4h": -0.007793447826479616
   }
  },
  "mode": "live",
@@ -273,10 +262,10 @@
     "trail_arm": 0.02
    }
   },
-  "mark": 95.212,
-  "ret_px": -0.0024,
-  "pnl_usd_est": -0.1,
-  "age_h": 0.23,
+  "mark": 94.847,
+  "ret_px": 0.0014,
+  "pnl_usd_est": 0.06,
+  "age_h": 0.31,
   "stop_px": 97.35,
   "rules": {
    "stop_up": 0.025,
@@ -381,10 +370,10 @@
      "trail_arm": 0.02
     }
    },
-   "mark": 95.212,
-   "ret_px": -0.0024,
-   "pnl_usd_est": -0.1,
-   "age_h": 0.23,
+   "mark": 94.847,
+   "ret_px": 0.0014,
+   "pnl_usd_est": 0.06,
+   "age_h": 0.31,
    "stop_px": 97.35,
    "rules": {
     "stop_up": 0.025,
@@ -488,10 +477,10 @@
      "trail_arm": 0.02
     }
    },
-   "mark": 95.212,
-   "ret_px": -0.0039,
-   "pnl_usd_est": -0.64,
-   "age_h": 0.22,
+   "mark": 94.847,
+   "ret_px": -0.0001,
+   "pnl_usd_est": -0.01,
+   "age_h": 0.3,
    "stop_px": 97.21,
    "rules": {
     "stop_up": 0.025,
