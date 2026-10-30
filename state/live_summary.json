@@ -1,5 +1,5 @@
 {
- "ts": 1793352001.3119268,
+ "ts": 1793352301.3548086,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -45,9 +45,9 @@
  "wallet_sol": 0.1009,
  "sol_usd": 96.94034454760548,
  "stream_connected": true,
- "stream_msgs": 4020,
- "tokens_seen": 3926,
- "tokens_tracked": 46,
+ "stream_msgs": 4053,
+ "tokens_seen": 3959,
+ "tokens_tracked": 54,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -56,15 +56,15 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 1754768,
+  "notifications": 1760370,
   "parsed": 135,
-  "skipped": 1753885,
+  "skipped": 1759482,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
-   "01:53:28 Connection to remote host was lost.",
    "02:21:23 Connection to remote host was lost.",
-   "08:06:45 Connection to remote host was lost."
+   "08:06:45 Connection to remote host was lost.",
+   "09:22:51 Connection to remote host was lost."
   ]
  },
  "follow_buys_seen": 17,
@@ -87,7 +87,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 4,
-  "create": 4016
+  "create": 4049
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
