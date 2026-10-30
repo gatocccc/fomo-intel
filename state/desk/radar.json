@@ -134,46 +134,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793366225.5122616,
-   "src": "cointelegraph",
-   "title": "Binance working with FBI to recover assets following $6.3B hack",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793366142.641729,
-   "src": "theblock",
-   "title": "Binance says it has $6.34 billion ready to cover hack losses",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "exchange_risk",
-    "hack"
-   ]
   }
  ],
- "ts": 1793380477.2054734,
+ "ts": 1793380762.4415233,
  "bear_score": 17,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.821,
-   "ch15m": -0.00070609560745305,
-   "ch1h": -0.00284987170319273,
-   "ch4h": -0.016981308120548655
+   "px": 94.99,
+   "ch15m": 0.0007163776574450331,
+   "ch1h": -0.002855283323885738,
+   "ch4h": -0.012916567081978192
   },
   "BTC": {
-   "px": 77217.0,
-   "ch15m": -0.0012287872516556497,
-   "ch1h": -0.004486559659640288,
-   "ch4h": -0.001138348101675235
+   "px": 77252.0,
+   "ch15m": -0.001266968325791873,
+   "ch1h": -0.004638457970416954,
+   "ch4h": -0.0001553116587285075
   }
  },
  "mode": "live",
@@ -300,10 +277,10 @@
      "trail_arm": 0.02
     }
    },
-   "mark": 94.821,
-   "ret_px": 0.0002,
-   "pnl_usd_est": 0.03,
-   "age_h": 3.48,
+   "mark": 94.99,
+   "ret_px": -0.0016,
+   "pnl_usd_est": -0.26,
+   "age_h": 3.56,
    "stop_px": 97.21,
    "rules": {
     "stop_up": 0.025,
