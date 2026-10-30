@@ -1,5 +1,3 @@
-{"ts": 1793348718.1361089, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.516, "shock_px": 97.686, "ch1h": -0.0044816497371241715, "ch4h": 0.0026321200904790842}
-{"ts": 1793348718.136199, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.516, "shock_px": 97.686, "ch1h": -0.0044816497371241715, "ch4h": 0.0026321200904790842}
 {"ts": 1793348793.2007713, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.243, "shock_px": 97.686, "ch1h": -0.007268643764994143, "ch4h": -0.0001747892247584426}
 {"ts": 1793348793.2009482, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.243, "shock_px": 97.686, "ch1h": -0.007268643764994143, "ch4h": -0.0001747892247584426}
 {"ts": 1793348838.2420297, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.265, "shock_px": 97.686, "ch1h": -0.007044050839671301, "ch4h": 5.1408595517221656e-05}
@@ -198,3 +196,5 @@
 {"ts": 1793369645.7754138, "kind": "event", "src": "bitcoinmagazine", "title": "Blockchain Firms Link North Korea to $6.3 Billion Binance Hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793369885.6137445, "kind": "event", "src": "decrypt", "title": "What is EIP-7702? The Ethereum Upgrade Behind the $6.4B Binance Hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793370620.894739, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: 🇰🇵 North Korea s 6,300,000,000 Binance crypto hack is the largest heist in human history. @WatcherGuru", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
+{"ts": 1793371026.4228327, "kind": "breakeven_armed", "leg": "lab", "best_ret": 0.0107}
+{"ts": 1793371160.5934377, "kind": "event", "src": "bitcoinmagazine", "title": "SEC Charges Two Companies in $130 Million Crypto Trading Scheme", "cls": {"types": ["regulatory"], "dir": -1, "sev": 1, "by": "kw+llm", "confirmed": true}}
