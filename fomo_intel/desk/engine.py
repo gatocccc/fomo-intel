@@ -335,6 +335,29 @@ class Desk:
                 self.sell(m, 1.0, "piso de patrimonio")
             self.journal(T("Mesa detenida", "Plan stopped"), T(f"El patrimonio cayó a US${eq:.2f}, debajo del piso de US${self.cfg['floor_usd']:.0f}. Vendí todo y no opero más sin tu OK.", f"Balance fell to ${eq:.2f}, below the ${self.cfg['floor_usd']:.0f} floor. Everything was sold and the plan is stopped."), kind=T("sistema", "system"))
 
+    def perps_positions(self):
+        """Cortos abiertos por el radar (fomo_intel/desk/radar.py) en la billetera de ESTA mesa, como posiciones para la página y el cerebro.
+        El colateral ya está contado en la posición de USDC (salió de la billetera sin que el motor lo sepa): acá se muestra el corto con
+        colateral + resultado y se descuenta el colateral del USDC. `brain: False` para que el cerebro no intente venderlo ni moverle el stop."""
+        r = jload(Path("state/desk/radar.json"), {}) or {}
+        out = []
+        for leg, p in (r.get("positions") or {}).items():
+            if not p or p.get("mode") != "live":
+                continue
+            plan = p.get("plan") or {"lab": "lab", "book": "lloyd"}.get(leg)
+            if (plan or "") != (NAME or ""):
+                continue
+            coll = float(p.get("collateral_usd") or 0); size = float(p.get("size_usd") or 0); ret = float(p.get("ret_px") or 0)
+            pnl = round(ret * size, 2)
+            out.append({"mint": f"perps:{p.get('pubkey') or leg}", "symbol": f"SOL short {p.get('lev', 2):g}x", "opened_ts": p["ts"], "entry_usd": p["entry"],
+                        "last_usd": p.get("mark") or p["entry"], "peak_usd": p["entry"] * (1 - float(p.get("best_ret") or 0)), "tokens": 0, "tokens_initial": 0,
+                        "sol_in": round(coll / self.sol_usd, 4), "sol_out": 0.0, "stop": 0.035, "trail": 0.02, "trail_after": 1.04, "tp": [], "tp_done": [],
+                        "thesis": T(f"Corto de SOL por shock de noticias (radar). Colateral US${coll:.0f} a {p.get('lev', 2):g}x; stop si SOL sube 3,5%; trailing 2% desde el mejor punto una vez que gana 4%.",
+                                    f"News-shock SOL short (radar). ${coll:.0f} collateral at {p.get('lev', 2):g}x; stop if SOL rises 3.5%; trails 2% from its best once up 4%."),
+                        "id": f"radar-{leg}", "sleeve": "majors", "reason": "news_shock_short", "brain": False, "perps": True,
+                        "mult": round(1 + ret * float(p.get("lev") or 2), 3), "value_usd": round(coll + pnl, 2), "pnl_usd": pnl, "collateral_usd": coll, "side": "short"})
+        return out
+
     def publish(self, eq, pos_usd):
         c = self.cfg; now = time.time()
         if not c["start_ts"]:
@@ -347,12 +370,17 @@ class Desk:
             return
         hist = tail("equity.jsonl", 3000)
         closed = tail("closed.jsonl", 200)
+        perps = self.perps_positions()
+        perps_pnl = sum(x["pnl_usd"] for x in perps); perps_coll = sum(x["collateral_usd"] for x in perps)
+        eq = eq + perps_pnl; pos_usd = pos_usd + perps_pnl
         s = {"now": now, "start_ts": c["start_ts"], "start_usd": c["start_usd"], "start_sol": c["start_sol"], "goal_usd": round(c["start_usd"] * c["goal_mult"], 2),
              "days": c["days"], "day": int((now - c["start_ts"]) // 86400) + 1, "equity_usd": round(eq, 2), "equity_sol": round(eq / self.sol_usd, 4),
              "cash_sol": round(self.wallet_sol, 4), "positions_usd": round(pos_usd, 2), "sol_usd": round(self.sol_usd, 2),
              "mult": round(eq / c["start_usd"], 3) if c["start_usd"] else None, "halt": (ST_DIR / "HALT").exists(), "pause": (ST_DIR / "PAUSE").exists(),
              "positions": [{k: v for k, v in p.items() if not k.startswith("_")} | {"mult": round((p.get("last_usd") or p["entry_usd"]) / p["entry_usd"], 3),
-                            "value_usd": round(p["tokens"] * (p.get("last_usd") or p["entry_usd"]), 2)} for p in self.pos.values()],
+                            "value_usd": round(p["tokens"] * (p.get("last_usd") or p["entry_usd"]) - (perps_coll if p["mint"] == "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v" else 0), 2)}
+                           for p in self.pos.values()] + perps,
+             "perps_pnl_usd": round(perps_pnl, 2),
              "equity": [[round(h["ts"]), h["usd"]] for h in hist],
              "closed": closed[::-1][:50], "trades": tail("trades.jsonl", 60)[::-1], "journal": tail("journal.jsonl", 200)[::-1],
              "wins": sum(1 for r in closed if (r.get("pnl_usd") or 0) > 0), "n_closed": len(closed), "realized_usd": round(sum(r.get("pnl_usd") or 0 for r in closed), 2)}

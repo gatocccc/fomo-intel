@@ -285,6 +285,8 @@ class Stool:
         r = (usd / book if book > 0 else 0.0) if usd else self.ratio()
         res = []
         for bp in self.svc.book.get("positions") or []:
+            if bp.get("perps"):
+                continue      # cortos en perps del libro: no se replican en los stools (todavía)
             val = float(bp.get("value_usd") or 0) * r
             if val < self.min_leg():
                 continue

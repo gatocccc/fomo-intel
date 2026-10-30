@@ -379,7 +379,7 @@ class Radar:
 
     def open(self, leg, coll, sol, sh):
         R = RULES; now = time.time()
-        rec = {"ts": now, "leg": leg["name"], "symbol": "SOL", "side": "short", "entry": sol, "collateral_usd": round(coll, 2), "lev": R["lev"], "size_usd": round(coll * R["lev"], 2),
+        rec = {"ts": now, "leg": leg["name"], "plan": leg["plan"], "symbol": "SOL", "side": "short", "entry": sol, "collateral_usd": round(coll, 2), "lev": R["lev"], "size_usd": round(coll * R["lev"], 2),
                "mode": self.mode, "why": sh["why"] + (" + confirmed major news" if sh.get("confirmed") else ""), "headlines": sh.get("headlines", [])[:3], "pubkey": None, "sig": None, "best_ret": 0.0}
         if self.mode == "live":
             try:
