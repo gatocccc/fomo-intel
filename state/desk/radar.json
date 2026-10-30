@@ -2,6 +2,28 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793395401.1317866,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: 🇰🇵 North Korea says international sanctions do not work. The statement comes just one day after North Korea s 6.3 billion Binance crypto hack, the largest heist in human history. @WatcherGuru",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
+   "ts": 1793395266.1100624,
+   "src": "theblock",
+   "title": "Inside the largest crypto hack on record: How attackers breached Binance for $6.3 billion",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793395041.008766,
    "src": "decrypt",
    "title": "Binance Hack Shows Why Offshore Exchanges Need US Oversight, CFTC Chair Says",
@@ -80,21 +102,21 @@
    ]
   }
  ],
- "ts": 1793395146.6698306,
- "bear_score": 8,
+ "ts": 1793395447.1187232,
+ "bear_score": 13,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.266,
-   "ch15m": -6.297757998152687e-05,
-   "ch1h": 0.0036557485856363314,
-   "ch4h": 0.003222409435551965
+   "px": 95.316,
+   "ch15m": 0.002819627977443062,
+   "ch1h": 0.00524156550902255,
+   "ch4h": 0.004066154008216527
   },
   "BTC": {
-   "px": 76798.0,
-   "ch15m": -0.0015341411409849348,
-   "ch1h": -0.0022864863460388962,
-   "ch4h": -0.005670930654099071
+   "px": 76856.0,
+   "ch15m": 0.003093227528419895,
+   "ch1h": 0.0002602946535477102,
+   "ch4h": -0.005743855109961227
   }
  },
  "mode": "live",
