@@ -1,5 +1,5 @@
 {
- "ts": 1793333401.5324829,
+ "ts": 1793333701.8804085,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,22 +32,22 @@
  ],
  "rejections": {
   "day": "2026-10-30",
-  "seen": 25,
+  "seen": 31,
   "bought": 0,
   "by_reason": {
+   "freno": 16,
    "en_banco": 13,
-   "freno": 10,
    "mcap_alto": 2
   },
-  "note": ""
+  "note": "rechaza todo: revisar si el filtro est\u00e1 muy cerrado"
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.1009,
- "sol_usd": 96.6235110811371,
+ "sol_usd": 96.87691833863789,
  "stream_connected": true,
- "stream_msgs": 2125,
- "tokens_seen": 2089,
- "tokens_tracked": 73,
+ "stream_msgs": 2158,
+ "tokens_seen": 2121,
+ "tokens_tracked": 53,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -56,9 +56,9 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 1272640,
-  "parsed": 119,
-  "skipped": 1272145,
+  "notifications": 1300584,
+  "parsed": 134,
+  "skipped": 1300013,
   "fast_creates": 0,
   "subs": 1,
   "errors": [
@@ -67,7 +67,7 @@
    "02:21:23 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 15,
+ "follow_buys_seen": 17,
  "guard": {
   "alerts": [
    "00:27:43 fuente de se\u00f1ales recuperada tras 2 s"
@@ -79,12 +79,12 @@
   "source_down_s": 0,
   "exec_fails_recent": 0
  },
- "st_requests": 51,
+ "st_requests": 52,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 2,
-  "create": 2123
+  "create": 2156
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
