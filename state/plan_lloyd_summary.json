@@ -1,17 +1,17 @@
 {
- "now": 1793376035.017674,
+ "now": 1793376577.778159,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
- "day": 2,
- "equity_usd": 542.01,
- "equity_sol": 5.7211,
+ "day": 3,
+ "equity_usd": 541.56,
+ "equity_sol": 5.7079,
  "cash_sol": 0.0826,
- "positions_usd": 534.19,
- "sol_usd": 94.74,
- "mult": 0.99,
+ "positions_usd": 533.73,
+ "sol_usd": 94.88,
+ "mult": 0.989,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9997673925745848,
+   "last_usd": 0.9997466682010866,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 435.6
+   "value_usd": 435.59
   },
   {
    "mint": "perps:7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "symbol": "SOL short 2x",
    "opened_ts": 1793367953.6543465,
    "entry_usd": 94.84,
-   "last_usd": 94.77,
+   "last_usd": 95.01,
    "peak_usd": 93.966,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.858,
+   "sol_in": 0.8568,
    "sol_out": 0.0,
    "stop": 0.035,
    "trail": 0.02,
@@ -61,9 +61,9 @@
    "brain": false,
    "perps": true,
    "system": "News-shock short",
-   "mult": 1.001,
-   "value_usd": 81.4,
-   "pnl_usd": 0.11,
+   "mult": 0.996,
+   "value_usd": 81.0,
+   "pnl_usd": -0.29,
    "collateral_usd": 81.29,
    "side": "short"
   },
@@ -72,11 +72,11 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2225.35,
+   "last_usd": 2228.95,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1812,
+   "sol_in": 0.181,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -91,14 +91,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 1.001,
-   "value_usd": 17.19,
-   "pnl_usd": 0.02,
+   "mult": 0.998,
+   "value_usd": 17.14,
+   "pnl_usd": -0.03,
    "collateral_usd": 17.17,
    "side": "short"
   }
  ],
- "perps_pnl_usd": 0.13,
+ "perps_pnl_usd": -0.32,
  "equity": [
   [
    1793203600,
@@ -2399,6 +2399,14 @@
   [
    1793375944,
    541.91
+  ],
+  [
+   1793376247,
+   542.12
+  ],
+  [
+   1793376305,
+   542.33
   ]
  ],
  "closed": [
@@ -3187,6 +3195,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793376319.8163877,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -2.2%): no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-1605"
+  },
   {
    "ts": 1793375959.0954678,
    "title": "Automatic brain: status",
@@ -4578,13 +4593,6 @@
    "text": "set 4kjruq: ajustó GTA6: stop=-0.833",
    "kind": "execution",
    "id": "auto-lloyd-20261029-0938"
-  },
-  {
-   "ts": 1793266697.054837,
-   "title": "Automatic brain: stops raised",
-   "text": "GTA6: peaked at 2.44x; stop raised to 1.83x (was 1.67x).",
-   "kind": "decisión",
-   "id": "auto-lloyd-20261029-0938"
   }
  ],
  "wins": 1,
@@ -4594,7 +4602,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793375944.2425046,
+  "last_run": 1793376305.434968,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4604,11 +4612,11 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793375944.2453725,
-   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -1.7%): no new memecoins until it improves."
+   "ts": 1793376305.4367774,
+   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -2.2%): no new memecoins until it improves."
   },
   "trad_status": "SOL -8.5%, BTC -4.7%, ETH -6.7%, JUP -15.8%",
-  "sol_ch24h": -7.6,
-  "sol_vs_ma20": -0.09
+  "sol_ch24h": -7.1,
+  "sol_vs_ma20": -0.0915
  }
 }
