@@ -1,17 +1,17 @@
 {
- "now": 1793379295.1999123,
+ "now": 1793379598.5149684,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.94,
- "equity_sol": 5.7185,
+ "equity_usd": 541.75,
+ "equity_sol": 5.719,
  "cash_sol": 0.0826,
- "positions_usd": 534.11,
- "sol_usd": 94.77,
- "mult": 0.99,
+ "positions_usd": 533.93,
+ "sol_usd": 94.73,
+ "mult": 0.989,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9997018761914852,
+   "last_usd": 0.9997866901054353,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 435.56
+   "value_usd": 435.61
   },
   {
    "mint": "perps:7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "symbol": "SOL short 2x",
    "opened_ts": 1793367953.6543465,
    "entry_usd": 94.84,
-   "last_usd": 94.795,
+   "last_usd": 94.907,
    "peak_usd": 93.966,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.8578,
+   "sol_in": 0.8581,
    "sol_out": 0.0,
    "stop": 0.035,
    "trail": 0.02,
@@ -61,9 +61,9 @@
    "brain": false,
    "perps": true,
    "system": "News-shock short",
-   "mult": 1.001,
-   "value_usd": 81.37,
-   "pnl_usd": 0.08,
+   "mult": 0.999,
+   "value_usd": 81.18,
+   "pnl_usd": -0.11,
    "collateral_usd": 81.29,
    "side": "short"
   },
@@ -72,11 +72,11 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2225.75,
+   "last_usd": 2229.05,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1812,
+   "sol_in": 0.1813,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -91,14 +91,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 1.001,
-   "value_usd": 17.18,
-   "pnl_usd": 0.01,
+   "mult": 0.998,
+   "value_usd": 17.14,
+   "pnl_usd": -0.03,
    "collateral_usd": 17.17,
    "side": "short"
   }
  ],
- "perps_pnl_usd": 0.09,
+ "perps_pnl_usd": -0.14,
  "equity": [
   [
    1793203600,
@@ -2447,6 +2447,10 @@
   [
    1793379082,
    542.03
+  ],
+  [
+   1793379386,
+   541.71
   ]
  ],
  "closed": [
@@ -3235,6 +3239,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793379370.7531524,
+   "title": "Automatic brain: status",
+   "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -1.9%): no new memecoins until it improves.",
+   "kind": "decisión",
+   "id": "auto-lloyd-note-20261030-1656"
+  },
   {
    "ts": 1793378779.0364664,
    "title": "Automatic brain: status",
@@ -4627,13 +4638,6 @@
    "text": "sell 4kjruq: sold 25% of GTA6 (trim: single-name concentration (27% of the book) in a defensive market) for 0.3753 SOL",
    "kind": "execution",
    "id": "lloyd-2026-10-29-02"
-  },
-  {
-   "ts": 1793279226.3576682,
-   "title": "Taking a quarter of GTA6 off the table",
-   "text": "GTA6 is the book's best trade: 2.3x since we bought it, and the story is stronger than ever (Take-Two confirmed the November 19 release this week and the marketing campaign is about to start). But it has grown to 27% of the whole book, while the market is defensive: SOL dropped under $100, BTC and SOL sit below their 20-day averages and only 2 of 18 large memecoins are above theirs. One memecoin should not decide a quarter of the book, and a single delay rumour could knock it down 30% in minutes.\n\nSo Lloyd sells 25% now (roughly $38 of profit goes back to Cash) and lets the other 75% keep running with its automatic stop, which already locks in about 1.8x. The Picks pocket moves back toward its 20% target.\n\nAlso checked this morning: STONK, SPX and DOPE pass the anti-rug check (STONK's only wallet group was funded by a Binance hot wallet, which does not count). No new buys: the best candidate in today's scan had already risen more than 13x in three days, and buying the top is not an edge.",
-   "kind": "decisión",
-   "id": "lloyd-2026-10-29-02"
   }
  ],
  "wins": 1,
@@ -4643,7 +4647,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793378765.238873,
+  "last_run": 1793379363.0800476,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -4653,7 +4657,7 @@
    "mode": "live"
   },
   "last_note": {
-   "ts": 1793378765.2420816,
+   "ts": 1793379363.0834239,
    "text": "[Picks] Idle cash (100%), but the news radar still sees a bearish shock: Binance hit by $6.3B hack, the largest in cryptocurrency history (SOL 4h -1.9%): no new memecoins until it improves."
   },
   "trad_status": "SOL -8.7%, BTC -5.2%, ETH -7.2%, JUP -16.4%",

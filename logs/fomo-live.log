@@ -1,12 +1,3 @@
-Oct 30 13:21:12 simplai-prod python3[2308353]: 2026-10-30 13:21:12,299 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:21:12 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
-Oct 30 13:21:24 simplai-prod python3[2308353]: 2026-10-30 13:21:24,656 INFO live: latido: stream=True tokens_vistos=689 seguidos=46 candidatos=0 abiertas=0 cerradas=1 st_requests=19 SOL=$96
-Oct 30 13:22:12 simplai-prod python3[2308353]: 2026-10-30 13:22:12,340 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:22:12 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
-Oct 30 13:23:12 simplai-prod python3[2308353]: 2026-10-30 13:23:12,408 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:23:12 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
-Oct 30 13:24:12 simplai-prod python3[2308353]: 2026-10-30 13:24:12,476 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:24:12 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
-Oct 30 13:25:12 simplai-prod python3[2308353]: 2026-10-30 13:25:12,526 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:25:12 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
-Oct 30 13:26:12 simplai-prod python3[2308353]: 2026-10-30 13:26:12,593 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:26:12 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
-Oct 30 13:26:39 simplai-prod python3[2308353]: 2026-10-30 13:26:39,655 INFO live: latido: stream=True tokens_vistos=723 seguidos=46 candidatos=0 abiertas=0 cerradas=1 st_requests=20 SOL=$96
-Oct 30 13:27:12 simplai-prod python3[2308353]: 2026-10-30 13:27:12,669 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:27:12 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
 Oct 30 13:28:12 simplai-prod python3[2308353]: 2026-10-30 13:28:12,733 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:28:12 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
 Oct 30 13:29:12 simplai-prod python3[2308353]: 2026-10-30 13:29:12,777 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:29:12 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
 Oct 30 13:30:12 simplai-prod python3[2308353]: 2026-10-30 13:30:12,850 WARNING live.helius: helius caído: Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 13:30:12 GMT', 'content-type': 'application/json', 'content-length': '71', 'co; reconecto en 60s
@@ -298,3 +289,12 @@ Oct 30 16:53:49 simplai-prod python3[2400295]: 2026-10-30 16:53:49,244 INFO live
 Oct 30 16:53:50 simplai-prod python3[2400295]: 2026-10-30 16:53:50,092 INFO live.helius: HELIUS 4vw54B sell 8Y2Wux52 3.3111 SOL @ 7.180e-08 (lat 0.8s)
 Oct 30 16:54:32 simplai-prod python3[2400295]: 2026-10-30 16:54:32,993 INFO live.helius: HELIUS 4vw54B buy 7eQagAYS 2.0115 SOL @ 1.008e-07 (lat 0.9s)
 Oct 30 16:55:03 simplai-prod python3[2400295]: 2026-10-30 16:55:03,287 INFO live.helius: HELIUS 4vw54B buy 7eQagAYS 0.0350 SOL @ 1.749e-07 (lat 0.9s)
+Oct 30 16:55:09 simplai-prod python3[2400295]: 2026-10-30 16:55:09,287 INFO live: latido: stream=True tokens_vistos=636 seguidos=101 candidatos=0 abiertas=0 cerradas=1 st_requests=10 SOL=$95
+Oct 30 16:55:38 simplai-prod python3[2400295]: 2026-10-30 16:55:38,506 INFO live.helius: HELIUS 4vw54B buy 7eQagAYS 0.2600 SOL @ 1.667e-07 (lat 0.9s)
+Oct 30 16:55:52 simplai-prod python3[2400295]: 2026-10-30 16:55:52,605 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 7eQagAYS 0.000 SOL
+Oct 30 16:55:52 simplai-prod python3[2400295]: 2026-10-30 16:55:52,605 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 31KrYUDz 2718099127.614 SOL
+Oct 30 16:55:53 simplai-prod python3[2400295]: 2026-10-30 16:55:53,473 INFO live.helius: HELIUS 4vw54B sell 7eQagAYS 2.4720 SOL @ 1.138e-07 (lat 0.9s)
+Oct 30 16:56:02 simplai-prod python3[2400295]: 2026-10-30 16:56:02,589 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 8Y2Wux52 0.000 SOL
+Oct 30 16:58:22 simplai-prod python3[2400295]: 2026-10-30 16:58:22,147 INFO live.helius: HELIUS 4vw54B buy F6vEzBVT 2.5131 SOL @ 4.291e-08 (lat 0.9s)
+Oct 30 16:58:47 simplai-prod python3[2400295]: 2026-10-30 16:58:47,334 INFO live.helius: HELIUS 4vw54B buy F6vEzBVT 0.2600 SOL @ 6.569e-08 (lat 1.0s)
+Oct 30 16:59:59 simplai-prod python3[2400295]: 2026-10-30 16:59:59,792 INFO live.helius: HELIUS 4vw54B buy F6vEzBVT 0.0350 SOL @ 8.817e-08 (lat 0.9s)
