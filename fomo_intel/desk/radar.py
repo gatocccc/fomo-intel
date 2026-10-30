@@ -229,6 +229,19 @@ def _msg_text(msg):
     return txt
 
 
+def _json_reply(txt):
+    """JSON de la respuesta del modelo. 30/10 06:40 (autocrítica): radar.json mostraba "ValueError: substring not found" — a veces el
+    modelo contesta sin llaves (texto suelto o JSON con comillas raras) y txt.index("{") explotaba. Ahora busca el primer objeto
+    JSON válido; si no hay, el error guarda un pedazo de la respuesta para poder diagnosticarlo desde la sesión."""
+    t = re.sub(r"```(?:json)?", "", txt)
+    for m in re.finditer(r"\{[^{}]*\}", t, re.S):
+        try:
+            return json.loads(m.group(0))
+        except Exception:  # noqa: BLE001
+            continue
+    raise ValueError("model reply without JSON: " + t.strip().replace("\n", " ")[:120])
+
+
 def classify_llm(title):
     """Confirmación con un modelo rápido (opcional). Devuelve None si no hay clave o falla."""
     global _llm
@@ -245,7 +258,7 @@ def classify_llm(title):
                 "\"dir\": -1 bearish for SOL/BTC in the next hours, 0 neutral, 1 bullish, \"sev\": 1 minor, 2 significant, 3 major/confirmed, "
                 "\"confirmed\": true if the headline states a confirmed event rather than a rumour or allegation}. Headline: " + title[:300])}])
         txt = _msg_text(msg)
-        j = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
+        j = _json_reply(txt)
         if j.get("type") == "noise":
             return {"types": ["noise"], "dir": 0, "sev": 0, "by": "llm"}
         return {"types": [j.get("type")], "dir": int(j.get("dir", 0)), "sev": int(j.get("sev", 1)), "confirmed": bool(j.get("confirmed")), "by": "llm"}
@@ -306,10 +319,12 @@ def thesis_llm(thesis, title):
                 "\nReply JSON only: {\"verdict\": one of [refuted (the event did not happen / was denied), backstop (event is real but losses are covered, "
                 "funds safe, withdrawals resumed: rebound risk), confirmed (official confirmation or escalation of the event), none (unrelated or no new fact)], \"fact\": short reason}")}])
         txt = _msg_text(msg)
-        j = json.loads(txt[txt.index("{"): txt.rindex("}") + 1])
+        j = _json_reply(txt)
         v = j.get("verdict")
         return {"verdict": v if v in ("refuted", "backstop", "confirmed") else None, "fact": str(j.get("fact", ""))[:160], "by": "llm"}
     except Exception as e:  # noqa: BLE001
+        global _llm_err
+        _llm_err = f"thesis {type(e).__name__}: {str(e)[:150]}"
         log.warning("tesis LLM falló: %s", str(e)[:160]); return None
 
 

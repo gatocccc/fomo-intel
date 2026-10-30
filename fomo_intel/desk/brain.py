@@ -457,6 +457,11 @@ class Brain:
                           f"están arriba del suyo: mercado bajista")
                     en = (f"SOL and BTC are below their 20-day averages and only {rg.get('breadth_above')} of {rg.get('breadth_total')} large memecoins "
                           f"are above theirs: bear market")
+                elif rg.get("why") == "news":   # 30/10: antes decía "SOL cayó fuerte (24 h -1,8%, 4 h +3%)" con SOL rebotando: el motivo era el radar
+                    heads = (jload(RADAR, {}).get("shock") or {}).get("headlines") or []
+                    h0 = (": " + heads[0][:90]) if heads else ""
+                    es = f"el radar de noticias sigue viendo un shock bajista{h0} (SOL 4 h {rg.get('sol_ch4h')}%)"
+                    en = f"the news radar still sees a bearish shock{h0} (SOL 4h {rg.get('sol_ch4h')}%)"
                 else:
                     es = f"SOL cayó fuerte (24 h {rg.get('sol_ch24h')}%, 4 h {rg.get('sol_ch4h')}%)"
                     en = f"SOL fell hard (24h {rg.get('sol_ch24h')}%, 4h {rg.get('sol_ch4h')}%)"
