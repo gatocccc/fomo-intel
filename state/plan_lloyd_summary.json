@@ -1,17 +1,17 @@
 {
- "now": 1793369684.2187278,
+ "now": 1793369992.4797144,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 2,
- "equity_usd": 543.19,
- "equity_sol": 5.7602,
+ "equity_usd": 542.85,
+ "equity_sol": 5.751,
  "cash_sol": 0.0826,
- "positions_usd": 535.4,
- "sol_usd": 94.3,
- "mult": 0.992,
+ "positions_usd": 535.05,
+ "sol_usd": 94.39,
+ "mult": 0.991,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9995476833776815,
+   "last_usd": 0.9996112591301388,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 452.65
+   "value_usd": 452.68
   },
   {
    "mint": "perps:7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "symbol": "SOL short 2x",
    "opened_ts": 1793367953.6543465,
    "entry_usd": 94.84,
-   "last_usd": 94.462,
-   "peak_usd": 94.462,
+   "last_usd": 94.562,
+   "peak_usd": 94.312,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.862,
+   "sol_in": 0.8612,
    "sol_out": 0.0,
    "stop": 0.035,
    "trail": 0.02,
@@ -60,14 +60,14 @@
    "reason": "news_shock_short",
    "brain": false,
    "perps": true,
-   "mult": 1.008,
-   "value_usd": 81.94,
-   "pnl_usd": 0.65,
+   "mult": 1.006,
+   "value_usd": 81.76,
+   "pnl_usd": 0.47,
    "collateral_usd": 81.29,
    "side": "short"
   }
  ],
- "perps_pnl_usd": 0.65,
+ "perps_pnl_usd": 0.47,
  "equity": [
   [
    1793203600,
@@ -2284,6 +2284,10 @@
   [
    1793369561,
    542.32
+  ],
+  [
+   1793369868,
+   542.81
   ]
  ],
  "closed": [
