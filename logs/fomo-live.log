@@ -1,5 +1,3 @@
-Oct 30 01:08:34 simplai-prod python3[2052574]: 2026-10-30 01:08:34,645 INFO live.helius: HELIUS 4vw54B buy DQQQ6epo 5.0100 SOL @ 2.052e-07 (lat 0.9s)
-Oct 30 01:08:49 simplai-prod python3[2052574]: 2026-10-30 01:08:49,000 INFO live.helius: HELIUS 4vw54B buy DQQQ6epo 0.0350 SOL @ 3.787e-07 (lat 0.9s)
 Oct 30 01:09:24 simplai-prod python3[2052574]: 2026-10-30 01:09:24,324 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… DQQQ6epo 4.370 SOL
 Oct 30 01:09:25 simplai-prod python3[2052574]: 2026-10-30 01:09:25,212 INFO live.helius: HELIUS 4vw54B sell DQQQ6epo 4.2670 SOL @ 1.741e-07 (lat 0.9s)
 Oct 30 01:11:13 simplai-prod python3[2052574]: 2026-10-30 01:11:13,690 INFO live: latido: stream=True tokens_vistos=697 seguidos=45 candidatos=0 abiertas=0 cerradas=1 st_requests=16 SOL=$94
@@ -298,3 +296,5 @@ Oct 30 07:43:42 simplai-prod python3[2052574]: 2026-10-30 07:43:42,131 INFO live
 Oct 30 07:46:44 simplai-prod python3[2052574]: 2026-10-30 07:46:44,808 INFO live: latido: stream=True tokens_vistos=3303 seguidos=18 candidatos=0 abiertas=0 cerradas=1 st_requests=93 SOL=$97
 Oct 30 07:49:18 simplai-prod python3[2052574]: 2026-10-30 07:49:18,322 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… A3A7cxPN 0.114 SOL
 Oct 30 07:49:23 simplai-prod python3[2052574]: 2026-10-30 07:49:23,727 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… EofBWhuf 0.200 SOL
+Oct 30 07:50:34 simplai-prod python3[2052574]: 2026-10-30 07:50:34,232 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 39GfQBfp 0.138 SOL
+Oct 30 07:51:45 simplai-prod python3[2052574]: 2026-10-30 07:51:45,302 INFO live: latido: stream=True tokens_vistos=3325 seguidos=29 candidatos=0 abiertas=0 cerradas=1 st_requests=94 SOL=$97
