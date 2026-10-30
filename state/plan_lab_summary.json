@@ -1,17 +1,17 @@
 {
- "now": 1793399401.8560169,
+ "now": 1793399679.218071,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 2,
- "equity_usd": 56.39,
- "equity_sol": 0.5905,
- "cash_sol": 0.2285,
- "positions_usd": 34.57,
- "sol_usd": 95.49,
- "mult": 1.019,
+ "equity_usd": 54.47,
+ "equity_sol": 0.5693,
+ "cash_sol": 0.255,
+ "positions_usd": 30.07,
+ "sol_usd": 95.69,
+ "mult": 0.984,
  "halt": false,
  "pause": false,
  "positions": [
@@ -34,50 +34,20 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9997785260714032,
+   "last_usd": 0.9998001192047307,
    "mult": 0.982,
    "value_usd": 20.06
-  },
-  {
-   "mint": "5wCqCq6jbppuTocMeq6zd4UywAm64L1QNNxvEDAHpump",
-   "symbol": "5wCqCq",
-   "opened_ts": 1793398212.8141208,
-   "entry_usd": 0.0002088507550502476,
-   "tokens": 25896.482838,
-   "tokens_initial": 25896.482838,
-   "sol_in": 0.05669468,
-   "sol_out": 0.0,
-   "peak_usd": 0.0002088507550502476,
-   "stop": 0.5,
-   "trail": 0.9,
-   "trail_after": 99.0,
-   "tp": [
-    [
-     2.0,
-     0.5
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "Consenso de KOLs: 4 nombres conocidos compraron en 29 min (ohtwoo, sicktuna, tAg911, Dior). Entrada entre los nombres y la audiencia; salida 50% a 2x (initials) y el resto afuera a los 30 min. Backtest 30 d (ops 184): +21,7% por operación, 48% de acierto, n=40.",
-   "id": "kols-1793398206-5wCqCq",
-   "sleeve": null,
-   "reason": "kol_consensus",
-   "max_h": 0.5,
-   "brain": false,
-   "last_usd": 0.00017327982078812508,
-   "mult": 0.83,
-   "value_usd": 4.49
   },
   {
    "mint": "perps:FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy",
    "symbol": "ETH short 1.69x",
    "opened_ts": 1793360616.3171363,
    "entry_usd": 2237.16,
-   "last_usd": 2233.95,
+   "last_usd": 2235.65,
    "peak_usd": 2237.16,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1047,
+   "sol_in": 0.1045,
    "sol_out": 0.0,
    "stop": null,
    "trail": null,
@@ -92,14 +62,14 @@
    "perps": true,
    "system": "Daily trend",
    "exit_level": null,
-   "mult": 1.002,
-   "value_usd": 10.02,
-   "pnl_usd": 0.02,
+   "mult": 1.001,
+   "value_usd": 10.01,
+   "pnl_usd": 0.01,
    "collateral_usd": 10.0,
    "side": "short"
   }
  ],
- "perps_pnl_usd": 0.02,
+ "perps_pnl_usd": 0.01,
  "equity": [
   [
    1793271309,
@@ -1832,9 +1802,28 @@
   [
    1793399279,
    56.37
+  ],
+  [
+   1793399584,
+   54.77
   ]
  ],
  "closed": [
+  {
+   "ts": 1793399633.440087,
+   "mint": "5wCqCq6jbppuTocMeq6zd4UywAm64L1QNNxvEDAHpump",
+   "symbol": "5wCqCq",
+   "sol_in": 0.05669,
+   "sol_out": 0.02647,
+   "pnl_sol": -0.03022,
+   "pnl_usd": -2.89,
+   "ret": -0.533,
+   "peak_mult": 1.0,
+   "hold_h": 0.4,
+   "why": "stop (0.47x)",
+   "reason": "kol_consensus",
+   "sleeve": null
+  },
   {
    "ts": 1793342944.106585,
    "mint": "A8aDT3aAzS5b27GfT9dsXchqAkY9o6ACmvAEf2R2E9it",
@@ -1852,6 +1841,24 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793399633.4398363,
+   "side": "sell",
+   "mint": "5wCqCq6jbppuTocMeq6zd4UywAm64L1QNNxvEDAHpump",
+   "symbol": "5wCqCq",
+   "ok": true,
+   "sol": 0.02647268,
+   "tokens": 25896.482838,
+   "price_usd": 9.768177e-05,
+   "slip": 1.08,
+   "quote_impact": 0.0,
+   "via": "solanatracker",
+   "ab_arm": "solanatracker",
+   "why": "stop (0.47x)",
+   "sig": "bYZu96xZnvZ6Dy3EsnzZNj7SwzHc181YW5mGo6axqjV3CKENu4zP44pGa4jd8CbCiN2CNUNcYcKT57xbf6BAxp5",
+   "error": "",
+   "id": null
+  },
   {
    "ts": 1793398212.8135638,
    "side": "buy",
@@ -1955,6 +1962,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793399633.440562,
+   "title": "Automatic exit",
+   "text": "5wCqCq: sold 100% of 5wCqCq (stop (0.47x)) for 0.0265 SOL — position closed",
+   "kind": "automatic",
+   "id": null
+  },
   {
    "ts": 1793398212.8165526,
    "title": "Execution",
@@ -2139,8 +2153,8 @@
   }
  ],
  "wins": 0,
- "n_closed": 1,
- "realized_usd": -5.45,
+ "n_closed": 2,
+ "realized_usd": -8.34,
  "plan": "lab",
  "wallet": "AXbTdJLRephZMSAMoiRwfbCBWXFYtfHeLmbPj9TZk69M"
 }
