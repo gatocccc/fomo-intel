@@ -1,13 +1,3 @@
-{"ts": 1793327735.7970166, "kind": "thesis", "leg": "book", "verdict": "backstop", "state": "mixed", "title": "Binance confirms the hack and says it will fully cover all user losses from its reserves; CZ says user funds are safe (seen on the web by the 21:39 session, not in RSS)", "by": "kw", "rules": {"trail_arm": 0.02, "stop_up": 0.025, "max_h": 6, "trail_gap": 0.015, "breakeven_if_ret": 0.01}, "backfill": true}
-{"ts": 1793327765.8908293, "kind": "close", "ts_open": 1793320444.8066633, "leg": "book", "symbol": "SOL", "side": "short", "entry": 92.87, "exit": 95.297, "collateral_usd": 81.81, "size_usd": 163.61, "ret_px": -0.0261, "best_ret": 0.0, "pnl_usd": -4.67, "hold_h": 2.03, "why": "stop: SOL at 95.30 ≥ stop 95.19 (+2.5% over entry)", "mode": "live", "reason": "news_shock_short"}
-{"ts": 1793328376.7279932, "kind": "event", "src": "cointelegraph", "title": "Binance points to engineer’s hacked laptop in $6.3B breach", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
-{"ts": 1793328620.500931, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: Binance says 6,300,000,000 worth of crypto was impacted following major hack. @WatcherGuru", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
-{"ts": 1793328980.7954857, "kind": "event", "src": "cointelegraph", "title": "Live updates: Binance estimates $6.3B of crypto stolen in major hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
-{"ts": 1793329265.4585314, "kind": "event", "src": "cointelegraph", "title": "Live updates: Binance says $6.3B hack possibly involved a compromised engineer’s laptop", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
-{"ts": 1793329865.3013551, "kind": "event", "src": "cointelegraph", "title": "Live updates: Binance says $6.3B hack involved compromised engineer’s laptop", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw"}}
-{"ts": 1793330720.497043, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: Elon Musk says super intelligence AI agents will eventually hack financial systems to obtain money for themselves, not humans. @WatcherGuru", "cls": {"types": ["hack"], "dir": -1, "sev": 1, "by": "kw"}}
-{"ts": 1793331725.460921, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.749, "shock_px": 97.686, "ch1h": 0.014129830924204168, "ch4h": 0.005320199091825462}
-{"ts": 1793331725.4611075, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.749, "shock_px": 97.686, "ch1h": 0.014129830924204168, "ch4h": 0.005320199091825462}
 {"ts": 1793331785.6249697, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.857, "shock_px": 97.686, "ch1h": 0.015261894529407405, "ch4h": 0.006442428587757343}
 {"ts": 1793331785.6251264, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.857, "shock_px": 97.686, "ch1h": 0.015261894529407405, "ch4h": 0.006442428587757343}
 {"ts": 1793331845.5992951, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.89, "shock_px": 97.686, "ch1h": 0.01560780285321961, "ch4h": 0.006785332044847658}
@@ -198,3 +188,13 @@
 {"ts": 1793337215.3237875, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.695, "shock_px": 97.686, "ch1h": 0.004782474544893445, "ch4h": 0.0314083614864864}
 {"ts": 1793337272.653776, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.808, "shock_px": 97.686, "ch1h": 0.005944667283760197, "ch4h": 0.03260135135135145}
 {"ts": 1793337272.653939, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.808, "shock_px": 97.686, "ch1h": 0.005944667283760197, "ch4h": 0.03260135135135145}
+{"ts": 1793337317.7216146, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.666, "shock_px": 97.686, "ch1h": 0.003503724633958427, "ch4h": 0.03812753111746514}
+{"ts": 1793337317.7217474, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.666, "shock_px": 97.686, "ch1h": 0.003503724633958427, "ch4h": 0.03812753111746514}
+{"ts": 1793337377.5800714, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.756, "shock_px": 97.686, "ch1h": 0.004428461340868273, "ch4h": 0.03908417393892383}
+{"ts": 1793337377.5802283, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.756, "shock_px": 97.686, "ch1h": 0.004428461340868273, "ch4h": 0.03908417393892383}
+{"ts": 1793337437.8649805, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.783, "shock_px": 97.686, "ch1h": 0.004705882352941115, "ch4h": 0.039371166785361345}
+{"ts": 1793337437.865185, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.783, "shock_px": 97.686, "ch1h": 0.004705882352941115, "ch4h": 0.039371166785361345}
+{"ts": 1793337497.7466676, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.866, "shock_px": 97.686, "ch1h": 0.005558695093758059, "ch4h": 0.040253404054039654}
+{"ts": 1793337497.7468278, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.866, "shock_px": 97.686, "ch1h": 0.005558695093758059, "ch4h": 0.040253404054039654}
+{"ts": 1793337558.0704083, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.882, "shock_px": 97.686, "ch1h": 0.0057230927305420565, "ch4h": 0.04042347388896572}
+{"ts": 1793337558.070596, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.882, "shock_px": 97.686, "ch1h": 0.0057230927305420565, "ch4h": 0.04042347388896572}
