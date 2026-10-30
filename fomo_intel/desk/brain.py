@@ -449,6 +449,22 @@ class Brain:
             peak = p["peak_usd"] / p["entry_usd"]
             if p["mint"] not in STABLES and age_h >= LIM["stale_h"] and peak < 1.25 and 0.85 <= (p.get("mult") or 1) <= 1.12 and p.get("brain") is not False:
                 stale.append(p)
+        # 30/10 06:50 (autocrítica): en mercado bajista "lento" (why=bear: SOL/BTC bajo su promedio, pocas memes arriba) el cerebro no compraba
+        # NADA, tampoco los catalizadores con fecha — la única categoría que ganó (2/2, +US$175: GTA6 hizo 6,5x con el mercado abajo). Ahora, solo
+        # con why=bear (no con shock de noticias ni caída fuerte), compra UN catalizador de la lista a MITAD de tamaño, con las mismas condiciones
+        # (retroceso sano, anti-rug LIMPIO). No es subir el riesgo: el tamaño baja a la mitad y el motivo es el que tiene historial.
+        if regime == "risk_off" and self.regime.get("why") == "bear" and npos < LIM["max_pos"] and len(buys_today) < LIM["max_auto_buys_day"]:
+            cat = [c for c in cands if c.get("reason") == "catalyst"]
+            if cat and free > eq_sol * LIM["idle_frac"]:
+                c = cat[0]
+                mf = min(LIM["max_frac"], c.get("max_frac") or LIM["max_frac"]) * 0.5
+                sol = min(free, eq_sol * mf, cap_usd(c.get("liq"), c.get("vol24"), s["equity_usd"]) / sol_usd) * (0.5 if c["factory"] else 1.0)
+                if sol >= LIM["min_buy_sol"]:
+                    orders.append(self.buy_order(d, c, sol))
+                    notes.append(L(d, f"Mercado bajista, pero {c['sym']} tiene un catalizador con fecha y está en retroceso sano: entro a mitad de tamaño ({sol:.3f} SOL).",
+                                   f"Bear market, but {c['sym']} has a dated catalyst and is in a healthy pullback: buying at half size ({sol:.3f} SOL)."))
+                    notes.append(self.thesis_note(d, c))
+                    return orders, notes, [c["sym"]]
         if regime == "risk_off":
             if free > eq_sol * LIM["idle_frac"]:
                 rg = self.regime
