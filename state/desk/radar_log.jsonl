@@ -1,4 +1,3 @@
-{"ts": 1793347593.3832028, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.054, "shock_px": 97.686, "ch1h": -0.00941046786968236, "ch4h": 0.002541112304768056}
 {"ts": 1793347654.5546236, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.995, "shock_px": 97.686, "ch1h": -0.010012656160692357, "ch4h": 0.0019316585406163878}
 {"ts": 1793347654.5548406, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.995, "shock_px": 97.686, "ch1h": -0.010012656160692357, "ch4h": 0.0019316585406163878}
 {"ts": 1793347698.2678614, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.988, "shock_px": 97.686, "ch1h": -0.010084102229117375, "ch4h": 0.0018593504669035532}
@@ -198,3 +197,4 @@
 {"ts": 1793358455.437085, "kind": "event", "src": "cointelegraph", "title": "EIP-7702 didn’t cause Binance hack, but may have amplified losses", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793358576.7944746, "kind": "event", "src": "tg:wublockchainenglish", "title": "Binance Reserves Over 6.34B in Company Funds to Cover Hack Losses, Including 5B in Affected Tokens Binance said it has reserved over 6.34 billion in company funds to cover losses from the hack, includ", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793358785.1818795, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: Binance reserves over 6.34 billion of company funds to cover losses from the hack. @WatcherGuru", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
+{"ts": 1793358985.9116735, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}

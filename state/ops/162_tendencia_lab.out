@@ -1,0 +1,16 @@
+== 162_tendencia_lab 2026-10-30T11:16:03Z ==
+--- trend.json
+{'BTC': (-0.3, 0.28), 'ETH': (-0.8, 0.356)} {'BTC': 77558.5, 'ETH': 2241.15} live
+null
+--- radar log trend
+{"ts": 1793358985.9116735, "kind": "trend_open_failed", "coin": "ETH", "side": "short", "error": "429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc"}
+--- radar journal
+Oct 30 11:16:25 simplai-prod python3[2302260]: 2026-10-30 11:16:25,911 ERROR trend: trend: no abrió short ETH: 429 Client Error: Too Many Requests for url: https://mainnet.helius-rpc.com/?api-key=dcd33cb1-78d3-4bbc-8d39-4e7cf7055ffc
+--- posiciones perps del lab
+Traceback (most recent call last):
+  File "/root/fomo_intel/scripts/perps_probe.py", line 26, in <module>
+    from fomo_intel.live.bot import load_dotenv
+ModuleNotFoundError: No module named 'fomo_intel'
+--- lab summary
+57.9 0
+== exit 0 ==
