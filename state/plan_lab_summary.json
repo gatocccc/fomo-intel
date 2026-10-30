@@ -1,16 +1,16 @@
 {
- "now": 1793319885.2892547,
+ "now": 1793320194.5080333,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
  "goal_usd": 110.72,
  "days": 30,
  "day": 1,
- "equity_usd": 61.38,
- "equity_sol": 0.66,
+ "equity_usd": 61.37,
+ "equity_sol": 0.6601,
  "cash_sol": 0.287,
  "positions_usd": 34.69,
- "sol_usd": 92.99,
+ "sol_usd": 92.98,
  "mult": 1.109,
  "halt": false,
  "pause": false,
@@ -34,7 +34,7 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9990679314310952,
+   "last_usd": 0.9990186749317824,
    "mult": 0.981,
    "value_usd": 29.25
   },
@@ -731,6 +731,10 @@
   [
    1793319792,
    61.34
+  ],
+  [
+   1793320102,
+   61.37
   ]
  ],
  "closed": [],
@@ -765,6 +769,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793320086.6939988,
+   "title": "Alert",
+   "text": "SAFU: no price for over 10 minutes",
+   "kind": "alert",
+   "id": null
+  },
   {
    "ts": 1793318945.4152577,
    "title": "Alert",
