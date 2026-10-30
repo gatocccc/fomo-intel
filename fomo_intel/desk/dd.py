@@ -34,9 +34,22 @@ def st(path, **p):
     return None
 
 
+RPC_FALLBACK = "https://api.mainnet-beta.solana.com"
+
+
 def rpc(method, params):
-    r = requests.post(RPC, json={"jsonrpc": "2.0", "id": 1, "method": method, "params": params}, timeout=30)
-    return r.json().get("result")
+    # 30/10: con Helius en 429 la respuesta no era JSON y el anti-rug entero caía con JSONDecodeError (ops 167: 6 de 6 tokens sin veredicto).
+    # Ahora: 3 intentos con espera creciente y, si sigue fallando, la RPC pública de Solana.
+    body = {"jsonrpc": "2.0", "id": 1, "method": method, "params": params}
+    for i, url in enumerate([RPC, RPC, RPC, RPC_FALLBACK]):
+        try:
+            r = requests.post(url, json=body, timeout=30)
+            if r.status_code == 200:
+                return r.json().get("result")
+        except Exception:
+            pass
+        time.sleep(1.5 * (i + 1))
+    return None
 
 
 def is_wallet(addrs):
