@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793339777.2515848,
+   "src": "cointelegraph",
+   "title": "North Korea linked to $6.3B Binance hack by crypto investigators",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793338246.45789,
    "src": "tg:wublockchainenglish",
    "title": "ZachXBT: Stolen Funds from the 6.3B Binance Exploit and 388M Bitget Exploit Commingled at Same Address, Suspected Same North Korea-Linked Attacker ZachXBT posted that stolen funds from the 6.3 billion",
@@ -271,34 +282,23 @@
    "types": [
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:wublockchainenglish",
-   "title": "Binance to List BNB Chain Prediction Market Token Predict (PREDICT) on October 30 Binance announced that it will list Predict (PREDICT), the token of a prediction market project on BNB Chain, and open",
-   "sev": 1,
-   "dir": 1,
-   "types": [
-    "bullish",
-    "exchange"
-   ]
   }
  ],
- "ts": 1793339657.7587984,
- "bear_score": 14,
+ "ts": 1793339957.5911834,
+ "bear_score": 17,
  "bull_score": 1,
  "price": {
   "SOL": {
-   "px": 97.944,
-   "ch15m": -0.00241390900479721,
-   "ch1h": 0.006525604003740693,
-   "ch4h": 0.0434004474272931
+   "px": 97.91,
+   "ch15m": -0.004068762079137533,
+   "ch1h": 0.007283800744840585,
+   "ch4h": 0.04270500532481347
   },
   "BTC": {
-   "px": 78543.0,
-   "ch15m": -0.0016904774009863788,
-   "ch1h": 0.003129070985210314,
-   "ch4h": 0.02171085152327179
+   "px": 78488.0,
+   "ch15m": -0.0027951415358031806,
+   "ch1h": 0.0033492700636617023,
+   "ch4h": 0.022138875866020813
   }
  },
  "mode": "live",

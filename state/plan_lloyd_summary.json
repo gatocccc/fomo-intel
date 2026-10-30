@@ -1,5 +1,5 @@
 {
- "now": 1793339680.9953923,
+ "now": 1793339984.486869,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
@@ -7,10 +7,10 @@
  "days": 365,
  "day": 2,
  "equity_usd": 542.05,
- "equity_sol": 5.5369,
+ "equity_sol": 5.5417,
  "cash_sol": 0.0843,
- "positions_usd": 533.79,
- "sol_usd": 97.9,
+ "positions_usd": 533.81,
+ "sol_usd": 97.81,
  "mult": 0.99,
  "halt": false,
  "pause": false,
@@ -32,11 +32,11 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9992727952775483,
+   "last_usd": 0.9992978211474789,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 533.79
+   "value_usd": 533.81
   }
  ],
  "perps_pnl_usd": 0,
@@ -1872,6 +1872,10 @@
   [
    1793339620,
    542.07
+  ],
+  [
+   1793339923,
+   542.04
   ]
  ],
  "closed": [
