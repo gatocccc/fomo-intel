@@ -147,114 +147,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793308685.169305,
-   "src": "cointelegraph",
-   "title": "Polymarket suspended trading amid reports of user funds being drained",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793308685.169305,
-   "src": "cointelegraph",
-   "title": "HYPE teases all-time high as NYSE owner ICE eyes US Hyperliquid perps",
-   "sev": 1,
-   "dir": 1,
-   "types": [
-    "bullish"
-   ]
-  },
-  {
-   "ts": 1793308685.169305,
-   "src": "cointelegraph",
-   "title": "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "regulatory"
-   ]
-  },
-  {
-   "ts": 1793308685.169305,
-   "src": "cointelegraph",
-   "title": "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "macro"
-   ]
-  },
-  {
-   "ts": 1793308685.169305,
-   "src": "cointelegraph",
-   "title": "Crypto PAC spending before midterms possibly obscured after reported FEC hack",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793308685.169305,
-   "src": "theblock",
-   "title": "Polymarket resumes trading after $2.65 million exploit, says third-party provider was compromised",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793308685.169305,
-   "src": "theblock",
-   "title": "CFTC sues Utah as battle over prediction market regulation intensifies",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "regulatory"
-   ]
-  },
-  {
-   "ts": 1793308685.169305,
-   "src": "decrypt",
-   "title": "Fed Stands Pat, Bitcoin Holds Steady—But a December Rate Hike Is in Play",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "macro"
-   ]
-  },
-  {
-   "ts": 1793308685.169305,
-   "src": "decrypt",
-   "title": "Coinbase Customer Data Hit in Analytics Vendor Breach, Funds ‘Not Impacted’",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793322845.0107155,
+ "ts": 1793323144.9749367,
  "bear_score": 6,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 94.81,
-   "ch15m": -0.00025307379209993375,
-   "ch1h": -0.007079571874410884,
-   "ch4h": -0.021376740537360273
+   "px": 94.052,
+   "ch15m": -0.004245497760791084,
+   "ch1h": -0.0014333188231920868,
+   "ch4h": -0.0365005378271781
   },
   "BTC": {
-   "px": 77284.0,
-   "ch15m": 0.0008288008288008797,
-   "ch1h": -0.0075763412692297916,
-   "ch4h": -0.024524467668850303
+   "px": 76995.0,
+   "ch15m": -0.0007138221933808975,
+   "ch1h": -0.005155438406078017,
+   "ch4h": -0.03234928175545748
   }
  },
  "mode": "live",
@@ -275,10 +184,10 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 94.81,
-  "ret_px": 0.0279,
-  "pnl_usd_est": 1.04,
-  "age_h": 3.83,
+  "mark": 94.052,
+  "ret_px": 0.0357,
+  "pnl_usd_est": 1.33,
+  "age_h": 3.91,
   "best_ret": 0.04671383164154619
  },
  "positions": {
@@ -299,10 +208,10 @@
    ],
    "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
    "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-   "mark": 94.81,
-   "ret_px": 0.0279,
-   "pnl_usd_est": 1.04,
-   "age_h": 3.83,
+   "mark": 94.052,
+   "ret_px": 0.0357,
+   "pnl_usd_est": 1.33,
+   "age_h": 3.91,
    "best_ret": 0.04671383164154619
   },
   "book": {
@@ -324,10 +233,10 @@
    "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "sig": "52fnUTsu5TQh9dGoURqVntbYErKt566sgbn8AKFywmcR8vVs2GfMC9b3pp3MgZyJ3zbrvN7oDuUc44K8S6rxDM3K",
    "best_ret": 0.0,
-   "mark": 94.81,
-   "ret_px": -0.0209,
-   "pnl_usd_est": -3.42,
-   "age_h": 0.67
+   "mark": 94.052,
+   "ret_px": -0.0127,
+   "pnl_usd_est": -2.08,
+   "age_h": 0.75
   }
  }
 }
