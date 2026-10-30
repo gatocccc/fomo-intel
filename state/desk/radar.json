@@ -10,7 +10,9 @@
    "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts",
    "Crypto PAC spending before midterms possibly obscured after reported FEC hack"
   ],
-  "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%"
+  "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%",
+  "confirmed": true,
+  "confirmed_ts": 1793320444.802916
  },
  "events": [
   {
@@ -216,21 +218,21 @@
    ]
   }
  ],
- "ts": 1793320145.028053,
+ "ts": 1793320444.802916,
  "bear_score": 10,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 92.901,
-   "ch15m": -0.027072031502000327,
-   "ch1h": -0.038759609713700516,
-   "ch4h": -0.06559850336441275
+   "px": 92.974,
+   "ch15m": -0.01287863505579323,
+   "ch1h": -0.03824311323975138,
+   "ch4h": -0.05783281482757563
   },
   "BTC": {
-   "px": 76972.0,
-   "ch15m": -0.011582813262449587,
-   "ch1h": -0.022093481216094335,
-   "ch4h": -0.04233903576982889
+   "px": 77034.0,
+   "ch15m": -0.004651523373904953,
+   "ch1h": -0.022100920342748354,
+   "ch4h": -0.03661739326179936
   }
  },
  "mode": "live",
@@ -251,9 +253,55 @@
   ],
   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
-  "mark": 92.901,
-  "ret_px": 0.0475,
-  "pnl_usd_est": 1.76,
-  "age_h": 3.08
+  "mark": 92.974,
+  "ret_px": 0.0467,
+  "pnl_usd_est": 1.74,
+  "age_h": 3.16,
+  "best_ret": 0.04671383164154619
+ },
+ "positions": {
+  "lab": {
+   "ts": 1793309060.2848802,
+   "symbol": "SOL",
+   "side": "short",
+   "entry": 97.53,
+   "collateral_usd": 18.59,
+   "lev": 2.0,
+   "size_usd": 37.18,
+   "mode": "live",
+   "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0%",
+   "headlines": [
+    "Polymarket suspended trading amid reports of user funds being drained",
+    "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+    "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts"
+   ],
+   "pubkey": "DB5apVWGg3rtiiNGQXmRxrYeJrke2Zk6PFJcGjagSuoW",
+   "sig": "5kBxCwnQxYTmG2JcSM2yv61yEdLLCb48X6d4KG5vkSS6UhEpWHe94rQqcv7hfrvLQwrCza3WRSsMfo9w2w5aiUnD",
+   "mark": 92.974,
+   "ret_px": 0.0467,
+   "pnl_usd_est": 1.74,
+   "age_h": 3.16,
+   "best_ret": 0.04671383164154619
+  },
+  "book": {
+   "ts": 1793320444.8066633,
+   "leg": "book",
+   "symbol": "SOL",
+   "side": "short",
+   "entry": 92.87,
+   "collateral_usd": 81.81,
+   "lev": 2.0,
+   "size_usd": 163.61,
+   "mode": "live",
+   "why": "bearish news score 9 in 90 min; SOL 1h -1.5%, 4h -3.9%; BTC 1h -1.0% + confirmed major news",
+   "headlines": [
+    "Polymarket suspended trading amid reports of user funds being drained",
+    "Your fridge could one day stake Ether, launch memecoins: CFTC chair",
+    "Fed’s hawkish rate hold keeps pressure on Bitcoin: Analysts"
+   ],
+   "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
+   "sig": "52fnUTsu5TQh9dGoURqVntbYErKt566sgbn8AKFywmcR8vVs2GfMC9b3pp3MgZyJ3zbrvN7oDuUc44K8S6rxDM3K",
+   "best_ret": 0.0
+  }
  }
 }
