@@ -114,33 +114,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793371160.5934377,
-   "src": "bitcoinmagazine",
-   "title": "SEC Charges Two Companies in $130 Million Crypto Trading Scheme",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "regulatory"
-   ]
   }
  ],
- "ts": 1793385277.306784,
+ "ts": 1793385562.2916896,
  "bear_score": 6,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 93.82,
-   "ch15m": -0.003187420314492262,
-   "ch1h": -0.008391992728349007,
-   "ch4h": -0.0035262129322798375
+   "px": 93.976,
+   "ch15m": -0.0034992471316777074,
+   "ch1h": -0.0067956752872044834,
+   "ch4h": -0.008283998691444805
   },
   "BTC": {
-   "px": 76764.0,
-   "ch15m": -0.002728193935614631,
-   "ch1h": -0.005969569439948197,
-   "ch4h": -0.000390655519962535
+   "px": 76768.0,
+   "ch15m": -0.003711682716017295,
+   "ch1h": -0.006393828790349665,
+   "ch4h": -0.003116559318512402
   }
  },
  "mode": "live",
@@ -166,7 +156,7 @@
    ],
    "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx",
    "sig": "35yonov4kU1cJbPGxuZGsXkr3kMwXSksz8Qw4bp5B5QVpA8mwYvunUUbjcv2reJcPzkspDRq3QfAPdtfUgMEReRJ",
-   "best_ret": 0.010754955714888381,
+   "best_ret": 0.012600168705187764,
    "thesis": {
     "claim": "Shock bajista por noticias: SOL sigue cayendo mientras el hecho se confirma. Titulares: Binance hit by $6.3B hack, the largest in cryptocurrency history | TRM and Chainalysis Tie $6.4B Binance Hack to North Korea's TraderTraitor",
     "entities": [
@@ -267,10 +257,10 @@
      "trail_arm": 0.02
     }
    },
-   "mark": 93.82,
-   "ret_px": 0.0108,
-   "pnl_usd_est": 1.75,
-   "age_h": 4.81,
+   "mark": 93.976,
+   "ret_px": 0.0091,
+   "pnl_usd_est": 1.48,
+   "age_h": 4.89,
    "stop_px": 94.75,
    "rules": {
     "stop_up": 0.025,
