@@ -16,6 +16,17 @@
  },
  "events": [
   {
+   "ts": 1793329265.4585314,
+   "src": "cointelegraph",
+   "title": "Live updates: Binance says $6.3B hack possibly involved a compromised engineer’s laptop",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793328980.7954857,
    "src": "cointelegraph",
    "title": "Live updates: Binance estimates $6.3B of crypto stolen in major hack",
@@ -271,34 +282,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793326580.4845843,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: Binance says user funds remain safe following major hack. Withdrawals will resume as soon as the security issue is fully resolved. @WatcherGuru",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793329145.9917083,
- "bear_score": 55,
+ "ts": 1793329446.1547632,
+ "bear_score": 57,
  "bull_score": 2,
  "price": {
   "SOL": {
-   "px": 95.292,
-   "ch15m": -0.0011425456756217756,
-   "ch1h": 0.014824281150159768,
-   "ch4h": -0.01801319043693328
+   "px": 95.748,
+   "ch15m": 0.006337695096957363,
+   "ch1h": 0.024229004203973004,
+   "ch4h": -0.0068768086629118486
   },
   "BTC": {
-   "px": 77345.0,
-   "ch15m": -0.002540558664981596,
-   "ch1h": 0.007253737563160945,
-   "ch4h": -0.020986544814753816
+   "px": 77490.0,
+   "ch15m": 0.0016286644951140072,
+   "ch1h": 0.012279555845852386,
+   "ch4h": -0.01662436548223345
   }
  },
  "mode": "live",
