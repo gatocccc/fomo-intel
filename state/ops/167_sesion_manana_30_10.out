@@ -1,0 +1,242 @@
+== 167_sesion_manana_30_10 2026-10-30T12:56:03Z ==
+=== niveles / tortuga / tendencia lab ===
+-- state/desk/levels.json
+{
+ "ts": 1793364923.076442,
+ "day": 1793318400,
+ "mode": "live",
+ "rules": {
+  "n_in": 55,
+  "n_out": 20,
+  "risk": 0.01,
+  "risk_max": 0.02,
+  "lev": 2.0,
+  "coll_max_frac": 0.08,
+  "coll_min": 10.0,
+  "chase": 0.01
+ },
+ "levels": {
+  "BTC": {
+   "buy_above": 87471.0,
+   "short_below": 74903.0,
+   "long_exit_below": 77856.0,
+   "short_exit_above": 84850.0,
+   "day": 1793318400
+  },
+  "ETH": {
+   "buy_above": 2809.5,
+   "short_below": 2227.2,
+   "long_exit_below": 2227.2,
+   "short_exit_above": 2578.1,
+   "day": 1793318400
+  },
+  "SOL": {
+   "buy_above": 124.95,
+   "short_below": 94.809,
+   "long_exit_below": 94.809,
+   "short_exit_above": 113.39,
+   "day": 1793318400
+  }
+ },
+ "view": {
+  "BTC": {
+   "buy_above": 87471.0,
+   "short_below": 74903.0,
+   "long_exit_below": 77856.0,
+   "short_exit_above": 84850.0,
+   "day": 1793318400,
+   "px": 77340.5,
+   "to_buy": 0.131,
+   "to_short": -0.0315,
+   "position": null
+  },
+  "ETH": {
+   "buy_above": 2809.5,
+   "short_below": 2227.2,
+   "long_exit_below": 2227.2,
+   "short_exit_above": 2578.1,
+   "day": 1793318400,
+   "px": 2230.95,
+   "to_buy": 0.2593,
+   "to_short": -0.0017,
+   "position": null
+  },
+  "SOL": {
+   "buy_above": 124.95,
+   "short_below": 94.809,
+   "long_exit_below": 94.809,
+   "short_exit_above": 113.39,
+   "day": 1793318400,
+   "px": 96.6405,
+   "to_buy": 0.2929,
+   "to_short": -0.019,
+   "position": null
+  }
+ }
+}
+-- state/desk/turtle_pos_book.json
+
+-- state/desk/trend.json
+{
+ "ts": 1793364683.0641756,
+ "mode": "live",
+ "signals": {
+  "BTC": {
+   "signal": -0.3,
+   "vol": 0.28,
+   "parts": {
+    "mom10": -1.0,
+    "mom20": -1.0,
+    "mom30": -1.0,
+    "mom60": 1.0,
+    "mom90": 1.0,
+    "ema20": -1.0,
+    "ema50": -1.0,
+    "ema100": 1.0,
+    "don20": -1.0,
+    "don55": 0.0
+   }
+  },
+  "ETH": {
+   "signal": -0.8,
+   "vol": 0.356,
+   "parts": {
+    "mom10": -1.0,
+    "mom20": -1.0,
+    "mom30": -1.0,
+    "mom60": -1.0,
+    "mom90": 1.0,
+    "ema20": -1.0,
+    "ema50": -1.0,
+    "ema100": -1.0,
+    "don20": -1.0,
+    "don55": -1.0
+   }
+  }
+ },
+ "px": {
+  "BTC": 77426.5,
+  "ETH": 2231.65
+ },
+ "rules": {
+  "enter": 0.5,
+  "exit": 0.2,
+  "vt": 0.6,
+  "lev_min": 1.0,
+  "lev_max": 2.0,
+  "stop": 0.08,
+  "max_d": 14,
+  "coll": 10.0
+ },
+ "position": {
+  "ts": 1793360616.3171363,
+  "leg": "lab",
+  "plan": "lab",
+  "symbol": "ETH",
+  "side": "short",
+  "entry": 2237.16,
+  "collateral_usd": 10.0,
+  "lev": 1.69,
+  "size_usd": 16.9,
+  "mode": "live",
+  "signal": -0.8,
+  "vol": 0.356,
+  "parts": {
+   "mom10": -1.0,
+   "mom20": -1.0,
+   "mom30": -1.0,
+   "mom60": -1.0,
+   "mom90": 1.0,
+   "ema20": -1.0,
+   "ema50": -1.0,
+   "ema100": -1.0,
+   "don20": -1.0,
+   "don55": -1.0
+  },
+  "pubkey": "FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy",
+  "reason": "majors_trend",
+  "sig": "uvhxBQYK3AE5LXEsFDNryeNgrPEjTZ243D9auuD5sSkJXi1SJ8yaxybsBzbdKr9gjNHQE4XdmgFJioD2hHvGpi1",
+  "mark": 2231.65,
+  "ret_px": 0.0025,
+  "pnl_usd_est": 0.04,
+  "age_d": 0.05
+ }
+}
+-- state/desk/trend_pos_lab.json
+{
+ "ts": 1793360616.3171363,
+ "leg": "lab",
+ "plan": "lab",
+ "symbol": "ETH",
+ "side": "short",
+ "entry": 2237.16,
+ "collateral_usd": 10.0,
+ "lev": 1.69,
+ "size_usd": 16.9,
+ "mode": "live",
+ "signal": -0.8,
+ "vol": 0.356,
+ "parts": {
+  "mom10": -1.0,
+  "mom20": -1.0,
+  "mom30": -1.0,
+  "mom60": -1.0,
+  "mom90": 1.0,
+  "ema20": -1.0,
+  "ema50": -1.0,
+  "ema100": -1.0,
+  "don20": -1.0,
+  "don55": -1.0
+ },
+ "pubkey": "FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy",
+ "reason": "majors_trend",
+ "sig": "uvhxBQYK3AE5LXEsFDNryeNgrPEjTZ243D9auuD5sSkJXi1SJ8yaxybsBzbdKr9gjNHQE4XdmgFJioD2hHvGpi1",
+ "mark": 2231.65,
+ "ret_px": 0.0025,
+ "pnl_usd_est": 0.04,
+ "age_d": 0.05
+}
+=== perps abiertos (Jupiter) ===
+Traceback (most recent call last):
+  File "/root/fomo_intel/scripts/perps_probe.py", line 26, in <module>
+    from fomo_intel.live.bot import load_dotenv
+ModuleNotFoundError: No module named 'fomo_intel'
+=== mesa: journal ultimas lineas ===
+{"ts": 1793361802.0987585, "title": "Cerebro automático: estado", "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.", "kind": "decisión", "id": "auto-mesa-note-20261030-1203"}
+{"ts": 1793362392.113177, "title": "Cerebro automático: estado", "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.", "kind": "decisión", "id": "auto-mesa-note-20261030-1213"}
+{"ts": 1793362990.5171776, "title": "Cerebro automático: estado", "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.", "kind": "decisión", "id": "auto-mesa-note-20261030-1223"}
+{"ts": 1793363604.7025003, "title": "Cerebro automático: estado", "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.", "kind": "decisión", "id": "auto-mesa-note-20261030-1233"}
+{"ts": 1793364188.4099426, "title": "Cerebro automático: estado", "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.", "kind": "decisión", "id": "auto-mesa-note-20261030-1243"}
+{"ts": 1793364805.8819454, "title": "Cerebro automático: estado", "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.", "kind": "decisión", "id": "auto-mesa-note-20261030-1253"}
+=== GTA6 datos ===
+GTA6 price 0.015523496694398613 mcap 15333062 liq 470532 vol24 3975218 holders 52174
+  cambios {'1m': 0.0, '5m': 0.5, '15m': 5.8, '30m': -0.6, '1h': -15.6, '2h': 11.5, '3h': 14.6, '4h': 16.5, '5h': 8.7, '6h': 9.6, '12h': 9.9, '24h': -8.1}
+=== scan4 + anti-rug (GTA6 + top 5) ===
+  http 400 /tokens/graduated {} {"error":"Invalid token address"}
+en rankings: 364
+  campos /search: ['bundlers', 'buys', 'communityMessages', 'createdAt', 'decimals', 'deployer', 'dev', 'fees', 'freezeAuthority', 'graduatedAt', 'hasCoinCommunity', 'hasSocials', 'holders', 'id', 'image', 'insiders', 'lastUpdated', 'launchpad', 'liquidityUsd', 'lpBurn', 'market', 'marketCapUsd', 'migrationSeconds', 'mint', 'mintAuthority', 'name', 'poolAddress', 'priceUsd', 'quoteToken', 'riskScore', 'sells', 'snipers', 'socials', 'status', 'symbol', 'tokenDetails', 'top10', 'totalTransactions', 'volume', 'volume_12h']
+sumados por /search: 884 | total: 1248
+pasan liquidez/mcap/edad: 854
+con velas: 99
+PASAN TODOS LOS FILTROS: 12
+
+GTA6       mcap $15.34M liq $ 471K edad 2033h vol24 $ 29244K (1.91x) acel 0.2 CV 1.64 | 1h -9% 6h +10% 24h -6% 72h +263% | 50% del máx | hold 52176 top10 17% | 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz |  GTA VI was launched on StonkFun.
+AGAIN      mcap $ 0.67M liq $ 412K edad   59h vol24 $  1212K (1.81x) acel 0.1 CV 1.78 | 1h -10% 6h +6% 24h +31% 72h +1297% | 41% del máx | hold 2549 top10 21% | 7GWBnuU5ps1ZduiAsuKaYCehspfWWKZw69NF2E1xrZAA |  Ah Shit, Here We Go Again was launched o
+SAPLING    mcap $ 3.86M liq $ 421K edad  834h vol24 $  1561K (0.40x) acel 0.4 CV 0.90 | 1h +0% 6h +9% 24h +73% 72h +317% | 84% del máx | hold 4857 top10 18% | BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W | https://x.com/saplingdotcash/status the rootstock of sapling.cash, the zcash
+tSpaceX    mcap $ 0.66M liq $ 542K edad 6272h vol24 $   547K (0.83x) acel 0.6 CV 0.64 | 1h -1% 6h +0% 24h -1% 72h -2% | 98% del máx | hold 972 top10 7% | TSPXcLV76s6V2zDiZQ18kBfcbnjaE2ZzNT3ga2Pd99v |  
+FLOAT      mcap $ 0.56M liq $ 152K edad   39h vol24 $  3119K (5.54x) acel 0.2 CV 0.94 | 1h -28% 6h -32% 24h -63% 72h -64% | 23% del máx | hold 3668 top10 21% | Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr |  
+DESSA      mcap $ 8.83M liq $ 268K edad   96h vol24 $  4817K (0.55x) acel 0.3 CV 1.71 | 1h -2% 6h +6% 24h +801% 72h +1794% | 91% del máx | hold 10234 top10 2% | npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump | https://x.com/jack/status/211369790 Zero books. All yap.
+baton      mcap $ 3.99M liq $ 373K edad 1216h vol24 $  2462K (0.62x) acel 0.5 CV 1.08 | 1h +5% 6h +2% 24h -33% 72h -27% | 55% del máx | hold 22451 top10 16% | Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump | https://x.com/connortrenches/status Created on https://rapidlaunch.io
+PAID       mcap $ 2.75M liq $ 381K edad 1074h vol24 $  1319K (0.48x) acel 0.4 CV 1.45 | 1h -1% 6h -3% 24h +3% 72h +7% | 75% del máx | hold 38245 top10 16% | 98kfF7rmsg1QDUEoCqNE7g7M1FdrTt92TEp2CLzypump | https://x.com/UsePaid 
+DOPE       mcap $ 1.60M liq $ 168K edad  455h vol24 $   837K (0.52x) acel 0.6 CV 0.79 | 1h +4% 6h +8% 24h -16% 72h -35% | 62% del máx | hold 8772 top10 20% | 33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump | https://x.com/essencepnl/status/210 
+three      mcap $ 0.61M liq $ 163K edad 4423h vol24 $   278K (0.46x) acel 0.2 CV 2.16 | 1h -1% 6h -6% 24h +20% 72h +116% | 77% del máx | hold 15301 top10 13% | FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump | https://x.com/dorklon_must/status/2 give your ai model a life. fees directed
+CX         mcap $ 0.47M liq $ 616K edad 15019h vol24 $   134K (0.29x) acel 0.4 CV 0.92 | 1h -0% 6h +0% 24h -10% 72h -11% | 85% del máx | hold 324 top10 18% | CortexFv3fRcLKTgACr7aLqckGh5eP7TP3z9JHoKqMc6 |  
+SI         mcap $10.76M liq $ 443K edad  933h vol24 $  3089K (0.29x) acel 0.3 CV 0.89 | 1h +1% 6h -2% 24h -12% 72h +14% | 60% del máx | hold 51112 top10 11% | DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP | https://truthsocial.com/@realdonald 
+top: 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz 7GWBnuU5ps1ZduiAsuKaYCehspfWWKZw69NF2E1xrZAA BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W TSPXcLV76s6V2zDiZQ18kBfcbnjaE2ZzNT3ga2Pd99v Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr
+ERROR 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+ERROR 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+ERROR 7GWBnuU5ps1ZduiAsuKaYCehspfWWKZw69NF2E1xrZAA JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+ERROR BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+ERROR TSPXcLV76s6V2zDiZQ18kBfcbnjaE2ZzNT3ga2Pd99v JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+ERROR Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr JSONDecodeError('Expecting value: line 1 column 1 (char 0)')
+== exit 0 ==
