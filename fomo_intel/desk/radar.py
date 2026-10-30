@@ -504,7 +504,8 @@ class Radar:
         # Relevante si nombra a una entidad de la tesis o si es una noticia fuerte de la misma familia (hack / riesgo de exchange /
         # contagio): la tesis es "shock por noticias", y el desmentido o la cobertura pueden venir en un titular sin la entidad exacta.
         same_family = e["cls"]["sev"] >= 2 and bool(set(e["cls"].get("types", [])) & {"hack", "exchange_risk", "contagion"})
-        if not same_family and not re.search(r"\b(" + "|".join(re.escape(x) for x in th["entities"]) + r")\b", title.lower()):
+        names_it = bool(re.search(r"\b(" + "|".join(re.escape(x) for x in th["entities"]) + r")\b", title.lower()))
+        if not same_family and not names_it:
             return None
         if any(ev.get("title") == title for ev in th["evidence"]):
             return None
@@ -515,6 +516,8 @@ class Radar:
                 verdict, fact, by = llm["verdict"], llm.get("fact", ""), "llm"
         if not verdict:
             return None
+        if verdict in ("refuted", "backstop") and by == "kw" and not names_it:
+            return None   # sin modelo, un desmentido o una cobertura de OTRO exchange (ej. Bitget) no cambia la tesis sobre Binance
         th["evidence"].append({"ts": time.time(), "title": title[:200], "src": e.get("src"), "verdict": verdict, "fact": fact, "by": by})
         th["evidence"] = th["evidence"][-12:]
         prev = th["state"]
@@ -578,6 +581,13 @@ class Radar:
             except Exception:  # noqa: BLE001
                 pass
         leg["pos"] = rec; jsave(leg["pos_file"], rec); logrow("open", **rec)
+        for e in sorted(self.recent(6 * 60), key=lambda x: x["ts"]):   # lo ya sabido (desmentido, cobertura) aplica desde el primer minuto
+            try:
+                self.judge(leg, e, sol, backfill=True)
+            except Exception as ex:  # noqa: BLE001
+                log.exception("tesis al abrir: %s", ex)
+        if leg["pos"] is None:
+            return
         log.warning("[%s] SHORT SOL abierto (%s): colateral %.2f, 2x, entrada %.2f", leg["name"], self.mode, coll, rec["entry"])
         where = Path(f"state/plan_{leg['plan']}/auto")
         book_note("Radar: SOL short opened" + ("" if self.mode == "live" else " (shadow)"),
