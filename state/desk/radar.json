@@ -116,21 +116,21 @@
    ]
   }
  ],
- "ts": 1793385562.2916896,
+ "ts": 1793385845.4485517,
  "bear_score": 6,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 93.976,
-   "ch15m": -0.0034992471316777074,
-   "ch1h": -0.0067956752872044834,
-   "ch4h": -0.008283998691444805
+   "px": 93.882,
+   "ch15m": -0.0011490584104690837,
+   "ch1h": -0.00785204755614266,
+   "ch4h": -0.010351661325687322
   },
   "BTC": {
-   "px": 76768.0,
-   "ch15m": -0.003711682716017295,
-   "ch1h": -0.006393828790349665,
-   "ch4h": -0.003116559318512402
+   "px": 76708.0,
+   "ch15m": -0.0023021395590817617,
+   "ch1h": -0.0075557625627490355,
+   "ch4h": -0.0033909755875741743
   }
  },
  "mode": "live",
@@ -163,6 +163,7 @@
      "binance",
      "bitcoin",
      "circle",
+     "coinbase",
      "ethereum",
      "hyperliquid"
     ],
@@ -247,6 +248,14 @@
       "verdict": "backstop",
       "fact": "The headline reports Binance setting aside $6.34B to cover the hack losses and the CEO stating assets are safe. The event itself (the hack, attributed to North ",
       "by": "llm"
+     },
+     {
+      "ts": 1793385666.3073554,
+      "title": "Secret Service, FBI Join Binance Hack Probe as Circle Freezes $823 Million",
+      "src": "decrypt",
+      "verdict": "confirmed",
+      "fact": "",
+      "by": "kw"
      }
     ],
     "rules": {
@@ -257,10 +266,10 @@
      "trail_arm": 0.02
     }
    },
-   "mark": 93.976,
-   "ret_px": 0.0091,
-   "pnl_usd_est": 1.48,
-   "age_h": 4.89,
+   "mark": 93.882,
+   "ret_px": 0.0101,
+   "pnl_usd_est": 1.64,
+   "age_h": 4.97,
    "stop_px": 94.75,
    "rules": {
     "stop_up": 0.025,
@@ -279,6 +288,7 @@
     "binance",
     "bitcoin",
     "circle",
+    "coinbase",
     "ethereum",
     "hyperliquid"
    ],
@@ -363,6 +373,14 @@
      "verdict": "backstop",
      "fact": "The headline reports Binance setting aside $6.34B to cover the hack losses and the CEO stating assets are safe. The event itself (the hack, attributed to North ",
      "by": "llm"
+    },
+    {
+     "ts": 1793385666.3073554,
+     "title": "Secret Service, FBI Join Binance Hack Probe as Circle Freezes $823 Million",
+     "src": "decrypt",
+     "verdict": "confirmed",
+     "fact": "",
+     "by": "kw"
     }
    ],
    "rules": {
