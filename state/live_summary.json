@@ -1,5 +1,5 @@
 {
- "ts": 1793372694.8225763,
+ "ts": 1793372990.0105052,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -43,11 +43,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.1009,
- "sol_usd": 94.77469617205884,
+ "sol_usd": 94.83956444817368,
  "stream_connected": true,
- "stream_msgs": 1649,
- "tokens_seen": 1599,
- "tokens_tracked": 85,
+ "stream_msgs": 1719,
+ "tokens_seen": 1669,
+ "tokens_tracked": 83,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -62,9 +62,9 @@
   "fast_creates": 0,
   "subs": 0,
   "errors": [
-   "15:02:18 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:02:18 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
-   "15:03:18 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:03:18 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
-   "15:04:18 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:04:18 GMT', 'content-type': 'application/json', 'content-length': '71', 'co"
+   "15:07:19 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:07:19 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
+   "15:08:19 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:08:19 GMT', 'content-type': 'application/json', 'content-length': '71', 'co",
+   "15:09:19 Handshake status 429 Too Many Requests -+-+- {'date': 'Fri, 30 Oct 2026 15:09:19 GMT', 'content-type': 'application/json', 'content-length': '71', 'co"
   ]
  },
  "follow_buys_seen": 0,
@@ -74,15 +74,15 @@
   "bench_by_reason": {
    "mcap_alto": 1
   },
-  "source_down_s": 12095,
+  "source_down_s": 12398,
   "exec_fails_recent": 0
  },
- "st_requests": 39,
+ "st_requests": 40,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 2,
-  "create": 1646,
+  "create": 1716,
   "buy": 1
  },
  "stream_samples": [
