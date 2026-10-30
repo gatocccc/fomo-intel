@@ -1,4 +1,3 @@
-{"ts": 1793347458.2954752, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.135, "shock_px": 97.686, "ch1h": -0.009887365577697316, "ch4h": 0.003927445610045988}
 {"ts": 1793347458.2956417, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.135, "shock_px": 97.686, "ch1h": -0.009887365577697316, "ch4h": 0.003927445610045988}
 {"ts": 1793347533.2350578, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.02, "shock_px": 97.686, "ch1h": -0.009757491630603465, "ch4h": 0.002189901661019622}
 {"ts": 1793347533.2352157, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.02, "shock_px": 97.686, "ch1h": -0.009757491630603465, "ch4h": 0.002189901661019622}
@@ -198,3 +197,4 @@
 {"ts": 1793353296.1958287, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 96.892, "shock_px": 97.686, "ch1h": -0.0018851403553953316, "ch4h": -0.01442376157054226}
 {"ts": 1793353296.1960142, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 96.892, "shock_px": 97.686, "ch1h": -0.0018851403553953316, "ch4h": -0.01442376157054226}
 {"ts": 1793353325.8032272, "kind": "shock_off", "since": 1793308697.289756, "quiet": false, "recovered": false, "stale": true}
+{"ts": 1793354000.2790923, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: CZ says Binance may use its over 1 billion stake in Elon Musk s SpaceX SPCX to cover losses following major hack. @WatcherGuru", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw+llm", "confirmed": true}}

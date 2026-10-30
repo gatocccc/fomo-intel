@@ -2,6 +2,17 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793354000.2790923,
+   "src": "tg:WatcherGuru",
+   "title": "JUST IN: CZ says Binance may use its over 1 billion stake in Elon Musk s SpaceX SPCX to cover losses following major hack. @WatcherGuru",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793352980.3201873,
    "src": "tg:WatcherGuru",
    "title": "JUST IN: Binance founder CZ tells Elon Musk to please stop trolling following major hack. Show a little support. @WatcherGuru",
@@ -68,21 +79,21 @@
    ]
   }
  ],
- "ts": 1793353760.9170892,
- "bear_score": 8,
+ "ts": 1793354045.7677352,
+ "bear_score": 10,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.942,
-   "ch15m": 0.00023731156945494547,
-   "ch1h": -0.001627188465499474,
-   "ch4h": -0.014466527728358658
+   "px": 96.81,
+   "ch15m": -0.0018970245582200507,
+   "ch1h": -0.006934329031860975,
+   "ch4h": -0.011386264998723417
   },
   "BTC": {
-   "px": 77654.0,
-   "ch15m": 0.0006829808894215361,
-   "ch1h": -0.0029915133462580235,
-   "ch4h": -0.012801769618997927
+   "px": 77642.0,
+   "ch15m": -0.0007593209868599349,
+   "ch1h": -0.005291140862212496,
+   "ch4h": -0.01164759346716393
   }
  },
  "mode": "live",
