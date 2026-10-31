@@ -1,5 +1,6 @@
 #!/bin/bash
 # 31/10 21:39 ART — sesión: stools vs libro, GTA6 precio + anti-rug, escaneo (veto).
+cd /root/fomo_intel || exit 1; set -a; . ./.env; set +a
 python3 - <<'PY'
 import json, glob, os
 s = json.load(open("state/plan_lloyd_summary.json")); print("libro eq", s.get("equity_usd"), [(p.get("symbol"), p.get("value_usd")) for p in s.get("positions", [])])
