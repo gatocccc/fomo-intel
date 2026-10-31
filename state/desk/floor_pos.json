@@ -103,5 +103,26 @@
   "sig": "52rmALo8cXVb4Df3QgrXim1abfMd5YvNGrrF2qusxUidgPLYzJWkQ2t5Te6CPE9nY1trtzAKzSz6Es3DDA5VJC6m",
   "latency_s": 2.4,
   "last_px": 2.800530552535651e-08
+ },
+ "1NRbGWQNmo5EjkWGkHM8fcFPFXwGVBscohLA3qapump": {
+  "ts": 1793461069.5643077,
+  "mint": "1NRbGWQNmo5EjkWGkHM8fcFPFXwGVBscohLA3qapump",
+  "sym": "HAMSTER",
+  "name": "Hamster",
+  "curve": "CiLSexzVeGkFGtkQhzsdWtZKww9zd991fiynKi1Mhat4",
+  "tokens": 893422.148209,
+  "tokens0": 893422.148209,
+  "cost_sol": 0.027656579,
+  "entry_px": 3.0955779477195415e-08,
+  "ref_px": 2.7958993476234855e-08,
+  "slip_pct": 10.72,
+  "age_at_entry_s": 51,
+  "mcap_sol_entry": 27.96,
+  "peak_px": 3.0955779477195415e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "61qcgNeZpJB3L525cnXJxggSiRQk3tjqqyUjhhAtqhyZFkp1K8YKecHNsCCB9ymk1gf35W4J1LULXg4TeR1vvanL",
+  "latency_s": 2.2,
+  "last_px": 2.8005611214662916e-08
  }
 }
