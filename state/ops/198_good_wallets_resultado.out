@@ -1,0 +1,86 @@
+== 198_good_wallets_resultado 2026-10-31T00:26:03Z ==
+compras 294881 · billeteras 107 · A 146575 · B 148306
+buenas 14 de 102
+buenas k=2: 157 eventos · half2x_30m -16.99% n=157 | tp2_sl30_6h -10.93% n=157 | hold_30m -20.84% n=157
+buenas k=3: 22 eventos · half2x_30m -7.75% n=22 | tp2_sl30_6h 13.27% n=22 | hold_30m -23.59% n=22
+buenas k=4: 3 eventos · half2x_30m -38.28% n=3 | tp2_sl30_6h -34.0% n=3 | hold_30m -37.66% n=3
+no_buenas k=2: 250 eventos · half2x_30m -27.38% n=250 | tp2_sl30_6h -12.96% n=250 | hold_30m -42.02% n=250
+no_buenas k=3: 250 eventos · half2x_30m -23.62% n=249 | tp2_sl30_6h -11.98% n=249 | hold_30m -41.17% n=249
+no_buenas k=4: 250 eventos · half2x_30m -19.06% n=249 | tp2_sl30_6h -11.54% n=249 | hold_30m -28.25% n=249
+azar k=1: {'half2x_30m': {'n': 248, 'win_pct': 25.0, 'mean_pct': -19.35, 'median_pct': -49.7, 't': -5.77}, 'tp2_sl30_6h': {'n': 248, 'win_pct': 20.2, 'mean_pct': -6.99, 'median_pct': -34.0, 't': -2.16}, 'hold_30m': {'n': 248, 'win_pct': 12.5, 'mean_pct': -34.43, 'median_pct': -55.24, 't': -7.7}}
+listo 1005 s
+billeteras 102 buenas 14
+top calidad: [('862TYS', 30, 106.39, 1.61, 2.2), ('ALauG4', 29, 78.03, 1.14, 30.0), ('GJA1HE', 30, 71.46, 1.11, 65.1), ('67Nwfi', 30, 67.78, 1.07, 79.8), ('DAEdBm', 29, 66.98, 1.16, 23.6), ('J6TDXv', 26, 61.2, 0.92, 2.1), ('87rRds', 30, 58.01, 2.56, 54.7), ('DuARUp', 29, 51.78, 1.34, 24.3)]
+mediana de compras/día buenas: 24.3
+
+## buenas_k2 {'events': 157, 'with_prices': 157}
+  half2x_30m               {'n': 157, 'win_pct': 26.8, 'mean_pct': -16.99, 'median_pct': -54.0, 't': -3.31}
+  half2x_30m_mitad1        {'n': 78, 'win_pct': 23.1, 'mean_pct': -25.5, 'median_pct': -54.0, 't': -4.92}
+  half2x_30m_mitad2        {'n': 79, 'win_pct': 30.4, 'mean_pct': -8.59, 'median_pct': -54.0, 't': -0.98}
+  tp2_sl30_6h              {'n': 157, 'win_pct': 17.8, 'mean_pct': -10.93, 'median_pct': -34.0, 't': -2.79}
+  tp2_sl30_6h_mitad1       {'n': 78, 'win_pct': 17.9, 'mean_pct': -11.24, 'median_pct': -34.0, 't': -2.05}
+  tp2_sl30_6h_mitad2       {'n': 79, 'win_pct': 17.7, 'mean_pct': -10.62, 'median_pct': -34.0, 't': -1.9}
+  hold_30m                 {'n': 157, 'win_pct': 22.3, 'mean_pct': -20.84, 'median_pct': -40.74, 't': -2.69}
+  hold_30m_mitad1          {'n': 78, 'win_pct': 15.4, 'mean_pct': -37.19, 'median_pct': -49.95, 't': -6.2}
+  hold_30m_mitad2          {'n': 79, 'win_pct': 29.1, 'mean_pct': -4.7, 'median_pct': -31.2, 't': -0.34}
+
+## buenas_k3 {'events': 22, 'with_prices': 22}
+  half2x_30m               {'n': 22, 'win_pct': 40.9, 'mean_pct': -7.75, 'median_pct': -54.0, 't': -0.64}
+  half2x_30m_mitad1        {'n': 10, 'win_pct': 40.0, 'mean_pct': -17.35, 'median_pct': -54.0, 't': -1.19}
+  half2x_30m_mitad2        {'n': 12, 'win_pct': 41.7, 'mean_pct': 0.25, 'median_pct': -28.49, 't': 0.01}
+  tp2_sl30_6h              {'n': 22, 'win_pct': 36.4, 'mean_pct': 13.27, 'median_pct': -34.0, 't': 1.0}
+  tp2_sl30_6h_mitad1       {'n': 10, 'win_pct': 40.0, 'mean_pct': 18.0, 'median_pct': -34.0, 't': 0.89}
+  tp2_sl30_6h_mitad2       {'n': 12, 'win_pct': 33.3, 'mean_pct': 9.33, 'median_pct': -34.0, 't': 0.53}
+  hold_30m                 {'n': 22, 'win_pct': 27.3, 'mean_pct': -23.59, 'median_pct': -43.0, 't': -1.82}
+  hold_30m_mitad1          {'n': 10, 'win_pct': 20.0, 'mean_pct': -40.17, 'median_pct': -60.03, 't': -3.09}
+  hold_30m_mitad2          {'n': 12, 'win_pct': 33.3, 'mean_pct': -9.78, 'median_pct': -12.66, 't': -0.48}
+
+## buenas_k4 {'events': 3, 'with_prices': 3}
+  half2x_30m               {'n': 3, 'win_pct': 0.0, 'mean_pct': -38.28, 'median_pct': -54.0, 't': -2.98}
+  half2x_30m_mitad1        {'n': 1, 'win_pct': 0.0, 'mean_pct': -54.0, 'median_pct': -54.0, 't': None}
+  half2x_30m_mitad2        {'n': 2, 'win_pct': 0.0, 'mean_pct': -30.42, 'median_pct': -30.42, 't': -1.83}
+  tp2_sl30_6h              {'n': 3, 'win_pct': 0.0, 'mean_pct': -34.0, 'median_pct': -34.0, 't': None}
+  tp2_sl30_6h_mitad1       {'n': 1, 'win_pct': 0.0, 'mean_pct': -34.0, 'median_pct': -34.0, 't': None}
+  tp2_sl30_6h_mitad2       {'n': 2, 'win_pct': 0.0, 'mean_pct': -34.0, 'median_pct': -34.0, 't': None}
+  hold_30m                 {'n': 3, 'win_pct': 0.0, 'mean_pct': -37.66, 'median_pct': -32.79, 't': -2.38}
+  hold_30m_mitad1          {'n': 1, 'win_pct': 0.0, 'mean_pct': -73.35, 'median_pct': -73.35, 't': None}
+  hold_30m_mitad2          {'n': 2, 'win_pct': 0.0, 'mean_pct': -19.82, 'median_pct': -19.82, 't': -2.16}
+
+## no_buenas_k2 {'events': 250, 'with_prices': 250}
+  half2x_30m               {'n': 250, 'win_pct': 20.0, 'mean_pct': -27.38, 'median_pct': -54.0, 't': -6.86}
+  half2x_30m_mitad1        {'n': 146, 'win_pct': 21.9, 'mean_pct': -22.62, 'median_pct': -54.0, 't': -3.6}
+  half2x_30m_mitad2        {'n': 104, 'win_pct': 17.3, 'mean_pct': -34.07, 'median_pct': -54.0, 't': -9.19}
+  tp2_sl30_6h              {'n': 250, 'win_pct': 15.2, 'mean_pct': -12.96, 'median_pct': -34.0, 't': -4.42}
+  tp2_sl30_6h_mitad1       {'n': 146, 'win_pct': 17.1, 'mean_pct': -10.19, 'median_pct': -34.0, 't': -2.54}
+  tp2_sl30_6h_mitad2       {'n': 104, 'win_pct': 12.5, 'mean_pct': -16.86, 'median_pct': -34.0, 't': -4.02}
+  hold_30m                 {'n': 250, 'win_pct': 9.6, 'mean_pct': -42.02, 'median_pct': -63.88, 't': -6.44}
+  hold_30m_mitad1          {'n': 146, 'win_pct': 11.0, 'mean_pct': -35.12, 'median_pct': -61.89, 't': -3.33}
+  hold_30m_mitad2          {'n': 104, 'win_pct': 7.7, 'mean_pct': -51.71, 'median_pct': -66.65, 't': -10.42}
+
+## no_buenas_k3 {'events': 250, 'with_prices': 249}
+  half2x_30m               {'n': 249, 'win_pct': 24.5, 'mean_pct': -23.62, 'median_pct': -54.0, 't': -6.31}
+  half2x_30m_mitad1        {'n': 128, 'win_pct': 26.6, 'mean_pct': -17.88, 'median_pct': -54.0, 't': -2.9}
+  half2x_30m_mitad2        {'n': 121, 'win_pct': 22.3, 'mean_pct': -29.69, 'median_pct': -54.0, 't': -7.34}
+  tp2_sl30_6h              {'n': 249, 'win_pct': 16.5, 'mean_pct': -11.98, 'median_pct': -34.0, 't': -3.93}
+  tp2_sl30_6h_mitad1       {'n': 128, 'win_pct': 18.8, 'mean_pct': -9.45, 'median_pct': -34.0, 't': -2.11}
+  tp2_sl30_6h_mitad2       {'n': 121, 'win_pct': 14.0, 'mean_pct': -14.67, 'median_pct': -34.0, 't': -3.58}
+  hold_30m                 {'n': 249, 'win_pct': 13.3, 'mean_pct': -41.17, 'median_pct': -65.29, 't': -7.47}
+  hold_30m_mitad1          {'n': 128, 'win_pct': 14.8, 'mean_pct': -33.23, 'median_pct': -64.29, 't': -3.44}
+  hold_30m_mitad2          {'n': 121, 'win_pct': 11.6, 'mean_pct': -49.56, 'median_pct': -66.46, 't': -10.35}
+
+## no_buenas_k4 {'events': 250, 'with_prices': 249}
+  half2x_30m               {'n': 249, 'win_pct': 24.1, 'mean_pct': -19.06, 'median_pct': -54.0, 't': -3.58}
+  half2x_30m_mitad1        {'n': 117, 'win_pct': 24.8, 'mean_pct': -18.23, 'median_pct': -54.0, 't': -2.09}
+  half2x_30m_mitad2        {'n': 132, 'win_pct': 23.5, 'mean_pct': -19.8, 'median_pct': -54.0, 't': -3.1}
+  tp2_sl30_6h              {'n': 249, 'win_pct': 17.3, 'mean_pct': -11.54, 'median_pct': -34.0, 't': -3.7}
+  tp2_sl30_6h_mitad1       {'n': 117, 'win_pct': 18.8, 'mean_pct': -9.56, 'median_pct': -34.0, 't': -2.03}
+  tp2_sl30_6h_mitad2       {'n': 132, 'win_pct': 15.9, 'mean_pct': -13.29, 'median_pct': -34.0, 't': -3.21}
+  hold_30m                 {'n': 249, 'win_pct': 18.9, 'mean_pct': -28.25, 'median_pct': -71.85, 't': -3.16}
+  hold_30m_mitad1          {'n': 117, 'win_pct': 20.5, 'mean_pct': -23.48, 'median_pct': -73.14, 't': -1.54}
+  hold_30m_mitad2          {'n': 132, 'win_pct': 17.4, 'mean_pct': -32.48, 'median_pct': -70.93, 't': -3.22}
+
+## azar_k1 {'events': None, 'with_prices': None}
+  half2x_30m               {'n': 248, 'win_pct': 25.0, 'mean_pct': -19.35, 'median_pct': -49.7, 't': -5.77}
+  tp2_sl30_6h              {'n': 248, 'win_pct': 20.2, 'mean_pct': -6.99, 'median_pct': -34.0, 't': -2.16}
+  hold_30m                 {'n': 248, 'win_pct': 12.5, 'mean_pct': -34.43, 'median_pct': -55.24, 't': -7.7}
+== exit 0 ==

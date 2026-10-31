@@ -1,0 +1,1369 @@
+{
+ "generated": "2026-10-31 00:23 UTC",
+ "wallets": 102,
+ "good": 14,
+ "split_ts": 1792096362.5,
+ "skill": {
+  "5YRgrP3mjGzrzirYYN5HAQH19cTYREYwGxW6XRJQUzij": {
+   "n": 30,
+   "win_pct": 40.0,
+   "mean_pct": 3.37,
+   "median_pct": -10.61,
+   "t": 0.3,
+   "buys_A": 4910,
+   "buys_per_day": 327.0
+  },
+  "4xY9T1Q7foJzJsJ6YZDSsfp9zkzeZsXnxd45SixduMmr": {
+   "n": 30,
+   "win_pct": 10.0,
+   "mean_pct": -12.82,
+   "median_pct": -14.16,
+   "t": -7.93,
+   "buys_A": 330,
+   "buys_per_day": 22.0
+  },
+  "CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o": {
+   "n": 30,
+   "win_pct": 16.7,
+   "mean_pct": -21.3,
+   "median_pct": -50.0,
+   "t": -1.35,
+   "buys_A": 9409,
+   "buys_per_day": 626.6
+  },
+  "EqiFgyNw6kgrmYstWyrP8VjKhka7XEmKTZzHSmwpr1Zb": {
+   "n": 30,
+   "win_pct": 23.3,
+   "mean_pct": -11.08,
+   "median_pct": -44.81,
+   "t": -0.52,
+   "buys_A": 9458,
+   "buys_per_day": 629.9
+  },
+  "Bi4rd5FH5bYEN8scZ7wevxNZyNmKHdaBcvewdPFxYdLt": {
+   "n": 30,
+   "win_pct": 0.0,
+   "mean_pct": -48.21,
+   "median_pct": -49.61,
+   "t": -11.21,
+   "buys_A": 5552,
+   "buys_per_day": 369.8
+  },
+  "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9": {
+   "n": 30,
+   "win_pct": 6.7,
+   "mean_pct": -43.67,
+   "median_pct": -51.95,
+   "t": -6.18,
+   "buys_A": 8643,
+   "buys_per_day": 575.6
+  },
+  "BQVz7fQ1WsQmSTMY3umdPEPPTm1sdcBcX9sP7o6kPRmB": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -49.12,
+   "median_pct": -52.48,
+   "t": -7.46,
+   "buys_A": 4108,
+   "buys_per_day": 273.6
+  },
+  "67Nwfi9hgwqhxGoovT2JGLU67uxfomLwQAWncjXXzU6U": {
+   "n": 30,
+   "win_pct": 23.3,
+   "mean_pct": 67.78,
+   "median_pct": -44.69,
+   "t": 1.07,
+   "buys_A": 1198,
+   "buys_per_day": 79.8
+  },
+  "B32QbbdDAyhvUQzjcaM5j6ZVKwjCxAwGH5Xgvb9SJqnC": {
+   "n": 30,
+   "win_pct": 16.7,
+   "mean_pct": -31.33,
+   "median_pct": -52.9,
+   "t": -2.6,
+   "buys_A": 2006,
+   "buys_per_day": 133.6
+  },
+  "CgaA9a1JwAXJyfHuvZ7VW8YfTVRkdiT5mjBBSKcg7Rz5": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -25.72,
+   "median_pct": -41.48,
+   "t": -2.24,
+   "buys_A": 1448,
+   "buys_per_day": 96.4
+  },
+  "A3W8psibkTUvjxs4LRscbnjux6TFDXdvD4m4GsGpQ2KJ": {
+   "n": 29,
+   "win_pct": 27.6,
+   "mean_pct": 26.25,
+   "median_pct": -43.01,
+   "t": 0.8,
+   "buys_A": 493,
+   "buys_per_day": 32.8
+  },
+  "J9TYAsWWidbrcZybmLSfrLzryANf4CgJBLdvwdGuC8MB": {
+   "n": 30,
+   "win_pct": 56.7,
+   "mean_pct": 41.72,
+   "median_pct": 13.98,
+   "t": 1.81,
+   "buys_A": 4337,
+   "buys_per_day": 288.8
+  },
+  "98T65wcMEjoNLDTJszBHGZEX75QRe8QaANXokv4yw3Mp": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -44.18,
+   "median_pct": -62.98,
+   "t": -4.23,
+   "buys_A": 1135,
+   "buys_per_day": 75.6
+  },
+  "DAEdBmTPEKM6xkwfzC3d411QUe6coKpkND6UURa4CvHC": {
+   "n": 29,
+   "win_pct": 48.3,
+   "mean_pct": 66.98,
+   "median_pct": -0.52,
+   "t": 1.16,
+   "buys_A": 355,
+   "buys_per_day": 23.6
+  },
+  "78N177fzNJpp8pG49xDv1efYcTMSzo9tPTKEA9mAVkh2": {
+   "n": 30,
+   "win_pct": 16.7,
+   "mean_pct": -24.38,
+   "median_pct": -43.87,
+   "t": -1.8,
+   "buys_A": 4281,
+   "buys_per_day": 285.1
+  },
+  "6S8GezkxYUfZy9JPtYnanbcZTMB87Wjt1qx3c6ELajKC": {
+   "n": 30,
+   "win_pct": 20.0,
+   "mean_pct": -13.39,
+   "median_pct": -37.65,
+   "t": -0.76,
+   "buys_A": 304,
+   "buys_per_day": 20.2
+  },
+  "CkPFGv2Wv1vwdWjtXioEgb8jhZQfs3eVZez3QCetu7xD": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -48.58,
+   "median_pct": -52.67,
+   "t": -7.15,
+   "buys_A": 3739,
+   "buys_per_day": 249.0
+  },
+  "5ZuV8eqkvzYFVEKbLvGBdexL2tFv7E5BCd2HZpjqbdg": {
+   "n": 30,
+   "win_pct": 20.0,
+   "mean_pct": -6.32,
+   "median_pct": -66.72,
+   "t": -0.21,
+   "buys_A": 2907,
+   "buys_per_day": 193.6
+  },
+  "9cdZg6xR4c9kZiqKSzqjn4QHCXNQuC9HEWBzzMJ3mzqw": {
+   "n": 29,
+   "win_pct": 20.7,
+   "mean_pct": -37.4,
+   "median_pct": -64.37,
+   "t": -3.23,
+   "buys_A": 188,
+   "buys_per_day": 12.5
+  },
+  "BXNiM7pqt9Ld3b2Hc8iT3mA5bSwoe9CRrtkSUs15SLWN": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -46.86,
+   "median_pct": -63.39,
+   "t": -6.48,
+   "buys_A": 170,
+   "buys_per_day": 11.3
+  },
+  "F5TjPySiUJMdvqMZHnPP85Rc1vErDGV5FR5P2vdVm429": {
+   "n": 30,
+   "win_pct": 26.7,
+   "mean_pct": -20.13,
+   "median_pct": -47.7,
+   "t": -1.32,
+   "buys_A": 299,
+   "buys_per_day": 19.9
+  },
+  "PMJA8UQDyWTFw2Smhyp9jGA6aTaP7jKHR7BPudrgyYN": {
+   "n": 30,
+   "win_pct": 6.7,
+   "mean_pct": -10.02,
+   "median_pct": -43.6,
+   "t": -0.33,
+   "buys_A": 4145,
+   "buys_per_day": 276.1
+  },
+  "8rvAsDKeAcEjEkiZMug9k8v1y8mW6gQQiMobd89Uy7qR": {
+   "n": 30,
+   "win_pct": 26.7,
+   "mean_pct": 24.9,
+   "median_pct": -45.19,
+   "t": 0.43,
+   "buys_A": 468,
+   "buys_per_day": 31.2
+  },
+  "4nwfXw7n98jEQn93VWY7Cuf1jnn1scHXuXCPGVYS9k6T": {
+   "n": 30,
+   "win_pct": 20.0,
+   "mean_pct": 1.93,
+   "median_pct": -46.82,
+   "t": 0.06,
+   "buys_A": 468,
+   "buys_per_day": 31.2
+  },
+  "GM7Hrz2bDq33ezMtL6KGidSWZXMWgZ6qBuugkb5H8NvN": {
+   "n": 30,
+   "win_pct": 16.7,
+   "mean_pct": -18.87,
+   "median_pct": -68.98,
+   "t": -0.67,
+   "buys_A": 600,
+   "buys_per_day": 40.0
+  },
+  "B9K2wTQcRDLRLhMKFyRh2hPqHrr6VKiCC9yNGpkMUXrh": {
+   "n": 30,
+   "win_pct": 23.3,
+   "mean_pct": -21.86,
+   "median_pct": -35.27,
+   "t": -1.74,
+   "buys_A": 1402,
+   "buys_per_day": 93.4
+  },
+  "862TYSvRYoiHAK3F3WwTRYAfuGiQaGdxedN9AGvRGWo2": {
+   "n": 30,
+   "win_pct": 43.3,
+   "mean_pct": 106.39,
+   "median_pct": -2.3,
+   "t": 1.61,
+   "buys_A": 33,
+   "buys_per_day": 2.2
+  },
+  "CCUcjek5p6DLoH2YNtjizxYhAnStXAQAGVxhp1cYJF7w": {
+   "n": 30,
+   "win_pct": 30.0,
+   "mean_pct": -0.53,
+   "median_pct": -28.64,
+   "t": -0.03,
+   "buys_A": 296,
+   "buys_per_day": 19.7
+  },
+  "JAunzNqs3bVBcWDjDxfq9rgLzJMCadNXoaCgfzLGMtYs": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": 1.85,
+   "median_pct": -31.91,
+   "t": 0.09,
+   "buys_A": 158,
+   "buys_per_day": 10.5
+  },
+  "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk": {
+   "n": 30,
+   "win_pct": 26.7,
+   "mean_pct": 18.4,
+   "median_pct": -48.58,
+   "t": 0.44,
+   "buys_A": 432,
+   "buys_per_day": 28.8
+  },
+  "GGznouFGrtSETCzvt14gysyjZ2uYKBDVjMBaq8h1aCHG": {
+   "n": 22,
+   "win_pct": 31.8,
+   "mean_pct": -15.4,
+   "median_pct": -11.76,
+   "t": -2.63,
+   "buys_A": 47,
+   "buys_per_day": 3.1
+  },
+  "2W14ahXD3XBfWJchQ4K5NLXmguWWcTTUTuHDhEzeuvP3": {
+   "n": 30,
+   "win_pct": 23.3,
+   "mean_pct": -21.92,
+   "median_pct": -31.01,
+   "t": -2.34,
+   "buys_A": 193,
+   "buys_per_day": 12.9
+  },
+  "ADC1QV9raLnGGDbnWdnsxazeZ4Tsiho4vrWadYswA2ph": {
+   "n": 29,
+   "win_pct": 3.4,
+   "mean_pct": -42.71,
+   "median_pct": -47.67,
+   "t": -11.12,
+   "buys_A": 495,
+   "buys_per_day": 33.0
+  },
+  "2X4H5Y9C4Fy6Pf3wpq8Q4gMvLcWvfrrwDv2bdR8AAwQv": {
+   "n": 30,
+   "win_pct": 20.0,
+   "mean_pct": -4.9,
+   "median_pct": -49.99,
+   "t": -0.13,
+   "buys_A": 105,
+   "buys_per_day": 7.0
+  },
+  "6nhskL8RVpXzWXC7mcC1UXpe3ze2p6P6og1jXVGUW88s": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -15.29,
+   "median_pct": -35.68,
+   "t": -1.2,
+   "buys_A": 190,
+   "buys_per_day": 12.7
+  },
+  "5B79fMkcFeRTiwm7ehsZsFiKsC7m7n1Bgv9yLxPp9q2X": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -7.31,
+   "median_pct": -38.94,
+   "t": -0.27,
+   "buys_A": 1510,
+   "buys_per_day": 100.6
+  },
+  "2T5NgDDidkvhJQg8AHDi74uCFwgp25pYFMRZXBaCUNBH": {
+   "n": 30,
+   "win_pct": 40.0,
+   "mean_pct": -0.18,
+   "median_pct": -18.51,
+   "t": -0.02,
+   "buys_A": 901,
+   "buys_per_day": 60.0
+  },
+  "BtMBMPkoNbnLF9Xn552guQq528KKXcsNBNNBre3oaQtr": {
+   "n": 30,
+   "win_pct": 26.7,
+   "mean_pct": -14.38,
+   "median_pct": -32.72,
+   "t": -0.85,
+   "buys_A": 1573,
+   "buys_per_day": 104.8
+  },
+  "ardinRsN1mNYVeoJWTBsWeYeXvuR9UUDGMsCDKpb6AT": {
+   "n": 29,
+   "win_pct": 10.3,
+   "mean_pct": 22.55,
+   "median_pct": -58.4,
+   "t": 0.44,
+   "buys_A": 4474,
+   "buys_per_day": 298.0
+  },
+  "8oQoMhfBQnRspn7QtNAq2aPThRE4q94kLSTwaaFQvRgs": {
+   "n": 29,
+   "win_pct": 17.2,
+   "mean_pct": -30.4,
+   "median_pct": -56.06,
+   "t": -1.94,
+   "buys_A": 437,
+   "buys_per_day": 29.1
+  },
+  "DjM7Tu7whh6P3pGVBfDzwXAx2zaw51GJWrJE3PwtuN7s": {
+   "n": 30,
+   "win_pct": 26.7,
+   "mean_pct": 18.27,
+   "median_pct": -1.65,
+   "t": 0.94,
+   "buys_A": 57,
+   "buys_per_day": 3.8
+  },
+  "719sfKUjiMThumTt2u39VMGn612BZyCcwbM5Pe8SqFYz": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -41.52,
+   "median_pct": -58.8,
+   "t": -3.3,
+   "buys_A": 1025,
+   "buys_per_day": 68.3
+  },
+  "8MaVa9kdt3NW4Q5HyNAm1X5LbR8PQRVDc1W8NMVK88D5": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -13.07,
+   "median_pct": -44.11,
+   "t": -0.51,
+   "buys_A": 3753,
+   "buys_per_day": 249.9
+  },
+  "J6TDXvarvpBdPXTaTU8eJbtso1PUCYKGkVtMKUUY8iEa": {
+   "n": 26,
+   "win_pct": 34.6,
+   "mean_pct": 61.2,
+   "median_pct": -6.5,
+   "t": 0.92,
+   "buys_A": 31,
+   "buys_per_day": 2.1
+  },
+  "EHg5YkU2SZBTvuT87rUsvxArGp3HLeye1fXaSDfuMyaf": {
+   "n": 30,
+   "win_pct": 20.0,
+   "mean_pct": -15.81,
+   "median_pct": -51.72,
+   "t": -0.91,
+   "buys_A": 812,
+   "buys_per_day": 54.1
+  },
+  "5hAgYC8TJCcEZV7LTXAzkTrm7YL29YXyQQJPCNrG84zM": {
+   "n": 29,
+   "win_pct": 17.2,
+   "mean_pct": -25.97,
+   "median_pct": -42.92,
+   "t": -2.51,
+   "buys_A": 1915,
+   "buys_per_day": 127.5
+  },
+  "CvNiezB8hofusHCKqu8irJ6t2FKY7VjzpSckofMzk5mB": {
+   "n": 30,
+   "win_pct": 10.0,
+   "mean_pct": -33.6,
+   "median_pct": -40.83,
+   "t": -3.5,
+   "buys_A": 3014,
+   "buys_per_day": 200.7
+  },
+  "EA4MXkyF8C2NzY8fw2acJPuarmoU271KRCCAYpLzMBJr": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -0.78,
+   "median_pct": -59.73,
+   "t": -0.02,
+   "buys_A": 316,
+   "buys_per_day": 21.0
+  },
+  "86AEJExyjeNNgcp7GrAvCXTDicf5aGWgoERbXFiG1EdD": {
+   "n": 29,
+   "win_pct": 20.7,
+   "mean_pct": -26.64,
+   "median_pct": -71.42,
+   "t": -1.17,
+   "buys_A": 1188,
+   "buys_per_day": 79.1
+  },
+  "G3CaEuingKVjqsoHf7SpSQuLvRAJA69dikaQYxBqvwEr": {
+   "n": 30,
+   "win_pct": 3.3,
+   "mean_pct": -65.8,
+   "median_pct": -70.63,
+   "t": -13.71,
+   "buys_A": 155,
+   "buys_per_day": 10.3
+  },
+  "95TWoKkvv2z85EXBzd2z6NwbxH2f54AvwuCA9x3NoKep": {
+   "n": 2,
+   "win_pct": 0.0,
+   "mean_pct": -49.78,
+   "median_pct": -49.78,
+   "t": -1.43,
+   "buys_A": 2,
+   "buys_per_day": 0.1
+  },
+  "B9oKseVKRntTvfADyaUoH7oVmoyVbBfUf4NKyQc4KK2D": {
+   "n": 30,
+   "win_pct": 16.7,
+   "mean_pct": -14.6,
+   "median_pct": -59.45,
+   "t": -0.67,
+   "buys_A": 658,
+   "buys_per_day": 43.8
+  },
+  "4yo9CUuTBbds9NFhZd4MzPiZZkUvveXdTnAH8qMsE8ku": {
+   "n": 30,
+   "win_pct": 20.0,
+   "mean_pct": -0.94,
+   "median_pct": -36.95,
+   "t": -0.04,
+   "buys_A": 971,
+   "buys_per_day": 64.7
+  },
+  "53BnNc49Ajgstciq3CRoyxuBpkkW1r8pgPyvr7JGYnsh": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -19.42,
+   "median_pct": -57.61,
+   "t": -0.8,
+   "buys_A": 324,
+   "buys_per_day": 21.6
+  },
+  "FsG3BaPmRTdSrPaivbgJsFNCCa8cPfkUtk8VLWXkHpHP": {
+   "n": 30,
+   "win_pct": 23.3,
+   "mean_pct": -20.02,
+   "median_pct": -55.78,
+   "t": -1.01,
+   "buys_A": 1017,
+   "buys_per_day": 67.7
+  },
+  "8nqtxpFpuXwfXG4pBLsDkkuMMPK9FjSkBMCn542HiM3v": {
+   "n": 29,
+   "win_pct": 20.7,
+   "mean_pct": 11.02,
+   "median_pct": -37.58,
+   "t": 0.27,
+   "buys_A": 359,
+   "buys_per_day": 23.9
+  },
+  "CAPn1yH4oSywsxGU456jfgTrSSUidf9jgeAnHceNUJdw": {
+   "n": 30,
+   "win_pct": 10.0,
+   "mean_pct": -48.68,
+   "median_pct": -64.89,
+   "t": -5.38,
+   "buys_A": 1324,
+   "buys_per_day": 88.2
+  },
+  "GNrmKZCxYyNiSUsjduwwPJzhed3LATjciiKVuSGrsHEC": {
+   "n": 30,
+   "win_pct": 3.3,
+   "mean_pct": -58.76,
+   "median_pct": -64.06,
+   "t": -11.16,
+   "buys_A": 246,
+   "buys_per_day": 16.4
+  },
+  "5fHJszey2UdB2nETS1y6NS2wSG4ic9byKtbgJzaYzGeV": {
+   "n": 29,
+   "win_pct": 17.2,
+   "mean_pct": -21.23,
+   "median_pct": -19.25,
+   "t": -3.85,
+   "buys_A": 1499,
+   "buys_per_day": 99.8
+  },
+  "951wq3qDowjKHaycrNaiRB5WpovYVKXnqhnrcKPh46zt": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -38.84,
+   "median_pct": -56.83,
+   "t": -3.88,
+   "buys_A": 1141,
+   "buys_per_day": 76.0
+  },
+  "ALauG4FwEYDgSXd5Hen6kvuWSCdUi2fYNSNqM1Ci31wE": {
+   "n": 29,
+   "win_pct": 27.6,
+   "mean_pct": 78.03,
+   "median_pct": -44.61,
+   "t": 1.14,
+   "buys_A": 450,
+   "buys_per_day": 30.0
+  },
+  "G6fUXjMKPJzCY1rveAE6Qm7wy5U3vZgKDJmN1VPAdiZC": {
+   "n": 29,
+   "win_pct": 20.7,
+   "mean_pct": -22.58,
+   "median_pct": -43.86,
+   "t": -1.61,
+   "buys_A": 376,
+   "buys_per_day": 25.0
+  },
+  "6TAHDM5Tod7dBTZdYQxzgJZKxxPfiNV9udPHMiUNumyK": {
+   "n": 30,
+   "win_pct": 10.0,
+   "mean_pct": -49.03,
+   "median_pct": -56.19,
+   "t": -7.07,
+   "buys_A": 2449,
+   "buys_per_day": 163.1
+  },
+  "GJA1HEbxGnqBhBifH9uQauzXSB53to5rhDrzmKxhSU65": {
+   "n": 30,
+   "win_pct": 43.3,
+   "mean_pct": 71.46,
+   "median_pct": -12.51,
+   "t": 1.11,
+   "buys_A": 977,
+   "buys_per_day": 65.1
+  },
+  "2e1w3Xo441Ytvwn54wCn8itAXwCKbiizc9ynGEv14Vis": {
+   "n": 30,
+   "win_pct": 10.0,
+   "mean_pct": -55.3,
+   "median_pct": -59.1,
+   "t": -9.93,
+   "buys_A": 401,
+   "buys_per_day": 26.7
+  },
+  "xyzfhxfy8NhfeNG3Um3WaUvFXzNuHkrhrZMD8dsStB6": {
+   "n": 30,
+   "win_pct": 6.7,
+   "mean_pct": -38.3,
+   "median_pct": -44.45,
+   "t": -3.82,
+   "buys_A": 3079,
+   "buys_per_day": 205.1
+  },
+  "5d3jQcuUvsuHyZkhdp78FFqc7WogrzZpTtec1X9VNkuE": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -42.01,
+   "median_pct": -45.23,
+   "t": -6.46,
+   "buys_A": 35,
+   "buys_per_day": 2.3
+  },
+  "Dvbv5TdAyPpJk16X9mUxWFVicYtCUxTLhuof8TGuUaRv": {
+   "n": 29,
+   "win_pct": 69.0,
+   "mean_pct": 32.97,
+   "median_pct": 17.78,
+   "t": 2.87,
+   "buys_A": 189,
+   "buys_per_day": 12.6
+  },
+  "A38dM3RtNpewkwkWJeyj8C9c8yWtgaaAdh4Rdj1SXg3M": {
+   "n": 10,
+   "win_pct": 40.0,
+   "mean_pct": -1.15,
+   "median_pct": -3.36,
+   "t": -0.2,
+   "buys_A": 51,
+   "buys_per_day": 3.4
+  },
+  "4fZFcK8ms3bFMpo1ACzEUz8bH741fQW4zhAMGd5yZMHu": {
+   "n": 30,
+   "win_pct": 13.3,
+   "mean_pct": -38.98,
+   "median_pct": -37.9,
+   "t": -6.32,
+   "buys_A": 512,
+   "buys_per_day": 34.1
+  },
+  "zhYnXqK3MNSmwS3yxSvPmY5kUa1n2WUaCJgYUDrAHkL": {
+   "n": 20,
+   "win_pct": 30.0,
+   "mean_pct": 23.35,
+   "median_pct": -20.7,
+   "t": 0.49,
+   "buys_A": 37,
+   "buys_per_day": 2.5
+  },
+  "3bzaJd5yZG73EVDz8xosQb7gfZm2LN5auFGh6wnP1n1f": {
+   "n": 30,
+   "win_pct": 43.3,
+   "mean_pct": 27.36,
+   "median_pct": -11.56,
+   "t": 0.95,
+   "buys_A": 206,
+   "buys_per_day": 13.7
+  },
+  "7NnaXghjuU92gM9kmwXysqa5HboyZuR2LTaBnvazFxSH": {
+   "n": 28,
+   "win_pct": 42.9,
+   "mean_pct": -13.92,
+   "median_pct": -5.08,
+   "t": -1.4,
+   "buys_A": 101,
+   "buys_per_day": 6.7
+  },
+  "5vg7he5HibvsAW86wfiuP6jw7VwKmUAnP6P93mVCdpJu": {
+   "n": 27,
+   "win_pct": 11.1,
+   "mean_pct": -39.11,
+   "median_pct": -64.13,
+   "t": -2.49,
+   "buys_A": 236,
+   "buys_per_day": 15.7
+  },
+  "EeXvxkcGqMDZeTaVeawzxm9mbzZwqDUMmfG3bF7uzumH": {
+   "n": 30,
+   "win_pct": 23.3,
+   "mean_pct": 25.14,
+   "median_pct": -32.22,
+   "t": 0.75,
+   "buys_A": 7420,
+   "buys_per_day": 494.2
+  },
+  "CxgPWvH2GoEDENELne2XKAR2z2Fr4shG2uaeyqZceGve": {
+   "n": 27,
+   "win_pct": 25.9,
+   "mean_pct": -23.23,
+   "median_pct": -18.95,
+   "t": -3.15,
+   "buys_A": 509,
+   "buys_per_day": 33.9
+  },
+  "4DdrfiDHpmx55i4SPssxVzS9ZaKLb8qr45NKY9Er9nNh": {
+   "n": 29,
+   "win_pct": 17.2,
+   "mean_pct": -9.16,
+   "median_pct": -10.5,
+   "t": -0.82,
+   "buys_A": 1009,
+   "buys_per_day": 67.2
+  },
+  "FAicXNV5FVqtfbpn4Zccs71XcfGeyxBSGbqLDyDJZjke": {
+   "n": 28,
+   "win_pct": 10.7,
+   "mean_pct": -38.65,
+   "median_pct": -53.11,
+   "t": -3.84,
+   "buys_A": 1751,
+   "buys_per_day": 116.6
+  },
+  "H31vEBxSJk1nQdUN11qZgZyhScyShhscKhvhZZU3dQoU": {
+   "n": 29,
+   "win_pct": 10.3,
+   "mean_pct": -44.62,
+   "median_pct": -54.48,
+   "t": -6.42,
+   "buys_A": 3675,
+   "buys_per_day": 244.8
+  },
+  "99xnE2zEFi8YhmKDaikc1EvH6ELTQJppnqUwMzmpLXrs": {
+   "n": 28,
+   "win_pct": 14.3,
+   "mean_pct": -29.11,
+   "median_pct": -42.55,
+   "t": -2.34,
+   "buys_A": 1121,
+   "buys_per_day": 74.7
+  },
+  "215nhcAHjQQGgwpQSJQ7zR26etbjjtVdW74NLzwEgQjP": {
+   "n": 28,
+   "win_pct": 60.7,
+   "mean_pct": 35.53,
+   "median_pct": 7.79,
+   "t": 1.81,
+   "buys_A": 274,
+   "buys_per_day": 18.2
+  },
+  "4Be9CvxqHW6BYiRAxW9Q3xu1ycTMWaL5z8NX4HR3ha7t": {
+   "n": 29,
+   "win_pct": 69.0,
+   "mean_pct": 44.4,
+   "median_pct": 19.53,
+   "t": 2.41,
+   "buys_A": 91,
+   "buys_per_day": 6.1
+  },
+  "Be24Gbf5KisDk1LcWWZsBn8dvB816By7YzYF5zWZnRR6": {
+   "n": 30,
+   "win_pct": 56.7,
+   "mean_pct": 40.09,
+   "median_pct": 6.05,
+   "t": 1.43,
+   "buys_A": 103,
+   "buys_per_day": 6.9
+  },
+  "9iaawVBEsFG35PSwd4PahwT8fYNQe9XYuRdWm872dUqY": {
+   "n": 30,
+   "win_pct": 10.0,
+   "mean_pct": -38.65,
+   "median_pct": -43.37,
+   "t": -5.95,
+   "buys_A": 1029,
+   "buys_per_day": 68.5
+  },
+  "DEdEW3SMPU2dCfXEcgj2YppmX9H3bnMDJaU4ctn2BQDQ": {
+   "n": 30,
+   "win_pct": 46.7,
+   "mean_pct": 15.4,
+   "median_pct": -2.72,
+   "t": 1.37,
+   "buys_A": 249,
+   "buys_per_day": 16.6
+  },
+  "7Js5gmq57y9jG2sseKrAeJt3vbncSWSFFHDEsyJDnyVm": {
+   "n": 30,
+   "win_pct": 36.7,
+   "mean_pct": 6.94,
+   "median_pct": -25.43,
+   "t": 0.23,
+   "buys_A": 7817,
+   "buys_per_day": 520.6
+  },
+  "87rRdssFiTJKY4MGARa4G5vQ31hmR7MxSmhzeaJ5AAxJ": {
+   "n": 30,
+   "win_pct": 70.0,
+   "mean_pct": 58.01,
+   "median_pct": 32.18,
+   "t": 2.56,
+   "buys_A": 821,
+   "buys_per_day": 54.7
+  },
+  "H5kB62K51wDU5XabVkiZJXEr8jtkcU4rxtpC6y4gh6td": {
+   "n": 4,
+   "win_pct": 0.0,
+   "mean_pct": -26.5,
+   "median_pct": -8.73,
+   "t": -1.47,
+   "buys_A": 8,
+   "buys_per_day": 0.5
+  },
+  "8deJ9xeUvXSJwicYptA9mHsU2rN2pDx37KWzkDkEXhU6": {
+   "n": 29,
+   "win_pct": 13.8,
+   "mean_pct": -12.93,
+   "median_pct": -14.05,
+   "t": -1.16,
+   "buys_A": 1051,
+   "buys_per_day": 70.0
+  },
+  "6vbrTLsWy76TxDQAUKLqZrPohQuq6EVaJgfGzR82paFa": {
+   "n": 21,
+   "win_pct": 66.7,
+   "mean_pct": 12.93,
+   "median_pct": 6.0,
+   "t": 0.87,
+   "buys_A": 97,
+   "buys_per_day": 6.5
+  },
+  "DuARUpsEzdVbVpSnbGipLJvWxaXUCPLDJDjNov6Rc6s6": {
+   "n": 29,
+   "win_pct": 51.7,
+   "mean_pct": 51.78,
+   "median_pct": 4.68,
+   "t": 1.34,
+   "buys_A": 365,
+   "buys_per_day": 24.3
+  },
+  "7bwGevcZDG2nKueEUkQQCLjmGNQ5W59KC8tFaLYAHayQ": {
+   "n": 30,
+   "win_pct": 16.7,
+   "mean_pct": -39.69,
+   "median_pct": -41.62,
+   "t": -4.92,
+   "buys_A": 2018,
+   "buys_per_day": 134.4
+  },
+  "HVaeUPbAwFhZnY8T3MrUzTWqpHiAbTU1NACmCQdJrqZp": {
+   "n": 28,
+   "win_pct": 32.1,
+   "mean_pct": -17.1,
+   "median_pct": -18.64,
+   "t": -1.55,
+   "buys_A": 52,
+   "buys_per_day": 3.5
+  },
+  "CE44oKS3wpUerx8afyeii56u5oQjBLZknzm4Q2CYHUz9": {
+   "n": 29,
+   "win_pct": 44.8,
+   "mean_pct": 32.13,
+   "median_pct": -9.47,
+   "t": 1.19,
+   "buys_A": 521,
+   "buys_per_day": 34.7
+  },
+  "3qFD7tnVLqQXvakXUec2jmvQb5D6Tvtbo62vFyfFvVax": {
+   "n": 30,
+   "win_pct": 33.3,
+   "mean_pct": -7.85,
+   "median_pct": -4.66,
+   "t": -1.19,
+   "buys_A": 805,
+   "buys_per_day": 53.6
+  },
+  "8uRfJP6V7D9ufu2ck4fyFeivFPzu6VvaBTAHoCXCsGi4": {
+   "n": 30,
+   "win_pct": 20.0,
+   "mean_pct": 3.36,
+   "median_pct": -31.69,
+   "t": 0.1,
+   "buys_A": 451,
+   "buys_per_day": 30.0
+  },
+  "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM": {
+   "n": 30,
+   "win_pct": 23.3,
+   "mean_pct": -3.98,
+   "median_pct": -48.01,
+   "t": -0.14,
+   "buys_A": 583,
+   "buys_per_day": 38.8
+  },
+  "3P3Tr5HErnSSqmNrjGXBaACxQj3NmKfi3Efbu5FuuY7i": {
+   "n": 30,
+   "win_pct": 43.3,
+   "mean_pct": -2.76,
+   "median_pct": -8.36,
+   "t": -0.24,
+   "buys_A": 85,
+   "buys_per_day": 5.7
+  },
+  "7xKykf791PTLcb3kGE16VQyz7RLDKJxmStpZNAcAAHb": {
+   "n": 8,
+   "win_pct": 25.0,
+   "mean_pct": -29.35,
+   "median_pct": -36.08,
+   "t": -2.91,
+   "buys_A": 14,
+   "buys_per_day": 0.9
+  },
+  "tAg2tgyHmkGTsmq8wBSKsGvUUgoH37cxmCfRUZSXdtB": {
+   "n": 27,
+   "win_pct": 29.6,
+   "mean_pct": -17.92,
+   "median_pct": -35.41,
+   "t": -1.19,
+   "buys_A": 1291,
+   "buys_per_day": 86.0
+  },
+  "FhwFLN5EtYtuUHmetiVxNCBd1tEitFvWwQq1XyizaYMA": {
+   "n": 29,
+   "win_pct": 10.3,
+   "mean_pct": -59.37,
+   "median_pct": -72.41,
+   "t": -7.16,
+   "buys_A": 758,
+   "buys_per_day": 50.5
+  },
+  "Da14vMQWA59rSnGUoJ4XazgP9RJG8egy1HvWxRR7PMS1": {
+   "n": 29,
+   "win_pct": 44.8,
+   "mean_pct": -8.69,
+   "median_pct": -25.82,
+   "t": -0.65,
+   "buys_A": 504,
+   "buys_per_day": 33.6
+  }
+ },
+ "good_list": [
+  "215nhcAHjQQGgwpQSJQ7zR26etbjjtVdW74NLzwEgQjP",
+  "4Be9CvxqHW6BYiRAxW9Q3xu1ycTMWaL5z8NX4HR3ha7t",
+  "67Nwfi9hgwqhxGoovT2JGLU67uxfomLwQAWncjXXzU6U",
+  "862TYSvRYoiHAK3F3WwTRYAfuGiQaGdxedN9AGvRGWo2",
+  "87rRdssFiTJKY4MGARa4G5vQ31hmR7MxSmhzeaJ5AAxJ",
+  "ALauG4FwEYDgSXd5Hen6kvuWSCdUi2fYNSNqM1Ci31wE",
+  "Be24Gbf5KisDk1LcWWZsBn8dvB816By7YzYF5zWZnRR6",
+  "CE44oKS3wpUerx8afyeii56u5oQjBLZknzm4Q2CYHUz9",
+  "DAEdBmTPEKM6xkwfzC3d411QUe6coKpkND6UURa4CvHC",
+  "DEdEW3SMPU2dCfXEcgj2YppmX9H3bnMDJaU4ctn2BQDQ",
+  "DuARUpsEzdVbVpSnbGipLJvWxaXUCPLDJDjNov6Rc6s6",
+  "Dvbv5TdAyPpJk16X9mUxWFVicYtCUxTLhuof8TGuUaRv",
+  "GJA1HEbxGnqBhBifH9uQauzXSB53to5rhDrzmKxhSU65",
+  "J9TYAsWWidbrcZybmLSfrLzryANf4CgJBLdvwdGuC8MB"
+ ],
+ "tests": {
+  "buenas_k2": {
+   "events": 157,
+   "with_prices": 157,
+   "half2x_30m": {
+    "n": 157,
+    "win_pct": 26.8,
+    "mean_pct": -16.99,
+    "median_pct": -54.0,
+    "t": -3.31
+   },
+   "half2x_30m_mitad1": {
+    "n": 78,
+    "win_pct": 23.1,
+    "mean_pct": -25.5,
+    "median_pct": -54.0,
+    "t": -4.92
+   },
+   "half2x_30m_mitad2": {
+    "n": 79,
+    "win_pct": 30.4,
+    "mean_pct": -8.59,
+    "median_pct": -54.0,
+    "t": -0.98
+   },
+   "tp2_sl30_6h": {
+    "n": 157,
+    "win_pct": 17.8,
+    "mean_pct": -10.93,
+    "median_pct": -34.0,
+    "t": -2.79
+   },
+   "tp2_sl30_6h_mitad1": {
+    "n": 78,
+    "win_pct": 17.9,
+    "mean_pct": -11.24,
+    "median_pct": -34.0,
+    "t": -2.05
+   },
+   "tp2_sl30_6h_mitad2": {
+    "n": 79,
+    "win_pct": 17.7,
+    "mean_pct": -10.62,
+    "median_pct": -34.0,
+    "t": -1.9
+   },
+   "hold_30m": {
+    "n": 157,
+    "win_pct": 22.3,
+    "mean_pct": -20.84,
+    "median_pct": -40.74,
+    "t": -2.69
+   },
+   "hold_30m_mitad1": {
+    "n": 78,
+    "win_pct": 15.4,
+    "mean_pct": -37.19,
+    "median_pct": -49.95,
+    "t": -6.2
+   },
+   "hold_30m_mitad2": {
+    "n": 79,
+    "win_pct": 29.1,
+    "mean_pct": -4.7,
+    "median_pct": -31.2,
+    "t": -0.34
+   }
+  },
+  "buenas_k3": {
+   "events": 22,
+   "with_prices": 22,
+   "half2x_30m": {
+    "n": 22,
+    "win_pct": 40.9,
+    "mean_pct": -7.75,
+    "median_pct": -54.0,
+    "t": -0.64
+   },
+   "half2x_30m_mitad1": {
+    "n": 10,
+    "win_pct": 40.0,
+    "mean_pct": -17.35,
+    "median_pct": -54.0,
+    "t": -1.19
+   },
+   "half2x_30m_mitad2": {
+    "n": 12,
+    "win_pct": 41.7,
+    "mean_pct": 0.25,
+    "median_pct": -28.49,
+    "t": 0.01
+   },
+   "tp2_sl30_6h": {
+    "n": 22,
+    "win_pct": 36.4,
+    "mean_pct": 13.27,
+    "median_pct": -34.0,
+    "t": 1.0
+   },
+   "tp2_sl30_6h_mitad1": {
+    "n": 10,
+    "win_pct": 40.0,
+    "mean_pct": 18.0,
+    "median_pct": -34.0,
+    "t": 0.89
+   },
+   "tp2_sl30_6h_mitad2": {
+    "n": 12,
+    "win_pct": 33.3,
+    "mean_pct": 9.33,
+    "median_pct": -34.0,
+    "t": 0.53
+   },
+   "hold_30m": {
+    "n": 22,
+    "win_pct": 27.3,
+    "mean_pct": -23.59,
+    "median_pct": -43.0,
+    "t": -1.82
+   },
+   "hold_30m_mitad1": {
+    "n": 10,
+    "win_pct": 20.0,
+    "mean_pct": -40.17,
+    "median_pct": -60.03,
+    "t": -3.09
+   },
+   "hold_30m_mitad2": {
+    "n": 12,
+    "win_pct": 33.3,
+    "mean_pct": -9.78,
+    "median_pct": -12.66,
+    "t": -0.48
+   }
+  },
+  "buenas_k4": {
+   "events": 3,
+   "with_prices": 3,
+   "half2x_30m": {
+    "n": 3,
+    "win_pct": 0.0,
+    "mean_pct": -38.28,
+    "median_pct": -54.0,
+    "t": -2.98
+   },
+   "half2x_30m_mitad1": {
+    "n": 1,
+    "win_pct": 0.0,
+    "mean_pct": -54.0,
+    "median_pct": -54.0,
+    "t": null
+   },
+   "half2x_30m_mitad2": {
+    "n": 2,
+    "win_pct": 0.0,
+    "mean_pct": -30.42,
+    "median_pct": -30.42,
+    "t": -1.83
+   },
+   "tp2_sl30_6h": {
+    "n": 3,
+    "win_pct": 0.0,
+    "mean_pct": -34.0,
+    "median_pct": -34.0,
+    "t": null
+   },
+   "tp2_sl30_6h_mitad1": {
+    "n": 1,
+    "win_pct": 0.0,
+    "mean_pct": -34.0,
+    "median_pct": -34.0,
+    "t": null
+   },
+   "tp2_sl30_6h_mitad2": {
+    "n": 2,
+    "win_pct": 0.0,
+    "mean_pct": -34.0,
+    "median_pct": -34.0,
+    "t": null
+   },
+   "hold_30m": {
+    "n": 3,
+    "win_pct": 0.0,
+    "mean_pct": -37.66,
+    "median_pct": -32.79,
+    "t": -2.38
+   },
+   "hold_30m_mitad1": {
+    "n": 1,
+    "win_pct": 0.0,
+    "mean_pct": -73.35,
+    "median_pct": -73.35,
+    "t": null
+   },
+   "hold_30m_mitad2": {
+    "n": 2,
+    "win_pct": 0.0,
+    "mean_pct": -19.82,
+    "median_pct": -19.82,
+    "t": -2.16
+   }
+  },
+  "no_buenas_k2": {
+   "events": 250,
+   "with_prices": 250,
+   "half2x_30m": {
+    "n": 250,
+    "win_pct": 20.0,
+    "mean_pct": -27.38,
+    "median_pct": -54.0,
+    "t": -6.86
+   },
+   "half2x_30m_mitad1": {
+    "n": 146,
+    "win_pct": 21.9,
+    "mean_pct": -22.62,
+    "median_pct": -54.0,
+    "t": -3.6
+   },
+   "half2x_30m_mitad2": {
+    "n": 104,
+    "win_pct": 17.3,
+    "mean_pct": -34.07,
+    "median_pct": -54.0,
+    "t": -9.19
+   },
+   "tp2_sl30_6h": {
+    "n": 250,
+    "win_pct": 15.2,
+    "mean_pct": -12.96,
+    "median_pct": -34.0,
+    "t": -4.42
+   },
+   "tp2_sl30_6h_mitad1": {
+    "n": 146,
+    "win_pct": 17.1,
+    "mean_pct": -10.19,
+    "median_pct": -34.0,
+    "t": -2.54
+   },
+   "tp2_sl30_6h_mitad2": {
+    "n": 104,
+    "win_pct": 12.5,
+    "mean_pct": -16.86,
+    "median_pct": -34.0,
+    "t": -4.02
+   },
+   "hold_30m": {
+    "n": 250,
+    "win_pct": 9.6,
+    "mean_pct": -42.02,
+    "median_pct": -63.88,
+    "t": -6.44
+   },
+   "hold_30m_mitad1": {
+    "n": 146,
+    "win_pct": 11.0,
+    "mean_pct": -35.12,
+    "median_pct": -61.89,
+    "t": -3.33
+   },
+   "hold_30m_mitad2": {
+    "n": 104,
+    "win_pct": 7.7,
+    "mean_pct": -51.71,
+    "median_pct": -66.65,
+    "t": -10.42
+   }
+  },
+  "no_buenas_k3": {
+   "events": 250,
+   "with_prices": 249,
+   "half2x_30m": {
+    "n": 249,
+    "win_pct": 24.5,
+    "mean_pct": -23.62,
+    "median_pct": -54.0,
+    "t": -6.31
+   },
+   "half2x_30m_mitad1": {
+    "n": 128,
+    "win_pct": 26.6,
+    "mean_pct": -17.88,
+    "median_pct": -54.0,
+    "t": -2.9
+   },
+   "half2x_30m_mitad2": {
+    "n": 121,
+    "win_pct": 22.3,
+    "mean_pct": -29.69,
+    "median_pct": -54.0,
+    "t": -7.34
+   },
+   "tp2_sl30_6h": {
+    "n": 249,
+    "win_pct": 16.5,
+    "mean_pct": -11.98,
+    "median_pct": -34.0,
+    "t": -3.93
+   },
+   "tp2_sl30_6h_mitad1": {
+    "n": 128,
+    "win_pct": 18.8,
+    "mean_pct": -9.45,
+    "median_pct": -34.0,
+    "t": -2.11
+   },
+   "tp2_sl30_6h_mitad2": {
+    "n": 121,
+    "win_pct": 14.0,
+    "mean_pct": -14.67,
+    "median_pct": -34.0,
+    "t": -3.58
+   },
+   "hold_30m": {
+    "n": 249,
+    "win_pct": 13.3,
+    "mean_pct": -41.17,
+    "median_pct": -65.29,
+    "t": -7.47
+   },
+   "hold_30m_mitad1": {
+    "n": 128,
+    "win_pct": 14.8,
+    "mean_pct": -33.23,
+    "median_pct": -64.29,
+    "t": -3.44
+   },
+   "hold_30m_mitad2": {
+    "n": 121,
+    "win_pct": 11.6,
+    "mean_pct": -49.56,
+    "median_pct": -66.46,
+    "t": -10.35
+   }
+  },
+  "no_buenas_k4": {
+   "events": 250,
+   "with_prices": 249,
+   "half2x_30m": {
+    "n": 249,
+    "win_pct": 24.1,
+    "mean_pct": -19.06,
+    "median_pct": -54.0,
+    "t": -3.58
+   },
+   "half2x_30m_mitad1": {
+    "n": 117,
+    "win_pct": 24.8,
+    "mean_pct": -18.23,
+    "median_pct": -54.0,
+    "t": -2.09
+   },
+   "half2x_30m_mitad2": {
+    "n": 132,
+    "win_pct": 23.5,
+    "mean_pct": -19.8,
+    "median_pct": -54.0,
+    "t": -3.1
+   },
+   "tp2_sl30_6h": {
+    "n": 249,
+    "win_pct": 17.3,
+    "mean_pct": -11.54,
+    "median_pct": -34.0,
+    "t": -3.7
+   },
+   "tp2_sl30_6h_mitad1": {
+    "n": 117,
+    "win_pct": 18.8,
+    "mean_pct": -9.56,
+    "median_pct": -34.0,
+    "t": -2.03
+   },
+   "tp2_sl30_6h_mitad2": {
+    "n": 132,
+    "win_pct": 15.9,
+    "mean_pct": -13.29,
+    "median_pct": -34.0,
+    "t": -3.21
+   },
+   "hold_30m": {
+    "n": 249,
+    "win_pct": 18.9,
+    "mean_pct": -28.25,
+    "median_pct": -71.85,
+    "t": -3.16
+   },
+   "hold_30m_mitad1": {
+    "n": 117,
+    "win_pct": 20.5,
+    "mean_pct": -23.48,
+    "median_pct": -73.14,
+    "t": -1.54
+   },
+   "hold_30m_mitad2": {
+    "n": 132,
+    "win_pct": 17.4,
+    "mean_pct": -32.48,
+    "median_pct": -70.93,
+    "t": -3.22
+   }
+  },
+  "azar_k1": {
+   "half2x_30m": {
+    "n": 248,
+    "win_pct": 25.0,
+    "mean_pct": -19.35,
+    "median_pct": -49.7,
+    "t": -5.77
+   },
+   "tp2_sl30_6h": {
+    "n": 248,
+    "win_pct": 20.2,
+    "mean_pct": -6.99,
+    "median_pct": -34.0,
+    "t": -2.16
+   },
+   "hold_30m": {
+    "n": 248,
+    "win_pct": 12.5,
+    "mean_pct": -34.43,
+    "median_pct": -55.24,
+    "t": -7.7
+   }
+  }
+ }
+}

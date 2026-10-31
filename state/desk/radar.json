@@ -56,33 +56,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793392085.0850108,
-   "src": "tg:WatcherGuru",
-   "title": "JUST IN: 🇺🇸 CFTC proposes new regulations for crypto exchanges to strengthen security against cyberattacks. @WatcherGuru",
-   "sev": 1,
-   "dir": -1,
-   "types": [
-    "regulatory"
-   ]
   }
  ],
- "ts": 1793406261.7887545,
+ "ts": 1793406546.729669,
  "bear_score": 0,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.351,
-   "ch15m": 0.0010181500836337065,
-   "ch1h": 0.0048599885279239086,
-   "ch4h": 0.016157099315537993
+   "px": 96.296,
+   "ch15m": 0.0005714820087072692,
+   "ch1h": 0.0036688068039689714,
+   "ch4h": 0.013439417379681906
   },
   "BTC": {
-   "px": 77349.0,
-   "ch15m": 0.0007504107852143171,
-   "ch1h": 0.0024234726938130446,
-   "ch4h": 0.00667655786350152
+   "px": 77308.0,
+   "ch15m": -0.0003232772555054053,
+   "ch1h": 0.0019570486151612165,
+   "ch4h": 0.004260846973239696
   }
  },
  "mode": "live",
