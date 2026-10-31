@@ -1,14 +1,14 @@
 {
- "ts": 1793463275.8706071,
+ "ts": 1793463577.9106054,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.36841,
- "open_value_sol": 0.18995,
+ "equity_sol": 2.36265,
+ "open_value_sol": 0.18419,
  "positions": [
   {
    "sym": "MANFRED",
    "mint": "4BjiHMnAxFv1LXM3Gq7cmrxTAAcfzMnBTRTdf9Z5pump",
-   "mult": 0.926,
+   "mult": 0.713,
    "peak_mult": 1.0,
    "ts": 1793463271.9348326,
    "hit_rec": false
@@ -73,7 +73,7 @@
  "recent_closed": [],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
  "sol_balance": 2.178460738,
- "sol_usd": 95.86440943054653,
+ "sol_usd": 95.87299510175627,
  "ticket_sol": 0.025,
  "ratio": 1.3,
  "open": 8,
@@ -86,9 +86,9 @@
  "best": null,
  "bought_today": 8,
  "stats": {
-  "seen": 828,
-  "evaluated": 823,
-  "eligible": 305,
+  "seen": 858,
+  "evaluated": 851,
+  "eligible": 318,
   "bought": 6,
   "buy_fail": 1,
   "closed": 0,
