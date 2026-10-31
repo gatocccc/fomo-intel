@@ -1,5 +1,5 @@
 {
- "ts": 1793434444.5866168,
+ "ts": 1793435046.1697335,
  "regime": {
   "state": "risk_off",
   "ts": 1793434444.5755694,
@@ -35,7 +35,7 @@
    "key": "majors",
    "name": "Majors",
    "target_pct": 10,
-   "value_usd": 30.27,
+   "value_usd": 30.36,
    "pct": 5.6,
    "positions": 2
   },
@@ -57,5 +57,5 @@
   }
  ],
  "liquid_usd": 503.45,
- "trad_status": "SOL -7.4%, BTC -4.9%, ETH -6.3%, JUP -14.4%"
+ "trad_status": "SOL -7.8%, BTC -5.0%, ETH -6.4%, JUP -14.9%"
 }

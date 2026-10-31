@@ -1,5 +1,5 @@
 {
- "ts": 1793431443.9402776,
+ "ts": 1793435043.9414413,
  "n_total": 27,
  "by_category": {
   "affiliation": {
@@ -118,7 +118,7 @@
    "n": 1,
    "mean_ret": 0.139,
    "pnl_usd": 4.26,
-   "ts": 1793431443.9402776,
+   "ts": 1793435043.9414413,
    "name_es": "Afiliación a un producto real",
    "name_en": "Official token of a real product"
   },
@@ -127,7 +127,7 @@
    "n": 3,
    "mean_ret": 1.1797,
    "pnl_usd": 162.48,
-   "ts": 1793431443.9402776,
+   "ts": 1793435043.9414413,
    "name_es": "Catalizador con fecha",
    "name_en": "Dated catalyst"
   },
@@ -136,7 +136,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793431443.9402776,
+   "ts": 1793435043.9414413,
    "name_es": "Tendencia en majors",
    "name_en": "Majors trend"
   },
@@ -145,7 +145,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793431443.9402776,
+   "ts": 1793435043.9414413,
    "name_es": "Otro (manual)",
    "name_en": "Other (manual)"
   },
@@ -154,7 +154,7 @@
    "n": 0,
    "mean_ret": null,
    "pnl_usd": null,
-   "ts": 1793431443.9402776,
+   "ts": 1793435043.9414413,
    "name_es": "Narrativa verificada",
    "name_en": "Verified narrative"
   },
@@ -163,7 +163,7 @@
    "n": 4,
    "mean_ret": 0.0004,
    "pnl_usd": -3.94,
-   "ts": 1793431443.9402776,
+   "ts": 1793435043.9414413,
    "name_es": "Corto por shock de noticias",
    "name_en": "News-shock short"
   },
@@ -172,7 +172,7 @@
    "n": 14,
    "mean_ret": -0.1434,
    "pnl_usd": -79.0,
-   "ts": 1793431443.9402776,
+   "ts": 1793435043.9414413,
    "name_es": "Pick del escáner (sin historia)",
    "name_en": "Screener pick (no story)"
   },
@@ -181,7 +181,7 @@
    "n": 3,
    "mean_ret": -0.096,
    "pnl_usd": -9.1,
-   "ts": 1793431443.9402776,
+   "ts": 1793435043.9414413,
    "name_es": "Tendencia 20 días en memes establecidas",
    "name_en": "20-day trend, established memes"
   },
@@ -190,7 +190,7 @@
    "n": 1,
    "mean_ret": -1.0,
    "pnl_usd": -5.45,
-   "ts": 1793431443.9402776,
+   "ts": 1793435043.9414413,
    "name_es": "Meme flash de noticia (horas)",
    "name_en": "Flash-news meme (hours)"
   },
@@ -199,7 +199,7 @@
    "n": 1,
    "mean_ret": -0.533,
    "pnl_usd": -2.89,
-   "ts": 1793431443.9402776,
+   "ts": 1793435043.9414413,
    "name_es": "kol_consensus",
    "name_en": "kol_consensus"
   }
