@@ -1,0 +1,15 @@
+== 220_censo_memecoins 2026-10-31T12:41:04Z ==
+=== probe ===
+credits: {"credits": 93320}
+search 1h {} total= 1467 hasMore= True n= 3
+campos: ['bundlers', 'buys', 'communityMessages', 'createdAt', 'decimals', 'deployer', 'dev', 'fees', 'freezeAuthority', 'hasCoinCommunity', 'hasSocials', 'holders', 'id', 'image', 'insiders', 'lastUpdated', 'launchpad', 'liquidityUsd', 'lpBurn', 'market', 'marketCapUsd', 'mint', 'mintAuthority', 'name', 'poolAddress', 'priceUsd', 'quoteToken', 'riskScore', 'sells', 'snipers', 'socials', 'status', 'symbol', 'tokenDetails', 'top10', 'totalTransactions', 'volume', 'volume_12h', 'volume_15m', 'volume_1h', 'volume_24h', 'volume_30m', 'volume_5m', 'volume_6h']
+ejemplo: {"id": "G7abaZEw88EKmq3mxC7EkMhqJPjBqYwQuFgsPtJZpump_G7abaZEw88EKmq3mxC7EkMhqJPjBqYwQuFgsPtJZpump", "name": "nomnomnomcat", "symbol": "NOMNOMNOM", "mint": "G7abaZEw88EKmq3mxC7EkMhqJPjBqYwQuFgsPtJZpump", "image": "https://image.solanatracker.io/proxy?url=https%3A%2F%2Faxiomtrading-v2.axiom-cdn.io%2FFSVAi8E61z1PR1VYXjSwH7s6PJ144dvvDyNhnQE1pump.webp", "decimals": 6, "hasSocials": true, "hasCoinCommunity": false, "communityMessages": 0, "poolAddress": "G7abaZEw88EKmq3mxC7EkMhqJPjBqYwQuFgsPtJZpump", "liquidityUsd": 5744.993920102913, "marketCapUsd": 2677.141299214467, "priceUsd": 2.677141299214467e-06, "lpBurn": 100, "market": "pumpfun", "quoteToken": "So11111111111111111111111111111111111111112", "freezeAuthority": null, "mintAuthority": null, "deployer": "GNbYfwBaEbooU46p32LfMJkzEuBVqg6ejPyJ7gEbgf6L", "status": "default", "createdAt": 1793421662748, "lastUpdated": 1793447634395, "holders": 2, "launchpad": {"curvePercentage": 0.0035631383371566017}, "buys": 5, "sells": 12, "totalTransactions": 17, "volume": 784.6856414300535, "volume_5m": 0, "volume_15m": 0, "volume_30m": 0, "volume_1h": 0, "volume_6h": 0, "volume_12h": 784.6856414300535, "volume_24h": 784.6856414300535, "top10": 0.0028, "dev": 0, "insiders": 0, "snipers": 0, "bundlers": {"count": 0, "balance": 0, "percentage": 0}, "riskScore": 3, "socials": {"twitter": "https://x.com/jinxxyonsol/status/2116389923867734161", "website": "https://x.com/i/trending/2116175999188845020?s=20", "discord": "https://discord.gg/uxento"}, "
+search 1h {'minBuys': 40} total= 418 hasMore= True n= 3
+search 1h {'minBuys': 1000} total= 21 hasMore= True n= 3
+velas 1m 24h: 483 primera [[1793421360, 2.814531986174318e-05, 3.709699046144716e-05, 2.715157409071661e-05, 3.631459031221561e-05, 4363.0]] última t-c0(min) 482.65
+velas 5m 48h: 98 última t-c0(h) 8.044166666666667
+mcap pico aprox: 97863.5588773872 mcap_now 12955.042252357503
+requests usados en probe: 6
+=== pull en segundo plano ===
+OK
+== exit 0 ==

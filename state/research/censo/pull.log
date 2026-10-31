@@ -1,0 +1,27 @@
+2026-10-31 12:41:29 listas A ok; requests 168
+2026-10-31 12:41:56 listas B ok; requests 336
+2026-10-31 12:42:46 listas C ok; requests 672
+2026-10-31 12:43:06 velas 200/7506 requests 958 (0 min)
+2026-10-31 12:43:26 velas 400/7506 requests 1249 (1 min)
+2026-10-31 12:43:45 velas 600/7506 requests 1534 (1 min)
+2026-10-31 12:43:54 HTTP 400 /chart/9aBqEffyUekV5AgfqtiHEzj6Rm8nyMD8oYRko5VNpump {'type': '1m', 'time_from': 1792961928, 'time_to': 1792983648} {"error":"Error occurred while loading chart data"}
+2026-10-31 12:44:05 velas 800/7506 requests 1820 (1 min)
+2026-10-31 12:44:25 velas 1000/7506 requests 2115 (2 min)
+2026-10-31 12:44:46 velas 1200/7506 requests 2405 (2 min)
+2026-10-31 12:45:06 velas 1400/7506 requests 2684 (2 min)
+2026-10-31 12:45:25 velas 1600/7506 requests 2964 (3 min)
+2026-10-31 12:45:45 velas 1800/7506 requests 3254 (3 min)
+2026-10-31 12:46:04 velas 2000/7506 requests 3534 (3 min)
+2026-10-31 12:46:25 velas 2200/7506 requests 3825 (4 min)
+2026-10-31 12:46:45 velas 2400/7506 requests 4121 (4 min)
+2026-10-31 12:47:06 velas 2600/7506 requests 4415 (4 min)
+2026-10-31 12:47:26 velas 2800/7506 requests 4695 (5 min)
+2026-10-31 12:47:45 velas 3000/7506 requests 4977 (5 min)
+2026-10-31 12:48:05 velas 3200/7506 requests 5257 (5 min)
+2026-10-31 12:48:24 velas 3400/7506 requests 5530 (6 min)
+2026-10-31 12:48:44 velas 3600/7506 requests 5813 (6 min)
+2026-10-31 12:49:04 velas 3800/7506 requests 6105 (6 min)
+2026-10-31 12:49:12 HTTP 400 /chart/7QRmMyE2sWcREttx5A5Ecgk8dNtvsJARbBhjUS77pump {'type': '1m', 'time_from': 1792961931, 'time_to': 1792983651} {"error":"Error occurred while loading chart data"}
+2026-10-31 12:49:24 velas 4000/7506 requests 6389 (7 min)
+2026-10-31 12:49:44 velas 4200/7506 requests 6668 (7 min)
+2026-10-31 12:50:03 velas 4400/7506 requests 6955 (7 min)

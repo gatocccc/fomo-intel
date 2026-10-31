@@ -1,0 +1,64 @@
+== 214_sesion_0939 2026-10-31T12:42:03Z ==
+=== majors ===
+BTCUSDT 77646.02000000 0.310
+ETHUSDT 2254.06000000 1.001
+SOLUSDT 96.20000000 -0.424
+JUPUSDT 0.25960000 1.924
+=== GTA6 (enfriamiento) ===
+GTA6 0.008668 mcap 8668374 liq 399147.62 chg {'m5': 393551, 'h1': 0.54, 'h6': -18.55, 'h24': -41.57}
+=== stools ===
+[1] eq=181.53 cash=145.39 perps=[('ETH:short', 9.99, -0.27, ''), ('SOL:short', 27.38, -0.98, '')]
+[2] eq=973.07 cash=801.43 perps=[('ETH:short', 30.98, -0.83, ''), ('SOL:short', 146.55, -5.06, '')]
+[3] eq=46.19 cash=26.81 perps=[('ETH:short', 9.99, -0.26, ''), ('SOL:short', 9.99, -0.35, '')]
+[4] eq=126.6 cash=98.42 perps=[('ETH:short', 9.99, -0.26, ''), ('SOL:short', 19.11, -0.7, '')]
+[5] eq=26.44 cash=26.44 perps=[]
+[6] eq=44.62 cash=25.24 perps=[('ETH:short', 9.99, -0.27, ''), ('SOL:short', 9.99, -0.38, '')]
+[8] eq=96.86 cash=76.85 perps=[('ETH:short', 9.99, -0.07, ''), ('SOL:short', 9.99, 0.08, '')]
+=== scan4 + anti-rug top 5 ===
+  http 400 /tokens/graduated {} {"error":"Invalid token address"}
+en rankings: 330
+  campos /search: ['bundlers', 'buys', 'communityMessages', 'createdAt', 'decimals', 'deployer', 'dev', 'fees', 'freezeAuthority', 'hasCoinCommunity', 'hasSocials', 'holders', 'id', 'image', 'insiders', 'lastUpdated', 'liquidityUsd', 'lpBurn', 'market', 'marketCapUsd', 'mint', 'mintAuthority', 'name', 'poolAddress', 'priceUsd', 'quoteToken', 'riskScore', 'sells', 'snipers', 'socials', 'status', 'symbol', 'top10', 'totalTransactions', 'volume', 'volume_12h', 'volume_15m', 'volume_1h', 'volume_24h', 'volume_30m']
+sumados por /search: 896 | total: 1226
+pasan liquidez/mcap/edad: 867
+con velas: 98
+PASAN TODOS LOS FILTROS: 8
+
+FLOAT      mcap $ 0.62M liq $ 160K edad   62h vol24 $   846K (1.36x) acel 0.2 CV 1.24 | 1h -3% 6h +1% 24h +4% 72h +875% | 26% del máx | hold 3396 top10 20% | Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr |  
+tSpaceX    mcap $ 0.65M liq $ 534K edad 6296h vol24 $   977K (1.50x) acel 0.5 CV 0.65 | 1h +0% 6h +1% 24h -1% 72h -2% | 98% del máx | hold 968 top10 8% | TSPXcLV76s6V2zDiZQ18kBfcbnjaE2ZzNT3ga2Pd99v |  T-SpaceX represents a loan participation
+three      mcap $ 0.66M liq $ 171K edad 4447h vol24 $   125K (0.19x) acel 1.0 CV 0.86 | 1h -11% 6h +3% 24h +12% 72h +120% | 85% del máx | hold 15312 top10 13% | FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump | https://x.com/dorklon_must/status/2 give your ai model a life. fees directed
+AOP        mcap $ 7.23M liq $ 222K edad   61h vol24 $  1524K (0.21x) acel 3.6 CV 4.17 | 1h +2% 6h -99% 24h -99% 72h -98% | 1% del máx | hold 3102 top10 0% | bjf44STyzJ1KyVxE62VEGUKBu3h9KcSKr7GhnLKpump |  American Overwatch Protocol
+DESSA      mcap $15.59M liq $ 363K edad  120h vol24 $  3378K (0.22x) acel 0.3 CV 1.62 | 1h +2% 6h +1% 24h +70% 72h +2143% | 73% del máx | hold 13534 top10 2% | npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump | https://x.com/jack/status/211369790 Zero books. All yap.
+GATO       mcap $ 5.77M liq $ 242K edad 1608h vol24 $  1013K (0.18x) acel 1.1 CV 0.51 | 1h +1% 6h +13% 24h +25% 72h +42% | 88% del máx | hold 7626 top10 17% | HsprHxBRgiVaQdRf3TnKNuZZtaX9JUSPgMFdAkk6pump |  
+SAPLING    mcap $ 2.84M liq $ 368K edad  858h vol24 $   620K (0.22x) acel 1.2 CV 0.69 | 1h +2% 6h -3% 24h -23% 72h -14% | 65% del máx | hold 4877 top10 17% | BZFYNPeQAEW3HWQ4DNsTVahC1n4ZjTgn6jB2nnBbB96W | https://x.com/saplingdotcash/status the rootstock of sapling.cash, the zcash
+RKC        mcap $ 0.81M liq $ 167K edad 4143h vol24 $   122K (0.15x) acel 0.3 CV 1.71 | 1h +0% 6h +2% 24h -12% 72h -18% | 81% del máx | hold 7231 top10 19% | 7HgfXftRBBqsYtAEYcqjGLQrNJLL6Tww9ek4rE3Apump |  
+top 20: billeteras 24.3% · pools/curva 5.14% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': 9.5493, 'insiders%': 0, 'snipers%': 3.3572, 'dev%': 0, 'risks': ['Top 10 Holders', 'High Bundler Count', 'Bundler Holdings']}
+creador: {'creator': '2rQ13KrAdDsAtd1LuKV1kGj6nFB4V4GsD9GAYKXi353T', 'lanzamientos': 4, 'muertos_<US$10K': 0, 'graduados_aprox': 0, 'muestra': 4}
+  grupo fondeador F7p3dFrj… Relay Solver : 3 billeteras, 5.31%
+
+=== tSpaceX TSPXcLV76s6V2zDiZQ18kBfcbnjaE2ZzNT3ga2Pd99v → LIMPIO
+top 20: billeteras 9.33% · pools/curva 0.28% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': None, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': []}
+creador: None
+  grupo fondeador 5tzFkiKs… Binance Hot Wallet 2 (exchange): 4 billeteras, 0.62%
+  grupo fondeador FmDgTPfW…  : 3 billeteras, 0.52%
+
+=== three FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump → LIMPIO
+top 20: billeteras 18.82% · pools/curva 2.11% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': None, 'insiders%': 0, 'snipers%': 0.008, 'dev%': 0, 'risks': []}
+creador: {'creator': '8xpMZdyhxL1gGsrSLoJpJ3FtsXooC25UtF6EVWgPoEiS', 'lanzamientos': 4, 'muertos_<US$10K': 0, 'graduados_aprox': 0, 'muestra': 4}
+  grupo fondeador Em8J3gBW… Coinbase Smart Wallet 1 (exchange): 2 billeteras, 2.94%
+
+=== AOP bjf44STyzJ1KyVxE62VEGUKBu3h9KcSKr7GhnLKpump → LIMPIO
+top 20: billeteras 0.95% · pools/curva 0% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': 0.0309, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': ['No social media', 'Price Decrease']}
+creador: {'creator': '2aF87mnhkm13p9jx6Pp5FhR26aCux7qyeo6FwaWTueLf', 'lanzamientos': 1, 'muertos_<US$10K': 0, 'graduados_aprox': 0, 'muestra': 1}
+sin grupos con fondeador común
+
+=== DESSA npz2FhoufQ7pKqhGpaipYWacrAkidyW2yDpVWSvpump → LIMPIO
+top 20: billeteras 2.8% · pools/curva 0% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': 4.7866, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': []}
+creador: {'creator': 'CWpPwPQqCW1rkpBV1pgQqFR7FzfuwfMf9XNLtmTwLSH5', 'lanzamientos': 1, 'muertos_<US$10K': 0, 'graduados_aprox': 0, 'muestra': 1}
+  grupo fondeador BmFdpraQ… KuCoin Hot Wallet 2 (exchange): 5 billeteras, 0.65%
+  grupo fondeador ASTyfSim… MEXC Exchange (exchange): 5 billeteras, 0.5%
+== exit 0 ==
