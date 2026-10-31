@@ -256,8 +256,8 @@ class KolConsensus:
         name = self.names.get(wallet, wallet[:6]); reason = self.reason + "_big"
         row = {"ts": now, "kind": "trigger_big", "mint": mint, "who": [name], "sol": sol, "mcap_usd": round(mcap_usd), "lat_s": round(now - ts, 1), "mode": self.mode}
         size_usd = float(self.cfg.get("big_size_usd", self.cfg.get("size_usd", 5))); max_open = int(self.cfg.get("big_max_open", 2))
-        if self.mode != "live":
-            row["skip"] = "shadow"; _jl(self.LOG, row); return
+        if self.mode != "live" or not self.cfg.get("big_live", False):
+            row["skip"] = "shadow"; _jl(self.LOG, row); return   # 31/10 ops 206: backtest 30 d negativo (−14,6%/op) → solo registra
         n, ret, pnl = self._verdict(reason)
         if n >= 10 and ret < 0:
             row["skip"] = f"freno: {n} cierres, retorno medio {ret:+.1%}, P&L US${pnl:+.2f} → modo sombra"; _jl(self.LOG, row); return

@@ -1,5 +1,5 @@
 {
- "_": "Billeteras de perfil público de pump.fun de nombres conocidos (fuente: holders de TYGR, 30/10/2026; ver consenso-kols-30-10.md). Editable: la sesión amplía la lista y fomo-radar la relee sola. 31/10: gatillo 2 'compra grande' (caso LUMI): una sola billetera de la lista comprando >= big_sol SOL con mcap <= big_max_mcap_usd dispara compra de big_size_usd (motivo kol_consensus_big, salida 50% a 2x + 30 min). La lista se completa con state/desk/kols_extra.json (perfiles con audiencia de la app FOMO, escrita por ops en el servidor).",
+ "_": "Billeteras de perfil público de pump.fun de nombres conocidos (fuente: holders de TYGR, 30/10/2026; ver consenso-kols-30-10.md). Editable: la sesión amplía la lista y fomo-radar la relee sola. 31/10: gatillo 2 'compra grande' (caso LUMI): una sola billetera de la lista comprando >= big_sol SOL con mcap <= big_max_mcap_usd dispara compra de big_size_usd (motivo kol_consensus_big, salida 50% a 2x + 30 min). La lista se completa con state/desk/kols_extra.json (perfiles con audiencia de la app FOMO, escrita por ops en el servidor). Ops 206 (31/10): el gatillo de compra grande dio −14,6%/op (n=289, 30% acierto) en los 30 días → big_live=false: se registra en sombra (trigger_big en la bitácora), no compra.",
  "k": 4,
  "window_min": 60,
  "size_usd": 5,
@@ -9,6 +9,7 @@
  "big_max_mcap_usd": 500000,
  "big_size_usd": 5,
  "big_max_open": 2,
+ "big_live": false,
  "wallets": [
   {
    "name": "Dior",
