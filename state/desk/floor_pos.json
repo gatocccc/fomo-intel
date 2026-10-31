@@ -166,5 +166,26 @@
   "sig": "4q2f23Z8HwJxpoZQ2Pk5iHwiAMm1sUB3xmHfjZeimZtTkuJY2r6UFgyWSbWDKae2ZRH4donFeDcAagUFHhhW8Cer",
   "latency_s": 2.4,
   "last_px": 2.7994863451860952e-08
+ },
+ "6JBwKv2JXwj1TuV1F6h1mhUgFXZuH1tJ8uF7rDaPnPj4": {
+  "ts": 1793464058.0755622,
+  "mint": "6JBwKv2JXwj1TuV1F6h1mhUgFXZuH1tJ8uF7rDaPnPj4",
+  "sym": "CAT",
+  "name": "CAT8",
+  "curve": "8xWbmyupyeTapWH6tX6XjHxQpJBzToxNrHBMEYnNNpQW",
+  "tokens": 893362.622442,
+  "tokens0": 893362.622442,
+  "cost_sol": 0.027006342,
+  "entry_px": 3.022998872079332e-08,
+  "ref_px": 2.796085719478315e-08,
+  "slip_pct": 8.12,
+  "age_at_entry_s": 52,
+  "mcap_sol_entry": 27.96,
+  "peak_px": 3.022998872079332e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "3SG68WaUGcC4ehNY7zTsVWiC3jQ5eYi6PwoWXFezDBruk9L9XA6jpSg1YD4Ut1iPDV432vBJZYCarBbNdnhvdzpo",
+  "latency_s": 2.2,
+  "last_px": 2.800747648721691e-08
  }
 }
