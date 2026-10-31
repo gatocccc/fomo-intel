@@ -1,14 +1,14 @@
 {
- "updated": "2026-10-30T06:55:00Z",
+ "updated": "2026-10-31T09:55:00Z",
  "note": "Lista de seguimiento de picks CON MOTIVO. El cerebro solo compra picks que estén acá, pasen el escaneo (retroceso sano, volumen, holders) y el anti-rug LIMPIO. reason: catalyst | affiliation | narrative. until: epoch hasta el que vale el motivo (antes del evento: el 'sell the news' llega el día del evento).",
  "items": [
   {
    "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
    "sym": "GTA6",
    "reason": "catalyst",
-   "note": "GTA VI ships Nov 19 (re-confirmed in press this week). Re-entry only on a healthy pullback, never on a +15% hourly candle; sell ladder from Nov 12. Oct 30: $0.0141, mcap $14M, liq $450K.",
+   "note": "GTA VI ships Nov 19 (no delay news as of Oct 31). Oct 31: second entry stopped out at -30% ($0.0089) after a 20-hour run of lower lows ($0.019 -> $0.0093); mcap $9.5M, liq $400K. Re-entry only once the slide stops (6h change >= -5%) and never on a +15% hourly candle; size cut to 20%. Sell ladder from Nov 12.",
    "until": 1794960000,
-   "max_frac": 0.3
+   "max_frac": 0.2
   }
  ],
  "removed": [

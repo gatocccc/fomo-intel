@@ -124,7 +124,7 @@ RADAR = Path("state/desk/radar.json")
 REGIME_HYST_H = 2   # horas seguidas con condiciones de salida antes de dejar la defensa
 
 LIM = {"max_pos": 3, "max_frac": 0.35, "min_buy_sol": 0.08, "idle_frac": 0.15, "max_auto_buys_day": 2, "cooldown_h": 48,
-       "stale_h": 36, "scan_every_h": 2, "dd_max_age_h": 6, "mcap_lo": 3e5, "mcap_hi": 3e7, "max_ch24h": 0.6, "min_ch24h": -0.4, "max_ch6h": 0.3,
+       "stale_h": 36, "scan_every_h": 2, "dd_max_age_h": 6, "mcap_lo": 3e5, "mcap_hi": 3e7, "max_ch24h": 0.6, "min_ch24h": -0.4, "max_ch6h": 0.3, "min_ch6h": -0.05,
        "max_from_hi": 0.9, "min_from_hi": 0.55, "min_vol_mcap": 0.3, "min_holders": 1000, "max_scan_age_h": 2.5, "max_bundlers": 15.0}
 # volumen fabricado por bots (regla 3 de la mesa); se suma state/desk/blacklist.json ({"mints": [...], "symbols": [...]})
 BLACK_SYMS = {"JEANPHIL", "DOAS", "USDF", "USOE", "VERSE"}
@@ -351,6 +351,11 @@ class Brain:
             ch24, fh = v.get("ch24h") or 0, v.get("from_hi") or 1
             if not (LIM["min_ch24h"] <= ch24 <= LIM["max_ch24h"]) or (v.get("ch6h") or 0) > LIM["max_ch6h"] \
                     or not (LIM["min_from_hi"] <= fh <= LIM["max_from_hi"]) or (v.get("ch1h") or 0) < -0.15:
+                continue
+            # 31/10 06:39 (autocrítica): la reentrada en GTA6 del 30/10 se hizo con −11% en 6 h, en plena serie de mínimos más bajos
+            # (de US$0,019 a US$0,0093 en 20 h) y terminó en el stop −30% (−US$12). Un retroceso sano se frena antes de comprar:
+            # si las últimas 6 h siguen cayendo más que min_ch6h, es un cuchillo cayendo, no un retroceso.
+            if (v.get("ch6h") or 0) < LIM["min_ch6h"]:
                 continue
             dd = jload(DD_DIR / f"{m}.json", {})
             if dd.get("verdict") != "LIMPIO" or time.time() - dd.get("ts", 0) > LIM["dd_max_age_h"] * 3600 * 2:
