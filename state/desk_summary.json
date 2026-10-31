@@ -1,17 +1,17 @@
 {
- "now": 1793417693.9886353,
+ "now": 1793417986.9878197,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 4,
- "equity_usd": 161.84,
- "equity_sol": 1.6765,
+ "equity_usd": 162.22,
+ "equity_sol": 1.6828,
  "cash_sol": 0.1131,
- "positions_usd": 150.92,
- "sol_usd": 96.53,
- "mult": 1.633,
+ "positions_usd": 151.32,
+ "sol_usd": 96.4,
+ "mult": 1.637,
  "halt": false,
  "pause": false,
  "positions": [
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9999083838313229,
+   "last_usd": 0.9998958788649644,
    "mult": 0.992,
-   "value_usd": 114.66
+   "value_usd": 114.65
   },
   {
    "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
@@ -68,9 +68,9 @@
    "sleeve": null,
    "reason": "catalyst",
    "max_h": null,
-   "last_usd": 0.011040714928303275,
-   "mult": 0.876,
-   "value_usd": 36.26
+   "last_usd": 0.0111617621831453,
+   "mult": 0.886,
+   "value_usd": 36.66
   }
  ],
  "perps_pnl_usd": 0,
@@ -4134,6 +4134,14 @@
   [
    1793417565,
    162.16
+  ],
+  [
+   1793417908,
+   162.18
+  ],
+  [
+   1793417944,
+   162.17
   ]
  ],
  "closed": [
@@ -5951,7 +5959,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793417224.119718,
+  "last_run": 1793417945.6117258,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -5966,7 +5974,7 @@
    "key": "Efectivo ocioso (#), pero SOL y BTC están debajo de su promedio de # días y solo # de # memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": -0.4,
-  "sol_vs_ma20": -0.0652
+  "sol_ch24h": -0.8,
+  "sol_vs_ma20": -0.0687
  }
 }
