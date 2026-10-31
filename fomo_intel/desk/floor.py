@@ -203,7 +203,7 @@ class Floor:
     # ---------------- evaluación ----------------
     def eval_loop(self) -> None:
         while True:
-            time.sleep(5)
+            time.sleep(2)
             now = time.time()
             with self.lock:
                 due = {m: p for m, p in self.pending.items() if now - p["ts"] >= EVAL_LO}
@@ -250,6 +250,11 @@ class Floor:
 
     def _buy(self, mint: str, p: dict, c: dict, row: dict) -> None:
         try:
+            # 31/10 17:40: precio fresco justo antes de enviar (el corrido medio era +8,6% contra una lectura de hasta 5 s)
+            c2 = self.curves([p["curve"]]).get(p["curve"])
+            if not c2 or c2["complete"] or c2["mcap_sol"] > RATIO * FLOOR_SOL:
+                jl(LOG, {"ts": time.time(), "ev": "skip_moved", "mint": mint, "sym": p["sym"], "mcap_sol": c2 and round(c2["mcap_sol"], 2)}); return
+            c = c2
             f = self.ex.buy(mint, TICKET, c["price"], fast=True)
             if not f.ok:
                 self.stats["buy_fail"] += 1
