@@ -2,6 +2,17 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793458925.3259735,
+   "src": "decrypt",
+   "title": "Binance Hack: Everything You Need to Know About the Biggest Crypto Heist in History",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793457065.111883,
    "src": "tg:binance_announcements",
    "title": "Security Incident | Recovery Update #3: 90% of Stolen Assets Replenished; Proof of Reserves Snapshot Provided (2026-10-31) Our last update explained that Binance had set aside more than 6.34B in compa",
@@ -25,21 +36,21 @@
    ]
   }
  ],
- "ts": 1793458745.7872043,
- "bear_score": 3,
+ "ts": 1793459046.0827339,
+ "bear_score": 6,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.683,
-   "ch15m": -0.00033432586323978164,
-   "ch1h": -0.0004909641700615586,
-   "ch4h": 0.0014862729090130422
+   "px": 95.6,
+   "ch15m": -0.0017855091833645087,
+   "ch1h": -5.229851995203205e-05,
+   "ch4h": 0.0005756449840388367
   },
   "BTC": {
-   "px": 77398.0,
-   "ch15m": -0.0013290151094824676,
-   "ch1h": -0.0011099065613545678,
-   "ch4h": 0.0002713984775837286
+   "px": 77362.0,
+   "ch15m": -0.001999561386534565,
+   "ch1h": -0.001896553948573687,
+   "ch4h": -0.00021969785083808535
   }
  },
  "mode": "live",
