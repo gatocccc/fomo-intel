@@ -362,7 +362,18 @@ def lab_public() -> dict:
         wallet = {"wallet": lab.get("wallet"), "equity_usd": lab.get("equity_usd"), "start_usd": lab.get("start_usd"),
                   "pnl_pct": round(lab["equity_usd"] / lab["start_usd"] - 1, 4) if lab.get("start_usd") else None,
                   "since": lab.get("start_ts"), "live_tests": [{"token": p.get("symbol"), "multiple": p.get("mult"), "test": p.get("thesis"), "chart": chart_url(p)} for p in lab.get("positions") or [] if p.get("mint") not in STABLES]}
-    return {"experiments": out, "counts": counts, "total": len(out), "lab_wallet": wallet,
+    fl = jl(STATE / "desk" / "floor.json") or {}
+    floor = None
+    if fl.get("wallet"):
+        su = fl.get("sol_usd") or 0
+        eq, st0 = fl.get("equity_sol"), fl.get("start_sol")
+        floor = {"wallet": fl["wallet"], "mode": fl.get("mode"), "equity_usd": round(eq * su, 2) if eq is not None and su else None,
+                 "start_usd": round(st0 * su, 2) if st0 and su else None, "pnl_pct": round(eq / st0 - 1, 4) if eq is not None and st0 else None,
+                 "tickets": (fl.get("open") or 0) + (fl.get("closed") or 0), "open": fl.get("open"), "closed": fl.get("closed"),
+                 "hits_3x": fl.get("wins_3x"), "best": fl.get("best"), "seen": (fl.get("stats") or {}).get("seen"),
+                 "eligible": (fl.get("stats") or {}).get("eligible"), "ticket_usd": round((fl.get("ticket_sol") or 0) * su, 2),
+                 "positions": fl.get("positions") or [], "recent_closed": fl.get("recent_closed") or [], "updated": fl.get("ts")}
+    return {"experiments": out, "counts": counts, "total": len(out), "lab_wallet": wallet, "floor": floor,
             "lab_note": (d.get("lab") or {}).get("note"), "cadence": "New ideas are tested every Monday, Wednesday and Friday. Every Sunday, each rule in use is re-checked against the latest week.",
             "updated": time.time()}
 

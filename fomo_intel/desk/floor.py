@@ -154,7 +154,18 @@ class Floor:
                 bal = self.rpc.sol_balance(self.pub)
             except Exception:  # noqa: BLE001
                 bal = None
-            json.dump({"ts": time.time(), "mode": self.mode(), "wallet": self.pub, "sol_balance": bal, "sol_usd": self.sol_usd,
+            open_val = sum((q.get("last_px") or q["entry_px"]) * q["tokens"] for q in self.pos.values())
+            start_p = D / "floor_start.json"
+            if bal is not None and not start_p.exists():
+                json.dump({"ts": time.time(), "start_sol": round(bal + sum(q["cost_sol"] for q in self.pos.values()) - pnl, 6)}, open(start_p, "w"))
+            start = (json.load(open(start_p)) if start_p.exists() else {}).get("start_sol")
+            equity = (bal + open_val) if bal is not None else None
+            json.dump({"ts": time.time(), "mode": self.mode(), "start_sol": start, "equity_sol": round(equity, 5) if equity is not None else None,
+                       "open_value_sol": round(open_val, 5),
+                       "positions": [{"sym": q["sym"], "mint": m, "mult": round((q.get("last_px") or q["entry_px"]) / q["entry_px"], 3),
+                                      "peak_mult": round(q["peak_px"] / q["entry_px"], 2), "ts": q["ts"], "hit_rec": q["hit_rec"]}
+                                     for m, q in sorted(self.pos.items(), key=lambda kv: -kv[1]["ts"])],
+                       "recent_closed": [{k: c.get(k) for k in ("sym", "mint", "mult", "peak_mult", "pnl_sol", "why", "closed_ts", "hold_min")} for c in closed[-12:][::-1]], "wallet": self.pub, "sol_balance": bal, "sol_usd": self.sol_usd,
                        "ticket_sol": TICKET, "ratio": RATIO, "open": len(self.pos), "open_cost_sol": round(sum(p["cost_sol"] for p in self.pos.values()), 4),
                        "closed": len(closed), "closed_pnl_sol": round(pnl, 4), "closed_cost_sol": round(inv, 4),
                        "closed_roi": round(pnl / inv, 4) if inv else None, "wins_3x": sum(1 for c in closed if c.get("hit_rec")),

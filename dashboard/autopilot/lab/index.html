@@ -115,6 +115,22 @@ footer{color:var(--cream)}
   </div>
 </section>
 
+<section class="sect" id="floor-sect" hidden aria-labelledby="f-t">
+  <div class="panel wallet-box">
+    <div>
+      <h3 id="f-t">Live test: the floor lottery</h3>
+      <div class="eq" id="f-eq">—<small id="f-pnl"></small></div>
+      <p>Lloyd buys brand-new pump.fun launches in their first minute, while they still sit at the floor of the curve. Most tickets lose a few cents; the bet is that a rare runner pays for all of them. Its own wallet, real money, small tickets.</p>
+      <p id="f-stats" style="font:700 13px var(--m)"></p>
+      <p id="f-link"></p>
+    </div>
+    <div>
+      <h3>Tickets</h3>
+      <ul id="f-list"></ul>
+    </div>
+  </div>
+</section>
+
 <section class="sect" id="learned" aria-labelledby="l-t">
   <h2 id="l-t">Learned, in use</h2>
   <p class="sub">Ideas that passed. They are part of how Lloyd trades the book today.</p>
@@ -203,6 +219,22 @@ function render(d) {
     $("#w-tests").innerHTML = (w.live_tests || []).map(t => `<li><b>${L.esc(t.token)}${t.chart ? ` <a class="chart" href="${t.chart}" target="_blank" rel="noopener" title="Open chart">↗</a>` : ""}</b><span><span class="${(t.multiple || 0) >= 1 ? "up" : "down"}">${L.fmtX(t.multiple)}</span><br><small style="font-weight:400">${L.esc(t.test)}</small></span></li>`).join("") || `<li>No live tests right now.</li>`;
   } else {
     $("#wallet-sect").hidden = true;
+  }
+
+  const f = d.floor;
+  if (f) {
+    $("#floor-sect").hidden = false;
+    $("#f-eq").firstChild.textContent = L.usd(f.equity_usd, 2);
+    const fp = $("#f-pnl");
+    fp.textContent = f.pnl_pct != null ? `${L.frac(f.pnl_pct)} from ${L.usd(f.start_usd, 0)}` : "";
+    fp.className = (f.pnl_pct || 0) >= 0 ? "up" : "down";
+    $("#f-stats").textContent = `${f.tickets || 0} tickets · ${f.open || 0} open · ${f.hits_3x || 0} hit 3x` + (f.best && f.best.mult ? ` · best ${L.fmtX(f.best.mult)}` : "") + (f.ticket_usd ? ` · ${L.usd(f.ticket_usd, 2)} per ticket` : "");
+    $("#f-link").innerHTML = `<a href="https://solscan.io/account/${encodeURIComponent(f.wallet)}" target="_blank" rel="noopener">See this wallet on Solscan →</a>`;
+    const rows = (f.positions || []).map(p => `<li><b>${L.esc(p.sym || "?")} <a class="chart" href="https://dexscreener.com/solana/${encodeURIComponent(p.mint)}" target="_blank" rel="noopener" title="Open chart">↗</a></b><span><span class="${p.mult >= 1 ? "up" : "down"}">${L.fmtX(p.mult)}</span><br><small style="font-weight:400">open · ${L.ago(p.ts)}</small></span></li>`)
+      .concat((f.recent_closed || []).map(c => `<li><b>${L.esc(c.sym || "?")}</b><span><span class="${(c.mult || 0) >= 1 ? "up" : "down"}">${L.fmtX(c.mult)}</span><br><small style="font-weight:400">closed · peak ${L.fmtX(c.peak_mult)}</small></span></li>`));
+    $("#f-list").innerHTML = rows.join("") || `<li>Waiting for the first ticket.</li>`;
+  } else {
+    $("#floor-sect").hidden = true;
   }
 
   const bits = [];

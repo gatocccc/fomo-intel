@@ -327,6 +327,19 @@
    "verdict": "rejected",
    "sleeve": "majors",
    "priority": 3
+  },
+  {
+   "date": "2026-10-31",
+   "name": "Floor lottery (pump.fun first minute)",
+   "public_title": "The floor lottery",
+   "question": "Does buying brand-new launches in their first minute, at the floor of the bonding curve, pay off through rare runners?",
+   "hypothesis": "Near the curve floor the downside is a few percent; one runner in a few hundred tickets can pay for all of them.",
+   "method": "Census of 7,500 launches (7–14 days): first-minute entries at ≤1.3x the floor averaged +6% per ticket, all of it from ~1 in 400 runners. Live forward test: own wallet, ~$2.4 tickets, up to 50 a day, 1/3 out at 3x, rest on a 40% trail, all out at 6 h.",
+   "result": "Live since Oct 31. Evaluate at 1,000 tickets.",
+   "efficacy": "Collecting tickets. Most lose a few cents by design; the result depends on catching runners.",
+   "verdict": "testing",
+   "sleeve": "lab",
+   "priority": 1
   }
  ],
  "protocol": "Out-of-sample half held out, entries at next bar open, real costs (memes ~4% round trip (measured on our own fills, Oct 30), perps 0.12% + funding), random-entry control x20; adopt only if test mean > 0, t ≥ 2.5, beats random by ≥ 0.3%/trade, design half also positive. Risk/cost changes are judged on drawdown and realized cost, not on win rate.",
