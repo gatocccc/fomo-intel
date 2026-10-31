@@ -2,6 +2,17 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793448784.9175754,
+   "src": "cointelegraph",
+   "title": "Binance $6.3B record hack sparks pre-election political clashes",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793440999.777737,
    "src": "cointelegraph",
    "title": "Binance $6.3B record hack sparks pre-election political chatter",
@@ -13,21 +24,21 @@
    ]
   }
  ],
- "ts": 1793448560.4231591,
- "bear_score": 0,
+ "ts": 1793448860.581224,
+ "bear_score": 3,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.849,
-   "ch15m": -0.00014604174707655293,
-   "ch1h": 0.0016302132862382468,
-   "ch4h": 0.0020385974449579347
+   "px": 95.881,
+   "ch15m": 0.0004799916523192671,
+   "ch1h": 0.0016192048137391168,
+   "ch4h": 0.0028029661238535564
   },
   "BTC": {
-   "px": 77587.0,
-   "ch15m": -0.00010309942650943427,
-   "ch1h": 0.0024807804121713684,
-   "ch4h": 0.0035699965076121387
+   "px": 77584.0,
+   "ch15m": -5.155436407688896e-05,
+   "ch1h": 0.002584513594541482,
+   "ch4h": 0.002584513594541482
   }
  },
  "mode": "live",
