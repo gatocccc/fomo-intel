@@ -481,5 +481,26 @@
   "sig": "qeRmQ2343C4kXnYSJaPZgU9GYBD3D8FyoewyNCrBjkzTuTSxkh7bEShi3xfgUzkwe88WPFi2XLWrmZab1z91y5S",
   "latency_s": 2.3,
   "last_px": 2.800745369984963e-08
+ },
+ "AdmkrRvmhPb1SJL4oopLwNgVr48YkqSR2e1eiyEzpump": {
+  "ts": 1793475067.5006928,
+  "mint": "AdmkrRvmhPb1SJL4oopLwNgVr48YkqSR2e1eiyEzpump",
+  "sym": "FROG",
+  "name": "FrogGo",
+  "curve": "6AzGc7HgjzQ79XNvG9tzXHR74kGsC7o9CGTWy2wgb2yA",
+  "tokens": 893363.349531,
+  "tokens0": 893363.349531,
+  "cost_sol": 0.027006339,
+  "entry_px": 3.0229960759166865e-08,
+  "ref_px": 2.7960834425456915e-08,
+  "slip_pct": 8.12,
+  "age_at_entry_s": 53,
+  "mcap_sol_entry": 27.96,
+  "peak_px": 3.0229960759166865e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "4h4frv2fKfEUFPJJcCgCtnQa9HFMK21NUJWkTykMxrBHu8Z8gT93yFMrotLvMye2ESPcjuGA1CKa9mYSSiKijeMq",
+  "latency_s": 2.2,
+  "last_px": 2.800745369798408e-08
  }
 }
