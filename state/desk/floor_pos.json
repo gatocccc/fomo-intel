@@ -355,5 +355,26 @@
   "sig": "4C4t74BYo3CBMqGRaTiFQYrrgbro5DvFtfLxKtasBdZaJXmak6S7G8fVqxzHktjKs9cFKnyu68pyjtZDQxcvRPMx",
   "latency_s": 2.3,
   "last_px": 2.8005221932694768e-08
+ },
+ "FQGch8p3Kit1RBdUvgyomi81HZymoao46cCa6xjrUeRy": {
+  "ts": 1793470693.726236,
+  "mint": "FQGch8p3Kit1RBdUvgyomi81HZymoao46cCa6xjrUeRy",
+  "sym": "SPAM",
+  "name": "Spam",
+  "curve": "Pjai1GwpnrApRbhK5LvigFuetVWxFFVgt5tL6JPbt8S",
+  "tokens": 784781.143715,
+  "tokens0": 784781.143715,
+  "cost_sol": 0.027039989,
+  "entry_px": 3.445545196460506e-08,
+  "ref_px": 3.187324251582167e-08,
+  "slip_pct": 8.1,
+  "age_at_entry_s": 54,
+  "mcap_sol_entry": 31.87,
+  "peak_px": 3.445545196460506e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "5mv6jR6cVLBsqWEV9V3GPhTh53vhh3EuETbvF1DeupAjA44KhUGYEe1y48Xa1Wbgzby1FAgdA4c15CLokiDM5fVw",
+  "latency_s": 2.2,
+  "last_px": 3.288924193628183e-08
  }
 }
