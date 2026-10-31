@@ -417,7 +417,7 @@
   "proceeds_sol": 0.0,
   "sig": "mJZfmUAPnvH7iNBTYGuahYD7mri1qimJMsKr3EMLGp9nSLQCk3isSuxdtfkvKgoRi3Bj6F4WmxYuN8LPtJ3bFUa",
   "latency_s": 2.2,
-  "last_px": 2.805305646202562e-08
+  "last_px": 2.8033568099590428e-08
  },
  "5uPWFX2VimoDBqfig1UcjBk4Wqeg1Ai1VhnSssNhpump": {
   "ts": 1793472891.840179,
@@ -502,5 +502,26 @@
   "sig": "4h4frv2fKfEUFPJJcCgCtnQa9HFMK21NUJWkTykMxrBHu8Z8gT93yFMrotLvMye2ESPcjuGA1CKa9mYSSiKijeMq",
   "latency_s": 2.2,
   "last_px": 2.800745369798408e-08
+ },
+ "4FgRUow7r7qwJDjVQG3woJfo6M1N7dofFEcaM6uiaEXt": {
+  "ts": 1793475792.641358,
+  "mint": "4FgRUow7r7qwJDjVQG3woJfo6M1N7dofFEcaM6uiaEXt",
+  "sym": "PAIRCAT",
+  "name": "PAIRCAT",
+  "curve": "Ai4rJgQjJ1tQJ1b9iDM7PJ8KgByGL8jZhbmWUiXhvvLF",
+  "tokens": 893422.148209,
+  "tokens0": 893422.148209,
+  "cost_sol": 0.027006339,
+  "entry_px": 3.022797123861133e-08,
+  "ref_px": 2.7958993476234855e-08,
+  "slip_pct": 8.12,
+  "age_at_entry_s": 51,
+  "mcap_sol_entry": 27.96,
+  "peak_px": 3.022797123861133e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "2oPyPrf1vnTMG26Ja3j6f3EdRHRin5BAjPxqEUWGBu1CwbhxaecsXgVtaUd7A44XKv3XHm6JmZrE4vDdincJRRYt",
+  "latency_s": 2.3,
+  "last_px": 2.8005611214662916e-08
  }
 }
