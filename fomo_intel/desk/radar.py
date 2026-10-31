@@ -721,6 +721,10 @@ class Radar:
                 from .turtle import TurtleBook
                 self.turtle = TurtleBook(self)
             self.turtle.step()
+            if not hasattr(self, "turtle_desk"):   # 31/10: la mesa también opera la tortuga (copia las del libro)
+                from .turtle import TurtleDesk
+                self.turtle_desk = TurtleDesk(self, self.turtle)
+            self.turtle_desk.step()
         except Exception as e:  # noqa: BLE001
             log.exception("turtle: %s", e)
         try:   # 30/10: consenso de KOLs en el lab (fomo_intel/desk/kols.py; lista en desk/kols.json)

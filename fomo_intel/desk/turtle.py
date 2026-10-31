@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import json
 import logging
+import math
 import os
 import time
 from pathlib import Path
@@ -66,11 +67,14 @@ def levels_for(coin):
 
 
 class TurtleBook:
+    LEG, PLAN, POS_F = "book", "lloyd", POS
+
     def __init__(self, radar):
         self.radar = radar
         self.leg = next(l for l in radar.legs if l["name"] == "book")
         self.mode = os.getenv("BOOK_TURTLE", "live")
-        self.pos = jload(POS, {})
+        self.pos = jload(self.POS_F, {})
+        self.px = {}
         self.lv = jload(LEVELS, {}).get("levels", {})
         self.lv_day = jload(LEVELS, {}).get("day", 0)
         self.retry = {}
@@ -93,6 +97,7 @@ class TurtleBook:
             px = {c: float(mids[c]) for c in COINS if c in mids}
         except Exception as e:  # noqa: BLE001
             log.warning("turtle precios: %s", e); return
+        self.px = px
         eq = self.radar.plan_equity("lloyd")
         for c in COINS:
             L = self.lv.get(c); p = px.get(c)
@@ -115,42 +120,50 @@ class TurtleBook:
             out[c] = {**L, "px": p, "to_buy": round(L["buy_above"] / p - 1, 4), "to_short": round(L["short_below"] / p - 1, 4), "position": self.pos.get(c)}
         jsave(LEVELS, {"ts": now, "day": self.lv_day, "mode": self.mode, "rules": R, "levels": self.lv, "view": out})
 
-    def try_open(self, coin, side, price, level, exit_lv, eq, now):
+    def try_open(self, coin, side, price, level, exit_lv, eq, now, extra=None):
         if abs(price / level - 1) > R["chase"]:
-            return   # el precio ya pasó el nivel por más de 1%: hueco, no se persigue (espera el próximo toque)
+            return False   # el precio ya pasó el nivel por más de 1%: hueco, no se persigue (espera el próximo toque)
         dist = abs(exit_lv / price - 1)
         if dist <= 0.005 or eq <= 0:
-            return
+            return False
+        lev = R["lev"]
         notional = R["risk"] * eq / dist
-        coll = min(notional / R["lev"], R["coll_max_frac"] * eq)
+        coll = min(notional / lev, R["coll_max_frac"] * eq)
         if coll < R["coll_min"]:
-            if R["coll_min"] * R["lev"] * dist > R["risk_max"] * eq:
-                return
+            # 31/10: con el colateral mínimo (US$10) a 2x, una cartera chica (la mesa, ~US$155) arriesgaría más del 2%.
+            # En vez de no entrar, se baja el apalancamiento (Jupiter acepta desde 1,1x) hasta que el riesgo entre en el 2%.
+            lev = min(R["lev"], math.floor(R["risk_max"] * eq / (R["coll_min"] * dist) * 10) / 10)
+            if lev < 1.1:
+                return False
             coll = R["coll_min"]
         coll = round(coll, 2)
-        rec = {"ts": now, "leg": "book", "plan": "lloyd", "symbol": coin, "side": side, "entry": price, "level": level, "exit_level": exit_lv,
-               "collateral_usd": coll, "lev": R["lev"], "size_usd": round(coll * R["lev"], 2), "risk_usd": round(coll * R["lev"] * dist, 2), "mode": self.mode,
-               "pubkey": None, "reason": "majors_trend", "system": "turtle55"}
+        rec = {"ts": now, "leg": self.LEG, "plan": self.PLAN, "symbol": coin, "side": side, "entry": price, "level": level, "exit_level": exit_lv,
+               "collateral_usd": coll, "lev": lev, "size_usd": round(coll * lev, 2), "risk_usd": round(coll * lev * dist, 2), "mode": self.mode,
+               "pubkey": None, "reason": "majors_trend", "system": "turtle55", **(extra or {})}
         if self.mode == "live":
             try:
-                r = self.radar.perps(self.leg).open(coin, side, coll, R["lev"], dry=False)
+                r = self.radar.perps(self.leg).open(coin, side, coll, lev, dry=False)
             except Exception as e:  # noqa: BLE001
                 r = {"ok": False, "error": str(e)}
             if not r.get("ok"):
                 self.retry[coin] = now + 300
-                self.rlog("turtle_open_failed", coin=coin, side=side, error=str(r.get("error"))[:300]); log.error("turtle: no abrió %s %s: %s", side, coin, r.get("error"))
-                return
+                self.rlog("turtle_open_failed", leg=self.LEG, coin=coin, side=side, error=str(r.get("error"))[:300]); log.error("turtle %s: no abrió %s %s: %s", self.LEG, side, coin, r.get("error"))
+                return False
             rec.update({"pubkey": r.get("position_pubkey"), "sig": r.get("sig")})
             try:
                 live = [q for q in self.radar.perps(self.leg).positions() if q.get("pubkey") == rec["pubkey"]]
                 if live and live[0].get("entry"): rec["entry"] = float(live[0]["entry"])
             except Exception:  # noqa: BLE001
                 pass
-        self.pos[coin] = rec; jsave(POS, self.pos); self.rlog("turtle_open", **rec)
+        self.pos[coin] = rec; jsave(self.POS_F, self.pos); self.rlog("turtle_open", **rec)
+        self.opened_note(coin, side, rec, level, exit_lv, coll)
+        return True
+
+    def opened_note(self, coin, side, rec, level, exit_lv, coll):
         what = "55-day high" if side == "long" else "55-day low"
         self.note(f"Breakout: {side} {coin}",
                   f"{coin} touched its {what} (${level:,.2f}), a level Lloyd had on file. Turtle rule (55/20): open a {side} on Jupiter Perps at 2x, "
-                  f"${coll:.0f} collateral (${coll * R['lev']:.0f} exposure), entry ${rec['entry']:,.2f}. The exit is pre-set at the 20-day "
+                  f"${coll:.0f} collateral (${rec['size_usd']:.0f} exposure), entry ${rec['entry']:,.2f}. The exit is pre-set at the 20-day "
                   f"{'low' if side == 'long' else 'high'} (${exit_lv:,.2f}); if it is hit, the loss is about ${rec['risk_usd']:.1f} (1% of the book). "
                   f"Why: in 2024–26 this rule made +7% per trade on average across 8 crypto markets (t 2.0, beats random entries). "
                   f"Against: most breakouts fail (55–65% of trades lose); the system lives on the few big moves.")
@@ -166,7 +179,7 @@ class TurtleBook:
         if hit:
             self.close(coin, f"touched the exit level ${p['exit_level']:,.2f}", price, now)
         else:
-            jsave(POS, self.pos)
+            jsave(self.POS_F, self.pos)
 
     def close(self, coin, why, price, now):
         p = self.pos[coin]
@@ -176,21 +189,24 @@ class TurtleBook:
             except Exception as e:  # noqa: BLE001
                 r = {"ok": False, "error": str(e)}
             if not r.get("ok"):
-                p["close_attempts"] = p.get("close_attempts", 0) + 1; jsave(POS, self.pos)
+                p["close_attempts"] = p.get("close_attempts", 0) + 1; jsave(self.POS_F, self.pos)
                 self.rlog("turtle_close_failed", coin=coin, error=str(r.get("error"))[:300])
                 if p["close_attempts"] < 5:
                     return
         d = 1 if p["side"] == "long" else -1
         ret = d * (price / p["entry"] - 1); pnl = ret * p["size_usd"] - p["size_usd"] * 0.0012 * 2
-        row = {"ts": now, "ts_open": p["ts"], "leg": "book", "symbol": coin, "side": p["side"], "entry": p["entry"], "exit": price,
+        row = {"ts": now, "ts_open": p["ts"], "leg": self.LEG, "symbol": coin, "side": p["side"], "entry": p["entry"], "exit": price,
                "collateral_usd": p["collateral_usd"], "size_usd": p["size_usd"], "ret_px": round(ret, 4), "pnl_usd": round(pnl, 2),
                "hold_h": round((now - p["ts"]) / 3600, 2), "why": why, "mode": p.get("mode"), "reason": "majors_trend", "system": "turtle55"}
         with open(CLOSED, "a") as f:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
         self.rlog("turtle_close", **row)
+        self.closed_note(coin, p, why, price, pnl)
+        del self.pos[coin]; jsave(self.POS_F, self.pos)
+
+    def closed_note(self, coin, p, why, price, pnl):
         self.note(f"Breakout trade closed: {p['side']} {coin}",
                   f"Closed: {why}. Entry ${p['entry']:,.2f}, exit ${price:,.2f}, result about ${pnl:+.2f} on ${p['collateral_usd']:.0f} collateral.")
-        del self.pos[coin]; jsave(POS, self.pos)
 
     @staticmethod
     def rlog(kind, **kw):
@@ -200,5 +216,81 @@ class TurtleBook:
     @staticmethod
     def note(title, text):
         d = Path("state/plan_lloyd/auto")
-        did = f"auto-lloyd-turtle-{time.strftime('%Y%m%d-%H%M%S', time.gmtime())}"
+        did = f"auto-lloyd-turtle-{time.strftime('%Y%m%d-%H%M%S', time.gmtime())}-{time.time_ns() % 1000000:06d}"
+        jsave(d / f"{did}.json", {"id": did, "title": title, "journal": text, "orders": [], "auto": True})
+
+
+class TurtleDesk(TurtleBook):
+    """Tortuga 55/20 en la MESA (31/10, pedido de Gastón: "seguimos sin actividad, no pasa nada").
+
+    La mesa estaba 100% en USDC sin ninguna forma de ganar si el mercado cae, mientras el libro tenía cortos de ETH y SOL por la
+    tortuga (el único sistema de majors que pasó el backtest). Ahora la mesa:
+    - usa los mismos niveles que el libro (máximo/mínimo de 55 días para entrar, extremo de 20 días para salir);
+    - si el libro tiene una posición de la tortuga abierta y la mesa no, se suma al precio actual con la MISMA salida, solo si el
+      riesgo hasta esa salida entra en el 2% de la mesa (si no, baja el apalancamiento hasta 1,1x; si ni así entra, espera);
+    - cada operación del libro se sigue una sola vez (si la mesa sale, no vuelve a entrar en esa misma operación);
+    - Jupiter Perps con la billetera de la mesa; el colateral sale de su USDC; el resultado entra al patrimonio (engine.perps_*)."""
+    LEG, PLAN, POS_F = "desk", "desk", ST / "turtle_pos_desk.json"
+    JOINED = ST / "turtle_desk_joined.json"
+
+    def __init__(self, radar, book):
+        from ..live.config import Env
+        self.radar, self.book = radar, book
+        self.leg = {"name": "desk", "wallet": Path(Env().wallet_file)}
+        self.mode = os.getenv("DESK_TURTLE", "live")
+        self.pos = jload(self.POS_F, {})
+        self.joined = set(jload(self.JOINED, []))
+        self.retry = {}
+
+    def step(self):
+        now = time.time()
+        self.lv, px = self.book.lv, self.book.px
+        if not self.lv or not px:
+            return
+        eq = (jload(Path("state/desk_summary.json"), {}) or {}).get("equity_usd") or 0.0
+        for c in COINS:
+            L = self.lv.get(c); p = px.get(c)
+            if not L or not p:
+                continue
+            if c in self.pos:
+                self.manage(c, p, L, now); continue
+            if self.mode == "off" or now < self.retry.get(c, 0):
+                continue
+            bp = (self.book.pos or {}).get(c)
+            if bp and bp.get("mode") == "live" and f"{c}:{bp['ts']}" not in self.joined:
+                d = 1 if bp["side"] == "long" else -1
+                ex = float(bp["exit_level"])
+                if (p >= ex if d < 0 else p <= ex):
+                    continue
+                if self.try_open(c, bp["side"], p, p, ex, eq, now, extra={"follows": f"book:{bp['ts']}", "book_entry": bp["entry"]}):
+                    self.joined.add(f"{c}:{bp['ts']}"); jsave(self.JOINED, sorted(self.joined))
+            elif not bp:
+                if p >= L["buy_above"]:
+                    self.try_open(c, "long", p, L["buy_above"], L["long_exit_below"], eq, now)
+                elif p <= L["short_below"]:
+                    self.try_open(c, "short", p, L["short_below"], L["short_exit_above"], eq, now)
+
+    def opened_note(self, coin, side, rec, level, exit_lv, coll):
+        lado = "corto" if side == "short" else "largo"
+        if rec.get("follows"):
+            como = (f"La mesa copia la operación de la tortuga 55/20 que el libro ya tiene abierta ({lado} de {coin}, entrada del libro "
+                    f"US${rec['book_entry']:,.2f}); entra al precio de ahora, US${rec['entry']:,.2f}, con la misma salida.")
+        else:
+            como = f"{coin} tocó su {'máximo' if side == 'long' else 'mínimo'} de 55 días (US${level:,.2f}): regla de la tortuga 55/20."
+        self.note(f"Tortuga 55/20: {lado} de {coin}",
+                  f"{como} Jupiter Perps a {rec['lev']:g}x, colateral US${coll:.0f} (exposición US${rec['size_usd']:.0f}). Sale sola al tocar el "
+                  f"{'mínimo' if side == 'long' else 'máximo'} de 20 días (US${exit_lv:,.2f}); si pasa, se pierden ~US${rec['risk_usd']:.1f} "
+                  f"(≤ 2% de la mesa). Por qué: es el único sistema de majors que pasó el backtest (2024–26, +7% medio por operación, t 2,0). "
+                  f"En contra: entrar tarde da peor precio que el libro, y la mayoría de las rupturas fallan (55–65% pierden); el sistema vive de pocas "
+                  f"movidas grandes.")
+
+    def closed_note(self, coin, p, why, price, pnl):
+        why = why.replace("touched the exit level", "tocó el nivel de salida")
+        self.note(f"Tortuga 55/20 cerrada: {'corto' if p['side'] == 'short' else 'largo'} de {coin}",
+                  f"Cerrada: {why}. Entrada US${p['entry']:,.2f}, salida US${price:,.2f}, resultado ~US${pnl:+.2f} sobre US${p['collateral_usd']:.0f} de colateral.")
+
+    @staticmethod
+    def note(title, text):
+        d = Path("state/desk/auto")
+        did = f"auto-mesa-turtle-{time.strftime('%Y%m%d-%H%M%S', time.gmtime())}-{time.time_ns() % 1000000:06d}"
         jsave(d / f"{did}.json", {"id": did, "title": title, "journal": text, "orders": [], "auto": True})

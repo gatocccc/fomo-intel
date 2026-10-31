@@ -43,7 +43,7 @@ ST_DIR.mkdir(parents=True, exist_ok=True)
 JUP_PRICE = "https://api.jup.ag/price/v3"
 USDC_MINT = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
 # Pierna del radar que usa esta billetera (ver radar.LEGS) y desde cuándo se contabiliza (los dos primeros cortos reales, 29/10).
-PERP_LEG = {"lloyd": ("book", "state/desk/radar_pos_book.json"), "lab": ("lab", "state/desk/radar_pos.json")}.get(NAME)
+PERP_LEG = {"lloyd": ("book", "state/desk/radar_pos_book.json"), "lab": ("lab", "state/desk/radar_pos.json"), "": ("desk", "state/desk/turtle_pos_desk.json")}.get(NAME)
 PERPS_SINCE = 1793309000
 
 
@@ -389,7 +389,7 @@ class Desk:
                         "mult": round(1 + ret * float(p.get("lev") or 2), 3), "value_usd": round(coll + pnl, 2), "pnl_usd": pnl, "collateral_usd": coll, "side": "short"})
         # 30/10 (tarde): la tortuga 55/20 del libro (dict moneda → posición) y la tendencia diaria del lab (una posición) también son perps
         # de ESTA billetera. Antes no se listaban: /book/ decía "1 open" con dos cortos abiertos y el bolsillo de majors no las contaba.
-        f = {"lloyd": "state/desk/turtle_pos_book.json", "lab": "state/desk/trend_pos_lab.json"}.get(NAME or "")
+        f = {"lloyd": "state/desk/turtle_pos_book.json", "lab": "state/desk/trend_pos_lab.json", "": "state/desk/turtle_pos_desk.json"}.get(NAME or "")
         obj = jload(Path(f), None) if f else None
         items = [obj] if (obj and "ts" in obj) else list((obj or {}).values())
         for p in items:
@@ -400,7 +400,7 @@ class Desk:
             pnl = round(ret * size, 2); lev = float(p.get("lev") or 2); ex = p.get("exit_level") or p.get("stop_px")
             stop = round(abs(float(ex) / float(p["entry"]) - 1), 4) if ex and p.get("entry") else None
             turtle = (p.get("system") or "").startswith("turtle") or "exit_level" in p
-            thesis = (T(f"Tortuga 55/20: {coin} tocó su {'máximo' if d > 0 else 'mínimo'} de 55 días. {side} a {lev:g}x, colateral US${coll:.0f}; sale al tocar el {'mínimo' if d > 0 else 'máximo'} de 20 días (US${float(ex):,.2f}), riesgo 1% del libro.",
+            thesis = (T(f"Tortuga 55/20: {coin} tocó su {'máximo' if d > 0 else 'mínimo'} de 55 días. {side} a {lev:g}x, colateral US${coll:.0f}; sale al tocar el {'mínimo' if d > 0 else 'máximo'} de 20 días (US${float(ex):,.2f}), riesgo ≤ 2% de la cartera.",
                         f"Breakout 55/20: {coin} touched its 55-day {'high' if d > 0 else 'low'}. {side} at {lev:g}x, ${coll:.0f} collateral; exits when it touches the 20-day {'low' if d > 0 else 'high'} (${float(ex):,.2f}), 1% of the book at risk.") if (turtle and ex)
                       else T(f"Tendencia diaria en majors: {side} {coin} a {lev:g}x, colateral US${coll:.0f}.", f"Daily trend on majors: {side} {coin} at {lev:g}x, ${coll:.0f} collateral."))
             out.append({"mint": f"perps:{p.get('pubkey')}", "symbol": f"{coin} {side} {lev:g}x", "opened_ts": p["ts"], "entry_usd": p["entry"],
