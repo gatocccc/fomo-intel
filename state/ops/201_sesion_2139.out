@@ -1,0 +1,61 @@
+== 201_sesion_2139 2026-10-31T00:42:04Z ==
+libro eq 541.15 [('USDC', 503.18), ('ETH short 2x', 16.86), ('SOL short 2x', 13.16)]
+[1] eq=181.44 cash=145.39 perps_open=2
+     ETH:short: coll=9.99 size=19.98 entry=2225.0 pnl=-0.21 closed=None err=
+     SOL:short: coll=27.38 size=54.84 entry=94.58 pnl=-1.05 closed=None err=
+[2] eq=972.45 cash=801.44 perps_open=2
+     ETH:short: coll=30.98 size=61.96 entry=2224.83 pnl=-0.61 closed=None err=
+     SOL:short: coll=146.55 size=293.52 entry=94.6 pnl=-5.25 closed=None err=
+[3] eq=46.19 cash=26.82 perps_open=2
+     ETH:short: coll=9.99 size=19.98 entry=2225.67 pnl=-0.21 closed=None err=
+     SOL:short: coll=9.99 size=20.0 entry=94.61 pnl=-0.4 closed=None err=
+[4] eq=126.54 cash=98.42 perps_open=2
+     ETH:short: coll=9.99 size=19.98 entry=2225.76 pnl=-0.2 closed=None err=
+     SOL:short: coll=19.11 size=38.28 entry=94.59 pnl=-0.73 closed=None err=
+[6] eq=44.62 cash=25.25 perps_open=2
+     ETH:short: coll=9.99 size=19.98 entry=2225.28 pnl=-0.2 closed=None err=
+     SOL:short: coll=9.99 size=20.0 entry=94.62 pnl=-0.36 closed=None err=
+== mirror log ==
+Oct 30 16:05:05 simplai-prod python3[2400312]: 2026-10-30 16:05:05,083 INFO mirror: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 30 16:05:05 simplai-prod python3[2400312]: 2026-10-30 16:05:05,171 INFO mirror: perps submit: sent 4773wrXZdoN1vRfHQa9r9UTZGiEu6H2pWiYudAZ16eq79nZ18eLDXxehcdTDcxCJXmq9kopaRzhQdKLm1ThozPL, waiting up to 90s
+Oct 30 16:05:06 simplai-prod python3[2400312]: 2026-10-30 16:05:06,913 INFO mirror: perps submit: confirmed 4773wrXZdoN1vRfHQa9r9UTZGiEu6H2pWiYudAZ16eq79nZ18eLDXxehcdTDcxCJXmq9kopaRzhQdKLm1ThozPL (finalized)
+Oct 30 16:05:07 simplai-prod python3[2400312]: 2026-10-30 16:05:07,766 INFO mirror: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 30 16:05:07 simplai-prod python3[2400312]: 2026-10-30 16:05:07,908 INFO mirror: perps submit: sent 2ZLrUCEkLNUmvZ7sQNYGzTJZ7K8WJC6nvWr9HX3XJAusB4DQThdfMx5ziCpYsRkQ92UEYzKvz5gFZyuAh1Fxprae, waiting up to 90s
+Oct 30 16:05:09 simplai-prod python3[2400312]: 2026-10-30 16:05:09,637 INFO mirror: perps submit: confirmed 2ZLrUCEkLNUmvZ7sQNYGzTJZ7K8WJC6nvWr9HX3XJAusB4DQThdfMx5ziCpYsRkQ92UEYzKvz5gFZyuAh1Fxprae (finalized)
+Oct 30 16:05:10 simplai-prod python3[2400312]: 2026-10-30 16:05:10,333 INFO mirror: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 30 16:05:10 simplai-prod python3[2400312]: 2026-10-30 16:05:10,419 INFO mirror: perps submit: sent 2MVg8KrAYq9JiKc1XVZzuXcBP1SKqnC5xvE2ovtX2xj1YNTb98f4pmy8FzLbXyZju5N4uP81e3CPPgFbW2v9joxk, waiting up to 90s
+Oct 30 16:05:12 simplai-prod python3[2400312]: 2026-10-30 16:05:12,101 INFO mirror: perps submit: confirmed 2MVg8KrAYq9JiKc1XVZzuXcBP1SKqnC5xvE2ovtX2xj1YNTb98f4pmy8FzLbXyZju5N4uP81e3CPPgFbW2v9joxk (finalized)
+Oct 30 16:05:13 simplai-prod python3[2400312]: 2026-10-30 16:05:13,003 INFO mirror: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 30 16:05:13 simplai-prod python3[2400312]: 2026-10-30 16:05:13,085 INFO mirror: perps submit: sent qX2ALV4YPo1QkjwEvZGku2rpDzpfkVijQNje1q95FrxRgiY5hJMbFqmCePf9D33xg11wgaw9CueFX9kEhiBxfnY, waiting up to 90s
+Oct 30 16:05:14 simplai-prod python3[2400312]: 2026-10-30 16:05:14,774 INFO mirror: perps submit: confirmed qX2ALV4YPo1QkjwEvZGku2rpDzpfkVijQNje1q95FrxRgiY5hJMbFqmCePf9D33xg11wgaw9CueFX9kEhiBxfnY (finalized)
+Oct 30 16:05:15 simplai-prod python3[2400312]: 2026-10-30 16:05:15,490 INFO mirror: perps submit: required=1 ours_index=0 missing=[] require_keeper=False
+Oct 30 16:05:15 simplai-prod python3[2400312]: 2026-10-30 16:05:15,633 INFO mirror: perps submit: sent 5KxuevLmdYWNwFaj4DzGLBn2eAjKHTESThdbkAr7SzKYFcuJpEriKRXKpAXj1zVqTRa4BzZA1a1T23oxnMwgapVz, waiting up to 90s
+Oct 30 16:05:17 simplai-prod python3[2400312]: 2026-10-30 16:05:17,314 INFO mirror: perps submit: confirmed 5KxuevLmdYWNwFaj4DzGLBn2eAjKHTESThdbkAr7SzKYFcuJpEriKRXKpAXj1zVqTRa4BzZA1a1T23oxnMwgapVz (finalized)
+=== GTA6 dexscreener ===
+TTWO 186.87 mcap 80 liq 404609.47 chg {'m5': -1.08, 'h1': 2.14, 'h6': 0.76, 'h24': -3.37} vol {'h24': 362361.71, 'h6': 29011.66, 'h1': 6845.23, 'm5': 9.31}
+=== anti-rug GTA6 ===
+
+=== GTA6 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz → LIMPIO
+top 20: billeteras 20.51% · pools/curva 0.95% · sin fondeador identificado 0
+riesgo ST: {'bundlers%': 5.294, 'insiders%': 0, 'snipers%': 0, 'dev%': 0, 'risks': ['No social media', 'Top 10 Holders', 'Bundler Holdings']}
+creador: {'creator': 'vPczFpjUEeMfYTtPkwqNYdJXvFBB1dDVBUA4sbMocQe', 'lanzamientos': 1982, 'muertos_<US$10K': 16, 'graduados_aprox': 0, 'muestra': 500}
+  grupo fondeador H8sMJSCQ… Coinbase Hot Wallet 12 (exchange): 2 billeteras, 2.64%
+detalle: [('Beqv6d', 3.69, 'H4Ye1c', 'helius'), ('8Sf5C4', 2.23, 'FWznbc', 'helius'), ('JLAhz4', 2.13, 'G2YxRa', 'helius'), ('7zs3Cd', 1.54, 'H8sMJS', 'helius'), ('AVyZMp', 1.52, '5F1seM', 'helius'), ('CdMRJE', 1.32, '8d9FNC', 'helius'), ('EKKv8A', 1.1, 'H8sMJS', 'helius'), ('C78grZ', 1.08, 'Em8J3g', 'helius'), ('AEtL29', 0.91, '26R99B', 'helius'), ('EqBQho', 0.78, '2hMTR5', 'helius'), ('J88F7A', 0.6, '5wHcGE', 'helius'), ('CrvMqF', 0.58, 'GJRs4F', 'helius'), ('4fP5P1', 0.58, '4NyK1A', 'helius'), ('FQFhzZ', 0.55, 'Gn1FRY', 'helius'), ('BM9Ccy', 0.54, 'E8aQ18', 'helius'), ('CjcQxh', 0.47, '54Pz1e', 'helius'), ('4dZY57', 0.46, 'F7p3dF', 'helius'), ('3wHaKu', 0.44, 'Gx5WAn', 'helius')]
+=== scan4 (veto) ===
+  http 400 /tokens/graduated {} {"error":"Invalid token address"}
+en rankings: 346
+  campos /search: ['bundlers', 'buys', 'communityMessages', 'createdAt', 'decimals', 'deployer', 'dev', 'fees', 'freezeAuthority', 'hasCoinCommunity', 'hasSocials', 'holders', 'id', 'image', 'insiders', 'lastUpdated', 'liquidityUsd', 'lpBurn', 'market', 'marketCapUsd', 'mint', 'mintAuthority', 'name', 'poolAddress', 'priceUsd', 'quoteToken', 'riskScore', 'sells', 'snipers', 'status', 'symbol', 'top10', 'totalTransactions', 'volume', 'volume_12h', 'volume_15m', 'volume_1h', 'volume_24h', 'volume_30m', 'volume_5m']
+sumados por /search: 1044 | total: 1390
+pasan liquidez/mcap/edad: 1005
+con velas: 95
+PASAN TODOS LOS FILTROS: 8
+
+FLOAT      mcap $ 0.60M liq $ 157K edad   50h vol24 $  1088K (1.81x) acel 0.9 CV 0.94 | 1h -9% 6h -11% 24h -17% 72h +835% | 25% del máx | hold 3516 top10 21% | Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr |  
+tSpaceX    mcap $ 0.65M liq $ 538K edad 6284h vol24 $   768K (1.17x) acel 1.0 CV 0.63 | 1h -1% 6h +0% 24h -1% 72h -2% | 98% del máx | hold 968 top10 8% | TSPXcLV76s6V2zDiZQ18kBfcbnjaE2ZzNT3ga2Pd99v |  T-SpaceX represents a loan participation
+three      mcap $ 0.60M liq $ 162K edad 4435h vol24 $   151K (0.25x) acel 1.6 CV 0.84 | 1h -0% 6h +5% 24h +1% 72h +120% | 77% del máx | hold 15309 top10 13% | FeMbDoX7R1Psc4GEcvJdsbNbZA3bfztcyDCatJVJpump | https://x.com/dorklon_must/status/2 give your ai model a life. fees directed
+GTA6       mcap $11.86M liq $ 416K edad 2045h vol24 $  7171K (0.60x) acel 0.6 CV 0.66 | 1h -1% 6h -8% 24h -21% 72h +121% | 37% del máx | hold 51885 top10 17% | 4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz |  GTA VI was launched on StonkFun.
+RKC        mcap $ 0.74M liq $ 159K edad 4131h vol24 $   112K (0.15x) acel 1.2 CV 1.89 | 1h -4% 6h +0% 24h -16% 72h -26% | 71% del máx | hold 7302 top10 19% | 7HgfXftRBBqsYtAEYcqjGLQrNJLL6Tww9ek4rE3Apump |  
+baton      mcap $ 4.10M liq $ 383K edad 1228h vol24 $  1020K (0.25x) acel 0.6 CV 0.65 | 1h +2% 6h +2% 24h +10% 72h -30% | 57% del máx | hold 22480 top10 16% | Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump | https://x.com/connortrenches/status Created on https://rapidlaunch.io
+SI         mcap $10.42M liq $ 456K edad  945h vol24 $  1745K (0.17x) acel 0.6 CV 0.96 | 1h +1% 6h -3% 24h +4% 72h -21% | 58% del máx | hold 51157 top10 11% | DEW9dSN6QpWyNthphCpMmAbZP1Q4cEKR9xQXAri98WDP | https://truthsocial.com/@realdonald 
+CX         mcap $ 0.46M liq $ 607K edad 15031h vol24 $    76K (0.17x) acel 0.4 CV 1.06 | 1h -0% 6h +1% 24h -10% 72h -14% | 83% del máx | hold 323 top10 17% | CortexFv3fRcLKTgACr7aLqckGh5eP7TP3z9JHoKqMc6 |  
+== exit 0 ==
