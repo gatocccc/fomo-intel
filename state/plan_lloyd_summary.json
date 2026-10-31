@@ -1,17 +1,17 @@
 {
- "now": 1793453072.5616438,
+ "now": 1793453370.2834423,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.3,
- "equity_sol": 5.6592,
+ "equity_usd": 541.29,
+ "equity_sol": 5.6593,
  "cash_sol": 0.0826,
- "positions_usd": 533.41,
+ "positions_usd": 533.4,
  "sol_usd": 95.65,
- "mult": 0.989,
+ "mult": 0.988,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,18 +32,18 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9998993442172065,
+   "last_usd": 0.9998632874216895,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 503.22
+   "value_usd": 503.2
   },
   {
    "mint": "perps:CET8XhBZEpDac7XRWnCyxWy4bCzH8DBU29thCJ5yaqM3",
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2247.85,
+   "last_usd": 2247.55,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
@@ -63,8 +63,8 @@
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
    "mult": 0.981,
-   "value_usd": 16.84,
-   "pnl_usd": -0.33,
+   "value_usd": 16.85,
+   "pnl_usd": -0.32,
    "collateral_usd": 17.17,
    "side": "short"
   },
@@ -73,7 +73,7 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 95.7455,
+   "last_usd": 95.7355,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
@@ -99,7 +99,7 @@
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.66,
+ "perps_pnl_usd": -0.65,
  "equity": [
   [
    1793203600,
@@ -3392,6 +3392,10 @@
   [
    1793452945,
    541.3
+  ],
+  [
+   1793453285,
+   541.3
   ]
  ],
  "closed": [
@@ -5588,7 +5592,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793452623.7377968,
+  "last_run": 1793453224.9951344,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -5603,7 +5607,7 @@
    "key": "[Picks] Idle cash (#), but SOL and BTC are below their #-day averages and only # of # large memecoins are above theirs: bear market: no new memecoins until it improves."
   },
   "trad_status": "SOL -7.4%, BTC -4.7%, ETH -6.2%, JUP -13.6%",
-  "sol_ch24h": 0.7,
-  "sol_vs_ma20": -0.0734
+  "sol_ch24h": 0.5,
+  "sol_vs_ma20": -0.0751
  }
 }
