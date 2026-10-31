@@ -544,5 +544,26 @@
   "sig": "2H3rL8wdvrsmcLDLi7ueTNCaBHHoJjKktxP5KWs7nqS8MPMPyCM6d9v3sQxpkNYeecLAu4RbqAFxurE2CV3duVXm",
   "latency_s": 2.3,
   "last_px": 2.7990273298435524e-08
+ },
+ "8RByJqc9sND6GW5GjLCNoTxDzPxMtC6zFoyVE2JsFCLr": {
+  "ts": 1793477256.373792,
+  "mint": "8RByJqc9sND6GW5GjLCNoTxDzPxMtC6zFoyVE2JsFCLr",
+  "sym": "YO",
+  "name": "LIVE 7 MONTHS NEVER BOND",
+  "curve": "GEuais5JA9MeeUEYbLRtCuy96DiSmr8G5y7J7YKB6fS9",
+  "tokens": 893422.148209,
+  "tokens0": 893422.148209,
+  "cost_sol": 0.027006339,
+  "entry_px": 3.022797123861133e-08,
+  "ref_px": 2.7958993476234855e-08,
+  "slip_pct": 8.12,
+  "age_at_entry_s": 53,
+  "mcap_sol_entry": 27.96,
+  "peak_px": 3.022797123861133e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "5yvzm98dXnpAGgPuNMYf2D9J5k4wrskV56gvfXzHkTZ2GNCk1UcyrwBSVELQcLD28SrNwVkEecoq2s99bPz929AP",
+  "latency_s": 2.2,
+  "last_px": 2.8005611214662916e-08
  }
 }
