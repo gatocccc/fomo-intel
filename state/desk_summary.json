@@ -1,16 +1,16 @@
 {
- "now": 1793476464.56404,
+ "now": 1793476762.661712,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 5,
- "equity_usd": 154.51,
+ "equity_usd": 154.5,
  "equity_sol": 1.6146,
  "cash_sol": 0.0833,
- "positions_usd": 146.54,
- "sol_usd": 95.7,
+ "positions_usd": 146.53,
+ "sol_usd": 95.69,
  "mult": 1.559,
  "halt": false,
  "pause": false,
@@ -35,16 +35,16 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9999825689896931,
+   "last_usd": 0.9999009520502757,
    "mult": 0.993,
-   "value_usd": 126.47
+   "value_usd": 126.46
   },
   {
    "mint": "perps:AFWv7oecPMXmbXAWTJoDcL6MyXzoXAu3hrrYuNHnrZjp",
    "symbol": "ETH short 2x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 2253.99,
-   "last_usd": 2251.95,
+   "last_usd": 2251.35,
    "peak_usd": 2253.99,
    "tokens": 0,
    "tokens_initial": 0,
@@ -74,7 +74,7 @@
    "symbol": "SOL short 1.7x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 96.04,
-   "last_usd": 95.7765,
+   "last_usd": 95.7545,
    "peak_usd": 96.04,
    "tokens": 0,
    "tokens_initial": 0,
@@ -4873,6 +4873,10 @@
   [
    1793476379,
    154.51
+  ],
+  [
+   1793476720,
+   154.5
   ]
  ],
  "closed": [

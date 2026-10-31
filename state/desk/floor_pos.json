@@ -523,5 +523,26 @@
   "sig": "2oPyPrf1vnTMG26Ja3j6f3EdRHRin5BAjPxqEUWGBu1CwbhxaecsXgVtaUd7A44XKv3XHm6JmZrE4vDdincJRRYt",
   "latency_s": 2.3,
   "last_px": 2.8005611214662916e-08
+ },
+ "DsmD4f2aMhb2SaRQ4dnMPxW3JdBraMz33dpb28BnrfHU": {
+  "ts": 1793476521.5181208,
+  "mint": "DsmD4f2aMhb2SaRQ4dnMPxW3JdBraMz33dpb28BnrfHU",
+  "sym": "BIG",
+  "name": "BIG COIN",
+  "curve": "A5mVTq4jVR2V61ju6wmPJA6pYQn3ZvVKHUPXmoE1t3D8",
+  "tokens": 599719.339727,
+  "tokens0": 599719.339727,
+  "cost_sol": 0.018639363,
+  "entry_px": 3.1080143269158e-08,
+  "ref_px": 2.7958993489282388e-08,
+  "slip_pct": 11.16,
+  "age_at_entry_s": 51,
+  "mcap_sol_entry": 27.96,
+  "peak_px": 3.1080143269158e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "2H3rL8wdvrsmcLDLi7ueTNCaBHHoJjKktxP5KWs7nqS8MPMPyCM6d9v3sQxpkNYeecLAu4RbqAFxurE2CV3duVXm",
+  "latency_s": 2.3,
+  "last_px": 2.7990273298435524e-08
  }
 }
