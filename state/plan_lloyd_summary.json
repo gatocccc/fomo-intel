@@ -1,5 +1,5 @@
 {
- "now": 1793444096.6745183,
+ "now": 1793444395.0816898,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
@@ -7,9 +7,9 @@
  "days": 365,
  "day": 3,
  "equity_usd": 541.4,
- "equity_sol": 5.671,
+ "equity_sol": 5.6707,
  "cash_sol": 0.0826,
- "positions_usd": 533.52,
+ "positions_usd": 533.51,
  "sol_usd": 95.47,
  "mult": 0.989,
  "halt": false,
@@ -32,7 +32,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9998666703015667,
+   "last_usd": 0.9998745297256229,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
@@ -43,7 +43,7 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2243.35,
+   "last_usd": 2243.55,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
@@ -73,7 +73,7 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 95.5355,
+   "last_usd": 95.5545,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
@@ -93,13 +93,13 @@
    "system": "Breakout 55/20",
    "exit_level": 113.39,
    "mult": 0.98,
-   "value_usd": 13.41,
-   "pnl_usd": -0.27,
+   "value_usd": 13.4,
+   "pnl_usd": -0.28,
    "collateral_usd": 13.68,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.53,
+ "perps_pnl_usd": -0.54,
  "equity": [
   [
    1793203600,
@@ -5484,7 +5484,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793443624.5972362,
+  "last_run": 1793444223.7357142,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
