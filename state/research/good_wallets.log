@@ -6,3 +6,11 @@ compras 294881 · billeteras 107 · A 146575 · B 148306
   calidad 40/102 · 301s
   calidad 50/102 · 365s
   calidad 60/102 · 436s
+  calidad 70/102 · 499s
+  calidad 80/102 · 569s
+  calidad 90/102 · 632s
+  calidad 100/102 · 700s
+buenas 14 de 102
+buenas k=2: 157 eventos · half2x_30m -16.99% n=157 | tp2_sl30_6h -10.93% n=157 | hold_30m -20.84% n=157
+buenas k=3: 22 eventos · half2x_30m -7.75% n=22 | tp2_sl30_6h 13.27% n=22 | hold_30m -23.59% n=22
+buenas k=4: 3 eventos · half2x_30m -38.28% n=3 | tp2_sl30_6h -34.0% n=3 | hold_30m -37.66% n=3
