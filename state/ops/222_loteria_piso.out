@@ -1,0 +1,45 @@
+== 222_loteria_piso 2026-10-31T14:04:03Z ==
+--- otros usuarios del websocket de PumpPortal:
+active
+2519932 /usr/bin/python3 -m fomo_intel.live.bot
+fomo-floor: active
+Oct 31 14:04:03 simplai-prod systemd[1]: Started fomo-floor.service - Loteria en el piso (pump.fun primer minuto, billetera propia).
+Oct 31 14:04:04 simplai-prod python3[2990843]: 2026-10-31 14:04:04,106 floor billetera HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK modo shadow ticket 0.025 SOL ratio 1.3
+Oct 31 14:04:04 simplai-prod python3[2990843]: 2026-10-31 14:04:04,655 floor PumpPortal conectado
+BILLETERA HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK
+{
+ "ts": 1793455624.8962066,
+ "mode": "shadow",
+ "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
+ "sol_balance": 0.0,
+ "sol_usd": 95.55674699574519,
+ "ticket_sol": 0.025,
+ "ratio": 1.3,
+ "open": 0,
+ "open_cost_sol": 0,
+ "closed": 0,
+ "closed_pnl_sol": 0,
+ "closed_cost_sol": 0,
+ "closed_roi": null,
+ "wins_3x": 0,
+ "best": null,
+ "bought_today": 0,
+ "stats": {
+  "seen": 14,
+  "evaluated": 6,
+  "eligible": 4,
+  "bought": 0,
+  "buy_fail": 0,
+  "closed": 0,
+  "ws_reconnects": 0
+ }
+}
+--- candidatos elegibles (muestra):
+{"ts": 1793455594.8302824, "mint": "G5axQk9fZZMomuh4z8zAJtxPc26v4AgCaz7r42eGNAUw", "sym": "DDD", "age_s": 54, "mcap_sol": 34.24, "mcap0_sol": 29.262487023795128, "creator": "8m6qVRhk8No5ThbnHUx4mLzyVxZrpFQ9rWRhzKyoM2Cu"}
+{"ts": 1793455605.0081127, "mint": "HSpmurzCVQ5PK59HqEaUWRqGwNbjL4Rwz3g3b1wVpump", "sym": "sfdfsd", "age_s": 51, "mcap_sol": 9.03, "mcap0_sol": 29.074455465638597, "creator": "BETD1Serc3j4aK5iFNtLBZZGxGUKHvCKMr4HioRxT5Fj"}
+{"ts": 1793455630.1826794, "mint": "6cY1XUPMZoux12pSB4HnbLd5wEXLpRs1z9uEKZJFpump", "sym": "DAFON", "age_s": 53, "mcap_sol": 28.89, "mcap0_sol": 27.958993476234856, "creator": "FuPYNQxH7WauuBeGMzA1N7sS51gWJJCFCoD7C7XLTpLC"}
+{"ts": 1793455635.2731664, "mint": "76FiRAEx3sVquisYfSCKTbgKMb4fpGnFnvBBtG4Cpump", "sym": "Equititty500", "age_s": 53, "mcap_sol": 31.36, "mcap0_sol": 29.83021808617079, "creator": "9TiLxkzXrtRE7s1uoWWr6YGBSBuKrHeA84weEXXE1Lak"}
+{"ts": 1793455635.2731664, "mint": "D1Th6vj1S77HJSxueq4hpHtrvNicfrcKeaSKYWmpump", "sym": "MRBST", "age_s": 52, "mcap_sol": 28.24, "mcap0_sol": 28.23581350399064, "creator": "5zCucAAHeo6xyfzbBTcx5gci2avDfGm47KwE9Gzn71wi"}
+7 state/desk/floor_cands.jsonl
+modo: live
+== exit 0 ==
