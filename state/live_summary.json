@@ -1,5 +1,5 @@
 {
- "ts": 1793410803.0037246,
+ "ts": 1793411103.7714574,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -43,11 +43,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.1131,
- "sol_usd": 96.8426721187806,
+ "sol_usd": 96.8102816815954,
  "stream_connected": true,
- "stream_msgs": 1875,
- "tokens_seen": 1820,
- "tokens_tracked": 36,
+ "stream_msgs": 1908,
+ "tokens_seen": 1852,
+ "tokens_tracked": 43,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -56,9 +56,9 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 858547,
+  "notifications": 865573,
   "parsed": 84,
-  "skipped": 857903,
+  "skipped": 864924,
   "fast_creates": 1,
   "subs": 1,
   "errors": [
@@ -80,12 +80,12 @@
   "source_down_s": 0,
   "exec_fails_recent": 0
  },
- "st_requests": 52,
+ "st_requests": 53,
  "stream_errors": [],
  "rules_st": null,
  "stream_counts": {
   "otros": 2,
-  "create": 1873
+  "create": 1906
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
