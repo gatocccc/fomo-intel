@@ -1,5 +1,5 @@
 {
- "ts": 1793411103.7714574,
+ "ts": 1793411400.3190866,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -32,10 +32,10 @@
  ],
  "rejections": {
   "day": "2026-10-30",
-  "seen": 216,
+  "seen": 218,
   "bought": 0,
   "by_reason": {
-   "freno": 197,
+   "freno": 199,
    "en_banco": 16,
    "mcap_alto": 3
   },
@@ -43,11 +43,11 @@
  },
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "wallet_sol": 0.1131,
- "sol_usd": 96.8102816815954,
+ "sol_usd": 96.84434783871262,
  "stream_connected": true,
- "stream_msgs": 1908,
- "tokens_seen": 1852,
- "tokens_tracked": 43,
+ "stream_msgs": 1962,
+ "tokens_seen": 1902,
+ "tokens_tracked": 65,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -56,9 +56,9 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 865573,
-  "parsed": 84,
-  "skipped": 864924,
+  "notifications": 899540,
+  "parsed": 87,
+  "skipped": 898884,
   "fast_creates": 1,
   "subs": 1,
   "errors": [
@@ -67,7 +67,7 @@
    "00:44:54 Connection to remote host was lost."
   ]
  },
- "follow_buys_seen": 13,
+ "follow_buys_seen": 14,
  "guard": {
   "alerts": [
    "22:16:29 fuente de se\u00f1ales recuperada tras 3 s",
@@ -80,14 +80,19 @@
   "source_down_s": 0,
   "exec_fails_recent": 0
  },
- "st_requests": 53,
- "stream_errors": [],
+ "st_requests": 54,
+ "stream_errors": [
+  "01:45:23 Connection to remote host was lost.",
+  "01:45:29 Handshake status 502 Bad Gateway -+-+- {'server': 'nginx/1.22.1', 'date': 'Sat, 31 Oct 2026 01:45:29 GMT', 'content-type': 'text/html', 'content-length': '157', 'connection': 'keep-alive'} -+-+- <html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.22.1</center>\r\n</body>\r\n</html>\r\n"
+ ],
  "rules_st": null,
  "stream_counts": {
-  "otros": 2,
-  "create": 1906
+  "otros": 4,
+  "create": 1958
  },
  "stream_samples": [
+  "{\"message\":\"Successfully subscribed to token creation events.\"}",
+  "{\"message\":\"Successfully subscribed to keys.\"}",
   "{\"message\":\"Successfully subscribed to token creation events.\"}",
   "{\"message\":\"Successfully subscribed to keys.\"}"
  ],
