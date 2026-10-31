@@ -1,16 +1,16 @@
 {
- "now": 1793476166.9025872,
+ "now": 1793476464.56404,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 5,
- "equity_usd": 154.5,
- "equity_sol": 1.6148,
+ "equity_usd": 154.51,
+ "equity_sol": 1.6146,
  "cash_sol": 0.0833,
  "positions_usd": 146.54,
- "sol_usd": 95.68,
+ "sol_usd": 95.7,
  "mult": 1.559,
  "halt": false,
  "pause": false,
@@ -35,7 +35,7 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9999171202962694,
+   "last_usd": 0.9999825689896931,
    "mult": 0.993,
    "value_usd": 126.47
   },
@@ -44,7 +44,7 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 2253.99,
-   "last_usd": 2251.25,
+   "last_usd": 2251.95,
    "peak_usd": 2253.99,
    "tokens": 0,
    "tokens_initial": 0,
@@ -74,7 +74,7 @@
    "symbol": "SOL short 1.7x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 96.04,
-   "last_usd": 95.7535,
+   "last_usd": 95.7765,
    "peak_usd": 96.04,
    "tokens": 0,
    "tokens_initial": 0,
@@ -4869,6 +4869,10 @@
   [
    1793476039,
    154.5
+  ],
+  [
+   1793476379,
+   154.51
   ]
  ],
  "closed": [
@@ -6736,7 +6740,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793475843.7149136,
+  "last_run": 1793476445.086698,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -6751,7 +6755,7 @@
    "key": "Efectivo ocioso (#), pero SOL y BTC están debajo de su promedio de # días y solo # de # memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": 1.4,
-  "sol_vs_ma20": -0.0733
+  "sol_ch24h": 1.2,
+  "sol_vs_ma20": -0.0746
  }
 }
