@@ -19,5 +19,26 @@
   "sig": "2bsWGSmv1ST3AJPYNMhWdu38e2YKVk4icZ6VW9nFzDqJRxjon4kfJNyFCLjqZdQWqSVQsUFM1vdsCjHEu2Xivbwt",
   "latency_s": 2.3,
   "last_px": 2.8016470669555224e-08
+ },
+ "EnBSuuEhtC5Q6GRQRhesnwxkwgkn6Z2SwExjREVKpump": {
+  "ts": 1793458076.9563823,
+  "mint": "EnBSuuEhtC5Q6GRQRhesnwxkwgkn6Z2SwExjREVKpump",
+  "sym": "pump",
+  "name": "pump",
+  "curve": "3Bn9jUUicGZhJNhRow51LXqhThKyeetrMzxsznKyzZa2",
+  "tokens": 892247.275123,
+  "tokens0": 892247.275123,
+  "cost_sol": 0.027006339,
+  "entry_px": 3.026777413949184e-08,
+  "ref_px": 2.799582402250285e-08,
+  "slip_pct": 8.12,
+  "age_at_entry_s": 55,
+  "mcap_sol_entry": 28.0,
+  "peak_px": 3.026777413949184e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "32xKL28C7sYX2FSheS3RFp5FDZxz5zARD2B7QpUycwWEmLU4b14g3vojvwVysqaRZcXucLubB121x9bvJRLrQbdP",
+  "latency_s": 2.3,
+  "last_px": 2.8042472442951746e-08
  }
 }

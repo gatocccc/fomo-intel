@@ -1,5 +1,5 @@
 {
- "ts": 1793457801.0155363,
+ "ts": 1793458160.9138074,
  "mode": "live",
  "signals": {
   "BTC": {
@@ -36,8 +36,8 @@
   }
  },
  "px": {
-  "BTC": 77501.5,
-  "ETH": 2251.35
+  "BTC": 77516.5,
+  "ETH": 2251.05
  },
  "rules": {
   "enter": 0.5,
@@ -77,9 +77,9 @@
   "pubkey": "FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy",
   "reason": "majors_trend",
   "sig": "uvhxBQYK3AE5LXEsFDNryeNgrPEjTZ243D9auuD5sSkJXi1SJ8yaxybsBzbdKr9gjNHQE4XdmgFJioD2hHvGpi1",
-  "mark": 2251.35,
-  "ret_px": -0.0063,
-  "pnl_usd_est": -0.11,
-  "age_d": 1.12
+  "mark": 2251.05,
+  "ret_px": -0.0062,
+  "pnl_usd_est": -0.1,
+  "age_d": 1.13
  }
 }
