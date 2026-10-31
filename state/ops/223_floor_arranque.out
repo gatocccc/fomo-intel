@@ -1,0 +1,15 @@
+== 223_floor_arranque 2026-10-31T14:26:03Z ==
+fomo-floor: active
+saldo SOL: 2.361562759
+{'mode': 'live', 'sol_balance': 2.361562759, 'open': 1, 'closed': 0, 'bought_today': 1, 'stats': {'seen': 198, 'evaluated': 190, 'eligible': 66, 'bought': 1, 'buy_fail': 0, 'closed': 0, 'ws_reconnects': 0}}
+--- eventos:
+{"ts": 1793456571.8608515, "ev": "buy", "mint": "CvtdJdogQ5SSGdHGNZ36UtPnwTQUvTNyWpo8HV46pump", "sym": "PEANUT", "sol": 0.029779807, "px": 3.807230957747071e-08, "ref_px": 3.372780901495509e-08, "slip_pct": 12.88, "latency_s": 2.3, "sig": "2bsWGSmv1ST3AJPYNMhWdu38e2YKVk4icZ6VW9nFzDqJRxjon4kfJNyFCLjqZdQWqSVQsUFM1vdsCjHEu2Xivbwt"}
+Oct 31 14:04:04 simplai-prod python3[2990843]: 2026-10-31 14:04:04,655 floor PumpPortal conectado
+Oct 31 14:12:03 simplai-prod systemd[1]: Stopping fomo-floor.service - Loteria en el piso (pump.fun primer minuto, billetera propia)...
+Oct 31 14:12:03 simplai-prod systemd[1]: fomo-floor.service: Deactivated successfully.
+Oct 31 14:12:03 simplai-prod systemd[1]: Stopped fomo-floor.service - Loteria en el piso (pump.fun primer minuto, billetera propia).
+Oct 31 14:12:03 simplai-prod systemd[1]: fomo-floor.service: Consumed 3.686s CPU time.
+Oct 31 14:12:03 simplai-prod systemd[1]: Started fomo-floor.service - Loteria en el piso (pump.fun primer minuto, billetera propia).
+Oct 31 14:12:04 simplai-prod python3[2992970]: 2026-10-31 14:12:04,005 floor billetera HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK modo live ticket 0.025 SOL ratio 1.3
+Oct 31 14:12:04 simplai-prod python3[2992970]: 2026-10-31 14:12:04,540 floor PumpPortal conectado
+== exit 0 ==
