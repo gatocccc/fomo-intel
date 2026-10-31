@@ -1,0 +1,10 @@
+== 225_lab_html 2026-10-31T14:42:04Z ==
+3
+total 28
+drwxr-xr-x 2 root root  4096 Oct 31 14:38 .
+drwxr-xr-x 8 root root  4096 Oct 31 01:35 ..
+-rw-r--r-- 1 root root 18742 Oct 31 14:38 index.html
+3
+3
+/etc/nginx/sites-enabled/autopilot:3:    root /var/www/autopilot;
+== exit 0 ==
