@@ -4,242 +4,266 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Lloyd's book, live · Lloyd's Tavern</title>
-<meta name="description" content="The house book of Lloyd's Tavern, trading real money in public: equity, the four pockets, open positions, closed trades and every reason behind every move.">
+<meta name="description" content="The house book of Lloyd's Tavern, trading real money in public: performance, the four pockets, open positions, closed trades and every reason behind every move.">
 <meta property="og:title" content="Lloyd's book, live · Lloyd's Tavern">
 <meta property="og:description" content="Real money, wins and losses, every move with its reasoning.">
 <meta property="og:image" content="https://app.nonconformistducks.com/assets/og.jpg">
-<meta name="theme-color" content="#1D6A4B">
+<meta name="theme-color" content="#14513A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="icon" href="/assets/favicon.png" type="image/png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/bowlby-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts.css">
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/ui.css">
 <style>
-.head{display:flex;gap:18px;align-items:end;justify-content:space-between;flex-wrap:wrap;margin:18px 0 20px}
-.head h1{margin:0;font-size:clamp(40px,6vw,64px);color:#fff;text-shadow:0 5px 0 var(--ink)}
-.head .sub{color:var(--cream);font:700 13px var(--m);margin:6px 0 0}
-.head .sub a{color:var(--white)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:18px}
-.stat{padding:18px 20px;min-width:0}
-.stat span{display:block;font:700 11.5px var(--m);letter-spacing:.12em;text-transform:uppercase}
-.stat strong{display:block;font:400 clamp(28px,3vw,40px)/1.05 var(--t);font-variant-numeric:tabular-nums;margin-top:6px;overflow-wrap:anywhere}
-.stat small{display:block;font:700 12px var(--m);margin-top:6px;color:var(--dim)}
-.stat small.up{color:var(--go)} .stat small.down{color:var(--hellred)}
-.stat.y{background:var(--beak)}
-.stat .regime{display:inline-flex}
-.grid{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-bottom:18px}
-.box{padding:22px}
-.box h2{font-size:24px;margin:0 0 14px;display:flex;justify-content:space-between;gap:12px;align-items:baseline;flex-wrap:wrap}
-.box h2 small{font:700 12px var(--m);color:var(--dim)}
-.box .note{margin:12px 0 0;font-size:13.5px;color:var(--dim)}
-.reg{display:grid;gap:14px}
-.reg .regime{justify-self:start;font-size:14px;padding:9px 18px 9px 13px}
-.reg dl{display:grid;grid-template-columns:1fr auto;gap:8px 14px;margin:0}
-.reg dt{font:700 12.5px var(--m);color:var(--dim)} .reg dd{margin:0;font:400 20px/1 var(--t);font-variant-numeric:tabular-nums;text-align:right}
-.reg p{margin:0;font-size:14.5px}
-.pk-table{margin-top:16px}
-.pk-table td i{display:inline-block;width:14px;height:14px;border-radius:50%;border:2px solid var(--ink);vertical-align:-2px;margin-right:8px}
-.brain{margin:0 0 18px;padding:14px 20px;font:700 13px var(--m);background:var(--ink);color:var(--cream);border:var(--b);border-radius:999px;box-shadow:0 4px 0 var(--beak);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.brain::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--mint);border:2px solid var(--white);flex:none;animation:pulse 2s infinite}
-@keyframes pulse{50%{opacity:.4}}
-.sect{margin-bottom:18px}
-.sect > h2{color:var(--white);font-size:clamp(28px,3.6vw,40px);text-shadow:0 4px 0 var(--ink);margin:30px 0 14px;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
-.sect > h2 small{font:700 12.5px var(--m);color:var(--cream);text-shadow:none}
-.wallet{font:700 12.5px var(--m);color:var(--cream);overflow-wrap:anywhere;margin:8px 0 60px}
-.wallet a{color:var(--white)}
-.more{margin-top:12px}
-footer{color:var(--cream)}
-@media (max-width:900px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){
-  .head{margin:10px 0 14px}.head h1{font-size:clamp(34px,10vw,44px)}
-  .stats{gap:10px;margin-bottom:12px}.stat{padding:14px}.stat strong{font-size:clamp(24px,7.4vw,32px)}.stat span{font-size:10px;letter-spacing:.08em}.stat small{font-size:11px}
-  .box{padding:16px}.grid{gap:12px;margin-bottom:12px}
-  .brain{border-radius:18px;font-size:12px;padding:12px 14px}
-  .pk-table{display:none}
-  .sect > h2{margin:22px 0 10px}
-  .reg dd{font-size:17px}
-}
+.room{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.room span{font:700 11.5px var(--m);padding:4px 10px;border-radius:999px;background:var(--cream);border:2px solid var(--ink);white-space:nowrap}
+.room span b{font-weight:700} .room span.dn b{color:var(--dnd)} .room span.up b{color:var(--upd)}
+.moodx{background:var(--white);border:var(--b);border-radius:24px;box-shadow:0 5px 0 var(--ink);padding:16px;margin-top:18px}
+.moodx .lamp::after{content:"";position:absolute;inset:6px;border-radius:50%;border:2px dashed rgba(255,253,247,.9)}
+.moodx .top{display:flex;align-items:center;gap:14px}
+.moodx p.txt{margin:12px 0 0;font-size:14px;color:var(--dim)}
+.brainx{display:flex;align-items:center;gap:10px;margin-top:14px;padding:11px 14px;background:var(--ink);color:var(--cream);border-radius:18px;font:700 11.5px/1.45 var(--m);box-shadow:0 4px 0 #0b0a08}
+.brainx i{width:10px;height:10px;border-radius:50%;background:var(--mint);flex:none;box-shadow:0 0 0 0 rgba(143,223,154,.7);animation:pulse 1.8s infinite}
+.pk{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px}
+.pk li{display:grid;grid-template-columns:14px 1fr auto;gap:10px;align-items:center;font-size:14px}
+.pk li i{width:14px;height:14px;border-radius:50%;border:2px solid var(--ink)}
+.pk li b{font:700 14.5px var(--f)} .pk li small{display:block;font:700 11px var(--m);color:var(--dim)}
+.pk li .v{text-align:right;font:700 14.5px var(--f);font-variant-numeric:tabular-nums}
+.pk li .v small{text-align:right}
+.lvl{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin:0 0 12px 56px}
+.lvl div{background:var(--cream);border-radius:12px;padding:7px 10px;font:700 11px/1.35 var(--m);color:var(--dim)}
+.lvl div b{display:block;font:700 14px var(--f);color:var(--ink)}
+.cta-card{background:var(--beak);border:var(--b);border-radius:28px;box-shadow:0 6px 0 var(--ink);padding:20px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;margin-top:20px}
+.cta-card img{width:84px;height:84px;filter:drop-shadow(0 4px 0 var(--ink))}
+.cta-card h2{font:400 24px/1.05 var(--t);margin:0}
+.cta-card p{margin:6px 0 12px;font-size:14.5px}
+.foot{color:var(--cream);font:700 11.5px/1.6 var(--m);margin:22px 0 10px;overflow-wrap:anywhere}
+.foot a{color:var(--white)}
+.hold .why b{font-family:var(--m);font-size:12px}
+.wl{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
 </style>
 </head>
 <body data-tab="book">
-<div class="wrap">
-<header class="top"><div class="bar">
-  <a class="mark" href="/" aria-label="Lloyd's Tavern, home"><img src="/assets/lloyd-head.png" alt=""><span>Lloyd's <b>Tavern</b></span></a>
-  <nav class="navl" aria-label="Sections"><a href="#positions">Open</a><a href="#notes">Notes</a><a href="#closed">Closed</a><a href="/lab/">Notebook</a></nav>
-  <a class="btn ghost" href="/app/">My stool</a>
-</div></header>
+<div class="ptr" id="ptr" aria-hidden="true"><img src="/assets/lloyd-head.png" alt=""></div>
+<div class="app">
 
-<div class="head">
-  <div>
-    <h1>Lloyd's book, live</h1>
-    <p class="sub" id="sub">The house wallet, trading real money in public. Wins, losses and every reason. Refreshes every minute.</p>
+<header class="tb" id="tb">
+  <a class="me" href="/" aria-label="Lloyd's Tavern home"><img src="/assets/lloyd-head.png" alt=""><div><b>Lloyd's book</b><small id="live" class="off"><i></i><span id="live-t">Connecting…</span></small></div></a>
+  <a class="ib desk-only" href="/lab/" aria-label="Lloyd's notebook" title="Notebook"><svg viewBox="0 0 24 24"><path d="M6 3h11a2 2 0 0 1 2 2v16l-4-2-4 2-4-2-3 2V5a2 2 0 0 1 2-2zM9 8h6M9 12h6"/></svg></a>
+  <a class="ib" href="/app/" aria-label="My stool" title="My stool"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm-8 9a8 8 0 0 1 16 0"/></svg></a>
+</header>
+
+<main>
+  <div class="top2">
+    <section class="hero" aria-live="polite">
+      <div class="lbl"><span id="h-lbl">Since day one · real money</span></div>
+      <div class="bal sk" id="bal">+00.0%</div>
+      <div class="chg" id="chg"><span class="chip sk">$000 in the book</span></div>
+      <div class="hc" id="hc"><svg id="hsvg" role="img" aria-label="Lloyd's performance in percent"></svg></div>
+      <div class="rng" id="rng-row">
+        <div class="seg" id="rng" role="group" aria-label="Time range"><button type="button" data-r="24">24H</button><button type="button" data-r="72">3D</button><button type="button" data-r="168">1W</button><button type="button" data-r="0" aria-pressed="true">ALL</button></div>
+        <button class="vs" type="button" id="b-vs" aria-pressed="false"><i></i>Book only</button>
+      </div>
+      <div class="facts" id="facts">
+        <div><b>Holding now</b><span id="f-eq">—</span></div>
+        <div><b>In cash</b><span id="f-cash">—</span></div>
+        <div><b>Best trade</b><span id="f-best">—</span></div>
+      </div>
+    </section>
+
+    <div>
+      <section class="moodx reveal">
+        <div class="top"><span class="lamp" id="md-lamp" style="width:46px;height:46px;border-radius:50%;border:2.5px solid var(--ink);flex:none;position:relative"></span>
+          <div style="min-width:0"><small style="display:block;font:700 10px var(--m);letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:3px">Lloyd right now</small><b id="md-t" style="display:block;font:400 21px/1.1 var(--t)">Reading the room…</b></div></div>
+        <div class="room" id="room"></div>
+        <p class="txt" id="md-p">Lloyd reads the room from SOL and BTC against their 20-day averages and how many large memecoins sit above theirs.</p>
+        <div class="brainx"><i></i><span id="brain">Lloyd checks the book every 10 minutes.</span></div>
+      </section>
+      <section class="blk reveal" style="margin-top:16px">
+        <h2>The four pockets <small id="p-upd"></small></h2>
+        <div class="alloc" id="alloc"></div>
+        <ul class="pk" id="pk"></ul>
+      </section>
+    </div>
   </div>
-</div>
 
-<div class="stats">
-  <div class="panel stat y"><span>Since day one</span><strong id="s-day1">—</strong><small id="s-day1d">—</small></div>
-  <div class="panel stat"><span>The book</span><strong id="s-pct">—</strong><small id="s-since">—</small></div>
-  <div class="panel stat"><span>Holding now</span><strong id="s-eq">—</strong><small id="s-cashd">—</small></div>
-  <div class="panel stat"><span>Market mood</span><div style="margin-top:10px"><span class="regime" id="regime2">—</span></div><small id="s-mood">—</small></div>
-</div>
-
-<p class="brain" id="brain">Lloyd checks the book every 10 minutes.</p>
-
-<div class="grid">
-  <div class="panel box">
-    <h2>Performance <small>% gained, since day one</small></h2>
-    <ul class="track-legend" id="t-legend"></ul>
-    <div class="pchart"><svg id="chart" role="img" aria-label="Performance in percent since day one"></svg><div class="tip" id="tip"></div></div>
-    <p class="note">Percent return only. Money moved in or out (merging the plans into one book, funding the lab) is taken out, so it never shows up as a gain or a loss.</p>
+  <div class="grid two">
+    <div style="display:grid;gap:16px;align-content:start;min-width:0">
+    <section class="blk reveal" id="positions">
+      <h2>Open now <small id="pos-n"></small></h2>
+      <p class="sub">Tap a position to see why Lloyd holds it and where he gets out.</p>
+      <ul class="hold" id="hold"></ul>
+    </section>
+    <section class="blk reveal" id="armed" hidden>
+      <h2>Orders on file</h2>
+      <p class="sub">Breakout rule 55/20 on BTC, ETH and SOL. Lloyd fires the moment a level is touched, 2x on Jupiter Perps, 1% of the book at risk.</p>
+      <ul class="hold" id="armed-rows"></ul>
+    </section>
+    <section class="blk reveal" id="closed">
+      <h2>Closed trades <small id="cl-n"></small></h2>
+      <p class="sub">Every trade Lloyd closed, with the reason he got out.</p>
+      <ul class="hold" id="cl"></ul>
+      <button class="more" type="button" id="cl-more" hidden>Show all</button>
+    </section>
+    </div>
+    <section class="blk reveal" id="notes">
+      <h2>Lloyd's reasoning <a class="lnk" href="/lab/">Notebook</a></h2>
+      <p class="sub">Every decision, in his own words. Tap to read the full note.</p>
+      <ul class="feedx" id="feed"></ul>
+      <button class="more" type="button" id="feed-more" hidden>Show every note</button>
+    </section>
   </div>
-  <div class="panel box reg">
-    <h2>The room</h2>
-    <dl>
-      <dt>SOL vs 20-day average</dt><dd id="r-sol">—</dd>
-      <dt>BTC vs 20-day average</dt><dd id="r-btc">—</dd>
-      <dt>Majors above their average</dt><dd id="r-br">—</dd>
-      <dt>SOL, last 24 h</dt><dd id="r-24">—</dd>
-    </dl>
-    <p id="r-text">Lloyd reads the room from SOL and BTC against their 20-day averages and how many majors sit above theirs. Constructive means most of the book works; defensive means mostly cash.</p>
-  </div>
-</div>
 
-<div class="panel box" style="margin-bottom:18px">
-  <h2>The four pockets <small id="p-upd"></small></h2>
-  <div class="pbar" id="bar"><span class="pk-cash" style="width:100%"></span></div>
-  <ul class="plegend" id="legend"></ul>
-  <div class="scroll pk-table"><table class="tbl">
-    <thead><tr><th>Pocket</th><th class="n">Now</th><th class="n">Target</th><th class="n">Value</th><th class="n">Positions</th></tr></thead>
-    <tbody id="pk-rows"><tr><td colspan="5" class="empty">Loading…</td></tr></tbody>
-  </table></div>
-</div>
+  <section class="cta-card reveal">
+    <img src="/assets/lloyd.webp" alt="">
+    <div><h2>Put Lloyd on your money.</h2><p>Your own wallet copies this book, trade for trade. Pause or withdraw any time.</p><a class="btn" href="/app/">Open my stool</a></div>
+  </section>
 
-<div class="sect" id="positions">
-  <h2>Open positions <small id="pos-n"></small></h2>
-  <div class="scroll"><table class="tbl stack">
-    <thead><tr><th>Token</th><th>Pocket</th><th class="n">Multiple</th><th class="n">Value</th><th class="n">Stop</th><th class="n">Age</th><th>Thesis</th></tr></thead>
-    <tbody id="pos"><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
-  </table></div>
-</div>
-
-<div class="sect" id="armed">
-  <h2>Orders on file <small>breakout rule 55/20 · BTC, ETH, SOL · Jupiter Perps 2x · 1% of the book at risk per trade</small></h2>
-  <div class="scroll"><table class="tbl stack">
-    <thead><tr><th>Coin</th><th class="n">Price</th><th class="n">Buys if it touches</th><th class="n">Shorts if it touches</th><th class="n">Exit long / short</th></tr></thead>
-    <tbody id="armed-rows"><tr><td colspan="5" class="empty">Loading…</td></tr></tbody>
-  </table></div>
-  <div class="scroll"><table class="tbl stack">
-    <thead><tr><th>Open on perps</th><th>Side</th><th class="n">Entry</th><th class="n">Now</th><th class="n">Exit at</th><th class="n">P&amp;L</th><th>System</th></tr></thead>
-    <tbody id="perps-rows"><tr><td colspan="7" class="empty">Loading…</td></tr></tbody>
-  </table></div>
-</div>
-
-<div class="sect" id="notes">
-  <h2>Lloyd's reasoning <small>newest first</small></h2>
-  <ul class="feed clip" id="journal"><li><p>Loading…</p></li></ul>
-  <button class="btn more" id="j-more" type="button" hidden>Show every note</button>
-</div>
-
-<div class="sect" id="closed">
-  <h2>Closed trades <small>one line per trade, wins and losses</small></h2>
-  <div class="scroll"><table class="tbl stack">
-    <thead><tr><th>Token</th><th class="n">Result</th><th>Pocket</th><th>When</th><th class="n">P&amp;L</th><th class="n">Held</th><th>Why</th></tr></thead>
-    <tbody id="cl"><tr><td colspan="8" class="empty">Loading…</td></tr></tbody>
-  </table></div>
-</div>
-
-<p class="wallet" id="wallet" style="margin-bottom:6px">Wallet: —</p>
-<p class="wallet"><a href="/lab/">What Lloyd is testing next: open the notebook →</a></p>
-
-<footer>Not financial advice. Past results do not predict future results. Trading crypto assets carries the risk of total loss. The bot is young and changes weekly.</footer>
+  <p class="foot" id="wallet">Wallet: —</p>
+  <p class="foot" style="margin-top:0">Not financial advice. Past results do not predict future results. Trading crypto carries the risk of total loss. The bot is young and changes weekly. <a href="/book/classic/">Classic view</a></p>
+</main>
 </div>
 
 <script src="/lloyd.js"></script>
+<script src="/ui.js"></script>
 <script>
-const $ = s => document.querySelector(s);
-const L = window.Lloyd;
-let lastBook = null;
+const {$, $$} = UI, L = window.Lloyd;
+let B = null, RANGE = 0, BOOK_ONLY = false, G = null, FEED_ALL = false, CL_ALL = false, stamp = 0;
 
-function chart(b) {
-  const ser = L.trackSeries(b.track);
-  $("#t-legend").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${L.esc(x.name)} <b class="${x.pct >= 0 ? "up" : "down"}">${L.signed(x.pct)}</b></li>`).join("");
-  L.pctChart($("#chart"), $("#tip"), ser);
+// ---------- hero ----------
+function track() {
+  const tr = (B && B.track) || {};
+  const t = BOOK_ONLY ? tr.book : (tr.first_table || tr.book);
+  return t && t.series && t.series.length > 1 ? t : null;
 }
+function drawHero() {
+  const t = track(), svg = $("#hsvg"), wrap = $("#hc");
+  $("#b-vs").setAttribute("aria-pressed", BOOK_ONLY);
+  const span = t ? (t.series[t.series.length - 1][0] - t.series[0][0]) / 3600 : 0;
+  $$("#rng button").forEach(b => { const r = +b.dataset.r; b.disabled = !!r && span < r * .6; b.setAttribute("aria-pressed", r === RANGE); });
+  const pts = t && UI.window(t.series, RANGE);
+  if (!pts) { svg.style.display = "none"; headline(); return; }
+  svg.style.display = "";
+  G = UI.draw(svg, wrap, pts, null, String(RANGE) + BOOK_ONLY);
+  headline();
+}
+function setPct(v) { const el = $("#bal"); const txt = (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1) + "%"; if (el.dataset.raw != null && el.dataset.raw !== "") UI.flash(el, v - Number(el.dataset.raw)); el.dataset.raw = v; UI.odo(el, txt); el.style.color = v < 0 ? "var(--dn)" : ""; }
+function headline(at) {
+  const t = track(); if (!t) return;
+  $("#bal").classList.toggle("scrub", !!at);
+  const name = BOOK_ONLY ? "The book" : "Since day one";
+  if (at) { setPct(at[1]); $("#h-lbl").textContent = `${name} · ${L.when(at[0])}`; $("#chg").innerHTML = `<span class="ctx">${RANGE ? "change from the start of this window" : "since " + L.day(t.since)}</span>`; return; }
+  const v = RANGE && G ? G.pts[G.pts.length - 1][1] : t.pct;
+  $("#h-lbl").textContent = RANGE ? `${name} · past ${{24: "24 hours", 72: "3 days", 168: "week"}[RANGE]}` : `${name} · real money`;
+  setPct(v);
+  const start = BOOK_ONLY ? null : t.start_usd;
+  $("#chg").innerHTML = `<span class="chip">${L.usd(B.equity_usd)} in the book</span><span class="ctx">${start ? `from ${L.usd(start)} on ${L.day(t.since)}` : "since " + L.day(t.since)}</span>`;
+}
+UI.scrub($("#hc"), () => G, p => headline(p), () => headline());
+$$("#rng button").forEach(b => b.onclick = () => { RANGE = +b.dataset.r; UI.buzz(6); drawHero(); });
+$("#b-vs").onclick = () => { BOOK_ONLY = !BOOK_ONLY; UI.buzz(6); drawHero(); };
+
+// ---------- the room ----------
+function room(b) {
+  const r = b.regime || {}, st = r.state, br = b.brain || {};
+  $("#md-lamp").className = "lamp " + (st || "");
+  $("#md-lamp").style.background = {risk_on: "var(--mint)", neutral: "var(--beak)", risk_off: "var(--ember)"}[st] || "var(--idle)";
+  $("#md-t").textContent = {risk_on: "On the attack", neutral: "Picking his spots", risk_off: "Playing defense"}[st] || "Reading the room";
+  const pill = (lab, v, fmt) => v == null ? "" : `<span class="${v < 0 ? "dn" : "up"}">${lab} <b>${fmt(v)}</b></span>`;
+  const fr = v => (v >= 0 ? "+" : "−") + Math.abs(v * 100).toFixed(1) + "%";
+  $("#room").innerHTML = [pill("SOL vs 20d", r.sol_vs_ma20, fr), pill("BTC vs 20d", r.btc_vs_ma20, fr), pill("SOL 24h", r.sol_24h, v => (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1) + "%"),
+    r.breadth && r.breadth.total ? `<span>Memes above trend <b>${r.breadth.above}/${r.breadth.total}</b></span>` : ""].join("");
+  if (st) $("#md-p").textContent = {
+    risk_on: "Risk on. Majors, established memes and picks all get their budget; cash is what is left over.",
+    neutral: "Selective. Majors above trend are held, picks need a stronger story, and a bigger share waits in USDC.",
+    risk_off: "SOL is falling hard. Mostly cash, no new memecoins, broken trends get sold, and shorts on majors fire when their levels break.",
+  }[st];
+  const parts = [`Checks every ${br.every_min || 10} min`];
+  if (br.last_run) parts.push(`last ${L.ago(br.last_run)}`);
+  if (br.next_review) parts.push(`full review ${br.next_review}`);
+  $("#brain").textContent = parts.join(" · ");
+  const fresh = br.last_run && Date.now() / 1000 - br.last_run < 1800;
+  $("#live").classList.toggle("off", !fresh); $("#live-t").textContent = fresh ? `Live · checked ${L.ago(br.last_run)}` : br.last_run ? `Last check ${L.ago(br.last_run)}` : "Live";
+}
+
+// ---------- pockets ----------
+function pockets(b) {
+  const ss = L.sleeves(b);
+  $("#alloc").innerHTML = ss.filter(s => s.pct > 0).map(s => `<span class="${s.cls}" style="width:${s.pct}%"></span>`).join("") || `<span class="pk-cash" style="width:100%"></span>`;
+  $("#pk").innerHTML = ss.map(s => `<li><i class="${s.cls}"></i><span><b>${L.esc(s.name)}</b><small>${s.positions ? `${s.positions} open` : "nothing open"}${s.target_pct != null ? ` · target ${L.pct(s.target_pct)}` : ""}</small></span><span class="v">${L.usd(s.value_usd)}<small>${L.pct(s.pct)}</small></span></li>`).join("");
+  $("#p-upd").textContent = b.updated ? L.ago(b.updated) : "";
+}
+
+// ---------- positions ----------
+function positions(b) {
+  const pos = (Array.isArray(b.positions) ? b.positions : []).slice().sort((a, c) => (c.value_usd || 0) - (a.value_usd || 0));
+  $("#pos-n").textContent = pos.length ? `${pos.length} open` : "";
+  const open = new Set($$("#hold li.open").map(li => li.dataset.k));
+  $("#hold").innerHTML = pos.map(p => {
+    const perp = UI.parsePerp(p.token), ch = p.multiple != null ? (p.multiple - 1) * 100 : null, k = p.mint || p.token;
+    const name = perp ? `${perp.coin} ${perp.side === "short" ? "Short" : "Long"}` : p.token;
+    const age = p.opened ? L.ago(p.opened).replace(" ago", "").replace(" ", "") : "";
+    const sub = perp ? `${perp.lev}x perps${age ? " · " + age : ""}` : `${(L.POCKETS[p.sleeve] || L.POCKETS.picks).short}${age ? " · " + age : ""}`;
+    const stop = p.stop_mult != null ? `${L.fmtX(p.stop_mult)}${p.stop_mult >= 1 ? " · profit locked" : ""}` : "—";
+    return `<li data-k="${L.esc(k)}"${open.has(k) ? ' class="open"' : ""}><button type="button">${UI.avatar(p.token, perp)}<span class="nm"><b>${L.esc(name)}</b><small>${L.esc(sub)}</small></span><span class="vl"><b>${L.usd(p.value_usd, 2)}</b><small class="${UI.changeCls(ch)}">${ch == null ? "—" : L.signed(ch)}</small></span></button>
+      <div class="why">${L.esc(p.thesis || "")}<div class="wl"><span class="lnk" style="cursor:default">Stop ${stop}</span>${p.chart ? `<a class="lnk" href="${L.esc(p.chart)}" target="_blank" rel="noopener">Chart ↗</a>` : ""}</div></div></li>`;
+  }).join("") || `<li><div class="allcash"><img src="/assets/lloyd-head.png" alt=""><span>All in cash. Nothing passes Lloyd's checks right now; his notes say why.</span></div></li>`;
+  $$("#hold button").forEach(bt => bt.onclick = () => { bt.parentNode.classList.toggle("open"); UI.buzz(5); });
+}
+
+// ---------- orders on file ----------
+function armed(b) {
+  const ar = Array.isArray(b.armed) ? b.armed : [];
+  $("#armed").hidden = !ar.length;
+  const px = v => v == null ? "—" : "$" + Number(v).toLocaleString("en-US", {maximumFractionDigits: v < 1000 ? 2 : 0});
+  const d = v => v == null ? "" : ` (${(v * 100 >= 0 ? "+" : "") + (v * 100).toFixed(1)}%)`;
+  $("#armed-rows").innerHTML = ar.map(x => `<li><button type="button" style="cursor:default">${UI.avatar(x.coin)}<span class="nm"><b>${L.esc(x.coin)}</b><small>${x.open_side ? `${x.open_side} open` : "waiting for a level"}</small></span><span class="vl"><b>${px(x.price)}</b><small class="fl">now</small></span></button>
+    <div class="lvl"><div>Buys above<b>${px(x.buy_above)}</b>${x.open_side === "long" ? "open" : d(x.to_buy)}</div><div>Shorts below<b>${px(x.short_below)}</b>${x.open_side === "short" ? "open" : d(x.to_short)}</div></div></li>`).join("");
+}
+
+// ---------- closed ----------
+function closed(b) {
+  const cl = Array.isArray(b.closed_list) ? b.closed_list : [];
+  $("#cl-n").textContent = cl.length ? `${cl.length} trades` : "";
+  const list = CL_ALL ? cl : cl.slice(0, 6), open = new Set($$("#cl li.open").map(li => li.dataset.k));
+  $("#cl").innerHTML = list.map(x => {
+    const perp = UI.parsePerp(x.token), r = x.result != null ? x.result * 100 : null, k = String(x.ts);
+    const name = perp ? `${perp.coin} ${perp.side === "short" ? "Short" : "Long"}` : x.token;
+    return `<li data-k="${k}"${open.has(k) ? ' class="open"' : ""}><button type="button">${UI.avatar(x.token, perp)}<span class="nm"><b>${L.esc(name)}</b><small>${L.day(x.ts)} · held ${L.esc(L.hours(x.hold_h))}</small></span><span class="vl"><b>${L.usdS(x.pnl_usd, 2)}</b><small class="${UI.changeCls(r)}">${r == null ? "—" : L.signed(r)}</small></span></button>
+      <div class="why">${L.esc(x.why || "")}${x.chart ? ` <a href="${L.esc(x.chart)}" target="_blank" rel="noopener">Chart ↗</a>` : ""}</div></li>`;
+  }).join("") || `<li><div class="allcash"><img src="/assets/lloyd-head.png" alt=""><span>No closed trades yet.</span></div></li>`;
+  $$("#cl button").forEach(bt => bt.onclick = () => { bt.parentNode.classList.toggle("open"); UI.buzz(5); });
+  $("#cl-more").hidden = CL_ALL || cl.length <= 6;
+}
+$("#cl-more").onclick = () => { CL_ALL = true; closed(B); };
+
+// ---------- notes ----------
+function notes(b) {
+  const jr = Array.isArray(b.journal) ? b.journal : [];
+  UI.feed($("#feed"), jr, UI.classifyBook, FEED_ALL ? 60 : 8);
+  $("#feed-more").hidden = FEED_ALL || jr.length <= 8;
+}
+$("#feed-more").onclick = () => { FEED_ALL = true; notes(B); };
 
 function render(b) {
-  lastBook = b;
-  const br = b.brain || {}, r = b.regime || {};
-  const tr = b.track || {}, ft = tr.first_table, bk = tr.book;
-  $("#s-day1").textContent = ft ? L.signed(ft.pct) : "—";
-  $("#s-day1d").textContent = ft ? `first table: ${L.usd(ft.start_usd)} → ${L.usd(ft.equity_usd)} since ${L.day(ft.since)}` : "—";
-  const bp = bk ? bk.pct : (b.pnl_pct != null ? b.pnl_pct * 100 : null);
-  const pc = $("#s-pct"); pc.textContent = L.signed(bp); pc.style.color = (bp || 0) >= 0 ? "var(--felt-dk)" : "var(--hellred)";
-  $("#s-since").textContent = bk ? `all pockets, since ${L.day(bk.since)}` : (b.since ? `since ${L.day(b.since)}` : "—");
-  $("#s-eq").textContent = L.usd(b.equity_usd);
-  $("#s-mood").textContent = r.sol_vs_ma20 != null ? `SOL ${L.frac(r.sol_vs_ma20)} vs its 20-day average` : "—";
-  const cashPct = b.cash_usd != null && b.equity_usd ? b.cash_usd / b.equity_usd * 100 : null;
-  $("#s-cashd").textContent = cashPct != null ? `in the book · ${L.pct(cashPct)} in cash` : "in the book";
-
-  const state = L.regimeBadge($("#regime2"), b.regime);
-  $("#r-sol").textContent = L.frac(r.sol_vs_ma20); $("#r-btc").textContent = L.frac(r.btc_vs_ma20);
-  $("#r-br").textContent = r.breadth && r.breadth.total ? `${r.breadth.above} of ${r.breadth.total}` : "—";
-  $("#r-24").textContent = r.sol_24h != null ? (r.sol_24h >= 0 ? "+" : "") + Number(r.sol_24h).toFixed(1) + "%" : "—";
-  if (state) $("#r-text").textContent = {
-    risk_on: "Constructive: risk on. Majors, established memes and picks all get their budget; cash is what is left over.",
-    neutral: "Neutral: selective. Majors above trend are held, picks need a stronger story, and a bigger share waits in USDC.",
-    risk_off: "Defensive: SOL is falling hard. Mostly cash, no new picks, broken trends get sold. Majors shorts will live here once they ship.",
-  }[state];
-
-  const parts = [`Lloyd checks the book every ${br.every_min || 10} minutes`];
-  if (br.last_run) parts.push(`last check ${L.ago(br.last_run)}`);
-  if (br.next_review) parts.push(`full review at ${br.next_review}`);
-  if (br.last_action && br.last_action.title) parts.push(`last move: ${br.last_action.title}${br.last_action.ts ? ` (${L.ago(br.last_action.ts)})` : ""}`);
-  $("#brain").textContent = parts.join(" · ");
-
-  $("#p-upd").textContent = b.updated ? `updated ${L.ago(b.updated)}` : "";
-  const ss = L.drawBar($("#bar"), $("#legend"), b);
-  $("#pk-rows").innerHTML = ss.map(s => `<tr><th scope="row"><i class="${s.cls}"></i>${L.esc(s.name)}</th><td class="n">${L.pct(s.pct)}</td><td class="n">${L.pct(s.target_pct)}</td><td class="n">${L.usd(s.value_usd)}</td><td class="n">${s.positions}</td></tr>`).join("");
-
-  const pos = Array.isArray(b.positions) ? b.positions : [];
-  $("#pos-n").textContent = pos.length ? `${pos.length} open` : "";
-  $("#pos").innerHTML = pos.map(x => {
-    const age = x.opened ? L.hours((Date.now() / 1000 - x.opened) / 3600) : "—";
-    const stop = x.stop_mult != null ? `${L.fmtX(x.stop_mult)}${x.multiple != null && x.stop_mult >= 1 ? " · profit locked" : ""}` : "—";
-    return `<tr><th scope="row">${L.esc(x.token)}${x.chart ? ` <a class="chart" href="${x.chart}" target="_blank" rel="noopener" title="Open chart">↗</a>` : ""}</th><td class="tagc">${L.pill(x.sleeve)}</td><td class="n lead ${x.multiple != null ? (x.multiple >= 1 ? "up" : "down") : ""}" data-label="Multiple">${L.fmtX(x.multiple)}</td><td class="n" data-label="Value">${L.usd(x.value_usd, 2)}</td><td class="n" data-label="Stop">${stop}</td><td class="n" data-label="Held">${age}</td><td class="why">${L.esc(x.thesis)}</td></tr>`;
-  }).join("") || `<tr><td colspan="7" class="empty">Nothing open. Lloyd is holding cash, and the notes below say why.</td></tr>`;
-
-  const px = v => v == null ? "—" : "$" + Number(v).toLocaleString("en-US", {maximumFractionDigits: v < 1000 ? 2 : 0});
-  const dist = v => v == null ? "" : ` <small>(${(v * 100 >= 0 ? "+" : "") + (v * 100).toFixed(1)}%)</small>`;
-  const ar = Array.isArray(b.armed) ? b.armed : [];
-  $("#armed-rows").innerHTML = ar.map(x => `<tr><th scope="row">${L.esc(x.coin)}</th><td class="n" data-label="Price">${px(x.price)}</td><td class="n" data-label="Buys at">${x.open_side === "long" ? `<b>open</b> at ${px(x.buy_above)}` : px(x.buy_above) + dist(x.to_buy)}</td><td class="n" data-label="Shorts at">${x.open_side === "short" ? `<b>open</b> at ${px(x.short_below)}` : px(x.short_below) + dist(x.to_short)}</td><td class="n" data-label="Exits">${px(x.long_exit)} / ${px(x.short_exit)}</td></tr>`).join("") || `<tr><td colspan="5" class="empty">Levels load with the next daily close.</td></tr>`;
-  const pp = Array.isArray(b.perps) ? b.perps : [];
-  $("#perps-rows").innerHTML = pp.map(x => `<tr><th scope="row">${L.esc(x.coin)}</th><td data-label="Side">${L.esc(x.side)} ${x.lev ? x.lev + "x" : ""}</td><td class="n" data-label="Entry">${px(x.entry)}</td><td class="n" data-label="Now">${px(x.mark)}</td><td class="n" data-label="Exit">${px(x.exit_level)}</td><td class="n ${(x.pnl_usd || 0) >= 0 ? "up" : "down"}" data-label="P&amp;L">${L.usdS(x.pnl_usd, 2)}</td><td class="why">${L.esc(x.system)}</td></tr>`).join("") || `<tr><td colspan="7" class="empty">No perps open: waiting for a level to be touched.</td></tr>`;
-
-  const cl = Array.isArray(b.closed_list) ? b.closed_list : [];
-  $("#cl").innerHTML = cl.map(x => {
-    const won = (x.result || 0) >= 0;
-    return `<tr><th scope="row">${L.esc(x.token)}${x.chart ? ` <a class="chart" href="${x.chart}" target="_blank" rel="noopener" title="Open chart">↗</a>` : ""}</th><td class="n lead ${won ? "up" : "down"}" data-label="Result">${L.frac(x.result)}</td><td class="tagc">${L.pill(x.sleeve)} <span class="pill ${won ? "" : "c"}">${won ? "Won" : "Lost"}</span></td><td data-label="Closed">${L.when(x.ts)}</td><td class="n ${won ? "up" : "down"}" data-label="P&amp;L">${L.usdS(x.pnl_usd, 2)}</td><td class="n" data-label="Held">${L.hours(x.hold_h)}</td><td class="why">${L.esc(x.why)}</td></tr>`;
-  }).join("") || `<tr><td colspan="7" class="empty">No closed trades yet.</td></tr>`;
-
-  const jr = Array.isArray(b.journal) ? b.journal.slice(0, 60) : [];
-  $("#journal").innerHTML = jr.map(j => `<li>${j.kind ? `<span class="pill c kind">${L.esc(j.kind)}</span>` : ""}<time>${L.when(j.ts)}</time><b>${L.esc(j.title)}</b><p>${L.esc(j.text)}</p></li>`).join("") || `<li><p>No notes yet.</p></li>`;
-
-  const more = $("#j-more"); more.hidden = !(jr.length > 10 && $("#journal").classList.contains("clip"));
-  more.onclick = () => { $("#journal").classList.remove("clip"); more.hidden = true; };
-  $("#wallet").innerHTML = b.wallet ? `Wallet: <a href="https://solscan.io/account/${encodeURIComponent(b.wallet)}" target="_blank" rel="noopener">${L.esc(b.wallet)}</a> · open on Solscan` : "Wallet: —";
-  chart(b);
+  B = b; stamp = Date.now();
+  drawHero(); room(b); pockets(b); positions(b); armed(b); closed(b); notes(b);
+  $("#f-eq").textContent = L.usd(b.equity_usd);
+  const cp = b.cash_usd != null && b.equity_usd ? b.cash_usd / b.equity_usd * 100 : null;
+  $("#f-cash").textContent = cp != null ? L.pct(cp) : "—";
+  const best = b.stats && b.stats.best; $("#f-best").textContent = best && best.result != null ? `${best.token} ${L.signed(best.result * 100, 0)}` : "—";
+  $("#wallet").innerHTML = b.wallet ? `Lloyd's wallet: <a href="https://solscan.io/account/${encodeURIComponent(b.wallet)}" target="_blank" rel="noopener">${L.esc(b.wallet)}</a> · check every move on Solscan.` : "";
 }
-
-function fail() {
-  $("#sub").textContent = "Could not load the book right now. It retries every minute.";
-  ["#pos", "#cl"].forEach(s => $(s).innerHTML = `<tr><td colspan="8" class="empty">Could not load.</td></tr>`);
-  $("#pk-rows").innerHTML = `<tr><td colspan="5" class="empty">Could not load.</td></tr>`;
-  $("#journal").innerHTML = `<li><p>Could not load.</p></li>`;
-  $("#regime2").textContent = "Could not load";
-}
-function load() { L.get("/api/book").then(render).catch(() => { if (!lastBook) fail(); }); }
-load(); setInterval(load, 60000);
-let rt; window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => lastBook && chart(lastBook), 150); });
+function load() { return L.get("/api/book").then(render).catch(() => { if (!B) { $("#md-t").textContent = "Could not load the book"; $("#live-t").textContent = "Retrying…"; } }); }
+load();
+setInterval(() => { if (!document.hidden) load(); }, 30000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden && Date.now() - stamp > 15000) load(); });
+window.addEventListener("resize", () => { clearTimeout(window._rz); window._rz = setTimeout(drawHero, 150); });
+UI.chrome(load);
 </script>
 </body>
 </html>

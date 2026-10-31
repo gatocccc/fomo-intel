@@ -1,0 +1,7 @@
+/* Self-hosted type for every Lloyd's Tavern page (no Google round trip). */
+@font-face{font-family:"Bowlby One";font-weight:400;font-display:swap;src:url(/assets/fonts/bowlby-one-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Space Grotesk";font-weight:400;font-display:swap;src:url(/assets/fonts/space-grotesk-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Space Grotesk";font-weight:500;font-display:swap;src:url(/assets/fonts/space-grotesk-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Space Grotesk";font-weight:700;font-display:swap;src:url(/assets/fonts/space-grotesk-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Space Mono";font-weight:400;font-display:swap;src:url(/assets/fonts/space-mono-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Space Mono";font-weight:700;font-display:swap;src:url(/assets/fonts/space-mono-latin-700-normal.woff2) format("woff2")}
