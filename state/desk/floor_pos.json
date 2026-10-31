@@ -565,5 +565,26 @@
   "sig": "3rNzTMNcV3xLm6rgWwAh34PRajM11jVVVrjczaxtwerM8ab9JfjCeE9r9Vj9rNiC7XfGt1bHR8W5xanhee9zDHex",
   "latency_s": 2.2,
   "last_px": 2.8004593634438935e-08
+ },
+ "4r3L5K1BQMXWidyWydQF3q6ovtYDhdw7T3rxggkbpump": {
+  "ts": 1793478766.3405638,
+  "mint": "4r3L5K1BQMXWidyWydQF3q6ovtYDhdw7T3rxggkbpump",
+  "sym": "PEPE",
+  "name": "\u041f\u0415\u041f\u0415",
+  "curve": "JGQnZchfFgZFcqUywi7PuiqQ1924Dd6oYyu6jb17Amm",
+  "tokens": 865526.040586,
+  "tokens0": 865526.040586,
+  "cost_sol": 0.027006342,
+  "entry_px": 3.120222931908033e-08,
+  "ref_px": 2.8860496734551992e-08,
+  "slip_pct": 8.11,
+  "age_at_entry_s": 54,
+  "mcap_sol_entry": 28.86,
+  "peak_px": 3.120222931908033e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "2VrbU6dqnrRGJt4hdokrudzgUSo8oYV43ySL8daVHCfshpAGPCcpqCdpSSrZi982iweXS1RqJQNp6SVboomcmhQb",
+  "latency_s": 2.3,
+  "last_px": 2.800415390442578e-08
  }
 }
