@@ -1,15 +1,15 @@
 {
- "ts": 1793430243.944918,
+ "ts": 1793430845.1909666,
  "regime": {
   "state": "risk_off",
-  "ts": 1793429645.271781,
+  "ts": 1793430845.1850474,
   "since": 1793420045.9671798,
   "exit_since": null,
-  "sol": 96.01,
+  "sol": 95.74,
   "sol_ma20": 103.52,
-  "sol_ch4h": -0.7,
-  "sol_ch24h": -2.3,
-  "btc_vs_ma20": -0.0492,
+  "sol_ch4h": -0.4,
+  "sol_ch24h": -1.6,
+  "btc_vs_ma20": -0.0494,
   "breadth_above": 1,
   "breadth_total": 18,
   "why": "bear",
@@ -27,7 +27,7 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 503.44,
+   "value_usd": 503.45,
    "pct": 93.0,
    "positions": 0
   },
@@ -35,7 +35,7 @@
    "key": "majors",
    "name": "Majors",
    "target_pct": 10,
-   "value_usd": 30.25,
+   "value_usd": 30.26,
    "pct": 5.6,
    "positions": 2
   },
@@ -56,6 +56,6 @@
    "positions": 0
   }
  ],
- "liquid_usd": 503.44,
- "trad_status": "SOL -7.3%, BTC -5.1%, ETH -6.4%, JUP -14.9%"
+ "liquid_usd": 503.45,
+ "trad_status": "1 of 18 established memecoins above their 20-day average (best: STONK +6%)"
 }
