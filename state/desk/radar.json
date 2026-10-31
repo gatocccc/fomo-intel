@@ -45,45 +45,23 @@
     "hack",
     "regulatory"
    ]
-  },
-  {
-   "ts": 1793394425.0858438,
-   "src": "cointelegraph",
-   "title": "FBI and Secret Service join response to Binance’s $6.3B hack",
-   "sev": 3,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
-  },
-  {
-   "ts": 1793394425.0858438,
-   "src": "theblock",
-   "title": "President Trump says they’re looking into Binance hack as calls grow for crypto rules",
-   "sev": 2,
-   "dir": -1,
-   "types": [
-    "exchange",
-    "hack"
-   ]
   }
  ],
- "ts": 1793408660.9227922,
+ "ts": 1793408945.7723582,
  "bear_score": 3,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.781,
-   "ch15m": 0.0005065541909605731,
-   "ch1h": 0.005026117116836648,
-   "ch4h": 0.01583886136535395
+   "px": 96.719,
+   "ch15m": 0.0006207388861874108,
+   "ch1h": 0.004841407540544074,
+   "ch4h": 0.01758059085935515
   },
   "BTC": {
-   "px": 77565.0,
-   "ch15m": 0.0008903685351502322,
-   "ch1h": 0.003402240562986769,
-   "ch4h": 0.008437776275417308
+   "px": 77490.0,
+   "ch15m": 0.0002969006157460541,
+   "ch1h": 0.0025746852803043563,
+   "ch4h": 0.011367937456766564
   }
  },
  "mode": "live",

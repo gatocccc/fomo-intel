@@ -1,0 +1,11 @@
+== 203_verificar_app_ui_bis 2026-10-31T01:09:04Z ==
+1
+-rw-r--r-- 1 root root 39519 Oct 31 01:01 /var/www/autopilot/app/classic/index.html
+-rw-r--r-- 1 root root 56694 Oct 31 01:01 /var/www/autopilot/assets/vendor/qrcode.js
+-rw-r--r-- 1 root root   512 Oct 31 01:01 /var/www/autopilot/manifest.webmanifest
+/app/ 200 text/html
+/app/classic/ 200 text/html
+/manifest.webmanifest 200 application/octet-stream
+/assets/fonts/bowlby-one-latin-400-normal.woff2 200 font/woff2
+/assets/vendor/qrcode.js 200 application/javascript
+== exit 0 ==
