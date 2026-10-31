@@ -334,5 +334,26 @@
   "sig": "37b1kccqXVmyDxWL74KkPquZ2Ejs7tmtC5gYAoYYQP2EmHSWz4minRQLRReCKeP8uZT8TTcxMUDbGjHgPoC2PG9v",
   "latency_s": 2.3,
   "last_px": 2.8000302753247437e-08
+ },
+ "2AcTsbiTsKMqEUrHwQjLw7QcFpR2BuojLc6nzWUQpump": {
+  "ts": 1793469973.138733,
+  "mint": "2AcTsbiTsKMqEUrHwQjLw7QcFpR2BuojLc6nzWUQpump",
+  "sym": "Upvember",
+  "name": "Upvember",
+  "curve": "3YXMXQ2e2XRQ5kgE8oQwfZCWiEQ6FExJyHmCbQCxWfPH",
+  "tokens": 885970.832194,
+  "tokens0": 885970.832194,
+  "cost_sol": 0.027006339,
+  "entry_px": 3.048219875717811e-08,
+  "ref_px": 2.8194236261509415e-08,
+  "slip_pct": 8.12,
+  "age_at_entry_s": 54,
+  "mcap_sol_entry": 28.19,
+  "peak_px": 3.048219875717811e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "4C4t74BYo3CBMqGRaTiFQYrrgbro5DvFtfLxKtasBdZaJXmak6S7G8fVqxzHktjKs9cFKnyu68pyjtZDQxcvRPMx",
+  "latency_s": 2.3,
+  "last_px": 2.8055695394883844e-08
  }
 }
