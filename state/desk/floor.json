@@ -1,9 +1,9 @@
 {
- "ts": 1793480385.7150126,
+ "ts": 1793480690.2158375,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.30323,
- "open_value_sol": 0.6883,
+ "equity_sol": 2.30424,
+ "open_value_sol": 0.66364,
  "positions": [
   {
    "sym": "PUMPKIM",
@@ -228,17 +228,19 @@
    "peak_mult": 1.0,
    "ts": 1793459595.4496129,
    "hit_rec": false
-  },
-  {
-   "sym": "WANSULEK",
-   "mint": "D8UmeZr59nWZm1fx8CKGPZiJaRB3QytjSCF6Bav41Yda",
-   "mult": 0.913,
-   "peak_mult": 1.0,
-   "ts": 1793458812.5246649,
-   "hit_rec": false
   }
  ],
  "recent_closed": [
+  {
+   "sym": "WANSULEK",
+   "mint": "D8UmeZr59nWZm1fx8CKGPZiJaRB3QytjSCF6Bav41Yda",
+   "mult": 0.95,
+   "peak_mult": 1.0,
+   "pnl_sol": -0.001337,
+   "why": "6h",
+   "closed_ts": 1793480418.3337712,
+   "hold_min": 360
+  },
   {
    "sym": "pump",
    "mint": "EnBSuuEhtC5Q6GRQRhesnwxkwgkn6Z2SwExjREVKpump",
@@ -261,16 +263,16 @@
   }
  ],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
- "sol_balance": 1.614933345,
- "sol_usd": 95.49174596034834,
+ "sol_balance": 1.640602566,
+ "sol_usd": 95.52981287886352,
  "ticket_sol": 0.025,
  "ratio": 1.3,
- "open": 29,
- "open_cost_sol": 0.7685,
- "closed": 2,
- "closed_pnl_sol": -0.0078,
- "closed_cost_sol": 0.0568,
- "closed_roi": -0.1379,
+ "open": 28,
+ "open_cost_sol": 0.7415,
+ "closed": 3,
+ "closed_pnl_sol": -0.0092,
+ "closed_cost_sol": 0.0838,
+ "closed_roi": -0.1094,
  "wins_3x": 0,
  "best": {
   "sym": "pump",
@@ -280,12 +282,12 @@
  },
  "bought_today": 31,
  "stats": {
-  "seen": 234,
-  "evaluated": 228,
-  "eligible": 94,
+  "seen": 280,
+  "evaluated": 274,
+  "eligible": 119,
   "bought": 2,
   "buy_fail": 0,
-  "closed": 1,
+  "closed": 2,
   "ws_reconnects": 0
  }
 }
