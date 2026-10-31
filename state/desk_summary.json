@@ -1,16 +1,16 @@
 {
- "now": 1793471966.4679618,
+ "now": 1793472264.0142338,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 5,
- "equity_usd": 154.45,
- "equity_sol": 1.6087,
+ "equity_usd": 154.46,
+ "equity_sol": 1.6092,
  "cash_sol": 0.0833,
- "positions_usd": 146.46,
- "sol_usd": 96.01,
+ "positions_usd": 146.47,
+ "sol_usd": 95.99,
  "mult": 1.559,
  "halt": false,
  "pause": false,
@@ -35,7 +35,7 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 1.000060792421647,
+   "last_usd": 1.0000611938366448,
    "mult": 0.994,
    "value_usd": 126.49
   },
@@ -44,7 +44,7 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 2253.99,
-   "last_usd": 2256.05,
+   "last_usd": 2256.35,
    "peak_usd": 2253.99,
    "tokens": 0,
    "tokens_initial": 0,
@@ -74,7 +74,7 @@
    "symbol": "SOL short 1.7x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 96.04,
-   "last_usd": 96.0725,
+   "last_usd": 96.0595,
    "peak_usd": 96.04,
    "tokens": 0,
    "tokens_initial": 0,
@@ -93,14 +93,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 0.999,
-   "value_usd": 9.99,
-   "pnl_usd": -0.01,
+   "mult": 1.0,
+   "value_usd": 10.0,
+   "pnl_usd": -0.0,
    "collateral_usd": 10.0,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.03,
+ "perps_pnl_usd": -0.02,
  "equity": [
   [
    1793113266,
@@ -5281,6 +5281,13 @@
  ],
  "journal": [
   {
+   "ts": 1793472065.5688999,
+   "title": "Sesión 15:39: sin órdenes, cortos de la tortuga en curso",
+   "text": "Autocrítica: en 3 h no cerró nada ni se perdió plata; ninguna regla hizo daño (cerebro sin compras en bajista lento, 1/16 memes sobre su promedio; radar sin cortos: score 2/0, SOL +0,5% en 4 h, sin precio que confirme). Sin cambios de código. Mesa US$154,5 (1,56x): USDC US$126,5 + cortos de la tortuga ETH 2x y SOL 1,7x abiertos 17:54 UTC (≈ empate, salidas en los máximos de 20 días). Mañana 1/11 Binance reabre retiros tras reponer 90% de lo robado: riesgo de volatilidad en ambos sentidos; lo vigila el radar. Abogado del diablo de quedarse quieto: el mercado puede rebotar y la mesa no lo captura; se acepta porque no hay candidato con motivo y comprar sin historia perdió 14 de 14. Watchlist sin candidatos nuevos.",
+   "kind": "decisión",
+   "id": "2026-10-31-07"
+  },
+  {
    "ts": 1793471646.1803725,
    "title": "Cerebro automático: estado",
    "text": "Efectivo ocioso (83%), pero SOL y BTC están debajo de su promedio de 20 días y solo 1 de 16 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
@@ -6672,13 +6679,6 @@
    "text": "set 4kjruq: ajustó GTA6: stop=-3.321",
    "kind": "ejecución",
    "id": "auto-mesa-20261029-1457"
-  },
-  {
-   "ts": 1793285835.0318658,
-   "title": "Cerebro automático: ajuste de stops",
-   "text": "GTA6: llegó a 6.17x de pico; subo el stop a 4.32x (antes 3.93x).\n\nEfectivo ocioso (45%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
-   "kind": "decisión",
-   "id": "auto-mesa-20261029-1457"
   }
  ],
  "wins": 2,
@@ -6688,7 +6688,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793471645.0595567,
+  "last_run": 1793472243.7139945,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
