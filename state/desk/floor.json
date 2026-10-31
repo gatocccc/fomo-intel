@@ -1,9 +1,9 @@
 {
- "ts": 1793459683.3624246,
+ "ts": 1793459985.4354084,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.37748,
- "open_value_sol": 0.09693,
+ "equity_sol": 2.37712,
+ "open_value_sol": 0.09657,
  "positions": [
   {
    "sym": "Sentinel",
@@ -16,7 +16,7 @@
   {
    "sym": "WANSULEK",
    "mint": "D8UmeZr59nWZm1fx8CKGPZiJaRB3QytjSCF6Bav41Yda",
-   "mult": 0.926,
+   "mult": 0.913,
    "peak_mult": 1.0,
    "ts": 1793458812.5246649,
    "hit_rec": false
@@ -41,7 +41,7 @@
  "recent_closed": [],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
  "sol_balance": 2.280543739,
- "sol_usd": 95.67256439076348,
+ "sol_usd": 95.77998636176771,
  "ticket_sol": 0.025,
  "ratio": 1.3,
  "open": 4,
@@ -54,9 +54,9 @@
  "best": null,
  "bought_today": 4,
  "stats": {
-  "seen": 258,
-  "evaluated": 248,
-  "eligible": 86,
+  "seen": 301,
+  "evaluated": 295,
+  "eligible": 100,
   "bought": 2,
   "buy_fail": 0,
   "closed": 0,
