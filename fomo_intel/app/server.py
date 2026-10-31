@@ -13,7 +13,9 @@ Cuentas: email + contraseña (scrypt), sesión en cookie HttpOnly. Base: state/a
   POST /api/me/settings                     monto, objetivo, plazo, plan, freno, al llegar, billetera
   GET  /api/holder/message?eth=0x..         mensaje para firmar (requiere sesión)
   POST /api/holder/verify {eth,signature,message}
+  GET  /api/ideas | POST /api/ideas {title,idea,why,name,contact} | POST /api/ideas/vote {id}   ideas de la comunidad para el lab
   GET  /api/admin/resumen | /api/admin/claves, POST /api/admin/claves   (basic auth en nginx)
+  GET  /api/admin/ideas, POST /api/admin/ideas {id,status,reply,ledger_name}
 """
 from __future__ import annotations
 
@@ -78,6 +80,10 @@ def init_db() -> None:
           amount_usd REAL, goal REAL, days INTEGER, plan TEXT, stop_pct REAL, at_goal TEXT, sol_wallet TEXT,
           eth TEXT UNIQUE, ducks INTEGER, holder_status TEXT, status TEXT DEFAULT 'waitlist', bot_wallet TEXT, last_login REAL);
         CREATE TABLE IF NOT EXISTS sessions (token TEXT PRIMARY KEY, user_id INTEGER, expires REAL);
+        CREATE TABLE IF NOT EXISTS ideas (
+          id INTEGER PRIMARY KEY, created REAL, title TEXT, idea TEXT, why TEXT, name TEXT, contact TEXT, user_id INTEGER,
+          ip_h TEXT, status TEXT DEFAULT 'new', reply TEXT, ledger_name TEXT, reviewed REAL);
+        CREATE TABLE IF NOT EXISTS idea_votes (idea_id INTEGER, voter TEXT, ts REAL, PRIMARY KEY (idea_id, voter));
         """)
         for col, typ in (("risk_pct", "INTEGER"), ("profit_rule", "TEXT"), ("profit_mult", "REAL"), ("close_requested", "REAL")):
             try: c.execute(f"ALTER TABLE users ADD COLUMN {col} {typ}")
@@ -289,6 +295,109 @@ def admin_seat(b: dict) -> tuple[int, dict]:
         else:
             return 400, {"error": "seat, unseat, holder or standard"}
     return 200, {"ok": True, "action": action}
+
+
+# ---------- ideas de la comunidad para el laboratorio (/lab/) ----------
+# Nada es público hasta que se revisa (status 'new' = solo admin). El contacto nunca sale del admin.
+# Estados: new → queued (entra a la cola del lab) | testing | done (probada; el resultado está en la bitácora)
+#          | merged (ya estaba cubierta por otra prueba) | declined (con respuesta) | spam (oculta).
+IDEA_STATUS = ("new", "queued", "testing", "done", "merged", "declined", "spam")
+IDEA_PUBLIC = {"queued": "In the queue", "testing": "Testing now", "done": "Tested", "merged": "Already on the table", "declined": "Not for now"}
+IDEAS_INBOX = STATE / "research" / "ideas_inbox.json"
+
+
+def _ip_h(ip: str) -> str:
+    return hashlib.sha256(("ideas:" + ip + os.getenv("IDEAS_SALT", "lloyd")).encode()).hexdigest()[:16]
+
+
+def _ideas_inbox() -> None:
+    """Exporta las ideas (sin contacto ni IP) para que las sesiones de investigación las lean."""
+    with db() as c:
+        rows = c.execute("SELECT id,created,title,idea,why,name,status,reply,ledger_name,"
+                         "(SELECT COUNT(*) FROM idea_votes v WHERE v.idea_id=ideas.id) AS votes FROM ideas WHERE status!='spam' ORDER BY id").fetchall()
+    IDEAS_INBOX.parent.mkdir(parents=True, exist_ok=True)
+    tmp = IDEAS_INBOX.with_suffix(".tmp")
+    tmp.write_text(json.dumps({"updated": time.time(), "ideas": [dict(r) for r in rows]}, ensure_ascii=False, indent=1))
+    tmp.replace(IDEAS_INBOX)
+
+
+def idea_submit(b: dict, ip: str, usr: sqlite3.Row | None) -> tuple[int, dict]:
+    if str(b.get("website") or "").strip():          # trampa para bots: campo oculto
+        return 200, {"ok": True}
+    title = " ".join(str(b.get("title") or "").split())[:90]
+    idea = str(b.get("idea") or "").strip()[:1500]
+    why = str(b.get("why") or "").strip()[:600]
+    name = " ".join(str(b.get("name") or "").split())[:40]
+    contact = str(b.get("contact") or "").strip()[:120]
+    if len(title) < 6:
+        return 400, {"error": "Give the idea a short title (at least 6 characters)."}
+    if len(idea) < 30:
+        return 400, {"error": "Tell Lloyd a bit more: what would he watch for, and what would he do? (30 characters or more)"}
+    if re.search(r"(https?://\S+.*){4,}", idea + " " + why):
+        return 400, {"error": "Too many links. Describe the idea in your own words."}
+    with db() as c:
+        dup = c.execute("SELECT id FROM ideas WHERE lower(title)=lower(?) AND created>?", (title, time.time() - 30 * 86400)).fetchone()
+        if dup:
+            return 409, {"error": "Someone already pitched an idea with that title. Give it a vote instead."}
+        cur = c.execute("INSERT INTO ideas (created,title,idea,why,name,contact,user_id,ip_h,status) VALUES (?,?,?,?,?,?,?,?, 'new')",
+                        (time.time(), title, idea, why, name or None, contact or None, usr["id"] if usr else None, _ip_h(ip)))
+        iid = cur.lastrowid
+    _ideas_inbox()
+    return 200, {"ok": True, "id": iid}
+
+
+def ideas_public() -> dict:
+    with db() as c:
+        rows = c.execute("SELECT i.id,i.created,i.title,i.idea,i.why,i.name,i.status,i.reply,i.ledger_name,i.reviewed,"
+                         "(SELECT COUNT(*) FROM idea_votes v WHERE v.idea_id=i.id) AS votes FROM ideas i "
+                         "WHERE i.status IN ('queued','testing','done','merged','declined') ORDER BY i.reviewed DESC LIMIT 60").fetchall()
+        pending = c.execute("SELECT COUNT(*) FROM ideas WHERE status='new'").fetchone()[0]
+        total = c.execute("SELECT COUNT(*) FROM ideas WHERE status!='spam'").fetchone()[0]
+    order = {"testing": 0, "queued": 1, "done": 2, "merged": 3, "declined": 4}
+    out = [{"id": r["id"], "date": time.strftime("%Y-%m-%d", time.gmtime(r["created"])), "title": r["title"], "idea": r["idea"], "why": r["why"],
+            "by": r["name"] or "Anonymous", "status": r["status"], "status_label": IDEA_PUBLIC.get(r["status"], r["status"]),
+            "reply": r["reply"], "experiment": r["ledger_name"], "votes": r["votes"]} for r in rows]
+    out.sort(key=lambda x: (order.get(x["status"], 9), -x["votes"]))
+    return {"ideas": out, "pending": pending, "total": total, "updated": time.time()}
+
+
+def idea_vote(b: dict, ip: str, usr: sqlite3.Row | None) -> tuple[int, dict]:
+    try: iid = int(b.get("id"))
+    except (TypeError, ValueError): return 400, {"error": "Which idea?"}
+    voter = f"u{usr['id']}" if usr else "ip" + _ip_h(ip)
+    with db() as c:
+        row = c.execute("SELECT status FROM ideas WHERE id=?", (iid,)).fetchone()
+        if not row or row["status"] not in ("queued", "testing", "merged"):
+            return 404, {"error": "That idea is not open for votes."}
+        c.execute("INSERT OR IGNORE INTO idea_votes VALUES (?,?,?)", (iid, voter, time.time()))
+        n = c.execute("SELECT COUNT(*) FROM idea_votes WHERE idea_id=?", (iid,)).fetchone()[0]
+    _ideas_inbox()
+    return 200, {"ok": True, "votes": n}
+
+
+def ideas_admin() -> dict:
+    with db() as c:
+        rows = c.execute("SELECT i.*, (SELECT COUNT(*) FROM idea_votes v WHERE v.idea_id=i.id) AS votes, u.email AS user_email "
+                         "FROM ideas i LEFT JOIN users u ON u.id=i.user_id ORDER BY (i.status='new') DESC, i.id DESC LIMIT 300").fetchall()
+    out = []
+    for r in rows:
+        d = dict(r); d.pop("ip_h", None); out.append(d)
+    return {"ideas": out, "statuses": IDEA_STATUS}
+
+
+def idea_review(b: dict) -> tuple[int, dict]:
+    try: iid = int(b.get("id"))
+    except (TypeError, ValueError): return 400, {"error": "Which idea?"}
+    st = str(b.get("status") or "")
+    if st not in IDEA_STATUS: return 400, {"error": "Unknown status."}
+    reply = str(b.get("reply") or "").strip()[:800] or None
+    ledger = str(b.get("ledger_name") or "").strip()[:120] or None
+    with db() as c:
+        if not c.execute("SELECT 1 FROM ideas WHERE id=?", (iid,)).fetchone(): return 404, {"error": "No such idea."}
+        c.execute("UPDATE ideas SET status=?, reply=COALESCE(?,reply), ledger_name=COALESCE(?,ledger_name), reviewed=? WHERE id=?",
+                  (st, reply, ledger, time.time(), iid))
+    _ideas_inbox()
+    return 200, {"ok": True}
 
 
 # ---------- holders (firma de Ethereum) ----------
@@ -536,6 +645,10 @@ class H(BaseHTTPRequestHandler):
                 return self._send(200, b) if b else self._send(404, {"error": "The book is not open yet."})
             if u.path == "/api/lab":
                 return self._send(200, lab_public())
+            if u.path == "/api/ideas":
+                return self._send(200, ideas_public())
+            if u.path == "/api/admin/ideas":
+                return self._send(200, ideas_admin())
             if u.path == "/api/expect":
                 return self._send(200, expect(int(q.get("risk", 35))))
             if u.path == "/api/admin/book":
@@ -597,6 +710,15 @@ class H(BaseHTTPRequestHandler):
             code, out = claves_guardar(b); return self._send(code, out)
         if path == "/api/admin/seat":
             code, out = admin_seat(b); return self._send(code, out)
+        if path == "/api/admin/ideas":
+            code, out = idea_review(b); return self._send(code, out)
+        if path == "/api/ideas":
+            if not _rate_ok("id:" + ip, 3) or not _rate_ok("idd:" + ip, 8, 86400):
+                return self._send(429, {"error": "Lloyd has your ideas for now. Try again in an hour."})
+            code, out = idea_submit(b, ip, user_by_token(self._token())); return self._send(code, out)
+        if path == "/api/ideas/vote":
+            if not _rate_ok("iv:" + ip, 60): return self._send(429, {"error": "Too many votes. Try again later."})
+            code, out = idea_vote(b, ip, user_by_token(self._token())); return self._send(code, out)
         usr = user_by_token(self._token())
         if not usr:
             return self._send(401, {"error": "Not logged in."})

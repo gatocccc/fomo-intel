@@ -352,7 +352,7 @@ def lab_public() -> dict:
         st = e.get("verdict") or "queued"
         out.append({"date": e.get("date"), "title": e.get("public_title") or e.get("name"), "hypothesis": e.get("hypothesis") or e.get("question"),
                     "status": st, "status_label": STATUS_PUBLIC.get(st, st), "conclusion": e.get("efficacy") if st != "queued" else None,
-                    "pocket": e.get("sleeve"), "priority": e.get("priority")})
+                    "pocket": e.get("sleeve"), "priority": e.get("priority"), "suggested_by": e.get("suggested_by")})
     order = {"testing": 0, "watch": 1, "adopted": 2, "queued": 3, "rejected": 4}
     out.sort(key=lambda x: (order.get(x["status"], 9), x.get("priority") or 99, "" if not x["date"] else "~" + x["date"]))
     counts = {k: sum(1 for x in out if x["status"] == k) for k in order}

@@ -42,6 +42,32 @@
 .wallet-box .up{color:var(--felt-dk)} .wallet-box .down{color:var(--hellred)}
 .foot-line{margin:36px 0 10px;font:700 12.5px var(--m);color:var(--cream)}
 footer{color:var(--cream)}
+.pitch{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:start}
+.pitch form{padding:22px 24px;gap:16px}
+.pitch .f textarea{width:100%;font:inherit;padding:12px 16px;border:2px solid var(--ink);border-radius:18px;background:var(--cream);color:var(--ink);resize:vertical;min-height:110px}
+.pitch .f textarea:focus{background:#fff;outline:3px solid var(--ember);outline-offset:1px}
+.pitch .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pitch .count{font:700 11px var(--m);color:var(--dim);float:right;text-transform:none;letter-spacing:0}
+.pitch .msg{margin:0;font:700 14px var(--m)} .pitch .msg.ok{color:var(--felt-dk)} .pitch .msg.err{color:var(--hellred)}
+.pitch .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.how{padding:20px 22px;background:var(--beak)}
+.how h3{font-size:22px;margin:0 0 10px}
+.how ol{margin:0;padding-left:20px;display:grid;gap:8px;font-size:15px}
+.how p{margin:12px 0 0;font-size:14px}
+.crowd{list-style:none;margin:18px 0 0;padding:6px 22px}
+.crowd li{display:grid;grid-template-columns:1fr auto;gap:6px 14px;padding:16px 0;border-bottom:2px dashed rgba(26,24,20,.25)}
+.crowd li:last-child{border-bottom:0}
+.crowd b{font:400 19px/1.15 var(--t)}
+.crowd .by{font:700 12px var(--m);color:var(--dim);white-space:nowrap}
+.crowd p{grid-column:1/-1;margin:0;font-size:14.5px}
+.crowd .reply{padding:10px 12px;border-radius:12px;background:var(--cream)}
+.crowd .reply b{font:700 12.5px var(--m)}
+.crowd .side{display:flex;gap:8px;align-items:start;flex-wrap:wrap;justify-content:flex-end}
+.vote{font:700 12px var(--m);padding:5px 12px;border:2px solid var(--ink);border-radius:999px;background:var(--white);cursor:pointer}
+.vote[disabled]{background:var(--beak);cursor:default}
+.lab-card .credit{font:700 12px var(--m);color:var(--dim)}
+@media (max-width:860px){.pitch{grid-template-columns:1fr}}
+@media (max-width:560px){.pitch .row2{grid-template-columns:1fr}.crowd{padding:4px 16px}}
 @media (max-width:700px){.head{grid-template-columns:1fr}.head img{display:none}.wallet-box{grid-template-columns:1fr}}
 @media (max-width:560px){.mini{padding:4px 16px}}
 </style>
@@ -50,7 +76,7 @@ footer{color:var(--cream)}
 <div class="wrap">
 <header class="top"><div class="bar">
   <a class="mark" href="/" aria-label="Lloyd's Tavern, home"><img src="/assets/lloyd-head.png" alt=""><span>Lloyd's <b>Tavern</b></span></a>
-  <nav class="navl" aria-label="Sections"><a href="#now">Testing</a><a href="#learned">Learned</a><a href="#next">Up next</a><a href="#discarded">Discarded</a><a href="/book/">Live book</a></nav>
+  <nav class="navl" aria-label="Sections"><a href="#now">Testing</a><a href="#learned">Learned</a><a href="#next">Up next</a><a href="#discarded">Discarded</a><a href="#pitch">Pitch an idea</a><a href="/book/">Live book</a></nav>
   <a class="btn ghost" href="/app/">My stool</a>
 </div></header>
 
@@ -58,6 +84,7 @@ footer{color:var(--cream)}
   <div>
     <h1>Lloyd's notebook</h1>
     <p class="lede">Lloyd never stops learning. Every week he tests new ideas against real data and keeps only what works. This is the notebook: what he is trying, what he kept, and what he threw out.</p>
+    <p style="margin:14px 0 0"><a class="btn y" href="#pitch">Pitch Lloyd an idea</a></p>
   </div>
   <img src="/assets/lloyd-head.png" alt="">
 </div>
@@ -101,6 +128,36 @@ footer{color:var(--cream)}
   <h2 id="d-t">Tested and discarded</h2>
   <p class="sub">Lloyd tried it so you don't have to. A bad idea thrown out is an edge too.</p>
   <ul class="panel mini" id="c-discarded"></ul>
+</section>
+
+<section class="sect" id="pitch" aria-labelledby="p-t">
+  <h2 id="p-t">Pitch Lloyd an idea</h2>
+  <p class="sub">Seen a pattern Lloyd should test? Tell him. Every idea gets read, and the good ones get the same fair test as his own: real data, real costs, against chance. If it works, it goes into the notebook with your name on it.</p>
+  <div class="pitch">
+    <form class="panel" id="pitch-form" novalidate>
+      <div class="f"><label for="i-title">The idea, in one line</label><input id="i-title" name="title" maxlength="90" required placeholder="e.g. Buy when several winning wallets pile into the same token"></div>
+      <div class="f"><label for="i-idea">How it would work <span class="count" id="i-count">0 / 1500</span></label><textarea id="i-idea" name="idea" maxlength="1500" required placeholder="What should Lloyd watch for? When does he buy, and when does he get out?"></textarea></div>
+      <div class="f"><label for="i-why">Why you think it works (optional)</label><textarea id="i-why" name="why" maxlength="600" style="min-height:70px" placeholder="Something you saw, a trade, a link to a thread…"></textarea></div>
+      <div class="row2">
+        <div class="f"><label for="i-name">Name for the credit (optional)</label><input id="i-name" name="name" maxlength="40" placeholder="Anonymous"></div>
+        <div class="f"><label for="i-contact">X or email, private (optional)</label><input id="i-contact" name="contact" maxlength="120" placeholder="Only if you want a reply"></div>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="i-web">Website</label><input id="i-web" name="website" tabindex="-1" autocomplete="off"></div>
+      <div><button class="btn y" type="submit" id="i-send">Send it to Lloyd</button></div>
+      <p class="msg" id="i-msg" role="status" aria-live="polite"></p>
+    </form>
+    <aside class="panel how">
+      <h3>What happens next</h3>
+      <ol>
+        <li>Lloyd reads it in his next research session (Monday, Wednesday or Friday).</li>
+        <li>If it can be measured, it joins the queue below and you can vote for it.</li>
+        <li>It gets tested on past data with real costs, and against random entries. Some go to the lab wallet with real money.</li>
+        <li>It lands in "Learned, in use" or "Tested and discarded", with the numbers and your name.</li>
+      </ol>
+      <p>Your contact stays private. Nothing you write is published until Lloyd has read it.</p>
+    </aside>
+  </div>
+  <ul class="panel crowd" id="crowd" hidden></ul>
 </section>
 
 <p class="foot-line" id="cadence"></p>
@@ -159,7 +216,47 @@ function load() {
     ["#c-next", "#c-discarded"].forEach(s => $(s).innerHTML = `<li class="empty">Could not load.</li>`);
   });
 }
-load(); setInterval(load, 300000);
+// ----- ideas from the crowd -----
+const voted = new Set((() => { try { return JSON.parse(localStorage.getItem("lloyd_votes") || "[]"); } catch (_) { return []; } })());
+function renderIdeas(d) {
+  const ul = $("#crowd"), xs = Array.isArray(d.ideas) ? d.ideas : [];
+  const head = `<li style="display:block"><b>From the crowd</b> <span class="by">${xs.length} reviewed${d.pending ? ` · ${d.pending} waiting for Lloyd to read` : ""}</span></li>`;
+  if (!xs.length && !d.pending) { ul.hidden = true; return; }
+  ul.hidden = false;
+  ul.innerHTML = head + xs.map(x => {
+    const open = ["queued", "testing", "merged"].includes(x.status), done = voted.has(x.id);
+    const pillSt = {testing: "testing", queued: "queued", done: "watch", merged: "watch", declined: "rejected"}[x.status] || "queued";
+    return `<li><div><b>${L.esc(x.title)}</b><br><span class="by">by ${L.esc(x.by)} · ${L.esc(x.date)}</span></div>
+      <div class="side"><span class="lab-pill st-${pillSt}">${L.esc(x.status_label)}</span>${open ? `<button class="vote" data-id="${x.id}" ${done ? "disabled" : ""} aria-label="Vote for this idea">▲ ${x.votes}</button>` : (x.votes ? `<span class="by">▲ ${x.votes}</span>` : "")}</div>
+      <p>${L.esc(x.idea)}</p>
+      ${x.reply ? `<p class="reply"><b>Lloyd:</b> ${L.esc(x.reply)}</p>` : ""}</li>`;
+  }).join("");
+}
+function loadIdeas() { L.get("/api/ideas").then(renderIdeas).catch(() => {}); }
+$("#crowd").addEventListener("click", e => {
+  const b = e.target.closest(".vote"); if (!b || b.disabled) return;
+  const id = Number(b.dataset.id); b.disabled = true;
+  L.post("/api/ideas/vote", {id}).then(r => { voted.add(id); try { localStorage.setItem("lloyd_votes", JSON.stringify([...voted])); } catch (_) {} b.textContent = `▲ ${r.votes}`; })
+    .catch(() => { b.disabled = false; });
+});
+$("#i-idea").addEventListener("input", e => { $("#i-count").textContent = `${e.target.value.length} / 1500`; });
+$("#pitch-form").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target, msg = $("#i-msg"), btn = $("#i-send");
+  const body = Object.fromEntries(new FormData(f).entries());
+  msg.className = "msg"; msg.textContent = "";
+  if ((body.title || "").trim().length < 6) { msg.className = "msg err"; msg.textContent = "Give the idea a short title."; return $("#i-title").focus(); }
+  if ((body.idea || "").trim().length < 30) { msg.className = "msg err"; msg.textContent = "Tell Lloyd a bit more about how it would work."; return $("#i-idea").focus(); }
+  btn.disabled = true; btn.textContent = "Sending…";
+  L.post("/api/ideas", body).then(() => {
+    f.reset(); $("#i-count").textContent = "0 / 1500";
+    msg.className = "msg ok"; msg.textContent = "Got it. Lloyd will read it in his next research session.";
+    loadIdeas();
+  }).catch(err => { msg.className = "msg err"; msg.textContent = err.message; })
+    .finally(() => { btn.disabled = false; btn.textContent = "Send it to Lloyd"; });
+});
+
+load(); loadIdeas(); setInterval(load, 300000);
 </script>
 </body>
 </html>

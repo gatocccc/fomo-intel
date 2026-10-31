@@ -94,6 +94,10 @@ pre{margin:0;background:var(--mist);border-radius:12px;padding:12px;font:12.5px/
   <p class="sub" id="r-next" style="margin:0 0 12px"></p>
   <div class="scroll"><table><thead><tr><th>Date</th><th>Experiment</th><th>Question</th><th>Method</th><th>Result</th><th>Verdict</th></tr></thead><tbody id="rl"><tr><td colspan="6">Loading…</td></tr></tbody></table></div>
 
+  <h2 id="ideas">Lab ideas from users</h2>
+  <p class="sub" id="i-sum" style="margin:0 0 12px">Nothing is public until it leaves "new". Contact is never shown publicly.</p>
+  <div class="scroll"><table><thead><tr><th>Sent</th><th>Idea</th><th>From</th><th class="n">Votes</th><th>Review</th></tr></thead><tbody id="ideas-t"><tr><td colspan="5">Loading…</td></tr></tbody></table></div>
+
   <h2>Trading wallets</h2>
   <p class="sub" id="tw-sum" style="margin:0 0 12px"></p>
   <div class="scroll"><table><thead><tr><th>Owner</th><th>Book / risk</th><th>Wallet</th><th>Started</th><th class="n">Start</th><th class="n">Now</th><th class="n">P&amp;L</th><th class="n">Open</th><th class="n">Closed (won)</th><th>Last trade</th><th>Status</th></tr></thead><tbody id="tw"></tbody></table></div>
@@ -196,7 +200,31 @@ async function seat(id, action) {
   try { await fetch("/api/admin/seat", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({id, action})}); loadSummary(); }
   catch (e) { alert(e.message); }
 }
-function load() { loadSummary(); loadBook(); loadWallets(); loadResearch(); }
+const IST = ["new", "queued", "testing", "done", "merged", "declined", "spam"];
+function loadIdeas() {
+  get("/api/admin/ideas").then(d => {
+    const xs = d.ideas || [], nw = xs.filter(x => x.status === "new").length;
+    k("i-sum", `${xs.length} ideas · ${nw} new. Nothing is public until it leaves "new". Contact is never shown publicly.`);
+    h("ideas-t", xs.map(x => `<tr data-id="${x.id}"><td style="white-space:nowrap">${when(x.created)}</td>
+      <td style="min-width:280px"><b>${esc(x.title)}</b><br>${esc(x.idea)}${x.why ? `<br><span class="why">Why: ${esc(x.why)}</span>` : ""}</td>
+      <td>${esc(x.name || "Anonymous")}<br><span class="why">${esc(x.contact || "")}${x.user_email ? `<br>${esc(x.user_email)}` : ""}</span></td>
+      <td class="n">${x.votes || 0}</td>
+      <td style="min-width:260px"><select class="i-st">${IST.map(s => `<option ${s === x.status ? "selected" : ""}>${s}</option>`).join("")}</select>
+        <textarea class="i-rep" rows="2" style="width:100%;margin-top:6px" placeholder="Public reply from Lloyd">${esc(x.reply || "")}</textarea>
+        <input class="i-led" style="width:100%" placeholder="Ledger experiment name (optional)" value="${esc(x.ledger_name || "")}">
+        <button class="mini i-save" style="margin-top:6px">Save</button> <span class="why i-ok"></span></td></tr>`).join("") || `<tr><td colspan="5">No ideas yet.</td></tr>`);
+  }).catch(e => h("ideas-t", `<tr><td colspan="5" class="err">Could not load ideas (${esc(e.message)}).</td></tr>`));
+}
+document.getElementById("ideas-t").addEventListener("click", async e => {
+  const b = e.target.closest(".i-save"); if (!b) return;
+  const tr = b.closest("tr"), ok = tr.querySelector(".i-ok");
+  const body = {id: Number(tr.dataset.id), status: tr.querySelector(".i-st").value, reply: tr.querySelector(".i-rep").value, ledger_name: tr.querySelector(".i-led").value};
+  b.disabled = true;
+  try { const r = await fetch("/api/admin/ideas", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)}); ok.textContent = r.ok ? "saved" : `error ${r.status}`; }
+  catch (err) { ok.textContent = "error"; }
+  b.disabled = false;
+});
+function load() { loadSummary(); loadBook(); loadWallets(); loadResearch(); loadIdeas(); }
 load(); setInterval(load, 60000);
 </script>
 </body>

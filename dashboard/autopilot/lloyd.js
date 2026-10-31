@@ -146,6 +146,7 @@ window.Lloyd = (() => {
       <h3>${esc(x.title)}</h3>
       ${x.hypothesis ? `<p class="hyp"><b>The idea:</b> ${esc(x.hypothesis)}</p>` : ""}
       ${x.conclusion ? `<p class="concl"><b>${st === "adopted" ? "What Lloyd learned:" : "So far:"}</b> ${esc(x.conclusion)}</p>` : ""}
+      ${x.suggested_by ? `<p class="credit">Pitched by ${esc(x.suggested_by)}</p>` : ""}
       ${x.date ? `<time>${esc(x.date)}</time>` : ""}
     </article>`;
   }

@@ -156,16 +156,16 @@
    "efficacy": "Testing live in the lab."
   },
   {
-   "date": "2026-10-29",
+   "date": "2026-10-30",
    "name": "Smart-money breadth (not copy trading)",
-   "question": "Does the change in how many historically profitable wallets hold a token predict returns?",
-   "method": "Select wallets on months 1–3, test weekly rank on months 4–6; control = matched random portfolios",
-   "result": "Queued. Evidence: Nansen (ETH 2020–22, self-published, no costs) — weak",
-   "verdict": "queued",
+   "question": "When several wallets that have been making money buy the same token within an hour, does the token keep going up after we get in?",
+   "method": "107 wallets (Kolscan 86 + TYGR list 21), 30 days of buys. 'Good' measured only on the first half: how much tokens rose 30 min after the wallet bought (n>=12, mean>0, t>=1). Second half: trigger when k=2/3/4 distinct good wallets buy within 60 min; entry at trigger candle close +3%, 4% round-trip cost; controls = same trigger with non-good wallets and random single buys. experiments/good_wallets.py, ops 195.",
+   "result": "Running (ops 195).",
+   "verdict": "testing",
    "sleeve": "picks, established",
-   "priority": 7,
+   "priority": 1,
    "public_title": "Where the good wallets are moving",
-   "hypothesis": "Counting how many historically profitable wallets are entering a token beats copying any single one.",
+   "hypothesis": "One good wallet buying is noise. Several wallets with a proven record buying the same token in the same hour may be a real signal.",
    "efficacy": null
   },
   {
