@@ -148,3 +148,7 @@
 {"ts": 1793461600.165869, "kind": "buy", "mint": "BR862M2Qr9JhMXT3Jt5n1JrzREEHvreMWgQ2M3Qbpump", "wallet": "3P3Tr5HErnSSqmNrjGXBaACxQj3NmKfi3Efbu5FuuY7i", "name": "coreyape", "sol": 4.0015, "mcap_usd": 44255, "n": 1, "lat_s": 1.2}
 {"ts": 1793462098.922187, "kind": "buy", "mint": "HvitmAeh6TkToQonoiNwqWcrZsYdYiaSZHP7yMmspump", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 19.3515, "mcap_usd": 236059, "n": 1, "lat_s": 0.9}
 {"ts": 1793462098.922187, "kind": "trigger_big", "mint": "HvitmAeh6TkToQonoiNwqWcrZsYdYiaSZHP7yMmspump", "who": ["tvdj"], "sol": 19.3515, "mcap_usd": 236059, "lat_s": 0.9, "mode": "live", "skip": "shadow"}
+{"ts": 1793463229.0732713, "kind": "buy", "mint": "6a81PfhejwCM3bB4F3Rnbzk9ALNmg4YGeyjKd5Nxpump", "wallet": "3qFD7tnVLqQXvakXUec2jmvQb5D6Tvtbo62vFyfFvVax", "name": "bonk_guy", "sol": 25.0115, "mcap_usd": 152265, "n": 1, "lat_s": 2.1}
+{"ts": 1793463229.0732713, "kind": "trigger_big", "mint": "6a81PfhejwCM3bB4F3Rnbzk9ALNmg4YGeyjKd5Nxpump", "who": ["bonk_guy"], "sol": 25.0115, "mcap_usd": 152265, "lat_s": 2.1, "mode": "live", "skip": "shadow"}
+{"ts": 1793463245.659043, "kind": "buy", "mint": "586SDx5ujevCxf1bjXNCrLTi8kwDQnrx2CGksQt1pump", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 0.3163, "mcap_usd": 23880, "n": 1, "lat_s": 1.7}
+{"ts": 1793463284.178814, "kind": "buy", "mint": "2pSQXSwa1FMgAHjZc1oJByQhp8JFJDfqzoRGjPjwpump", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 0.8591, "mcap_usd": 72634, "n": 1, "lat_s": 1.2}
