@@ -1,25 +1,4 @@
 {
- "HxLrnVrbfwhSnuy3bhx4xu9mGjrPgNBvRcDXsVgppump": {
-  "ts": 1793459595.4496129,
-  "mint": "HxLrnVrbfwhSnuy3bhx4xu9mGjrPgNBvRcDXsVgppump",
-  "sym": "Sentinel",
-  "name": "Elder Scrolls VI",
-  "curve": "3w81HuxF3W9pu6DU4zqKtLqnjLwSqQDB2vP2Ddpf7QiB",
-  "tokens": 837400.747874,
-  "tokens0": 837400.747874,
-  "cost_sol": 0.027006342,
-  "entry_px": 3.2250200478759934e-08,
-  "ref_px": 2.983021809002141e-08,
-  "slip_pct": 8.11,
-  "age_at_entry_s": 52,
-  "mcap_sol_entry": 29.83,
-  "peak_px": 3.2250200478759934e-08,
-  "hit_rec": false,
-  "proceeds_sol": 0.0,
-  "sig": "5pD7Krrv3LcqWYSE9Hm5cs6W9NhcJK6ehyB3GY85hXt3tMvqBrZRLEeSVmj35fr2qmGFrnbXFXvxWXpXD4FXXqdB",
-  "latency_s": 2.2,
-  "last_px": 2.9878369930563875e-08
- },
  "8BZejMWSnb383FaB1fDMTeXRHYRjvpNSwdmfyUvBtT7B": {
   "ts": 1793460327.9036222,
   "mint": "8BZejMWSnb383FaB1fDMTeXRHYRjvpNSwdmfyUvBtT7B",
@@ -606,6 +585,6 @@
   "proceeds_sol": 0.0,
   "sig": "ENVDXWgAprmKzjPdHSH2PdbmbNMb3bhW8uvvMTXYMYhb6fmgzuC5kbH62o1yFyfd8Yf72y6MUHZQP6k6f2mVuXs",
   "latency_s": 2.2,
-  "last_px": 2.8138778759823163e-08
+  "last_px": 2.8042472444818458e-08
  }
 }
