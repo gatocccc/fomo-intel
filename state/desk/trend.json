@@ -1,10 +1,43 @@
 {
- "ts": 1793439276.0544124,
+ "ts": 1793439629.44266,
  "mode": "live",
- "signals": {},
+ "signals": {
+  "BTC": {
+   "signal": -0.7,
+   "vol": 0.28,
+   "parts": {
+    "mom10": -1.0,
+    "mom20": -1.0,
+    "mom30": -1.0,
+    "mom60": -1.0,
+    "mom90": 1.0,
+    "ema20": -1.0,
+    "ema50": -1.0,
+    "ema100": -1.0,
+    "don20": -1.0,
+    "don55": 0.0
+   }
+  },
+  "ETH": {
+   "signal": -0.8,
+   "vol": 0.355,
+   "parts": {
+    "mom10": -1.0,
+    "mom20": -1.0,
+    "mom30": -1.0,
+    "mom60": -1.0,
+    "mom90": 1.0,
+    "ema20": -1.0,
+    "ema50": -1.0,
+    "ema100": -1.0,
+    "don20": -1.0,
+    "don55": -1.0
+   }
+  }
+ },
  "px": {
-  "BTC": 77423.5,
-  "ETH": 2244.05
+  "BTC": 77422.5,
+  "ETH": 2243.65
  },
  "rules": {
   "enter": 0.5,
@@ -44,8 +77,8 @@
   "pubkey": "FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy",
   "reason": "majors_trend",
   "sig": "uvhxBQYK3AE5LXEsFDNryeNgrPEjTZ243D9auuD5sSkJXi1SJ8yaxybsBzbdKr9gjNHQE4XdmgFJioD2hHvGpi1",
-  "mark": 2244.05,
-  "ret_px": -0.0031,
+  "mark": 2243.65,
+  "ret_px": -0.0029,
   "pnl_usd_est": -0.05,
   "age_d": 0.91
  }
