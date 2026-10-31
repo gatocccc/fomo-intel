@@ -1,5 +1,5 @@
 {
- "now": 1793462697.2818406,
+ "now": 1793462995.1272156,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
@@ -7,10 +7,10 @@
  "days": 14,
  "day": 5,
  "equity_usd": 154.78,
- "equity_sol": 1.6151,
+ "equity_sol": 1.6138,
  "cash_sol": 0.0868,
  "positions_usd": 146.46,
- "sol_usd": 95.84,
+ "sol_usd": 95.91,
  "mult": 1.562,
  "halt": false,
  "pause": false,
@@ -35,7 +35,7 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.999906106190311,
+   "last_usd": 0.9998702802124435,
    "mult": 0.993,
    "value_usd": 146.46
   }
@@ -4649,6 +4649,10 @@
   [
    1793462569,
    154.77
+  ],
+  [
+   1793462910,
+   154.78
   ]
  ],
  "closed": [
@@ -6516,7 +6520,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793462343.472582,
+  "last_run": 1793462945.2156944,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -6531,7 +6535,7 @@
    "key": "Efectivo ocioso (#), pero SOL y BTC están debajo de su promedio de # días y solo # de # memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": 1.1,
-  "sol_vs_ma20": -0.0735
+  "sol_ch24h": 1.2,
+  "sol_vs_ma20": -0.0723
  }
 }
