@@ -1,16 +1,16 @@
 {
- "now": 1793406874.7826579,
+ "now": 1793407178.4852638,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.25,
- "equity_sol": 5.6307,
+ "equity_usd": 541.19,
+ "equity_sol": 5.6278,
  "cash_sol": 0.0826,
- "positions_usd": 533.32,
- "sol_usd": 96.12,
+ "positions_usd": 533.25,
+ "sol_usd": 96.16,
  "mult": 0.988,
  "halt": false,
  "pause": false,
@@ -32,7 +32,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9998256822213256,
+   "last_usd": 0.9998362918957708,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
@@ -43,11 +43,11 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2243.25,
+   "last_usd": 2245.65,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1786,
+   "sol_in": 0.1785,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -62,9 +62,9 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 0.985,
-   "value_usd": 16.92,
-   "pnl_usd": -0.25,
+   "mult": 0.983,
+   "value_usd": 16.88,
+   "pnl_usd": -0.29,
    "collateral_usd": 17.17,
    "side": "short"
   },
@@ -73,7 +73,7 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 96.1705,
+   "last_usd": 96.2945,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
@@ -92,14 +92,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 0.967,
-   "value_usd": 13.22,
-   "pnl_usd": -0.46,
+   "mult": 0.964,
+   "value_usd": 13.19,
+   "pnl_usd": -0.49,
    "collateral_usd": 13.68,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.71,
+ "perps_pnl_usd": -0.78,
  "equity": [
   [
    1793203600,
@@ -2824,6 +2824,10 @@
   [
    1793406784,
    541.3
+  ],
+  [
+   1793407087,
+   541.22
   ]
  ],
  "closed": [
