@@ -211,3 +211,5 @@
 {"ts": 1793478755.989412, "kind": "buy", "mint": "FosoqJJbtyTBuM21ZTwdBGDcc9f3mtc1tRQzg35qpump", "wallet": "CE44oKS3wpUerx8afyeii56u5oQjBLZknzm4Q2CYHUz9", "name": "ely", "sol": 2.0015, "mcap_usd": 7185, "n": 1, "lat_s": 1.0}
 {"ts": 1793479198.246213, "kind": "buy", "mint": "CsUuToUBCnJcsvExCuu3ACMHr7JuMcujQiEwQqmvpump", "wallet": "CE44oKS3wpUerx8afyeii56u5oQjBLZknzm4Q2CYHUz9", "name": "ely", "sol": 8.0016, "mcap_usd": 81376, "n": 1, "lat_s": 1.2}
 {"ts": 1793479198.246213, "kind": "trigger_big", "mint": "CsUuToUBCnJcsvExCuu3ACMHr7JuMcujQiEwQqmvpump", "who": ["ely"], "sol": 8.0016, "mcap_usd": 81376, "lat_s": 1.2, "mode": "live", "skip": "shadow"}
+{"ts": 1793480802.8421476, "kind": "buy", "mint": "8pjfN5Ayb4rucGpYE3tZWN6v3EysizjPx1v62zx1pump", "wallet": "3P3Tr5HErnSSqmNrjGXBaACxQj3NmKfi3Efbu5FuuY7i", "name": "coreyape", "sol": 15.0016, "mcap_usd": 178042, "n": 1, "lat_s": 1.8}
+{"ts": 1793480802.8421476, "kind": "trigger_big", "mint": "8pjfN5Ayb4rucGpYE3tZWN6v3EysizjPx1v62zx1pump", "who": ["coreyape"], "sol": 15.0016, "mcap_usd": 178042, "lat_s": 1.8, "mode": "live", "skip": "shadow"}
