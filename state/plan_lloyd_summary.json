@@ -1,16 +1,16 @@
 {
- "now": 1793430891.238138,
+ "now": 1793431188.797485,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.37,
- "equity_sol": 5.6552,
+ "equity_usd": 541.32,
+ "equity_sol": 5.6486,
  "cash_sol": 0.0826,
- "positions_usd": 533.47,
- "sol_usd": 95.73,
+ "positions_usd": 533.41,
+ "sol_usd": 95.83,
  "mult": 0.989,
  "halt": false,
  "pause": false,
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9998418145392985,
+   "last_usd": 0.9998719498167423,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 503.19
+   "value_usd": 503.2
   },
   {
    "mint": "perps:CET8XhBZEpDac7XRWnCyxWy4bCzH8DBU29thCJ5yaqM3",
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2242.05,
+   "last_usd": 2244.15,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1794,
+   "sol_in": 0.1792,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -62,9 +62,9 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 0.986,
-   "value_usd": 16.93,
-   "pnl_usd": -0.24,
+   "mult": 0.984,
+   "value_usd": 16.9,
+   "pnl_usd": -0.27,
    "collateral_usd": 17.17,
    "side": "short"
   },
@@ -73,11 +73,11 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 95.7365,
+   "last_usd": 95.8755,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1429,
+   "sol_in": 0.1427,
    "sol_out": 0.0,
    "stop": 0.1988,
    "trail": null,
@@ -92,14 +92,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 0.976,
-   "value_usd": 13.35,
-   "pnl_usd": -0.33,
+   "mult": 0.973,
+   "value_usd": 13.31,
+   "pnl_usd": -0.37,
    "collateral_usd": 13.68,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.57,
+ "perps_pnl_usd": -0.64,
  "equity": [
   [
    1793203600,
@@ -3128,6 +3128,10 @@
   [
    1793430593,
    541.35
+  ],
+  [
+   1793430933,
+   541.34
   ]
  ],
  "closed": [
