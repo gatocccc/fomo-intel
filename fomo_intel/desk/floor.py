@@ -314,7 +314,39 @@ class Floor:
             if not partial or q["tokens"] <= q["tokens0"] * 0.01:
                 self._close(mint, q, why)
 
+    def reclaim_rent(self, mint: str) -> float:
+        """Cierra las cuentas de token vacías de ese mint y recupera la renta (~0,002 SOL = 8% de un ticket de 0,025)."""
+        from solders.hash import Hash
+        from solders.instruction import AccountMeta, Instruction
+        from solders.message import Message
+        from solders.pubkey import Pubkey
+        from solders.transaction import Transaction
+        try:
+            res = self.rpc.call("getTokenAccountsByOwner", [self.pub, {"mint": mint}, {"encoding": "jsonParsed", "commitment": "confirmed"}]) or {}
+            ixs = []
+            owner = Pubkey.from_string(self.pub)
+            for acc in res.get("value", []):
+                amt = int(acc["account"]["data"]["parsed"]["info"]["tokenAmount"]["amount"])
+                if amt != 0:
+                    continue
+                prog = Pubkey.from_string(acc["account"]["owner"])
+                a = Pubkey.from_string(acc["pubkey"])
+                ixs.append(Instruction(prog, bytes([9]), [AccountMeta(a, False, True), AccountMeta(owner, False, True), AccountMeta(owner, True, False)]))
+            if not ixs:
+                return 0.0
+            bh = (self.rpc.call("getLatestBlockhash", [{"commitment": "confirmed"}]) or {})["value"]["blockhash"]
+            tx = Transaction([self.kp], Message(ixs, owner), Hash.from_string(bh))
+            sig = self.rpc.send_raw(base64.b64encode(bytes(tx)).decode())
+            ok = self.rpc.wait_confirmed(sig, timeout=60)
+            jl(LOG, {"ts": time.time(), "ev": "rent_reclaim", "mint": mint, "accounts": len(ixs), "sig": sig, "ok": bool(ok)})
+            return 0.00203928 * len(ixs) if ok else 0.0
+        except Exception as e:  # noqa: BLE001
+            jl(LOG, {"ts": time.time(), "ev": "rent_fail", "mint": mint, "err": str(e)[:200]})
+            return 0.0
+
     def _close(self, mint: str, q: dict, why: str) -> None:
+        if not why.endswith("_unsellable"):
+            q["proceeds_sol"] += self.reclaim_rent(mint)
         pnl = q["proceeds_sol"] - q["cost_sol"]
         row = {**{k: q.get(k) for k in ("ts", "mint", "sym", "name", "cost_sol", "proceeds_sol", "entry_px", "peak_px", "slip_pct",
                                         "age_at_entry_s", "mcap_sol_entry", "hit_rec", "latency_s")},
