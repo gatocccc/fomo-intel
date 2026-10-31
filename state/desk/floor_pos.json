@@ -208,5 +208,26 @@
   "sig": "5aJ6DWt352XvJskmXwQxSWiRCEX37jMpgBZKeEwCqqbzcbUYwXpY9rb3Znk37cWWu1KZ7C5Qk9qta6z2j2u6PipY",
   "latency_s": 2.2,
   "last_px": 2.8005596910083856e-08
+ },
+ "3efcPgXUPuzFg9aSqWx2GmuimHP9kdBHi3Dabf3spump": {
+  "ts": 1793465516.6758902,
+  "mint": "3efcPgXUPuzFg9aSqWx2GmuimHP9kdBHi3Dabf3spump",
+  "sym": "EARTH CAT",
+  "name": "EARTH CAT",
+  "curve": "DckJZF1Kcygq5Sry6ozsWkgovZ96dnLTZfTnhU7qBj37",
+  "tokens": 696820.20337,
+  "tokens0": 696820.20337,
+  "cost_sol": 0.027006342,
+  "entry_px": 3.875654274860351e-08,
+  "ref_px": 3.5861041507731284e-08,
+  "slip_pct": 8.07,
+  "age_at_entry_s": 53,
+  "mcap_sol_entry": 35.86,
+  "peak_px": 3.875654274860351e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "46PNF6VHe8VKRpDjBjJvTkAB97sUrpTbxr3iwNHcYPBwWW7zVxRU8szRNedd16ApRxPdgBz8yB7peMd3jN81iQMv",
+  "latency_s": 2.2,
+  "last_px": 3.3492254040527126e-08
  }
 }
