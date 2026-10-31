@@ -586,5 +586,25 @@
   "sig": "2VrbU6dqnrRGJt4hdokrudzgUSo8oYV43ySL8daVHCfshpAGPCcpqCdpSSrZi982iweXS1RqJQNp6SVboomcmhQb",
   "latency_s": 2.3,
   "last_px": 2.800415390442578e-08
+ },
+ "DdG9vXYDR36RkArYxckaL2UVeWASPHqE8HsfScNUpump": {
+  "ts": 1793479496.688892,
+  "mint": "DdG9vXYDR36RkArYxckaL2UVeWASPHqE8HsfScNUpump",
+  "sym": "Atlas",
+  "name": "AtlasEarth",
+  "curve": "3yiXFTikPxkHaQeE8ZCvp6XW65aSgAZDazfjUK7Z1N16",
+  "tokens": 870357.878051,
+  "tokens0": 870357.878051,
+  "cost_sol": 0.027006342,
+  "entry_px": 3.102900850449649e-08,
+  "ref_px": 2.8700210544222894e-08,
+  "slip_pct": 8.11,
+  "age_at_entry_s": 51,
+  "mcap_sol_entry": 28.7,
+  "peak_px": 3.102900850449649e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "5Rv3bmNkJ8F3brxFhQPbwLWvkYq1vnqieg5MakFPHAt1ajH6USZF4w9zXZEXQTzyxBVfpbBGHEXUjPeJ4tUy7B5d",
+  "latency_s": 2.3
  }
 }
