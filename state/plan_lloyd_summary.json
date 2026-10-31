@@ -1,16 +1,16 @@
 {
- "now": 1793450988.2029274,
+ "now": 1793451285.8789682,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.22,
- "equity_sol": 5.6466,
+ "equity_usd": 541.17,
+ "equity_sol": 5.6391,
  "cash_sol": 0.0826,
- "positions_usd": 533.31,
- "sol_usd": 95.85,
+ "positions_usd": 533.24,
+ "sol_usd": 95.97,
  "mult": 0.988,
  "halt": false,
  "pause": false,
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9998842327116914,
+   "last_usd": 0.999835246469309,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 503.21
+   "value_usd": 503.18
   },
   {
    "mint": "perps:CET8XhBZEpDac7XRWnCyxWy4bCzH8DBU29thCJ5yaqM3",
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2250.35,
+   "last_usd": 2250.65,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1791,
+   "sol_in": 0.1789,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -63,8 +63,8 @@
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
    "mult": 0.979,
-   "value_usd": 16.81,
-   "pnl_usd": -0.36,
+   "value_usd": 16.8,
+   "pnl_usd": -0.37,
    "collateral_usd": 17.17,
    "side": "short"
   },
@@ -73,11 +73,11 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 95.9205,
+   "last_usd": 96.0585,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1427,
+   "sol_in": 0.1425,
    "sol_out": 0.0,
    "stop": 0.1988,
    "trail": null,
@@ -92,14 +92,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 0.972,
-   "value_usd": 13.29,
-   "pnl_usd": -0.39,
+   "mult": 0.969,
+   "value_usd": 13.26,
+   "pnl_usd": -0.42,
    "collateral_usd": 13.68,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.75,
+ "perps_pnl_usd": -0.79,
  "equity": [
   [
    1793203600,
@@ -3368,6 +3368,10 @@
   [
    1793450903,
    541.23
+  ],
+  [
+   1793451243,
+   541.15
   ]
  ],
  "closed": [
@@ -4156,6 +4160,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793451245.2439916,
+   "title": "Morning review: no orders, defensive regime confirmed",
+   "text": "Self-review: the book is $541.3 (0.99x of $547.6). Nothing closed in the last 3 hours. Cash is 93% in USDC; the two 55/20 breakout shorts (ETH 2x, SOL 2x) are about flat and keep their exits at the 20-day highs. The brain stayed defensive (SOL $96, 7% below its 20-day average; BTC 4.7% below; 1 of 18 large memecoins above its average) and bought nothing, which is right.\n\nScan: 8 tokens pass the numeric filters and 4 passed the common-funder check, but none has a verifiable reason (two are post-pump euphoria, one collapsed 99%), so nothing goes to picks or established. User wallets checked: every funded wallet copies both shorts, except one wallet under $27 whose size is below the $10 minimum per perp.\n\nDevil's advocate: a fast rebound would hurt the shorts and leave the cash behind; each short risks about 1% of the book and the cash is protected from SOL's decline.",
+   "kind": "decisión",
+   "id": "lloyd-2026-10-31-05"
+  },
   {
    "ts": 1793449649.1698802,
    "title": "Automatic brain: status",
@@ -5548,13 +5559,6 @@
    "text": "[Picks] Idle cash (91%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves.",
    "kind": "decisión",
    "id": "auto-lloyd-note-20261029-1657"
-  },
-  {
-   "ts": 1793292429.6474454,
-   "title": "Automatic brain: status",
-   "text": "[Picks] Idle cash (91%), but SOL and BTC are below their 20-day averages and only 3 of 21 large memecoins are above theirs: bear market: no new memecoins until it improves.",
-   "kind": "decisión",
-   "id": "auto-lloyd-note-20261029-1647"
   }
  ],
  "wins": 1,
