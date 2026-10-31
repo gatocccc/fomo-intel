@@ -2,6 +2,18 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793461385.0725696,
+   "src": "cointelegraph",
+   "title": "Binance says 90% of stolen assets replenished, targets Sunday withdrawals",
+   "sev": 2,
+   "dir": 1,
+   "types": [
+    "exchange",
+    "exchange_risk",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793460785.306582,
    "src": "cointelegraph",
    "title": "Bitcoin held up better than expected after Binance hack, Strive CEO says",
@@ -59,21 +71,21 @@
    ]
   }
  ],
- "ts": 1793461145.919625,
+ "ts": 1793461476.0316563,
  "bear_score": 6,
- "bull_score": 4,
+ "bull_score": 6,
  "price": {
   "SOL": {
-   "px": 95.992,
-   "ch15m": 0.001356116083536918,
-   "ch1h": 0.0030826462689530487,
-   "ch4h": 0.0033552487169570266
+   "px": 95.868,
+   "ch15m": -0.0006671392236168305,
+   "ch1h": 0.0015984955336152407,
+   "ch4h": 0.0005322646294498856
   },
   "BTC": {
-   "px": 77538.0,
-   "ch15m": 0.0015112178866198978,
-   "ch1h": 0.0006065220477216027,
-   "ch4h": 0.0008777591325674905
+   "px": 77565.0,
+   "ch15m": 0.00147189836154471,
+   "ch1h": 0.0008257957961832485,
+   "ch4h": 0.00010314994133353572
   }
  },
  "mode": "live",

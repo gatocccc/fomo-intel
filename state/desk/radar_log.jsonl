@@ -1,4 +1,3 @@
-{"ts": 1793349813.2543666, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.079, "shock_px": 97.686, "ch1h": -0.001152370075418574, "ch4h": -0.0015427495911713995}
 {"ts": 1793349858.4932215, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.089, "shock_px": 97.686, "ch1h": -0.0010494798901132807, "ch4h": -0.00143989961842661}
 {"ts": 1793349858.493417, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.089, "shock_px": 97.686, "ch1h": -0.0010494798901132807, "ch4h": -0.00143989961842661}
 {"ts": 1793349933.1437585, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.041, "shock_px": 97.686, "ch1h": -0.001152820808415722, "ch4h": -0.0028155988285464284}
@@ -198,3 +197,4 @@
 {"ts": 1793458925.3259735, "kind": "event", "src": "decrypt", "title": "Binance Hack: Everything You Need to Know About the Biggest Crypto Heist in History", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793459180.1999915, "kind": "event", "src": "tg:wublockchainenglish", "title": "Binance: 90% of Stolen Assets Replenished; Withdrawals Set to Resume on Nov. 1 Binance announced that it has now replenished 90% of the stolen asset shortfall. The top ten major tokens—including BTC, ", "cls": {"types": ["exchange", "exchange_risk", "hack"], "dir": 1, "sev": 2, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793460785.306582, "kind": "event", "src": "cointelegraph", "title": "Bitcoin held up better than expected after Binance hack, Strive CEO says", "cls": {"types": ["exchange", "hack"], "dir": 1, "sev": 2, "by": "kw+llm", "confirmed": false}}
+{"ts": 1793461385.0725696, "kind": "event", "src": "cointelegraph", "title": "Binance says 90% of stolen assets replenished, targets Sunday withdrawals", "cls": {"types": ["exchange", "exchange_risk", "hack"], "dir": 1, "sev": 2, "by": "kw+llm", "confirmed": true}}

@@ -1,16 +1,16 @@
 {
- "now": 1793461165.7069082,
+ "now": 1793461463.548958,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 5,
- "equity_usd": 154.78,
- "equity_sol": 1.6141,
+ "equity_usd": 154.77,
+ "equity_sol": 1.6154,
  "cash_sol": 0.0868,
  "positions_usd": 146.46,
- "sol_usd": 95.9,
+ "sol_usd": 95.81,
  "mult": 1.562,
  "halt": false,
  "pause": false,
@@ -35,7 +35,7 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9998815597308894,
+   "last_usd": 0.999872007766289,
    "mult": 0.993,
    "value_usd": 146.46
   }
@@ -4629,6 +4629,10 @@
   [
    1793460868,
    154.77
+  ],
+  [
+   1793461208,
+   154.78
   ]
  ],
  "closed": [
@@ -5088,6 +5092,13 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793461264.9566662,
+   "title": "Sesión de las 12:39 (15:39 UTC): sin órdenes, mercado plano",
+   "text": "Autocrítica: en las últimas 3 h la mesa no se movió (US$154,8, 1,56x, 100% USDC) y no cerró nada. Ninguna regla hizo daño: el cerebro no compró (bajista lento: SOL y BTC bajo su promedio de 20 días, 2/18 memes arriba) y el radar no abrió cortos aunque hubo titulares fuertes del hack de Binance (\"el robo más grande de la historia\"), porque el precio no confirmó (SOL +0,3% y BTC 0% en 4 h). Eso es lo correcto: los titulares eran resúmenes de un hecho viejo y la noticia nueva es positiva (Binance repuso 90% de lo robado y reanuda retiros el 1/11). Sin cambios de código: no hay dato que lo justifique.\n\nBúsqueda de oportunidades: sin catalizadores nuevos con token verificable de Solana. La reapertura de retiros de Binance (1/11) es un evento con fecha pero de doble filo (puede traer salida de fondos o alivio); lo vigila el radar con confirmación de precio, no se apuesta a ciegas.\n\nAbogado del diablo de quedarse quieto: el objetivo x10 queda lejos (US$155 vs. US$991). Pero comprar sin motivo ya costó US$78 (0 de 14); perseguir el objetivo no es razón para subir el riesgo.",
+   "kind": "decisión",
+   "id": "2026-10-31-06"
+  },
   {
    "ts": 1793460544.970728,
    "title": "Cerebro automático: estado",
@@ -6480,13 +6491,6 @@
    "text": "GTA6: llegó a 5.61x de pico; subo el stop a 3.93x (antes 3.61x).\n\nEfectivo ocioso (25%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
    "kind": "decisión",
    "id": "auto-mesa-20261029-1447"
-  },
-  {
-   "ts": 1793284627.480569,
-   "title": "Ejecución",
-   "text": "set 4kjruq: ajustó GTA6: stop=-2.61",
-   "kind": "ejecución",
-   "id": "auto-mesa-20261029-1437"
   }
  ],
  "wins": 2,
