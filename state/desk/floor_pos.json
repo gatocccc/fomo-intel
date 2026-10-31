@@ -375,6 +375,27 @@
   "proceeds_sol": 0.0,
   "sig": "5mv6jR6cVLBsqWEV9V3GPhTh53vhh3EuETbvF1DeupAjA44KhUGYEe1y48Xa1Wbgzby1FAgdA4c15CLokiDM5fVw",
   "latency_s": 2.2,
-  "last_px": 2.8031996685559832e-08
+  "last_px": 2.80122313981905e-08
+ },
+ "AbRvvw5L6mChxVD8c9n9nHctowoV1vPrTMWTdegSpump": {
+  "ts": 1793471425.6858184,
+  "mint": "AbRvvw5L6mChxVD8c9n9nHctowoV1vPrTMWTdegSpump",
+  "sym": "Animalween",
+  "name": "Animaloween",
+  "curve": "BEex5J67PXg3WztXQAdmXrTAnfHQtUMpqVmvekEAgLiq",
+  "tokens": 891660.707415,
+  "tokens0": 891660.707415,
+  "cost_sol": 0.027006339,
+  "entry_px": 3.028768541152124e-08,
+  "ref_px": 2.8014248387538218e-08,
+  "slip_pct": 8.12,
+  "age_at_entry_s": 54,
+  "mcap_sol_entry": 28.01,
+  "peak_px": 3.028768541152124e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "6HLzZE1wEaDTgZyYEzSw4UWq6vWaWU2owaQx4LMA4qcnTzBuHbgtaaw9GM2bJtmem3wZRV64jjk3gjfV69mx2Kx",
+  "latency_s": 2.2,
+  "last_px": 2.806091214899828e-08
  }
 }
