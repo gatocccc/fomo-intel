@@ -1,14 +1,14 @@
 {
- "ts": 1793478000.7325647,
+ "ts": 1793478275.1826162,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.30857,
- "open_value_sol": 0.66158,
+ "equity_sol": 2.30959,
+ "open_value_sol": 0.63963,
  "positions": [
   {
    "sym": "PUTINU",
    "mint": "v48VfAZHUDU28KHLzpXZHm9tM5QQjdimN79CQmVpump",
-   "mult": 0.925,
+   "mult": 0.924,
    "peak_mult": 1.0,
    "ts": 1793477979.0949848,
    "hit_rec": false
@@ -220,38 +220,46 @@
    "peak_mult": 1.0,
    "ts": 1793458076.9563823,
    "hit_rec": false
-  },
+  }
+ ],
+ "recent_closed": [
   {
    "sym": "PEANUT",
    "mint": "CvtdJdogQ5SSGdHGNZ36UtPnwTQUvTNyWpo8HV46pump",
-   "mult": 0.736,
+   "mult": 0.771,
    "peak_mult": 1.0,
-   "ts": 1793456571.8608422,
-   "hit_rec": false
+   "pnl_sol": -0.006815,
+   "why": "6h",
+   "closed_ts": 1793478184.4016092,
+   "hold_min": 360
   }
  ],
- "recent_closed": [],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
- "sol_balance": 1.646996202,
+ "sol_balance": 1.669960705,
  "sol_usd": 95.72549978313563,
  "ticket_sol": 0.025,
  "ratio": 1.3,
- "open": 28,
- "open_cost_sol": 0.7443,
- "closed": 0,
- "closed_pnl_sol": 0,
- "closed_cost_sol": 0,
- "closed_roi": null,
+ "open": 27,
+ "open_cost_sol": 0.7145,
+ "closed": 1,
+ "closed_pnl_sol": -0.0068,
+ "closed_cost_sol": 0.0298,
+ "closed_roi": -0.2288,
  "wins_3x": 0,
- "best": null,
+ "best": {
+  "sym": "PEANUT",
+  "mint": "CvtdJdogQ5SSGdHGNZ36UtPnwTQUvTNyWpo8HV46pump",
+  "mult": 0.771,
+  "pnl_sol": -0.006815
+ },
  "bought_today": 28,
  "stats": {
-  "seen": 2147,
-  "evaluated": 2134,
-  "eligible": 1311,
+  "seen": 2185,
+  "evaluated": 2179,
+  "eligible": 1327,
   "bought": 12,
   "buy_fail": 0,
-  "closed": 0,
+  "closed": 1,
   "ws_reconnects": 0
  }
 }
