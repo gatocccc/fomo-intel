@@ -460,5 +460,26 @@
   "sig": "2NMnzFkjedc5u62GNXsNRn8cm24yPZDV8cw3LG5DMro4dmP2xscXz8of4vH31ZVFfttaYZ8vGijMjxoABqcZnPTX",
   "latency_s": 2.3,
   "last_px": 2.8524089441737366e-08
+ },
+ "9UQBgwRVyFWBwsQZYzMsoDhx4e7EG3yMNXrMpNDMpump": {
+  "ts": 1793474345.721103,
+  "mint": "9UQBgwRVyFWBwsQZYzMsoDhx4e7EG3yMNXrMpNDMpump",
+  "sym": "FOMO IS LIVE",
+  "name": "FOMO LIVE ON TIKTOK????",
+  "curve": "HmTXVcRRA2ee7QxD4VLrXqw2sh7L7WFYWc6C5wawtkPr",
+  "tokens": 893363.349531,
+  "tokens0": 893363.349531,
+  "cost_sol": 0.027006342,
+  "entry_px": 3.0229964117262985e-08,
+  "ref_px": 2.7960834426388913e-08,
+  "slip_pct": 8.12,
+  "age_at_entry_s": 53,
+  "mcap_sol_entry": 27.96,
+  "peak_px": 3.0229964117262985e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "qeRmQ2343C4kXnYSJaPZgU9GYBD3D8FyoewyNCrBjkzTuTSxkh7bEShi3xfgUzkwe88WPFi2XLWrmZab1z91y5S",
+  "latency_s": 2.3,
+  "last_px": 2.800745369984963e-08
  }
 }
