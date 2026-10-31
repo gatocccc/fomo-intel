@@ -1,9 +1,9 @@
 {
- "ts": 1793481900.4704108,
+ "ts": 1793482175.1504617,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.30096,
- "open_value_sol": 0.68844,
+ "equity_sol": 2.30196,
+ "open_value_sol": 0.66358,
  "positions": [
   {
    "sym": "ANSEM",
@@ -228,17 +228,19 @@
    "peak_mult": 1.0,
    "ts": 1793461069.5643077,
    "hit_rec": false
-  },
-  {
-   "sym": "TS",
-   "mint": "8BZejMWSnb383FaB1fDMTeXRHYRjvpNSwdmfyUvBtT7B",
-   "mult": 0.92,
-   "peak_mult": 1.0,
-   "ts": 1793460327.9036222,
-   "hit_rec": false
   }
  ],
  "recent_closed": [
+  {
+   "sym": "TS",
+   "mint": "8BZejMWSnb383FaB1fDMTeXRHYRjvpNSwdmfyUvBtT7B",
+   "mult": 0.958,
+   "peak_mult": 1.0,
+   "pnl_sol": -0.001146,
+   "why": "6h",
+   "closed_ts": 1793481933.043283,
+   "hold_min": 360
+  },
   {
    "sym": "Sentinel",
    "mint": "HxLrnVrbfwhSnuy3bhx4xu9mGjrPgNBvRcDXsVgppump",
@@ -281,16 +283,16 @@
   }
  ],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
- "sol_balance": 1.6125239,
- "sol_usd": 95.57595680240453,
+ "sol_balance": 1.638384239,
+ "sol_usd": 95.58452344306318,
  "ticket_sol": 0.025,
  "ratio": 1.3,
- "open": 29,
- "open_cost_sol": 0.7686,
- "closed": 4,
- "closed_pnl_sol": -0.0102,
- "closed_cost_sol": 0.1108,
- "closed_roi": -0.0916,
+ "open": 28,
+ "open_cost_sol": 0.7416,
+ "closed": 5,
+ "closed_pnl_sol": -0.0113,
+ "closed_cost_sol": 0.1378,
+ "closed_roi": -0.082,
  "wins_3x": 0,
  "best": {
   "sym": "Sentinel",
@@ -300,12 +302,12 @@
  },
  "bought_today": 33,
  "stats": {
-  "seen": 434,
-  "evaluated": 424,
-  "eligible": 199,
+  "seen": 475,
+  "evaluated": 468,
+  "eligible": 221,
   "bought": 4,
   "buy_fail": 0,
-  "closed": 3,
+  "closed": 4,
   "ws_reconnects": 0
  }
 }
