@@ -1,5 +1,5 @@
 {
- "now": 1793475285.5452344,
+ "now": 1793475583.2332346,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
@@ -7,10 +7,10 @@
  "days": 14,
  "day": 5,
  "equity_usd": 154.48,
- "equity_sol": 1.6123,
+ "equity_sol": 1.6127,
  "cash_sol": 0.0833,
  "positions_usd": 146.5,
- "sol_usd": 95.82,
+ "sol_usd": 95.79,
  "mult": 1.559,
  "halt": false,
  "pause": false,
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9999683728567388,
+   "last_usd": 0.9999103128759873,
    "mult": 0.993,
-   "value_usd": 126.47
+   "value_usd": 126.46
   },
   {
    "mint": "perps:AFWv7oecPMXmbXAWTJoDcL6MyXzoXAu3hrrYuNHnrZjp",
@@ -74,7 +74,7 @@
    "symbol": "SOL short 1.7x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 96.04,
-   "last_usd": 95.9305,
+   "last_usd": 95.8615,
    "peak_usd": 96.04,
    "tokens": 0,
    "tokens_initial": 0,
@@ -93,14 +93,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 1.002,
-   "value_usd": 10.02,
-   "pnl_usd": 0.02,
+   "mult": 1.003,
+   "value_usd": 10.03,
+   "pnl_usd": 0.03,
    "collateral_usd": 10.0,
    "side": "short"
   }
  ],
- "perps_pnl_usd": 0.03,
+ "perps_pnl_usd": 0.04,
  "equity": [
   [
    1793113266,
@@ -4856,6 +4856,10 @@
   ],
   [
    1793475030,
+   154.48
+  ],
+  [
+   1793475370,
    154.48
   ]
  ],
