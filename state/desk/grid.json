@@ -1,0 +1,26 @@
+{
+ "ts": 1793420047.2220705,
+ "bar": 1793419980,
+ "px": 77214.18,
+ "center": 77344.9,
+ "dev": -0.00169,
+ "mode": "live",
+ "rules": {
+  "center_n": 120,
+  "step": 0.008,
+  "kill": 0.03,
+  "estop": 0.12,
+  "coll": 20.0,
+  "lev": 2.0,
+  "max_opens_day": 12,
+  "halt_losses": 3
+ },
+ "positions": {},
+ "opens_day": [],
+ "loss_streak": 0,
+ "wait_reset": false,
+ "closed": 0,
+ "pnl_usd": 0,
+ "wins": 0,
+ "unrealized_usd": 0
+}

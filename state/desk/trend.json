@@ -1,0 +1,85 @@
+{
+ "ts": 1793420046.0631719,
+ "mode": "live",
+ "signals": {
+  "BTC": {
+   "signal": -0.7,
+   "vol": 0.28,
+   "parts": {
+    "mom10": -1.0,
+    "mom20": -1.0,
+    "mom30": -1.0,
+    "mom60": -1.0,
+    "mom90": 1.0,
+    "ema20": -1.0,
+    "ema50": -1.0,
+    "ema100": -1.0,
+    "don20": -1.0,
+    "don55": 0.0
+   }
+  },
+  "ETH": {
+   "signal": -0.8,
+   "vol": 0.355,
+   "parts": {
+    "mom10": -1.0,
+    "mom20": -1.0,
+    "mom30": -1.0,
+    "mom60": -1.0,
+    "mom90": 1.0,
+    "ema20": -1.0,
+    "ema50": -1.0,
+    "ema100": -1.0,
+    "don20": -1.0,
+    "don55": -1.0
+   }
+  }
+ },
+ "px": {
+  "BTC": 77176.5,
+  "ETH": 2237.55
+ },
+ "rules": {
+  "enter": 0.5,
+  "exit": 0.2,
+  "vt": 0.6,
+  "lev_min": 1.0,
+  "lev_max": 2.0,
+  "stop": 0.08,
+  "max_d": 14,
+  "coll": 10.0
+ },
+ "position": {
+  "ts": 1793360616.3171363,
+  "leg": "lab",
+  "plan": "lab",
+  "symbol": "ETH",
+  "side": "short",
+  "entry": 2237.16,
+  "collateral_usd": 10.0,
+  "lev": 1.69,
+  "size_usd": 16.9,
+  "mode": "live",
+  "signal": -0.8,
+  "vol": 0.356,
+  "parts": {
+   "mom10": -1.0,
+   "mom20": -1.0,
+   "mom30": -1.0,
+   "mom60": -1.0,
+   "mom90": 1.0,
+   "ema20": -1.0,
+   "ema50": -1.0,
+   "ema100": -1.0,
+   "don20": -1.0,
+   "don55": -1.0
+  },
+  "pubkey": "FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy",
+  "reason": "majors_trend",
+  "sig": "uvhxBQYK3AE5LXEsFDNryeNgrPEjTZ243D9auuD5sSkJXi1SJ8yaxybsBzbdKr9gjNHQE4XdmgFJioD2hHvGpi1",
+  "mark": 2237.55,
+  "ret_px": -0.0002,
+  "pnl_usd_est": -0.0,
+  "age_d": 0.69
+ }
+}
