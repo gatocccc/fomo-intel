@@ -1,14 +1,14 @@
 {
- "ts": 1793472897.646583,
+ "ts": 1793473199.6067758,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.32446,
- "open_value_sol": 0.49729,
+ "equity_sol": 2.32431,
+ "open_value_sol": 0.49715,
  "positions": [
   {
    "sym": "PEPU",
    "mint": "5uPWFX2VimoDBqfig1UcjBk4Wqeg1Ai1VhnSssNhpump",
-   "mult": 0.926,
+   "mult": 0.921,
    "peak_mult": 1.0,
    "ts": 1793472891.840179,
    "hit_rec": false
@@ -177,7 +177,7 @@
  "recent_closed": [],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
  "sol_balance": 1.827162519,
- "sol_usd": 95.92108624011888,
+ "sol_usd": 95.87712120943074,
  "ticket_sol": 0.025,
  "ratio": 1.3,
  "open": 21,
@@ -190,9 +190,9 @@
  "best": null,
  "bought_today": 21,
  "stats": {
-  "seen": 653,
-  "evaluated": 641,
-  "eligible": 337,
+  "seen": 697,
+  "evaluated": 682,
+  "eligible": 354,
   "bought": 5,
   "buy_fail": 0,
   "closed": 0,
