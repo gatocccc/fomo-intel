@@ -1,7 +1,3 @@
-Oct 31 01:46:23 simplai-prod python3[2519932]: 2026-10-31 01:46:23,365 INFO live.helius: HELIUS 4vw54B buy 6FwSP9iW 2.5115 SOL @ 6.172e-08 (lat 1.0s)
-Oct 31 01:46:43 simplai-prod python3[2519932]: 2026-10-31 01:46:43,336 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… Djdm88bG 5122733452.119 SOL
-Oct 31 01:46:48 simplai-prod python3[2519932]: 2026-10-31 01:46:48,993 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… CBQGJchG 0.000 SOL
-Oct 31 01:46:48 simplai-prod python3[2519932]: 2026-10-31 01:46:48,993 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 3bCkqSFZ 1282025407.215 SOL
 Oct 31 01:46:48 simplai-prod python3[2519932]: 2026-10-31 01:46:48,993 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 8opJAz2o 0.000 SOL
 Oct 31 01:47:28 simplai-prod python3[2519932]: 2026-10-31 01:47:28,910 INFO live.helius: HELIUS 4vw54B buy 6FwSP9iW 0.2600 SOL @ 7.053e-08 (lat 0.9s)
 Oct 31 01:47:31 simplai-prod python3[2519932]: 2026-10-31 01:47:31,871 INFO live: latido: stream=True tokens_vistos=1875 seguidos=52 candidatos=0 abiertas=0 cerradas=1 st_requests=53 SOL=$97
@@ -298,3 +294,7 @@ Oct 31 10:17:35 simplai-prod python3[2519932]: 2026-10-31 10:17:35,817 INFO live
 Oct 31 10:17:35 simplai-prod python3[2519932]: 2026-10-31 10:17:35,817 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… B5EwJVDu 15587334628.292 SOL
 Oct 31 10:18:31 simplai-prod python3[2519932]: 2026-10-31 10:18:31,649 INFO live: latido: stream=True tokens_vistos=4480 seguidos=20 candidatos=0 abiertas=0 cerradas=1 st_requests=153 SOL=$95
 Oct 31 10:19:06 simplai-prod python3[2519932]: 2026-10-31 10:19:06,880 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 3DsUvsy3 0.060 SOL
+Oct 31 10:20:15 simplai-prod python3[2519932]: 2026-10-31 10:20:15,877 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 65wYoHnA 0.009 SOL
+Oct 31 10:21:59 simplai-prod python3[2519932]: 2026-10-31 10:21:59,060 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 65wYoHnA 0.006 SOL
+Oct 31 10:22:45 simplai-prod python3[2519932]: 2026-10-31 10:22:45,704 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 65wYoHnA 0.002 SOL
+Oct 31 10:23:32 simplai-prod python3[2519932]: 2026-10-31 10:23:32,027 INFO live: latido: stream=True tokens_vistos=4497 seguidos=25 candidatos=0 abiertas=0 cerradas=1 st_requests=154 SOL=$96
