@@ -1,14 +1,14 @@
 {
- "ts": 1793467201.2860074,
+ "ts": 1793467503.3051462,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.35642,
- "open_value_sol": 0.313,
+ "equity_sol": 2.34692,
+ "open_value_sol": 0.3035,
  "positions": [
   {
    "sym": "CROWLY",
    "mint": "2yRB3S9BySz6zKoSUPh5tgHzK2WMFQ34PLjDAG4hpump",
-   "mult": 0.921,
+   "mult": 0.916,
    "peak_mult": 1.0,
    "ts": 1793466972.533799,
    "hit_rec": false
@@ -24,7 +24,7 @@
   {
    "sym": "EARTH CAT",
    "mint": "3efcPgXUPuzFg9aSqWx2GmuimHP9kdBHi3Dabf3spump",
-   "mult": 1.069,
+   "mult": 0.722,
    "peak_mult": 1.44,
    "ts": 1793465516.6758902,
    "hit_rec": false
@@ -113,7 +113,7 @@
  "recent_closed": [],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
  "sol_balance": 2.043412441,
- "sol_usd": 95.96017013310463,
+ "sol_usd": 95.86541135157448,
  "ticket_sol": 0.025,
  "ratio": 1.3,
  "open": 13,
@@ -126,9 +126,9 @@
  "best": null,
  "bought_today": 13,
  "stats": {
-  "seen": 1495,
-  "evaluated": 1482,
-  "eligible": 627,
+  "seen": 1545,
+  "evaluated": 1536,
+  "eligible": 650,
   "bought": 11,
   "buy_fail": 1,
   "closed": 0,
