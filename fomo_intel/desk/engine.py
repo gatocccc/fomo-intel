@@ -228,6 +228,18 @@ class Desk:
         self.pos.pop(mint, None); self.save()
         return T(f"dio de baja {p['symbol']} a valor 0 ({why})", f"wrote off {p['symbol']} at zero ({why})")
 
+    def _pending_decisions(self) -> bool:
+        files = list(DEC.glob("*.json")) if DEC.exists() else []
+        files += list((ST_DIR / "auto").glob("*.json")) if (ST_DIR / "auto").exists() else []
+        for fp in files:
+            if fp.stem not in self.processed:
+                try:
+                    if (json.load(open(fp)).get("id") or fp.stem) not in self.processed:
+                        return True
+                except Exception:  # noqa: BLE001
+                    continue
+        return False
+
     def apply_decisions(self):
         # decisiones de Claude (repo) y del cerebro automático (state/<mesa>/auto, ver brain.py)
         files = sorted(DEC.glob("*.json")) if DEC.exists() else []
@@ -456,7 +468,14 @@ class Desk:
                     self.publish(eq, pos_usd)
             except Exception as e:  # noqa: BLE001
                 log.exception("error en el ciclo: %s", e)
-            time.sleep(15)
+            # 31/10: entre ciclos, mirar cada 2 s si llegó una decisión nueva (el gatillo de KOLs escribe en auto/ y cada segundo cuenta)
+            for _ in range(7):
+                time.sleep(2)
+                try:
+                    if self._pending_decisions():
+                        self.apply_decisions()
+                except Exception as e:  # noqa: BLE001
+                    log.exception("decisiones rápidas: %s", e)
 
 
 def main():

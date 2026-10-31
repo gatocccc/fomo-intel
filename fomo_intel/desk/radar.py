@@ -719,7 +719,7 @@ class Radar:
         try:   # 30/10: consenso de KOLs en el lab (fomo_intel/desk/kols.py; lista en desk/kols.json)
             if not hasattr(self, "kols"):
                 from .kols import KolConsensus
-                self.kols = KolConsensus()
+                self.kols = KolConsensus(extra=Path("state/desk/kols_extra.json"))   # 31/10: + perfiles con audiencia (ops 206)
             self.kols.step()
         except Exception as e:  # noqa: BLE001
             log.exception("kols: %s", e)
