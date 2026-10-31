@@ -1,16 +1,16 @@
 {
- "now": 1793438975.3075747,
+ "now": 1793439272.9240873,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.43,
- "equity_sol": 5.6742,
+ "equity_usd": 541.41,
+ "equity_sol": 5.6744,
  "cash_sol": 0.0826,
- "positions_usd": 533.55,
- "sol_usd": 95.42,
+ "positions_usd": 533.53,
+ "sol_usd": 95.41,
  "mult": 0.989,
  "halt": false,
  "pause": false,
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9998921452785899,
+   "last_usd": 0.9998674667544608,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 503.21
+   "value_usd": 503.2
   },
   {
    "mint": "perps:CET8XhBZEpDac7XRWnCyxWy4bCzH8DBU29thCJ5yaqM3",
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2243.35,
+   "last_usd": 2244.05,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1799,
+   "sol_in": 0.18,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -62,9 +62,9 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 0.985,
-   "value_usd": 16.91,
-   "pnl_usd": -0.26,
+   "mult": 0.984,
+   "value_usd": 16.9,
+   "pnl_usd": -0.27,
    "collateral_usd": 17.17,
    "side": "short"
   },
@@ -73,7 +73,7 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 95.4465,
+   "last_usd": 95.4455,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
@@ -99,7 +99,7 @@
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.51,
+ "perps_pnl_usd": -0.52,
  "equity": [
   [
    1793203600,
@@ -3224,6 +3224,10 @@
   [
    1793438762,
    541.43
+  ],
+  [
+   1793439103,
+   541.44
   ]
  ],
  "closed": [
@@ -5420,7 +5424,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793438643.95591,
+  "last_run": 1793439244.2452016,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {

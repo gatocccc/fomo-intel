@@ -1,7 +1,3 @@
-Oct 31 01:05:46 simplai-prod python3[2519932]: 2026-10-31 01:05:46,380 INFO live.helius: HELIUS 4vw54B buy 2FGmQEgZ 0.2600 SOL @ 2.510e-07 (lat 0.9s)
-Oct 31 01:05:53 simplai-prod python3[2519932]: 2026-10-31 01:05:53,821 INFO live.helius: HELIUS 4vw54B buy 2FGmQEgZ 2.0100 SOL @ 2.496e-07 (lat 0.9s)
-Oct 31 01:06:07 simplai-prod python3[2519932]: 2026-10-31 01:06:07,358 INFO live.helius: HELIUS 4vw54B buy 2FGmQEgZ 0.0350 SOL @ 3.705e-07 (lat 0.9s)
-Oct 31 01:06:07 simplai-prod python3[2519932]: 2026-10-31 01:06:07,448 INFO live.helius: HELIUS 4vw54B buy 2FGmQEgZ 0.0350 SOL @ 3.879e-07 (lat 0.7s)
 Oct 31 01:06:14 simplai-prod python3[2519932]: 2026-10-31 01:06:14,109 INFO live.helius: HELIUS 4vw54B sell 2FGmQEgZ 4.4277 SOL @ 3.400e-07 (lat 0.9s)
 Oct 31 01:06:17 simplai-prod python3[2519932]: 2026-10-31 01:06:17,098 INFO live.helius: HELIUS 4vw54B buy 2FGmQEgZ 0.2600 SOL @ 3.281e-07 (lat 0.9s)
 Oct 31 01:06:28 simplai-prod python3[2519932]: 2026-10-31 01:06:28,646 INFO live.helius: HELIUS 4vw54B sell 2FGmQEgZ 3.9380 SOL @ 2.851e-07 (lat 1.0s)
@@ -298,3 +294,7 @@ Oct 31 09:25:33 simplai-prod python3[2519932]: 2026-10-31 09:25:33,425 INFO live
 Oct 31 09:26:50 simplai-prod python3[2519932]: 2026-10-31 09:26:50,220 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… FDSG65a9 0.052 SOL
 Oct 31 09:28:12 simplai-prod python3[2519932]: 2026-10-31 09:28:12,096 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… FDSG65a9 0.062 SOL
 Oct 31 09:28:25 simplai-prod python3[2519932]: 2026-10-31 09:28:25,880 INFO live: latido: stream=True tokens_vistos=4298 seguidos=30 candidatos=0 abiertas=0 cerradas=1 st_requests=143 SOL=$95
+Oct 31 09:33:26 simplai-prod python3[2519932]: 2026-10-31 09:33:26,338 INFO live: latido: stream=True tokens_vistos=4313 seguidos=24 candidatos=0 abiertas=0 cerradas=1 st_requests=144 SOL=$95
+Oct 31 09:33:30 simplai-prod python3[2519932]: 2026-10-31 09:33:30,128 WARNING live.helius: helius caído: Connection to remote host was lost.; reconecto en 2s
+Oct 31 09:33:32 simplai-prod python3[2519932]: 2026-10-31 09:33:32,276 INFO live.helius: helius conectado; suscribiendo 1 billeteras
+Oct 31 09:34:03 simplai-prod python3[2519932]: 2026-10-31 09:34:03,017 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 8wA8J4dK 0.009 SOL
