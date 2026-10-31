@@ -1,5 +1,5 @@
 {
- "now": 1793446185.8642054,
+ "now": 1793446483.2077348,
  "start_ts": 1793271309.0330577,
  "start_usd": 55.36,
  "start_sol": 0.55,
@@ -7,11 +7,11 @@
  "days": 30,
  "day": 3,
  "equity_usd": 54.39,
- "equity_sol": 0.5687,
+ "equity_sol": 0.569,
  "cash_sol": 0.255,
  "positions_usd": 30.01,
- "sol_usd": 95.64,
- "mult": 0.983,
+ "sol_usd": 95.58,
+ "mult": 0.982,
  "halt": false,
  "pause": false,
  "positions": [
@@ -34,16 +34,16 @@
    "id": "lab-2026-10-29-01",
    "sleeve": "cash",
    "reason": "collateral",
-   "last_usd": 0.9999048299822532,
+   "last_usd": 0.9998489075425046,
    "mult": 0.982,
-   "value_usd": 20.07
+   "value_usd": 20.06
   },
   {
    "mint": "perps:FaWH9JqmhzcjVRuAFDceESfKZ72riuPcGBGF8vWL4zHy",
    "symbol": "ETH short 1.69x",
    "opened_ts": 1793360616.3171363,
    "entry_usd": 2237.16,
-   "last_usd": 2244.55,
+   "last_usd": 2244.25,
    "peak_usd": 2237.16,
    "tokens": 0,
    "tokens_initial": 0,
@@ -62,14 +62,14 @@
    "perps": true,
    "system": "Daily trend",
    "exit_level": null,
-   "mult": 0.994,
-   "value_usd": 9.94,
-   "pnl_usd": -0.06,
+   "mult": 0.995,
+   "value_usd": 9.95,
+   "pnl_usd": -0.05,
    "collateral_usd": 10.0,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.06,
+ "perps_pnl_usd": -0.05,
  "equity": [
   [
    1793271309,
@@ -2389,6 +2389,10 @@
   ],
   [
    1793446143,
+   54.39
+  ],
+  [
+   1793446483,
    54.39
   ]
  ],
