@@ -1,14 +1,14 @@
 {
- "ts": 1793470179.872937,
+ "ts": 1793470481.8173003,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.33571,
- "open_value_sol": 0.40049,
+ "equity_sol": 2.33567,
+ "open_value_sol": 0.40045,
  "positions": [
   {
    "sym": "Upvember",
    "mint": "2AcTsbiTsKMqEUrHwQjLw7QcFpR2BuojLc6nzWUQpump",
-   "mult": 0.92,
+   "mult": 0.919,
    "peak_mult": 1.0,
    "ts": 1793469973.138733,
    "hit_rec": false
@@ -145,7 +145,7 @@
  "recent_closed": [],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
  "sol_balance": 1.935221531,
- "sol_usd": 96.07042759441713,
+ "sol_usd": 95.92564686718589,
  "ticket_sol": 0.025,
  "ratio": 1.3,
  "open": 17,
@@ -158,9 +158,9 @@
  "best": null,
  "bought_today": 17,
  "stats": {
-  "seen": 177,
-  "evaluated": 167,
-  "eligible": 75,
+  "seen": 219,
+  "evaluated": 211,
+  "eligible": 88,
   "bought": 1,
   "buy_fail": 0,
   "closed": 0,
