@@ -178,7 +178,7 @@ window.UI = (() => {
     (limit ? items.slice(0, limit) : items).forEach(j => {
       const dl = dayLabel(j.ts); if (dl !== cur) { cur = dl; h += `<li class="day">${dl}</li>`; }
       const c = classifier(j), tm = new Date(j.ts * 1000).toLocaleTimeString("en-US", {hour: "numeric", minute: "2-digit"});
-      const ic = c.k === "lloyd" ? `<img src="/assets/lloyd-head.png" alt="">` : `<svg viewBox="0 0 24 24">${IC[c.k]}</svg>`;
+      const ic = c.k === "lloyd" ? `<img src="/assets/lloyd-head.png?v=2" alt="">` : `<svg viewBox="0 0 24 24">${IC[c.k]}</svg>`;
       h += `<li class="it k-${c.k}${open.has(String(j.ts)) ? " open" : ""}" data-ts="${j.ts}"><span class="ic">${ic}</span><div class="tx"><b><span>${L.esc(c.title)}</span><time>${tm}</time></b><p>${L.esc(c.text)}</p></div></li>`;
     });
     ul.innerHTML = h;

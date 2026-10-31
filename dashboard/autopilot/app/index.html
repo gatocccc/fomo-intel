@@ -10,26 +10,26 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Lloyd's">
 <link rel="manifest" href="/manifest.webmanifest">
-<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png?v=2">
+<link rel="icon" href="/assets/favicon.png?v=2" type="image/png">
 <link rel="preload" href="/assets/fonts/bowlby-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts.css">
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/ui.css">
 </head>
 <body data-tab="app">
-<div class="ptr" id="ptr" aria-hidden="true"><img src="/assets/lloyd-head.png" alt=""></div>
+<div class="ptr" id="ptr" aria-hidden="true"><img src="/assets/lloyd-head.png?v=2" alt=""></div>
 <div class="app">
 
 <header class="tb" id="tb">
-  <a class="me" href="/" aria-label="Lloyd's Tavern home"><img src="/assets/lloyd-head.png" alt=""><div><b id="hi">Lloyd's Tavern</b><small id="live" class="off" hidden><i></i><span id="live-t">Live</span></small></div></a>
+  <a class="me" href="/" aria-label="Lloyd's Tavern home"><img src="/assets/lloyd-head.png?v=2" alt=""><div><b id="hi">Lloyd's Tavern</b><small id="live" class="off" hidden><i></i><span id="live-t">Live</span></small></div></a>
   <a class="ib desk-only" href="/book/" aria-label="Lloyd's live book" title="Live book"><svg viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></svg></a>
   <button class="ib" id="b-settings" type="button" aria-label="Settings" hidden><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button>
 </header>
 
 <!-- ============ sign in ============ -->
 <main id="auth" class="authx" hidden>
-  <div class="face"><img src="/assets/lloyd.webp" alt="Lloyd, a Nonconformist Duck"><h1>Pull up a <em>stool.</em></h1></div>
+  <div class="face"><img src="/assets/lloyd.webp?v=2" alt="Lloyd, a Nonconformist Duck"><h1>Pull up a <em>stool.</em></h1></div>
   <div class="blk">
     <div class="tabs" role="tablist">
       <button type="button" role="tab" id="t-signup" aria-selected="true">Create account</button>
@@ -340,7 +340,7 @@ function fillHoldings(s) {
 // ---------- activity ----------
 function fillFeed(u) {
   const s = u.stool, js = ((s && s.journal) || []);
-  if (!js.length) { $("#feed").innerHTML = `<li class="it k-lloyd"><span class="ic"><img src="/assets/lloyd-head.png" alt=""></span><div class="tx"><b>${u.bot_wallet ? "Lloyd is waiting for you" : "Your story starts here"}</b><p>${u.bot_wallet ? "The first note appears the moment your deposit lands." : "When your seat opens, every move Lloyd makes for you shows up here."}</p></div></li>`; $("#feed-more").hidden = true; return; }
+  if (!js.length) { $("#feed").innerHTML = `<li class="it k-lloyd"><span class="ic"><img src="/assets/lloyd-head.png?v=2" alt=""></span><div class="tx"><b>${u.bot_wallet ? "Lloyd is waiting for you" : "Your story starts here"}</b><p>${u.bot_wallet ? "The first note appears the moment your deposit lands." : "When your seat opens, every move Lloyd makes for you shows up here."}</p></div></li>`; $("#feed-more").hidden = true; return; }
   UI.feed($("#feed"), js, UI.classify, FEED_ALL ? 0 : 6);
   $("#feed-more").hidden = FEED_ALL || js.length <= 6;
 }
@@ -505,8 +505,8 @@ async function cardBlob() {
   const INK = "#1A1814", CREAM = "#FFFDF7", FELT = "#1D6A4B", RED = "#C8323B", BEAK = "#FFC226";
   const bg = g.createRadialGradient(W / 2, -100, 50, W / 2, 200, 900); bg.addColorStop(0, "#2A7F5C"); bg.addColorStop(1, "#14513A"); g.fillStyle = bg; g.fillRect(0, 0, W, H);
   g.fillStyle = "rgba(0,0,0,.07)"; for (let y = 0; y < H; y += 6) for (let x = (y / 6) % 2 ? 3 : 0; x < W; x += 6) g.fillRect(x, y, 2, 2);
-  try { const img = new Image(); img.src = "/assets/lloyd.png"; await img.decode(); g.drawImage(img, W - 430, H - 470, 470, 470); } catch (_) {}
-  try { const img = new Image(); img.src = "/assets/lloyd-head.png"; await img.decode(); g.save(); g.beginPath(); g.arc(104, 100, 38, 0, 7); g.clip(); g.drawImage(img, 66, 62, 76, 76); g.restore(); g.beginPath(); g.arc(104, 100, 38, 0, 7); g.lineWidth = 5; g.strokeStyle = INK; g.stroke(); } catch (_) {}
+  try { const img = new Image(); img.src = "/assets/lloyd.png?v=2"; await img.decode(); g.drawImage(img, W - 430, H - 470, 470, 470); } catch (_) {}
+  try { const img = new Image(); img.src = "/assets/lloyd-head.png?v=2"; await img.decode(); g.save(); g.beginPath(); g.arc(104, 100, 38, 0, 7); g.clip(); g.drawImage(img, 66, 62, 76, 76); g.restore(); g.beginPath(); g.arc(104, 100, 38, 0, 7); g.lineWidth = 5; g.strokeStyle = INK; g.stroke(); } catch (_) {}
   g.font = '40px "Bowlby One", "Arial Black", sans-serif'; g.fillStyle = INK; g.fillText("Lloyd's Tavern", 160, 117); g.fillStyle = CREAM; g.fillText("Lloyd's", 160, 113); const lw = g.measureText("Lloyd's ").width; g.fillStyle = BEAK; g.fillText("Tavern", 160 + lw, 113);
   g.font = '700 22px "Space Mono", monospace'; g.fillStyle = "rgba(255,253,247,.8)"; g.fillText(`MY STOOL · SINCE ${L.day(s.since).toUpperCase()}`, 70, 210);
   const big = (up ? "+" : "−") + Math.abs(pct).toFixed(1) + "%";
