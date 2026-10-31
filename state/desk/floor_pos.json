@@ -271,5 +271,26 @@
   "sig": "2Qd7vx36wxZxp8bVmrEe3KfAPWk5uxkKbD8y1KJnpN898D3AZnGoR856JSLa2ergJJ58CM3hY9ByUoxaJWTz2vyn",
   "latency_s": 2.4,
   "last_px": 2.8005104344207917e-08
+ },
+ "Dfv528wTPFdDeGntBMn42s5bQdHWr8TR1ccvwGxQ7yCb": {
+  "ts": 1793467693.9029553,
+  "mint": "Dfv528wTPFdDeGntBMn42s5bQdHWr8TR1ccvwGxQ7yCb",
+  "sym": "CZ",
+  "name": "The Criminal Bull",
+  "curve": "9WAfdMKgHLbm5s4ahgRszZa7botVAAR3djUqozgXUzdj",
+  "tokens": 886933.226694,
+  "tokens0": 886933.226694,
+  "cost_sol": 0.02717189,
+  "entry_px": 3.063577863835577e-08,
+  "ref_px": 2.83468445152546e-08,
+  "slip_pct": 8.07,
+  "age_at_entry_s": 54,
+  "mcap_sol_entry": 28.35,
+  "peak_px": 3.063577863835577e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "4emxT5KMxhyRWgPaMG1Pv7NCX8bbRhStijA6V782731U6WKNvngWZYdBKMNBfPhx2Qm5SQdLxXdBwRk3K6vhobrG",
+  "latency_s": 2.2,
+  "last_px": 2.8394089964432936e-08
  }
 }
