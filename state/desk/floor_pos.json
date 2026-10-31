@@ -187,5 +187,26 @@
   "sig": "3SG68WaUGcC4ehNY7zTsVWiC3jQ5eYi6PwoWXFezDBruk9L9XA6jpSg1YD4Ut1iPDV432vBJZYCarBbNdnhvdzpo",
   "latency_s": 2.2,
   "last_px": 2.800747648721691e-08
+ },
+ "CurJ4UvYGPdqDkTPtMnUnkd812qc8gUdf68NeZ2ba4tu": {
+  "ts": 1793464781.0252736,
+  "mint": "CurJ4UvYGPdqDkTPtMnUnkd812qc8gUdf68NeZ2ba4tu",
+  "sym": "CATe",
+  "name": "CATe",
+  "curve": "Hmm774ArsmzEVbc3XVjN6evw3aiaXREPYHTqymhjL5eY",
+  "tokens": 893148.05895,
+  "tokens0": 893148.05895,
+  "cost_sol": 0.027006342,
+  "entry_px": 3.023725095674407e-08,
+  "ref_px": 2.7969651144990378e-08,
+  "slip_pct": 8.11,
+  "age_at_entry_s": 53,
+  "mcap_sol_entry": 27.97,
+  "peak_px": 3.023725095674407e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "5aJ6DWt352XvJskmXwQxSWiRCEX37jMpgBZKeEwCqqbzcbUYwXpY9rb3Znk37cWWu1KZ7C5Qk9qta6z2j2u6PipY",
+  "latency_s": 2.2,
+  "last_px": 2.801234211638124e-08
  }
 }
