@@ -228,7 +228,7 @@
   "proceeds_sol": 0.0,
   "sig": "46PNF6VHe8VKRpDjBjJvTkAB97sUrpTbxr3iwNHcYPBwWW7zVxRU8szRNedd16ApRxPdgBz8yB7peMd3jN81iQMv",
   "latency_s": 2.2,
-  "last_px": 5.588388253102867e-08
+  "last_px": 4.143797638804937e-08
  },
  "FXhHaBsNSEYdzHDpRXyYC5fcxeAigL3EX7VpSh1pump": {
   "ts": 1793466239.762414,
@@ -250,5 +250,26 @@
   "sig": "3wo46iDoKMakb7esXi7TqPCMdBQP3fsdHpZ2vvoZ9ywuWLzmnu3m4xUb9gEfhSRk8B8o7DGEVwfotzNPQVWB26yw",
   "latency_s": 2.2,
   "last_px": 2.8006385361331434e-08
+ },
+ "2yRB3S9BySz6zKoSUPh5tgHzK2WMFQ34PLjDAG4hpump": {
+  "ts": 1793466972.533799,
+  "mint": "2yRB3S9BySz6zKoSUPh5tgHzK2WMFQ34PLjDAG4hpump",
+  "sym": "CROWLY",
+  "name": "CROWLY",
+  "curve": "AJxAhoEgeKCXMFmHjTB8mLHKJnXvuQYXBBQ9qCiW4Kig",
+  "tokens": 883719.875881,
+  "tokens0": 883719.875881,
+  "cost_sol": 0.027022932,
+  "entry_px": 3.057861743016727e-08,
+  "ref_px": 2.8284510419655384e-08,
+  "slip_pct": 8.11,
+  "age_at_entry_s": 54,
+  "mcap_sol_entry": 28.28,
+  "peak_px": 3.057861743016727e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "2Qd7vx36wxZxp8bVmrEe3KfAPWk5uxkKbD8y1KJnpN898D3AZnGoR856JSLa2ergJJ58CM3hY9ByUoxaJWTz2vyn",
+  "latency_s": 2.4,
+  "last_px": 2.8154060566269412e-08
  }
 }
