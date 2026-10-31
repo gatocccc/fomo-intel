@@ -1,17 +1,17 @@
 {
- "now": 1793456988.276987,
+ "now": 1793457276.131435,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.33,
- "equity_sol": 5.6693,
+ "equity_usd": 541.27,
+ "equity_sol": 5.6644,
  "cash_sol": 0.0826,
- "positions_usd": 533.45,
- "sol_usd": 95.49,
- "mult": 0.989,
+ "positions_usd": 533.38,
+ "sol_usd": 95.56,
+ "mult": 0.988,
  "halt": false,
  "pause": false,
  "positions": [
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9998866234507389,
+   "last_usd": 0.9998636094595617,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 503.21
+   "value_usd": 503.2
   },
   {
    "mint": "perps:CET8XhBZEpDac7XRWnCyxWy4bCzH8DBU29thCJ5yaqM3",
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2247.85,
+   "last_usd": 2250.55,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1798,
+   "sol_in": 0.1797,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -62,9 +62,9 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 0.981,
-   "value_usd": 16.84,
-   "pnl_usd": -0.33,
+   "mult": 0.979,
+   "value_usd": 16.8,
+   "pnl_usd": -0.37,
    "collateral_usd": 17.17,
    "side": "short"
   },
@@ -73,11 +73,11 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 95.5565,
+   "last_usd": 95.6315,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1433,
+   "sol_in": 0.1432,
    "sol_out": 0.0,
    "stop": 0.1988,
    "trail": null,
@@ -92,14 +92,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 0.98,
-   "value_usd": 13.4,
-   "pnl_usd": -0.28,
+   "mult": 0.978,
+   "value_usd": 13.38,
+   "pnl_usd": -0.3,
    "collateral_usd": 13.68,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.61,
+ "perps_pnl_usd": -0.67,
  "equity": [
   [
    1793203600,
@@ -3444,6 +3444,10 @@
   [
    1793456945,
    541.32
+  ],
+  [
+   1793457064,
+   541.31
   ]
  ],
  "closed": [
@@ -5640,7 +5644,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793456524.0559335,
+  "last_run": 1793457065.5829701,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -5656,6 +5660,6 @@
   },
   "trad_status": "SOL -7.4%, BTC -4.9%, ETH -6.1%, JUP -14.2%",
   "sol_ch24h": 1.2,
-  "sol_vs_ma20": -0.0758
+  "sol_vs_ma20": -0.0761
  }
 }

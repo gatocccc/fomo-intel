@@ -1,9 +1,9 @@
 {
- "ts": 1793456978.94774,
+ "ts": 1793457274.9615977,
  "mode": "live",
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
  "sol_balance": 2.361562759,
- "sol_usd": 95.52331040254626,
+ "sol_usd": 95.54387247073555,
  "ticket_sol": 0.025,
  "ratio": 1.3,
  "open": 1,
@@ -16,10 +16,10 @@
  "best": null,
  "bought_today": 1,
  "stats": {
-  "seen": 198,
-  "evaluated": 190,
-  "eligible": 66,
-  "bought": 1,
+  "seen": 58,
+  "evaluated": 47,
+  "eligible": 23,
+  "bought": 0,
   "buy_fail": 0,
   "closed": 0,
   "ws_reconnects": 0

@@ -2,6 +2,18 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793457065.111883,
+   "src": "tg:binance_announcements",
+   "title": "Security Incident | Recovery Update #3: 90% of Stolen Assets Replenished; Proof of Reserves Snapshot Provided (2026-10-31) Our last update explained that Binance had set aside more than 6.34B in compa",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "exchange_risk",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793448784.9175754,
    "src": "cointelegraph",
    "title": "Binance $6.3B record hack sparks pre-election political clashes",
@@ -13,21 +25,21 @@
    ]
   }
  ],
- "ts": 1793456946.2317235,
- "bear_score": 0,
+ "ts": 1793457260.8574774,
+ "bear_score": 3,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.551,
-   "ch15m": -0.0007738562091502699,
-   "ch1h": -0.0020574842294356355,
-   "ch4h": -0.0022033792109604766
+   "px": 95.631,
+   "ch15m": -0.001472246585640935,
+   "ch1h": -0.0024305265793207464,
+   "ch4h": -0.0018682809727585958
   },
   "BTC": {
-   "px": 77419.0,
-   "ch15m": -0.0006067177858672945,
-   "ch1h": -0.0003615375676269128,
-   "ch4h": -0.0007615064921655534
+   "px": 77476.0,
+   "ch15m": 0.00021947094591978633,
+   "ch1h": 0.0007621065140730465,
+   "ch4h": -0.00010324712198650499
   }
  },
  "mode": "live",
