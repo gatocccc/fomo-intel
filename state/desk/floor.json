@@ -1,9 +1,23 @@
 {
- "ts": 1793457274.9615977,
+ "ts": 1793457574.2117083,
  "mode": "live",
+ "start_sol": 2.391343,
+ "equity_sol": 2.38348,
+ "open_value_sol": 0.02191,
+ "positions": [
+  {
+   "sym": "PEANUT",
+   "mint": "CvtdJdogQ5SSGdHGNZ36UtPnwTQUvTNyWpo8HV46pump",
+   "mult": 0.736,
+   "peak_mult": 1.0,
+   "ts": 1793456571.8608422,
+   "hit_rec": false
+  }
+ ],
+ "recent_closed": [],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
  "sol_balance": 2.361562759,
- "sol_usd": 95.54387247073555,
+ "sol_usd": 95.61846380643664,
  "ticket_sol": 0.025,
  "ratio": 1.3,
  "open": 1,
@@ -16,9 +30,9 @@
  "best": null,
  "bought_today": 1,
  "stats": {
-  "seen": 58,
-  "evaluated": 47,
-  "eligible": 23,
+  "seen": 30,
+  "evaluated": 15,
+  "eligible": 12,
   "bought": 0,
   "buy_fail": 0,
   "closed": 0,

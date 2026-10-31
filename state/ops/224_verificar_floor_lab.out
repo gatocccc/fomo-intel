@@ -1,0 +1,9 @@
+== 224_verificar_floor_lab 2026-10-31T14:38:03Z ==
+fomo-app active · fomo-floor active
+{'start_sol': 2.391343, 'equity_sol': 2.38348, 'open': 1, 'closed': 0, 'stats': {'seen': 22, 'evaluated': 4, 'eligible': 4, 'bought': 0, 'buy_fail': 0, 'closed': 0, 'ws_reconnects': 0}}
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.12/json/__init__.py", line 293, in load
+https://app.nonconformistducks.com/api/lab {"wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK", "mode": "live", "equity_usd": 227.9, "start_usd": 228.66, "pnl_pct": -0.0033, "tickets": 1, "open": 1, "closed": 0, "hits_3x": 0, "best": null, "seen": 22, "eligible": 4, "ticket_usd": 2.39, "positions": [{"sym": "PEANUT", "mint": "CvtdJdogQ5SSGdHGNZ36UtPnwTQUvTNyWpo8HV46pump", "mult": 0.736, "peak_mult": 1.0, "ts": 1793456571.8608422, "hit_rec": false}], "recent_closed": [], "updated": 1793457543.9448562}
+0
+== exit 1 ==
