@@ -1,4 +1,3 @@
-{"ts": 1793349558.3193076, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.274, "shock_px": 97.686, "ch1h": -0.003932089536955452, "ch4h": 0.0004319565575119366}
 {"ts": 1793349618.314501, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.153, "shock_px": 97.686, "ch1h": -0.0003909827041598257, "ch4h": -0.0007816597928600455}
 {"ts": 1793349618.314659, "kind": "skip_open", "leg": "book", "reason": "stale", "sol_px": 97.153, "shock_px": 97.686, "ch1h": -0.0003909827041598257, "ch4h": -0.0007816597928600455}
 {"ts": 1793349678.236025, "kind": "skip_open", "leg": "lab", "reason": "stale", "sol_px": 97.11, "shock_px": 97.686, "ch1h": -0.0008334105009722981, "ch4h": -0.0012239146756626296}
@@ -198,3 +197,4 @@
 {"ts": 1793395041.008766, "kind": "event", "src": "decrypt", "title": "Binance Hack Shows Why Offshore Exchanges Need US Oversight, CFTC Chair Says", "cls": {"types": ["exchange", "hack", "regulatory"], "dir": -1, "sev": 1, "by": "kw+llm", "confirmed": false}}
 {"ts": 1793395266.1100624, "kind": "event", "src": "theblock", "title": "Inside the largest crypto hack on record: How attackers breached Binance for $6.3 billion", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}
 {"ts": 1793395401.1317866, "kind": "event", "src": "tg:WatcherGuru", "title": "JUST IN: 🇰🇵 North Korea says international sanctions do not work. The statement comes just one day after North Korea s 6.3 billion Binance crypto hack, the largest heist in human history. @WatcherGuru", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 2, "by": "kw+llm", "confirmed": false}}
+{"ts": 1793408285.1588128, "kind": "event", "src": "bitcoinmagazine", "title": "What to Know About the $6.3 Billion Binance Hack", "cls": {"types": ["exchange", "hack"], "dir": -1, "sev": 3, "by": "kw+llm", "confirmed": true}}

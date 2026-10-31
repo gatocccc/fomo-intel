@@ -2,6 +2,17 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793408285.1588128,
+   "src": "bitcoinmagazine",
+   "title": "What to Know About the $6.3 Billion Binance Hack",
+   "sev": 3,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793395401.1317866,
    "src": "tg:WatcherGuru",
    "title": "JUST IN: 🇰🇵 North Korea says international sanctions do not work. The statement comes just one day after North Korea s 6.3 billion Binance crypto hack, the largest heist in human history. @WatcherGuru",
@@ -58,21 +69,21 @@
    ]
   }
  ],
- "ts": 1793408060.757805,
- "bear_score": 0,
+ "ts": 1793408375.82889,
+ "bear_score": 3,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.655,
-   "ch15m": 0.0031030760928225654,
-   "ch1h": 0.0036342869009915457,
-   "ch4h": 0.01628709019409924
+   "px": 96.693,
+   "ch15m": 0.002457078875341967,
+   "ch1h": 0.004352161538940802,
+   "ch4h": 0.01625922266832025
   },
   "BTC": {
-   "px": 77473.0,
-   "ch15m": 0.001175984078984671,
-   "ch1h": 0.002173210012289095,
-   "ch4h": 0.007150007150007243
+   "px": 77534.0,
+   "ch15m": 0.001731266149870736,
+   "ch1h": 0.0025343298249242974,
+   "ch4h": 0.008257584623987402
   }
  },
  "mode": "live",
