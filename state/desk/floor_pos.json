@@ -418,5 +418,26 @@
   "sig": "mJZfmUAPnvH7iNBTYGuahYD7mri1qimJMsKr3EMLGp9nSLQCk3isSuxdtfkvKgoRi3Bj6F4WmxYuN8LPtJ3bFUa",
   "latency_s": 2.2,
   "last_px": 2.8072191272533687e-08
+ },
+ "5uPWFX2VimoDBqfig1UcjBk4Wqeg1Ai1VhnSssNhpump": {
+  "ts": 1793472891.840179,
+  "mint": "5uPWFX2VimoDBqfig1UcjBk4Wqeg1Ai1VhnSssNhpump",
+  "sym": "PEPU",
+  "name": "pudgy pepe",
+  "curve": "DTsmxdVVhSucKDrGj18smuhtXosHQpayGGUSfXPTUHkr",
+  "tokens": 854088.710995,
+  "tokens0": 854088.710995,
+  "cost_sol": 0.027006342,
+  "entry_px": 3.1620066689018795e-08,
+  "ref_px": 2.9247134270011545e-08,
+  "slip_pct": 8.11,
+  "age_at_entry_s": 55,
+  "mcap_sol_entry": 29.25,
+  "peak_px": 3.1620066689018795e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "4gSeQcksDfsvMZEvy3cEFdcUKru7gYmtYhEWHv76dHJXb8nXjKiRXyyBoFk8qiLTsENJjcAkz1ZecSrwHhVjBmva",
+  "latency_s": 2.4,
+  "last_px": 2.9294813372793036e-08
  }
 }

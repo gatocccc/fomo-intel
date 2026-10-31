@@ -1,16 +1,16 @@
 {
- "now": 1793472563.2858784,
+ "now": 1793472903.3750386,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 5,
- "equity_usd": 154.46,
- "equity_sol": 1.6093,
+ "equity_usd": 154.51,
+ "equity_sol": 1.6108,
  "cash_sol": 0.0833,
- "positions_usd": 146.47,
- "sol_usd": 95.98,
+ "positions_usd": 146.52,
+ "sol_usd": 95.92,
  "mult": 1.559,
  "halt": false,
  "pause": false,
@@ -35,20 +35,20 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 1.000003630938794,
-   "mult": 0.993,
-   "value_usd": 126.48
+   "last_usd": 1.0002581052659811,
+   "mult": 0.994,
+   "value_usd": 126.51
   },
   {
    "mint": "perps:AFWv7oecPMXmbXAWTJoDcL6MyXzoXAu3hrrYuNHnrZjp",
    "symbol": "ETH short 2x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 2253.99,
-   "last_usd": 2255.15,
+   "last_usd": 2254.15,
    "peak_usd": 2253.99,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1042,
+   "sol_in": 0.1043,
    "sol_out": 0.0,
    "stop": 0.1438,
    "trail": null,
@@ -63,9 +63,9 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 0.999,
-   "value_usd": 9.99,
-   "pnl_usd": -0.01,
+   "mult": 1.0,
+   "value_usd": 10.0,
+   "pnl_usd": -0.0,
    "collateral_usd": 10.0,
    "side": "short"
   },
@@ -74,11 +74,11 @@
    "symbol": "SOL short 1.7x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 96.04,
-   "last_usd": 96.0595,
+   "last_usd": 95.9775,
    "peak_usd": 96.04,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1042,
+   "sol_in": 0.1043,
    "sol_out": 0.0,
    "stop": 0.1807,
    "trail": null,
@@ -93,14 +93,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 1.0,
-   "value_usd": 10.0,
-   "pnl_usd": -0.0,
+   "mult": 1.001,
+   "value_usd": 10.01,
+   "pnl_usd": 0.01,
    "collateral_usd": 10.0,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.01,
+ "perps_pnl_usd": 0.01,
  "equity": [
   [
    1793113266,
@@ -4825,6 +4825,10 @@
   [
    1793472306,
    154.46
+  ],
+  [
+   1793472648,
+   154.46
   ]
  ],
  "closed": [
@@ -6692,7 +6696,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793472243.7139945,
+  "last_run": 1793472845.3468902,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -6707,7 +6711,7 @@
    "key": "Efectivo ocioso (#), pero SOL y BTC están debajo de su promedio de # días y solo # de # memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": 2.1,
-  "sol_vs_ma20": -0.0714
+  "sol_ch24h": 1.9,
+  "sol_vs_ma20": -0.0728
  }
 }
