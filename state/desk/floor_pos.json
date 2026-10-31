@@ -292,5 +292,26 @@
   "sig": "4emxT5KMxhyRWgPaMG1Pv7NCX8bbRhStijA6V782731U6WKNvngWZYdBKMNBfPhx2Qm5SQdLxXdBwRk3K6vhobrG",
   "latency_s": 2.2,
   "last_px": 2.81934316757468e-08
+ },
+ "C6oAWCKcqSRKvkRbbyHoQT7NmqjgfFCPqPjJBtBGpump": {
+  "ts": 1793468455.8571897,
+  "mint": "C6oAWCKcqSRKvkRbbyHoQT7NmqjgfFCPqPjJBtBGpump",
+  "sym": "GAY",
+  "name": "gay ronaldo",
+  "curve": "3Sb9yKZ2iD488ur3pqjsdmQu43EAbGb5euT8sigdvEYY",
+  "tokens": 891074.717936,
+  "tokens0": 891074.717936,
+  "cost_sol": 0.027006339,
+  "entry_px": 3.030760323057408e-08,
+  "ref_px": 2.8032678813219852e-08,
+  "slip_pct": 8.12,
+  "age_at_entry_s": 55,
+  "mcap_sol_entry": 28.03,
+  "peak_px": 3.030760323057408e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "5YqPn8r23tkhCvi9JkF4759As9yxLt9wmkM4kC7vSM26nHT4G7CogpewSWR5HbLoZmHHwv7R2w9E8TatvgiDKuKv",
+  "latency_s": 2.2,
+  "last_px": 2.8005488575799943e-08
  }
 }
