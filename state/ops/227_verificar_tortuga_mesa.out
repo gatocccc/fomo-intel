@@ -1,0 +1,76 @@
+== 227_verificar_tortuga_mesa 2026-10-31T17:54:04Z ==
+active
+active
+168d722 ops 227: verificar tortuga en la mesa
+--- turtle_pos_desk
+{
+ "ETH": {
+  "ts": 1793469262.612716,
+  "leg": "desk",
+  "plan": "desk",
+  "symbol": "ETH",
+  "side": "short",
+  "entry": 2253.99,
+  "level": 2256.05,
+  "exit_level": 2578.1,
+  "collateral_usd": 10.0,
+  "lev": 2.0,
+  "size_usd": 20.0,
+  "risk_usd": 2.85,
+  "mode": "live",
+  "pubkey": "AFWv7oecPMXmbXAWTJoDcL6MyXzoXAu3hrrYuNHnrZjp",
+  "reason": "majors_trend",
+  "system": "turtle55",
+  "follows": "book:1793365941.1596584",
+  "book_entry": 2226.72,
+  "sig": "5NtFV486Ji26uHBrRandwB2tf5dwX4YbF3pVzxVz1oZ9yFJ8oTQD4idZtBy2fXgxzgpCgbxdywGEhwF26kTuRsC9",
+  "mark": 2254.95,
+  "ret_px": -0.0004,
+  "pnl_usd_est": -0.01,
+  "age_d": 0.0
+ },
+ "SOL": {
+  "ts": 1793469262.612716,
+  "leg": "desk",
+  "plan": "desk",
+  "symbol": "SOL",
+  "side": "short",
+  "entry": 96.04,
+  "level": 96.0895,
+  "exit_level": 113.39,
+  "collateral_usd": 10.0,
+  "lev": 1.7,
+  "size_usd": 17.0,
+  "risk_usd": 3.06,
+  "mode": "live",
+  "pubkey": "J5pVLUcxiVrUuMq3rQiesjXxi1z2DqchQFvYiD2cRqE7",
+  "reason": "majors_trend",
+  "system": "turtle55",
+  "follows": "book:1793389583.9844668",
+  "book_entry": 94.59,
+  "sig": "uGLxwWxRcpkgrS71BZbW8koMae5jgJM24whPKVkiQC4P9Q2B772e687zvXfPDEQakSXMZrkpkQNsWe9GodHHKa3",
+  "mark": 96.0935,
+  "ret_px": -0.0006,
+  "pnl_usd_est": -0.01,
+  "age_d": 0.0
+ }
+}--- joined
+[
+ "ETH:1793365941.1596584",
+ "SOL:1793389583.9844668"
+]--- radar_log turtle
+{"ts": 1793365941.1596584, "kind": "turtle_open", "leg": "book", "plan": "lloyd", "symbol": "ETH", "side": "short", "entry": 2226.72, "level": 2227.2, "exit_level": 2578.1, "collateral_usd": 17.17, "lev": 2.0, "size_usd": 34.34, "risk_usd": 5.42, "mode": "live", "pubkey": "CET8XhBZEpDac7XRWnCyxWy4bCzH8DBU29thCJ5yaqM3", "reason": "majors_trend", "system": "turtle55", "sig": "Ep8BiuvsiWrhMw364ZkoeJ7
+{"ts": 1793389583.9844668, "kind": "turtle_open", "leg": "book", "plan": "lloyd", "symbol": "SOL", "side": "short", "entry": 94.59, "level": 94.809, "exit_level": 113.39, "collateral_usd": 13.68, "lev": 2.0, "size_usd": 27.36, "risk_usd": 5.42, "mode": "live", "pubkey": "7k5fP8TQtVKVHfVEC5fgaagBdwvfjFCbdf3iSoTxcUwx", "reason": "majors_trend", "system": "turtle55", "sig": "4bbvzydWjF9ehZvWogHsq3bGu
+{"ts": 1793469262.612716, "kind": "turtle_open", "leg": "desk", "plan": "desk", "symbol": "ETH", "side": "short", "entry": 2253.99, "level": 2256.05, "exit_level": 2578.1, "collateral_usd": 10.0, "lev": 2.0, "size_usd": 20.0, "risk_usd": 2.85, "mode": "live", "pubkey": "AFWv7oecPMXmbXAWTJoDcL6MyXzoXAu3hrrYuNHnrZjp", "reason": "majors_trend", "system": "turtle55", "follows": "book:1793365941.159658
+{"ts": 1793469262.612716, "kind": "turtle_open", "leg": "desk", "plan": "desk", "symbol": "SOL", "side": "short", "entry": 96.04, "level": 96.0895, "exit_level": 113.39, "collateral_usd": 10.0, "lev": 1.7, "size_usd": 17.0, "risk_usd": 3.06, "mode": "live", "pubkey": "J5pVLUcxiVrUuMq3rQiesjXxi1z2DqchQFvYiD2cRqE7", "reason": "majors_trend", "system": "turtle55", "follows": "book:1793389583.9844668"
+--- journal radar
+--- mesa auto
+auto-mesa-turtle-20261031-175430-586409.json
+auto-mesa-turtle-20261031-175424-293886.json
+auto-mesa-note-20261031-1529.json
+--- perps on-chain mesa
+wallet 4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao
+{"dataList":[{"borrowFees":"6","borrowFeesUsd":"0.00","closeFees":"11983","closeFeesUsd":"0.01","collateral":"9.99","collateralUsd":"9985157","collateralMint":"EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v","createdTime":1793469263,"entryPrice":"2253.99","leverage":"1.99","liquidationPrice":"3374.90","marketMint":"7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs","markPrice":"2254.21","openFees":"11983","openFeesUsd":"0.01","pnlAfterFees":"-25918","pnlAfterFeesUsd":"-0.03","pnlBeforeFees":"-1946","pnlBeforeFeesUsd":"-0.00","pnlChangePctAfterFees":"-0.26","pnlChangePctBeforeFees":"-0.02","positionPubkey":"AFWv7oecPMXmbXAWTJoDcL6MyXzoXAu3hrrYuNHnrZjp","side":"short","size":"19.97","sizeUsdDelta":"19970276","sizeTokenAmount":"885996","totalFees":"23972","totalFeesUsd":"0.02","tpslRequests":[],"upd
+--- mesa summary
+154.46 [('USDC', 126.49), ('ETH short 2x', 9.99), ('SOL short 1.7x', 9.99)]
+== exit 0 ==

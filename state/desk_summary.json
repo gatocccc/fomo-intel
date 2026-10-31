@@ -1,17 +1,17 @@
 {
- "now": 1793468991.9838126,
+ "now": 1793469584.1102092,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 5,
- "equity_usd": 154.82,
- "equity_sol": 1.6128,
- "cash_sol": 0.0868,
+ "equity_usd": 154.48,
+ "equity_sol": 1.6092,
+ "cash_sol": 0.0833,
  "positions_usd": 146.49,
- "sol_usd": 95.99,
- "mult": 1.562,
+ "sol_usd": 96.0,
+ "mult": 1.559,
  "halt": false,
  "pause": false,
  "positions": [
@@ -35,12 +35,72 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 1.0000683593458823,
+   "last_usd": 1.000078589663843,
    "mult": 0.994,
-   "value_usd": 146.49
+   "value_usd": 126.49
+  },
+  {
+   "mint": "perps:AFWv7oecPMXmbXAWTJoDcL6MyXzoXAu3hrrYuNHnrZjp",
+   "symbol": "ETH short 2x",
+   "opened_ts": 1793469262.612716,
+   "entry_usd": 2253.99,
+   "last_usd": 2254.05,
+   "peak_usd": 2253.99,
+   "tokens": 0,
+   "tokens_initial": 0,
+   "sol_in": 0.1042,
+   "sol_out": 0.0,
+   "stop": 0.1438,
+   "trail": null,
+   "trail_after": null,
+   "tp": [],
+   "tp_done": [],
+   "thesis": "Tortuga 55/20: ETH tocó su mínimo de 55 días. short a 2x, colateral US$10; sale al tocar el máximo de 20 días (US$2,578.10), riesgo ≤ 2% de la cartera.",
+   "id": "turtle-ETH",
+   "sleeve": "majors",
+   "reason": "majors_trend",
+   "brain": false,
+   "perps": true,
+   "system": "Breakout 55/20",
+   "exit_level": 2578.1,
+   "mult": 1.0,
+   "value_usd": 10.0,
+   "pnl_usd": 0.0,
+   "collateral_usd": 10.0,
+   "side": "short"
+  },
+  {
+   "mint": "perps:J5pVLUcxiVrUuMq3rQiesjXxi1z2DqchQFvYiD2cRqE7",
+   "symbol": "SOL short 1.7x",
+   "opened_ts": 1793469262.612716,
+   "entry_usd": 96.04,
+   "last_usd": 96.0215,
+   "peak_usd": 96.04,
+   "tokens": 0,
+   "tokens_initial": 0,
+   "sol_in": 0.1042,
+   "sol_out": 0.0,
+   "stop": 0.1807,
+   "trail": null,
+   "trail_after": null,
+   "tp": [],
+   "tp_done": [],
+   "thesis": "Tortuga 55/20: SOL tocó su mínimo de 55 días. short a 1.7x, colateral US$10; sale al tocar el máximo de 20 días (US$113.39), riesgo ≤ 2% de la cartera.",
+   "id": "turtle-SOL",
+   "sleeve": "majors",
+   "reason": "majors_trend",
+   "brain": false,
+   "perps": true,
+   "system": "Breakout 55/20",
+   "exit_level": 113.39,
+   "mult": 1.0,
+   "value_usd": 10.0,
+   "pnl_usd": 0.0,
+   "collateral_usd": 10.0,
+   "side": "short"
   }
  ],
- "perps_pnl_usd": 0,
+ "perps_pnl_usd": 0.0,
  "equity": [
   [
    1793113266,
@@ -4721,6 +4781,18 @@
   [
    1793468694,
    154.8
+  ],
+  [
+   1793469034,
+   154.81
+  ],
+  [
+   1793469244,
+   154.82
+  ],
+  [
+   1793469584,
+   154.48
   ]
  ],
  "closed": [
@@ -5180,6 +5252,20 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793469270.3981621,
+   "title": "Tortuga 55/20: corto de SOL",
+   "text": "La mesa copia la operación de la tortuga 55/20 que el libro ya tiene abierta (corto de SOL, entrada del libro US$94.59); entra al precio de ahora, US$96.04, con la misma salida. Jupiter Perps a 1.7x, colateral US$10 (exposición US$17). Sale sola al tocar el máximo de 20 días (US$113.39); si pasa, se pierden ~US$3.1 (≤ 2% de la mesa). Por qué: es el único sistema de majors que pasó el backtest (2024–26, +7% medio por operación, t 2,0). En contra: entrar tarde da peor precio que el libro, y la mayoría de las rupturas fallan (55–65% pierden); el sistema vive de pocas movidas grandes.",
+   "kind": "decisión",
+   "id": "auto-mesa-turtle-20261031-175430-586409"
+  },
+  {
+   "ts": 1793469266.3764222,
+   "title": "Tortuga 55/20: corto de ETH",
+   "text": "La mesa copia la operación de la tortuga 55/20 que el libro ya tiene abierta (corto de ETH, entrada del libro US$2,226.72); entra al precio de ahora, US$2,253.99, con la misma salida. Jupiter Perps a 2x, colateral US$10 (exposición US$20). Sale sola al tocar el máximo de 20 días (US$2,578.10); si pasa, se pierden ~US$2.9 (≤ 2% de la mesa). Por qué: es el único sistema de majors que pasó el backtest (2024–26, +7% medio por operación, t 2,0). En contra: entrar tarde da peor precio que el libro, y la mayoría de las rupturas fallan (55–65% pierden); el sistema vive de pocas movidas grandes.",
+   "kind": "decisión",
+   "id": "auto-mesa-turtle-20261031-175424-293886"
+  },
   {
    "ts": 1793461264.9566662,
    "title": "Sesión de las 12:39 (15:39 UTC): sin órdenes, mercado plano",
@@ -6565,20 +6651,6 @@
    "text": "GTA6: vendió 25% de GTA6 (toma de ganancia 6x) por 0.5187 SOL",
    "kind": "automático",
    "id": null
-  },
-  {
-   "ts": 1793285237.4971156,
-   "title": "Ejecución",
-   "text": "set 4kjruq: ajustó GTA6: stop=-2.93",
-   "kind": "ejecución",
-   "id": "auto-mesa-20261029-1447"
-  },
-  {
-   "ts": 1793285237.4969752,
-   "title": "Cerebro automático: ajuste de stops",
-   "text": "GTA6: llegó a 5.61x de pico; subo el stop a 3.93x (antes 3.61x).\n\nEfectivo ocioso (25%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
-   "kind": "decisión",
-   "id": "auto-mesa-20261029-1447"
   }
  ],
  "wins": 2,
@@ -6588,7 +6660,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793468944.6037772,
+  "last_run": 1793469244.6364002,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -6604,6 +6676,6 @@
   },
   "trad_status": null,
   "sol_ch24h": 1.8,
-  "sol_vs_ma20": -0.0722
+  "sol_vs_ma20": -0.0716
  }
 }

@@ -313,5 +313,26 @@
   "sig": "5YqPn8r23tkhCvi9JkF4759As9yxLt9wmkM4kC7vSM26nHT4G7CogpewSWR5HbLoZmHHwv7R2w9E8TatvgiDKuKv",
   "latency_s": 2.2,
   "last_px": 2.8005488575799943e-08
+ },
+ "6m7c1ACSjunRhj4A8bhwNLsP1xLBVzS7odPRnqgtxAAQ": {
+  "ts": 1793469218.8330476,
+  "mint": "6m7c1ACSjunRhj4A8bhwNLsP1xLBVzS7odPRnqgtxAAQ",
+  "sym": "TOFI",
+  "name": "TOFI",
+  "curve": "FC1k4eFSBMFarhgFdmP46oXjrrQTWaogpYeKuZ4rEeF",
+  "tokens": 791798.589818,
+  "tokens0": 791798.589818,
+  "cost_sol": 0.027006342,
+  "entry_px": 3.410759042423602e-08,
+  "ref_px": 3.1548936134628806e-08,
+  "slip_pct": 8.11,
+  "age_at_entry_s": 51,
+  "mcap_sol_entry": 31.55,
+  "peak_px": 3.410759042423602e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "37b1kccqXVmyDxWL74KkPquZ2Ejs7tmtC5gYAoYYQP2EmHSWz4minRQLRReCKeP8uZT8TTcxMUDbGjHgPoC2PG9v",
+  "latency_s": 2.3,
+  "last_px": 2.8000302753247437e-08
  }
 }

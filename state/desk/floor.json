@@ -1,10 +1,18 @@
 {
- "ts": 1793468982.8716893,
+ "ts": 1793469575.935476,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.3427,
- "open_value_sol": 0.35347,
+ "equity_sol": 2.33786,
+ "open_value_sol": 0.37564,
  "positions": [
+  {
+   "sym": "TOFI",
+   "mint": "6m7c1ACSjunRhj4A8bhwNLsP1xLBVzS7odPRnqgtxAAQ",
+   "mult": 0.821,
+   "peak_mult": 1.0,
+   "ts": 1793469218.8330476,
+   "hit_rec": false
+  },
   {
    "sym": "GAY",
    "mint": "C6oAWCKcqSRKvkRbbyHoQT7NmqjgfFCPqPjJBtBGpump",
@@ -128,26 +136,26 @@
  ],
  "recent_closed": [],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
- "sol_balance": 1.989234212,
- "sol_usd": 95.8778975375247,
+ "sol_balance": 1.96222787,
+ "sol_usd": 95.94772957411425,
  "ticket_sol": 0.025,
  "ratio": 1.3,
- "open": 15,
- "open_cost_sol": 0.4021,
+ "open": 16,
+ "open_cost_sol": 0.4291,
  "closed": 0,
  "closed_pnl_sol": 0,
  "closed_cost_sol": 0,
  "closed_roi": null,
  "wins_3x": 0,
  "best": null,
- "bought_today": 15,
+ "bought_today": 16,
  "stats": {
-  "seen": 1813,
-  "evaluated": 1807,
-  "eligible": 776,
-  "bought": 13,
-  "buy_fail": 1,
+  "seen": 58,
+  "evaluated": 47,
+  "eligible": 21,
+  "bought": 0,
+  "buy_fail": 0,
   "closed": 0,
-  "ws_reconnects": 1
+  "ws_reconnects": 0
  }
 }

@@ -2,6 +2,17 @@
  "shock": null,
  "events": [
   {
+   "ts": 1793469560.455504,
+   "src": "tg:wublockchainenglish",
+   "title": "Chainalysis: Ethereum Reorg Triggers THORChain Emergency Pause, Delaying Laundering of Binance Hack Funds Blockchain analytics firm Chainalysis said an Ethereum chain reorganization on the morning of ",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange",
+    "hack"
+   ]
+  },
+  {
    "ts": 1793461385.0725696,
    "src": "cointelegraph",
    "title": "Binance says 90% of stolen assets replenished, targets Sunday withdrawals",
@@ -60,21 +71,21 @@
    ]
   }
  ],
- "ts": 1793468961.0567708,
- "bear_score": 0,
+ "ts": 1793469562.3130062,
+ "bear_score": 2,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 96.077,
-   "ch15m": 0.0016472231778896784,
-   "ch1h": 0.0016158962490357975,
-   "ch4h": -0.00031215208049362175
+   "px": 96.022,
+   "ch15m": 0.00040632195284584505,
+   "ch1h": 0.001867637699153768,
+   "ch4h": 0.003050245482085101
   },
   "BTC": {
-   "px": 77678.0,
-   "ch15m": 0.0014826657040083457,
-   "ch1h": 0.0015084900916697563,
-   "ch4h": 0.0014310209238463933
+   "px": 77670.0,
+   "ch15m": 0.0008633686842003385,
+   "ch1h": 0.0011600928074246841,
+   "ch4h": 0.0024004955861856025
   }
  },
  "mode": "live",
