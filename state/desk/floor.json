@@ -1,14 +1,14 @@
 {
- "ts": 1793473803.3448613,
+ "ts": 1793474074.9442785,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.3214,
- "open_value_sol": 0.52124,
+ "equity_sol": 2.32076,
+ "open_value_sol": 0.52061,
  "positions": [
   {
    "sym": "omniarb",
    "mint": "DbKX8Cfw66dgzGZk6PMTzH4JHXAMUivRk84xvXtWpump",
-   "mult": 0.928,
+   "mult": 0.905,
    "peak_mult": 1.0,
    "ts": 1793473625.0890522,
    "hit_rec": false
@@ -185,7 +185,7 @@
  "recent_closed": [],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
  "sol_balance": 1.800156177,
- "sol_usd": 95.90888206370396,
+ "sol_usd": 95.94700604511162,
  "ticket_sol": 0.025,
  "ratio": 1.3,
  "open": 22,
@@ -198,9 +198,9 @@
  "best": null,
  "bought_today": 22,
  "stats": {
-  "seen": 857,
-  "evaluated": 838,
-  "eligible": 431,
+  "seen": 1061,
+  "evaluated": 1005,
+  "eligible": 568,
   "bought": 6,
   "buy_fail": 0,
   "closed": 0,
