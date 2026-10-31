@@ -1,14 +1,14 @@
 {
- "ts": 1793479496.7754724,
+ "ts": 1793479781.5503368,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.30682,
- "open_value_sol": 0.69087,
+ "equity_sol": 2.30519,
+ "open_value_sol": 0.66325,
  "positions": [
   {
    "sym": "Atlas",
    "mint": "DdG9vXYDR36RkArYxckaL2UVeWASPHqE8HsfScNUpump",
-   "mult": 1.0,
+   "mult": 0.903,
    "peak_mult": 1.0,
    "ts": 1793479496.688892,
    "hit_rec": false
@@ -228,17 +228,19 @@
    "peak_mult": 1.0,
    "ts": 1793458812.5246649,
    "hit_rec": false
-  },
-  {
-   "sym": "pump",
-   "mint": "EnBSuuEhtC5Q6GRQRhesnwxkwgkn6Z2SwExjREVKpump",
-   "mult": 0.925,
-   "peak_mult": 1.0,
-   "ts": 1793458076.9563823,
-   "hit_rec": false
   }
  ],
  "recent_closed": [
+  {
+   "sym": "pump",
+   "mint": "EnBSuuEhtC5Q6GRQRhesnwxkwgkn6Z2SwExjREVKpump",
+   "mult": 0.962,
+   "peak_mult": 1.0,
+   "pnl_sol": -0.001017,
+   "why": "6h",
+   "closed_ts": 1793479690.9088988,
+   "hold_min": 360
+  },
   {
    "sym": "PEANUT",
    "mint": "CvtdJdogQ5SSGdHGNZ36UtPnwTQUvTNyWpo8HV46pump",
@@ -251,31 +253,31 @@
   }
  ],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
- "sol_balance": 1.615948021,
- "sol_usd": 95.4793957178394,
+ "sol_balance": 1.641937032,
+ "sol_usd": 95.47510770687896,
  "ticket_sol": 0.025,
  "ratio": 1.3,
- "open": 29,
- "open_cost_sol": 0.7685,
- "closed": 1,
- "closed_pnl_sol": -0.0068,
- "closed_cost_sol": 0.0298,
- "closed_roi": -0.2288,
+ "open": 28,
+ "open_cost_sol": 0.7415,
+ "closed": 2,
+ "closed_pnl_sol": -0.0078,
+ "closed_cost_sol": 0.0568,
+ "closed_roi": -0.1379,
  "wins_3x": 0,
  "best": {
-  "sym": "PEANUT",
-  "mint": "CvtdJdogQ5SSGdHGNZ36UtPnwTQUvTNyWpo8HV46pump",
-  "mult": 0.771,
-  "pnl_sol": -0.006815
+  "sym": "pump",
+  "mint": "EnBSuuEhtC5Q6GRQRhesnwxkwgkn6Z2SwExjREVKpump",
+  "mult": 0.962,
+  "pnl_sol": -0.001017
  },
  "bought_today": 30,
  "stats": {
-  "seen": 91,
-  "evaluated": 82,
-  "eligible": 33,
+  "seen": 149,
+  "evaluated": 142,
+  "eligible": 56,
   "bought": 1,
   "buy_fail": 0,
-  "closed": 0,
+  "closed": 1,
   "ws_reconnects": 0
  }
 }

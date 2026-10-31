@@ -1,25 +1,4 @@
 {
- "EnBSuuEhtC5Q6GRQRhesnwxkwgkn6Z2SwExjREVKpump": {
-  "ts": 1793458076.9563823,
-  "mint": "EnBSuuEhtC5Q6GRQRhesnwxkwgkn6Z2SwExjREVKpump",
-  "sym": "pump",
-  "name": "pump",
-  "curve": "3Bn9jUUicGZhJNhRow51LXqhThKyeetrMzxsznKyzZa2",
-  "tokens": 892247.275123,
-  "tokens0": 892247.275123,
-  "cost_sol": 0.027006339,
-  "entry_px": 3.026777413949184e-08,
-  "ref_px": 2.799582402250285e-08,
-  "slip_pct": 8.12,
-  "age_at_entry_s": 55,
-  "mcap_sol_entry": 28.0,
-  "peak_px": 3.026777413949184e-08,
-  "hit_rec": false,
-  "proceeds_sol": 0.0,
-  "sig": "32xKL28C7sYX2FSheS3RFp5FDZxz5zARD2B7QpUycwWEmLU4b14g3vojvwVysqaRZcXucLubB121x9bvJRLrQbdP",
-  "latency_s": 2.3,
-  "last_px": 2.800554983460228e-08
- },
  "D8UmeZr59nWZm1fx8CKGPZiJaRB3QytjSCF6Bav41Yda": {
   "ts": 1793458812.5246649,
   "mint": "D8UmeZr59nWZm1fx8CKGPZiJaRB3QytjSCF6Bav41Yda",
@@ -605,6 +584,7 @@
   "hit_rec": false,
   "proceeds_sol": 0.0,
   "sig": "5Rv3bmNkJ8F3brxFhQPbwLWvkYq1vnqieg5MakFPHAt1ajH6USZF4w9zXZEXQTzyxBVfpbBGHEXUjPeJ4tUy7B5d",
-  "latency_s": 2.3
+  "latency_s": 2.3,
+  "last_px": 2.8004406283904322e-08
  }
 }

@@ -1,5 +1,5 @@
 {
- "ts": 1793478964.2260466,
+ "ts": 1793479563.5230749,
  "regime": {
   "state": "risk_off",
   "ts": 1793478964.2116382,
@@ -27,7 +27,7 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 503.52,
+   "value_usd": 503.54,
    "pct": 93.0,
    "positions": 0
   },
@@ -35,7 +35,7 @@
    "key": "majors",
    "name": "Majors",
    "target_pct": 10,
-   "value_usd": 30.2,
+   "value_usd": 30.18,
    "pct": 5.6,
    "positions": 2
   },
@@ -56,6 +56,6 @@
    "positions": 0
   }
  ],
- "liquid_usd": 503.52,
+ "liquid_usd": 503.54,
  "trad_status": "SOL -7.4%, BTC -4.7%, ETH -5.9%, JUP -14.0%"
 }
