@@ -1,12 +1,12 @@
 {
  "mode": "live",
- "last_run": 1793449023.7368112,
+ "last_run": 1793449625.5515184,
  "regime": "risk_off",
  "profile": "book",
  "_noted_no_cands": 1793238965.2395556,
- "bal_ts": 1793446025.1090982,
- "trad_status": "SOL -7.5%, BTC -4.9%, ETH -6.3%, JUP -14.1%",
- "trad_ts": 1793446025.1094856,
+ "bal_ts": 1793449625.5529249,
+ "trad_status": "SOL -7.4%, BTC -4.7%, ETH -6.2%, JUP -13.6%",
+ "trad_ts": 1793449646.2957325,
  "status": "ok",
  "last_action": {
   "ts": 1793332323.208853,
@@ -16,7 +16,7 @@
  },
  "_noted_book": 1793305023.752567,
  "last_note": {
-  "ts": 1793438668.1778307,
+  "ts": 1793449648.0848613,
   "text": "[Picks] Idle cash (100%), but SOL and BTC are below their 20-day averages and only 1 of 18 large memecoins are above theirs: bear market: no new memecoins until it improves.",
   "key": "[Picks] Idle cash (#), but SOL and BTC are below their #-day averages and only # of # large memecoins are above theirs: bear market: no new memecoins until it improves."
  },
