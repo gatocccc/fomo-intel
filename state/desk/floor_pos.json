@@ -1,1 +1,23 @@
-{}
+{
+ "CvtdJdogQ5SSGdHGNZ36UtPnwTQUvTNyWpo8HV46pump": {
+  "ts": 1793456571.8608422,
+  "mint": "CvtdJdogQ5SSGdHGNZ36UtPnwTQUvTNyWpo8HV46pump",
+  "sym": "PEANUT",
+  "name": "The Halloween Trench Dog",
+  "curve": "Aaz3TPzymRQxfHK1JeZtuYMYT1JCqavhH1xucJKXZnBE",
+  "tokens": 782190.713684,
+  "tokens0": 782190.713684,
+  "cost_sol": 0.029779807,
+  "entry_px": 3.807230957747071e-08,
+  "ref_px": 3.372780901495509e-08,
+  "slip_pct": 12.88,
+  "age_at_entry_s": 50,
+  "mcap_sol_entry": 33.73,
+  "peak_px": 3.807230957747071e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "2bsWGSmv1ST3AJPYNMhWdu38e2YKVk4icZ6VW9nFzDqJRxjon4kfJNyFCLjqZdQWqSVQsUFM1vdsCjHEu2Xivbwt",
+  "latency_s": 2.3,
+  "last_px": 2.8084571334673046e-08
+ }
+}
