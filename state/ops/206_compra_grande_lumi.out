@@ -1,0 +1,90 @@
+== 206_compra_grande_lumi 2026-10-31T03:27:03Z ==
+=== (1) BACKTEST compra grande de un nombre (30 d) ===
+
+--- compra >= US$450 con mcap <= US$500K: eventos 1734, con velas 289 ---
+  por nombre: {'cooker': 131, 'tAg911': 51, 'ohtwoo': 20, 'ely': 13, 'bonk_guy': 13, 'sicktuna': 12, 'Dior': 12, 'marcell': 11}
+  50% a 2x, resto 30 min   todo      n=289 acierto= 30% prom=-14.6% mediana=-21.3%
+  50% a 2x, resto 30 min   1.ª mitad n=144 acierto= 26% prom=-17.7% mediana=-24.9%
+  50% a 2x, resto 30 min   2.ª mitad n=145 acierto= 34% prom=-11.5% mediana=-14.7%
+  TP2 / SL30 / 6h          todo      n=289 acierto= 24% prom= +0.1% mediana=-30.0%
+  TP2 / SL30 / 6h          1.ª mitad n=144 acierto= 20% prom= -3.8% mediana=-30.0%
+  TP2 / SL30 / 6h          2.ª mitad n=145 acierto= 28% prom= +4.0% mediana=-30.0%
+  50% a 2x, resto 2 h      todo      n=289 acierto= 32% prom=-18.3% mediana=-27.7%
+  50% a 2x, resto 2 h      1.ª mitad n=144 acierto= 30% prom=-18.0% mediana=-27.7%
+  50% a 2x, resto 2 h      2.ª mitad n=145 acierto= 34% prom=-18.7% mediana=-27.7%
+  TP1.5 / SL25 / 1h        todo      n=289 acierto= 30% prom= -1.5% mediana=-25.0%
+  TP1.5 / SL25 / 1h        1.ª mitad n=144 acierto= 28% prom= -2.9% mediana=-25.0%
+  TP1.5 / SL25 / 1h        2.ª mitad n=145 acierto= 32% prom= -0.0% mediana=-25.0%
+
+--- compra >= US$450 con mcap <= US$1000K: eventos 1795, con velas 328 ---
+  por nombre: {'cooker': 141, 'tAg911': 57, 'ohtwoo': 29, 'bonk_guy': 17, 'ely': 16, 'sicktuna': 14, 'marcell': 12, 'Dior': 12}
+  50% a 2x, resto 30 min   todo      n=328 acierto= 31% prom=-11.8% mediana=-17.2%
+  50% a 2x, resto 30 min   1.ª mitad n=164 acierto= 27% prom=-16.1% mediana=-23.3%
+  50% a 2x, resto 30 min   2.ª mitad n=164 acierto= 36% prom= -7.5% mediana=-12.9%
+  TP2 / SL30 / 6h          todo      n=328 acierto= 25% prom= +1.5% mediana=-30.0%
+  TP2 / SL30 / 6h          1.ª mitad n=164 acierto= 21% prom= -3.6% mediana=-30.0%
+  TP2 / SL30 / 6h          2.ª mitad n=164 acierto= 29% prom= +6.5% mediana=-30.0%
+  50% a 2x, resto 2 h      todo      n=328 acierto= 33% prom=-16.5% mediana=-27.6%
+  50% a 2x, resto 2 h      1.ª mitad n=164 acierto= 29% prom=-19.0% mediana=-28.0%
+  50% a 2x, resto 2 h      2.ª mitad n=164 acierto= 38% prom=-14.1% mediana=-22.4%
+  TP1.5 / SL25 / 1h        todo      n=328 acierto= 30% prom= -1.4% mediana=-25.0%
+  TP1.5 / SL25 / 1h        1.ª mitad n=164 acierto= 27% prom= -3.5% mediana=-25.0%
+  TP1.5 / SL25 / 1h        2.ª mitad n=164 acierto= 34% prom= +0.7% mediana=-25.0%
+
+--- compra >= US$900 con mcap <= US$500K: eventos 352, con velas 293 ---
+  por nombre: {'cooker': 90, 'Dior': 67, 'tAg911': 46, 'HarryPaulDavies': 22, 'marcell': 14, 'ely': 14, 'tvdj': 9, 'coreyape': 8}
+  50% a 2x, resto 30 min   todo      n=293 acierto= 38% prom= -3.1% mediana=-12.2%
+  50% a 2x, resto 30 min   1.ª mitad n=146 acierto= 45% prom= -2.7% mediana= -4.8%
+  50% a 2x, resto 30 min   2.ª mitad n=147 acierto= 31% prom= -3.6% mediana=-15.5%
+  TP2 / SL30 / 6h          todo      n=293 acierto= 26% prom= +2.5% mediana=-30.0%
+  TP2 / SL30 / 6h          1.ª mitad n=146 acierto= 30% prom= +7.8% mediana=-30.0%
+  TP2 / SL30 / 6h          2.ª mitad n=147 acierto= 22% prom= -2.9% mediana=-30.0%
+  50% a 2x, resto 2 h      todo      n=293 acierto= 37% prom=-14.1% mediana=-24.1%
+  50% a 2x, resto 2 h      1.ª mitad n=146 acierto= 39% prom=-14.7% mediana=-19.0%
+  50% a 2x, resto 2 h      2.ª mitad n=147 acierto= 35% prom=-13.6% mediana=-25.1%
+  TP1.5 / SL25 / 1h        todo      n=293 acierto= 33% prom= +0.5% mediana=-25.0%
+  TP1.5 / SL25 / 1h        1.ª mitad n=146 acierto= 38% prom= +3.9% mediana=-25.0%
+  TP1.5 / SL25 / 1h        2.ª mitad n=147 acierto= 29% prom= -2.9% mediana=-25.0%
+
+--- compra >= US$250 con mcap <= US$300K: eventos 2643, con velas 318 ---
+  por nombre: {'cooker': 139, 'tAg911': 43, 'FaZeBlaze': 26, 'bonk_guy': 26, 'ohtwoo': 24, 'ely': 13, 'tvdj': 13, 'sicktuna': 10}
+  50% a 2x, resto 30 min   todo      n=318 acierto= 28% prom=-18.8% mediana=-25.7%
+  50% a 2x, resto 30 min   1.ª mitad n=159 acierto= 31% prom=-20.3% mediana=-22.7%
+  50% a 2x, resto 30 min   2.ª mitad n=159 acierto= 25% prom=-17.3% mediana=-26.8%
+  TP2 / SL30 / 6h          todo      n=318 acierto= 19% prom= -4.8% mediana=-30.0%
+  TP2 / SL30 / 6h          1.ª mitad n=159 acierto= 21% prom= -1.7% mediana=-30.0%
+  TP2 / SL30 / 6h          2.ª mitad n=159 acierto= 16% prom= -7.8% mediana=-30.0%
+  50% a 2x, resto 2 h      todo      n=318 acierto= 27% prom=-26.0% mediana=-28.5%
+  50% a 2x, resto 2 h      1.ª mitad n=159 acierto= 32% prom=-27.2% mediana=-28.4%
+  50% a 2x, resto 2 h      2.ª mitad n=159 acierto= 23% prom=-24.8% mediana=-28.7%
+  TP1.5 / SL25 / 1h        todo      n=318 acierto= 25% prom= -5.0% mediana=-25.0%
+  TP1.5 / SL25 / 1h        1.ª mitad n=159 acierto= 27% prom= -3.6% mediana=-25.0%
+  TP1.5 / SL25 / 1h        2.ª mitad n=159 acierto= 22% prom= -6.4% mediana=-25.0%
+OK backtest
+
+=== (2) Holders de LUMI con audiencia -> state/desk/kols_extra.json ===
+holders 100 traders 100 primeros 0 únicos 161
+perfiles con username: 0 | con audiencia (>=5K seg.): 0
+escritas 0 billeteras nuevas en state/desk/kols_extra.json
+
+=== (3) Servicios con la versión rápida ===
+active
+inactive
+  fomo-app.service                                      loaded active running Nonco Autopilot - API de la landing y el panel
+  fomo-brain.service                                    loaded active running FOMO desk brain (decide cada 10 min con reglas fijas; el motor ejecuta)
+  fomo-control.service                                  loaded active running FOMO Intel - API de control del dashboard
+  fomo-desk.service                                     loaded active running FOMO mesa autonoma
+  fomo-desk@lab.service                                 loaded active running Nonco Autopilot - mesa del plan lab
+  fomo-desk@lloyd.service                               loaded active running Nonco Autopilot - mesa del plan lloyd
+  fomo-live.service                                     loaded active running FOMO Intel - bot en vivo
+  fomo-mirror.service                                   loaded active running Lloyd's Tavern - stools (user wallets following the book)
+  fomo-radar.service                                    loaded active running FOMO news radar (noticias + confirmacion de precio + cortos chicos en Jupiter Perps)
+Oct 31 03:34:06 simplai-prod python3[2680106]: 2026-10-31 03:34:06,747 INFO kols: kols: escuchando 21 billeteras (k=4, ventana 60 min, US$5 por operación, modo live)
+{'connected': True, 'wallets': 21, 'buys_seen': 1, 'fast_thread': True, 'big_sol': 5, 'big_max_mcap_usd': 500000, 'verdict': {'n': 1, 'ret': -0.533, 'pnl_usd': -2.89, 'halted': False}, 'verdict_big': {'n': 0, 'ret': 0.0, 'pnl_usd': 0.0, 'halted': False}, 'errors': []}
+hot []
+{"ts": 1793414900.2503834, "kind": "buy", "mint": "49t765AnJMQAzSUutr9T7rC4QAtGxbqiL374qxsHpump", "wallet": "87rRdssFiTJKY4MGARa4G5vQ31hmR7MxSmhzeaJ5AAxJ", "name": "Dior", "sol": 0.055, "n": 2, "lat_s": 39.3}
+{"ts": 1793415575.1969442, "kind": "buy", "mint": "Hk8Uiq8CeNdmZzu1aPaT7MhvujtJifFS9kKhfpXmpaid", "wallet": "3qFD7tnVLqQXvakXUec2jmvQb5D6Tvtbo62vFyfFvVax", "name": "bonk_guy", "sol": 5.0025, "n": 1, "lat_s": 27.2}
+{"ts": 1793415710.477792, "kind": "buy", "mint": "EU7bpdswCWfq7nmSjEJp1qcgfFNyYTK3xp2J3f1Fpump", "wallet": "3qFD7tnVLqQXvakXUec2jmvQb5D6Tvtbo62vFyfFvVax", "name": "bonk_guy", "sol": 3.0025, "n": 1, "lat_s": 27.5}
+{"ts": 1793416280.1606598, "kind": "buy", "mint": "GJ9LEQZgoxW487LRaRnajr6DWzouswd29EruRqwZBAGS", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 3.876, "n": 1, "lat_s": 34.2}
+{"ts": 1793417388.1059756, "kind": "buy", "mint": "GUdJWduuWsw16oqvJWkutyZwg53k21ZPmsKS4u3SMEEB", "wallet": "CE44oKS3wpUerx8afyeii56u5oQjBLZknzm4Q2CYHUz9", "name": "ely", "sol": 4.0001, "mcap_usd": 31133, "n": 1, "lat_s": 1.1}
+== exit 0 ==

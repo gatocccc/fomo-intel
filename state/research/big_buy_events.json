@@ -1,0 +1,2603 @@
+[
+ {
+  "m": "7xHMwKp5JYv5zfJU75ZigySrmxZikFZJVCHnBAs2Sj6",
+  "sym": "ARGON",
+  "ts": 1790799043.0,
+  "usd": 469.5002853143335,
+  "mcap": 27471.468510839524,
+  "who": "ely",
+  "r_2x30m": -0.8580510177985052
+ },
+ {
+  "m": "BRZ5aeJCDuruA42V1CntqKvofa2G7DS3yyxx1pZEpump",
+  "sym": "moonkey",
+  "ts": 1790799189.0,
+  "usd": 2500.179615,
+  "mcap": 450706.75180120266,
+  "who": "sicktuna",
+  "r_2x30m": -0.07178663661783236
+ },
+ {
+  "m": "CBG6wbS1mbsWpd51EHsjuaPPJhoc1LumWctckqKDyu7w",
+  "sym": "Cenut",
+  "ts": 1790801423.0,
+  "usd": 548.6957317824746,
+  "mcap": 11231.895703437112,
+  "who": "tAg911",
+  "r_2x30m": -0.412856992645915
+ },
+ {
+  "m": "9GfP92FBry2SgMJMYPZoZRqMG6tT43Zb11jTR8uqXhd6",
+  "sym": "Quant",
+  "ts": 1790801568.0,
+  "usd": 3000.362918,
+  "mcap": 341557.15732887096,
+  "who": "marcell",
+  "r_2x30m": -0.8961683903216957
+ },
+ {
+  "m": "6qBR7sk15ZVdt1vx6j1JgtkuurK8WrapugFptWQCyzL6",
+  "sym": "Pygoscelis",
+  "ts": 1790803475.0,
+  "usd": 472.0647659035189,
+  "mcap": 155481.92824824405,
+  "who": "ely",
+  "r_2x30m": -0.17398114786910668
+ },
+ {
+  "m": "EmLPFwLkzaPdT548oKXT9CMh9bSB9Ez93fBgmmoapump",
+  "sym": ".si",
+  "ts": 1790805856.0,
+  "usd": 2500.362366,
+  "mcap": 269967.9066990547,
+  "who": "marcell",
+  "r_2x30m": 0.8331354834093863
+ },
+ {
+  "m": "suZpoi53EfJay2vzZN8evrYpZNU9QJbCAMik1tFpump",
+  "sym": "SI",
+  "ts": 1790806268.0,
+  "usd": 1176.9777052681247,
+  "mcap": 4387.614931102066,
+  "who": "cooker",
+  "r_2x30m": 0.07148788498453157
+ },
+ {
+  "m": "Cb2pMbsRRvaeZoxpRqnTP6k6hLziSUf5pnqW9Jx5T3Wz",
+  "sym": "SGI",
+  "ts": 1790806971.0,
+  "usd": 800.001464,
+  "mcap": 51695.72620105627,
+  "who": "RoaringKitty(pump)",
+  "r_2x30m": 0.05085133916922602
+ },
+ {
+  "m": "HBfgHb4h5BTg2hgZaP4j7VXHMxGQUgnr4oDXESKXpump",
+  "sym": "Comando",
+  "ts": 1790806989.0,
+  "usd": 584.2301424917489,
+  "mcap": 54339.71540240165,
+  "who": "cooker",
+  "r_2x30m": -0.16669310368499057
+ },
+ {
+  "m": "2kkBdKtbUZsUGXRbC3U82GYfoGJ1ue7UZVjvUyBepump",
+  "sym": "Gany",
+  "ts": 1790807081.0,
+  "usd": 1180.6989163833377,
+  "mcap": 4401.487106741257,
+  "who": "cooker",
+  "r_2x30m": -0.5003391257665272
+ },
+ {
+  "m": "6AxtAc8LPDmCAU2Ve3LVManPUJtcM1cDqLMGY4n8UkVV",
+  "sym": "B&R",
+  "ts": 1790807171.0,
+  "usd": 590.6154260403703,
+  "mcap": 8975.48977580375,
+  "who": "cooker",
+  "r_2x30m": -0.13029348803642715
+ },
+ {
+  "m": "7hAevvr7adsoyieNoMdjDPZ8BkYakNLBEfJiFXXopump",
+  "sym": "SOL",
+  "ts": 1790807387.0,
+  "usd": 1182.0082546636677,
+  "mcap": 4406.368144132981,
+  "who": "cooker",
+  "r_2x30m": -0.5831283366430655
+ },
+ {
+  "m": "9apAZhVsNe2D58Jt5qJSQJde88scZ3G1XrPV1i1Zpump",
+  "sym": "PEPTINU",
+  "ts": 1790807465.0,
+  "usd": 591.1010485218217,
+  "mcap": 3856.204417197378,
+  "who": "cooker",
+  "r_2x30m": 0.19866986766560762
+ },
+ {
+  "m": "GPuN3s5PZTPcQV7cykNaTyX9cVesPSyz7111nsNKu4cv",
+  "sym": "CSFUN",
+  "ts": 1790808028.0,
+  "usd": 840.0411046207391,
+  "mcap": 329248.1734502634,
+  "who": "ohtwoo",
+  "r_2x30m": -0.20516898926584015
+ },
+ {
+  "m": "CuhMoTFYoBpEtwEsMYZt6wYQ5iFfn8GVpoWy2GSwpump",
+  "sym": "SI",
+  "ts": 1790808099.0,
+  "usd": 592.1632333287392,
+  "mcap": 3863.133861417716,
+  "who": "cooker",
+  "r_2x30m": -0.5044278880076792
+ },
+ {
+  "m": "9qFayuWWPeDekgdE5zyav8yZBW11NRgKKqG6SwHWpump",
+  "sym": "EI",
+  "ts": 1790808221.0,
+  "usd": 591.8652318977735,
+  "mcap": 3861.1897700693844,
+  "who": "cooker",
+  "r_2x30m": -0.4944989921339704
+ },
+ {
+  "m": "J1mdRmGniDYuuDdzh2WmZ4XRP2L5B3ESV4bMSBmvpump",
+  "sym": "xINU",
+  "ts": 1790808336.0,
+  "usd": 592.0284911191226,
+  "mcap": 3862.254834887133,
+  "who": "cooker",
+  "r_2x30m": -0.7290875820396165
+ },
+ {
+  "m": "8LUbSTNLzosxeVn9PpA4RWjjBfAeQhEhiM8wFtb6pump",
+  "sym": "DOBY",
+  "ts": 1790808528.0,
+  "usd": 591.433702600496,
+  "mcap": 3858.3745742809942,
+  "who": "cooker",
+  "r_2x30m": -0.4560414722162981
+ },
+ {
+  "m": "BWZNGhSFXT9fB8BPNoqoaa2ALYbCoobPNykgMKH2pump",
+  "sym": "DOBBE",
+  "ts": 1790808548.0,
+  "usd": 591.4356433737918,
+  "mcap": 3858.3872354301748,
+  "who": "cooker",
+  "r_2x30m": -0.11764163368776326
+ },
+ {
+  "m": "Cp1pNXXPugk1yQUjMwZtjkNoR4cjqu8VaZP1TvpEpump",
+  "sym": "PI",
+  "ts": 1790808693.0,
+  "usd": 591.2542901275339,
+  "mcap": 3857.2041294434034,
+  "who": "cooker",
+  "r_2x30m": 0.42569207968185924
+ },
+ {
+  "m": "8p1iLmfTH4yrHQNYKUZyeVSqky5F3PN5uwRoUZPdt3kZ",
+  "sym": "Mars",
+  "ts": 1790808841.0,
+  "usd": 591.0486236681751,
+  "mcap": 10905.573576278575,
+  "who": "cooker",
+  "r_2x30m": 0.593037407988058
+ },
+ {
+  "m": "J6iBWqxxyg7g3h8XkcHQBkbvpuizYxPMSBkkDWyrkUQ9",
+  "sym": "ELON",
+  "ts": 1790808850.0,
+  "usd": 591.0486235499653,
+  "mcap": 13444.947114239081,
+  "who": "cooker",
+  "r_2x30m": -0.7609224669565269
+ },
+ {
+  "m": "FYAoQdPQCRAy8NX9skdtraUcVsWRHSiLXTZZVGsyMzwo",
+  "sym": "modder",
+  "ts": 1790808877.0,
+  "usd": 591.2037387818126,
+  "mcap": 13525.8046302006,
+  "who": "cooker",
+  "r_2x30m": -0.2652774335656404
+ },
+ {
+  "m": "CcgqH5uyDcFMgs2rqHBP6sz9Atn3yuLSo4WfyDvbpump",
+  "sym": "SM",
+  "ts": 1790809791.0,
+  "usd": 590.8152430492764,
+  "mcap": 21140.922854474567,
+  "who": "cooker",
+  "r_2x30m": 0.8965393834346141
+ },
+ {
+  "m": "9JQoUPkP943GNQ6qoS8uLuZReNfZPad3DcvgZm2Upump",
+  "sym": "Inuf",
+  "ts": 1790809939.0,
+  "usd": 583.5279238719587,
+  "mcap": 21165.66634660301,
+  "who": "cooker",
+  "r_2x30m": -0.26852373821886144
+ },
+ {
+  "m": "5jYPTW5MFuPL3VaXhCF3AcQY1s1HrB3a5QZxN1WFpump",
+  "sym": "Minu",
+  "ts": 1790810242.0,
+  "usd": 1182.659232913991,
+  "mcap": 4408.794903686842,
+  "who": "cooker",
+  "r_2x30m": -0.5311365410506775
+ },
+ {
+  "m": "GJN6bmhPQSWsYpXZTQxx9cgjLabWAzh7uwP8qb7Fpump",
+  "sym": "Cat",
+  "ts": 1790810432.0,
+  "usd": 591.1394211681973,
+  "mcap": 15306.643376647668,
+  "who": "cooker",
+  "r_2x30m": -0.7549944543151581
+ },
+ {
+  "m": "ERtbaWoRdJa6QkzWFNB1mx6USeoHX3A4MUf1knk2pump",
+  "sym": "HALLIN",
+  "ts": 1790810718.0,
+  "usd": 1182.1997781657399,
+  "mcap": 4407.082118045645,
+  "who": "cooker",
+  "r_2x30m": -0.7779758144873234
+ },
+ {
+  "m": "2F3VSnTdEJAKjWmSahfRG43RZFdkCDzSPySNdpz8pump",
+  "sym": "Picomatch",
+  "ts": 1790812031.0,
+  "usd": 2949.8086474092343,
+  "mcap": 149151.70189950688,
+  "who": "marcell",
+  "r_2x30m": 0.978574487683743
+ },
+ {
+  "m": "J5i1CQT72ixy9bLdAPA1C5ZvFJQaJqeN7HQ9w2sLpump",
+  "sym": "PINU",
+  "ts": 1790812134.0,
+  "usd": 1180.343732761969,
+  "mcap": 4400.163029867562,
+  "who": "cooker",
+  "r_2x30m": -0.3393927586620482
+ },
+ {
+  "m": "AwoaU1uuqRnKevReWfWWtubkraCw4ikykfDGG6JTpump",
+  "sym": "Mars",
+  "ts": 1790812324.0,
+  "usd": 1180.431487184621,
+  "mcap": 4400.490166578286,
+  "who": "cooker",
+  "r_2x30m": -0.038271846998438774
+ },
+ {
+  "m": "Bv5XuPgrpCPQj5vWHLFGxJFBQsAYj1JWsJZZWBvxpump",
+  "sym": "Basin8",
+  "ts": 1790812570.0,
+  "usd": 1180.0406897745231,
+  "mcap": 4399.033326279692,
+  "who": "cooker",
+  "r_2x30m": -0.0940623460538409
+ },
+ {
+  "m": "DvNcJZTiSMD1RBCtZ2J31mh7s42CVCwrzGapv1Lypump",
+  "sym": "MICRO",
+  "ts": 1790812630.0,
+  "usd": 465,
+  "mcap": 412618.965558201,
+  "who": "ohtwoo",
+  "r_2x30m": 0.5623635360530641
+ },
+ {
+  "m": "2E7ba1k8c4hfbBzpvxda15Rkz58ZbZxz9KfPibhkpump",
+  "sym": "INUWEEN",
+  "ts": 1790812690.0,
+  "usd": 1180.010067661051,
+  "mcap": 4398.9191711502535,
+  "who": "cooker",
+  "r_2x30m": -0.2576871862855865
+ },
+ {
+  "m": "3RK91YFyk12TLDDfaGx3EZsdsuQbTZ1myL4sDqu2pump",
+  "sym": "Herbert",
+  "ts": 1790812798.0,
+  "usd": 1180.304232587517,
+  "mcap": 4400.015778518254,
+  "who": "cooker",
+  "r_2x30m": -0.6307592957527772
+ },
+ {
+  "m": "GN9METHo2BPTMktdyoxPZ1dV8Y8ccCDfLxMvmWKPpump",
+  "sym": "Groki",
+  "ts": 1790813257.0,
+  "usd": 1179.6861961652326,
+  "mcap": 4397.711821678423,
+  "who": "cooker",
+  "r_2x30m": -0.30572073006980993
+ },
+ {
+  "m": "8kVuY7Yir9NLaai9V73ZejscWdJ9q7aczidLtr38oL4r",
+  "sym": "Collateral",
+  "ts": 1790813903.0,
+  "usd": 2354.369422127833,
+  "mcap": 368711.91120070626,
+  "who": "marcell",
+  "r_2x30m": 0.1676311174850395
+ },
+ {
+  "m": "3ch8XtucboUNvcJ66eJzsZmhj7ebJiNKJ6hrD7Tipump",
+  "sym": "Cognition",
+  "ts": 1790814508.0,
+  "usd": 590.6770417815936,
+  "mcap": 13270.432074535178,
+  "who": "cooker",
+  "r_2x30m": 1.3612175240771105
+ },
+ {
+  "m": "5sD8hmitvDkDxbAjZF4CrX1NX8eA5Cwn8kK67tp9DevH",
+  "sym": "Pongpong",
+  "ts": 1790814545.0,
+  "usd": 584.8264325979584,
+  "mcap": 127845.03193948271,
+  "who": "cooker",
+  "r_2x30m": -0.09949360127230589
+ },
+ {
+  "m": "9XnEJrSNomMad4ULz4PjQcHGjBkiZLKedGCtXQQwpump",
+  "sym": "CHIP",
+  "ts": 1790814622.0,
+  "usd": 590.0841651953986,
+  "mcap": 24605.713997058323,
+  "who": "cooker",
+  "r_2x30m": -0.8519651310121875
+ },
+ {
+  "m": "BSkb3Yk3diEKws2qQW2c2QciLY6ihtSrGgruZ87spump",
+  "sym": "Kuma",
+  "ts": 1790815024.0,
+  "usd": 589.666866497291,
+  "mcap": 3846.8481504949414,
+  "who": "cooker",
+  "r_2x30m": -0.13515859601751945
+ },
+ {
+  "m": "23tGW6aGUDdC3qEZAULBQPc2GH7yMHyVMUgN5PGtpump",
+  "sym": "Basin8",
+  "ts": 1790815300.0,
+  "usd": 1180.3461904196765,
+  "mcap": 46925.61766601705,
+  "who": "cooker",
+  "r_2x30m": -0.8855634422581405
+ },
+ {
+  "m": "F9PvspnWkP3hSLaYxQb2LvFRBgyrLVhdUJ5q39tZZPbC",
+  "sym": "BRICK",
+  "ts": 1790816643.0,
+  "usd": 471.7878933092767,
+  "mcap": 76438.76346838301,
+  "who": "ely",
+  "r_2x30m": -0.11104355429022472
+ },
+ {
+  "m": "9XsgrA9uutUyGLzkWpzbiCZCNFkbdGpFxvzHzfwjQoyt",
+  "sym": "WFM",
+  "ts": 1790816952.0,
+  "usd": 1769.710355202595,
+  "mcap": 112535.70515594151,
+  "who": "cooker",
+  "r_2x30m": -0.6895096664345621
+ },
+ {
+  "m": "D3Rna5XrQWaW3Ydzxt5PicEbQnMbSv8qX97x14qEsVd",
+  "sym": "AI",
+  "ts": 1790818764.0,
+  "usd": 500.0053424460293,
+  "mcap": 175278.83804028513,
+  "who": "ohtwoo",
+  "r_2x30m": 1.1980600528731384
+ },
+ {
+  "m": "3sL58KKh2QdNSfN9VRz8bHGGU5zStdfManVHCTkhpump",
+  "sym": "PI",
+  "ts": 1790819131.0,
+  "usd": 590.8893400253841,
+  "mcap": 255336.3635563776,
+  "who": "sicktuna",
+  "r_2x30m": -0.08978927071309595
+ },
+ {
+  "m": "GS1xVD3xPFQcATayQeN53ALoC5CEpEUGhyGjtrvQpump",
+  "sym": "HALLIN",
+  "ts": 1790819382.0,
+  "usd": 500.05556221632617,
+  "mcap": 224970.93175995906,
+  "who": "ohtwoo",
+  "r_2x30m": -0.7961945002702437
+ },
+ {
+  "m": "3MQLR69vhsFi86MJ5Lf4jsUT2SdcTpdrPixTqGeFhvE6",
+  "sym": "elephant",
+  "ts": 1790820219.0,
+  "usd": 1180.7463824057104,
+  "mcap": 51484.69882508442,
+  "who": "cooker",
+  "r_2x30m": 0.2142188463788871
+ },
+ {
+  "m": "AV9TkfXb8LcAgjKuVBpp7qhaL6wHuAdEtBsgsduQpump",
+  "sym": "Quest",
+  "ts": 1790822930.0,
+  "usd": 1768.6820495788256,
+  "mcap": 73400.35208587453,
+  "who": "cooker",
+  "r_2x30m": -0.22734774746904973
+ },
+ {
+  "m": "H5Kugtkfc5vrm3oSdX6FDkxuutRK1S3GW7Rr7UgnoDhP",
+  "sym": "PUTIN",
+  "ts": 1790836466.0,
+  "usd": 1669.3120048473577,
+  "mcap": 81262.33195598907,
+  "who": "Dior",
+  "r_2x30m": 0.6289639928794035
+ },
+ {
+  "m": "2SVkGBPF3f7zfp7v7SiSf6PSnN6DEKbCDbSo7QNkpump",
+  "sym": "Mosquito",
+  "ts": 1790848144.0,
+  "usd": 523.0651083076065,
+  "mcap": 83365.68853287678,
+  "who": "tvdj",
+  "r_2x30m": -0.6364477327033466
+ },
+ {
+  "m": "Bd9thw3PAeyHeBGSi4R1ARBuptpG5rM4fhB8BRWJkq1e",
+  "sym": "glungus",
+  "ts": 1790850387.0,
+  "usd": 1501.2738322101177,
+  "mcap": 60506.201876086976,
+  "who": "Dior",
+  "r_2x30m": -0.3119642311086721
+ },
+ {
+  "m": "HQUC9eJ7Nfn1U4T74aLkJpQGH6dA9KHW3vvSnGmVpump",
+  "sym": "BOLD",
+  "ts": 1790854048.0,
+  "usd": 891.4039577466838,
+  "mcap": 152759.15332141216,
+  "who": "tAg911",
+  "r_2x30m": -0.028814852684799774
+ },
+ {
+  "m": "7r1v5rZcGnyzVs1jei7FeMEiZVf4GhQgLYXjZHmMUDGQ",
+  "sym": "HOURS",
+  "ts": 1790855292.0,
+  "usd": 596.1842762356586,
+  "mcap": 267763.636620579,
+  "who": "bonk_guy",
+  "r_2x30m": 0.9600081180962403
+ },
+ {
+  "m": "5mpsFEyh4J7mmvtSEKxsim9MRV7ue3AAXj3K5W6pump",
+  "sym": "FI",
+  "ts": 1790856148.0,
+  "usd": 530.6106605990523,
+  "mcap": 10013.13317562533,
+  "who": "tAg911",
+  "r_2x30m": -0.7189431475627416
+ },
+ {
+  "m": "F458Huat36hKjLPc7dmL4uEixBAgX7fUjxWwnUEkpump",
+  "sym": "MASHUP",
+  "ts": 1790856939.0,
+  "usd": 892.5588854047024,
+  "mcap": 174735.9639266615,
+  "who": "tAg911",
+  "r_2x30m": -0.18014417799234328
+ },
+ {
+  "m": "5yAzcFhSeqVU6B8EVCJWjWgTLS7jtLHAj1crrgKBUrFv",
+  "sym": "FOMO",
+  "ts": 1790859007.0,
+  "usd": 528.4239716346436,
+  "mcap": 11258.22485048724,
+  "who": "tAg911",
+  "r_2x30m": -0.7674094939701263
+ },
+ {
+  "m": "297VDa9dqDyNCrWZKD8VsC3wYkCQ5NhrKRQPrDSgrUSc",
+  "sym": "LALEELUU",
+  "ts": 1790859357.0,
+  "usd": 889.8191974383369,
+  "mcap": 9705.87942096491,
+  "who": "tAg911",
+  "r_2x30m": 0.3619110059971683
+ },
+ {
+  "m": "82wr8yv9QK44JrjbS2kU8V7TdmdvwkBHLDDtfKdupump",
+  "sym": "BAGWORK",
+  "ts": 1790859389.0,
+  "usd": 1243.64978,
+  "mcap": 142561.64096734792,
+  "who": "tvdj",
+  "r_2x30m": -0.9357870547909122
+ },
+ {
+  "m": "7ek8TowPip3uMGPrmoBgZGqEJd1PhqMvLnGxQRNHahHA",
+  "sym": "Callout",
+  "ts": 1790861628.0,
+  "usd": 528.5579524860512,
+  "mcap": 5809.826940714101,
+  "who": "tAg911",
+  "r_2x30m": 0.28216313792795067
+ },
+ {
+  "m": "6zwgu9mdbj5cJLYxcXSrwjZ7dmnitkhCHTbesEHM4j8o",
+  "sym": "Pipi",
+  "ts": 1790862130.0,
+  "usd": 588.3059687610969,
+  "mcap": 12119.959512670717,
+  "who": "FaZeBlaze",
+  "r_2x30m": 0.3910710175486508
+ },
+ {
+  "m": "3gpxyeGkJfpeRsZ8cpeCy2YRLe4WsHxL72xkQi3Xpump",
+  "sym": "e/sol",
+  "ts": 1790862165.0,
+  "usd": 546.9035037437634,
+  "mcap": 56773.12492413395,
+  "who": "tAg911",
+  "r_2x30m": 0.023364068092339152
+ },
+ {
+  "m": "6H75PU1Z6Yt6gt9ow8aLpqSubJy6nyfW2jtHffVwDnCt",
+  "sym": "b",
+  "ts": 1790863552.0,
+  "usd": 500.4029028579328,
+  "mcap": 190633.09168767516,
+  "who": "ohtwoo",
+  "r_2x30m": 0.04181394137489741
+ },
+ {
+  "m": "AUHbg5JCPR6sfon92zD2YZ82tXvv3a792QY449KJ7hwj",
+  "sym": "BM",
+  "ts": 1790863789.0,
+  "usd": 500.9041462454234,
+  "mcap": 68455.51916674885,
+  "who": "ohtwoo",
+  "r_2x30m": -0.8984197781701713
+ },
+ {
+  "m": "Gxtvpa7DpSonLSYwp3ka7xtQHVj8YQJJEWMUbAtapump",
+  "sym": "\ud83d\udfe8",
+  "ts": 1790863942.0,
+  "usd": 588.4026922959371,
+  "mcap": 20849.20625610017,
+  "who": "FaZeBlaze",
+  "r_2x30m": -0.031156034317290637
+ },
+ {
+  "m": "DShht9B8wCRe5t3oqdPB77PnjJbKxbYaZyuWpZQjbonk",
+  "sym": "CONK",
+  "ts": 1790868662.0,
+  "usd": 888.5775413562484,
+  "mcap": 402219.3340935744,
+  "who": "tAg911",
+  "r_2x30m": -0.019680484539209564
+ },
+ {
+  "m": "Fcr5Ps2Rn6R6QjNSJCScWMhrGWvaU1t23R7UNv1iGDhk",
+  "sym": "GG",
+  "ts": 1790870197.0,
+  "usd": 586.8659132023685,
+  "mcap": 148231.4311721481,
+  "who": "FaZeBlaze",
+  "r_2x30m": -0.9268097999848993
+ },
+ {
+  "m": "ADigMedGRGbpjEBipSAWaYgmM8gdM6jnzXCMpYwMpump",
+  "sym": "SHIPD",
+  "ts": 1790870872.0,
+  "usd": 528.9936431142849,
+  "mcap": 28392.33115905791,
+  "who": "tAg911",
+  "r_2x30m": -0.8631141899080816
+ },
+ {
+  "m": "2P1XkWh1hUU2H2CVMBSPWfPbDsyN6LAFJbhxCYzwQBCF",
+  "sym": "\u30a8\u30de",
+  "ts": 1790871141.0,
+  "usd": 527.6871134406261,
+  "mcap": 4247.617234542941,
+  "who": "tAg911",
+  "r_2x30m": 0.12910809984897764
+ },
+ {
+  "m": "Au2HA4nU15yEBGHeaLY8v4igBtbivMipvr1WeB9j7c3U",
+  "sym": "AAAAAAAAAAAAA",
+  "ts": 1790871248.0,
+  "usd": 718.009389,
+  "mcap": 72267.51478931207,
+  "who": "tvdj",
+  "r_2x30m": -0.9213592387232299
+ },
+ {
+  "m": "7dmcQ9TyPDcfTTjfCfcZhuwK79FThVuKqmzVM9uKpRhK",
+  "sym": "DBT",
+  "ts": 1790872159.0,
+  "usd": 545.5482394271853,
+  "mcap": 36896.390716768285,
+  "who": "tAg911",
+  "r_2x30m": -0.8354714526573825
+ },
+ {
+  "m": "595UsjW2atjg5wT9cQxEk1yJa8xUZVCYofMiRK8Y7Gbx",
+  "sym": "StonkNate",
+  "ts": 1790873185.0,
+  "usd": 546.0886645135564,
+  "mcap": 27790.114785424157,
+  "who": "tAg911",
+  "r_2x30m": -0.864928112390382
+ },
+ {
+  "m": "6BYagnNiU2VAz8NhfbHbe5W8X2ixZzjd7WtHGfcupump",
+  "sym": "RED",
+  "ts": 1790874450.0,
+  "usd": 570.641791,
+  "mcap": 10620.540191829632,
+  "who": "tAg911",
+  "r_2x30m": 0.3211386423032035
+ },
+ {
+  "m": "7KEPApdbBMByrmqihz3bht2uMhFQcatjfSFQCKq66kH3",
+  "sym": "DARK",
+  "ts": 1790876185.0,
+  "usd": 598.1795510091738,
+  "mcap": 79686.40556127933,
+  "who": "tAg911",
+  "r_2x30m": -0.08811698636177745
+ },
+ {
+  "m": "GjvveSvQt18VCApjzZ2kznvbgp2rPVWvAm82oXgvpump",
+  "sym": "LEAFRA",
+  "ts": 1790877051.0,
+  "usd": 551.4366763945374,
+  "mcap": 64044.49544750937,
+  "who": "tAg911",
+  "r_2x30m": 0.11451580903562208
+ },
+ {
+  "m": "5wW9mhbwq1HTFh341iimpmrqBB4mfxdXiYhdYBL7hUnp",
+  "sym": "KARDASHEV",
+  "ts": 1790877244.0,
+  "usd": 899.6422883764413,
+  "mcap": 439833.60310156574,
+  "who": "tAg911",
+  "r_2x30m": -0.15528470037718822
+ },
+ {
+  "m": "Dbx7MLEfqqns3mfEZivBdvHtXetAzBN9rzZZV8Md7Qr3",
+  "sym": "Robinson",
+  "ts": 1790877944.0,
+  "usd": 531.5057529193379,
+  "mcap": 10733.70343238101,
+  "who": "tAg911",
+  "r_2x30m": -0.7919051136111313
+ },
+ {
+  "m": "4nEQ4X4SD51AANoUWuFphANB4T9kTj7cSkhL6GM7tMou",
+  "sym": "Robinson",
+  "ts": 1790877990.0,
+  "usd": 531.3936501132547,
+  "mcap": 17812.691902538318,
+  "who": "tAg911",
+  "r_2x30m": -0.8964758293624462
+ },
+ {
+  "m": "23e4CNuJxvBQ7RjNLc8Bh3yN3pQq6jeiTbyzJGXYPgme",
+  "sym": "Remus",
+  "ts": 1790878286.0,
+  "usd": 598.159553479837,
+  "mcap": 57983.93296097669,
+  "who": "tAg911",
+  "r_2x30m": -0.21270112338299074
+ },
+ {
+  "m": "4raD2DH2vNNKP9XrK47jdo9bsuTcK6wiVBuitVvwTXdi",
+  "sym": "OCAT",
+  "ts": 1790879787.0,
+  "usd": 475.0782192008081,
+  "mcap": 6153.49434615197,
+  "who": "ely",
+  "r_2x30m": 1.7710949227622619
+ },
+ {
+  "m": "ELEnRRcKCuuPJBJPeTTGCRocjkBCwbd3R3f8nyg8pump",
+  "sym": "silent",
+  "ts": 1790880458.0,
+  "usd": 499.4571323333393,
+  "mcap": 107013.06026181004,
+  "who": "ohtwoo",
+  "r_2x30m": -0.8996032849999913
+ },
+ {
+  "m": "JCX5nDG99k1CWB9AttJ3U57NmjSgnCoagFaZhqfEf7Ah",
+  "sym": "BANDIT",
+  "ts": 1790883615.0,
+  "usd": 892.0032199684332,
+  "mcap": 215799.0556427119,
+  "who": "tAg911",
+  "r_2x30m": 0.24975716861794806
+ },
+ {
+  "m": "7FXUnLBeMGonXs6qx4z3Vyba3VHX6hxwnkCLsYwmpump",
+  "sym": "Pabu",
+  "ts": 1790885105.0,
+  "usd": 591.85975455747,
+  "mcap": 3861.1540371876276,
+  "who": "cooker",
+  "r_2x30m": 0.18976544801937534
+ },
+ {
+  "m": "3CEGn6EvhNJyQH1huA33DPMWQXy2bYJx3NqkgCFipump",
+  "sym": "Inuween",
+  "ts": 1790885218.0,
+  "usd": 591.8927225240202,
+  "mcap": 3861.3691124586917,
+  "who": "cooker",
+  "r_2x30m": -0.4856964276080773
+ },
+ {
+  "m": "PNCw12VHEuAkNKbLRRF3onfBFisu2DFabPUXHw8pump",
+  "sym": "inumortal",
+  "ts": 1790885392.0,
+  "usd": 591.764229523785,
+  "mcap": 3860.5308543024516,
+  "who": "cooker",
+  "r_2x30m": -0.34099639427015993
+ },
+ {
+  "m": "AKcaShEu1dCWPAAxfahti4TAZJ36ZfXmKQ8eSdHkpump",
+  "sym": "HUTTER",
+  "ts": 1790885871.0,
+  "usd": 591.7938106661709,
+  "mcap": 3860.723834728082,
+  "who": "cooker",
+  "r_2x30m": -0.48054257643986587
+ },
+ {
+  "m": "45rigihiDFnhuUYUzFeYoj3eGrsLyTJs9xiEjs37pump",
+  "sym": "HUTTER",
+  "ts": 1790885888.0,
+  "usd": 591.6412856230403,
+  "mcap": 3859.7287971680494,
+  "who": "cooker",
+  "r_2x30m": -0.024059655659146473
+ },
+ {
+  "m": "GFJe2zDpLxddBFeA8kkoNoYvrT3BcrcgqK4VQsHDpump",
+  "sym": "PUMPKINU",
+  "ts": 1790885911.0,
+  "usd": 591.6370252702726,
+  "mcap": 3859.701003627161,
+  "who": "cooker",
+  "r_2x30m": -0.2721793021449712
+ },
+ {
+  "m": "GXi4td81zWzyRzLiaCbWhcPGSVL1LtKfmhXSLoXhpump",
+  "sym": "coal",
+  "ts": 1790886110.0,
+  "usd": 592.03252241182,
+  "mcap": 3862.281134093919,
+  "who": "cooker",
+  "r_2x30m": -0.46732464620679526
+ },
+ {
+  "m": "2hGob3BDgRVXuNgWeBwmR5G1Ppe9QmVzBdCViEUBpump",
+  "sym": "\uac00\ub098\ub514",
+  "ts": 1790886220.0,
+  "usd": 591.9401432262225,
+  "mcap": 3861.6784739828454,
+  "who": "cooker",
+  "r_2x30m": -0.4228203793749624
+ },
+ {
+  "m": "E13Ga1sjeVpD4AhhfUkqoTnALJRQX3KBoqiNHiNspump",
+  "sym": "SHOGGOTH",
+  "ts": 1790886375.0,
+  "usd": 591.5555598278797,
+  "mcap": 3859.169542213601,
+  "who": "cooker",
+  "r_2x30m": -0.13878310905358904
+ },
+ {
+  "m": "36ifyGeMpXwSZTSFeue2YAHAREcRZBzy9mMyf8appump",
+  "sym": "HODL",
+  "ts": 1790886815.0,
+  "usd": 590.9101849729236,
+  "mcap": 3854.9592682297302,
+  "who": "cooker",
+  "r_2x30m": -0.3004436197491025
+ },
+ {
+  "m": "ASN6XAyWyn1psSbGKNQ7D81byp1CRTYd8Q9aA2DW9M3n",
+  "sym": "pumpfolio",
+  "ts": 1790886897.0,
+  "usd": 583.7574609089008,
+  "mcap": 35452.944910041544,
+  "who": "cooker",
+  "r_2x30m": -0.4089260830115189
+ },
+ {
+  "m": "5aJmrWcYBt8qCpqrv4m91Q62bwxfrtdX18H3ZD7Qv4SM",
+  "sym": "boy",
+  "ts": 1790887046.0,
+  "usd": 590.5387499186128,
+  "mcap": 12027.560784894838,
+  "who": "cooker",
+  "r_2x30m": -0.06017060534514407
+ },
+ {
+  "m": "86MgaDWdMLvkvv4bTWvMGxMZwwJGg3waXu6h9v43giAs",
+  "sym": "Francis",
+  "ts": 1790887297.0,
+  "usd": 589.7823182927767,
+  "mcap": 11204.693028408788,
+  "who": "cooker",
+  "r_2x30m": 0.3819995465376427
+ },
+ {
+  "m": "icgvvPx9b76BoJ5CscGzYL8zzAHZNXzgY2NpqnUuhdG",
+  "sym": "PUMPOWEEN",
+  "ts": 1790887627.0,
+  "usd": 589.8669017816339,
+  "mcap": 80771.81026907318,
+  "who": "cooker",
+  "r_2x30m": -0.5166651111075051
+ },
+ {
+  "m": "6d2q4oLG64DsA7ApvYLxiMSozY9xX46KvzbrmR7Tbqb1",
+  "sym": "WIREDCAT",
+  "ts": 1790888081.0,
+  "usd": 590.5034174568527,
+  "mcap": 23368.855845554906,
+  "who": "cooker",
+  "r_2x30m": -0.8646972529632595
+ },
+ {
+  "m": "3EiVPbsU6Ujq6QfD8zkrLnKX2qfnfTP1Mwv41vbvpump",
+  "sym": "PUMPFILES",
+  "ts": 1790888108.0,
+  "usd": 590.6773483094596,
+  "mcap": 4443.042494046991,
+  "who": "cooker",
+  "r_2x30m": -0.22253362576530267
+ },
+ {
+  "m": "D3n71VTM56hcMYhjLM6KKsXdJpVr31xQ8Bfh74MEpump",
+  "sym": "COCAINU",
+  "ts": 1790888239.0,
+  "usd": 590.7873405708083,
+  "mcap": 3854.157860201019,
+  "who": "cooker",
+  "r_2x30m": -0.24669181864653988
+ },
+ {
+  "m": "HuKKwbSB8axBB6D2FirjK5g9HBTiHPtpK8xP8XpE1ocY",
+  "sym": "HANK",
+  "ts": 1790889163.0,
+  "usd": 548.7351081271854,
+  "mcap": 33379.31337844071,
+  "who": "tAg911",
+  "r_2x30m": -0.8599581935556164
+ },
+ {
+  "m": "B9kjPieJgUTCNxbLkX3BRjKFaXup1WNFj7eQMLDtsMyi",
+  "sym": "xinu",
+  "ts": 1790889166.0,
+  "usd": 589.7349395261756,
+  "mcap": 19158.9621800998,
+  "who": "cooker",
+  "r_2x30m": -0.9571146547787898
+ },
+ {
+  "m": "GfQHkKHS64ZmQ5HJWqDWAwvaKM5rfVYzEe2MVWGGpump",
+  "sym": "Biological",
+  "ts": 1790889410.0,
+  "usd": 589.0064813541632,
+  "mcap": 3842.5399529162883,
+  "who": "cooker",
+  "r_2x30m": -0.275537352846807
+ },
+ {
+  "m": "6cZt6cN9nbUHYWKxovNLn9BmaPdtrv1FRqLEhGBFpump",
+  "sym": "wormhole",
+  "ts": 1790889692.0,
+  "usd": 1753.0718485988493,
+  "mcap": 81483.9839991324,
+  "who": "cooker",
+  "r_2x30m": -0.96628664925798
+ },
+ {
+  "m": "GyS9Xp8cDRTo5MhTwDoeMX4KQP9wpTpo6euAwZ4hpump",
+  "sym": "HWI6900",
+  "ts": 1790891124.0,
+  "usd": 587.1457696730233,
+  "mcap": 3830.401106906988,
+  "who": "cooker",
+  "r_2x30m": -0.3753442140277279
+ },
+ {
+  "m": "6bQ4MCnJ5rab9pDGR43hbTCf1GabYEVmCP2oLyexSmvC",
+  "sym": "FIX6900",
+  "ts": 1790892921.0,
+  "usd": 1199.445037107969,
+  "mcap": 494573.5970336764,
+  "who": "ohtwoo",
+  "r_2x30m": -0.1687461866810558
+ },
+ {
+  "m": "8TSUhXRhpEFtUVfDFAQdYCwgp2mEbs2jQk7tAYc1pump",
+  "sym": "HUSKY",
+  "ts": 1790893393.0,
+  "usd": 894.7803993872601,
+  "mcap": 19898.89207887781,
+  "who": "tAg911",
+  "r_2x30m": -0.3925792996876859
+ },
+ {
+  "m": "5RPouA3vYSHhnEmrtwvhBsLctZ1K8nHnPosuMXSCpump",
+  "sym": "POC",
+  "ts": 1790893418.0,
+  "usd": 2000.524657,
+  "mcap": 232164.3966239942,
+  "who": "marcell",
+  "r_2x30m": 0.9132047551823599
+ },
+ {
+  "m": "13i7SfDDzg3t4MQnfZNtFKptHpv8HR2eaGRMfetSpump",
+  "sym": "\u718a\u732b",
+  "ts": 1790893515.0,
+  "usd": 894.4294866198799,
+  "mcap": 419075.52491296607,
+  "who": "tAg911",
+  "r_2x30m": 0.030173130702227935
+ },
+ {
+  "m": "AmaYZ68awngmFY5CegqXovmYmHXn66mUEVwzADEdK2Uj",
+  "sym": "Kasi",
+  "ts": 1790894684.0,
+  "usd": 531.4562675698638,
+  "mcap": 6231.420944673248,
+  "who": "tAg911",
+  "r_2x30m": -0.3552172715853166
+ },
+ {
+  "m": "2GU7xJt4M5djAC7az3jzpFr5ApBTJK2e3LWXKrNypump",
+  "sym": "MICROCHIMPS",
+  "ts": 1790896959.0,
+  "usd": 585.7558485232172,
+  "mcap": 67903.96456362652,
+  "who": "cooker",
+  "r_2x30m": -0.24154563422797692
+ },
+ {
+  "m": "3rLbP63g74ugwqpwqTpwsELmRkQR9wnR2fv5mhtGHNZi",
+  "sym": "PHISH",
+  "ts": 1790897625.0,
+  "usd": 2000,
+  "mcap": 153368.41782345154,
+  "who": "marcell",
+  "r_2x30m": 0.02341685563805629
+ },
+ {
+  "m": "AjxqTiS6TnK75xG6pWAMJgNQuhkip3LzN36uy2wBbwmH",
+  "sym": "CLAUDECHAN",
+  "ts": 1790897662.0,
+  "usd": 598.5690473102013,
+  "mcap": 56312.6259563958,
+  "who": "tAg911",
+  "r_2x30m": -0.2659403352467232
+ },
+ {
+  "m": "5zxzU6duesnfLdtAQ4kJPrcPkiFHz3PcbkmZ5QQm5QgN",
+  "sym": "RAMCAT",
+  "ts": 1790897944.0,
+  "usd": 2580.37968,
+  "mcap": 226422.13312695042,
+  "who": "marcell",
+  "r_2x30m": 0.44869276510807143
+ },
+ {
+  "m": "Cip4tBj44UG5SYUzWNE5sdGJdrJvvNJCidg1UY63pump",
+  "sym": "Leo",
+  "ts": 1790899318.0,
+  "usd": 591.7276579816977,
+  "mcap": 3860.2922701509033,
+  "who": "cooker",
+  "r_2x30m": -0.5110243471833407
+ },
+ {
+  "m": "3oGt6EcebsR3VT7oQ8bqBvHqCdLPqQSE9jKaKmGFpump",
+  "sym": "S3XY",
+  "ts": 1790899690.0,
+  "usd": 592.0808381550407,
+  "mcap": 3862.596334655471,
+  "who": "cooker",
+  "r_2x30m": -0.2520446162477443
+ },
+ {
+  "m": "3eatFeezkuKmtVNZgL6TLjNF92FLSgj9FifuxfNMpump",
+  "sym": "attentinu",
+  "ts": 1790900293.0,
+  "usd": 592.905864490904,
+  "mcap": 3867.9786127086327,
+  "who": "cooker",
+  "r_2x30m": -0.23120084658440576
+ },
+ {
+  "m": "91Y7yRfkApdTKURrr1nJ9zffa5S1kKgvVaFNkBgrpump",
+  "sym": "TIT",
+  "ts": 1790900600.0,
+  "usd": 593.4726473266002,
+  "mcap": 3871.676170816623,
+  "who": "cooker",
+  "r_2x30m": -0.5076850663073258
+ },
+ {
+  "m": "3kN7dt9Z7pjNoqsBbxCGB3XnWB4WwCtDH5xJt2P5STNK",
+  "sym": "krill",
+  "ts": 1790901150.0,
+  "usd": 599.0882211109139,
+  "mcap": 20980.133018879376,
+  "who": "tAg911",
+  "r_2x30m": -0.02440273481699684
+ },
+ {
+  "m": "7VertkgF9KLhxxJXHX6uaWuoYZTP9LdGj2bWmVXVpump",
+  "sym": "Agency",
+  "ts": 1790902087.0,
+  "usd": 589.190711027504,
+  "mcap": 114641.50208318967,
+  "who": "cooker",
+  "r_2x30m": -0.38538938060433503
+ },
+ {
+  "m": "FKGdipWTsvD5z8GqRn9uhMAskN7seAp2yR3Ra7Knpump",
+  "sym": "FIX6900",
+  "ts": 1790902460.0,
+  "usd": 840.1003528778341,
+  "mcap": 173050.62196904892,
+  "who": "bonk_guy",
+  "r_2x30m": -0.9752091056115217
+ },
+ {
+  "m": "2ZJFFHDB82SKU5iB7jz9J9fRnQuSD5pgzWKtBhLaEg15",
+  "sym": "ZEROCOIN",
+  "ts": 1790903698.0,
+  "usd": 593.780349692381,
+  "mcap": 77549.9246841104,
+  "who": "sicktuna",
+  "r_2x30m": -0.6565181334547499
+ },
+ {
+  "m": "7cYaQc21w9dzKkGP6LgkqtmL5yzoK5UJE1GeamTRHwny",
+  "sym": "test",
+  "ts": 1790906194.0,
+  "usd": 463.3253667471554,
+  "mcap": 72218.50155548603,
+  "who": "ely",
+  "r_2x30m": 3.064705561656043
+ },
+ {
+  "m": "D98LJdpf4XRxgzWsL8Xd5MtmFiBXyvbzrSWnURnoB75B",
+  "sym": "BUTTER",
+  "ts": 1790907756.0,
+  "usd": 598.4196400816855,
+  "mcap": 102449.38353104724,
+  "who": "sicktuna",
+  "r_2x30m": -0.6342356463129079
+ },
+ {
+  "m": "CrAFB4iZZFP4xoASUE6sBNipdEZqXpYDx4LD5JN4pHy4",
+  "sym": "DOPPLER",
+  "ts": 1790908056.0,
+  "usd": 1184.6640996130577,
+  "mcap": 82248.14501511748,
+  "who": "cooker",
+  "r_2x30m": -0.9244977986678041
+ },
+ {
+  "m": "CnbDp3n7CoqXZ5hci1JDd9gy2bz5BWfnC1WHAR7eQtXa",
+  "sym": "LUCY",
+  "ts": 1790909566.0,
+  "usd": 840.8906819458379,
+  "mcap": 151491.4520063532,
+  "who": "bonk_guy",
+  "r_2x30m": -0.6365873049368882
+ },
+ {
+  "m": "GAwhcphCqCv5bKHmCiN4VDdNWfbXJL4npmkc8L3Q9S9H",
+  "sym": "www",
+  "ts": 1790911462.0,
+  "usd": 847.6738343710923,
+  "mcap": 263511.60819765355,
+  "who": "bonk_guy",
+  "r_2x30m": 1.8338709393191275
+ },
+ {
+  "m": "CNTAufyFmtdij6FFPXNFCgWx2iGuMs9fjF7AJELYhQ7Y",
+  "sym": "Anthropig",
+  "ts": 1790911575.0,
+  "usd": 586.5033572387239,
+  "mcap": 20306.73455202264,
+  "who": "bonk_guy",
+  "r_2x30m": -0.47863039361050064
+ },
+ {
+  "m": "HThm7CgmzkAeX32TQhb6cKhdyvWcCVui9whfgtrfXWL1",
+  "sym": "APP",
+  "ts": 1790911811.0,
+  "usd": 599.8349026040192,
+  "mcap": 41063.80576723172,
+  "who": "sicktuna",
+  "r_2x30m": -0.8376309601097799
+ },
+ {
+  "m": "G6r3zAZ6LrDfacT9TTYLSdFdeEJs2rXpusAXyity8hgk",
+  "sym": "milly",
+  "ts": 1790913237.0,
+  "usd": 604.791336688713,
+  "mcap": 12438.418741330086,
+  "who": "cooker",
+  "r_2x30m": -0.23507780584558025
+ },
+ {
+  "m": "Dwyy2g3vr9V2LEEKNXQDojnPrhfZgbV6VaEAbBcUiKju",
+  "sym": "Gummy",
+  "ts": 1790913308.0,
+  "usd": 604.328357824367,
+  "mcap": 26704.001516829787,
+  "who": "cooker",
+  "r_2x30m": -0.5831369847563586
+ },
+ {
+  "m": "GTb9nbszJPyqqekJ5Q8aGhAN3C28FUGT7aqLvEidpump",
+  "sym": "modder",
+  "ts": 1790914016.0,
+  "usd": 605.2288222880343,
+  "mcap": 3948.37069526214,
+  "who": "cooker",
+  "r_2x30m": -0.43929434861576755
+ },
+ {
+  "m": "5WNKfLK1e69EU5ufUMu5TsxHaeA6n7EEdUUUaKqspump",
+  "sym": "modder",
+  "ts": 1790914032.0,
+  "usd": 604.6611250801822,
+  "mcap": 3944.66717200495,
+  "who": "cooker",
+  "r_2x30m": -0.029640816928609537
+ },
+ {
+  "m": "SadFNaxi3FocLQn8ViKQh5kzy1Km9XqNBrLtrcMeypJ",
+  "sym": "00",
+  "ts": 1790914530.0,
+  "usd": 603.5289252759583,
+  "mcap": 116167.0168966162,
+  "who": "ely",
+  "r_2x30m": -0.6173871916193416
+ },
+ {
+  "m": "CNohWHNTurS7PpB55czspwUJfpk9yy92uf1wXdweEGg9",
+  "sym": "CATGPT",
+  "ts": 1790914867.0,
+  "usd": 1203.94373410927,
+  "mcap": 256979.95277163063,
+  "who": "cooker",
+  "r_2x30m": 0.8677669651564931
+ },
+ {
+  "m": "DUhWgHD3KgHHmsYdQdJHDv359bySNzigYcqJ45Gcpump",
+  "sym": "Grrr",
+  "ts": 1790916682.0,
+  "usd": 1500,
+  "mcap": 214271.74199733316,
+  "who": "sicktuna",
+  "r_2x30m": -0.029126213592232997
+ },
+ {
+  "m": "6d82cCtC1LktWWgjUz5h3vMenFj5EDHLMBFvcpmvrRi",
+  "sym": "shoggoth",
+  "ts": 1790917435.0,
+  "usd": 736.8842438882464,
+  "mcap": 216994.79704913835,
+  "who": "cooker",
+  "r_2x30m": 0.2607580146041629
+ },
+ {
+  "m": "9txCZaqYaQ62nFVcEWhosWx3vTMcJMFP5YYXQ5yhBAGS",
+  "sym": "Life",
+  "ts": 1790927500.0,
+  "usd": 1211.0769361780362,
+  "mcap": 348057.7375400684,
+  "who": "cooker",
+  "r_2x30m": -0.2388046990557664
+ },
+ {
+  "m": "68RUKJSkhT7Z9itn2tUhCzR7t2pbBahqjgG8qbkB5Dux",
+  "sym": "SGI",
+  "ts": 1790935401.0,
+  "usd": 1233.1214810891947,
+  "mcap": 207746.1848244502,
+  "who": "tvdj",
+  "r_2x30m": 0.7932527364632818
+ },
+ {
+  "m": "EFvdLptvhf8nG9rzzgtuVMguHvSKjLH5Gmt1bZp77kVA",
+  "sym": "SAM",
+  "ts": 1790935897.0,
+  "usd": 859.6011341850491,
+  "mcap": 127299.37138321508,
+  "who": "bonk_guy",
+  "r_2x30m": 0.499404859831998
+ },
+ {
+  "m": "2shsT2KMGVsF3LURpkgzf3GucFizCwsmkF9DUeWgpump",
+  "sym": "RAPE",
+  "ts": 1790936040.0,
+  "usd": 826.7766829999999,
+  "mcap": 212627.97426742341,
+  "who": "tvdj",
+  "r_2x30m": -0.2564787444610621
+ },
+ {
+  "m": "2o1vfBqdoCbVfdaVAKuCqmPKRrVRTR3hJ1QQryQjvjNV",
+  "sym": "AGENTCAT",
+  "ts": 1790939827.0,
+  "usd": 518.5464599384725,
+  "mcap": 139157.06317746852,
+  "who": "tvdj",
+  "r_2x30m": -0.5568438939281162
+ },
+ {
+  "m": "Ban1QaquJCpWkZXMneVBqVBkqeBTFYQqZRkco2CYpump",
+  "sym": "Botizens",
+  "ts": 1790941654.0,
+  "usd": 600,
+  "mcap": 24174.13057684115,
+  "who": "RoaringKitty(pump)",
+  "r_2x30m": -0.671008552083454
+ },
+ {
+  "m": "CatC9AGUGTKLMnfitbDNd8viWh9tStTm2LTwo8MwRf9p",
+  "sym": "W&T",
+  "ts": 1790941983.0,
+  "usd": 567.9915508589503,
+  "mcap": 9238.03200262679,
+  "who": "tAg911",
+  "r_2x30m": -0.026044710549341876
+ },
+ {
+  "m": "AJPertGGMDmM75fb6jiB8MPfFu61ouLDtW6UBvf3pump",
+  "sym": "BRUME",
+  "ts": 1790942317.0,
+  "usd": 500,
+  "mcap": 65409.68791940766,
+  "who": "RoaringKitty(pump)",
+  "r_2x30m": 0.41818485588439075
+ },
+ {
+  "m": "8m5hzX9hprtWwPuVZL4daCZfggWYKc6fhSJDDpiqpump",
+  "sym": "Kirkslop",
+  "ts": 1790942325.0,
+  "usd": 1948.3053158624205,
+  "mcap": 96541.91582772811,
+  "who": "Dior",
+  "r_2x30m": -0.28731636385863435
+ },
+ {
+  "m": "29qpqJsxKHYFg54HhcM82GxAeHvJgMKkGS8n7SysQCu4",
+  "sym": "twap",
+  "ts": 1790943432.0,
+  "usd": 596.0006454427873,
+  "mcap": 25724.03363519958,
+  "who": "tAg911",
+  "r_2x30m": -0.8695537220663121
+ },
+ {
+  "m": "5tCju6YNxHq5zrA6tGndr6F7TK42mpUFmeE31cSFpump",
+  "sym": "swordcat",
+  "ts": 1790943801.0,
+  "usd": 5000.186752,
+  "mcap": 486309.9129402767,
+  "who": "marcell",
+  "r_2x30m": -0.2595992153169391
+ },
+ {
+  "m": "GhAP9Tb8RADFhxpAbyz96VFG8vGUzhMaPLMa38DvQFn2",
+  "sym": "Giko",
+  "ts": 1790944740.0,
+  "usd": 618.5068592046428,
+  "mcap": 79310.81777156676,
+  "who": "tAg911",
+  "r_2x30m": -0.2914361786013556
+ },
+ {
+  "m": "8oMvxgcBJtDGNSc8kogCEEFxSvvi7x6jHRfSWaiWpump",
+  "sym": "DOMAIN",
+  "ts": 1790948999.0,
+  "usd": 1736.8594353406882,
+  "mcap": 261149.02318076385,
+  "who": "tAg911",
+  "r_2x30m": 0.06902275262740099
+ },
+ {
+  "m": "pFftuUXhSNjVa1qZ8c9Ew6CQ7WNaoafWeh8SokvnXMx",
+  "sym": "LAL",
+  "ts": 1790949189.0,
+  "usd": 612.1578893628284,
+  "mcap": 229586.44921417194,
+  "who": "coreyape",
+  "r_2x30m": -0.010123691391633605
+ },
+ {
+  "m": "A2JpqSvbvcpZvCgzLeYBoZJs925zjcDU1cx8DQtsVEPC",
+  "sym": "si.gov",
+  "ts": 1790949454.0,
+  "usd": 609.6739088411641,
+  "mcap": 106671.80283616732,
+  "who": "coreyape",
+  "r_2x30m": 0.16300543555323654
+ },
+ {
+  "m": "GjrhXcr8YzUZBbu5rifdqM5CPBS4LFJveq3ZiY2u3g5G",
+  "sym": "Meridian",
+  "ts": 1790949763.0,
+  "usd": 940.800876756901,
+  "mcap": 287025.25956560357,
+  "who": "sicktuna",
+  "r_2x30m": -0.046357378990249276
+ },
+ {
+  "m": "7CTRbkV1tVuq1f59pRxT1Pb2W5AHG4gM9FMH4rGzKiXv",
+  "sym": "si.gov",
+  "ts": 1790949942.0,
+  "usd": 489.56780111971455,
+  "mcap": 45290.52568624157,
+  "who": "ely",
+  "r_2x30m": 4.469242685586006
+ },
+ {
+  "m": "EqUtQWhu2eL1XyGzoTVHywRJobdHHWM3Njq11v33pump",
+  "sym": "BOMBINU",
+  "ts": 1790958570.0,
+  "usd": 599.8642912594543,
+  "mcap": 3913.3737547215424,
+  "who": "cooker",
+  "r_2x30m": -0.1263476782995565
+ },
+ {
+  "m": "8NonktwTZYbhy7gDuiX9JWqxohduGbfG5RedVDxPpump",
+  "sym": "BOMBINU",
+  "ts": 1790959236.0,
+  "usd": 597.9644597273518,
+  "mcap": 3900.979699992077,
+  "who": "cooker",
+  "r_2x30m": -0.07986563592038731
+ },
+ {
+  "m": "2VkW5g9vPrzRD5US9i14aRrBUH92MTRBEW7tyJwMpump",
+  "sym": "Karen",
+  "ts": 1790959266.0,
+  "usd": 597.9538790905345,
+  "mcap": 3900.910674402402,
+  "who": "cooker",
+  "r_2x30m": -0.8025405401146762
+ },
+ {
+  "m": "8TfuB8nRFiG6aA3FRm5U8u8zZdrTrCJ1KrFP6SWbpump",
+  "sym": "Zakura",
+  "ts": 1790959420.0,
+  "usd": 598.3345429002082,
+  "mcap": 3903.3940356957064,
+  "who": "cooker",
+  "r_2x30m": -0.27414965284178705
+ },
+ {
+  "m": "DbRL5KRAun9g4CWs2MVZsitxee61CapEBgx17WzQjpYG",
+  "sym": "Dan",
+  "ts": 1790959478.0,
+  "usd": 598.7540256487442,
+  "mcap": 21613.612888222055,
+  "who": "cooker",
+  "r_2x30m": 0.008602636107379213
+ },
+ {
+  "m": "BXksgv1rJR5NvD9avnc6RpzRoT9mHsQEPrYoPBQ1P784",
+  "sym": "UNDERDOG",
+  "ts": 1790960578.0,
+  "usd": 606.9902068989694,
+  "mcap": 26767.50501726953,
+  "who": "tAg911",
+  "r_2x30m": -0.14716229682247017
+ },
+ {
+  "m": "7aq3pFdTDpETME7KL2Kqdd5uGd4LxpGLBKYBberUpump",
+  "sym": "Trojan",
+  "ts": 1790960703.0,
+  "usd": 600.1480704438923,
+  "mcap": 3915.2250634737015,
+  "who": "cooker",
+  "r_2x30m": -0.058982178238001115
+ },
+ {
+  "m": "fJ5tNJQzyaGbx9oiz2MTdpP6ZRRgcaTM9AesKReCZWC",
+  "sym": "PONK",
+  "ts": 1790960831.0,
+  "usd": 1199.1959397611286,
+  "mcap": 72807.16080424414,
+  "who": "cooker",
+  "r_2x30m": 0.16303573102868651
+ },
+ {
+  "m": "7hLzF2ahWJKwRNrW4jGSteWBGWJ2eVMBi6BJFvaquant",
+  "sym": "QUANT",
+  "ts": 1790960961.0,
+  "usd": 500,
+  "mcap": 280083.21105754905,
+  "who": "RoaringKitty(pump)",
+  "r_2x30m": -0.9868061703568225
+ },
+ {
+  "m": "3DDRQKuy5fvhDREZ7gtznRthFHdJWVLRAaCAmJeNMjHH",
+  "sym": "PONK",
+  "ts": 1790960963.0,
+  "usd": 606.6125857576325,
+  "mcap": 22102.477052856946,
+  "who": "tAg911",
+  "r_2x30m": -0.9132473347772757
+ },
+ {
+  "m": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+  "sym": "Bonk",
+  "ts": 1790961058.0,
+  "usd": 1199.859174367897,
+  "mcap": 3826.0255371087133,
+  "who": "cooker",
+  "r_2x30m": -0.040843550345644686
+ },
+ {
+  "m": "ETXqxfVoPN9f1qX1EV9qPWNqYuu5TUUUXMUM4SsniJga",
+  "sym": "COZY",
+  "ts": 1790961130.0,
+  "usd": 719.3505215707576,
+  "mcap": 81329.5946914669,
+  "who": "coreyape",
+  "r_2x30m": -0.7640269655479189
+ },
+ {
+  "m": "5jXeeKg9PruQB1YxKuaUsUbhUuGKuvMUSFaDFLyrHxVb",
+  "sym": "HODL",
+  "ts": 1790964142.0,
+  "usd": 846.4205707847782,
+  "mcap": 100463.47454308241,
+  "who": "bonk_guy",
+  "r_2x30m": -0.650492720825834
+ },
+ {
+  "m": "EvWBcuTu2rDt3usyX49tiPBhA11miaRvXQiecFFspump",
+  "sym": "Ghidorah",
+  "ts": 1790964348.0,
+  "usd": 598.4522242050155,
+  "mcap": 11186.228887319061,
+  "who": "cooker",
+  "r_2x30m": -0.711653674223873
+ },
+ {
+  "m": "HfbdLsFm9tZWiNa1WG3jxaTPMkxzSNF2caVQqhZ9R69w",
+  "sym": "APP",
+  "ts": 1790964656.0,
+  "usd": 1793.6740630182856,
+  "mcap": 91243.06348072253,
+  "who": "cooker",
+  "r_2x30m": -0.001793497248382403
+ },
+ {
+  "m": "EVCx8yhknFxZ7MnYRK1LEmL4ycxBKHxSSZ8Gyyaopump",
+  "sym": ">_",
+  "ts": 1790966378.0,
+  "usd": 496.693668202763,
+  "mcap": 258741.6674714851,
+  "who": "ohtwoo",
+  "r_2x30m": -0.927608100359999
+ },
+ {
+  "m": "5SGN2VRgWGFnWT6Ghrz6y9BWCsU84hCbziyPArbn2Xcc",
+  "sym": "RUI",
+  "ts": 1790966856.0,
+  "usd": 574.0821951962963,
+  "mcap": 14611.528430958555,
+  "who": "bonk_guy",
+  "r_2x30m": -0.76465826102166
+ },
+ {
+  "m": "D52weBQ119STxZ5tqoM3RxR2E9to3JxKjw4vFd9vsQtP",
+  "sym": "Turtle",
+  "ts": 1790968023.0,
+  "usd": 592.0016521645323,
+  "mcap": 10406.929169709938,
+  "who": "cooker",
+  "r_2x30m": -0.0875094960445455
+ },
+ {
+  "m": "9kpHmcAjabZksyon8KVA2FQPyp9kMtLiTRaFGRTkmqd",
+  "sym": "clout",
+  "ts": 1790968736.0,
+  "usd": 712.8659786619089,
+  "mcap": 122621.82217386611,
+  "who": "tvdj",
+  "r_2x30m": -0.9506297187036924
+ },
+ {
+  "m": "ChbVsh6prPJaLf1Gj3jgY74rg2NXryFwfkoijPwnSN15",
+  "sym": "Airling",
+  "ts": 1790968986.0,
+  "usd": 588.6487124251026,
+  "mcap": 32660.600229421438,
+  "who": "cooker",
+  "r_2x30m": -0.6332860591161393
+ },
+ {
+  "m": "H6GTMNmNdpUP9ryaep5UJHjhJ28mhQxyHF1Ey6PuABW5",
+  "sym": "CUMMUNITY",
+  "ts": 1790970691.0,
+  "usd": 543.2640264443125,
+  "mcap": 85433.39358375203,
+  "who": "tAg911",
+  "r_2x30m": -0.9564516510770493
+ },
+ {
+  "m": "653E1DJLYARUtSWy8k48pqDjfBK9Ujefrix7nZt3Fe4a",
+  "sym": "CUMMUNITY",
+  "ts": 1790970711.0,
+  "usd": 1823.8391692576297,
+  "mcap": 15583.93933301278,
+  "who": "tAg911",
+  "r_2x30m": -0.9527823724129979
+ },
+ {
+  "m": "7ya9MXQWEYLudtHg8aE1zqqRTC51PQcu5LADwVrYe4VR",
+  "sym": "USEFUL",
+  "ts": 1790970726.0,
+  "usd": 548.5432630203571,
+  "mcap": 37733.40942453972,
+  "who": "tAg911",
+  "r_2x30m": -0.9344946472938637
+ },
+ {
+  "m": "CSuuyqvVDYhQdrqv34xmVSjjHRJEa1GsyddW2htMw6sh",
+  "sym": "si",
+  "ts": 1790970896.0,
+  "usd": 548.1049235366435,
+  "mcap": 44260.025852847764,
+  "who": "tAg911",
+  "r_2x30m": -0.904923327950873
+ },
+ {
+  "m": "28nL48UNhtT3CaqzbsNJEeqrai5qYFG1uFkbmVabQvXm",
+  "sym": "BATMAN",
+  "ts": 1790972125.0,
+  "usd": 596.0596833477547,
+  "mcap": 23643.546289028585,
+  "who": "bonk_guy",
+  "r_2x30m": 0.12975460400654582
+ },
+ {
+  "m": "HZ4qZQJ7yf6WR1D24GLRLJ3cKUfgtJEF3B7SdLMLvCPZ",
+  "sym": "9e9",
+  "ts": 1790972127.0,
+  "usd": 2358.4423506479784,
+  "mcap": 70078.34201489878,
+  "who": "cooker",
+  "r_2x30m": 0.5023088685322461
+ },
+ {
+  "m": "5gJjJYGu25aQevcpsBgBFvLcCRfSPcvczcxvnqHDpump",
+  "sym": "bag",
+  "ts": 1790972194.0,
+  "usd": 590.3120337454303,
+  "mcap": 166595.6841029585,
+  "who": "coreyape",
+  "r_2x30m": -0.5292491064350782
+ },
+ {
+  "m": "2TVBshvdBthnjt5orazEEM12QCwQCX6aUDLxMVYXpump",
+  "sym": "PUMPIN",
+  "ts": 1790976080.0,
+  "usd": 500.559192,
+  "mcap": 30571.70795408828,
+  "who": "RoaringKitty(pump)",
+  "r_2x30m": -0.02276346862028855
+ },
+ {
+  "m": "F81DvXEAiAVxtzCcLbw1n5MJSdwgzdXc4WPxmh3Kpump",
+  "sym": "lever",
+  "ts": 1790979102.0,
+  "usd": 600,
+  "mcap": 67191.53661080977,
+  "who": "RoaringKitty(pump)",
+  "r_2x30m": -0.9656741589991791
+ },
+ {
+  "m": "5FKPLjhNrez3iu2oSKfFjy6kNxRVf2jL1jc8dAwCbu9E",
+  "sym": "STUPIDINU",
+  "ts": 1790980176.0,
+  "usd": 839.6616201535463,
+  "mcap": 149872.69543845652,
+  "who": "bonk_guy",
+  "r_2x30m": 0.644846459470113
+ },
+ {
+  "m": "pitFjojnHMEPfQ8QpBTM1LkXb8BzJdbTLH8tWUViVze",
+  "sym": "Pitcoin",
+  "ts": 1790980595.0,
+  "usd": 598.5462458976344,
+  "mcap": 50793.67051675278,
+  "who": "tAg911",
+  "r_2x30m": -0.7828504467122015
+ },
+ {
+  "m": "9kXG537MZvtTBUieRvrye9KG93FbA25QAk7zf5oYpump",
+  "sym": "blocus",
+  "ts": 1790980792.0,
+  "usd": 578.6446806854618,
+  "mcap": 14583.913997685197,
+  "who": "tAg911",
+  "r_2x30m": 0.004667420362403529
+ },
+ {
+  "m": "46YzZrL66v9Ddo4zxFxwTXCe3i34gGjWNyiHSdE6swap",
+  "sym": "SWAP",
+  "ts": 1790991725.0,
+  "usd": 1790.6640411574042,
+  "mcap": 160673.48114503885,
+  "who": "cooker",
+  "r_2x30m": 0.6816431568651187
+ },
+ {
+  "m": "7MDuCjQxUgfVjnLn96dYzMdoc43mUVz37R6gMkiKpump",
+  "sym": "RICKATONI",
+  "ts": 1790995512.0,
+  "usd": 595.7142563419201,
+  "mcap": 20381.801977667335,
+  "who": "cooker",
+  "r_2x30m": -0.2833276434522737
+ },
+ {
+  "m": "GK5xmYzh6axzYKRwWH56pbXvaUDVNdJBFJ2pD7Papump",
+  "sym": "PENIS",
+  "ts": 1790999132.0,
+  "usd": 596.1339191188043,
+  "mcap": 110352.52043069391,
+  "who": "Dior",
+  "r_2x30m": -0.08087308878642085
+ },
+ {
+  "m": "noe8gCxGXVcqZ3fCo8pStcEgfm71t2c2ef5FRx6pump",
+  "sym": "PUDU",
+  "ts": 1791002337.0,
+  "usd": 594.80901549346,
+  "mcap": 3880.394322883742,
+  "who": "cooker",
+  "r_2x30m": -0.5640140722224685
+ },
+ {
+  "m": "H8WTvo3ZXSYHJAcYqzCforbG8coR1FDAX2kHFfqHBAGS",
+  "sym": "BAGSPAY",
+  "ts": 1791025479.0,
+  "usd": 1000.182447,
+  "mcap": 222109.42143841652,
+  "who": "HarryPaulDavies",
+  "r_2x30m": 0.12883279745223475
+ },
+ {
+  "m": "ACsCLMEansgeMK8GnvCoJN3UhYbu4wDRxGrztqrJVtB5",
+  "sym": "\u3164\u3164",
+  "ts": 1791027001.0,
+  "usd": 536.7666865301495,
+  "mcap": 43045.90598052444,
+  "who": "Dior",
+  "r_2x30m": -0.924853047187886
+ },
+ {
+  "m": "Bf9i7oG8We16XBtgeAnNB9rDBnmCZPW37P7b6a9Hpump",
+  "sym": "KIN",
+  "ts": 1791032819.0,
+  "usd": 956.3503580373988,
+  "mcap": 155012.4976909954,
+  "who": "coreyape",
+  "r_2x30m": 0.6313614101338925
+ },
+ {
+  "m": "Bt4npH7BNNGLBohhbcrybbkUn6RUJJzJbvnd4hznnMYJ",
+  "sym": "RFX",
+  "ts": 1791033057.0,
+  "usd": 1433.1190043909987,
+  "mcap": 199449.13116230402,
+  "who": "coreyape",
+  "r_2x30m": 0.15666485663780239
+ },
+ {
+  "m": "5E8FaxMZnRJTvAKm1U8Ne7LAbQhWdYMa8fNNhrL7pump",
+  "sym": "ICHI-COIN",
+  "ts": 1791034496.0,
+  "usd": 584.1634659554104,
+  "mcap": 20821.73735975112,
+  "who": "bonk_guy",
+  "r_2x30m": -0.8021332619965071
+ },
+ {
+  "m": "ChTjXh6W78twtutzMi1kNpRTMjYjUmzMPicaGH1Dpump",
+  "sym": "RUSS",
+  "ts": 1791036930.0,
+  "usd": 595.9329884551719,
+  "mcap": 3887.726858514668,
+  "who": "cooker",
+  "r_2x30m": -0.17980009368822025
+ },
+ {
+  "m": "DTpZo8EbCLsp98cxSmN146jjqmWnewDsypvjASVdpump",
+  "sym": "ALTCOIN",
+  "ts": 1791036952.0,
+  "usd": 595.9329884551719,
+  "mcap": 3887.726858514668,
+  "who": "cooker",
+  "r_2x30m": -0.24519482442936513
+ },
+ {
+  "m": "6FhVPctYg363pQbs4iSvqyHe2cJzfsvFD96gePy6pump",
+  "sym": "EXFIL",
+  "ts": 1791036967.0,
+  "usd": 869.1281137494504,
+  "mcap": 65737.84476275687,
+  "who": "coreyape",
+  "r_2x30m": 0.019037005267417362
+ },
+ {
+  "m": "EKgswaMnRSJHmyFZCbxscTAjiR2bH1oLXsftepUGsPtz",
+  "sym": "CUPTOBER",
+  "ts": 1791037139.0,
+  "usd": 596.2363423391249,
+  "mcap": 21257.81477603847,
+  "who": "cooker",
+  "r_2x30m": -0.2387040698068449
+ },
+ {
+  "m": "7F3EReXssjgzPxy6jwHEZhvAeVnnRQPNpdZ16thrpump",
+  "sym": "Spider",
+  "ts": 1791037430.0,
+  "usd": 596.5486478312406,
+  "mcap": 38621.56258512747,
+  "who": "cooker",
+  "r_2x30m": -0.8710141829066781
+ },
+ {
+  "m": "J9d68or9ZrCLAw6eYFo56KgykEnHkPkqnvZQnTLQfKUm",
+  "sym": "Encyclopedia",
+  "ts": 1791039102.0,
+  "usd": 2989.668059544493,
+  "mcap": 233821.70179480404,
+  "who": "cooker",
+  "r_2x30m": 1.2247282988829187
+ },
+ {
+  "m": "C7R6hKBnW64z5zfpJpHEukEgt7pZudYakx7cyAyJBqJc",
+  "sym": "JOSE",
+  "ts": 1791042960.0,
+  "usd": 598.3665605249734,
+  "mcap": 9358.275989168744,
+  "who": "cooker",
+  "r_2x30m": 0.19943599016929336
+ },
+ {
+  "m": "FAXYAKCRXMR8tghJR15JiENyQNq1A6ZE7sCFwoR7pump",
+  "sym": "ponk",
+  "ts": 1791044396.0,
+  "usd": 1195.6872068054706,
+  "mcap": 22021.790439452136,
+  "who": "cooker",
+  "r_2x30m": 0.15611378578615104
+ },
+ {
+  "m": "F8hLnS4YwJ46ve9miPg1z3rqMLfDJqbgyvGUafYtJkkr",
+  "sym": "Gabriele",
+  "ts": 1791047662.0,
+  "usd": 500,
+  "mcap": 100940.013329016,
+  "who": "ohtwoo",
+  "r_2x30m": -0.6160146124174404
+ },
+ {
+  "m": "G3VSWEnwQzv19DEgQJVDWT4mZVd7M3aJiDPafu2RxWdF",
+  "sym": "PORK",
+  "ts": 1791049032.0,
+  "usd": 585.7389295894959,
+  "mcap": 24712.48188143703,
+  "who": "bonk_guy",
+  "r_2x30m": -0.3773212368075063
+ },
+ {
+  "m": "7W3Xj6whAhPNYHK313z3j6sQFBQjnB6dUmmf8oLdpump",
+  "sym": "T-Sol",
+  "ts": 1791054453.0,
+  "usd": 598.7987955105234,
+  "mcap": 58423.68142294164,
+  "who": "cooker",
+  "r_2x30m": -0.1943683136677632
+ },
+ {
+  "m": "7E3aKUz4Dob3Csgh7nwrZQiCDJsgRch6ygcVERHUr7Vy",
+  "sym": "PINGPONG",
+  "ts": 1791054620.0,
+  "usd": 598.8014825544939,
+  "mcap": 24254.754375301363,
+  "who": "cooker",
+  "r_2x30m": -0.5494353814686359
+ },
+ {
+  "m": "H8mbCUwP4L7v1ZFkN8N9aLzgEVZTFr1vx3s5NKPRpump",
+  "sym": "CLOAK",
+  "ts": 1791054742.0,
+  "usd": 598.805658559947,
+  "mcap": 18451.164982014096,
+  "who": "cooker",
+  "r_2x30m": -0.9132570666139621
+ },
+ {
+  "m": "DdLAc65EoiqmWN5ovfTsWUQZyYPQt5y3NK42BJrupump",
+  "sym": "Sirius",
+  "ts": 1791061959.0,
+  "usd": 478.52418519716906,
+  "mcap": 226160.46069522176,
+  "who": "sicktuna",
+  "r_2x30m": 0.03991458600644071
+ },
+ {
+  "m": "8BJu7kgjRtPKsreF6n5yrSttU2pufYAPJSWmaY8Jdare",
+  "sym": "DARE",
+  "ts": 1791064290.0,
+  "usd": 450,
+  "mcap": 304702.6937551098,
+  "who": "ohtwoo",
+  "r_2x30m": -0.19024377643936885
+ },
+ {
+  "m": "AYLavJzDYKaif3gKVa56u2V7iQpMg8kkQRagLJ4bAote",
+  "sym": "DIT",
+  "ts": 1791068682.0,
+  "usd": 598.507564620689,
+  "mcap": 19277.494069206343,
+  "who": "cooker",
+  "r_2x30m": -0.4150717794554658
+ },
+ {
+  "m": "6hTLdzZaaCjmqtn7RtaEMQsCbXT5Pg8q76tRViEGpump",
+  "sym": "ABU",
+  "ts": 1791070372.0,
+  "usd": 3000.368044,
+  "mcap": 346334.1207530264,
+  "who": "marcell",
+  "r_2x30m": 0.19492553363454257
+ },
+ {
+  "m": "CpRkPw9M2iMDUozQFvkEeAjGJWucbLCJw3m3vZqdpump",
+  "sym": "BRIDGE",
+  "ts": 1791073684.0,
+  "usd": 1799.5169229110538,
+  "mcap": 143341.77111272683,
+  "who": "cooker",
+  "r_2x30m": -0.34324385417025993
+ },
+ {
+  "m": "FaFzuv1acGXXZ5HVBgL124ZxB93SCv9K4RrCeWRXtN35",
+  "sym": "unlucki",
+  "ts": 1791074514.0,
+  "usd": 540.029051512381,
+  "mcap": 12931.922985909114,
+  "who": "tAg911",
+  "r_2x30m": 0.26086940683362253
+ },
+ {
+  "m": "86PvZw3iGbfbnCnMbJqDBUaci7uEF23qFHo7t6jBGqxQ",
+  "sym": "STIMMY",
+  "ts": 1791085313.0,
+  "usd": 605.158902252018,
+  "mcap": 20043.28251607826,
+  "who": "ely",
+  "r_2x30m": 1.0606046866872183
+ },
+ {
+  "m": "582qXnuvygV4HNZkktuqx6Uomgt8Kt8AwHDBt8SRS3gZ",
+  "sym": "SPLICECAT",
+  "ts": 1791088598.0,
+  "usd": 482.91960109813044,
+  "mcap": 39343.45822690145,
+  "who": "ely",
+  "r_2x30m": -0.26862100994183724
+ },
+ {
+  "m": "Ed1ZM5GB39Y7VF2gMX8CNmNNjKg9VtuuHxJ1yPRqeUob",
+  "sym": "NPC",
+  "ts": 1791093063.0,
+  "usd": 604.6213536966432,
+  "mcap": 41628.71456153022,
+  "who": "Dior",
+  "r_2x30m": -0.0633343785226006
+ },
+ {
+  "m": "2CZJzBoeS17uAQbAdBcrkpEJjPixEcsFvJAhwRV9pump",
+  "sym": "Reelpad",
+  "ts": 1791100027.0,
+  "usd": 854.8215428894893,
+  "mcap": 229816.90273444718,
+  "who": "bonk_guy",
+  "r_2x30m": 0.05293579038726515
+ },
+ {
+  "m": "HGKEwiD1kJVae2rVDkeevn3JRxzPSukHkJLhAxMMNPK4",
+  "sym": "XSI",
+  "ts": 1791104543.0,
+  "usd": 2177.6302865090365,
+  "mcap": 80032.18186337888,
+  "who": "Dior",
+  "r_2x30m": 0.4218915447567762
+ },
+ {
+  "m": "H9UXqmP1ivwSTbby8PnmwjG5oY9HnjrV6ZGCkjcMLwsB",
+  "sym": "SI",
+  "ts": 1791105476.0,
+  "usd": 500.195505,
+  "mcap": 75735.70765521761,
+  "who": "RoaringKitty(pump)",
+  "r_2x30m": 1.457607515491535
+ },
+ {
+  "m": "75gGuxuqKhQQiHae8JKDQaetK3XguKf1rUJ1csispump",
+  "sym": "Attention+",
+  "ts": 1791107262.0,
+  "usd": 2000.185638,
+  "mcap": 178936.34029315232,
+  "who": "HarryPaulDavies",
+  "r_2x30m": -0.07150920381551973
+ },
+ {
+  "m": "7Gk8JYXC3sKw6frH37sVeXhwYZZ3246zXr7UXGCpump",
+  "sym": "cap",
+  "ts": 1791117020.0,
+  "usd": 729.0004824733999,
+  "mcap": 46249.80281227064,
+  "who": "Dior",
+  "r_2x30m": -0.8843688382773532
+ },
+ {
+  "m": "BgNZw6VxzYoS6AHjhpv2S54wGUv5MWeANPkoU2KPTM1G",
+  "sym": "DIT",
+  "ts": 1791117810.0,
+  "usd": 1215.0176892362363,
+  "mcap": 57760.25478158958,
+  "who": "Dior",
+  "r_2x30m": 0.7884425918693277
+ },
+ {
+  "m": "FgGwBhF9fpyTR25gzuzDsaf2STRdTqCV2GiL8ZYj3rYr",
+  "sym": "SIF",
+  "ts": 1791117933.0,
+  "usd": 485.86473170004814,
+  "mcap": 181666.4652535251,
+  "who": "sicktuna",
+  "r_2x30m": -0.046028242357743165
+ },
+ {
+  "m": "G6autZruJLEzYKRh84qTsbVhrTvLEbjBYdHnBQH1zitp",
+  "sym": "backpack",
+  "ts": 1791120050.0,
+  "usd": 1700.238412250138,
+  "mcap": 165094.17805787243,
+  "who": "tAg911",
+  "r_2x30m": 0.004026848876881761
+ },
+ {
+  "m": "6rXCb1aK833n9Xy5Y6VPXpScNAuzQzu3jvSUs6cN2RGy",
+  "sym": "GG",
+  "ts": 1791121155.0,
+  "usd": 1217.3952282806983,
+  "mcap": 59733.687045041195,
+  "who": "Dior",
+  "r_2x30m": 0.5463853471624329
+ },
+ {
+  "m": "AXxRj2uiUPq8ggiRPD8EdYzbj1vKQxuxtFDAQHPkpump",
+  "sym": "Build",
+  "ts": 1791124458.0,
+  "usd": 1823.5615584958766,
+  "mcap": 145048.88977291662,
+  "who": "cooker",
+  "r_2x30m": -0.49052971930206846
+ },
+ {
+  "m": "8BCVKvFBRSwfkdq94Kcw46W6g7cWLJCtM3xxmxiZHVJ8",
+  "sym": "BUTTONS",
+  "ts": 1791124779.0,
+  "usd": 485.95420343157144,
+  "mcap": 38973.704629047665,
+  "who": "ely",
+  "r_2x30m": 0.015978080983088283
+ },
+ {
+  "m": "HTTixgiUqGxesiGWtasmRv1hBGAtPLb9kHdz53RSpump",
+  "sym": "MEMIND",
+  "ts": 1791125072.0,
+  "usd": 1214.1870286077008,
+  "mcap": 21507.82522806411,
+  "who": "cooker",
+  "r_2x30m": -0.9106558892039323
+ },
+ {
+  "m": "8WgADYqGpfzVhYWt4mV8UReTQVddqcTzCcYGxa4Upump",
+  "sym": "CHORUS",
+  "ts": 1791125697.0,
+  "usd": 607.8501246306055,
+  "mcap": 11897.191899662677,
+  "who": "cooker",
+  "r_2x30m": 0.2287192585217691
+ },
+ {
+  "m": "FyHsX7zpFFMcU6FghgM6ZBs2jgzwSgkQ5whnJitwNGhq",
+  "sym": "TOGI",
+  "ts": 1791125865.0,
+  "usd": 922.2670361640169,
+  "mcap": 22137.15038641742,
+  "who": "tAg911",
+  "r_2x30m": -0.8264057816412281
+ },
+ {
+  "m": "HmuvHCDA7MjAxKr2BrARGhsWcxKotADopeLjcUTnGHt5",
+  "sym": "SIF",
+  "ts": 1791126284.0,
+  "usd": 1829.9769111868764,
+  "mcap": 98368.26535968728,
+  "who": "cooker",
+  "r_2x30m": -0.04232414230571413
+ },
+ {
+  "m": "EwRUjNjG55XUTYDgyvLVrjzmLSBAH6k6xNyiXu58y7x5",
+  "sym": "MENTOR",
+  "ts": 1791130728.0,
+  "usd": 1215.773626625498,
+  "mcap": 67210.81888538106,
+  "who": "Dior",
+  "r_2x30m": 0.1567183464015205
+ },
+ {
+  "m": "4qCW74oX82oTeypDzFYYYZ6eJ6yPQVFeX196YpHszJFY",
+  "sym": "SI",
+  "ts": 1791130829.0,
+  "usd": 565.6337501913526,
+  "mcap": 6268.214175124415,
+  "who": "tAg911",
+  "r_2x30m": -0.029874896830252573
+ },
+ {
+  "m": "83LFceyzRNNRUThm4VzHx4jmVuf6xAggSp2UvhQx52Dy",
+  "sym": "Inu",
+  "ts": 1791130830.0,
+  "usd": 565.4658627898508,
+  "mcap": 49390.248390038374,
+  "who": "tAg911",
+  "r_2x30m": -0.2648351528499834
+ },
+ {
+  "m": "6rABod219WPTi6hQJLjEMsTZa2ZKXz5f5H6YdNneJkKZ",
+  "sym": "ETHAN",
+  "ts": 1791131351.0,
+  "usd": 546.3089863929631,
+  "mcap": 7042.072859088533,
+  "who": "tAg911",
+  "r_2x30m": 0.2592081151642286
+ },
+ {
+  "m": "6o8QVhkARAchGLeNSfH82juqLzTYNLWzRDfVUi2FUmvM",
+  "sym": "Army",
+  "ts": 1791131794.0,
+  "usd": 614.9766640081031,
+  "mcap": 121561.33449121434,
+  "who": "tAg911",
+  "r_2x30m": 1.4664010972136894
+ },
+ {
+  "m": "AXY9AY3dfsybAP9LfYWPYqaFHTE9vUGTiCBiqnfUT9g3",
+  "sym": "HIGGSCAT",
+  "ts": 1791132926.0,
+  "usd": 501.5028045033398,
+  "mcap": 129625.19091510965,
+  "who": "ohtwoo",
+  "r_2x30m": -0.05797162854103821
+ },
+ {
+  "m": "Eo7hAPND5wNHwqEEFp1qZ9cfDVsjtBkQi1hn782jd1bV",
+  "sym": "Yugi",
+  "ts": 1791134907.0,
+  "usd": 487.1073379002187,
+  "mcap": 29514.54947348294,
+  "who": "ely",
+  "r_2x30m": -0.6738996634259096
+ },
+ {
+  "m": "AshG5mHt4y4etsjhKFb2wA2rq1XZxKks1EPzcuXwpump",
+  "sym": "Fullsend",
+  "ts": 1791135303.0,
+  "usd": 3577.74331973342,
+  "mcap": 124849.38413478516,
+  "who": "tAg911",
+  "r_2x30m": -0.3066919997956937
+ },
+ {
+  "m": "1BYFCLiArGnZA6GHXro8WhGX4n1hWk2mwrxbnMY9emN",
+  "sym": "S\u00ed",
+  "ts": 1791135643.0,
+  "usd": 486.43670972371166,
+  "mcap": 12031.498672180587,
+  "who": "ely",
+  "r_2x30m": 2.631268666282719
+ },
+ {
+  "m": "7s7nuZBqF9Tgx777s2hTwnwbhpWj3KvQAiyMDKgXQ3Px",
+  "sym": "SSI",
+  "ts": 1791136575.0,
+  "usd": 486.233728417871,
+  "mcap": 60643.76299051019,
+  "who": "sicktuna",
+  "r_2x30m": -0.6367667169911613
+ },
+ {
+  "m": "DQysBW79uHzZAWd2ahVQrf89CuSFqVzuNA3ijHbjVJfG",
+  "sym": "SXSI",
+  "ts": 1791136586.0,
+  "usd": 571.3008472640433,
+  "mcap": 316931.4997288243,
+  "who": "sicktuna",
+  "r_2x30m": -0.16147652250866862
+ },
+ {
+  "m": "Gm2jMUuTTxLMb5UWzsmb3YwVaWqswUMvUFDe2nxbFpwb",
+  "sym": "SI",
+  "ts": 1791137777.0,
+  "usd": 728.3851291483401,
+  "mcap": 18249.526076510254,
+  "who": "ely",
+  "r_2x30m": -0.6555646985158443
+ },
+ {
+  "m": "2XQtVQGjd6SBiyTAzBwq72nd4gXmDWCtdp7FiUaomau6",
+  "sym": "ZHC",
+  "ts": 1791141771.0,
+  "usd": 594.2337121698471,
+  "mcap": 3952.1601672518605,
+  "who": "tAg911",
+  "r_2x30m": -0.43369081030107515
+ },
+ {
+  "m": "3yLHGEma4ek25h8oRswBmYTJkTDdtGnrVn2ZuzV5pump",
+  "sym": "Pillson",
+  "ts": 1791142403.0,
+  "usd": 564.6890616739145,
+  "mcap": 35687.0480807371,
+  "who": "tAg911",
+  "r_2x30m": 0.2193353762857405
+ },
+ {
+  "m": "Ak16ca5ZDCJZKCzJwNEFPUDTXnYQERYtSQBUMULspump",
+  "sym": "CRAWLERS",
+  "ts": 1791147028.0,
+  "usd": 545.0845746235224,
+  "mcap": 22583.77016079915,
+  "who": "tAg911",
+  "r_2x30m": -0.49546001362758185
+ },
+ {
+  "m": "A6ABDPoWvYSy5PC6a68G6eByXSu7mteqPkXCoEVGpump",
+  "sym": "aiswim",
+  "ts": 1791148531.0,
+  "usd": 503.3695010035702,
+  "mcap": 54911.908189594884,
+  "who": "ohtwoo",
+  "r_2x30m": 0.036546503867718516
+ },
+ {
+  "m": "74aF3TV29jPLU7zSDPhPktCKBFaPEz7Ww9dwrKJ6pump",
+  "sym": "Apple",
+  "ts": 1791148675.0,
+  "usd": 607.7332463862376,
+  "mcap": 3964.7089699009316,
+  "who": "cooker",
+  "r_2x30m": 0.3792275410503779
+ },
+ {
+  "m": "FKbd3t9Jza78QUmERkHuukZZZ7o6odNv7qSPjcACpump",
+  "sym": "X",
+  "ts": 1791148809.0,
+  "usd": 607.7715984423292,
+  "mcap": 3964.95916970768,
+  "who": "cooker",
+  "r_2x30m": -0.11030286217214624
+ },
+ {
+  "m": "3bDznin48giBztBWXU4jBhU4xi53DbKkwCCvV4topump",
+  "sym": "Yeat",
+  "ts": 1791148858.0,
+  "usd": 607.5335163272389,
+  "mcap": 3963.4059779037357,
+  "who": "cooker",
+  "r_2x30m": -0.40301435720442236
+ },
+ {
+  "m": "E1xNj1849x6DUJwXzhi5oBw29fvqgn81QtUxXaB9pump",
+  "sym": "Plague",
+  "ts": 1791148900.0,
+  "usd": 606.8700608466976,
+  "mcap": 3959.0777501648827,
+  "who": "cooker",
+  "r_2x30m": -0.15492772760473505
+ },
+ {
+  "m": "6WVRrfFmKj9PJpgE3fwR1ALBCBtFH2KXbqnBXZM6pump",
+  "sym": "X",
+  "ts": 1791149020.0,
+  "usd": 606.675552229314,
+  "mcap": 3957.8088216264996,
+  "who": "cooker",
+  "r_2x30m": -0.1264756445518196
+ },
+ {
+  "m": "6fHNYCjMFrPzWEj3Qwyu9DGgLPiZhZ1TgivZPPJNdjqn",
+  "sym": "TSI",
+  "ts": 1791149037.0,
+  "usd": 606.6755521079789,
+  "mcap": 12151.8857298578,
+  "who": "cooker",
+  "r_2x30m": -0.3921014124340769
+ },
+ {
+  "m": "28rHEWVzJ58PZpi649GLjbgaJ9gC6haqJjjAYRsupump",
+  "sym": "PARADOXA",
+  "ts": 1791149118.0,
+  "usd": 606.9290883968281,
+  "mcap": 3959.462832038987,
+  "who": "cooker",
+  "r_2x30m": -0.36987006324436233
+ },
+ {
+  "m": "7PY1JDRyMykFM9tMVza94UG1zS5SZReiZ5H4tT1Dpump",
+  "sym": "Terafab.Ai",
+  "ts": 1791149351.0,
+  "usd": 492.9448878600019,
+  "mcap": 71527.2428249478,
+  "who": "ohtwoo",
+  "r_2x30m": 0.3736611017267201
+ },
+ {
+  "m": "6BYLRL6GgPuwaZJPRrX6frqDxkveNyZi5H6k3CnZpump",
+  "sym": "MATTMCFLY",
+  "ts": 1791149377.0,
+  "usd": 606.9545360125592,
+  "mcap": 3959.6288463075025,
+  "who": "cooker",
+  "r_2x30m": -0.17407273892939212
+ },
+ {
+  "m": "CFwDUbSXfat5YGwKLrTSgpRE7FJrPxTnpep7RZQ7pump",
+  "sym": "T-Rex",
+  "ts": 1791149807.0,
+  "usd": 607.1037297327339,
+  "mcap": 3960.60215109895,
+  "who": "cooker",
+  "r_2x30m": -0.4220789114502891
+ },
+ {
+  "m": "HW6mnfHambF4Hu3oT3PpmRXgeJS7GxDWgZv2XJzcpump",
+  "sym": "Network",
+  "ts": 1791149817.0,
+  "usd": 503.04542557468994,
+  "mcap": 116418.78856293281,
+  "who": "ohtwoo",
+  "r_2x30m": -0.4510944263121095
+ },
+ {
+  "m": "77GZBRNVwqNP8KwuEAnVy1p1XqqpfR99urrVvuVipump",
+  "sym": "Caviar",
+  "ts": 1791149940.0,
+  "usd": 607.1390984876742,
+  "mcap": 3960.832888549632,
+  "who": "cooker",
+  "r_2x30m": -0.024592214566401482
+ },
+ {
+  "m": "EDGZJJi7UhkqTNLsSEamNVZBDTVXPKepzEGvwEUCYJGK",
+  "sym": "Caviar",
+  "ts": 1791149953.0,
+  "usd": 607.1390984876742,
+  "mcap": 69881.66669537756,
+  "who": "cooker",
+  "r_2x30m": -0.6305230937421543
+ },
+ {
+  "m": "14BuoZNzKcp9VwspfnZKEQKd4P6dutJcT51vpRWKvSpU",
+  "sym": "Sparrows",
+  "ts": 1791150031.0,
+  "usd": 607.0317331790295,
+  "mcap": 10624.692734333566,
+  "who": "cooker",
+  "r_2x30m": -0.13183363878126597
+ },
+ {
+  "m": "AMwNLYQmxEFL8sFBPPpbq4iMTBjViQZ5C76ouvzJpump",
+  "sym": "OpenSI",
+  "ts": 1791150324.0,
+  "usd": 606.9475834634,
+  "mcap": 3959.5834895096327,
+  "who": "cooker",
+  "r_2x30m": -0.5828091881462275
+ },
+ {
+  "m": "24YK9CVzZ2NrWA3F5UKWrDmsEAaVepfd9PGgCz2Kpump",
+  "sym": "MAJOR",
+  "ts": 1791150508.0,
+  "usd": 607.4180755402156,
+  "mcap": 3962.6528693211044,
+  "who": "cooker",
+  "r_2x30m": -0.10370468105699815
+ },
+ {
+  "m": "FkEeHe927apd6pQQwNBmQQ38wGqhbnpzgC8Ypv78pump",
+  "sym": "MO",
+  "ts": 1791150561.0,
+  "usd": 607.4114852845908,
+  "mcap": 3962.6098760411664,
+  "who": "cooker",
+  "r_2x30m": -0.3398583540431931
+ },
+ {
+  "m": "6yRsYNTjKVcDTswr8jSHkBzT7U6dLSV1ipXY2WNgGawW",
+  "sym": "NORMIE",
+  "ts": 1791151299.0,
+  "usd": 607.2471707279273,
+  "mcap": 8904.995409047517,
+  "who": "cooker",
+  "r_2x30m": -0.7026933439198633
+ },
+ {
+  "m": "C8k3KCjhZnD3cqu51KtP6MotZC5E4BtryTstw1Q5vvL2",
+  "sym": "PUMP",
+  "ts": 1791151410.0,
+  "usd": 609.1683220705262,
+  "mcap": 11548.958872609513,
+  "who": "cooker",
+  "r_2x30m": 0.059490635120345636
+ },
+ {
+  "m": "49TTPWcGrB9JYS58DnhBkG119opRKxZn1EV4QDcY3tjd",
+  "sym": "SI",
+  "ts": 1791151531.0,
+  "usd": 609.0758214052089,
+  "mcap": 14172.205405708852,
+  "who": "cooker",
+  "r_2x30m": -0.7759277537029099
+ },
+ {
+  "m": "8YiSCdRZeH7XjrUo4MjgkU8MCWE21A1bP1P2gk38pump",
+  "sym": "Squid",
+  "ts": 1791151567.0,
+  "usd": 609.5762663157311,
+  "mcap": 43621.34564618493,
+  "who": "cooker",
+  "r_2x30m": 0.05266029470953232
+ },
+ {
+  "m": "7HLm83zJzXht1PKEjVe37YDwFLUCdJe353kEDDXTpump",
+  "sym": "fun",
+  "ts": 1791151748.0,
+  "usd": 608.9218024818697,
+  "mcap": 3972.462830729846,
+  "who": "cooker",
+  "r_2x30m": -0.15402655158761802
+ },
+ {
+  "m": "8jjbQ2GxJFtzbxDLXp9N8f6vfTuKZJn8vfKkrP7cMYPZ",
+  "sym": "Porygon",
+  "ts": 1791151812.0,
+  "usd": 602.0872530001492,
+  "mcap": 15029.070621040733,
+  "who": "cooker",
+  "r_2x30m": -0.6890732862221464
+ },
+ {
+  "m": "EwWgE3GaGfDp3bXXw6PJ6sZB7V83jgYwRkscf4Fspump",
+  "sym": "LUCY",
+  "ts": 1791151908.0,
+  "usd": 609.6527980383929,
+  "mcap": 3977.2316740622427,
+  "who": "cooker",
+  "r_2x30m": -0.2769710563274105
+ },
+ {
+  "m": "6SuQuh5QCaB3TMoKTnDBL2pmwuTRBvvVHoEtct9aHoWk",
+  "sym": "pup",
+  "ts": 1791151938.0,
+  "usd": 609.5907073255075,
+  "mcap": 23538.383400333914,
+  "who": "cooker",
+  "r_2x30m": 0.047637479069919775
+ },
+ {
+  "m": "4jxyespUyvDxg1cN1NMCWErHGGyPrBdEzPiDobLBmttL",
+  "sym": "Ash",
+  "ts": 1791151941.0,
+  "usd": 566.8728874939212,
+  "mcap": 54039.73502150622,
+  "who": "tAg911",
+  "r_2x30m": -0.6391782771012302
+ },
+ {
+  "m": "4KjbJ4SUWVNXGAoN89s2QLVdZ6PtNvWFykp999Tfpump",
+  "sym": "Stickman",
+  "ts": 1791152019.0,
+  "usd": 1219.5496454226604,
+  "mcap": 45079.0639645502,
+  "who": "cooker",
+  "r_2x30m": -0.4060112530349128
+ },
+ {
+  "m": "GbdUYiGiRxhr146N8d5hemgcscU8YUW8oYbKJhuApump",
+  "sym": "XFUN",
+  "ts": 1791152339.0,
+  "usd": 1213.7649010341165,
+  "mcap": 256117.3480114751,
+  "who": "ohtwoo",
+  "r_2x30m": 0.5144644996171683
+ },
+ {
+  "m": "5BD7HpRsi2EsSwoSRSzhkcjCBm6KdR6ZP1UrJVbNpump",
+  "sym": "Rocket",
+  "ts": 1791152723.0,
+  "usd": 610.6061227031666,
+  "mcap": 18043.245461636892,
+  "who": "cooker",
+  "r_2x30m": 0.12233371067021442
+ },
+ {
+  "m": "54Vz3Fu6NzrKvb1P2anrmNXgy1kzGNBedjaPuYpXpump",
+  "sym": "AAChan",
+  "ts": 1791153470.0,
+  "usd": 1219.473103650662,
+  "mcap": 4546.032073255048,
+  "who": "cooker",
+  "r_2x30m": 0.22793051998652009
+ },
+ {
+  "m": "9PkHS9X34ppVUNcdAxGA5CDUoCRMqXRz8Qyxfxf7pump",
+  "sym": "Pumpcat",
+  "ts": 1791153613.0,
+  "usd": 1217.788662683885,
+  "mcap": 4539.752703388218,
+  "who": "cooker",
+  "r_2x30m": -0.43378496843418446
+ },
+ {
+  "m": "HhMLNZkKvsW6Eei5WkZ6HQqjpwRcsFsxAoQcnA3Apump",
+  "sym": "MRSKIBIDI",
+  "ts": 1791153830.0,
+  "usd": 609.884968508021,
+  "mcap": 3978.746299679574,
+  "who": "cooker",
+  "r_2x30m": -0.3833357782067819
+ },
+ {
+  "m": "7HE2WmPoYE7uaA7DKh25N5cUwEcUoiyjwZU9ZeaQpump",
+  "sym": "pup",
+  "ts": 1791154359.0,
+  "usd": 503.9007228377361,
+  "mcap": 182604.32786895818,
+  "who": "ohtwoo",
+  "r_2x30m": -0.11964522460778582
+ },
+ {
+  "m": "AYHHpvAVf27Rv64PBPXHEJKg8MXaJ35vmsn8GV6wFigf",
+  "sym": "zDOG",
+  "ts": 1791156255.0,
+  "usd": 1200.198364,
+  "mcap": 65362.12542710797,
+  "who": "marcell",
+  "r_2x30m": 0.8648748512921699
+ },
+ {
+  "m": "gL9Q3xjXM1BdopmHn1R7Kb3Eim5NAQ1eWGNaTj3pump",
+  "sym": "TIPTOE",
+  "ts": 1791157498.0,
+  "usd": 5000.374984,
+  "mcap": 458282.78049783834,
+  "who": "marcell",
+  "r_2x30m": 0.3988136010599723
+ },
+ {
+  "m": "2RSsw9tntE1RmoiPnNFiu93EzQu2eLnCAzvZiqMSoatH",
+  "sym": "OATH",
+  "ts": 1791160198.0,
+  "usd": 3625.594796930352,
+  "mcap": 139309.11928680964,
+  "who": "cooker",
+  "r_2x30m": 0.6405218340819165
+ },
+ {
+  "m": "CSEd3Pi5WZL7w5vmwNjDVXv8poAqSv2Dn1as1erUpump",
+  "sym": "GENESIS",
+  "ts": 1791164056.0,
+  "usd": 499.89478993556,
+  "mcap": 200893.45404608655,
+  "who": "ohtwoo",
+  "r_2x30m": -0.3978035293085619
+ },
+ {
+  "m": "BWnQ3u41dE963P2mPwBMi8ieAmTMXStDXGVQzrTdpump",
+  "sym": "ACTIII",
+  "ts": 1791165767.0,
+  "usd": 484.94259329209933,
+  "mcap": 28636.764399971195,
+  "who": "ohtwoo",
+  "r_2x30m": 0.1078805186540277
+ },
+ {
+  "m": "J4RqYw3wkA5WCWWQq9LLkWDqKDtUaxyaBqaFutxGbWVC",
+  "sym": "TEXCAT",
+  "ts": 1791166719.0,
+  "usd": 607.517028320282,
+  "mcap": 24242.060559959453,
+  "who": "cooker",
+  "r_2x30m": 0.21210587225726846
+ },
+ {
+  "m": "6HFJ5sxVoEtczr9siAUeGssmpfhQSS3pEoBcCycUpump",
+  "sym": "XEET",
+  "ts": 1791169519.0,
+  "usd": 779.9166614064125,
+  "mcap": 231965.92855709716,
+  "who": "ohtwoo",
+  "r_2x30m": 0.8495713131276748
+ },
+ {
+  "m": "DYjM6f2R34Qp4jPE73HsdEVZwwcQFCsokpNYCqBUpump",
+  "sym": "ACTII",
+  "ts": 1791169684.0,
+  "usd": 500,
+  "mcap": 381827.77925968566,
+  "who": "sicktuna",
+  "r_2x30m": -0.5217875141724648
+ },
+ {
+  "m": "2QHXWq5TK64JbMptwMBP1BsfhrxZRRv9JsLa17X7pump",
+  "sym": "SAW",
+  "ts": 1791172373.0,
+  "usd": 4218.468717891891,
+  "mcap": 180025.809692757,
+  "who": "Dior",
+  "r_2x30m": 1.0065875564659053
+ }
+]
