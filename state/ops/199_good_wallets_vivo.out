@@ -1,0 +1,8 @@
+== 199_good_wallets_vivo 2026-10-31T00:33:03Z ==
+active
+Oct 31 00:33:37 simplai-prod python3[2599356]: 2026-10-31 00:33:37,605 INFO kols: kols: escuchando 21 billeteras (k=4, ventana 60 min, US$5 por operación, modo live)
+Oct 31 00:33:37 simplai-prod python3[2599356]: 2026-10-31 00:33:37,607 INFO kols: kols: escuchando 14 billeteras (k=3, ventana 60 min, US$5 por operación, modo live)
+{'mode': 'live', 'k': 3, 'wallets': 14, 'connected': True, 'notifications': 2, 'buys_seen': 0, 'errors': [], 'verdict': {'n': 0, 'ret': 0.0, 'pnl_usd': 0.0, 'halted': False}}
+hot []
+kols sigue: {'connected': True, 'wallets': 21, 'buys_seen': 0}
+== exit 0 ==
