@@ -207,7 +207,8 @@ class Floor:
             for mint, p in due.items():
                 c = cs.get(p["curve"])
                 self.stats["evaluated"] += 1
-                if not c or c["complete"] or c["mcap_sol"] > RATIO * FLOOR_SOL:
+                # 0,95x: hay curvas con otros parámetros (valuación por debajo del piso estándar, ej. 9 SOL): ahí el piso no protege
+                if not c or c["complete"] or not (0.95 * FLOOR_SOL <= c["mcap_sol"] <= RATIO * FLOOR_SOL):
                     continue
                 self.stats["eligible"] += 1
                 row = {"ts": now, "mint": mint, "sym": p["sym"], "age_s": round(now - p["ts"]), "mcap_sol": round(c["mcap_sol"], 2),
