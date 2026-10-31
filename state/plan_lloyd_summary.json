@@ -1,16 +1,16 @@
 {
- "now": 1793421575.7140234,
+ "now": 1793421873.3409178,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.43,
- "equity_sol": 5.6551,
+ "equity_usd": 541.52,
+ "equity_sol": 5.6691,
  "cash_sol": 0.0826,
- "positions_usd": 533.53,
- "sol_usd": 95.74,
+ "positions_usd": 533.63,
+ "sol_usd": 95.52,
  "mult": 0.989,
  "halt": false,
  "pause": false,
@@ -32,7 +32,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9998647886025468,
+   "last_usd": 0.9998702689475605,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
@@ -43,11 +43,11 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2237.45,
+   "last_usd": 2236.15,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1793,
+   "sol_in": 0.1798,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -62,9 +62,9 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 0.99,
-   "value_usd": 17.01,
-   "pnl_usd": -0.16,
+   "mult": 0.992,
+   "value_usd": 17.03,
+   "pnl_usd": -0.14,
    "collateral_usd": 17.17,
    "side": "short"
   },
@@ -73,11 +73,11 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 95.8395,
+   "last_usd": 95.5675,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1429,
+   "sol_in": 0.1432,
    "sol_out": 0.0,
    "stop": 0.1988,
    "trail": null,
@@ -92,14 +92,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 0.974,
-   "value_usd": 13.32,
-   "pnl_usd": -0.36,
+   "mult": 0.979,
+   "value_usd": 13.4,
+   "pnl_usd": -0.28,
    "collateral_usd": 13.68,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.52,
+ "perps_pnl_usd": -0.42,
  "equity": [
   [
    1793203600,
@@ -3020,6 +3020,10 @@
   [
    1793421405,
    541.44
+  ],
+  [
+   1793421746,
+   541.47
   ]
  ],
  "closed": [
@@ -5216,7 +5220,7 @@
  "wallet": "G9DYnzG3tHPvuanEc4nB5qCj7TWYUPvv9gkib9sEahek",
  "brain": {
   "mode": "live",
-  "last_run": 1793421245.8987806,
+  "last_run": 1793421843.9459636,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
