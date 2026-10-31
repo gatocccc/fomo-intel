@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your stool (classic) · Lloyd's Tavern</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="/style.css">
+<style>
+.mchart{margin-top:14px}
+.mchart .pchart svg{height:190px}
+.mlegend{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px;font:700 12px var(--m)}
+.mlegend li{display:flex;align-items:center;gap:6px} .mlegend i{width:11px;height:11px;border-radius:50%;border:2px solid var(--ink);display:inline-block}
+.mlegend .up{color:var(--felt)} .mlegend .down{color:var(--hellred)}
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+.share .sh-usd{font:700 12px var(--m);display:inline-flex;align-items:center;gap:5px;cursor:pointer}
+.share .status{flex-basis:100%;font:12px var(--m)}
+.top .bar .live{display:inline-flex;align-items:center;gap:7px;margin-right:auto;margin-left:12px;padding:4px 11px;border:2px solid var(--ink);border-radius:999px;background:var(--mint);font:700 11px var(--m);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.top .bar .live i{width:9px;height:9px;border-radius:50%;background:#E5322D;box-shadow:0 0 0 0 rgba(229,50,45,.6);animation:lpulse 1.6s infinite}
+.top .bar .live.off{background:var(--cream)} .top .bar .live.off i{background:#999;animation:none}
+.top .bar .mark:has(+ .live:not([hidden])){margin-right:0}
+@keyframes lpulse{0%{box-shadow:0 0 0 0 rgba(229,50,45,.6)}70%{box-shadow:0 0 0 8px rgba(229,50,45,0)}100%{box-shadow:0 0 0 0 rgba(229,50,45,0)}}
+@media (prefers-reduced-motion:reduce){.top .bar .live i{animation:none}}
+#logout{white-space:nowrap}
+@media (max-width:420px){.top .bar .live{margin-left:6px;padding:3px 8px;font-size:10px;letter-spacing:.03em} .top .bar .mark span{font-size:15px} .top .bar #logout{padding-left:11px;padding-right:11px}}
+.hello{display:flex;gap:10px 14px;align-items:center;flex-wrap:wrap;margin:14px 0 16px}
+.hello h1{margin:0;font-size:clamp(34px,7vw,52px)}
+.hello .badge{font-size:12px}
+.dash{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;padding:0 0 70px}
+.dash .wide{grid-column:1/-1}
+.card{padding:22px}
+.card h2{font-size:22px;margin:0 0 12px}
+.money .eq{font:400 clamp(44px,11vw,60px)/1 var(--t);font-variant-numeric:tabular-nums}
+.money .pnl{font:700 14px var(--m);margin-top:8px}
+.money .kv3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 0}
+.money .kv3 div{padding:10px 12px;background:var(--cream);border:2px solid var(--ink);border-radius:14px}
+.money .kv3 b{display:block;font:700 10.5px var(--m);letter-spacing:.08em;text-transform:uppercase;color:var(--dim)}
+.money .kv3 span{font:400 18px/1.2 var(--t)}
+.where{margin-top:18px}
+.where h3{font-size:17px;margin:0 0 8px;display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.where h3 small{font:700 11.5px var(--m);color:var(--dim)}
+.rows{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px}
+.rows li{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:10px 12px;border:2px solid var(--ink);border-radius:14px;background:var(--white)}
+.rows li i{width:12px;height:12px;border-radius:50%;border:2px solid var(--ink);display:inline-block}
+.rows li b{font:400 18px/1 var(--t)}
+.rows li b small{display:block;font:700 11px var(--m);color:var(--dim);margin-top:3px;text-transform:uppercase;letter-spacing:.05em}
+.rows li .v{text-align:right;font:400 18px/1 var(--t);font-variant-numeric:tabular-nums}
+.rows li .v small{display:block;font:700 11px var(--m);margin-top:3px}
+.rows li.empty{display:block;font:13px var(--m);color:var(--dim);border-style:dashed}
+.deposit{display:grid;gap:10px;padding:16px;background:var(--beak);border:var(--b);border-radius:18px;box-shadow:var(--sh-s)}
+.deposit h3{font-size:22px;margin:0}
+.deposit p{margin:0;font-size:14.5px}
+.deposit .addr{display:flex;gap:8px;align-items:center;background:var(--white);border:2px solid var(--ink);border-radius:14px;padding:10px 12px}
+.deposit .addr code{flex:1;font:700 12px/1.4 var(--m);overflow-wrap:anywhere}
+.deposit .addr button{flex:none}
+.btn.sm{padding:8px 14px;font-size:12.5px}
+.actions{display:grid;gap:10px}
+.actions .btn{width:100%}
+.actions p{margin:0;font-size:14px;color:var(--dim)}
+.confirm{display:grid;gap:10px;padding:14px;border:2px dashed var(--ink);border-radius:14px;background:var(--cream)}
+.confirm p{margin:0;font-size:14.5px}
+.confirm .cta{gap:8px}
+.confirm input{width:100%;font:inherit;padding:10px 14px;border:2px solid var(--ink);border-radius:999px;background:var(--white)}
+.tip{background:var(--felt-dk);color:var(--white)}
+.tip h2{color:var(--beak)}
+.tip p{margin:0 0 12px;font-size:15px}
+.tip .amts{display:flex;gap:8px;flex-wrap:wrap}
+.tip .amts .btn{background:var(--beak);box-shadow:0 3px 0 var(--ink)}
+.tip .addr{margin-top:12px;font:700 11.5px var(--m);color:var(--cream);overflow-wrap:anywhere}
+.tip .addr code{color:var(--white)}
+.tip .status{color:var(--white)}
+.tip .status.ok{color:var(--mint)}
+.now .eq{font:400 36px/1 var(--t);font-variant-numeric:tabular-nums}
+.now .eq small{display:block;font:700 12px var(--m);margin-top:6px}
+.now .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between;margin-bottom:10px}
+details.settings{border:var(--b);border-radius:var(--r);background:var(--white);box-shadow:var(--sh)}
+details.settings summary{cursor:pointer;list-style:none;padding:18px 22px;font:400 22px/1.1 var(--t);display:flex;justify-content:space-between;align-items:center}
+details.settings summary::-webkit-details-marker{display:none}
+details.settings summary::after{content:"+";font-size:26px;color:var(--card-red)}
+details.settings[open] summary::after{content:"–"}
+details.settings .in{padding:0 22px 22px;display:grid;gap:22px}
+.dial-block{display:grid;gap:12px}
+.dial-block h3{font-size:19px;margin:0}
+.dial-block > p{margin:0;font-size:14.5px}
+.sub-f{display:grid;gap:12px;padding:14px;border:2px dashed var(--ink);border-radius:16px;background:var(--cream)}
+.sub-f p{margin:0;font-size:14.5px}
+.kv{margin-top:8px}
+@media (max-width:900px){.dash{grid-template-columns:1fr}}
+@media (max-width:560px){
+  .card{padding:16px}.money .kv3{grid-template-columns:1fr 1fr}.money .kv3 div:first-child{grid-column:1/-1}
+  details.settings summary{padding:14px 16px;font-size:20px}details.settings .in{padding:0 16px 16px}
+}
+</style>
+</head>
+<body data-tab="app">
+<div class="wrap">
+<header class="top"><div class="bar">
+  <a class="mark" href="/" aria-label="Lloyd's Tavern, home"><img src="/assets/lloyd-head.png" alt=""><span>Lloyd's <b>Tavern</b></span></a>
+  <span class="live" id="live" hidden><i></i><span id="live-t">Lloyd is live</span></span>
+  <a class="btn ghost hide-sm" href="/book/" style="margin-right:6px">Live book</a>
+  <button class="btn ghost" id="logout" type="button" hidden>Log out</button>
+</div></header>
+
+<main id="auth" class="auth" hidden>
+  <div class="card">
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" id="t-signup" aria-selected="true">Create account</button>
+      <button type="button" role="tab" id="t-login" aria-selected="false">Log in</button>
+    </div>
+    <form id="f-signup" novalidate>
+      <div class="f"><label for="su-name">Name</label><input id="su-name" name="name" autocomplete="name"></div>
+      <div class="f"><label for="su-email">Email</label><input id="su-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="f"><label for="su-pw">Password</label><input id="su-pw" name="password" type="password" autocomplete="new-password" minlength="10" required><p class="hint">At least 10 characters.</p></div>
+      <label class="check"><input type="checkbox" name="accept_risk" id="su-risk"> <span>I understand I can lose part or all of what I fund, that the bot is still learning, and that nobody guarantees profits.</span></label>
+      <div><button class="btn" type="submit">Create account</button> <span class="status" role="status"></span></div>
+    </form>
+    <form id="f-login" novalidate hidden>
+      <div class="f"><label for="li-email">Email</label><input id="li-email" name="email" type="email" autocomplete="email" required></div>
+      <div class="f"><label for="li-pw">Password</label><input id="li-pw" name="password" type="password" autocomplete="current-password" required></div>
+      <div><button class="btn" type="submit">Log in</button> <span class="status" role="status"></span></div>
+    </form>
+  </div>
+</main>
+
+<main id="dash" hidden>
+  <div class="hello"><h1 id="hello">Your stool</h1><span class="badge" id="d-status">—</span><span class="badge" id="d-type">—</span></div>
+  <div class="dash">
+
+    <section class="card money wide" id="money">
+      <h2>Your money</h2>
+      <div class="eq" id="m-eq">—</div>
+      <div class="pnl" id="m-pnl">—</div>
+      <div class="mchart" id="m-chart-wrap" hidden>
+        <div class="pchart"><svg id="m-chart" role="img" aria-label="Your stool in percent, next to Lloyd's book"></svg><div class="tip" id="m-tip"></div></div>
+        <ul class="mlegend" id="m-legend"></ul>
+        <div class="share">
+          <button class="btn sm y" type="button" id="sh-go">Share my P&amp;L</button>
+          <button class="btn sm" type="button" id="sh-copy">Copy image</button>
+          <label class="sh-usd"><input type="checkbox" id="sh-usd"> show $</label>
+          <span class="status" id="sh-st" role="status"></span>
+        </div>
+      </div>
+      <div class="kv3"><div><b>You put in</b><span id="m-dep">—</span></div><div><b>Fees so far</b><span id="m-fees">—</span></div><div><b>Since</b><span id="m-since">—</span></div></div>
+      <div class="deposit" id="deposit" hidden>
+        <h3 id="dep-t">Fund your stool</h3>
+        <p id="dep-p">Send <b>SOL only</b> (not USDC or any other token) to this address from any wallet or exchange. Lloyd starts trading for you the moment it lands.</p>
+        <div class="addr"><code id="dep-addr">—</code><button class="btn sm" type="button" id="dep-copy">Copy</button></div>
+      </div>
+      <div class="where" id="where">
+        <h3>Where it is right now <small id="w-upd"></small></h3>
+        <div class="pbar mini" id="w-bar"><span class="pk-cash" style="width:100%"></span></div>
+        <ul class="rows" id="w-rows"></ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>In your hands</h2>
+      <div class="actions">
+        <button class="btn y" type="button" id="act-stop">Stop and go to cash</button>
+        <p>Sells everything in your stool to SOL, right now, and pauses Lloyd on it. Your money stays in your stool.</p>
+        <div class="confirm" id="c-stop" hidden>
+          <p><b>Sure?</b> Everything is sold at market and Lloyd stops trading for you. You can withdraw afterwards, or ask us to start again.</p>
+          <div class="cta"><button class="btn danger" type="button" id="stop-yes">Yes, stop</button><button class="btn ghost" type="button" id="stop-no">Keep going</button></div>
+        </div>
+        <button class="btn" type="button" id="act-resume" hidden>Start again</button>
+        <p id="resume-p" hidden>Puts Lloyd back to work with whatever is in your stool right now. New floor from here.</p>
+        <button class="btn" type="button" id="act-wd">Withdraw everything</button>
+        <p>Sells to SOL and sends it all to a wallet of yours. Takes a couple of minutes.</p>
+        <div class="confirm" id="c-wd" hidden>
+          <p>Where should it go? A Solana address you control.</p>
+          <input id="wd-addr" autocomplete="off" spellcheck="false" placeholder="Your Solana address">
+          <div class="cta"><button class="btn danger" type="button" id="wd-yes">Send it all</button><button class="btn ghost" type="button" id="wd-no">Cancel</button></div>
+        </div>
+        <span class="status" id="act-st" role="status"></span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Lloyd's latest moves on your stool</h2>
+      <ul class="feed" id="st-journal" style="gap:8px"><li><p>Nothing yet.</p></li></ul>
+    </section>
+
+    <section class="card tip wide" id="tip">
+      <h2>Buy Lloyd's lab a round</h2>
+      <p>Every idea that makes your stool smarter was tested first in Lloyd's lab: a separate wallet where new strategies trade real money, small, before they reach the book. Tips go straight into that wallet and fund the next experiments. It is the single most useful thing you can do for your own returns.</p>
+      <div class="amts" id="tip-amts"><button class="btn sm" type="button" data-sol="0.05">0.05 SOL</button><button class="btn sm" type="button" data-sol="0.1">0.1 SOL</button><button class="btn sm" type="button" data-sol="0.25">0.25 SOL</button><button class="btn sm" type="button" data-sol="0.5">0.5 SOL</button></div>
+      <p class="addr" style="margin-top:12px">From your stool, in one tap. Or send any amount to the lab directly: <code id="tip-addr">—</code></p>
+      <span class="status" id="tip-st" role="status"></span>
+    </section>
+
+    <section class="card now">
+      <h2>Lloyd right now</h2>
+      <div class="row"><div class="eq" id="n-eq">—<small id="n-pnl">loading the book…</small></div><span class="regime" id="n-regime">Reading the room</span></div>
+      <div class="pbar mini" id="n-bar"><span class="pk-cash" style="width:100%"></span></div>
+      <ul class="plegend" id="n-legend" style="margin-top:4px"></ul>
+      <div class="cta" style="gap:10px;margin-top:12px"><a class="btn ghost sm" href="/book/">The full book</a><a class="btn ghost sm" href="/lab/">The notebook</a></div>
+    </section>
+
+    <details class="settings wide" id="settings">
+      <summary>Settings and your seat</summary>
+      <div class="in">
+        <dl class="kv">
+          <dt>Seat</dt><dd id="d-seat">—</dd>
+          <dt>Place in line</dt><dd id="d-pos">—</dd>
+          <dt>Fees</dt><dd id="d-fees">—</dd>
+          <dt>Deposit address</dt><dd id="d-addr">—</dd>
+        </dl>
+        <div class="dial-block">
+          <h3>Nonco Genesis holder?</h3>
+          <p>Holders never pay a cent on their profits and sit first. Sign a message with the Ethereum wallet that holds your duck; it moves no funds and costs no gas.</p>
+          <div class="duck"><button class="btn ghost sm" type="button" id="eth-btn">Verify with my Ethereum wallet</button><span class="status" id="eth-st" role="status"></span></div>
+        </div>
+        <form id="f-set" novalidate style="display:grid;gap:22px">
+          <input type="hidden" name="amount_usd" id="s-amount" value="300">
+          <div class="dial-block">
+            <h3>Your risk: the biggest drop you accept</h3>
+            <p>While the tavern is opening, every stool follows the book as it is. Your dial is saved and takes over as soon as per-stool risk goes live.</p>
+            <div class="dials" id="s-dials" role="radiogroup" aria-label="Risk level"></div>
+          </div>
+          <div class="dial-block">
+            <h3>What happens with profits</h3>
+            <div class="opts" id="s-rules" role="radiogroup" aria-label="Profit rule"></div>
+            <div class="sub-f" id="lock-box" hidden>
+              <div class="f" style="max-width:260px"><label for="s-mult">Lock in when my stool reaches</label><select id="s-mult" name="profit_mult"><option value="1.5">x1.5</option><option value="2" selected>x2</option><option value="3">x3</option></select></div>
+              <p>At that multiple Lloyd moves your original stake to cash and keeps trading only with the profit.</p>
+            </div>
+            <div class="sub-f" id="sweep-box" hidden><p>Once a month, any profit above your stake is sent to the Solana wallet below. The stake keeps working.</p></div>
+          </div>
+          <div class="f"><label for="s-sol">Your own Solana wallet (for withdrawals and sweeps)</label><input id="s-sol" name="sol_wallet" autocomplete="off" spellcheck="false" placeholder="Optional"></div>
+          <div><button class="btn y sm" type="submit">Save</button> <span class="status" id="s-st" role="status"></span></div>
+        </form>
+      </div>
+    </details>
+  </div>
+</main>
+</div>
+
+<script src="/lloyd.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const L = window.Lloyd, post = L.post;
+let fees = {trade_pct_holder: 1, trade_pct_external: 1.5, success_pct_external: 15, min_deposit_usd: 300};
+let LEVELS = null, ME = null, LAB = null;
+let RULES = [{key: "run", name: "Let it run"}, {key: "lock", name: "Lock in at a multiple"}, {key: "sweep", name: "Sweep monthly"}];
+const RULE_BLURB = {run: "Profits stay in the stool and keep working.", lock: "At x1.5, x2 or x3 your stake goes to cash; only the profit keeps trading.", sweep: "Once a month, profit above your stake goes to your own Solana wallet."};
+
+function showAuth(which) {
+  $("#auth").hidden = false; $("#dash").hidden = true; $("#logout").hidden = true;
+  const su = which !== "login";
+  $("#f-signup").hidden = !su; $("#f-login").hidden = su;
+  $("#t-signup").setAttribute("aria-selected", su); $("#t-login").setAttribute("aria-selected", !su);
+}
+$("#t-signup").onclick = () => { location.hash = "signup"; showAuth("signup"); };
+$("#t-login").onclick = () => { location.hash = "login"; showAuth("login"); };
+function formJSON(f) { const o = Object.fromEntries(new FormData(f).entries()); f.querySelectorAll("input[type=checkbox]").forEach(c => o[c.name] = c.checked); return o; }
+function wire(form, url) {
+  form.onsubmit = async ev => {
+    ev.preventDefault();
+    const st = form.querySelector(".status"); st.className = "status"; st.textContent = "…";
+    try { await post(url, formJSON(form)); st.textContent = ""; load(); }
+    catch (e) { st.className = "status err"; st.textContent = e.message; }
+  };
+}
+wire($("#f-signup"), "/api/signup"); wire($("#f-login"), "/api/login");
+$("#logout").onclick = () => post("/api/logout").catch(() => {}).then(() => { location.hash = "login"; showAuth("login"); });
+
+// ----- dials -----
+function buildDials() {
+  L.dialCards(LEVELS, $("#s-dials"), "risk_pct", null);
+  const rb = $("#s-rules"); rb.innerHTML = "";
+  RULES.forEach(r => {
+    const lab = document.createElement("label"); lab.className = "dial";
+    const inp = document.createElement("input"); inp.type = "radio"; inp.name = "profit_rule"; inp.value = r.key;
+    const inn = document.createElement("div"); inn.className = "in";
+    const b = document.createElement("b"); b.textContent = r.name || r.key;
+    const p = document.createElement("p"); p.textContent = RULE_BLURB[r.key] || "";
+    inn.append(b, p); lab.append(inp, inn); rb.appendChild(lab);
+    inp.addEventListener("change", ruleUI);
+  });
+}
+function setRadio(name, v) {
+  const list = Array.from(document.querySelectorAll(`input[name=${name}]`));
+  const hit = list.find(r => String(r.value) === String(v));
+  (hit || list[Math.min(1, list.length - 1)] || {}).checked = true;
+}
+function ruleUI() {
+  const r = (document.querySelector("input[name=profit_rule]:checked") || {}).value;
+  $("#lock-box").hidden = r !== "lock"; $("#sweep-box").hidden = r !== "sweep";
+}
+
+// ----- the page -----
+function fill(u) {
+  ME = u;
+  $("#auth").hidden = true; $("#dash").hidden = false; $("#logout").hidden = false;
+  $("#hello").textContent = u.name ? `Hi, ${u.name.split(" ")[0]}` : "Your stool";
+  const s = u.stool;
+  const st = !u.bot_wallet ? "On the waitlist" : !s || !s.started ? "Waiting for your deposit" : s.stopped ? "Stopped, in cash" : s.halt ? "Stopped at the floor" : "Trading";
+  $("#d-status").textContent = st; $("#d-status").className = "badge" + (st === "Trading" ? " ok" : "");
+  const lv = $("#live"), trading = st === "Trading";
+  lv.hidden = !u.bot_wallet || !s || !s.started; lv.classList.toggle("off", !trading);
+  $("#live-t").textContent = trading ? "Lloyd is live" : s && s.halt ? "Paused at floor" : "Paused";
+  const holder = u.holder_status === "holder";
+  $("#d-type").textContent = holder ? `Genesis holder · ${u.ducks} ${u.ducks == 1 ? "duck" : "ducks"}` : u.holder_status === "pending" ? "Holder check pending" : "Standard seat";
+  $("#d-seat").textContent = {waitlist: "On the waitlist: we will email you when it opens.", seated: "Seated.", closing: "Closing.", closed: "Stopped."}[u.status] || u.status || "—";
+  $("#d-pos").textContent = u.position != null ? "#" + u.position : "—";
+  $("#d-fees").textContent = holder || u.holder_status === "pending" ? `${fees.trade_pct_holder}% built into each token trade. Nothing on profits, ever.` : `${fees.trade_pct_external}% built into each token trade, plus ${fees.success_pct_external}% of your net monthly profit. Nothing in a losing month.`;
+  $("#d-addr").innerHTML = u.bot_wallet ? `<code style="font-size:11px;overflow-wrap:anywhere">${L.esc(u.bot_wallet)}</code>` : "—";
+  if (u.eth) { $("#eth-st").className = "status ok"; $("#eth-st").textContent = `Linked: ${u.eth.slice(0, 6)}…${u.eth.slice(-4)}`; }
+  const f = $("#f-set");
+  f.amount_usd.value = u.amount_usd || fees.min_deposit_usd || 300;
+  if (u.sol_wallet) { f.sol_wallet.value = u.sol_wallet; $("#wd-addr").value = u.sol_wallet; }
+  if (!$("#s-dials").children.length) buildDials();
+  setRadio("risk_pct", u.risk_pct || 35); setRadio("profit_rule", u.profit_rule || "run");
+  if (u.profit_mult) f.profit_mult.value = String(Number(u.profit_mult));
+  ruleUI();
+  fillMoney(u);
+}
+
+function fillMoney(u) {
+  const s = u.stool, started = s && s.started;
+  // deposit box
+  const dep = $("#deposit");
+  if (!u.bot_wallet) {
+    dep.hidden = false; $("#dep-t").textContent = "Your seat is on the waitlist"; $("#dep-p").textContent = "Seats open in order, Nonco Genesis holders first. When yours opens, your deposit address appears right here and we email you."; $("#dep-addr").textContent = "—"; $("#dep-copy").hidden = true;
+  } else if (!started) {
+    dep.hidden = false; $("#dep-t").textContent = "Fund your stool"; $("#dep-copy").hidden = false;
+    $("#dep-p").textContent = `Send SOL to this address from any wallet or exchange (Phantom, Binance, Coinbase…). Lloyd starts trading for you the moment it lands. Minimum $${fees.min_deposit_usd}; during the opening at least ${s ? s.min_sol : 0.2} SOL.`;
+    $("#dep-addr").textContent = u.bot_wallet;
+  } else { dep.hidden = true; }
+  // money
+  $("#m-eq").textContent = s ? L.usd(s.equity_usd, 2) : "$0";
+  const pnl = $("#m-pnl");
+  if (started && s.pnl_pct != null) { pnl.textContent = `${L.frac(s.pnl_pct)} · ${L.usdS(s.pnl_usd, 2)} on what you put in`; pnl.className = "pnl " + ((s.pnl_pct || 0) >= 0 ? "up" : "down"); }
+  else { pnl.textContent = u.bot_wallet ? "Nothing in yet." : "Your stool opens with your seat."; pnl.className = "pnl"; }
+  drawMine();
+  $("#m-dep").textContent = s ? L.usd(s.deposited_usd, 2) : "—"; $("#m-fees").textContent = s ? L.usd(s.fees_usd, 2) : "—"; $("#m-since").textContent = s && s.since ? L.day(s.since) : "—";
+  // where
+  const where = $("#where"); where.hidden = !started;
+  if (started) {
+    $("#w-upd").textContent = s.now ? `updated ${L.ago(s.now)}` : "";
+    const eq = s.equity_usd || 0, pos = s.positions || [];
+    const by = {cash: s.cash_usd || 0, majors: 0, established: 0, picks: 0};
+    pos.forEach(p => { by[p.sleeve in by ? p.sleeve : "picks"] += p.value_usd || 0; });
+    L.drawBar($("#w-bar"), null, {sleeves: Object.entries(by).map(([k, v]) => ({key: k, value_usd: v, pct: eq ? v / eq * 100 : 0}))});
+    const rows = $("#w-rows"); rows.innerHTML = "";
+    const cashLi = document.createElement("li"); cashLi.innerHTML = `<i class="pk-cash"></i><b>Cash<small>USDC and SOL, waiting</small></b><span class="v">${L.usd(by.cash, 2)}<small>${eq ? L.pct(by.cash / eq * 100) : "—"}</small></span>`; rows.appendChild(cashLi);
+    pos.sort((a, b) => (b.value_usd || 0) - (a.value_usd || 0)).forEach(p => {
+      const li = document.createElement("li"); const pk = L.POCKETS[p.sleeve] || L.POCKETS.picks;
+      li.innerHTML = `<i class="${pk.cls}"></i><b></b><span class="v ${p.multiple != null && p.multiple < 1 ? "down" : "up"}">${L.usd(p.value_usd, 2)}<small>${L.fmtX(p.multiple)} since bought</small></span>`;
+      li.children[1].innerHTML = `${L.esc(p.token)}${p.chart ? ` <a class="chart" href="${p.chart}" target="_blank" rel="noopener" title="Open chart">↗</a>` : ""}<small>${L.esc(pk.name)}</small>`; rows.appendChild(li);
+    });
+    if (!pos.length) { const li = document.createElement("li"); li.className = "empty"; li.textContent = "All in cash right now, like the book. Lloyd is waiting for something that passes his checks."; rows.appendChild(li); }
+  }
+  // journal
+  $("#st-journal").innerHTML = ((s && s.journal) || []).slice(0, 5).map(j => `<li><time>${L.when(j.ts)}</time><b>${L.esc(j.title)}</b><p>${L.esc(j.text)}</p></li>`).join("") || `<li><p>${u.bot_wallet ? "Nothing yet. The first note appears when your deposit lands." : "Your stool's story starts when your seat opens."}</p></li>`;
+  // actions
+  const can = !!u.bot_wallet && started && !s.stopped && !s.halt;
+  $("#act-stop").disabled = !can;
+  const stopped = !!u.bot_wallet && started && (s.stopped || s.halt);
+  $("#act-stop").hidden = stopped; $("#act-stop").nextElementSibling.hidden = stopped; $("#act-resume").hidden = !stopped; $("#resume-p").hidden = !stopped; $("#act-wd").disabled = !(u.bot_wallet && s && (s.equity_usd || 0) > 1);
+  $("#tip-amts").querySelectorAll("button").forEach(b => b.disabled = !(u.bot_wallet && s && (s.cash_sol || 0) > 0.06));
+}
+
+// copy
+$("#dep-copy").onclick = async () => { try { await navigator.clipboard.writeText($("#dep-addr").textContent); $("#dep-copy").textContent = "Copied"; setTimeout(() => $("#dep-copy").textContent = "Copy", 1500); } catch (_) {} };
+
+// stop
+$("#act-stop").onclick = () => { $("#c-stop").hidden = false; $("#c-wd").hidden = true; $("#act-st").textContent = ""; };
+$("#stop-no").onclick = () => { $("#c-stop").hidden = true; };
+$("#stop-yes").onclick = async () => {
+  const st = $("#act-st"); $("#stop-yes").disabled = true;
+  try { await post("/api/me/close_all"); $("#c-stop").hidden = true; st.className = "status ok"; st.textContent = "Done. Lloyd is selling everything to SOL; your money shows up here within a few minutes."; setTimeout(load, 20000); }
+  catch (e) { st.className = "status err"; st.textContent = e.message; }
+  finally { $("#stop-yes").disabled = false; }
+};
+// resume
+$("#act-resume").onclick = async () => {
+  const st = $("#act-st"); $("#act-resume").disabled = true;
+  try { await post("/api/me/resume"); st.className = "status ok"; st.textContent = "Lloyd is getting back on your stool; give it a minute."; setTimeout(load, 20000); }
+  catch (e) { st.className = "status err"; st.textContent = e.message; }
+  finally { $("#act-resume").disabled = false; }
+};
+// withdraw
+$("#act-wd").onclick = () => { $("#c-wd").hidden = false; $("#c-stop").hidden = true; $("#act-st").textContent = ""; $("#wd-addr").focus(); };
+$("#wd-no").onclick = () => { $("#c-wd").hidden = true; };
+$("#wd-yes").onclick = async () => {
+  const st = $("#act-st"), addr = $("#wd-addr").value.trim();
+  if (!/^[1-9A-HJ-NP-Za-km-z]{32,44}$/.test(addr)) { st.className = "status err"; st.textContent = "That does not look like a Solana address."; return; }
+  $("#wd-yes").disabled = true;
+  try {
+    if (addr !== (ME.sol_wallet || "")) await post("/api/me/settings", {amount_usd: Number($("#s-amount").value) || 300, risk_pct: ME.risk_pct || 35, profit_rule: ME.profit_rule || "run", profit_mult: ME.profit_mult || null, sol_wallet: addr});
+    await post("/api/me/withdraw"); $("#c-wd").hidden = true; st.className = "status ok"; st.textContent = "On its way. Open positions are sold first; the SOL lands in your wallet within a few minutes."; setTimeout(load, 20000);
+  } catch (e) { st.className = "status err"; st.textContent = e.message; }
+  finally { $("#wd-yes").disabled = false; }
+};
+// tip
+$("#tip-amts").querySelectorAll("button").forEach(b => b.onclick = async () => {
+  const st = $("#tip-st"), sol = Number(b.dataset.sol);
+  if (!confirm(`Send ${sol} SOL from your stool to Lloyd's lab?`)) return;
+  st.className = "status"; st.textContent = "Pouring…";
+  try { await post("/api/me/tip", {sol}); st.className = "status ok"; st.textContent = `Thank you. ${sol} SOL goes to the lab within a minute; it shows in your moves.`; }
+  catch (e) { st.className = "status err"; st.textContent = e.message; }
+});
+
+$("#f-set").onsubmit = async ev => {
+  ev.preventDefault();
+  const st = $("#s-st"); st.className = "status"; st.textContent = "Saving…";
+  const f = ev.target, rule = (f.querySelector("input[name=profit_rule]:checked") || {}).value || "run";
+  const body = {amount_usd: Number(f.amount_usd.value) || 300, risk_pct: Number((f.querySelector("input[name=risk_pct]:checked") || {}).value || 35), profit_rule: rule,
+                profit_mult: rule === "lock" ? Number(f.profit_mult.value) : null, sol_wallet: f.sol_wallet.value.trim()};
+  if (rule === "sweep" && !body.sol_wallet) { st.className = "status err"; st.textContent = "The monthly sweep needs a Solana wallet to send profits to."; f.sol_wallet.focus(); return; }
+  try { const d = await post("/api/me/settings", body); if (d.user) fill(d.user); st.className = "status ok"; st.textContent = "Saved."; }
+  catch (e) { st.className = "status err"; st.textContent = e.message; }
+};
+
+// ----- holder verification -----
+$("#eth-btn").onclick = async () => {
+  const st = $("#eth-st"); st.className = "status";
+  if (!window.ethereum) { st.className = "status err"; st.textContent = "Open this page in MetaMask or Rabby, or with their extension installed."; return; }
+  try {
+    st.textContent = "Waiting for your wallet…";
+    const [addr] = await window.ethereum.request({method: "eth_requestAccounts"});
+    const m = await L.get(`/api/holder/message?eth=${addr}`);
+    const sig = await window.ethereum.request({method: "personal_sign", params: [m.message, addr]});
+    const d = await post("/api/holder/verify", {eth: addr, signature: sig, message: m.message});
+    fill(d.user);
+    st.className = d.user.holder_status === "none" ? "status err" : "status ok";
+    st.textContent = d.user.holder_status === "holder" ? "Verified. Welcome, duck." : d.user.holder_status === "pending" ? "Signed. We will confirm your ducks shortly." : "No Canvas or Legacy duck found in that wallet.";
+  } catch (e) { st.className = "status err"; st.textContent = e.message || "Not signed. You can try again."; }
+};
+
+// ----- Lloyd right now -----
+let TRACK = null;
+// ---- your stool in %, next to the book rebased to the day you sat down ----
+function mineSeries(s) {
+  const mine = (s && s.pct_series) || [];
+  const out = [];
+  if (mine.length >= 2) out.push({name: "Your stool", short: "You", color: "#1A1814", points: mine, pct: mine[mine.length - 1][1]});
+  const bk = TRACK && TRACK.book && TRACK.book.series;
+  if (bk && s && s.since) {
+    let base = null; for (const p of bk) { if (p[0] <= s.since) base = p[1]; else break; }
+    if (base == null && bk.length && bk[0][0] > s.since) base = 0;
+    if (base != null) {
+      const pts = [[s.since, 0]].concat(bk.filter(p => p[0] > s.since).map(p => [p[0], +(((1 + p[1] / 100) / (1 + base / 100) - 1) * 100).toFixed(2)]));
+      if (pts.length >= 2) out.push({name: "Lloyd's book, same days", short: "Book", color: "#1D6A4B", points: pts, pct: pts[pts.length - 1][1]});
+    }
+  }
+  return out;
+}
+function drawMine() {
+  const s = ME && ME.stool, wrap = $("#m-chart-wrap");
+  if (!s || !s.started) { wrap.hidden = true; return; }
+  const ser = mineSeries(s);
+  wrap.hidden = false;
+  $("#m-legend").innerHTML = ser.map(x => `<li><i style="background:${x.color}"></i>${L.esc(x.name)} <b class="${x.pct >= 0 ? "up" : "down"}">${L.signed(x.pct)}</b></li>`).join("");
+  L.pctChart($("#m-chart"), $("#m-tip"), ser, {height: 190});
+  const pc = $("#m-chart").parentNode.querySelector(".none"); if (pc) pc.textContent = "Your chart starts filling in a few minutes after your deposit.";
+}
+
+// ---- share card: a 1200x675 PNG made right here (nothing leaves the phone until you share it) ----
+async function cardBlob() {
+  const s = ME.stool, ser = mineSeries(s), mine = ser.find(x => x.short === "You");
+  const pct = s.pnl_pct != null ? s.pnl_pct * 100 : (mine ? mine.pct : 0), up = pct >= 0;
+  try { await Promise.all(['64px "Bowlby One"', '700 28px "Space Mono"', '500 28px "Space Grotesk"'].map(f => document.fonts.load(f))); } catch (_) {}
+  const W = 1200, H = 675, c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
+  const INK = "#1A1814", CREAM = "#FFFDF7", FELT = "#1D6A4B", RED = "#C8323B";
+  g.fillStyle = FELT; g.fillRect(0, 0, W, H);
+  g.fillStyle = "rgba(255,255,255,.035)"; for (let y = 0; y < H; y += 6) for (let x = (y / 6) % 2 ? 3 : 0; x < W; x += 6) g.fillRect(x, y, 2, 2);
+  const rr = (x, y, w, h, r) => { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); };
+  g.fillStyle = INK; rr(48, 58, W - 96, H - 106, 40); g.fill();
+  g.fillStyle = CREAM; rr(48, 48, W - 96, H - 106, 40); g.fill(); g.lineWidth = 5; g.strokeStyle = INK; g.stroke();
+  try { const img = new Image(); img.src = "/assets/lloyd-head.png"; await img.decode(); g.save(); g.beginPath(); g.arc(128, 128, 44, 0, 7); g.clip(); g.drawImage(img, 84, 84, 88, 88); g.restore(); g.beginPath(); g.arc(128, 128, 44, 0, 7); g.lineWidth = 4; g.stroke(); } catch (_) {}
+  g.fillStyle = INK; g.font = '40px "Bowlby One", "Arial Black", sans-serif'; g.fillText("Lloyd's", 190, 142); const lw = g.measureText("Lloyd's ").width;
+  g.fillStyle = RED; g.fillText("Tavern", 190 + lw, 142);
+  g.fillStyle = INK; g.font = '700 22px "Space Mono", monospace'; g.textAlign = "right"; g.fillText("MY STOOL", W - 96, 112);
+  g.font = '400 22px "Space Mono", monospace'; g.fillStyle = "#6E6A60"; g.fillText("since " + L.day(s.since), W - 96, 144); g.textAlign = "left";
+  g.fillStyle = up ? FELT : RED; g.font = '150px "Bowlby One", "Arial Black", sans-serif';
+  g.fillText((up ? "+" : "−") + Math.abs(pct).toFixed(1) + "%", 92, 335);
+  if ($("#sh-usd").checked && s.pnl_usd != null) { g.fillStyle = INK; g.font = '700 34px "Space Mono", monospace'; g.fillText(`${s.pnl_usd >= 0 ? "+" : "−"}$${Math.abs(s.pnl_usd).toFixed(2)}`, 98, 392); }
+  // sparkline
+  if (mine && mine.points.length >= 2) {
+    const P = mine.points, x0 = P[0][0], x1 = P[P.length - 1][0] || x0 + 1, vs = P.map(p => p[1]);
+    const lo = Math.min(0, ...vs), hi = Math.max(0, ...vs), sp = (hi - lo) || 1;
+    const X = t => 640 + (t - x0) / ((x1 - x0) || 1) * 450, Y = v => 380 - (v - lo) / sp * 190;
+    g.setLineDash([8, 8]); g.strokeStyle = "rgba(26,24,20,.35)"; g.lineWidth = 2; g.beginPath(); g.moveTo(640, Y(0)); g.lineTo(1090, Y(0)); g.stroke(); g.setLineDash([]);
+    g.beginPath(); P.forEach((p, i) => i ? g.lineTo(X(p[0]), Y(p[1])) : g.moveTo(X(p[0]), Y(p[1])));
+    g.strokeStyle = up ? FELT : RED; g.lineWidth = 7; g.lineJoin = g.lineCap = "round"; g.stroke();
+    const l = P[P.length - 1]; g.beginPath(); g.arc(X(l[0]), Y(l[1]), 10, 0, 7); g.fillStyle = up ? FELT : RED; g.fill(); g.lineWidth = 4; g.strokeStyle = CREAM; g.stroke();
+  }
+  g.fillStyle = INK; g.fillRect(92, 455, W - 184, 4);
+  g.font = '500 30px "Space Grotesk", sans-serif'; g.fillStyle = INK; g.fillText("Auto-trade shitcoins with an edge.", 92, 515);
+  g.font = '700 24px "Space Mono", monospace'; g.fillStyle = RED; g.fillText(location.host, 92, 560);
+  g.textAlign = "right"; g.fillStyle = "#6E6A60"; g.font = '400 20px "Space Mono", monospace'; g.fillText("Lloyd trades, I watch.", W - 96, 560);
+  return await new Promise(r => c.toBlob(r, "image/png"));
+}
+function shareText() {
+  const s = ME.stool, pct = (s.pnl_pct || 0) * 100;
+  return `My stool at Lloyd's Tavern is ${pct >= 0 ? "+" : "−"}${Math.abs(pct).toFixed(1)}% since ${L.day(s.since)} 🦆 Lloyd trades, I watch.`;
+}
+$("#sh-go").onclick = async () => {
+  const st = $("#sh-st"); st.className = "status"; st.textContent = "Making your card…";
+  try {
+    const blob = await cardBlob(), file = new File([blob], "lloyds-tavern-pnl.png", {type: "image/png"}), url = location.origin + "/";
+    if (navigator.canShare && navigator.canShare({files: [file]})) {
+      await navigator.share({files: [file], text: shareText() + " " + url}); st.textContent = "";
+    } else {
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = file.name; a.click();
+      window.open("https://x.com/intent/post?text=" + encodeURIComponent(shareText()) + "&url=" + encodeURIComponent(url), "_blank", "noopener");
+      st.className = "status ok"; st.textContent = "Card saved. Attach it to the post that just opened on X.";
+    }
+  } catch (e) { if (e && e.name === "AbortError") { st.textContent = ""; return; } st.className = "status err"; st.textContent = "Could not make the card: " + (e.message || e); }
+};
+$("#sh-copy").onclick = async () => {
+  const st = $("#sh-st"); st.className = "status"; st.textContent = "Making your card…";
+  try {
+    const blob = await cardBlob();
+    if (navigator.clipboard && window.ClipboardItem) { await navigator.clipboard.write([new ClipboardItem({"image/png": blob})]); st.className = "status ok"; st.textContent = "Copied. Paste it anywhere."; }
+    else { const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = "lloyds-tavern-pnl.png"; a.click(); st.className = "status ok"; st.textContent = "Saved to your downloads."; }
+  } catch (e) { st.className = "status err"; st.textContent = "Could not copy: " + (e.message || e); }
+};
+
+function loadBook() {
+  L.get("/api/book").then(b => {
+    TRACK = b.track || null; drawMine();
+    $("#n-eq").firstChild.textContent = L.usd(b.equity_usd);
+    const p = $("#n-pnl"), t = (b.track || {}).first_table;
+    p.textContent = t ? `${L.signed(t.pct)} since day one` : (b.pnl_pct != null ? `${L.frac(b.pnl_pct)} since ${L.day(b.since)}` : "");
+    p.className = ((t ? t.pct : b.pnl_pct) || 0) >= 0 ? "up" : "down";
+    L.regimeBadge($("#n-regime"), b.regime);
+    L.drawBar($("#n-bar"), $("#n-legend"), b, {short: true});
+  }).catch(() => { $("#n-pnl").textContent = "Could not load the book right now."; $("#n-regime").textContent = "Could not load"; });
+  L.get("/api/lab").then(d => { LAB = d.lab_wallet; $("#tip-addr").textContent = LAB && LAB.wallet ? LAB.wallet : "coming soon"; }).catch(() => {});
+}
+
+function load() {
+  L.get("/api/me").then(d => { fill(d.user); loadBook(); })
+    .catch(() => showAuth(location.hash === "#login" ? "login" : "signup"));
+}
+L.get("/api/config").then(c => {
+  if (c.fees) fees = c.fees;
+  if (Array.isArray(c.risk_levels) && c.risk_levels.length) LEVELS = c.risk_levels;
+  if (Array.isArray(c.profit_rules) && c.profit_rules.length) RULES = c.profit_rules;
+}).catch(() => {}).finally(load);
+setInterval(() => { if (!$("#dash").hidden) { loadBook(); L.get("/api/me").then(d => { ME = d.user; fillMoney(d.user); }).catch(() => {}); } }, 45000);
+</script>
+</body>
+</html>
