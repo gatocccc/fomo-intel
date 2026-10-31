@@ -40,7 +40,10 @@ STATE = ST / "grid.json"
 CLOSED = ST / "radar_closed.jsonl"
 TREND_POS = ST / "trend_pos_lab.json"
 COIN = "BTC"
-R = {"center_n": 120, "step": 0.008, "kill": 0.03, "estop": float(os.getenv("LAB_GRID_ESTOP", "0.02")),
+# ops 210–211 (31/10): CUALQUIER stop desde la entrada (1,5–8%) o tope de tiempo (12–48 h) vuelve negativa la grilla: te saca en el piso.
+# El +5,9% existe solo aguantando hasta que el precio vuelve; la pérdida llega el mes que no vuelve. Por eso: sin stop de entrada,
+# solo el corte de banda (3% del centro) y un stop de desastre (12%) por seguridad de liquidación.
+R = {"center_n": 120, "step": 0.008, "kill": 0.03, "estop": float(os.getenv("LAB_GRID_ESTOP", "0.12")),
      "coll": float(os.getenv("LAB_GRID_COLL", "20")), "lev": float(os.getenv("LAB_GRID_LEV", "2")), "max_opens_day": 12, "halt_losses": 3}
 FEE_RT = 0.0012 + 0.001   # comisión ida y vuelta + slippage estimado (para el P&L registrado; el real sale de la billetera)
 
