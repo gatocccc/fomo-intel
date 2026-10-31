@@ -1,7 +1,3 @@
-Oct 31 03:26:52 simplai-prod python3[2519932]: 2026-10-31 03:26:52,800 INFO live.helius: HELIUS 4vw54B buy CRpokDH1 0.2600 SOL @ 1.070e-07 (lat 1.1s)
-Oct 31 03:27:21 simplai-prod python3[2519932]: 2026-10-31 03:27:21,386 INFO live.helius: HELIUS 4vw54B buy CRpokDH1 0.0350 SOL @ 1.326e-07 (lat 0.9s)
-Oct 31 03:27:42 simplai-prod python3[2519932]: 2026-10-31 03:27:42,932 INFO live: latido: stream=True tokens_vistos=2550 seguidos=30 candidatos=0 abiertas=0 cerradas=1 st_requests=73 SOL=$97
-Oct 31 03:27:46 simplai-prod python3[2519932]: 2026-10-31 03:27:46,381 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… CRpokDH1 3.798 SOL
 Oct 31 03:27:47 simplai-prod python3[2519932]: 2026-10-31 03:27:47,258 INFO live.helius: HELIUS 4vw54B sell CRpokDH1 3.7078 SOL @ 8.229e-08 (lat 0.9s)
 Oct 31 03:32:43 simplai-prod python3[2519932]: 2026-10-31 03:32:43,932 INFO live: latido: stream=True tokens_vistos=2583 seguidos=44 candidatos=0 abiertas=0 cerradas=1 st_requests=74 SOL=$97
 Oct 31 03:33:40 simplai-prod python3[2519932]: 2026-10-31 03:33:40,043 INFO live.helius: HELIUS 4vw54B buy 4xRe463r 3.0115 SOL @ 9.140e-08 (lat 0.9s)
@@ -298,3 +294,7 @@ Oct 31 12:53:47 simplai-prod python3[2519932]: 2026-10-31 12:53:47,370 INFO live
 Oct 31 12:58:47 simplai-prod python3[2519932]: 2026-10-31 12:58:47,711 INFO live: latido: stream=True tokens_vistos=5384 seguidos=56 candidatos=0 abiertas=0 cerradas=1 st_requests=184 SOL=$96
 Oct 31 13:01:18 simplai-prod python3[2519932]: 2026-10-31 13:01:18,397 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… 2KjHYeA4 0.103 SOL
 Oct 31 13:03:48 simplai-prod python3[2519932]: 2026-10-31 13:03:48,246 INFO live: latido: stream=True tokens_vistos=5447 seguidos=82 candidatos=0 abiertas=0 cerradas=1 st_requests=185 SOL=$96
+Oct 31 13:06:54 simplai-prod python3[2519932]: 2026-10-31 13:06:54,484 INFO live.helius: HELIUS venta RÁPIDA 4vw54B… NimmREei 0.012 SOL
+Oct 31 13:08:29 simplai-prod python3[2519932]: 2026-10-31 13:08:29,551 WARNING live.helius: helius caído: Connection to remote host was lost.; reconecto en 2s
+Oct 31 13:08:31 simplai-prod python3[2519932]: 2026-10-31 13:08:31,694 INFO live.helius: helius conectado; suscribiendo 1 billeteras
+Oct 31 13:08:48 simplai-prod python3[2519932]: 2026-10-31 13:08:48,842 INFO live: latido: stream=True tokens_vistos=5513 seguidos=100 candidatos=0 abiertas=0 cerradas=1 st_requests=186 SOL=$96
