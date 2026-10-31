@@ -1,16 +1,16 @@
 {
- "now": 1793474392.2835083,
+ "now": 1793474690.1119761,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 5,
- "equity_usd": 154.49,
- "equity_sol": 1.6119,
+ "equity_usd": 154.51,
+ "equity_sol": 1.6127,
  "cash_sol": 0.0833,
- "positions_usd": 146.51,
- "sol_usd": 95.85,
+ "positions_usd": 146.53,
+ "sol_usd": 95.81,
  "mult": 1.559,
  "halt": false,
  "pause": false,
@@ -35,20 +35,20 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 1.0000840225802383,
-   "mult": 0.994,
-   "value_usd": 126.49
+   "last_usd": 0.9999824198126331,
+   "mult": 0.993,
+   "value_usd": 126.47
   },
   {
    "mint": "perps:AFWv7oecPMXmbXAWTJoDcL6MyXzoXAu3hrrYuNHnrZjp",
    "symbol": "ETH short 2x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 2253.99,
-   "last_usd": 2254.15,
+   "last_usd": 2252.15,
    "peak_usd": 2253.99,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1043,
+   "sol_in": 0.1044,
    "sol_out": 0.0,
    "stop": 0.1438,
    "trail": null,
@@ -63,9 +63,9 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 1.0,
-   "value_usd": 10.0,
-   "pnl_usd": -0.0,
+   "mult": 1.002,
+   "value_usd": 10.02,
+   "pnl_usd": 0.02,
    "collateral_usd": 10.0,
    "side": "short"
   },
@@ -74,11 +74,11 @@
    "symbol": "SOL short 1.7x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 96.04,
-   "last_usd": 95.9325,
+   "last_usd": 95.8245,
    "peak_usd": 96.04,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1043,
+   "sol_in": 0.1044,
    "sol_out": 0.0,
    "stop": 0.1807,
    "trail": null,
@@ -93,14 +93,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 1.002,
-   "value_usd": 10.02,
-   "pnl_usd": 0.02,
+   "mult": 1.004,
+   "value_usd": 10.04,
+   "pnl_usd": 0.04,
    "collateral_usd": 10.0,
    "side": "short"
   }
  ],
- "perps_pnl_usd": 0.02,
+ "perps_pnl_usd": 0.06,
  "equity": [
   [
    1793113266,
@@ -4849,6 +4849,10 @@
   [
    1793474349,
    154.49
+  ],
+  [
+   1793474690,
+   154.51
   ]
  ],
  "closed": [
@@ -6716,7 +6720,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793474045.088052,
+  "last_run": 1793474643.71642,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {

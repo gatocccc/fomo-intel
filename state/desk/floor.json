@@ -1,5 +1,5 @@
 {
- "ts": 1793474376.8496056,
+ "ts": 1793474678.7961075,
  "mode": "live",
  "start_sol": 2.391343,
  "equity_sol": 2.31878,
@@ -193,7 +193,7 @@
  "recent_closed": [],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
  "sol_balance": 1.773149835,
- "sol_usd": 95.84414763289946,
+ "sol_usd": 95.74369997684204,
  "ticket_sol": 0.025,
  "ratio": 1.3,
  "open": 23,
@@ -206,9 +206,9 @@
  "best": null,
  "bought_today": 23,
  "stats": {
-  "seen": 1223,
-  "evaluated": 1213,
-  "eligible": 740,
+  "seen": 1270,
+  "evaluated": 1262,
+  "eligible": 757,
   "bought": 7,
   "buy_fail": 0,
   "closed": 0,
