@@ -1,5 +1,5 @@
 {
- "now": 1793438087.822257,
+ "now": 1793438385.816992,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
@@ -7,10 +7,10 @@
  "days": 14,
  "day": 4,
  "equity_usd": 154.73,
- "equity_sol": 1.6222,
+ "equity_sol": 1.6227,
  "cash_sol": 0.0868,
  "positions_usd": 146.46,
- "sol_usd": 95.39,
+ "sol_usd": 95.36,
  "mult": 1.562,
  "halt": false,
  "pause": false,
@@ -35,7 +35,7 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9998654703388259,
+   "last_usd": 0.9998860525697633,
    "mult": 0.993,
    "value_usd": 146.46
   }
