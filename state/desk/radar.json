@@ -1,21 +1,33 @@
 {
  "shock": null,
- "events": [],
- "ts": 1793425176.2303147,
- "bear_score": 0,
+ "events": [
+  {
+   "ts": 1793425355.5084577,
+   "src": "tg:wublockchainenglish",
+   "title": "Spot Bitcoin ETFs See 643M in Net Outflows, Ethereum ETFs Lose 156M According to SoSoValue data, U.S. spot Bitcoin ETFs recorded total net outflows of 643 million on October 30 (ET). BlackRock s IBIT ",
+   "sev": 2,
+   "dir": -1,
+   "types": [
+    "exchange_risk",
+    "selloff"
+   ]
+  }
+ ],
+ "ts": 1793425446.2977397,
+ "bear_score": 2,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.982,
-   "ch15m": -0.0003853404013789419,
-   "ch1h": 0.002307828865613315,
-   "ch4h": -0.009095320194501544
+   "px": 95.971,
+   "ch15m": -0.0004270299545889866,
+   "ch1h": 0.004668934833813143,
+   "ch4h": -0.009382741535920669
   },
   "BTC": {
-   "px": 77225.0,
-   "ch15m": 0.00019427535293359277,
-   "ch1h": 0.0009461841559519346,
-   "ch4h": -0.0031239108265455062
+   "px": 77237.0,
+   "ch15m": 2.5894995792086206e-05,
+   "ch1h": 0.0015041298738345255,
+   "ch4h": -0.002621384297520679
   }
  },
  "mode": "live",
