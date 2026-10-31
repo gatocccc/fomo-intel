@@ -1,17 +1,17 @@
 {
- "now": 1793431161.8392735,
+ "now": 1793431492.8214111,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 4,
- "equity_usd": 160.24,
- "equity_sol": 1.6721,
- "cash_sol": 0.1131,
- "positions_usd": 149.41,
- "sol_usd": 95.83,
- "mult": 1.617,
+ "equity_usd": 154.77,
+ "equity_sol": 1.6153,
+ "cash_sol": 0.0868,
+ "positions_usd": 146.46,
+ "sol_usd": 95.82,
+ "mult": 1.562,
  "halt": false,
  "pause": false,
  "positions": [
@@ -19,10 +19,10 @@
    "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
    "symbol": "USDC",
    "opened_ts": 1793310140.668559,
-   "entry_usd": 1.0082625317653804,
-   "tokens": 114.666874,
-   "tokens_initial": 157.077909,
-   "sol_in": 1.62414238,
+   "entry_usd": 1.0065593140511855,
+   "tokens": 146.477152,
+   "tokens_initial": 188.888187,
+   "sol_in": 1.9562481330000001,
    "sol_out": 0.446851383,
    "peak_usd": 1.0082625317653804,
    "stop": 0.05,
@@ -35,42 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 0.9998719498167423,
-   "mult": 0.992,
-   "value_usd": 114.65
-  },
-  {
-   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
-   "symbol": "GTA6",
-   "opened_ts": 1793377812.9129612,
-   "entry_usd": 0.01260487487143304,
-   "tokens": 3284.466721904,
-   "tokens_initial": 3284.466721904,
-   "sol_in": 0.43464344,
-   "sol_out": 0.0,
-   "peak_usd": 0.013176650116191093,
-   "stop": 0.3,
-   "trail": 0.35,
-   "trail_after": 1.6,
-   "tp": [
-    [
-     1.8,
-     0.25
-    ],
-    [
-     2.5,
-     0.25
-    ]
-   ],
-   "tp_done": [],
-   "thesis": "GTA VI sale el 19/11/2026 (confirmado por Take-Two). Entrada en retroceso (−13% 24 h) con anti-rug LIMPIO. Escalera de venta desde el 12/11; salir antes del día del lanzamiento.",
-   "id": "2026-10-30-02",
-   "sleeve": null,
-   "reason": "catalyst",
-   "max_h": null,
-   "last_usd": 0.010581398630789033,
-   "mult": 0.839,
-   "value_usd": 34.75
+   "last_usd": 0.9998772909552623,
+   "mult": 0.993,
+   "value_usd": 146.46
   }
  ],
  "perps_pnl_usd": 0,
@@ -4298,9 +4265,28 @@
   [
    1793430991,
    160.36
+  ],
+  [
+   1793431292,
+   154.8
   ]
  ],
  "closed": [
+  {
+   "ts": 1793431192.6563807,
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "sol_in": 0.43464,
+   "sol_out": 0.30579,
+   "pnl_sol": -0.12886,
+   "pnl_usd": -12.35,
+   "ret": -0.296,
+   "peak_mult": 1.05,
+   "hold_h": 14.8,
+   "why": "stop (0.69x)",
+   "reason": "catalyst",
+   "sleeve": null
+  },
   {
    "ts": 1793308689.7838461,
    "mint": "33jENUQnjoitkMFpvNJcSHyLAHFWJuHwT6E3E8CNpump",
@@ -4411,6 +4397,41 @@
   }
  ],
  "trades": [
+  {
+   "ts": 1793431447.8514678,
+   "side": "buy",
+   "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+   "symbol": "USDC",
+   "ok": true,
+   "sol": 0.332105753,
+   "tokens": 31.810277999999983,
+   "price_usd": 1.000419705619,
+   "slip": 0.06,
+   "quote_impact": 0.055,
+   "via": "jupiter",
+   "ab_arm": null,
+   "sig": "3US7Dvmi6gDpq1ce6cgidQ2zaeCRLeB4H2pcZaoDn4jtq7q5tHp4vqRKdwr4A8jpQeA69NNVC3YayQZCzHk6eD9J",
+   "error": "",
+   "id": "auto-mesa-20261031-0724"
+  },
+  {
+   "ts": 1793431192.6556966,
+   "side": "sell",
+   "mint": "4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz",
+   "symbol": "GTA6",
+   "ok": true,
+   "sol": 0.305785802,
+   "tokens": 3284.466721904,
+   "price_usd": 0.008922168506,
+   "slip": -1.98,
+   "quote_impact": 0.0,
+   "via": "jupiter",
+   "ab_arm": "jupiter",
+   "why": "stop (0.69x)",
+   "sig": "3h5ZBd67STktrstTEHeBbSVCNTLZHVEuBBFsaHQjTQaGjspzxEKK8P5vvqX1fdYjvYc2urx7asccNGoTXGe5szcb",
+   "error": "",
+   "id": null
+  },
   {
    "ts": 1793377812.912221,
    "side": "buy",
@@ -4707,6 +4728,27 @@
   }
  ],
  "journal": [
+  {
+   "ts": 1793431447.852668,
+   "title": "Ejecución",
+   "text": "buy USDC: compró 32 USDC por 0.3321 SOL a US$1.00042 (slippage +0.1%)",
+   "kind": "ejecución",
+   "id": "auto-mesa-20261031-0724"
+  },
+  {
+   "ts": 1793431447.8526049,
+   "title": "Cerebro automático: movimiento",
+   "text": "Efectivo ocioso (96%), pero SOL y BTC están debajo de su promedio de 20 días y solo 1 de 18 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.\n\nEstaciono 0.332 SOL en USDC: sin candidato con motivo, el efectivo no queda expuesto a SOL.",
+   "kind": "decisión",
+   "id": "auto-mesa-20261031-0724"
+  },
+  {
+   "ts": 1793431192.6576219,
+   "title": "Salida automática",
+   "text": "GTA6: vendió 100% de GTA6 (stop (0.69x)) por 0.3058 SOL — posición cerrada",
+   "kind": "automático",
+   "id": null
+  },
   {
    "ts": 1793428863.509796,
    "title": "Sin órdenes: GTA6 se mantiene, efectivo en USDC, mercado bajista",
@@ -6085,41 +6127,20 @@
    "text": "Efectivo ocioso (30%), pero SOL y BTC están debajo de su promedio de 20 días y solo 3 de 21 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
    "kind": "decisión",
    "id": "auto-mesa-note-20261029-1407"
-  },
-  {
-   "ts": 1793282231.5011213,
-   "title": "Ejecución",
-   "text": "set 4kjruq: ajustó GTA6: stop=-2.229",
-   "kind": "ejecución",
-   "id": "auto-mesa-20261029-1357"
-  },
-  {
-   "ts": 1793282231.5009534,
-   "title": "Cerebro automático: ajuste de stops",
-   "text": "GTA6: llegó a 4.61x de pico; subo el stop a 3.23x (antes 2.82x).\n\nEfectivo ocioso (28%), pero SOL y BTC están debajo de su promedio de 20 días y solo 2 de 18 memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore.",
-   "kind": "decisión",
-   "id": "auto-mesa-20261029-1357"
-  },
-  {
-   "ts": 1793281637.0398674,
-   "title": "Ejecución",
-   "text": "set 4kjruq: ajustó GTA6: stop=-1.821",
-   "kind": "ejecución",
-   "id": "auto-mesa-20261029-1347"
   }
  ],
  "wins": 2,
- "n_closed": 8,
- "realized_usd": 75.98,
+ "n_closed": 9,
+ "realized_usd": 63.63,
  "plan": null,
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793430845.186977,
+  "last_run": 1793431443.9426935,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
-   "ts": 1793310124.2687736,
+   "ts": 1793431443.943456,
    "title": "Cerebro automático: movimiento",
    "orders": 1,
    "mode": "live"
