@@ -1,10 +1,18 @@
 {
- "ts": 1793480083.6317754,
+ "ts": 1793480385.7150126,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.30519,
- "open_value_sol": 0.66325,
+ "equity_sol": 2.30323,
+ "open_value_sol": 0.6883,
  "positions": [
+  {
+   "sym": "PUMPKIM",
+   "mint": "EQFC7qin1HCoveTD65TWudC5ejQ5DsG6DuBGwcXLiemh",
+   "mult": 0.928,
+   "peak_mult": 1.0,
+   "ts": 1793480235.607956,
+   "hit_rec": false
+  },
   {
    "sym": "Atlas",
    "mint": "DdG9vXYDR36RkArYxckaL2UVeWASPHqE8HsfScNUpump",
@@ -253,12 +261,12 @@
   }
  ],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
- "sol_balance": 1.641937032,
- "sol_usd": 95.5167443773139,
+ "sol_balance": 1.614933345,
+ "sol_usd": 95.49174596034834,
  "ticket_sol": 0.025,
  "ratio": 1.3,
- "open": 28,
- "open_cost_sol": 0.7415,
+ "open": 29,
+ "open_cost_sol": 0.7685,
  "closed": 2,
  "closed_pnl_sol": -0.0078,
  "closed_cost_sol": 0.0568,
@@ -270,12 +278,12 @@
   "mult": 0.962,
   "pnl_sol": -0.001017
  },
- "bought_today": 30,
+ "bought_today": 31,
  "stats": {
-  "seen": 199,
-  "evaluated": 193,
-  "eligible": 85,
-  "bought": 1,
+  "seen": 234,
+  "evaluated": 228,
+  "eligible": 94,
+  "bought": 2,
   "buy_fail": 0,
   "closed": 1,
   "ws_reconnects": 0

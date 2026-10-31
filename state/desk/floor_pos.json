@@ -586,5 +586,26 @@
   "sig": "5Rv3bmNkJ8F3brxFhQPbwLWvkYq1vnqieg5MakFPHAt1ajH6USZF4w9zXZEXQTzyxBVfpbBGHEXUjPeJ4tUy7B5d",
   "latency_s": 2.3,
   "last_px": 2.8004406283904322e-08
+ },
+ "EQFC7qin1HCoveTD65TWudC5ejQ5DsG6DuBGwcXLiemh": {
+  "ts": 1793480235.607956,
+  "mint": "EQFC7qin1HCoveTD65TWudC5ejQ5DsG6DuBGwcXLiemh",
+  "sym": "PUMPKIM",
+  "name": "Pumpkim",
+  "curve": "C6snimH7UVd7oiPBSN6YGNZDDuBmwKEU8ZNkg8NWzUm7",
+  "tokens": 892246.888647,
+  "tokens0": 892246.888647,
+  "cost_sol": 0.027003687,
+  "entry_px": 3.026481497845097e-08,
+  "ref_px": 2.7992916604236933e-08,
+  "slip_pct": 8.12,
+  "age_at_entry_s": 52,
+  "mcap_sol_entry": 27.99,
+  "peak_px": 3.026481497845097e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "2VHtsdAJtdyFb4kK1yXscpaJtzKTPCvC1YZCyGTLudr1zDFQqSimkAhq5t6tReN2tmvTJrv4pDsrezijoG3Gad9E",
+  "latency_s": 2.3,
+  "last_px": 2.8073527328172217e-08
  }
 }

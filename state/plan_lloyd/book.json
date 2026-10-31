@@ -1,15 +1,15 @@
 {
- "ts": 1793479563.5230749,
+ "ts": 1793480164.8811812,
  "regime": {
   "state": "risk_off",
-  "ts": 1793478964.2116382,
+  "ts": 1793480164.8699484,
   "since": 1793478964.211638,
   "exit_since": null,
   "sol": 95.59,
   "sol_ma20": 103.52,
   "sol_ch4h": -0.3,
   "sol_ch24h": 0.5,
-  "btc_vs_ma20": -0.0472,
+  "btc_vs_ma20": -0.0477,
   "breadth_above": 1,
   "breadth_total": 17,
   "why": "bear",
@@ -35,7 +35,7 @@
    "key": "majors",
    "name": "Majors",
    "target_pct": 10,
-   "value_usd": 30.18,
+   "value_usd": 30.17,
    "pct": 5.6,
    "positions": 2
   },
