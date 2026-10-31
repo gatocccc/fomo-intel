@@ -124,5 +124,26 @@
   "sig": "61qcgNeZpJB3L525cnXJxggSiRQk3tjqqyUjhhAtqhyZFkp1K8YKecHNsCCB9ymk1gf35W4J1LULXg4TeR1vvanL",
   "latency_s": 2.2,
   "last_px": 2.8005611214662916e-08
+ },
+ "jtje1R62UDLoJfUUs79BwCQXWCmt8N5Y1E3WgoXpump": {
+  "ts": 1793461806.863688,
+  "mint": "jtje1R62UDLoJfUUs79BwCQXWCmt8N5Y1E3WgoXpump",
+  "sym": "Snickers",
+  "name": "The Snickers Bar",
+  "curve": "A6R6f7kx7kjTTf29LHgsNEaVMZDVvSna5MK8VmMvJxVp",
+  "tokens": 660558.217858,
+  "tokens0": 660558.217858,
+  "cost_sol": 0.020372159,
+  "entry_px": 3.0840822881684894e-08,
+  "ref_px": 2.7958993487418453e-08,
+  "slip_pct": 10.31,
+  "age_at_entry_s": 53,
+  "mcap_sol_entry": 27.96,
+  "peak_px": 3.0840822881684894e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "2c5eLzBTQF9FQAGDQtVkyp6gMAcPd6NwdXz4Q5XSP8NfMXNjLwGLczGjiJe1RWMSDEH17Hnw4m6GNqVzw5LsYw83",
+  "latency_s": 2.2,
+  "last_px": 2.7993449426901335e-08
  }
 }
