@@ -46,8 +46,8 @@ FLOOR_SOL = 30.0 / 1_073_000_000 * 1e9          # valuación inicial de la curva
 
 TICKET = float(os.getenv("FLOOR_TICKET_SOL", "0.025"))
 RATIO = float(os.getenv("FLOOR_RATIO", "1.30"))
-GAP_S = float(os.getenv("FLOOR_GAP_S", "1500"))       # 25 min -> ~50 por día como máximo
-MAX_DAY = int(os.getenv("FLOOR_MAX_DAY", "50"))
+GAP_S = float(os.getenv("FLOOR_GAP_S", "720"))        # 12 min -> 5 por hora (31/10 11:48: Gastón pidió acelerar)
+MAX_DAY = int(os.getenv("FLOOR_MAX_DAY", "100"))
 MIN_SOL = float(os.getenv("FLOOR_MIN_SOL", "0.05"))
 EVAL_LO, EVAL_HI = 50.0, 100.0
 REC_K, REC_FRAC, TRAIL, MAX_HOLD = 3.0, 0.34, 0.40, 6 * 3600
