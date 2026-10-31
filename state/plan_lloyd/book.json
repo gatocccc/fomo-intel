@@ -1,15 +1,15 @@
 {
- "ts": 1793444223.7379832,
+ "ts": 1793444825.360523,
  "regime": {
   "state": "risk_off",
-  "ts": 1793443624.5850236,
+  "ts": 1793444825.3496008,
   "since": 1793440024.3208015,
   "exit_since": null,
-  "sol": 95.66,
+  "sol": 95.6,
   "sol_ma20": 103.52,
-  "sol_ch4h": -0.2,
-  "sol_ch24h": -1.7,
-  "btc_vs_ma20": -0.0484,
+  "sol_ch4h": 0.1,
+  "sol_ch24h": -0.9,
+  "btc_vs_ma20": -0.0493,
   "breadth_above": 1,
   "breadth_total": 18,
   "why": "bear",
@@ -27,7 +27,7 @@
    "key": "cash",
    "name": "Cash",
    "target_pct": 60,
-   "value_usd": 503.47,
+   "value_usd": 503.44,
    "pct": 93.0,
    "positions": 0
   },
@@ -35,7 +35,7 @@
    "key": "majors",
    "name": "Majors",
    "target_pct": 10,
-   "value_usd": 30.29,
+   "value_usd": 30.32,
    "pct": 5.6,
    "positions": 2
   },
@@ -56,6 +56,6 @@
    "positions": 0
   }
  ],
- "liquid_usd": 503.47,
+ "liquid_usd": 503.44,
  "trad_status": "SOL -7.6%, BTC -4.8%, ETH -6.2%, JUP -14.5%"
 }
