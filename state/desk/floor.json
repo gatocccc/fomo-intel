@@ -1,9 +1,9 @@
 {
- "ts": 1793481296.4601877,
+ "ts": 1793481598.4084897,
  "mode": "live",
  "start_sol": 2.391343,
- "equity_sol": 2.30317,
- "open_value_sol": 0.66364,
+ "equity_sol": 2.30311,
+ "open_value_sol": 0.66358,
  "positions": [
   {
    "sym": "MENK",
@@ -16,7 +16,7 @@
   {
    "sym": "PUMPKIM",
    "mint": "EQFC7qin1HCoveTD65TWudC5ejQ5DsG6DuBGwcXLiemh",
-   "mult": 0.928,
+   "mult": 0.925,
    "peak_mult": 1.0,
    "ts": 1793480235.607956,
    "hit_rec": false
@@ -274,7 +274,7 @@
  ],
  "wallet": "HrRBytKRDJyhuYT9C5WAKs5jQ7ZRJPyZoQ3FRth2RXHK",
  "sol_balance": 1.639530242,
- "sol_usd": 95.42859503740938,
+ "sol_usd": 95.55207468290654,
  "ticket_sol": 0.025,
  "ratio": 1.3,
  "open": 28,
@@ -292,9 +292,9 @@
  },
  "bought_today": 32,
  "stats": {
-  "seen": 355,
-  "evaluated": 352,
-  "eligible": 159,
+  "seen": 396,
+  "evaluated": 385,
+  "eligible": 176,
   "bought": 3,
   "buy_fail": 0,
   "closed": 3,

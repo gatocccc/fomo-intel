@@ -1,17 +1,17 @@
 {
- "now": 1793481303.129896,
+ "now": 1793481600.719836,
  "start_ts": 1793113265.7107127,
  "start_usd": 99.09,
  "start_sol": 0.983291,
  "goal_usd": 990.9,
  "days": 14,
  "day": 5,
- "equity_usd": 154.55,
- "equity_sol": 1.6186,
+ "equity_usd": 154.53,
+ "equity_sol": 1.6177,
  "cash_sol": 0.0833,
- "positions_usd": 146.6,
- "sol_usd": 95.48,
- "mult": 1.56,
+ "positions_usd": 146.57,
+ "sol_usd": 95.53,
+ "mult": 1.559,
  "halt": false,
  "pause": false,
  "positions": [
@@ -35,9 +35,9 @@
    "sleeve": null,
    "reason": "cash",
    "max_h": null,
-   "last_usd": 1.0001322138738016,
+   "last_usd": 1.00004081340042,
    "mult": 0.994,
-   "value_usd": 126.5
+   "value_usd": 126.48
   },
   {
    "mint": "perps:AFWv7oecPMXmbXAWTJoDcL6MyXzoXAu3hrrYuNHnrZjp",
@@ -74,7 +74,7 @@
    "symbol": "SOL short 1.7x",
    "opened_ts": 1793469262.612716,
    "entry_usd": 96.04,
-   "last_usd": 95.5885,
+   "last_usd": 95.6205,
    "peak_usd": 96.04,
    "tokens": 0,
    "tokens_initial": 0,
@@ -93,14 +93,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 1.008,
-   "value_usd": 10.08,
-   "pnl_usd": 0.08,
+   "mult": 1.007,
+   "value_usd": 10.07,
+   "pnl_usd": 0.07,
    "collateral_usd": 10.0,
    "side": "short"
   }
  ],
- "perps_pnl_usd": 0.1,
+ "perps_pnl_usd": 0.09,
  "equity": [
   [
    1793113266,
@@ -4929,6 +4929,10 @@
   [
    1793481005,
    154.55
+  ],
+  [
+   1793481345,
+   154.54
   ]
  ],
  "closed": [
@@ -6796,7 +6800,7 @@
  "wallet": "4AFcAgfn4CGzT98sgqKxnyzZW6rcr32kJ6F3PZZWsxao",
  "brain": {
   "mode": "live",
-  "last_run": 1793480763.5221877,
+  "last_run": 1793481364.140573,
   "regime": "risk_off",
   "status": "ok",
   "last_action": {
@@ -6811,7 +6815,7 @@
    "key": "Efectivo ocioso (#), pero SOL y BTC están debajo de su promedio de # días y solo # de # memecoins grandes están arriba del suyo: mercado bajista: no abro memecoins hasta que mejore."
   },
   "trad_status": null,
-  "sol_ch24h": 0.5,
-  "sol_vs_ma20": -0.0766
+  "sol_ch24h": 0.3,
+  "sol_vs_ma20": -0.0763
  }
 }
