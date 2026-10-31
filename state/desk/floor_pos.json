@@ -586,5 +586,26 @@
   "sig": "ENVDXWgAprmKzjPdHSH2PdbmbNMb3bhW8uvvMTXYMYhb6fmgzuC5kbH62o1yFyfd8Yf72y6MUHZQP6k6f2mVuXs",
   "latency_s": 2.2,
   "last_px": 2.8042472444818458e-08
+ },
+ "mdfYmXmzr2YJNQRf5zP6UVHxTP5GkANFXL84m8Dpump": {
+  "ts": 1793481693.1653917,
+  "mint": "mdfYmXmzr2YJNQRf5zP6UVHxTP5GkANFXL84m8Dpump",
+  "sym": "ANSEM",
+  "name": "THE BLACK PHANTOM",
+  "curve": "7QtJA3Xovvd88fxCy4EQiNUyBv9YAvK88GWEiJ5oCDtn",
+  "tokens": 887570.881288,
+  "tokens0": 887570.881288,
+  "cost_sol": 0.027006342,
+  "entry_px": 3.0427251016628325e-08,
+  "ref_px": 2.8143388647426424e-08,
+  "slip_pct": 8.12,
+  "age_at_entry_s": 50,
+  "mcap_sol_entry": 28.14,
+  "peak_px": 3.0427251016628325e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "43KDZSfKgXNt4dzR4hX8F6Vr1uT6rGd8PXzJJYPkvWRe5ME6z7PDUDRvqgYWXHsCyLTDm4F9Gy1dqVgm1TyaQ1Hy",
+  "latency_s": 2.3,
+  "last_px": 2.8005305527220444e-08
  }
 }
