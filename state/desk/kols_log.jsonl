@@ -154,3 +154,4 @@
 {"ts": 1793463284.178814, "kind": "buy", "mint": "2pSQXSwa1FMgAHjZc1oJByQhp8JFJDfqzoRGjPjwpump", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 0.8591, "mcap_usd": 72634, "n": 1, "lat_s": 1.2}
 {"ts": 1793463326.20099, "kind": "buy", "mint": "2mKPFrgUrmbPX7zBRnWg4RzY5dnAENH42Us5AcZtpump", "wallet": "CE44oKS3wpUerx8afyeii56u5oQjBLZknzm4Q2CYHUz9", "name": "ely", "sol": 5.0016, "mcap_usd": 64462, "n": 1, "lat_s": 1.2}
 {"ts": 1793463326.20099, "kind": "trigger_big", "mint": "2mKPFrgUrmbPX7zBRnWg4RzY5dnAENH42Us5AcZtpump", "who": ["ely"], "sol": 5.0016, "mcap_usd": 64462, "lat_s": 1.2, "mode": "live", "skip": "shadow"}
+{"ts": 1793463824.9872148, "kind": "buy", "mint": "6RmPC7ia7CKHBcTFQMzyERnM3GgimrZhh3y1BQWypump", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 2.4906, "mcap_usd": 44218, "n": 1, "lat_s": 1.0}
