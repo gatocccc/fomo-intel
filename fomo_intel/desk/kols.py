@@ -41,7 +41,11 @@ def _jl(path: Path, row: dict) -> None:
 
 
 class KolConsensus:
-    def __init__(self):
+    """Una prueba de consenso. La misma clase corre dos listas (30/10): KOLs de TYGR (desk/kols.json, k=4, motivo kol_consensus)
+    y billeteras buenas medidas fuera de muestra (desk/good_wallets.json, k=3, motivo good_wallets, salida TP 2x / SL 30% / 6 h)."""
+
+    def __init__(self, cfg: Path | None = None, state: Path | None = None, logp: Path | None = None, reason: str = "kol_consensus"):
+        self.CFG = cfg or CFG; self.STATE = state or STATE; self.LOG = logp or LOG; self.reason = reason
         self.mode = os.getenv("LAB_KOLS", "live")
         self.cfg: dict = {}
         self.cfg_mtime = 0.0
@@ -60,19 +64,19 @@ class KolConsensus:
     # ----- config / estado -----
     def _load_cfg(self) -> bool:
         try:
-            mt = CFG.stat().st_mtime
+            mt = self.CFG.stat().st_mtime
         except FileNotFoundError:
             return False
         if mt == self.cfg_mtime:
             return False
-        self.cfg = json.load(open(CFG))
+        self.cfg = json.load(open(self.CFG))
         self.cfg_mtime = mt
         self.names = {w["wallet"]: w["name"] for w in self.cfg.get("wallets", [])}
         return True
 
     def _restore(self) -> None:
         try:
-            s = json.load(open(STATE))
+            s = json.load(open(self.STATE))
             self.triggered = {m: float(t) for m, t in (s.get("triggered") or {}).items()}
             for m, ws in (s.get("buys") or {}).items():
                 self.buys[m] = ws
@@ -117,7 +121,7 @@ class KolConsensus:
         try:
             pos = json.load(open(LAB_POS))
             pos = pos.values() if isinstance(pos, dict) else pos
-            return sum(1 for p in pos if p.get("reason") == "kol_consensus")
+            return sum(1 for p in pos if p.get("reason") == self.reason)
         except Exception:  # noqa: BLE001
             return 0
 
@@ -128,7 +132,7 @@ class KolConsensus:
             rows = [json.loads(l) for l in Path("state/plan_lab/closed.jsonl").read_text().splitlines() if l.strip()]
         except Exception:  # noqa: BLE001
             return 0, 0.0, 0.0
-        rows = [r for r in rows if r.get("reason") == "kol_consensus"]
+        rows = [r for r in rows if r.get("reason") == self.reason]
         if not rows:
             return 0, 0.0, 0.0
         return len(rows), sum(float(r.get("ret") or 0) for r in rows) / len(rows), sum(float(r.get("pnl_usd") or 0) for r in rows)
@@ -161,7 +165,7 @@ class KolConsensus:
             w = ev["wallet"]; m = ev["mint"]; ts = float(ev.get("block_time") or ev.get("ts") or now)
             if w not in self.buys[m]:
                 self.buys[m][w] = {"ts": ts, "sol": round(float(ev.get("sol") or 0), 4), "name": self.names.get(w, w[:6])}
-                _jl(LOG, {"ts": now, "kind": "buy", "mint": m, "wallet": w, "name": self.names.get(w, w[:6]), "sol": self.buys[m][w]["sol"],
+                _jl(self.LOG, {"ts": now, "kind": "buy", "mint": m, "wallet": w, "name": self.names.get(w, w[:6]), "sol": self.buys[m][w]["sol"],
                           "n": len(self.buys[m]), "lat_s": round(now - ts, 1)})
         # 2) podar ventanas viejas
         for m in list(self.buys):
@@ -184,8 +188,8 @@ class KolConsensus:
                              for m, ws in self.buys.items() if len(ws) >= 2), key=lambda x: -x["n"])[:15],
               "triggered": {m: t for m, t in self.triggered.items()},
               "buys": {m: ws for m, ws in self.buys.items()}}
-        STATE.parent.mkdir(parents=True, exist_ok=True)
-        tmp = STATE.with_suffix(".tmp"); tmp.write_text(json.dumps(st, ensure_ascii=False)); tmp.replace(STATE)
+        self.STATE.parent.mkdir(parents=True, exist_ok=True)
+        tmp = self.STATE.with_suffix(".tmp"); tmp.write_text(json.dumps(st, ensure_ascii=False)); tmp.replace(self.STATE)
 
     def _fire(self, mint: str, ws: dict, now: float) -> None:
         who = sorted(ws.values(), key=lambda b: b["ts"])
@@ -194,27 +198,37 @@ class KolConsensus:
         row = {"ts": now, "kind": "trigger", "mint": mint, "who": names, "span_min": round(span, 1), "mode": self.mode}
         size_usd = float(self.cfg.get("size_usd", 5)); max_open = int(self.cfg.get("max_open", 3))
         if self.mode != "live":
-            row["skip"] = "shadow"; _jl(LOG, row); log.info("kols sombra: %s %s", mint[:8], names); return
+            row["skip"] = "shadow"; _jl(self.LOG, row); log.info("kols sombra: %s %s", mint[:8], names); return
         n, ret, pnl = self._verdict()
         if n >= 10 and ret < 0:
-            row["skip"] = f"freno: {n} cierres, retorno medio {ret:+.1%}, P&L US${pnl:+.2f} → modo sombra"; _jl(LOG, row)
+            row["skip"] = f"freno: {n} cierres, retorno medio {ret:+.1%}, P&L US${pnl:+.2f} → modo sombra"; _jl(self.LOG, row)
             log.warning("kols: %s", row["skip"]); return
         if self._lab_open() >= max_open:
-            row["skip"] = f"max_open {max_open}"; _jl(LOG, row); return
+            row["skip"] = f"max_open {max_open}"; _jl(self.LOG, row); return
         sol = round(size_usd / self._sol_price(), 4)
         if self._lab_sol() < sol + 0.03:
-            row["skip"] = f"sin SOL en el lab ({self._lab_sol():.3f})"; _jl(LOG, row); return
-        did = f"kols-{int(now)}-{mint[:6]}"
-        thesis = (f"Consenso de KOLs: {len(names)} nombres conocidos compraron en {span:.0f} min ({', '.join(names)}). "
-                  f"Entrada entre los nombres y la audiencia; salida 50% a 2x (initials) y el resto afuera a los 30 min. "
-                  f"Backtest 30 d (ops 184): +21,7% por operación, 48% de acierto, n=40.")
-        dec = {"id": did, "title": f"Consenso KOLs {mint[:6]}",
-               "journal": f"Compra automática del laboratorio: {thesis} Riesgo aceptado: los KOLs ya ganan 20–100% cuando entra el cuarto; si la audiencia no llega, el tope de 30 min nos saca.",
-               "orders": [{"action": "buy", "mint": mint, "symbol": mint[:6], "sol": sol, "stop": 0.5, "trail": 0.9, "trail_after": 99,
-                           "tp": [[2.0, 0.5]], "max_h": 0.5, "reason": "kol_consensus", "thesis": thesis},
+            row["skip"] = f"sin SOL en el lab ({self._lab_sol():.3f})"; _jl(self.LOG, row); return
+        did = f"{'kols' if self.reason == 'kol_consensus' else 'good'}-{int(now)}-{mint[:6]}"
+        if self.reason == "kol_consensus":
+            thesis = (f"Consenso de KOLs: {len(names)} nombres conocidos compraron en {span:.0f} min ({', '.join(names)}). "
+                      f"Entrada entre los nombres y la audiencia; salida 50% a 2x (initials) y el resto afuera a los 30 min. "
+                      f"Backtest 30 d (ops 184): +21,7% por operación, 48% de acierto, n=40.")
+            journal = f"Compra automática del laboratorio: {thesis} Riesgo aceptado: los KOLs ya ganan 20–100% cuando entra el cuarto; si la audiencia no llega, el tope de 30 min nos saca."
+            title = f"Consenso KOLs {mint[:6]}"
+            buy = {"stop": 0.5, "trail": 0.9, "trail_after": 99, "tp": [[2.0, 0.5]], "max_h": 0.5}
+        else:
+            ex = self.cfg.get("exit") or {}
+            thesis = (f"{len(names)} wallets with a proven record bought the same token within {span:.0f} min ({', '.join(names)}). "
+                      f"Testing whether several good wallets piling in is a real signal. Exit: sell at 2x, stop -30%, out after 6 h. "
+                      f"Backtest: {self.cfg.get('backtest', '')}.")
+            journal = f"Automatic lab buy (good wallets, k={self.cfg.get('k')}): {thesis}"
+            title = f"Good wallets pile in: {mint[:6]}"
+            buy = {"stop": float(ex.get("stop", 0.3)), "trail": 0.9, "trail_after": 99, "tp": ex.get("tp", [[2.0, 1.0]]), "max_h": float(ex.get("max_h", 6))}
+        dec = {"id": did, "title": title, "journal": journal,
+               "orders": [{"action": "buy", "mint": mint, "symbol": mint[:6], "sol": sol, **buy, "reason": self.reason, "thesis": thesis},
                           {"action": "set", "mint": mint, "brain": False}]}
         AUTO.mkdir(parents=True, exist_ok=True)
         (AUTO / f"{did}.json").write_text(json.dumps(dec, ensure_ascii=False, indent=1))
         row["decision"] = did; row["sol"] = sol
-        _jl(LOG, row)
+        _jl(self.LOG, row)
         log.info("kols GATILLO %s: %s → decisión %s (%.4f SOL)", mint[:8], names, did, sol)

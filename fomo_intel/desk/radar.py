@@ -723,6 +723,13 @@ class Radar:
             self.kols.step()
         except Exception as e:  # noqa: BLE001
             log.exception("kols: %s", e)
+        try:
+            if not hasattr(self, "good"):   # 30/10: billeteras buenas medidas fuera de muestra (desk/good_wallets.json, k=3)
+                from pathlib import Path as _P
+                self.good = KolConsensus(_P("desk/good_wallets.json"), _P("state/desk/good_wallets.json"), _P("state/desk/good_wallets_log.jsonl"), reason="good_wallets")
+            self.good.step()
+        except Exception as e:  # noqa: BLE001
+            log.exception("good_wallets: %s", e)
         self.state["position"] = self.pos
         self.state["positions"] = {leg["name"]: leg["pos"] for leg in self.legs}
         self.state["theses"] = {leg["name"]: (leg["pos"] or {}).get("thesis") for leg in self.legs if leg["pos"]}

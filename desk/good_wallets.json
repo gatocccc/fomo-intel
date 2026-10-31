@@ -1,0 +1,121 @@
+{
+ "_": "Billeteras 'buenas' medidas fuera de muestra (ops 195/198, ideas-comunidad-30-10.md): en la 1.ª quincena, los tokens que compraron subieron 30 min después. Gatillo: 3 distintas compran el mismo token en ≤60 min. Backtest 2.ª quincena: +13,3%/op con TP 2x / SL 30% / 6 h (n=22, mitades +18%/+9%). Prueba en vivo del lab; freno propio con 10 cierres negativos. Editable: fomo-radar la relee sola.",
+ "label": "Good wallets",
+ "reason": "good_wallets",
+ "k": 3,
+ "window_min": 60,
+ "size_usd": 5,
+ "max_open": 2,
+ "min_sol": 0.02,
+ "exit": {
+  "stop": 0.3,
+  "tp": [
+   [
+    2.0,
+    1.0
+   ]
+  ],
+  "max_h": 6
+ },
+ "backtest": "+13.3% per trade, 36% wins, n=22 (ops 198)",
+ "wallets": [
+  {
+   "name": "OGAntD",
+   "wallet": "215nhcAHjQQGgwpQSJQ7zR26etbjjtVdW74NLzwEgQjP",
+   "q30_mean_pct": 35.53,
+   "t": 1.81,
+   "buys_per_day": 18.2
+  },
+  {
+   "name": "Mitch",
+   "wallet": "4Be9CvxqHW6BYiRAxW9Q3xu1ycTMWaL5z8NX4HR3ha7t",
+   "q30_mean_pct": 44.4,
+   "t": 2.41,
+   "buys_per_day": 6.1
+  },
+  {
+   "name": "Silver",
+   "wallet": "67Nwfi9hgwqhxGoovT2JGLU67uxfomLwQAWncjXXzU6U",
+   "q30_mean_pct": 67.78,
+   "t": 1.07,
+   "buys_per_day": 79.8
+  },
+  {
+   "name": "Wugi",
+   "wallet": "862TYSvRYoiHAK3F3WwTRYAfuGiQaGdxedN9AGvRGWo2",
+   "q30_mean_pct": 106.39,
+   "t": 1.61,
+   "buys_per_day": 2.2
+  },
+  {
+   "name": "Dior",
+   "wallet": "87rRdssFiTJKY4MGARa4G5vQ31hmR7MxSmhzeaJ5AAxJ",
+   "q30_mean_pct": 58.01,
+   "t": 2.56,
+   "buys_per_day": 54.7
+  },
+  {
+   "name": "Thurston",
+   "wallet": "ALauG4FwEYDgSXd5Hen6kvuWSCdUi2fYNSNqM1Ci31wE",
+   "q30_mean_pct": 78.03,
+   "t": 1.14,
+   "buys_per_day": 30.0
+  },
+  {
+   "name": "Chairman",
+   "wallet": "Be24Gbf5KisDk1LcWWZsBn8dvB816By7YzYF5zWZnRR6",
+   "q30_mean_pct": 40.09,
+   "t": 1.43,
+   "buys_per_day": 6.9
+  },
+  {
+   "name": "ely",
+   "wallet": "CE44oKS3wpUerx8afyeii56u5oQjBLZknzm4Q2CYHUz9",
+   "q30_mean_pct": 32.13,
+   "t": 1.19,
+   "buys_per_day": 34.7
+  },
+  {
+   "name": "Fox",
+   "wallet": "DAEdBmTPEKM6xkwfzC3d411QUe6coKpkND6UURa4CvHC",
+   "q30_mean_pct": 66.98,
+   "t": 1.16,
+   "buys_per_day": 23.6
+  },
+  {
+   "name": "King Solomon",
+   "wallet": "DEdEW3SMPU2dCfXEcgj2YppmX9H3bnMDJaU4ctn2BQDQ",
+   "q30_mean_pct": 15.4,
+   "t": 1.37,
+   "buys_per_day": 16.6
+  },
+  {
+   "name": "HarryPaulDavies",
+   "wallet": "DuARUpsEzdVbVpSnbGipLJvWxaXUCPLDJDjNov6Rc6s6",
+   "q30_mean_pct": 51.78,
+   "t": 1.34,
+   "buys_per_day": 24.3
+  },
+  {
+   "name": "CookDoc",
+   "wallet": "Dvbv5TdAyPpJk16X9mUxWFVicYtCUxTLhuof8TGuUaRv",
+   "q30_mean_pct": 32.97,
+   "t": 2.87,
+   "buys_per_day": 12.6
+  },
+  {
+   "name": "Latuche",
+   "wallet": "GJA1HEbxGnqBhBifH9uQauzXSB53to5rhDrzmKxhSU65",
+   "q30_mean_pct": 71.46,
+   "t": 1.11,
+   "buys_per_day": 65.1
+  },
+  {
+   "name": "Johnson",
+   "wallet": "J9TYAsWWidbrcZybmLSfrLzryANf4CgJBLdvwdGuC8MB",
+   "q30_mean_pct": 41.72,
+   "t": 1.81,
+   "buys_per_day": 288.8
+  }
+ ]
+}

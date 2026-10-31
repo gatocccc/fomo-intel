@@ -160,13 +160,13 @@
    "name": "Smart-money breadth (not copy trading)",
    "question": "When several wallets that have been making money buy the same token within an hour, does the token keep going up after we get in?",
    "method": "107 wallets (Kolscan 86 + TYGR list 21), 30 days of buys. 'Good' measured only on the first half: how much tokens rose 30 min after the wallet bought (n>=12, mean>0, t>=1). Second half: trigger when k=2/3/4 distinct good wallets buy within 60 min; entry at trigger candle close +3%, 4% round-trip cost; controls = same trigger with non-good wallets and random single buys. experiments/good_wallets.py, ops 195.",
-   "result": "14 of 102 wallets qualified as good on the first half (best t 2.6; median 24 buys/day). Second half, 4% cost: k=2 good wallets → 157 events, −11% (TP2/SL30/6h) to −21% (hold 30 min), not better than random single buys (−7% / −34%). k=3 → 22 events, TP2/SL30/6h +13.3% mean (halves +18% / +9%), t 1.0, 36% wins, median −34%. k=4 → 3 events. Non-good wallets k=2–4: −11 to −42%. Ops 195/198.",
-   "verdict": "watch",
+   "result": "14 of 102 wallets qualified as good on the first half (best t 2.6; median 24 buys/day). Second half, 4% cost: k=2 good wallets → 157 events, −11% (TP2/SL30/6h) to −21% (hold 30 min), not better than random single buys (−7% / −34%). k=3 → 22 events, TP2/SL30/6h +13.3% mean (halves +18% / +9%), t 1.0, 36% wins, median −34%. k=4 → 3 events. Non-good wallets k=2–4: −11 to −42%. Ops 195/198. Live in the lab since 30/10 21:45 ART: 14 wallets, k=3 in 60 min, US$5 per trigger, sell at 2x / stop −30% / out at 6 h, max 2 open, own brake after 10 losing closes (desk/good_wallets.json, reason good_wallets).",
+   "verdict": "testing",
    "sleeve": "picks, established",
    "priority": 1,
    "public_title": "Where the good wallets are moving",
    "hypothesis": "One good wallet buying is noise. Several wallets with a proven record buying the same token in the same hour may be a real signal.",
-   "efficacy": "Two good wallets buying together is noise: it loses like a random buy. Three together was positive in both halves (+13% per trade with a take-profit at 2x), but only 22 cases, far from proof. Kept on watch, needs more data before it touches money."
+   "efficacy": "Two good wallets together is noise. Three together was +13% per trade on past data (22 cases, both halves positive). Now running live with US$5 per signal to see if it holds."
   },
   {
    "date": "2026-10-29",
