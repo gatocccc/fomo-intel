@@ -709,6 +709,13 @@ class Radar:
             self.trend.step()
         except Exception as e:  # noqa: BLE001
             log.exception("trend: %s", e)
+        try:   # 31/10: grilla en BTC (vender volatilidad en rango) en el lab (fomo_intel/desk/grid.py)
+            if not hasattr(self, "grid"):
+                from .grid import GridLab
+                self.grid = GridLab(self)
+            self.grid.step()
+        except Exception as e:  # noqa: BLE001
+            log.exception("grid: %s", e)
         try:   # 30/10: tortuga 55/20 con niveles guardados en BTC/ETH/SOL, libro Lloyd (fomo_intel/desk/turtle.py)
             if not hasattr(self, "turtle"):
                 from .turtle import TurtleBook
