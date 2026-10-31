@@ -565,5 +565,26 @@
   "sig": "5yvzm98dXnpAGgPuNMYf2D9J5k4wrskV56gvfXzHkTZ2GNCk1UcyrwBSVELQcLD28SrNwVkEecoq2s99bPz929AP",
   "latency_s": 2.2,
   "last_px": 2.8005611214662916e-08
+ },
+ "v48VfAZHUDU28KHLzpXZHm9tM5QQjdimN79CQmVpump": {
+  "ts": 1793477979.0949848,
+  "mint": "v48VfAZHUDU28KHLzpXZHm9tM5QQjdimN79CQmVpump",
+  "sym": "PUTINU",
+  "name": "PUTINU",
+  "curve": "51CZE2QZxurW23R6wHNd6rw2eBpY2Jp1w3DAxGjefEk6",
+  "tokens": 873943.149201,
+  "tokens0": 873943.149201,
+  "cost_sol": 0.026495253,
+  "entry_px": 3.031690679676728e-08,
+  "ref_px": 2.8008378359591115e-08,
+  "slip_pct": 8.24,
+  "age_at_entry_s": 54,
+  "mcap_sol_entry": 28.01,
+  "peak_px": 3.031690679676728e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "3rNzTMNcV3xLm6rgWwAh34PRajM11jVVVrjczaxtwerM8ab9JfjCeE9r9Vj9rNiC7XfGt1bHR8W5xanhee9zDHex",
+  "latency_s": 2.2,
+  "last_px": 2.8054099384344865e-08
  }
 }
