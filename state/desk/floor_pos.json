@@ -439,5 +439,26 @@
   "sig": "4gSeQcksDfsvMZEvy3cEFdcUKru7gYmtYhEWHv76dHJXb8nXjKiRXyyBoFk8qiLTsENJjcAkz1ZecSrwHhVjBmva",
   "latency_s": 2.4,
   "last_px": 2.800355640763791e-08
+ },
+ "DbKX8Cfw66dgzGZk6PMTzH4JHXAMUivRk84xvXtWpump": {
+  "ts": 1793473625.0890522,
+  "mint": "DbKX8Cfw66dgzGZk6PMTzH4JHXAMUivRk84xvXtWpump",
+  "sym": "omniarb",
+  "name": "omniarb",
+  "curve": "6U6ouf9wjUMGkQ5pjYdNXQUR3KcZofcw5byAphSEDhfi",
+  "tokens": 856514.448467,
+  "tokens0": 856514.448467,
+  "cost_sol": 0.027006342,
+  "entry_px": 3.153051539099694e-08,
+  "ref_px": 2.9164269645661292e-08,
+  "slip_pct": 8.11,
+  "age_at_entry_s": 52,
+  "mcap_sol_entry": 29.16,
+  "peak_px": 3.153051539099694e-08,
+  "hit_rec": false,
+  "proceeds_sol": 0.0,
+  "sig": "2NMnzFkjedc5u62GNXsNRn8cm24yPZDV8cw3LG5DMro4dmP2xscXz8of4vH31ZVFfttaYZ8vGijMjxoABqcZnPTX",
+  "latency_s": 2.3,
+  "last_px": 2.926881914156035e-08
  }
 }

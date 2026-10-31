@@ -193,3 +193,5 @@
 {"ts": 1793473210.913703, "kind": "trigger_big", "mint": "rjALAN7kNCRyWNg51sHgEfhn4raev8kEcnP2kEkpump", "who": ["ely"], "sol": 8.0015, "mcap_usd": 13346, "lat_s": 0.9, "mode": "live", "skip": "shadow"}
 {"ts": 1793473319.0597963, "kind": "buy", "mint": "7zfaqkUtUKUYywDoj1R9zQZgwRj8EVZgKdp7TpqKuEQD", "wallet": "8deJ9xeUvXSJwicYptA9mHsU2rN2pDx37KWzkDkEXhU6", "name": "cooker", "sol": 15.1515, "mcap_usd": 124499, "n": 2, "lat_s": 1.1}
 {"ts": 1793473319.0597963, "kind": "trigger_big", "mint": "7zfaqkUtUKUYywDoj1R9zQZgwRj8EVZgKdp7TpqKuEQD", "who": ["cooker"], "sol": 15.1515, "mcap_usd": 124499, "lat_s": 1.1, "mode": "live", "skip": "shadow"}
+{"ts": 1793473543.7144847, "kind": "buy", "mint": "APLPiTjBWzwfZ5U1TBeqLF9XJ7dV7XKGe7j4BZhkDray", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 3.4696, "mcap_usd": 302665, "n": 1, "lat_s": 0.7}
+{"ts": 1793473770.9270647, "kind": "buy", "mint": "7zfaqkUtUKUYywDoj1R9zQZgwRj8EVZgKdp7TpqKuEQD", "wallet": "8uRfJP6V7D9ufu2ck4fyFeivFPzu6VvaBTAHoCXCsGi4", "name": "sicktuna", "sol": 1.8516, "mcap_usd": 174254, "n": 3, "lat_s": 0.9}

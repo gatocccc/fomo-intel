@@ -34,35 +34,23 @@
     "exchange",
     "hack"
    ]
-  },
-  {
-   "ts": 1793459180.1999915,
-   "src": "tg:wublockchainenglish",
-   "title": "Binance: 90% of Stolen Assets Replenished; Withdrawals Set to Resume on Nov. 1 Binance announced that it has now replenished 90% of the stolen asset shortfall. The top ten major tokens—including BTC, ",
-   "sev": 2,
-   "dir": 1,
-   "types": [
-    "exchange",
-    "exchange_risk",
-    "hack"
-   ]
   }
  ],
- "ts": 1793473463.600022,
+ "ts": 1793473760.9886835,
  "bear_score": 2,
  "bull_score": 0,
  "price": {
   "SOL": {
-   "px": 95.951,
-   "ch15m": -0.0011555037371697718,
-   "ch1h": -0.0007810384687481076,
-   "ch4h": 0.0034511247529307454
+   "px": 95.991,
+   "ch15m": 0.00023966322107371596,
+   "ch1h": -0.00045816629353878646,
+   "ch4h": 0.0030512335552095315
   },
   "BTC": {
-   "px": 77629.0,
-   "ch15m": -3.864385820284699e-05,
-   "ch1h": -0.0005150059869446499,
-   "ch4h": 0.0035940065416091294
+   "px": 77619.0,
+   "ch15m": 0.0002835161153136312,
+   "ch1h": -0.0006180230986133628,
+   "ch4h": 0.00315347334410343
   }
  },
  "mode": "live",
