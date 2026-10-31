@@ -1,5 +1,5 @@
 {
- "ts": 1793451301.4714315,
+ "ts": 1793451601.6376486,
  "mode": "real",
  "open": 0,
  "closed": 1,
@@ -43,9 +43,9 @@
  "wallet_sol": 0.0868,
  "sol_usd": 95.9747699206893,
  "stream_connected": true,
- "stream_msgs": 5518,
- "tokens_seen": 5347,
- "tokens_tracked": 65,
+ "stream_msgs": 5568,
+ "tokens_seen": 5397,
+ "tokens_tracked": 68,
  "candidates": [],
  "strategy": "follow",
  "followed_wallets": 1,
@@ -54,9 +54,9 @@
  "account_trades": 0,
  "helius": {
   "connected": true,
-  "notifications": 2130247,
+  "notifications": 2144729,
   "parsed": 140,
-  "skipped": 2128809,
+  "skipped": 2143288,
   "fast_creates": 1,
   "subs": 1,
   "errors": [
@@ -88,7 +88,7 @@
  "rules_st": null,
  "stream_counts": {
   "otros": 6,
-  "create": 5512
+  "create": 5562
  },
  "stream_samples": [
   "{\"message\":\"Successfully subscribed to keys.\"}",
