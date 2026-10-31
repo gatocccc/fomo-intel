@@ -1,16 +1,16 @@
 {
- "now": 1793453370.2834423,
+ "now": 1793453668.3919792,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.29,
- "equity_sol": 5.6593,
+ "equity_usd": 541.27,
+ "equity_sol": 5.656,
  "cash_sol": 0.0826,
- "positions_usd": 533.4,
- "sol_usd": 95.65,
+ "positions_usd": 533.37,
+ "sol_usd": 95.7,
  "mult": 0.988,
  "halt": false,
  "pause": false,
@@ -32,7 +32,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9998632874216895,
+   "last_usd": 0.9998655032140114,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
@@ -43,11 +43,11 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2247.55,
+   "last_usd": 2247.15,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1795,
+   "sol_in": 0.1794,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -62,7 +62,7 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
-   "mult": 0.981,
+   "mult": 0.982,
    "value_usd": 16.85,
    "pnl_usd": -0.32,
    "collateral_usd": 17.17,
@@ -73,7 +73,7 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 95.7355,
+   "last_usd": 95.8155,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
@@ -92,14 +92,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 0.976,
-   "value_usd": 13.35,
-   "pnl_usd": -0.33,
+   "mult": 0.974,
+   "value_usd": 13.32,
+   "pnl_usd": -0.36,
    "collateral_usd": 13.68,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.65,
+ "perps_pnl_usd": -0.68,
  "equity": [
   [
    1793203600,
@@ -3396,6 +3396,10 @@
   [
    1793453285,
    541.3
+  ],
+  [
+   1793453626,
+   541.29
   ]
  ],
  "closed": [
