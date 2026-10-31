@@ -1,16 +1,16 @@
 {
- "now": 1793422468.7984045,
+ "now": 1793422766.4201393,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.53,
- "equity_sol": 5.6692,
+ "equity_usd": 541.5,
+ "equity_sol": 5.6669,
  "cash_sol": 0.0826,
- "positions_usd": 533.64,
- "sol_usd": 95.52,
+ "positions_usd": 533.61,
+ "sol_usd": 95.56,
  "mult": 0.989,
  "halt": false,
  "pause": false,
@@ -32,7 +32,7 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9999047593644322,
+   "last_usd": 0.9999019551752925,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
@@ -43,11 +43,11 @@
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2236.45,
+   "last_usd": 2237.15,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1798,
+   "sol_in": 0.1797,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -63,8 +63,8 @@
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
    "mult": 0.991,
-   "value_usd": 17.02,
-   "pnl_usd": -0.15,
+   "value_usd": 17.01,
+   "pnl_usd": -0.16,
    "collateral_usd": 17.17,
    "side": "short"
   },
@@ -73,7 +73,7 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 95.5605,
+   "last_usd": 95.6295,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
@@ -92,14 +92,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 0.979,
-   "value_usd": 13.4,
-   "pnl_usd": -0.28,
+   "mult": 0.978,
+   "value_usd": 13.38,
+   "pnl_usd": -0.3,
    "collateral_usd": 13.68,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.43,
+ "perps_pnl_usd": -0.46,
  "equity": [
   [
    1793203600,
@@ -3032,6 +3032,10 @@
   [
    1793422426,
    541.47
+  ],
+  [
+   1793422766,
+   541.5
   ]
  ],
  "closed": [
