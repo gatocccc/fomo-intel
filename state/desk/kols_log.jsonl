@@ -172,3 +172,4 @@
 {"ts": 1793467904.7119625, "kind": "buy", "mint": "HvitmAeh6TkToQonoiNwqWcrZsYdYiaSZHP7yMmspump", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 29.7405, "mcap_usd": 274145, "n": 1, "lat_s": 1.7}
 {"ts": 1793468357.0883763, "kind": "buy", "mint": "APLPiTjBWzwfZ5U1TBeqLF9XJ7dV7XKGe7j4BZhkDray", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 10.4885, "mcap_usd": 341737, "n": 1, "lat_s": 1.1}
 {"ts": 1793468357.0883763, "kind": "trigger_big", "mint": "APLPiTjBWzwfZ5U1TBeqLF9XJ7dV7XKGe7j4BZhkDray", "who": ["tvdj"], "sol": 10.4885, "mcap_usd": 341737, "lat_s": 1.1, "mode": "live", "skip": "shadow"}
+{"ts": 1793468743.0436456, "kind": "buy", "mint": "FAUtgrjoyARp7cn7FHdxjKYPcfSzosKWJz7oHD3Lpump", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 1.5572, "mcap_usd": 16004, "n": 1, "lat_s": 1.0}
