@@ -1,0 +1,11 @@
+== 202_verificar_app_ui 2026-10-31T01:01:03Z ==
+0
+ls: cannot access '/var/www/autopilot/app/classic/index.html': No such file or directory
+ls: cannot access '/var/www/autopilot/manifest.webmanifest': No such file or directory
+ls: cannot access '/var/www/autopilot/assets/vendor/qrcode.js': No such file or directory
+/app/ 200 text/html
+/app/classic/ 200 text/html
+/manifest.webmanifest 200 text/html
+/assets/fonts/bowlby-one-latin-400-normal.woff2 200 text/html
+/assets/vendor/qrcode.js 200 text/html
+== exit 0 ==
