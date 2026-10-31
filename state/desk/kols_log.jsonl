@@ -162,3 +162,7 @@
 {"ts": 1793465486.8185372, "kind": "buy", "mint": "DDpovfKqWUBQPpjYYp3u1jUNHCuaigRSHjA9edsgpump", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 0.5103, "mcap_usd": 36880, "n": 1, "lat_s": 1.8}
 {"ts": 1793466335.9147146, "kind": "buy", "mint": "D7Q2ApyCUfAm9Vay3wC2g1tDBtrKdomYCLdiSPaNpump", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 6.9914, "mcap_usd": 360941, "n": 1, "lat_s": 0.9}
 {"ts": 1793466335.9147146, "kind": "trigger_big", "mint": "D7Q2ApyCUfAm9Vay3wC2g1tDBtrKdomYCLdiSPaNpump", "who": ["tvdj"], "sol": 6.9914, "mcap_usd": 360941, "lat_s": 0.9, "mode": "live", "skip": "shadow"}
+{"ts": 1793466628.665593, "kind": "buy", "mint": "HkkMxAbCu64hXoBp2jYJ4xXiiEaCT87Soqxp9ZBhpump", "wallet": "3qFD7tnVLqQXvakXUec2jmvQb5D6Tvtbo62vFyfFvVax", "name": "bonk_guy", "sol": 0.8045, "mcap_usd": 3008, "n": 1, "lat_s": 1.7}
+{"ts": 1793466688.6255536, "kind": "buy", "mint": "Fp4JkqEcKYKBKhb9iMu9NSDeo71HWgq2q9QtXaaKpump", "wallet": "87rRdssFiTJKY4MGARa4G5vQ31hmR7MxSmhzeaJ5AAxJ", "name": "Dior", "sol": 40.0052, "mcap_usd": 219866, "n": 1, "lat_s": 0.6}
+{"ts": 1793466688.6255536, "kind": "trigger_big", "mint": "Fp4JkqEcKYKBKhb9iMu9NSDeo71HWgq2q9QtXaaKpump", "who": ["Dior"], "sol": 40.0052, "mcap_usd": 219866, "lat_s": 0.6, "mode": "live", "skip": "shadow"}
+{"ts": 1793466788.687188, "kind": "buy", "mint": "9MfspQ4Ux7RaytrdwZjsUgGw1xbshwJLbomRK4D1pump", "wallet": "F8iRrHU37EEdvTucGJ5pHTo8V1nGLL8AAxo9duThJFaM", "name": "tvdj", "sol": 1.5677, "mcap_usd": 17196, "n": 1, "lat_s": 1.7}
