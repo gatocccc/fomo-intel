@@ -1,13 +1,13 @@
 {
- "now": 1793426083.661967,
+ "now": 1793426381.393409,
  "start_ts": 1793203599.7169404,
  "start_usd": 547.6,
  "start_sol": 5.4208,
  "goal_usd": 1095.2,
  "days": 365,
  "day": 3,
- "equity_usd": 541.4,
- "equity_sol": 5.652,
+ "equity_usd": 541.39,
+ "equity_sol": 5.6516,
  "cash_sol": 0.0826,
  "positions_usd": 533.49,
  "sol_usd": 95.79,
@@ -32,22 +32,22 @@
    "tp_done": [],
    "thesis": "Cash parked in USDC while the trend is down. Not a trade: it protects the balance from SOL's own decline.",
    "id": "equilibrado-2026-10-28-01",
-   "last_usd": 0.9998615903741506,
+   "last_usd": 0.999877312757791,
    "sleeve": "cash",
    "from_plan": "equilibrado",
    "mult": 0.991,
-   "value_usd": 503.2
+   "value_usd": 503.21
   },
   {
    "mint": "perps:CET8XhBZEpDac7XRWnCyxWy4bCzH8DBU29thCJ5yaqM3",
    "symbol": "ETH short 2x",
    "opened_ts": 1793365941.1596584,
    "entry_usd": 2226.72,
-   "last_usd": 2239.95,
+   "last_usd": 2240.25,
    "peak_usd": 2226.72,
    "tokens": 0,
    "tokens_initial": 0,
-   "sol_in": 0.1793,
+   "sol_in": 0.1792,
    "sol_out": 0.0,
    "stop": 0.1578,
    "trail": null,
@@ -63,8 +63,8 @@
    "system": "Breakout 55/20",
    "exit_level": 2578.1,
    "mult": 0.988,
-   "value_usd": 16.97,
-   "pnl_usd": -0.2,
+   "value_usd": 16.96,
+   "pnl_usd": -0.21,
    "collateral_usd": 17.17,
    "side": "short"
   },
@@ -73,7 +73,7 @@
    "symbol": "SOL short 2x",
    "opened_ts": 1793389583.9844668,
    "entry_usd": 94.59,
-   "last_usd": 95.8345,
+   "last_usd": 95.8525,
    "peak_usd": 94.59,
    "tokens": 0,
    "tokens_initial": 0,
@@ -92,14 +92,14 @@
    "perps": true,
    "system": "Breakout 55/20",
    "exit_level": 113.39,
-   "mult": 0.974,
+   "mult": 0.973,
    "value_usd": 13.32,
    "pnl_usd": -0.36,
    "collateral_usd": 13.68,
    "side": "short"
   }
  ],
- "perps_pnl_usd": -0.56,
+ "perps_pnl_usd": -0.57,
  "equity": [
   [
    1793203600,
@@ -3071,6 +3071,10 @@
   ],
   [
    1793425828,
+   541.37
+  ],
+  [
+   1793426168,
    541.37
   ]
  ],
